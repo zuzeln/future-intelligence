@@ -265,19 +265,9 @@ body {
   user-select: none; transition: border-color 0.15s;
 }
 .signal-collapse-bar:hover { border-color: var(--accent-dim); }
-.signal-preview {
-  position: absolute; bottom: calc(100% + 8px); left: 0; right: 0;
-  background: var(--surface-hover); border: 1px solid var(--accent-dim); border-radius: 8px;
-  padding: 12px 14px; font-size: 0.78em; color: var(--text-secondary);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4); z-index: 10; display: none;
-  pointer-events: none;
-}
-.signal-collapse-bar:hover .signal-preview,
-.signal-preview:hover { display: block; }
 .signal-collapse-wrapper { position: relative; }
 .signal-collapse-wrapper .signals-grid { display: none; margin-top: 10px; }
 .signal-collapse-wrapper.expanded .signals-grid { display: flex; }
-.signal-collapse-wrapper.expanded .signal-preview { display: none !important; }
 
 </style>
 </head>
@@ -1037,9 +1027,6 @@ function renderTrends() {
           <div class="signal-collapse-wrapper" id="sig-wrap-${trend.id}">
             <div class="signal-collapse-bar" onclick="toggleSignals('${trend.id}');event.stopPropagation()">
               <span>${trend.signals.length} 个信息来源 ▸</span>
-              <div class="signal-preview">
-                ${trend.signals.slice(0,3).map(s => `<div style="padding:2px 0;">· ${esc(s.source)} — ${esc(s.title)}</div>`).join('')}
-              </div>
             </div>
             <div class="signals-grid">
               ${trend.signals.map(s => `
@@ -1098,7 +1085,7 @@ function esc(str) {
   return div.innerHTML;
 }
 
-document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 102 signals analyzed';
+document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toISOString().slice(0,16).replace('T',' ');
 
 renderTrends();
 function toggleSignals(id) {
