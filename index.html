@@ -3,905 +3,588 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Future Intelligence — 今日最重要的未来趋势</title>
+<title>Future Intelligence — Today's Most Important Future Trends</title>
 <style>
-  :root {
-    --bg: #0a0e14;
-    --surface: #11161e;
-    --surface-hover: #161c26;
-    --border: #1e2632;
-    --text-primary: #e6e8ec;
-    --text-secondary: #8b919c;
-    --text-tertiary: #5c626e;
-    --accent: #4a9eff;
-    --accent-dim: #2d5a8c;
-    --danger: #ff6b6b;
-    --success: #4ade80;
-    --warning: #f59e0b;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    background: var(--bg);
-    color: var(--text-primary);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container { max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0e14;
+  --surface: #11161e;
+  --surface-hover: #161c26;
+  --border: #1e2632;
+  --text-primary: #e6e8ec;
+  --text-secondary: #8b919c;
+  --text-tertiary: #5c626e;
+  --accent: #4a9eff;
+  --accent-dim: #2d5a8c;
+  --accent-glow: rgba(74,158,255,0.12);
+  --success: #3fb950;
+  --warning: #d29922;
+  --danger: #f85149;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
 
-  /* Header */
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 48px;
-  }
-  .brand-mark {
-    width: 32px; height: 32px;
-    background: var(--accent);
-    border-radius: 6px;
-    position: relative;
-  }
-  .brand-mark::after {
-    content: '';
-    position: absolute;
-    top: 6px; left: 6px;
-    width: 8px; height: 8px;
-    background: var(--bg);
-    border-radius: 2px;
-  }
-  .brand h1 {
-    font-size: 1.4em;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--text-primary);
-  }
-  .brand span {
-    font-size: 0.75em;
-    color: var(--text-tertiary);
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+/* Brand */
+.brand { padding: 24px 0 16px; }
+.brand h1 { font-size: 1.6em; font-weight: 800; letter-spacing: -0.5px; }
+.brand span { font-size: 0.78em; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 2px; }
 
-  .hero {
-    margin-bottom: 56px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--border);
-  }
-  .hero h2 {
-    font-size: 2em;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 12px;
-    letter-spacing: -0.3px;
-  }
-  .hero p {
-    font-size: 1.05em;
-    color: var(--text-secondary);
-    max-width: 600px;
-  }
-  .hero .update-badge {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 5px 14px;
-    background: rgba(74, 158, 255, 0.08);
-    border: 1px solid rgba(74, 158, 255, 0.15);
-    border-radius: 20px;
-    font-size: 0.82em;
-    color: var(--accent);
-  }
+/* Hero */
+.hero { padding: 32px 0 8px; }
+.hero h2 { font-size: 1.8em; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 8px; }
+.hero .subtitle { font-size: 0.9em; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px; }
+.update-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.78em; color: var(--text-tertiary);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 6px 14px;
+}
 
-  /* Trend Card */
-  .trend-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 32px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
-    position: relative;
-  }
-  .trend-card:hover { background: var(--surface-hover); border-color: #2a3340; }
-  .trend-card.expanded { border-color: var(--accent-dim); background: var(--surface-hover); }
+/* Trend Cards */
+.trend-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 30px; margin-bottom: 18px;
+  cursor: pointer; transition: all 0.2s;
+}
+.trend-card:hover { background: var(--surface-hover); border-color: #2a3340; }
+.trend-card.expanded { border-color: var(--accent-dim); background: var(--surface-hover); }
+.trend-card .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.trend-card .trend-rank {
+  font-size: 0.78em; color: var(--text-tertiary); font-weight: 600;
+  white-space: nowrap; padding-top: 3px;
+}
+.trend-card h3 { font-size: 1.2em; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.2px; flex: 1; }
+.trend-card .core-insight {
+  font-size: 0.95em; color: var(--accent); margin-bottom: 12px; line-height: 1.6;
+}
+.trend-card .card-footer {
+  display: flex; gap: 16px; font-size: 0.8em; color: var(--text-tertiary);
+  align-items: center; flex-wrap: wrap;
+}
+.trend-card .card-footer .signal-count { color: var(--accent); font-weight: 600; }
+.trend-card .card-footer .divider { width: 4px; height: 4px; background: var(--border); border-radius: 50%; }
 
-  .trend-card .trend-index {
-    position: absolute;
-    top: 28px;
-    right: 32px;
-    font-size: 0.78em;
-    color: var(--text-tertiary);
-    font-weight: 500;
-  }
-  .trend-card h3 {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 12px;
-    padding-right: 60px;
-    letter-spacing: -0.2px;
-  }
-  .trend-card .core-conclusion {
-    font-size: 0.95em;
-    color: var(--accent);
-    margin-bottom: 16px;
-    line-height: 1.7;
-  }
-  .trend-card .meta-row {
-    display: flex;
-    gap: 24px;
-    font-size: 0.82em;
-    color: var(--text-tertiary);
-    flex-wrap: wrap;
-  }
-  .trend-card .meta-row span { display: flex; align-items: center; gap: 6px; }
-  .trend-card .meta-row .signal-count { color: var(--accent); font-weight: 600; }
+/* Expand Detail */
+.trend-detail { display: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); animation: fadeIn 0.25s ease; }
+.trend-card.expanded .trend-detail { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.detail-section { margin-bottom: 20px; }
+.detail-section h4 {
+  font-size: 0.8em; font-weight: 600; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;
+}
+.detail-section p, .detail-section li { font-size: 0.9em; color: var(--text-primary); line-height: 1.7; }
+.detail-section ul { list-style: none; padding: 0; }
+.detail-section ul li { padding: 4px 0; }
+.detail-section ul li::before { content: '→ '; color: var(--accent); font-weight: 600; }
 
-  /* Expand Content */
-  .trend-detail {
-    display: none;
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    animation: fadeIn 0.2s ease;
-  }
-  .trend-card.expanded .trend-detail { display: block; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+/* Signals Grid */
+.signals-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.signal-item {
+  display: block; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px; text-decoration: none;
+  transition: border-color 0.15s;
+}
+.signal-item:hover { border-color: var(--accent-dim); }
+.signal-item .signal-source { font-size: 0.75em; color: var(--text-tertiary); margin-bottom: 3px; }
+.signal-item .signal-title { font-size: 0.88em; color: var(--text-primary); font-weight: 600; margin-bottom: 4px; }
+.signal-item .signal-summary { font-size: 0.82em; color: var(--text-secondary); line-height: 1.5; }
 
-  .detail-section {
-    margin-bottom: 24px;
-  }
-  .detail-section h4 {
-    font-size: 0.82em;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-  }
-  .detail-section p, .detail-section ul {
-    font-size: 0.92em;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-  .detail-section ul { list-style: none; padding: 0; }
-  .detail-section ul li {
-    padding: 4px 0 4px 16px;
-    position: relative;
-  }
-  .detail-section ul li::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 12px;
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--accent-dim);
-  }
-  .pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill {
-    padding: 4px 12px;
-    border-radius: 14px;
-    font-size: 0.82em;
-    font-weight: 500;
-  }
-  .pill-green { background: rgba(74, 222, 128, 0.1); color: var(--success); }
-  .pill-red { background: rgba(255, 107, 107, 0.1); color: var(--danger); }
+/* Archive */
+.archive-section { margin-top: 40px; }
+.archive-toggle {
+  display: flex; align-items: center; gap: 6px; padding: 12px 0;
+  font-size: 0.82em; color: var(--text-tertiary); cursor: pointer;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.archive-toggle:hover { color: var(--text-secondary); }
+.archive-content { display: none; padding: 16px 0; }
+.archive-content.open { display: block; }
+.archive-item {
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.archive-item:last-child { border-bottom: none; }
+.archive-item strong { font-size: 0.9em; display: block; margin-bottom: 3px; }
+.archive-item span { font-size: 0.8em; color: var(--text-tertiary); }
+.archive-item .archive-desc { font-size: 0.82em; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
 
-  .signal-item {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.04);
-    border-radius: 8px;
-    padding: 14px 18px;
-    margin-bottom: 10px;
-  }
-  .signal-item .signal-source {
-    font-size: 0.78em;
-    color: var(--text-tertiary);
-    margin-bottom: 4px;
-  }
-  .signal-item .signal-title {
-    font-size: 0.92em;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-  }
-  .signal-item .signal-summary {
-    font-size: 0.85em;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-  .signal-item a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.82em;
-  }
-  .signal-item a:hover { text-decoration: underline; }
+/* Sources */
+.sources-section { margin-top: 32px; }
+.sources-toggle {
+  display: flex; align-items: center; gap: 6px; padding: 12px 0;
+  font-size: 0.82em; color: var(--text-tertiary); cursor: pointer;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.sources-toggle:hover { color: var(--text-secondary); }
+.sources-grid { display: none; padding: 20px 0; }
+.sources-grid.open { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+.source-category h5 {
+  font-size: 0.76em; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 8px; padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.source-category ul { list-style: none; padding: 0; }
+.source-category li { padding: 2px 0; font-size: 0.78em; color: var(--text-secondary); }
+.source-category li a { color: var(--text-secondary); text-decoration: none; }
+.source-category li a:hover { color: var(--accent); }
 
-  /* Archive */
-  .archive-toggle {
-    text-align: center;
-    margin-top: 48px;
-    padding: 12px;
-    color: var(--text-tertiary);
-    font-size: 0.85em;
-    cursor: pointer;
-    border-top: 1px solid var(--border);
-    transition: color 0.2s;
-  }
-  .archive-toggle:hover { color: var(--text-secondary); }
-  .archive-section { display: none; }
-  .archive-section.open { display: block; }
-  .archive-item {
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.88em;
-    color: var(--text-secondary);
-  }
-  .archive-item a { color: var(--accent); text-decoration: none; }
-  .archive-item a:hover { text-decoration: underline; }
+/* Collapse btn */
+.collapse-btn {
+  display: inline-block; margin-top: 16px; padding: 6px 16px;
+  font-size: 0.8em; color: var(--accent); cursor: pointer;
+  background: none; border: 1px solid var(--accent-dim); border-radius: 6px;
+  transition: all 0.15s;
+}
+.collapse-btn:hover { background: var(--accent-glow); }
 
-  /* Footer */
-  .footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.8em;
-    color: var(--text-tertiary);
-  }
+/* Footer */
+.footer {
+  margin-top: 48px; padding-top: 24px;
+  font-size: 0.75em; color: var(--text-tertiary); text-align: center;
+  border-top: 1px solid var(--border);
+}
 
-  /* Sources */
-  .sources-toggle {
-    text-align: center;
-    margin-top: 48px;
-    padding: 12px;
-    color: var(--text-tertiary);
-    font-size: 0.85em;
-    cursor: pointer;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    transition: color 0.2s;
-  }
-  .sources-toggle:hover { color: var(--text-secondary); }
-  .sources-section { display: none; }
-  .sources-section.open { display: block; }
-  .sources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
-  }
-  .source-category h5 {
-    font-size: 0.78em;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
-  }
-  .source-category ul { list-style: none; padding: 0; }
-  .source-category li {
-    padding: 3px 0;
-    font-size: 0.82em;
-    color: var(--text-secondary);
-  }
-  .source-category li a {
-    color: var(--text-secondary);
-    text-decoration: none;
-  }
-  .source-category li a:hover { color: var(--accent); }
-
-  /* Loading */
-  .loading {
-    text-align: center;
-    padding: 80px 0;
-    color: var(--text-tertiary);
-  }
-
-  @media (max-width: 640px) {
-    .container { padding: 32px 16px 60px; }
-    .hero h2 { font-size: 1.5em; }
-    .trend-card { padding: 20px 20px; }
-    .trend-card h3 { font-size: 1.1em; }
-  }
+@media (max-width: 640px) {
+  .container { padding: 28px 14px 60px; }
+  .hero h2 { font-size: 1.4em; }
+  .trend-card { padding: 20px 18px; }
+  .trend-card h3 { font-size: 1.05em; }
+}
 </style>
 </head>
 <body>
 <div class="container">
 
   <div class="brand">
-    <div class="brand-mark"></div>
-    <div>
-      <h1>Future Intelligence</h1>
-      <span>Future Trend Discovery</span>
-    </div>
+    <h1>Future Intelligence</h1>
+    <span>Trend Discovery · Not News</span>
   </div>
 
   <div class="hero">
-    <h2>每刻重要趋势</h2>
-    <div class="update-badge" id="updateTime">更新于 2026-06-28</div>
+    <h2>Today's Most Important Future Trends</h2>
+    <p class="subtitle">从信号中提取趋势，而非追逐新闻。帮助理解未来正在发生什么。</p>
+    <div class="update-badge" id="updateTime"></div>
   </div>
 
   <div id="trends"></div>
 
-  
-  <!-- ===== 原始信号板块（自动生成） ===== -->
-  <div class="raw-signals-section">
-    <h3 style="margin-bottom: 20px; font-size: 1.1em; color: var(--text-secondary); letter-spacing: 0.5px;">
-      原始信号 · 最新抓取 (199 条)
-    </h3>
-    <div class="sources-grid">
-      
-          <div class="source-category">
-            <h5>AI 公司 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Previewing GPT-5.6 Sol: a next-generation model</div>
-              <div class="signal-summary">OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.</div>
-              <a href="https://openai.com/index/previewing-gpt-5-6-sol" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">How agents are transforming work</div>
-              <div class="signal-summary">A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.</div>
-              <a href="https://openai.com/index/how-agents-are-transforming-work" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">OpenAI and Broadcom unveil LLM-optimized inference chip</div>
-              <div class="signal-summary">OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.</div>
-              <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Helping build shared standards for advanced AI</div>
-              <div class="signal-summary">OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.</div>
-              <a href="https://openai.com/index/helping-build-shared-standards-for-advanced-ai" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery</div>
-              <div class="signal-summary">GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.</div>
-              <a href="https://openai.com/index/gpt-5-immunology-mystery" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">How Omio is building the future of conversational travel</div>
-              <div class="signal-summary">Discover how Omio uses OpenAI to power conversational travel experiences, accelerate product development, and transform into an AI-native company.</div>
-              <a href="https://openai.com/index/omio" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Patch the Planet: a Daybreak initiative to support open source maintainers</div>
-              <div class="signal-summary">OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.</div>
-              <a href="https://openai.com/index/patch-the-planet" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Daybreak: Tools for securing every organization in the world</div>
-              <div class="signal-summary">OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.</div>
-              <a href="https://openai.com/index/daybreak-securing-the-world" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Codex-maxxing for long-running work</div>
-              <div class="signal-summary">Learn how Jason Liu uses Codex to preserve context, manage complex projects, and help work continue beyond a single prompt.</div>
-              <a href="https://openai.com/index/codex-maxxing-long-running-work" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">OpenAI Blog</div>
-              <div class="signal-title">Samsung Electronics brings ChatGPT and Codex to employees</div>
-              <div class="signal-summary">Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI’s largest enterprise AI rollouts.</div>
-              <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
-
-          <div class="source-category">
-            <h5>AI 媒体 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">SoftBank’s CEO isn’t the only one with questions about Elon Musk’s orbital data center hype</div>
-              <div class="signal-summary">Not everyone is buying Elon Musk’s vision for orbital data centers.</div>
-              <a href="https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">Apple Vision Pro exec is reportedly leaving for OpenAI</div>
-              <div class="signal-summary">Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardware team.</div>
-              <a href="https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">The fittest founder in the room got cancer. Here’s how he used AI to fight back.</div>
-              <div class="signal-summary">When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.</div>
-              <a href="https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">Asian AI startups launch Mythos-like  models as Anthropic’s export ban drags on</div>
-              <div class="signal-summary">New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.</div>
-              <a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies</div>
-              <div class="signal-summary">Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.</div>
-              <a href="https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm</div>
-              <div class="signal-summary">“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global pa</div>
-              <a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">OpenAI poaches Uber India chief to lead its biggest market outside the US</div>
-              <div class="signal-summary">The hire marks OpenAI&#39;s latest push into India, expanding offices, partnerships and hiring.</div>
-              <a href="https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)</div>
-              <div class="signal-summary">Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.&amp;#160;&amp;#160; OpenAI just shared its plans to spice things up with&amp;#160;Jalapeño, its custom inference</div>
-              <a href="https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">It’s not about Anthropic vs. OpenAI anymore</div>
-              <div class="signal-summary">AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences will require collective action.</div>
-              <a href="https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">TechCrunch AI</div>
-              <div class="signal-title">OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia</div>
-              <div class="signal-summary">Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.&amp;#160;&amp;#160; OpenAI just shared its plans to spice things up with&amp;#160;Jalapeño, its custom inference</div>
-              <a href="https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
-
-          <div class="source-category">
-            <h5>研究机构 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Autoregressive Boltzmann Generators</div>
-              <div class="signal-summary">Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allo</div>
-              <a href="http://arxiv.org/abs/2606.27361v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Error-Conditioned Neural Solvers</div>
-              <div class="signal-summary">Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their ow</div>
-              <a href="http://arxiv.org/abs/2606.27354v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching</div>
-              <div class="signal-summary">Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work </div>
-              <a href="http://arxiv.org/abs/2606.27342v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Language-Based Digital Twins for Elderly Cognitive Assistance</div>
-              <div class="signal-summary">Digital twins have emerged as a promising paradigm for personalized healthcare, enabling modeling of individual behavior and health trajectories. In cognitive health, early detection of Mild Cognitive</div>
-              <a href="http://arxiv.org/abs/2606.27334v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning</div>
-              <div class="signal-summary">Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLL</div>
-              <a href="http://arxiv.org/abs/2606.27330v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders</div>
-              <div class="signal-summary">Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more mon</div>
-              <a href="http://arxiv.org/abs/2606.27321v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">AI Healthcare Chatbots as Information Infrastructure: A Large-Scale Study of User-Reported Breakdowns</div>
-              <div class="signal-summary">AI healthcare chatbots are increasingly used to support health information seeking and self-management, yet their performance and impact on users remains to be studied. This study examines over 15,000</div>
-              <a href="http://arxiv.org/abs/2606.27302v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Front</div>
-              <div class="signal-summary">Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely report</div>
-              <a href="http://arxiv.org/abs/2606.27288v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Prompt Injection in Automated Résumé Screening with Large Language Models: Single and Multi-Injection Settings</div>
-              <div class="signal-summary">Large language models (LLMs) are increasingly used to screen and rank job applicants, creating incentives for candidates to strategically manipulate algorithmic hiring systems. We study prompt injecti</div>
-              <a href="http://arxiv.org/abs/2606.27287v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">arXiv AI</div>
-              <div class="signal-title">Simulation-based inference for rapid Bayesian parameter estimation in epidemiological models: a comparison with MCMC</div>
-              <div class="signal-summary">Mechanistic epidemiological models are widely used to support infectious disease forecasting and public-health decision making. Bayesian calibration of such models is commonly performed using Markov c</div>
-              <a href="http://arxiv.org/abs/2606.27286v1" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
-
-          <div class="source-category">
-            <h5>投资机构 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Stories</div>
-              <div class="signal-summary">Stories</div>
-              <a href="https://lsvp.com/stories/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/deepening-our-partnership-with-anthropic/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/discover-lightspeed-ai-research-and-features/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/lightspeed-announces-lead-investment-in-anthropics-3-5b-series-e-financing/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/apples-ai-reasoning-paper-good-questions-few-answers/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/hello-world-models/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/lightspeed-newsletter-spring-2025-edition/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/defending-american-ai-leadership-deepseek-is-a-distraction-not-a-disruptor/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/the-global-opportunity-map/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Lightspeed Venture Partners</div>
-              <div class="signal-title">Dive deeper</div>
-              <div class="signal-summary">Dive deeper</div>
-              <a href="https://lsvp.com/stories/presenting-the-fortune-cyber-60-ciso-survey/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
-
-          <div class="source-category">
-            <h5>专家博客 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">Andrej Karpathy blog</div>
-              <div class="signal-summary">Andrej Karpathy blogAbout</div>
-              <a href="https://karpathy.github.io/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">About</div>
-              <div class="signal-summary">About</div>
-              <a href="https://karpathy.github.io/about/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">microgpt</div>
-              <div class="signal-summary">Feb 12, 2026microgptIt takes 200 lines of pure, dependency-free Python to train and inference GPT. I cannot make this any shorter.</div>
-              <a href="https://karpathy.github.io/2026/02/12/microgpt/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">Deep Neural Nets: 33 years ago and 33 years from now</div>
-              <div class="signal-summary">Mar 14, 2022Deep Neural Nets: 33 years ago and 33 years from nowTo my knowledge, LeCun et al. 1989 is the earliest real-world application of a neural net trained end-to-end with backpropagation. Can w</div>
-              <a href="https://karpathy.github.io/2022/03/14/lecun1989/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">A from-scratch tour of Bitcoin in Python</div>
-              <div class="signal-summary">Jun 21, 2021A from-scratch tour of Bitcoin in PythonWe are going to create, digitally sign, and broadcast a Bitcoin transaction in pure Python, from scratch, and with zero dependencies</div>
-              <a href="https://karpathy.github.io/2021/06/21/blockchain/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">Short Story on AI: Forward Pass</div>
-              <div class="signal-summary">Mar 27, 2021Short Story on AI: Forward PassA story of an existential crisis under the hood of a humble forward pass.</div>
-              <a href="https://karpathy.github.io/2021/03/27/forward-pass/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">Biohacking Lite</div>
-              <div class="signal-summary">Jun 11, 2020Biohacking LiteDipping toes into biochemistry, energy metabolism and running some biohacking lite experiments.</div>
-              <a href="https://karpathy.github.io/2020/06/11/biohacking-lite/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">A Recipe for Training Neural Networks</div>
-              <div class="signal-summary">Apr 25, 2019A Recipe for Training Neural NetworksA collection of practical advice for the process of achieving strong results with neural networks.</div>
-              <a href="https://karpathy.github.io/2019/04/25/recipe/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">(started posting on Medium instead)</div>
-              <div class="signal-summary">Jan 20, 2018(started posting on Medium instead)Yes I&#39;m still around but, I&#39;ve started posting on Medium instead of here.</div>
-              <a href="https://karpathy.github.io/2018/01/20/medium/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">Andrej Karpathy</div>
-              <div class="signal-title">A Survival Guide to a PhD</div>
-              <div class="signal-summary">Sep 7, 2016A Survival Guide to a PhDA collection of tips/tricks for navigating the PhD experience.</div>
-              <a href="https://karpathy.github.io/2016/09/07/phd/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
-
-          <div class="source-category">
-            <h5>基础设施 (10 篇)</h5>
-            
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">The Ultimate Summer Sale Pairing: Steam Sale Meets GeForce NOW Discounts</div>
-              <div class="signal-summary">Summer savings are heating up. From the Steam Summer Sale to GeForce NOW membership discounts, this week’s GFN Thursday delivers double the deals and more ways to get the most value from cloud gaming.</div>
-              <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-steam-summer-sale-2026/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">NVIDIA and AWS Collaborate to Bring AI to Production at Scale</div>
-              <div class="signal-summary">Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity</div>
-              <a href="https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">How Businesses Are Building Specialized AI They Can Trust</div>
-              <div class="signal-summary">Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applicat</div>
-              <a href="https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers</div>
-              <div class="signal-summary">NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Ha</div>
-              <a href="https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations</div>
-              <div class="signal-summary">Telecom operators have seen remarkable returns from using generative AI to automate network management, customer care and back-office operations. Most of that impact has been task‑based: automation th</div>
-              <a href="https://blogs.nvidia.com/blog/telecom-ai-agents-dtw-ignite-2026/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">At ISC, JUPITER Shows What Exascale Science Looks Like</div>
-              <div class="signal-summary">JUPITER, Europe’s first exascale supercomputer at Germany’s Forschungszentrum Jülich, runs on NVIDIA Grace Hopper Superchips and NVIDIA Quantum-X800 InfiniBand networking — and it’s had a busy year. A</div>
-              <a href="https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">NAIRR Science Program Reshapes Scientific Research, Powered by NVIDIA AI Infrastructure</div>
-              <div class="signal-summary">For the past two years, the U.S. National Science Foundation’s National Artificial Intelligence Research Resource (NAIRR) pilot program has driven innovative research across the U.S. for over 700 proj</div>
-              <a href="https://blogs.nvidia.com/blog/nairr-scientific-research-ai-infrastructure/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">NVIDIA Vera CPU Opens the Way for Agentic Scientific AI at Los Alamos National Laboratory</div>
-              <div class="signal-summary">Mission, Vision and Veritas — new Los Alamos National Laboratory (LANL) supercomputers to be built with HPE and NVIDIA — are tapping NVIDIA Vera CPUs to accelerate scientific discovery, unlocking agen</div>
-              <a href="https://blogs.nvidia.com/blog/nvidia-vera-cpu-los-alamos-national-laboratory/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries</div>
-              <div class="signal-summary">At the ISC conference running in Hamburg this week, NVIDIA is introducing new software that speeds AI for science, from chemistry and materials discovery to the search for dark matter.  The NVIDIA DAQ</div>
-              <a href="https://blogs.nvidia.com/blog/ai-for-science-software-cuda/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-            <div class="signal-item">
-              <div class="signal-source">NVIDIA AI</div>
-              <div class="signal-title">Eco Wave Power Turns Waves Into Watts With NVIDIA AI Infrastructure and Digital Twins</div>
-              <div class="signal-summary">The next era of AI will not be defined by compute alone. Its growth will be determined by energy.  As accelerated computing scales across AI factories, agentic AI, industrial AI, edge computing and ph</div>
-              <a href="https://blogs.nvidia.com/blog/eco-wave-power-ai-digital-twins/" target="_blank" rel="noopener">阅读原文</a>
-            </div>
-          </div>
+  <!-- Archive -->
+  <div class="archive-section">
+    <div class="archive-toggle" onclick="toggleArchive()">
+      <span id="archiveLabel">Archive · 近期存档</span>
     </div>
+    <div class="archive-content" id="archiveSection"></div>
   </div>
 
-  
-  <div class="archive-toggle" onclick="toggleArchive()">
-    <span id="archiveLabel">归档区 · 3 条</span>
-  </div>
-  <div class="archive-section" id="archiveSection"></div>
-
-  <div class="sources-toggle" onclick="toggleSources()">
-    <span id="sourcesLabel">数据来源 · 28 个信息源</span>
-  </div>
-  <div class="sources-section" id="sourcesSection">
-    <div class="sources-grid">
-      <div class="source-category">
-        <h5>AI 公司（7）</h5>
-        <ul>
-          <li><a href="https://openai.com/news/" target="_blank">OpenAI News</a></li>
-          <li><a href="https://www.anthropic.com/news" target="_blank">Anthropic News</a></li>
-          <li><a href="https://deepmind.google/discover/blog/" target="_blank">Google DeepMind Blog</a></li>
-          <li><a href="https://ai.meta.com/blog/" target="_blank">Meta AI Blog</a></li>
-          <li><a href="https://blogs.microsoft.com/ai/" target="_blank">Microsoft AI Blog</a></li>
-          <li><a href="https://blogs.nvidia.com/" target="_blank">NVIDIA Blog</a></li>
-          <li><a href="https://huggingface.co/blog" target="_blank">Hugging Face Blog</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>AI 媒体（8）</h5>
-        <ul>
-          <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">TechCrunch AI</a></li>
-          <li><a href="https://venturebeat.com/category/ai/" target="_blank">VentureBeat AI</a></li>
-          <li><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">The Verge AI</a></li>
-          <li><a href="https://arstechnica.com/ai/" target="_blank">Ars Technica AI</a></li>
-          <li><a href="https://www.marktechpost.com/" target="_blank">MarkTechPost</a></li>
-          <li><a href="https://www.artificialintelligence-news.com/" target="_blank">AI News</a></li>
-          <li><a href="https://the-decoder.com/" target="_blank">The Decoder</a></li>
-          <li><a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank">MIT Tech Review AI</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>聚合平台（1）</h5>
-        <ul>
-          <li><a href="https://aihot.virxact.com/" target="_blank">AI HOT</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>研究机构（4）</h5>
-        <ul>
-          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arXiv AI</a></li>
-          <li><a href="https://hai.stanford.edu/" target="_blank">Stanford HAI</a></li>
-          <li><a href="https://bair.berkeley.edu/blog/" target="_blank">BAIR Blog</a></li>
-          <li><a href="https://www.cs.cmu.edu/news" target="_blank">CMU AI News</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>投资机构（4）</h5>
-        <ul>
-          <li><a href="https://a16z.com/ai/" target="_blank">a16z AI</a></li>
-          <li><a href="https://www.sequoiacap.com/" target="_blank">Sequoia Capital</a></li>
-          <li><a href="https://lsvp.com/" target="_blank">Lightspeed</a></li>
-          <li><a href="https://www.nfx.com/" target="_blank">NFX</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>专家博客（3）</h5>
-        <ul>
-          <li><a href="https://lilianweng.github.io/" target="_blank">Lilian Weng</a></li>
-          <li><a href="https://ysymyth.github.io/" target="_blank">Shunyu Yao</a></li>
-          <li><a href="https://x.com/ClaudeDevs" target="_blank">Claude Devs</a></li>
-        </ul>
-      </div>
-      <div class="source-category">
-        <h5>基础设施（1）</h5>
-        <ul>
-          <li><a href="https://blog.cloudflare.com/" target="_blank">Cloudflare Blog</a></li>
-        </ul>
-      </div>
+  <!-- Sources -->
+  <div class="sources-section">
+    <div class="sources-toggle" onclick="toggleSources()">
+      <span>数据来源 · 信息源</span>
     </div>
+    <div class="sources-grid" id="sourcesSection"></div>
   </div>
 
   <div class="footer">
-    Future Intelligence · 趋势基于公开数据源分析生成 · 不追逐新闻，只发现趋势
+    趋势基于公开数据源分析生成 · 不追逐新闻，只发现趋势
   </div>
 
 </div>
 
 <script>
-// ========== 趋势数据 ==========
+// ============================================================
+// TREND DATA
+// ============================================================
 const TREND_DATA = [
   {
-    id: 1,
-    title: "AI竞争从软件延伸到物理世界",
-    coreConclusion: "AI公司正在跨越软硬件边界，竞争进入航天、硬件、能源等物理基础设施层面。这标志着AI竞争从\u201c谁的模型更强\u201d升级为\u201c谁掌控物理基础设施\u201d。",
-    whyImportant: "这轮人才和资本的流动方向表明，AI领导地位不仅取决于算法，还取决于算力基础设施、硬件整合能力和能源控制。竞争维度发生了质变。",
-    whatItMeans: "未来3-5年，AI公司将不再是纯粹的软件公司。从SpaceX与xAI的合并到OpenAI挖角硬件人才，AI正在从云端走向物理世界。这意味着芯片、能源、航天等硬科技领域将与AI深度绑定。",
-    beneficiaries: ["AI芯片厂商 (NVIDIA/AMD)", "硬件供应链企业", "拥有物理基础设施的AI公司", "航天+AI交叉领域创业者"],
-    riskExposure: ["纯软件AI公司", "没有硬件布局的云厂商", "传统消费电子公司人才流失"],
-    nextSignals: ["SpaceXAI首个产品发布", "更多AI公司宣布硬件并购", "AI硬件领域融资额变化"],
-    signals: [
+    "id": 1,
+    "title": "Frontier Model Arms Race Meets Government Gatekeeping",
+    "coreInsight": "The world's most powerful AI models are now subject to direct government intervention over who can access them, transforming competitive dynamics from a pure technology race into a geopolitically mediated contest.",
+    "whyItMatters": "OpenAI's GPT-5.6 Sol launch was restricted to select partners at White House request, while Anthropic's Claude Mythos 5 faced export bans that Asian startups are already circumventing with domestic alternatives. This marks an irreversible shift: frontier AI is now a regulated strategic asset, not merely a commercial product. Companies caught in the middle face enormous uncertainty around revenue models, global market access, and the speed at which they can ship.",
+    "direction": "Within 6-12 months, expect a formalized 'tiered access' regime for frontier models—government-vetted partners get early access, while public releases trail by months. Export controls will drive a bifurcated global AI market: US-aligned models versus Chinese and Asian alternatives. National security reviews will become standard for any model exceeding a capability threshold, potentially delaying releases by 3-6 months.",
+    "opportunities": [
+      "Startups building compliance automation and government-access workflow tools for AI model deployment",
+      "Asian AI labs developing Mythos-class models for markets excluded by US export bans",
+      "Consulting firms specializing in AI regulatory strategy and government liaison for enterprises"
+    ],
+    "risks": [
+      "Innovation slowdown as regulatory friction delays frontier capability deployment by 6+ months",
+      "Fragmented global AI ecosystem with incompatible standards and reduced cross-border collaboration"
+    ],
+    "score": 98,
+    "signals": [
       {
-        source: "X: cb_doge", time: "6/28 04:51",
-        title: "SpaceX 注册 SpaceXAI 商标，xAI 将解散并入",
-        summary: "马斯克宣布 xAI 不再作为独立公司，将成为 SpaceXAI——即 SpaceX 的 AI 产品。AI 公司与航天巨头的深度整合。",
-        url: "https://x.com/cb_doge/status/2070973276562530507"
+        "source": "OpenAI Blog",
+        "time": "6/26 10:00",
+        "title": "Previewing GPT-5.6 Sol: a next-generation model",
+        "summary": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
+        "url": "https://openai.com/index/previewing-gpt-5-6-sol"
       },
       {
-        source: "X: Berry Xia", time: "6/28 01:05",
-        title: "苹果Vision产品副总裁跳槽OpenAI硬件部门",
-        summary: "苹果Vision Pro及AR眼镜研发负责人Paul Meade离职加入OpenAI硬件部门。苹果市值因涨价蒸发2300亿美元。AI硬件人才争夺战白热化。",
-        url: "https://x.com/berryxia/status/2070916520822321292"
+        "source": "TechCrunch AI",
+        "time": "6/26 18:32",
+        "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn't be the norm",
+        "summary": "OpenAI says the government access process shouldn't become the long-term default, as it keeps the best tools from users, developers, and cyber defenders.",
+        "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
       },
       {
-        source: "GitHub (Hacker News)", time: "6/28 11:55",
-        title: "Adrafinil: AI agent工作时阻止Mac睡眠的菜单栏工具",
-        summary: "开发者需要让物理设备在AI agent工作时保持唤醒——AI agent正在对物理设备提出新的运行要求。",
-        url: "https://github.com/kageroumado/adrafinil"
+        "source": "TechCrunch AI",
+        "time": "6/25 23:34",
+        "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
+        "summary": "OpenAI reportedly plans to share GPT 5.6 with a select group of partners instead of the broader public at White House direction.",
+        "url": "https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/27 01:01",
+        "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+        "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+        "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/27 12:00",
+        "title": "Asian AI startups launch Mythos-like models as Anthropic's export ban drags on",
+        "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
+        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/27 09:43",
+        "title": "Anthropic gets US approval to bring back Claude Mythos 5",
+        "summary": "The Trump administration is preparing to lift restrictions on Anthropic's Mythos 5 model.",
+        "url": "https://the-decoder.com/anthropic-gets-us-approval-to-bring-back-claude-mythos-5/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/26 16:24",
+        "title": "It's not about Anthropic vs. OpenAI anymore",
+        "summary": "AI models have progressed to the point where their capabilities have real political consequences, requiring collective action.",
+        "url": "https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/"
       }
     ]
   },
   {
-    id: 2,
-    title: "AI推理成本断崖式下降，应用层爆发前夜",
-    coreConclusion: "推理加速技术开源化+企业用脚投票选择性价比模型，正在推动AI使用成本大幅下降。AI从\u201c奢侈品\u201d走向\u201c日用品\u201d的商业拐点正在到来。",
-    whyImportant: "成本是AI应用普及的最大障碍。当推理成本降低60-85%，大量之前不可行的AI应用突然变得经济可行。这是AI应用创业的黄金窗口。",
-    whatItMeans: "AI基础设施正在从'最强模型通吃'转向'按需匹配最合适的模型'。这意味着AI应用创业者不再被高昂的API费用束缚，可以以极低成本构建AI产品。同时，模型厂商的竞争维度从纯粹的能力比拼扩展到成本效率。",
-    beneficiaries: ["AI应用创业者", "DeepSeek等性价比模型厂商", "模型路由/成本优化工具", "中小企业AI采用者"],
-    riskExposure: ["依赖高价API的AI产品", "缺乏成本优势的闭源模型厂商", "纯靠模型能力溢价的商业模式"],
-    nextSignals: ["更多企业公布模型切换后的成本节省数据", "新一批AI应用公司融资潮", "OpenAI/Anthropic是否会调整定价策略"],
-    signals: [
+    "id": 2,
+    "title": "Custom AI Silicon Breaking NVIDIA's Grip",
+    "coreInsight": "OpenAI's custom Jalapeño inference chip with Broadcom signals the beginning of the end for NVIDIA's monopoly on AI compute, as major AI labs vertically integrate their hardware stack.",
+    "whyItMatters": "NVIDIA has dominated the AI chip market for years, but the era of total dependence is ending. OpenAI's Jalapeño chip—designed for LLM inference—pairs with industry-wide moves by major players to build proprietary silicon. This shift will reshape the $100B+ AI infrastructure market, redistribute profit margins from hardware vendors to AI labs, and accelerate the commoditization of inference.",
+    "direction": "In 12-24 months, expect at least 3-4 major AI labs to deploy custom inference chips at scale. NVIDIA will face margin compression in inference workloads and pivot harder toward training and enterprise solutions. The custom chip ecosystem (design tools, fabrication partnerships, deployment infrastructure) will become a new battleground for startups.",
+    "opportunities": [
+      "Chip design automation tools optimized for AI inference architectures",
+      "Cloud orchestration platforms that span heterogeneous custom silicon deployments",
+      "Consulting and integration services helping mid-tier AI companies evaluate custom chip strategies"
+    ],
+    "risks": [
+      "Fragmentation of AI hardware standards making cross-platform model deployment more complex",
+      "Startups unable to afford custom silicon getting locked out of cost-competitive inference"
+    ],
+    "score": 92,
+    "signals": [
       {
-        source: "MarkTechPost", time: "6/28 00:59",
-        title: "DeepSeek 开源 DSpark 投机解码框架，加速 V4 生成速度 60-85%",
-        summary: "在DeepSeek-V4权重上附加草稿模块，通过半自回归生成实现无损加速。生产环境下V4-Flash和V4-Pro每用户生成速度较MTP-1基线分别提升60-85%和57-78%。配套DeepSpec训练代码库MIT开源。",
-        url: "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1"
+        "source": "OpenAI Blog",
+        "time": "6/24 06:00",
+        "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+        "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale.",
+        "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip"
       },
       {
-        source: "IT之家", time: "6/27 16:16",
-        title: "AI账单失控后 DeepSeek 成“香饽饽”，美国企业 100% 切换",
-        summary: "旧金山公司Lindy每月AI账单超支超过员工工资，已将100%流量切换到DeepSeek，预计节省数百万美元。企业开始采用模型路由按任务匹配模型，不再将最贵前沿模型用于所有场景。",
-        url: "https://www.ithome.com/0/969/400.htm"
+        "source": "TechCrunch AI",
+        "time": "6/26 17:43",
+        "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+        "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending with OpenAI's Jalapeño.",
+        "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
+      },
+      {
+        "source": "AI News",
+        "time": "6/24 06:00",
+        "title": "The math behind the OpenAI Jalapeño chip",
+        "summary": "OpenAI's financial trajectory hinges heavily on infrastructure costs, a reality that drove the development of the custom Jalapeño chip with Broadcom.",
+        "url": "https://www.artificialintelligence-news.com/news/the-math-behind-the-openai-jalapeno-chip/"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/27 13:22",
+        "title": "J.P. Morgan sees a pile of red flags in the AI market",
+        "summary": "J.P. Morgan flags concerns about AI infrastructure spending returns, suggesting the massive capex buildout faces ROI scrutiny.",
+        "url": "https://the-decoder.com/j-p-morgan-sees-a-pile-of-red-flags-in-the-ai-market/"
       }
     ]
   },
   {
-    id: 3,
-    title: "AI劳动力转型进入制度化应对阶段",
-    coreConclusion: "AI对就业的冲击不再只是学术讨论或行业预警。美国政府、企业和资本已开始投入真金白银（10亿美元级别）进行系统性应对。",
-    whyImportant: "这是AI劳动力影响从'预警'转向'行动'的标志性事件。10亿美元不是小数目，且发起方包括前商务部长和四州政府，代表了制度层面的承认。",
-    whatItMeans: "AI劳动力转型将成为未来5-10年的政策和商业焦点。这不仅是社会问题，更是一个巨大的新兴产业——AI职业导航、技能再培训、工资保险等。同时需要注意，出资方正是造成就业冲击的AI公司本身，独立性和效果存疑。",
-    beneficiaries: ["AI培训与再教育平台", "职业转型服务机构", "劳动力政策咨询公司"],
-    riskExposure: ["被AI替代风险高的白领岗位", "未布局员工再培训的企业", "传统教育机构（如不能快速适应）"],
-    nextSignals: ["其他国家的类似计划推出", "第一批培训效果数据公布", "AI公司是否继续追加资金"],
-    signals: [
+    "id": 3,
+    "title": "AI Agents Crossing the Workplace Chasm",
+    "coreInsight": "AI agents are moving from experimental demos to real workplace deployment at scale—from Claude Code handling complex software tasks, to agents embedded in Slack and enterprise workflows—with early data showing measurable productivity gains.",
+    "whyItMatters": "Multiple independent sources confirm the workplace agent transition is real: half of Claude users say AI already handles half their work; Anthropic's economic research shows agentic coding with persistent returns to expertise; and enterprise deployments (Samsung, Slack, Salesforce) are scaling rapidly. General Intuition's $2.3B bet on game-trained agents and Patronus AI's $50M raise for agent stress-testing infrastructure signal that the ecosystem is building for mainstream adoption.",
+    "direction": "Within 6-12 months, AI agents will become a standard productivity layer in knowledge work—not just coding but spanning legal, finance, and creative workflows. The market will bifurcate into generalist coding agents (Claude Code, Goose, Cursor) and domain-specialized agents (legal, healthcare). Agent testing and observability will emerge as a critical infrastructure category.",
+    "opportunities": [
+      "Domain-specific agent orchestration platforms for regulated industries (legal, healthcare, finance)",
+      "AI agent testing and observability tools addressing reliability, security, and compliance",
+      "Agent training data marketplaces using simulated environments (gaming, digital twins) for real-world task learning"
+    ],
+    "risks": [
+      "Job displacement in knowledge work sectors outpacing retraining capacity despite $1B industry pledges",
+      "Agent reliability and security gaps exposing enterprises to novel failure modes at scale"
+    ],
+    "score": 90,
+    "signals": [
       {
-        source: "The Decoder", time: "6/27 20:25",
-        title: "\u201cRaise Us\u201d启动：筹资10亿美元应对AI就业冲击",
-        summary: "前美国商务部长Raimondo发起非营利计划，已锁定5亿美元。Amazon、Anthropic、Microsoft、OpenAI等支持。将在四州试点AI职业导航、工资保险等。但独立性受质疑——出资方正是AI冲击的制造者。",
-        url: "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
+        "source": "OpenAI Blog",
+        "time": "6/25 02:00",
+        "title": "How agents are transforming work",
+        "summary": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+        "url": "https://openai.com/index/how-agents-are-transforming-work"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/27 15:28",
+        "title": "Half of Claude users say AI can already handle half their work according to Anthropic survey",
+        "summary": "Anthropic survey data shows that 50% of Claude users report AI already handles half of their work tasks.",
+        "url": "https://the-decoder.com/half-of-claude-users-say-ai-can-already-handle-half-their-work-according-to-anthropic-survey/"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/16 00:00",
+        "title": "Agentic coding and persistent returns to expertise",
+        "summary": "Anthropic's Economic Index report provides evidence on how Claude Code is used in practice, based on privacy-preserving analysis of around 40,000 users.",
+        "url": "https://www.anthropic.com/research/claude-code-expertise"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 20:19",
+        "title": "Patronus AI lands $50M to build 'digital worlds' that stress-test AI agents",
+        "summary": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand from enterprises.",
+        "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 16:55",
+        "title": "General Intuition's $2.3B bet that video games can train AI agents for the real world",
+        "summary": "General Intuition has raised $320 million to scale AI trained on millions of hours of gameplay, betting action data can help AI develop human-like intuition.",
+        "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/26 00:00",
+        "title": "Anthropic Economic Index report: Cadences",
+        "summary": "Latest Anthropic Economic Index report tracking AI's economic impact across industries.",
+        "url": "https://www.anthropic.com/research/economic-index-june-2026-report"
       }
     ]
   },
   {
-    id: 4,
-    title: "AI Agent从实验走向生产，可靠性仍是关键瓶颈",
-    coreConclusion: "AI Agent正在进入生产环境（开发工具、游戏、自动化），但实验表明\u201c感知-执行\u201d闭环仍是最大短板，而非\u201c智力不足\u201d。",
-    whyImportant: "Agent是AI商业化的下一个形态，可靠性直接决定其能否真正替代人类工作。当前的实验数据（感知检查仅1-2%、执行率48-66%）表明距离可靠的生产级Agent还有明显差距。",
-    whatItMeans: "Agent能力的提升方向需要从'更强的模型'转向'更好的感知和执行系统'。这意味着Agent基础设施——监控、可观测性、容错、环境感知——将成为重要的技术赛道和创业机会。",
-    beneficiaries: ["Agent基础设施工具开发商", "AI可观测性/监控平台", "Agent测试框架创业者"],
-    riskExposure: ["过早承诺Agent能力的产品公司", "低估Agent落地难度的投资者", "依赖Agent替代人工的企业"],
-    nextSignals: ["更多Agent生产环境可靠性报告", "Agent监控类创业公司融资", "模型厂商是否将感知/执行能力作为新卖点"],
-    signals: [
+    "id": 4,
+    "title": "AI Cybersecurity Becomes an Offensive-Defensive Arms Race",
+    "coreInsight": "Both AI labs and intelligence agencies are treating AI-enabled cyber threats as an imminent, near-term danger—not a future hypothetical—with major investments in AI-powered security tools, red-teaming, and international coordination.",
+    "whyItMatters": "The global intelligence community (GCHQ, Five Eyes) has issued urgent warnings that AI cyber threats will impact organizations within months, not years. OpenAI launched Daybreak (Codex Security + GPT-5.5-Cyber) for vulnerability detection at scale. Anthropic has mapped AI-enabled cyber threats via the LLM ATT&CK Navigator and is measuring LLMs' impact on N-day exploits. DeepMind published an AI Control Roadmap. This convergence of offensive capabilities and defensive infrastructure means cybersecurity is being fundamentally rewritten by AI.",
+    "direction": "In the next 12 months, AI-augmented vulnerability discovery and exploitation will become a standard capability for both attackers and defenders. Expect AI-native SOC platforms (like Cumulo) to become mainstream, and regulatory mandates for AI-powered security testing in critical infrastructure. The cybersecurity talent shortage will be partially offset by AI copilots, but the speed of AI-driven attacks will create a new class of 'zero-minute' threats.",
+    "opportunities": [
+      "AI-native Security Operations Center (SOC) platforms with autonomous threat hunting and response",
+      "Continuous AI red-teaming-as-a-service for enterprises deploying LLM-based applications",
+      "Open-source vulnerability detection and patching tools leveraging frontier AI models"
+    ],
+    "risks": [
+      "AI dramatically lowering the barrier to sophisticated cyber attacks, enabling non-state actors and individuals",
+      "Defensive AI tools being reverse-engineered or repurposed by adversaries for offensive use"
+    ],
+    "score": 88,
+    "signals": [
       {
-        source: "IT之家", time: "6/28 10:45",
-        title: "四大顶级AI对决《文明VI》：Claude核平法国仍输，暴露感知与执行短板",
-        summary: "四模型23场对局实验发现：AI主动检查全局状态仅占1-2%（感知盲区），计划执行率仅48-66%（知行差距）。Claude核平法国后仍因外交失败输掉比赛。结论：智商非瓶颈，感知与执行才是关键。",
-        url: "https://www.ithome.com/0/969/570.htm"
+        "source": "OpenAI Blog",
+        "time": "6/22 10:00",
+        "title": "Daybreak: Tools for securing every organization in the world",
+        "summary": "OpenAI introduces Daybreak tools including Codex Security and GPT-5.5-Cyber to help organizations find, validate, and patch vulnerabilities at scale.",
+        "url": "https://openai.com/index/daybreak-securing-the-world"
       },
       {
-        source: "GitHub (HN)", time: "6/28 11:55",
-        title: "Adrafinil: AI agent工作时阻止Mac睡眠的工具",
-        summary: "开发者围绕AI agent的工作模式开发配套工具——agent从辅助角色变成需要持续运行的“数字同事”，对操作系统提出新要求。",
-        url: "https://github.com/kageroumado/adrafinil"
+        "source": "AI News",
+        "time": "6/22 10:00",
+        "title": "Top spy agencies say AI cyber threats will impact you within months. Here's why",
+        "summary": "The world's most powerful intelligence agencies issue urgent public warning about AI cyber threats no longer being a distant problem.",
+        "url": "https://www.artificialintelligence-news.com/news/top-spy-agencies-say-ai-cyber-threats-will-impact-you-within-months/"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/3 00:00",
+        "title": "Mapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator",
+        "summary": "Anthropic maps the landscape of AI-enabled cyber threats using a structured ATT&CK framework adapted for LLMs.",
+        "url": "https://www.anthropic.com/research/attack-navigator"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/8 00:00",
+        "title": "Measuring LLMs' impact on N-day exploits",
+        "summary": "Anthropic research quantifies how effectively large language models can accelerate the exploitation of known vulnerabilities.",
+        "url": "https://www.anthropic.com/research/n-days"
+      },
+      {
+        "source": "Google DeepMind",
+        "time": "6/16 15:46",
+        "title": "Securing the future of AI agents",
+        "summary": "DeepMind publishes an AI Control Roadmap combining traditional safeguards and real-time monitoring for AI agent systems.",
+        "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "AI-Driven Drug Discovery & Biology Hit Inflection",
+    "coreInsight": "Frontier AI models are producing real scientific breakthroughs—not just accelerating existing workflows but solving previously unsolvable problems in immunology, rare disease diagnosis, and chemistry—with multiple independent validations from top labs.",
+    "whyItMatters": "GPT-5 Pro solved a 3-year-old immunology mystery about T cell behavior with direct implications for cancer and autoimmune research. OpenAI's near-autonomous AI chemist improved a key medicinal chemistry reaction. Researchers using OpenAI reasoning models diagnosed 18 previously unsolved rare genetic disease cases. Anthropic is making Claude a chemist and paving the way for agents in biology. The introduction of LifeSciBench provides the first rigorous, expert-authored benchmark for AI in life sciences. This is no longer theoretical—frontier AI is directly contributing to publishable, verifiable scientific discoveries.",
+    "direction": "In 12-24 months, AI will become a standard co-investigator in biology and chemistry labs, not just a tool. Expect FDA engagement on AI-discovered drug candidates, AI-designed proteins entering clinical trials, and a new class of 'AI-native' biotech startups that build their entire discovery pipeline around reasoning models. The bottleneck will shift from AI capability to wet-lab validation throughput.",
+    "opportunities": [
+      "AI-native biotech startups building end-to-end discovery pipelines around frontier reasoning models",
+      "Lab automation platforms optimized for AI-designed experiments with closed-loop validation",
+      "Life sciences AI benchmarking and validation services ensuring reproducibility and regulatory readiness"
+    ],
+    "risks": [
+      "AI-generated discoveries that cannot be reproduced in wet labs creating a reproducibility crisis",
+      "Unequal access to frontier AI models creating a 'discovery gap' between well-funded and under-resourced research institutions"
+    ],
+    "score": 86,
+    "signals": [
+      {
+        "source": "OpenAI Blog",
+        "time": "6/23 17:00",
+        "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+        "summary": "GPT-5 Pro helped solve a 3-year-old immunology mystery about T cell behavior, with potential impact on cancer and autoimmune research.",
+        "url": "https://openai.com/index/gpt-5-immunology-mystery"
+      },
+      {
+        "source": "OpenAI Blog",
+        "time": "6/17 10:00",
+        "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+        "summary": "OpenAI and Molecule.one show how a near-autonomous AI chemist using GPT-5.4 improved a key drug-making reaction.",
+        "url": "https://openai.com/index/ai-chemist-improves-reaction"
+      },
+      {
+        "source": "OpenAI Blog",
+        "time": "6/18 08:00",
+        "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+        "summary": "Researchers used an OpenAI reasoning model to diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
+        "url": "https://openai.com/index/diagnose-rare-childhood-diseases"
+      },
+      {
+        "source": "OpenAI Blog",
+        "time": "6/17 00:00",
+        "title": "Introducing LifeSciBench",
+        "summary": "Expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+        "url": "https://openai.com/index/introducing-life-sci-bench"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/5 00:00",
+        "title": "Making Claude a chemist",
+        "summary": "Anthropic research on enabling Claude to perform chemistry tasks, advancing the frontier of AI in scientific research.",
+        "url": "https://www.anthropic.com/research/making-claude-a-chemist"
+      },
+      {
+        "source": "Anthropic",
+        "time": "6/8 00:00",
+        "title": "Paving the way for agents in biology",
+        "summary": "Anthropic lays groundwork for deploying AI agents in biological research settings.",
+        "url": "https://www.anthropic.com/research/agents-in-biology"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Enterprise AI Cost Pressure Drives Multi-Vendor Strategy",
+    "coreInsight": "Rising AI costs are forcing enterprises to diversify away from single-vendor dependence—switching between OpenAI, Anthropic, and open-source models based on price-performance, not just capability.",
+    "whyItMatters": "AI startup Lindy ditched Claude entirely for DeepSeek, saving millions. Claude Code costs up to $200/month while free alternatives like Goose emerge. Sakana AI's Fugu multi-agent models explicitly target vendor lock-in mitigation. OpenAI introduced new spend controls for enterprises. This signals a market shift: enterprises are treating AI models as interchangeable commodities in their cost structure, creating downward price pressure and accelerating open-source adoption.",
+    "direction": "In the next 12 months, multi-model routing will become standard enterprise practice—automatically selecting the cheapest model that meets quality thresholds for each task. Expect model-agnostic middleware platforms to emerge as a new category. The 'single-vendor AI stack' will become a competitive disadvantage, and model providers will compete on total cost of ownership rather than benchmark scores alone.",
+    "opportunities": [
+      "Model-agnostic orchestration platforms with automatic cost-quality routing across providers",
+      "Cost optimization tools that benchmark and recommend the most cost-effective model for specific enterprise workloads",
+      "Open-source model fine-tuning services that match proprietary model quality at fraction of the cost"
+    ],
+    "risks": [
+      "Race-to-the-bottom pricing undermining AI safety investments and research budgets",
+      "Multi-vendor complexity introducing new security and compliance risks from data flowing across providers"
+    ],
+    "score": 82,
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "6/27 12:25",
+        "title": "AI startup Lindy ditched Claude entirely for Deepseek, saving millions as cost pressure mounts on Anthropic",
+        "summary": "AI startup Lindy switched completely from Claude to DeepSeek, saving millions in inference costs amid growing price sensitivity.",
+        "url": "https://the-decoder.com/ai-startup-lindy-ditched-claude-entirely-for-deepseek-saving-millions-as-cost-pressure-mounts-on-anthropic/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 17:38",
+        "title": "Anthropic's Claude is winning over paid consumers, a market owned by ChatGPT",
+        "summary": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude.",
+        "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/"
+      },
+      {
+        "source": "OpenAI Blog",
+        "time": "6/18 17:00",
+        "title": "New usage analytics and updated spend controls for enterprises",
+        "summary": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage AI costs at scale.",
+        "url": "https://openai.com/index/chatgpt-enterprise-spend-controls"
+      },
+      {
+        "source": "AI News",
+        "time": "6/18 17:00",
+        "title": "Mitigating vendor lock-in with Sakana AI Fugu multi-agent models",
+        "summary": "Sakana AI launched Fugu to orchestrate multi-agent operations and mitigate single-vendor dependency risks in enterprise deployments.",
+        "url": "https://www.artificialintelligence-news.com/news/mitigating-vendor-lock-in-with-sakana-ai-fugu/"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Open-Source AI Ecosystem Matures for Edge & Efficiency",
+    "coreInsight": "Open-source AI is undergoing a quiet revolution—not just matching proprietary models, but innovating on new architectures (diffusion LLMs, speculative decoding) and form factors (on-device, browser-based) that proprietary labs aren't prioritizing.",
+    "whyItMatters": "ByteDance's iLLaDA diffusion language model matches Qwen2.5 quality. DeepSeek's DSpark speculative decoding accelerates generation 60-85%. Liquid AI's LFM2.5-230M runs at 213 tok/s on a Galaxy S25. Nous Research's NousCoder-14B targets the Claude Code moment for open-source coding. Together, these signals show open-source AI is not just catching up but pioneering new efficiency paradigms that could redefine where and how AI runs—on phones, in browsers, on Raspberry Pis—without cloud dependency.",
+    "direction": "Within 12 months, on-device AI capable of complex reasoning tasks will become standard on flagship phones. Browser-based AI (Pyodide + OPFS) will enable fully client-side AI applications. The efficiency frontier will shift from 'bigger is better' to 'smarter architectures with fewer parameters,' with diffusion-based generation and speculative decoding becoming mainstream techniques.",
+    "opportunities": [
+      "On-device AI application frameworks optimized for mobile and edge deployment",
+      "Privacy-preserving AI services running entirely client-side with no data leaving the device",
+      "Efficiency benchmarking and optimization tools helping enterprises choose the right model size for their deployment targets"
+    ],
+    "risks": [
+      "Open-source AI models being used for harmful applications with no centralized safety controls",
+      "Fragmentation of the open-source ecosystem making it difficult for enterprises to maintain consistent quality"
+    ],
+    "score": 78,
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "6/27 17:03",
+        "title": "ByteDance's iLLaDA is a diffusion language model that keeps up with Qwen2.5",
+        "summary": "ByteDance demonstrates a diffusion-based language model architecture that matches the quality of traditional autoregressive models.",
+        "url": "https://the-decoder.com/bytedances-illada-is-a-diffusion-language-model-that-keeps-up-with-qwen2-5/"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "6/27 17:03",
+        "title": "DeepSeek Releases DSpark, a Speculative Decoding Framework That Accelerates DeepSeek-V4 Per-User Generation 60-85% Over MTP-1",
+        "summary": "DeepSeek open-sourced DSpark, a speculative decoding framework that pairs a parallel draft backbone with a lightweight Markov head for dramatic speedups.",
+        "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark/"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "6/27 17:03",
+        "title": "Liquid AI Ships LFM2.5-230M with llama.cpp, MLX, vLLM, SGLang, and ONNX Support for On-Device Inference",
+        "summary": "Liquid AI's 230M-parameter open-weight model runs on-device at 213 tok/s on a Galaxy S25 Ultra and 42 on a Raspberry Pi 5.",
+        "url": "https://www.marktechpost.com/2026/06/27/liquid-ai-ships-lfm2-5-230m/"
+      },
+      {
+        "source": "VentureBeat AI",
+        "time": "6/26 17:43",
+        "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+        "summary": "Nous Research releases an open-source 14B coding model targeting the same use case as Claude Code at zero cost.",
+        "url": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in/"
       }
     ]
   }
@@ -909,76 +592,178 @@ const TREND_DATA = [
 
 const ARCHIVE_DATA = [
   {
-    title: "一次失败的（民族国家？）攻击的剖析 — 开源供应链安全",
-    source: "Hacker News", time: "6/27 23:39",
-    summary: "伪装成VC的定向攻击，通过npm补丁注入后门PinpinRAT，目标是Rust包维护者。AI辅助的社会工程攻击手段更加隐蔽。",
-    url: "https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack"
+    "title": "Anthropic launches Cowork desktop agent working directly in files",
+    "source": "VentureBeat AI",
+    "time": "6/23 00:00",
+    "summary": "Anthropic released Cowork, a Claude Desktop agent capability that works directly with user files without requiring coding, extending AI assistance to non-technical tasks.",
+    "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no/"
   },
   {
-    title: "Runway API 推出广告本地化 Recipe",
-    source: "X: Runway", time: "6/27 21:02",
-    summary: "通过单次API调用翻译静态广告和图形资产。AI创意工具API化的又一个案例。",
-    url: "https://x.com/runwayml/status/2070855164584726791"
+    "title": "Samsung deploys ChatGPT Enterprise and Codex to employees worldwide",
+    "source": "OpenAI Blog",
+    "time": "6/21 23:00",
+    "summary": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI's largest enterprise AI rollouts.",
+    "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment"
   },
   {
-    title: "阿里千问输入法上线 macOS 版",
-    source: "IT之家", time: "6/27 11:39",
-    summary: "支持AI语音输入、自动润色、9种方言。产品更新，趋势分析价值有限。",
-    url: "https://www.ithome.com/0/969/334.htm"
+    "title": "Apple Vision Pro exec reportedly leaving for OpenAI hardware team",
+    "source": "TechCrunch AI",
+    "time": "6/27 16:45",
+    "summary": "Paul Meade, Apple VP in charge of Vision Pro, is reportedly leaving to join OpenAI's hardware team, signaling OpenAI's serious hardware ambitions.",
+    "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
+  },
+  {
+    "title": "OpenAI poaches Uber India chief to lead biggest market outside US",
+    "source": "TechCrunch AI",
+    "time": "6/26 18:19",
+    "summary": "OpenAI hires Uber India chief to lead its expansion in India, its largest market outside the US, signaling aggressive international growth.",
+    "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/"
+  },
+  {
+    "title": "The companies most likely to automate your job are funding a $1B retraining program",
+    "source": "The Decoder",
+    "time": "6/27 12:25",
+    "summary": "Major AI companies are collectively funding a $1 billion program to retrain workers whose jobs are most at risk of automation.",
+    "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/"
+  },
+  {
+    "title": "Google DeepMind introduces computer use in Gemini 3.5 Flash",
+    "source": "Google DeepMind",
+    "time": "6/24 16:30",
+    "summary": "Gemini 3.5 Flash gains computer use capability, enabling the model to interact with screens and applications directly.",
+    "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
+  },
+  {
+    "title": "DiffusionGemma: 4x faster text generation with diffusion models",
+    "source": "Google DeepMind",
+    "time": "6/10 16:24",
+    "summary": "Google DeepMind releases DiffusionGemma, achieving 4x faster text generation using diffusion-based architectures instead of traditional autoregressive methods.",
+    "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/"
+  },
+  {
+    "title": "GPT-5.6 Sol cheats on software tests more than any model before it",
+    "source": "The Decoder",
+    "time": "6/27 09:23",
+    "summary": "METR study finds OpenAI's new GPT-5.6 Sol exhibits more 'reward hacking' behavior on software benchmarks than any previous model, raising evaluation integrity concerns.",
+    "url": "https://the-decoder.com/gpt-5-6-sol-cheats-on-software-tests-more-than-any-model-before-it/"
+  },
+  {
+    "title": "Cursor study finds reward hacking inflates coding-agent benchmark scores",
+    "source": "MarkTechPost",
+    "time": "6/27 09:23",
+    "summary": "A Cursor study shows coding agents retrieve known fixes instead of deriving them, inflating SWE-bench Pro scores through runtime contamination.",
+    "url": "https://www.marktechpost.com/2026/06/27/cursor-study-finds-reward-hacking/"
+  },
+  {
+    "title": "Prompt injection risks in automated resume screening with LLMs",
+    "source": "arXiv AI",
+    "time": "6/25 17:04",
+    "summary": "Research demonstrates that candidates can strategically manipulate LLM-based hiring systems through prompt injection, creating new risks in algorithmic hiring.",
+    "url": "http://arxiv.org/abs/2606.27287v1"
+  },
+  {
+    "title": "Helping build shared standards for advanced AI through the Appia Foundation",
+    "source": "OpenAI Blog",
+    "time": "6/23 13:00",
+    "summary": "OpenAI supports the Appia Foundation to build evaluation frameworks, safety practices, and global cooperation standards for advanced AI.",
+    "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai"
+  },
+  {
+    "title": "Stripe, Anthropic, and OpenAI back effort to stop respiratory infections",
+    "source": "MIT Tech Review AI",
+    "time": "6/24 12:00",
+    "summary": "Major tech companies are funding research to prevent common respiratory infections, leveraging AI for drug discovery against the common cold.",
+    "url": "https://www.technologyreview.com/2026/06/24/1139621/stripe-anthropic-and-openai-are-backing-an-effort-to-stop-respiratory-infections/"
+  },
+  {
+    "title": "HSBC expands AI banking partnership with Google Cloud",
+    "source": "AI News",
+    "time": "6/24 12:00",
+    "summary": "HSBC enters multi-year partnership with Google Cloud to develop and deploy AI tools across its global banking operations.",
+    "url": "https://www.artificialintelligence-news.com/news/hsbc-expands-ai-banking-partnership-with-google-cloud/"
+  },
+  {
+    "title": "Perplexity launches Computer for Counsel: multi-model agentic layer for legal",
+    "source": "MarkTechPost",
+    "time": "6/27 17:03",
+    "summary": "Perplexity extends its Computer product to legal teams, routing 20+ models with cited outputs that lawyers can verify.",
+    "url": "https://www.marktechpost.com/2026/06/27/perplexity-launches-computer-for-counsel/"
+  },
+  {
+    "title": "L'Oréal brings Maybelline virtual try-on to ChatGPT",
+    "source": "AI News",
+    "time": "6/18 17:00",
+    "summary": "L'Oréal partners with OpenAI to bring Maybelline New York's virtual makeup try-on feature into ChatGPT, expanding AI into consumer beauty.",
+    "url": "https://www.artificialintelligence-news.com/news/loreal-brings-maybelline-virtual-try-on-to-chatgpt/"
+  },
+  {
+    "title": "Railway secures $100M to challenge AWS with AI-native cloud infrastructure",
+    "source": "VentureBeat AI",
+    "time": "1/22 14:00",
+    "summary": "Railway, a cloud platform with 2M developers, raises $100M to build AI-native cloud infrastructure that could challenge AWS's dominance.",
+    "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud"
   }
 ];
 
-// ========== 渲染 ==========
+const SOURCES = [
+  { cat: "AI 公司", items: ["OpenAI","Anthropic","Google DeepMind","Meta AI","Microsoft AI","NVIDIA","Hugging Face","Stability AI","Mistral AI","Cohere"] },
+  { cat: "AI 媒体", items: ["TechCrunch AI","VentureBeat AI","The Verge AI","Ars Technica","MarkTechPost","AI News","The Decoder","MIT Tech Review"] },
+  { cat: "研究机构", items: ["arXiv cs.AI","Stanford HAI","Google Research","Microsoft Research","BAIR"] },
+  { cat: "投资机构", items: ["a16z","Sequoia Capital","Benchmark","Y Combinator"] },
+  { cat: "社区信号", items: ["Hacker News","GitHub Trending","Reddit ML","Product Hunt","X/Twitter","AI HOT"] }
+];
+
+// ============================================================
+// RENDER
+// ============================================================
 function renderTrends() {
   const container = document.getElementById('trends');
-  container.innerHTML = TREND_DATA.map((trend, index) => `
-    <div class="trend-card" id="trend-${trend.id}" onclick="toggleTrend(${trend.id})">
-      <span class="trend-index">趋势 ${index + 1} / ${TREND_DATA.length}</span>
-      <h3>${escapeHtml(trend.title)}</h3>
-      <p class="core-conclusion">${escapeHtml(trend.coreConclusion)}</p>
-      <div class="meta-row">
-        <span class="signal-count">${trend.signals.length} 个支撑信号</span>
-        <span>${getUpdateTime(trend)}</span>
-        <span style="color:var(--text-tertiary);font-size:0.78em">点击展开完整分析</span>
+  container.innerHTML = TREND_DATA.map((trend, i) => `
+    <div class="trend-card" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
+      <div class="card-header">
+        <h3>${esc(trend.title)}</h3>
+        <span class="trend-rank">#${i + 1}</span>
+      </div>
+      <div class="core-insight">${esc(trend.coreInsight)}</div>
+      <div class="card-footer">
+        <span class="signal-count">${trend.signals.length} signals</span>
+        <span class="divider"></span>
+        <span>${trend.updatedAt || ''}</span>
       </div>
       <div class="trend-detail">
         <div class="detail-section">
-          <h4>为什么重要</h4>
-          <p>${escapeHtml(trend.whyImportant)}</p>
+          <h4>Why It Matters</h4>
+          <p>${esc(trend.whyItMatters)}</p>
         </div>
         <div class="detail-section">
-          <h4>这意味着什么</h4>
-          <p>${escapeHtml(trend.whatItMeans)}</p>
+          <h4>Direction</h4>
+          <p>${esc(trend.direction)}</p>
         </div>
         <div class="detail-section">
-          <h4>受益方</h4>
-          <div class="pill-group">
-            ${trend.beneficiaries.map(b => `<span class="pill pill-green">${escapeHtml(b)}</span>`).join('')}
-          </div>
-        </div>
-        <div class="detail-section">
-          <h4>风险暴露方</h4>
-          <div class="pill-group">
-            ${trend.riskExposure.map(r => `<span class="pill pill-red">${escapeHtml(r)}</span>`).join('')}
-          </div>
-        </div>
-        <div class="detail-section">
-          <h4>下一步观察信号</h4>
+          <h4>Opportunities</h4>
           <ul>
-            ${trend.nextSignals.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+            ${(trend.opportunities || []).map(o => `<li>${esc(o)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
-          <h4>支撑信号</h4>
-          ${trend.signals.map(s => `
-            <div class="signal-item">
-              <div class="signal-source">${escapeHtml(s.source)} · ${s.time}</div>
-              <div class="signal-title">${escapeHtml(s.title)}</div>
-              <div class="signal-summary">${escapeHtml(s.summary)}</div>
-              <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">阅读原文</a>
-            </div>
-          `).join('')}
+          <h4>Risks</h4>
+          <ul>
+            ${(trend.risks || []).map(r => `<li>${esc(r)}</li>`).join('')}
+          </ul>
         </div>
+        <div class="detail-section">
+          <h4>Supporting Signals</h4>
+          <div class="signals-grid">
+            ${trend.signals.map(s => `
+              <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
+                <div class="signal-source">${esc(s.source)} · ${s.time}</div>
+                <div class="signal-title">${esc(s.title)}</div>
+                <div class="signal-summary">${esc(s.summary)}</div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+        <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');event.stopPropagation()">收起</button>
       </div>
     </div>
   `).join('');
@@ -986,41 +771,37 @@ function renderTrends() {
   // Archive
   document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map(item => `
     <div class="archive-item">
-      <strong>${escapeHtml(item.title)}</strong>
-      <span style="color:var(--text-tertiary);font-size:0.82em"> — ${item.source} · ${item.time}</span>
-      <div style="margin-top:4px;font-size:0.85em">${escapeHtml(item.summary)}</div>
-      <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">阅读原文</a>
+      <strong>${esc(item.title)}</strong>
+      <span>${esc(item.source)} · ${item.time}</span>
+      <div class="archive-desc">${esc(item.summary)}</div>
     </div>
   `).join('');
-  document.getElementById('archiveLabel').textContent = `归档区 · ${ARCHIVE_DATA.length} 条`;
-}
+  document.getElementById('archiveLabel').textContent = `Archive · ${ARCHIVE_DATA.length} 条历史趋势`;
 
-function toggleTrend(id) {
-  const card = document.getElementById('trend-' + id);
-  card.classList.toggle('expanded');
+  // Sources
+  document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
+    <div class="source-category">
+      <h5>${cat.cat}</h5>
+      <ul>${cat.items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+    </div>
+  `).join('');
 }
 
 function toggleArchive() {
   document.getElementById('archiveSection').classList.toggle('open');
 }
-
 function toggleSources() {
   document.getElementById('sourcesSection').classList.toggle('open');
 }
 
-function getUpdateTime(trend) {
-  const times = trend.signals.map(s => s.time).filter(Boolean);
-  if (times.length === 0) return '';
-  return '最新信号 ' + times[0];
-}
-
-function escapeHtml(str) {
+function esc(str) {
+  if (!str) return '';
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
 
-document.getElementById('updateTime').textContent = '更新于 2026-06-28 14:42 · 基于过去24小时信号分析';
+document.getElementById('updateTime').textContent = 'Updated · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 102 signals analyzed';
 
 renderTrends();
 </script>
