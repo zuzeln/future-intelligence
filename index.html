@@ -1064,7 +1064,7 @@ function renderTrends() {
             </div>
           </div>
         </div>
-        <button class="collapse-btn" onclick="const card=document.getElementById('trend-${trend.id}');card.classList.remove('expanded');requestAnimationFrame(()=>{card.scrollIntoView({behavior:'smooth',block:'center'});})">收起</button>
+        <button class="collapse-btn" onclick="const card=document.getElementById('trend-${trend.id}');card.classList.remove('expanded');requestAnimationFrame(function(){requestAnimationFrame(function(){card.scrollIntoView({behavior:'smooth',block:'center'});});});event.stopPropagation()">收起</button>
       </div>
     </div>
   `).join('');
