@@ -231,6 +231,43 @@ body {
   background: transparent; color: var(--text-secondary); border: 1px solid var(--border);
 }
 .edit-bar-btn.export:hover { color: #fff; border-color: var(--text-secondary); }
+
+/* 机会卡片 */
+.opp-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.opp-item {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); border-radius: 8px;
+  padding: 10px 14px; font-size: 0.88em; color: var(--text-primary); line-height: 1.6;
+}
+/* 风险卡片 */
+.risk-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.risk-item {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--danger); border-radius: 8px;
+  padding: 10px 14px; font-size: 0.88em; color: var(--text-primary); line-height: 1.6;
+}
+/* 信息来源折叠 */
+.signal-collapse-bar {
+  display: flex; align-items: center; gap: 6px; padding: 10px 14px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer; font-size: 0.85em; color: var(--accent); font-weight: 600;
+  user-select: none; transition: border-color 0.15s;
+}
+.signal-collapse-bar:hover { border-color: var(--accent-dim); }
+.signal-preview {
+  position: absolute; bottom: calc(100% + 8px); left: 0; right: 0;
+  background: var(--surface-hover); border: 1px solid var(--accent-dim); border-radius: 8px;
+  padding: 12px 14px; font-size: 0.78em; color: var(--text-secondary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4); z-index: 10; display: none;
+  pointer-events: none;
+}
+.signal-collapse-bar:hover .signal-preview,
+.signal-preview:hover { display: block; }
+.signal-collapse-wrapper { position: relative; }
+.signal-collapse-wrapper .signals-grid { display: none; margin-top: 10px; }
+.signal-collapse-wrapper.expanded .signals-grid { display: flex; }
+.signal-collapse-wrapper.expanded .signal-preview { display: none !important; }
+
 </style>
 </head>
 <body>
@@ -974,26 +1011,34 @@ function renderTrends() {
         </div>
         <div class="detail-section">
           <h4>机会</h4>
-          <ul>
-            ${(trend.opportunities || []).map(o => `<li contenteditable="false">${esc(o)}</li>`).join('')}
+          <ul class="opp-list">
+            ${(trend.opportunities || []).map(o => `<li class="opp-item" contenteditable="false">${esc(o)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
           <h4>风险</h4>
-          <ul>
-            ${(trend.risks || []).map(r => `<li contenteditable="false">${esc(r)}</li>`).join('')}
+          <ul class="risk-list">
+            ${(trend.risks || []).map(r => `<li class="risk-item" contenteditable="false">${esc(r)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
           <h4>信息来源</h4>
-          <div class="signals-grid">
-            ${trend.signals.map(s => `
-              <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
-                <div class="signal-source" contenteditable="false">${esc(s.source)} · ${s.time}</div>
-                <div class="signal-title" contenteditable="false">${esc(s.title)}</div>
-                <div class="signal-summary" contenteditable="false">${esc(s.summary)}</div>
-              </a>
-            `).join('')}
+          <div class="signal-collapse-wrapper" id="sig-wrap-${trend.id}">
+            <div class="signal-collapse-bar" onclick="toggleSignals('${trend.id}');event.stopPropagation()">
+              <span>${trend.signals.length} 个信息来源 ▸</span>
+              <div class="signal-preview">
+                ${trend.signals.slice(0,3).map(s => `<div style="padding:2px 0;">· ${esc(s.source)} — ${esc(s.title)}</div>`).join('')}
+              </div>
+            </div>
+            <div class="signals-grid">
+              ${trend.signals.map(s => `
+                <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
+                  <div class="signal-source" contenteditable="false">${esc(s.source)} · ${s.time}</div>
+                  <div class="signal-title" contenteditable="false">${esc(s.title)}</div>
+                  <div class="signal-summary" contenteditable="false">${esc(s.summary)}</div>
+                </a>
+              `).join('')}
+            </div>
           </div>
         </div>
         <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');event.stopPropagation()">收起</button>
@@ -1045,6 +1090,18 @@ function esc(str) {
 document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 102 signals analyzed';
 
 renderTrends();
+function toggleSignals(id) {
+  const wrap = document.getElementById('sig-wrap-' + id);
+  const bar = wrap.querySelector('.signal-collapse-bar span');
+  if (wrap.classList.contains('expanded')) {
+    wrap.classList.remove('expanded');
+    bar.textContent = bar.textContent.replace('▾', '▸');
+  } else {
+    wrap.classList.add('expanded');
+    bar.textContent = bar.textContent.replace('▸', '▾');
+  }
+}
+
 </script>
 </body>
 </html>
