@@ -1124,8 +1124,10 @@ function toggleSignals(id) {
   } else {
     wrap.classList.add('expanded');
     bar.textContent = bar.textContent.replace('▸', '▾');
-    // 滚动到展开的信号列表
-    wrap.querySelector('.signals-grid').scrollIntoView({behavior:'smooth', block:'start'});
+    // 等待 display 生效后再滚动
+    requestAnimationFrame(function() {
+      wrap.querySelector('.signals-grid').scrollIntoView({behavior:'smooth', block:'start'});
+    });
   }
 }
 
