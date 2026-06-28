@@ -242,11 +242,53 @@
 
   /* Footer */
   .footer {
-    margin-top: 60px;
+    margin-top: 20px;
     text-align: center;
     font-size: 0.8em;
     color: var(--text-tertiary);
   }
+
+  /* Sources */
+  .sources-toggle {
+    text-align: center;
+    margin-top: 48px;
+    padding: 12px;
+    color: var(--text-tertiary);
+    font-size: 0.85em;
+    cursor: pointer;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .sources-toggle:hover { color: var(--text-secondary); }
+  .sources-section { display: none; }
+  .sources-section.open { display: block; }
+  .sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .source-category h5 {
+    font-size: 0.78em;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .source-category ul { list-style: none; padding: 0; }
+  .source-category li {
+    padding: 3px 0;
+    font-size: 0.82em;
+    color: var(--text-secondary);
+  }
+  .source-category li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .source-category li a:hover { color: var(--accent); }
 
   /* Loading */
   .loading {
@@ -286,6 +328,71 @@
     <span id="archiveLabel">归档区 · 3 条</span>
   </div>
   <div class="archive-section" id="archiveSection"></div>
+
+  <div class="sources-toggle" onclick="toggleSources()">
+    <span id="sourcesLabel">数据来源 · 27 个信息源</span>
+  </div>
+  <div class="sources-section" id="sourcesSection">
+    <div class="sources-grid">
+      <div class="source-category">
+        <h5>AI 公司（7）</h5>
+        <ul>
+          <li><a href="https://openai.com/news/" target="_blank">OpenAI News</a></li>
+          <li><a href="https://www.anthropic.com/news" target="_blank">Anthropic News</a></li>
+          <li><a href="https://deepmind.google/discover/blog/" target="_blank">Google DeepMind Blog</a></li>
+          <li><a href="https://ai.meta.com/blog/" target="_blank">Meta AI Blog</a></li>
+          <li><a href="https://blogs.microsoft.com/ai/" target="_blank">Microsoft AI Blog</a></li>
+          <li><a href="https://blogs.nvidia.com/" target="_blank">NVIDIA Blog</a></li>
+          <li><a href="https://huggingface.co/blog" target="_blank">Hugging Face Blog</a></li>
+        </ul>
+      </div>
+      <div class="source-category">
+        <h5>AI 媒体（8）</h5>
+        <ul>
+          <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">TechCrunch AI</a></li>
+          <li><a href="https://venturebeat.com/category/ai/" target="_blank">VentureBeat AI</a></li>
+          <li><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank">The Verge AI</a></li>
+          <li><a href="https://arstechnica.com/ai/" target="_blank">Ars Technica AI</a></li>
+          <li><a href="https://www.marktechpost.com/" target="_blank">MarkTechPost</a></li>
+          <li><a href="https://www.artificialintelligence-news.com/" target="_blank">AI News</a></li>
+          <li><a href="https://the-decoder.com/" target="_blank">The Decoder</a></li>
+          <li><a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank">MIT Tech Review AI</a></li>
+        </ul>
+      </div>
+      <div class="source-category">
+        <h5>研究机构（4）</h5>
+        <ul>
+          <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arXiv AI</a></li>
+          <li><a href="https://hai.stanford.edu/" target="_blank">Stanford HAI</a></li>
+          <li><a href="https://bair.berkeley.edu/blog/" target="_blank">BAIR Blog</a></li>
+          <li><a href="https://www.cs.cmu.edu/news" target="_blank">CMU AI News</a></li>
+        </ul>
+      </div>
+      <div class="source-category">
+        <h5>投资机构（4）</h5>
+        <ul>
+          <li><a href="https://a16z.com/ai/" target="_blank">a16z AI</a></li>
+          <li><a href="https://www.sequoiacap.com/" target="_blank">Sequoia Capital</a></li>
+          <li><a href="https://lsvp.com/" target="_blank">Lightspeed</a></li>
+          <li><a href="https://www.nfx.com/" target="_blank">NFX</a></li>
+        </ul>
+      </div>
+      <div class="source-category">
+        <h5>专家博客（3）</h5>
+        <ul>
+          <li><a href="https://lilianweng.github.io/" target="_blank">Lilian Weng</a></li>
+          <li><a href="https://ysymyth.github.io/" target="_blank">Shunyu Yao</a></li>
+          <li><a href="https://x.com/ClaudeDevs" target="_blank">Claude Devs</a></li>
+        </ul>
+      </div>
+      <div class="source-category">
+        <h5>基础设施（1）</h5>
+        <ul>
+          <li><a href="https://blog.cloudflare.com/" target="_blank">Cloudflare Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div class="footer">
     Future Intelligence · 趋势基于 AI HOT 公开数据源分析生成 · 不追逐新闻，只发现趋势
@@ -489,6 +596,10 @@ function toggleTrend(id) {
 
 function toggleArchive() {
   document.getElementById('archiveSection').classList.toggle('open');
+}
+
+function toggleSources() {
+  document.getElementById('sourcesSection').classList.toggle('open');
 }
 
 function getUpdateTime(trend) {
