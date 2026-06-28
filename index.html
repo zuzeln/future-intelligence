@@ -1126,7 +1126,9 @@ function toggleSignals(id) {
     bar.textContent = bar.textContent.replace('▸', '▾');
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
-        wrap.querySelector('.signals-grid').scrollIntoView({behavior:'smooth', block:'start'});
+        var grid = wrap.querySelector('.signals-grid');
+        var top = grid.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({top: top, behavior: 'smooth'});
       });
     });
   }
