@@ -20,6 +20,10 @@
   --success: #3fb950;
   --warning: #d29922;
   --danger: #f85149;
+
+  /* Edit mode */
+  --edit-border: rgba(248,81,73,0.35);
+  --edit-hl: rgba(74,158,255,0.08);
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
@@ -158,41 +162,117 @@ body {
   .trend-card { padding: 20px 18px; }
   .trend-card h3 { font-size: 1.05em; }
 }
+
+/* ================================================================
+   EDIT MODE STYLES — isolated, no effect when edit mode is off
+   ================================================================ */
+#edit-toggle {
+  position: fixed; top: 16px; right: 20px; z-index: 9999;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-secondary); font-size: 1.25em; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+#edit-toggle:hover { background: var(--surface-hover); color: #fff; }
+#edit-toggle.active { background: var(--danger); border-color: var(--danger); color: #fff; }
+
+.edit-mode .editable-block {
+  position: relative;
+  border: 1px dashed var(--edit-border) !important;
+  border-radius: 8px;
+  transition: border 0.15s;
+}
+.edit-mode .editable-block:hover { border-style: solid !important; }
+
+.hide-btn {
+  display: none;
+  position: absolute; top: -6px; right: -6px; z-index: 10;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--danger); color: #fff; border: none;
+  font-size: 10px; line-height: 18px; text-align: center; cursor: pointer;
+  pointer-events: auto;
+}
+.edit-mode .hide-btn { display: block; }
+
+.edit-mode [contenteditable="true"] {
+  cursor: text !important;
+  border-radius: 3px;
+  transition: background 0.12s;
+}
+.edit-mode [contenteditable="true"]:hover {
+  background: var(--edit-hl);
+}
+.edit-mode [contenteditable="true"]:focus {
+  background: rgba(74,158,255,0.14);
+  outline: 1px solid var(--accent-dim);
+}
+
+/* Floating edit bar */
+#edit-bar {
+  display: none;
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 9998;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 28px; padding: 8px 8px; gap: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+.edit-mode #edit-bar { display: flex; }
+.edit-bar-btn {
+  padding: 10px 22px; border-radius: 22px; border: none;
+  font-size: 0.82em; font-weight: 600; cursor: pointer;
+  transition: all 0.15s;
+}
+.edit-bar-btn.save {
+  background: var(--accent); color: #fff;
+}
+.edit-bar-btn.save:hover { background: #5db3ff; }
+.edit-bar-btn.export {
+  background: transparent; color: var(--text-secondary); border: 1px solid var(--border);
+}
+.edit-bar-btn.export:hover { color: #fff; border-color: var(--text-secondary); }
 </style>
 </head>
 <body>
+
+<button id="edit-toggle" title="切换编辑模式" onclick="toggleEditMode()">&#9881;</button>
+
+<div id="edit-bar">
+  <button class="edit-bar-btn save" onclick="saveToLocal()">保存到浏览器</button>
+  <button class="edit-bar-btn export" onclick="exportHTML()">导出 HTML</button>
+</div>
+
 <div class="container">
 
-  <div class="brand">
-    <h1>Future Intelligence</h1>
-    <span>Trend Discovery · Not News</span>
+  <div class="brand editable-block" data-block="brand">
+    <h1 contenteditable="false">Future Intelligence</h1>
+    <span contenteditable="false">Trend Discovery · Not News</span>
   </div>
 
-  <div class="hero">
-    <h2>Today's Most Important Future Trends</h2>
-    <p class="subtitle">从信号中提取趋势，而非追逐新闻。帮助理解未来正在发生什么。</p>
-    <div class="update-badge" id="updateTime"></div>
+  <div class="hero editable-block" data-block="hero">
+    <h2 contenteditable="false">Today's Most Important Future Trends</h2>
+    <p class="subtitle" contenteditable="false">从信号中提取趋势，而非追逐新闻。帮助理解未来正在发生什么。</p>
+    <div class="update-badge" id="updateTime" contenteditable="false"></div>
   </div>
 
   <div id="trends"></div>
 
   <!-- Archive -->
-  <div class="archive-section">
-    <div class="archive-toggle" onclick="toggleArchive()">
+  <div class="archive-section editable-block" data-block="archive-section">
+    <div class="archive-toggle" onclick="toggleArchive()" contenteditable="false">
       <span id="archiveLabel">Archive · 近期存档</span>
     </div>
     <div class="archive-content" id="archiveSection"></div>
   </div>
 
   <!-- Sources -->
-  <div class="sources-section">
-    <div class="sources-toggle" onclick="toggleSources()">
-      <span>数据来源 · 信息源</span>
+  <div class="sources-section editable-block" data-block="sources-section">
+    <div class="sources-toggle" onclick="toggleSources()" contenteditable="false">
+      <span contenteditable="false">数据来源 · 信息源</span>
     </div>
     <div class="sources-grid" id="sourcesSection"></div>
   </div>
 
-  <div class="footer">
+  <div class="footer editable-block" data-block="footer" contenteditable="false">
     趋势基于公开数据源分析生成 · 不追逐新闻，只发现趋势
   </div>
 
@@ -714,17 +794,203 @@ const SOURCES = [
 ];
 
 // ============================================================
+// EDIT MODE ENGINE
+// ============================================================
+const LS_PREFIX = 'fi_edit_';
+let editMode = false;
+
+function lsKey(k) { return LS_PREFIX + k; }
+
+// Restore hidden blocks from localStorage
+function restoreHidden() {
+  const hidden = JSON.parse(localStorage.getItem(lsKey('hidden')) || '[]');
+  hidden.forEach(function(sel) {
+    var el = document.querySelector(sel);
+    if (el) el.style.display = 'none';
+  });
+}
+
+// Restore text edits from localStorage
+function restoreTextEdits() {
+  const edits = JSON.parse(localStorage.getItem(lsKey('textEdits')) || '{}');
+  Object.keys(edits).forEach(function(sel) {
+    var el = document.querySelector(sel);
+    if (el && edits[sel] !== null) el.textContent = edits[sel];
+  });
+}
+
+function toggleEditMode() {
+  editMode = !editMode;
+  var btn = document.getElementById('edit-toggle');
+  if (editMode) {
+    document.body.classList.add('edit-mode');
+    btn.classList.add('active');
+    btn.title = '退出编辑模式';
+    setAllEditable(true);
+    injectHideButtons();
+  } else {
+    document.body.classList.remove('edit-mode');
+    btn.classList.remove('active');
+    btn.title = '切换编辑模式';
+    setAllEditable(false);
+    removeHideButtons();
+  }
+}
+
+function setAllEditable(editable) {
+  var attrs = [
+    '.brand h1', '.brand span',
+    '.hero h2', '.hero .subtitle', '#updateTime',
+    '.core-insight', '.detail-section p', '.detail-section li',
+    '.signal-source', '.signal-title', '.signal-summary',
+    '.archive-item strong', '.archive-item span', '.archive-desc',
+    '.source-category h5', '.source-category li',
+    '.footer'
+  ];
+  attrs.forEach(function(sel) {
+    var els = document.querySelectorAll(sel);
+    els.forEach(function(el) {
+      el.setAttribute('contenteditable', editable ? 'true' : 'false');
+    });
+  });
+  // Trend card titles
+  document.querySelectorAll('.trend-card h3').forEach(function(el) {
+    el.setAttribute('contenteditable', editable ? 'true' : 'false');
+  });
+}
+
+function injectHideButtons() {
+  // Trend cards
+  document.querySelectorAll('.trend-card').forEach(function(card) {
+    if (card.querySelector('.hide-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.setAttribute('data-hide', '#trend-' + (card.id.replace('trend-','')));
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(card, '#trend-' + (card.id.replace('trend-',''))); };
+    card.appendChild(btn);
+  });
+  // Archive items
+  document.querySelectorAll('.archive-item').forEach(function(item, i) {
+    if (item.querySelector('.hide-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.setAttribute('data-hide', '.archive-item:nth-of-type(' + (i+1) + ')');
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(item, '.archive-item:nth-of-type(' + (i+1) + ')'); };
+    item.appendChild(btn);
+  });
+  // Sources section
+  var srcSec = document.querySelector('.sources-section');
+  if (srcSec && !srcSec.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(srcSec, '.sources-section'); };
+    srcSec.appendChild(btn);
+  }
+  // Archive section
+  var archSec = document.querySelector('.archive-section');
+  if (archSec && !archSec.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(archSec, '.archive-section'); };
+    archSec.appendChild(btn);
+  }
+  // Footer
+  var footer = document.querySelector('.footer');
+  if (footer && !footer.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(footer, '.footer'); };
+    footer.appendChild(btn);
+  }
+}
+
+function removeHideButtons() {
+  document.querySelectorAll('.hide-btn').forEach(function(b) { b.remove(); });
+}
+
+function hideBlock(el, selector) {
+  el.style.display = 'none';
+  var hidden = JSON.parse(localStorage.getItem(lsKey('hidden')) || '[]');
+  if (hidden.indexOf(selector) === -1) hidden.push(selector);
+  localStorage.setItem(lsKey('hidden'), JSON.stringify(hidden));
+}
+
+function saveToLocal() {
+  // Save text content of all editable fields
+  var edits = {};
+  var selectors = [
+    '.brand h1', '.brand span',
+    '.hero h2', '.hero .subtitle', '#updateTime',
+    '.trend-card h3', '.core-insight',
+    '.detail-section p', '.detail-section li',
+    '.signal-source', '.signal-title', '.signal-summary',
+    '.archive-item strong', '.archive-item span', '.archive-desc',
+    '.source-category h5', '.source-category li',
+    '.footer'
+  ];
+  selectors.forEach(function(sel) {
+    document.querySelectorAll(sel).forEach(function(el, i) {
+      var key = sel + ':nth-of-type(' + (i+1) + ')';
+      edits[key] = el.textContent;
+    });
+  });
+  localStorage.setItem(lsKey('textEdits'), JSON.stringify(edits));
+  // Flash feedback
+  var btn = document.querySelector('#edit-bar .edit-bar-btn.save');
+  var orig = btn.textContent;
+  btn.textContent = '已保存';
+  btn.style.background = 'var(--success)';
+  setTimeout(function() {
+    btn.textContent = orig;
+    btn.style.background = '';
+  }, 1200);
+}
+
+function exportHTML() {
+  // Temporarily exit edit mode for export
+  var wasEditMode = editMode;
+  if (wasEditMode) {
+    editMode = false;
+    document.body.classList.remove('edit-mode');
+    setAllEditable(false);
+    removeHideButtons();
+  }
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  // Re-enter edit mode if needed
+  if (wasEditMode) {
+    editMode = true;
+    document.body.classList.add('edit-mode');
+    setAllEditable(true);
+    injectHideButtons();
+  }
+  var blob = new Blob([html], {type: 'text/html'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'future-intelligence-' + new Date().toISOString().slice(0,10) + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ============================================================
 // RENDER
 // ============================================================
 function renderTrends() {
   const container = document.getElementById('trends');
   container.innerHTML = TREND_DATA.map((trend, i) => `
-    <div class="trend-card" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
+    <div class="trend-card editable-block" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
       <div class="card-header">
-        <h3>${esc(trend.title)}</h3>
+        <h3 contenteditable="false">${esc(trend.title)}</h3>
         <span class="trend-rank">#${i + 1}</span>
       </div>
-      <div class="core-insight">${esc(trend.coreInsight)}</div>
+      <div class="core-insight" contenteditable="false">${esc(trend.coreInsight)}</div>
       <div class="card-footer">
         <span class="signal-count">${trend.signals.length} signals</span>
         <span class="divider"></span>
@@ -733,22 +999,22 @@ function renderTrends() {
       <div class="trend-detail">
         <div class="detail-section">
           <h4>Why It Matters</h4>
-          <p>${esc(trend.whyItMatters)}</p>
+          <p contenteditable="false">${esc(trend.whyItMatters)}</p>
         </div>
         <div class="detail-section">
           <h4>Direction</h4>
-          <p>${esc(trend.direction)}</p>
+          <p contenteditable="false">${esc(trend.direction)}</p>
         </div>
         <div class="detail-section">
           <h4>Opportunities</h4>
           <ul>
-            ${(trend.opportunities || []).map(o => `<li>${esc(o)}</li>`).join('')}
+            ${(trend.opportunities || []).map(o => `<li contenteditable="false">${esc(o)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
           <h4>Risks</h4>
           <ul>
-            ${(trend.risks || []).map(r => `<li>${esc(r)}</li>`).join('')}
+            ${(trend.risks || []).map(r => `<li contenteditable="false">${esc(r)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
@@ -756,9 +1022,9 @@ function renderTrends() {
           <div class="signals-grid">
             ${trend.signals.map(s => `
               <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
-                <div class="signal-source">${esc(s.source)} · ${s.time}</div>
-                <div class="signal-title">${esc(s.title)}</div>
-                <div class="signal-summary">${esc(s.summary)}</div>
+                <div class="signal-source" contenteditable="false">${esc(s.source)} · ${s.time}</div>
+                <div class="signal-title" contenteditable="false">${esc(s.title)}</div>
+                <div class="signal-summary" contenteditable="false">${esc(s.summary)}</div>
               </a>
             `).join('')}
           </div>
@@ -769,11 +1035,11 @@ function renderTrends() {
   `).join('');
 
   // Archive
-  document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map(item => `
-    <div class="archive-item">
-      <strong>${esc(item.title)}</strong>
-      <span>${esc(item.source)} · ${item.time}</span>
-      <div class="archive-desc">${esc(item.summary)}</div>
+  document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map((item, i) => `
+    <div class="archive-item editable-block">
+      <strong contenteditable="false">${esc(item.title)}</strong>
+      <span contenteditable="false">${esc(item.source)} · ${item.time}</span>
+      <div class="archive-desc" contenteditable="false">${esc(item.summary)}</div>
     </div>
   `).join('');
   document.getElementById('archiveLabel').textContent = `Archive · ${ARCHIVE_DATA.length} 条历史趋势`;
@@ -781,10 +1047,18 @@ function renderTrends() {
   // Sources
   document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
     <div class="source-category">
-      <h5>${cat.cat}</h5>
-      <ul>${cat.items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+      <h5 contenteditable="false">${cat.cat}</h5>
+      <ul>${cat.items.map(i => `<li contenteditable="false">${esc(i)}</li>`).join('')}</ul>
     </div>
   `).join('');
+
+  // Restore state after render
+  restoreHidden();
+  restoreTextEdits();
+  if (editMode) {
+    setAllEditable(true);
+    injectHideButtons();
+  }
 }
 
 function toggleArchive() {
