@@ -1014,7 +1014,7 @@ function exportHTML() {
 function renderTrends() {
   const container = document.getElementById('trends');
   container.innerHTML = TREND_DATA.map((trend, i) => `
-    <div class="trend-card editable-block" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
+    <div class="trend-card editable-block" id="trend-${trend.id}" onclick="this.classList.add('expanded')">
       <div class="card-header">
         <h3 contenteditable="false">${esc(trend.title)}</h3>
         <span class="trend-rank">#${i + 1}</span>
@@ -1063,7 +1063,7 @@ function renderTrends() {
             </div>
           </div>
         </div>
-        <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');event.stopPropagation()">收起</button>
+        <button class="collapse-btn" onclick="const c=document.getElementById('trend-${trend.id}');c.classList.remove('expanded');c.scrollIntoView({block:'center'});event.stopPropagation()">收起</button>
       </div>
     </div>
   `).join('');
