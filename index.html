@@ -132,18 +132,21 @@ body::after {
   pointer-events: none;
 }
 
-.sidebar-header { padding: 24px 20px 12px; flex-shrink: 0; position: relative; z-index: 3; }
+.sidebar-header { padding: 24px 20px 12px; flex-shrink: 0; position: relative; z-index: 3; cursor: pointer; user-select: none; }
+.sidebar-header:hover .sidebar-title { color: #E2E8F0; }
 .sidebar-header .sidebar-title {
   font-size: 22px; font-weight: 700; color: #FFFFFF;
-  display: flex; align-items: center; gap: 6px; cursor: default;
+  display: flex; align-items: center; gap: 6px; cursor: pointer;
   text-shadow: 0 1px 8px rgba(79,195,247,0.25);
+  transition: color 0.25s;
 }
-.sidebar-header .sidebar-title .title-arrow { font-size: 10px; color: #64748B; }
+.sidebar-header .sidebar-title .title-arrow { font-size: 10px; color: #64748B; display: inline-block; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .sidebar-header .sidebar-subtitle {
-  font-size: 10px; color: #455A64; text-transform: uppercase; letter-spacing: 1.5px;
+  font-size: 12px; color: #64748B; letter-spacing: 0.5px;
   margin-top: 2px;
 }
-.sidebar-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; position: relative; z-index: 3; }
+.sidebar-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; position: relative; z-index: 3; max-height: 9999px; opacity: 1; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.sidebar.collapsed .sidebar-scroll { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; flex: 0 0 0; }
 .date-sub-header {
   font-size: 11px; color: var(--text-tertiary); padding: 14px 10px 6px;
   letter-spacing: 0.3px;
@@ -340,7 +343,7 @@ body::after {
 <body>
 <div class="app">
 <aside class="sidebar">
-  <div class="sidebar-header"><div class="sidebar-title">2026年6月 <span class="title-arrow">▼</span></div><div class="sidebar-subtitle">FUTURE INTELLIGENCE</div></div>
+  <div class="sidebar-header" id="sidebarHeader" onclick="toggleSidebar()"><div class="sidebar-title">FUTURE INTELLIGENCE <span class="title-arrow" id="titleArrow">▼</span></div><div class="sidebar-subtitle">2026年6月</div></div>
   <div class="sidebar-scroll" id="sidebarScroll"></div>
 </aside>
 <main class="main" id="mainContent"><div class="empty-state">选择左侧条目查看详情</div></main>
@@ -420,7 +423,20 @@ var ALL_ITEMS = [
 function formatDateLabel(ds){var d=new Date(ds+'T00:00:00');return (d.getMonth()+1)+'月'+d.getDate()+'日 周'+['日','一','二','三','四','五','六'][d.getDay()];}
 function groupByDate(items){var g={};items.forEach(function(i){if(!g[i.date])g[i.date]=[];g[i.date].push(i);});var sd=Object.keys(g).sort(function(a,b){return b.localeCompare(a);});return sd.map(function(d){return {date:d,items:g[d]};});}
 
-var groups=groupByDate(ALL_ITEMS),activeItemId=ALL_ITEMS[0].id;
+var groups=groupByDate(ALL_ITEMS),activeItemId=ALL_ITEMS[0].id,sidebarCollapsed=false;
+
+function toggleSidebar(){
+  sidebarCollapsed=!sidebarCollapsed;
+  var sb=document.querySelector('.sidebar');
+  var arrow=document.getElementById('titleArrow');
+  if(sidebarCollapsed){
+    sb.classList.add('collapsed');
+    arrow.textContent='▶';
+  }else{
+    sb.classList.remove('collapsed');
+    arrow.textContent='▼';
+  }
+}
 
 /* ====== 性能优化：防抖 + RAF 批量 DOM 更新 ====== */
 var _selectTimeout=null,_selectPending=null;
