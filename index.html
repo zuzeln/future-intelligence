@@ -1124,9 +1124,10 @@ function toggleSignals(id) {
   } else {
     wrap.classList.add('expanded');
     bar.textContent = bar.textContent.replace('▸', '▾');
-    // 等待 display 生效后再滚动
     requestAnimationFrame(function() {
-      wrap.querySelector('.signals-grid').scrollIntoView({behavior:'smooth', block:'start'});
+      requestAnimationFrame(function() {
+        wrap.querySelector('.signals-grid').scrollIntoView({behavior:'smooth', block:'start'});
+      });
     });
   }
 }
