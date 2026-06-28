@@ -1073,11 +1073,11 @@ function renderTrends() {
 
   // Archive
   document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map((item, i) => `
-    <div class="archive-item editable-block">
+    <a class="archive-item editable-block" href="${esc(item.url)}" target="_blank" rel="noopener">
       <strong contenteditable="false">${esc(item.title)}</strong>
       <span contenteditable="false">${esc(item.source)} · ${item.time}</span>
       <div class="archive-desc" contenteditable="false">${esc(item.summary)}</div>
-    </div>
+    </a>
   `).join('');
   document.getElementById('archiveLabel').textContent = `归档 · ${ARCHIVE_DATA.length} 条`;
 
