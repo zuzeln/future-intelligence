@@ -283,137 +283,199 @@ body {
 // ============================================================
 const TREND_DATA = [
   {
-    "id": 1,
-    "title": "Frontier AI 遭遇政府准入管制，发布节奏被重塑",
-    "coreInsight": "过去72小时，GPT-5.6 Sol 因白宫要求仅限合作伙伴预览、Anthropic Mythos 5 获特朗普政府批准向100+机构开放、Fable 5 解禁在即——标志着前沿模型已从纯商业竞争转变为受国家安全框架约束的战略资产。",
-    "whyItMatters": "OpenAI 公开表态'此类政府准入流程不应成为长期默认模式'，同时亚洲初创公司已在出口禁令缝隙中推出 Mythos 级替代模型。这不再是 Anthropic vs OpenAI 的竞争，而是全球 AI 治理架构的成型时刻。企业需要重新评估其对特定模型供应商的依赖，因为准入可能随时被政府叫停。",
-    "direction": "未来6-12个月，前沿模型将形成明确的'分层准入'体系：政府审查合作伙伴获早期访问权，公众发布延迟数月。出口管制将催生中美两大 AI 生态的进一步分化。任何超过一定能力阈值的模型，国家安全审查将成为标配，可能将发布周期延长3-6个月。",
+    "id": "trend-1",
+    "title": "前沿AI模型的政治化管控成为新常态",
+    "coreInsight": "本周GPT-5.6 Sol和Claude Mythos 5的发布与限制史无前例地展示了美国政府深度介入前沿AI模型的部署节奏。这不再是Anthropic与OpenAI的竞争，而是AI能力已具备实际政治后果，需要政府、企业与全球伙伴的集体行动。",
+    "whyItMatters": "政府直接干预模型发布打破了AI行业「发布即公开」的传统，将深刻重塑全球AI竞争格局——一方面美国试图管控最强模型流向，另一方面亚洲市场正以自研模型填补空缺，加速AI技术的多极化发展。",
+    "direction": "up",
     "opportunities": [
-      "为 AI 模型部署构建合规自动化和政府准入工作流工具的初创公司",
-      "面向被美国出口禁令排除的市场开发 Mythos 级模型的亚洲 AI 实验室",
-      "专注 AI 监管策略和政府联络的企业咨询服务"
+      "合规与安全评估服务需求激增，为企业提供模型审查、红队测试和合规咨询",
+      "受限市场（如亚洲）涌现本地化AI模型创业机会，替代受出口管制的前沿模型",
+      "多极化AI生态催生跨区域部署、模型适配和本地化中间件市场"
     ],
     "risks": [
-      "监管摩擦导致前沿能力部署延迟6个月以上，创新速度放缓",
-      "两极化 AI 生态系统造成全球互操作性断裂",
-      "在准入竞赛中落后的小型 AI 实验室面临生存威胁"
+      "出口管制碎片化导致全球AI标准分裂，跨国企业合规成本飙升",
+      "限制发布将最强模型保留在少数机构手中，可能扩大技术鸿沟并加剧不平等",
+      "政府管控常态化可能压制开源AI生态和学术透明度"
     ],
-    "score": 94,
+    "score": 95,
     "signals": [
       {
-        "source": "TechCrunch AI",
-        "time": "6/26 18:32",
-        "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn't be the norm",
-        "summary": "OpenAI 表示不认为此类政府准入流程应成为长期默认模式，它阻碍了最佳工具到达用户、开发者、企业和网络防御者手中。",
-        "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
+        "source": "OpenAI Blog",
+        "time": "6/26 10:00",
+        "title": "Previewing GPT-5.6 Sol: a next-generation model",
+        "summary": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
+        "url": "https://openai.com/index/previewing-gpt-5-6-sol"
       },
       {
         "source": "TechCrunch AI",
         "time": "6/25 23:34",
         "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
-        "summary": "白宫以安全担忧为由要求 OpenAI 将 GPT-5.6 仅与选定合作伙伴共享，而非面向公众。",
+        "summary": "OpenAI reportedly plans to share its newest model, GPT 5.6, with a select group of partners instead of with the broader public. The reason: the Trump administration told it to.",
         "url": "https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/26 18:32",
+        "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn't be the norm",
+        "summary": "We don't believe this kind of government access process should become the long-term default, says OpenAI. It keeps the best tools from users, developers, enterprises, cyber defenders, and global partners who need them.",
+        "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
       },
       {
         "source": "TechCrunch AI",
         "time": "6/27 01:01",
         "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
-        "summary": "超过100家公司和政府机构获授权使用 Mythos 5，包括其非美国籍雇员。",
+        "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
         "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/"
       },
       {
         "source": "The Decoder",
         "time": "6/27 09:43",
         "title": "Anthropic gets US approval to bring back Claude Mythos 5",
-        "summary": "Anthropic 获美国批准向关键基础设施组织重新部署 Claude Mythos 5，但仍在谈判更广泛的访问权限和 Fable 5 的回归。",
+        "summary": "Anthropic has US approval to redeploy Claude Mythos 5 after earlier restrictions, marking a significant shift in government posture toward frontier model deployment.",
         "url": "https://the-decoder.com/anthropic-gets-us-approval-to-bring-back-claude-mythos-5/"
       },
       {
         "source": "The Decoder",
         "time": "6/27 17:03",
         "title": "Anthropic's Fable 5 could return within days as Trump administration prepares to lift restrictions",
-        "summary": "Fable 5 可能数日内恢复可用，特朗普政府接近解除6月12日因安全担忧施加的限制，五角大楼和 NSA 仍需签署。",
+        "summary": "Anthropic's AI model, Fable 5, could be available again within days as the Trump administration signals it may lift the remaining restrictions.",
         "url": "https://the-decoder.com/anthropics-fable-5-could-return-within-days-as-trump-administration-prepares-to-lift-restrictions/"
-      },
-      {
-        "source": "TechCrunch AI",
-        "time": "6/27 12:00",
-        "title": "Asian AI startups launch Mythos-like models as Anthropic's export ban drags on",
-        "summary": "亚洲推出 Mythos 级能力的模型，不受出口禁令限制。美国 AI 实验室可能永远失去这个巨大市场。",
-        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
       },
       {
         "source": "TechCrunch AI",
         "time": "6/26 16:24",
         "title": "It's not about Anthropic vs. OpenAI anymore",
-        "summary": "AI 模型能力已达到产生真实政治后果的程度，应对这些后果需要集体行动。",
+        "summary": "AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences will require collective action.",
         "url": "https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/"
+      },
+      {
+        "source": "MIT Tech Review AI",
+        "time": "6/26 12:10",
+        "title": "The Download: brain-melting heatwaves and unprecedented OpenAI restrictions",
+        "summary": "This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology — including unprecedented OpenAI restrictions.",
+        "url": "https://www.technologyreview.com/2026/06/26/1139780/the-download-heatwaves-brain-health-openai-restrictions/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/27 12:00",
+        "title": "Asian AI startups launch Mythos-like models as Anthropic's export ban drags on",
+        "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
+        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
       }
     ]
   },
   {
-    "id": 2,
-    "title": "定制 AI 芯片浪潮加速，Nvidia 垄断面临多方挑战",
-    "coreInsight": "OpenAI 与 Broadcom 推出 Jalapeño 推理芯片，加上 Google、Apple、SpaceX 的自研路线，标志着 AI 基础设施从单一供应商依赖向自主可控的转变已进入实质阶段。",
-    "whyItMatters": "Nvidia 多年主导 AI 芯片市场，但全行业正在用自研芯片摆脱单一供应商风险。Jalapeño 专为大模型推理优化，意味着不仅是训练环节，推理环节的规模效应也在催生垂直整合。这对 AI 服务的成本结构和供应链安全有根本性影响。",
-    "direction": "未来12-18个月，预计至少3-5家大型 AI 公司将有自研芯片进入量产。推理芯片将成为差异化竞争的新战场，推动推理成本下降50%以上。Nvidia 将在训练领域保持优势但推理市场份额逐步被侵蚀。",
+    "id": "trend-2",
+    "title": "自研AI芯片打破Nvidia垄断格局",
+    "coreInsight": "OpenAI联合Broadcom推出Jalapeño推理芯片，标志着顶级AI实验室从「Nvidia唯一依赖」向「多芯片架构自主可控」的战略转向。这不仅是降本增效的商业选择，更是AI基础设施主权的争夺。",
+    "whyItMatters": "Nvidia在AI芯片市场长达数年的绝对主导地位正面临来自客户端的集体反制——当OpenAI、Google、Apple、SpaceX等最大买家纷纷自研芯片，Nvidia的定价权和生态锁死效应将被系统性削弱，整个AI算力产业链将进入多极化和成本快速下降的新阶段。",
+    "direction": "up",
     "opportunities": [
-      "为自研芯片提供设计验证和 IP 授权的半导体服务公司",
-      "面向多芯片架构的 AI 编译器和推理优化中间件",
-      "帮助中小企业评估和迁移至非 Nvidia 芯片方案的咨询和实施服务"
+      "定制AI芯片设计服务和chiplet生态（如Broadcom的合作模式）迎来爆发期",
+      "推理芯片细分市场（相比训练芯片）为初创芯片公司和晶圆厂开辟低门槛入口",
+      "AI企业可通过自研芯片+云服务实现推理成本大幅下降，解锁更多价格敏感应用场景"
     ],
     "risks": [
-      "自研芯片分散研发资源，可能导致多家公司芯片均未达预期性能",
-      "Nvidia 通过激进降价和 CUDA 生态锁定反击",
-      "芯片碎片化导致 AI 软件生态兼容性下降"
+      "自研芯片的高额沉没成本（数亿美元级）可能拖累AI实验室的核心研发投入",
+      "芯片设计人才极度稀缺，巨头抢人导致初创公司更难组建硬件团队",
+      "多套芯片架构并存增加软件兼容性成本，可能延缓AI推理生态标准化进程"
     ],
-    "score": 88,
+    "score": 90,
     "signals": [
       {
-        "source": "TechCrunch AI",
-        "time": "6/26 17:43",
-        "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
-        "summary": "OpenAI 推出与 Broadcom 合作的自研推理芯片 Jalapeño，加入 Google、Apple、SpaceX 的自研阵营，全行业正在摆脱单一供应商依赖。",
-        "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
+        "source": "OpenAI Blog",
+        "time": "6/26 10:00",
+        "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+        "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+        "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip"
       },
       {
         "source": "TechCrunch AI",
         "time": "6/26 14:00",
         "title": "OpenAI's Jalapeño chip is Big Tech's spiciest move away from Nvidia",
-        "summary": "Nvidia 主导 AI 芯片市场多年，但完全依赖的时代可能终结。OpenAI 的 Jalapeño 是科技巨头摆脱 Nvidia 的最大胆举措。",
+        "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans with Jalapeño, its custom inference chip built with Broadcom.",
         "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/"
       },
       {
-        "source": "OpenAI Blog",
-        "time": "6/26 10:00",
-        "title": "Previewing GPT-5.6 Sol: a next-generation model",
-        "summary": "OpenAI 预览 GPT-5.6 Sol，结合最先进的安全栈，与 Broadcom 合作推出专为 LLM 推理优化的 Jalapeño 芯片。",
-        "url": "https://openai.com/index/previewing-gpt-5-6-sol"
-      },
-      {
-        "source": "MIT Tech Review AI",
-        "time": "6/25 10:00",
-        "title": "IBM has unveiled chip technology that could help extend Moore's Law another decade",
-        "summary": "IBM 原型芯片在指甲盖面积上集成约1000亿晶体管，密度是2021年技术指标的两倍，有望为未来数年更高效的计算铺路。",
-        "url": "https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/"
+        "source": "TechCrunch AI",
+        "time": "6/26 17:43",
+        "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+        "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI, Google, Apple, and SpaceX are all building their own chips.",
+        "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
       }
     ]
   },
   {
-    "id": 3,
-    "title": "中国 AI 模型加速进入西方企业，价格与地缘驱动替代浪潮",
-    "coreInsight": "Coinbase 转向中国模型 GLM 5.2 和 Kimi 2.7，亚洲 Mythos 级替代模型涌现，标志着价格优势和地缘避险正在推动西方企业主动采用中国 AI 生态。",
-    "whyItMatters": "Coinbase CEO 公开宣布使用智能路由系统按任务和价格自动选择最优模型，缓存命中率从5%提升至60%，成本大幅下降。这不是孤例——在美国出口管制的反向推动下，亚洲模型正在成为西方企业的可选项而非备选。这可能是 AI 供应链去美国化的开端。",
-    "direction": "未来6个月，预计至少2-3家大型美国科技公司将公开采用中国模型用于非敏感业务。价格压力将迫使西方实验室重新评估定价策略。亚洲 AI 生态将从'追赶者'定位升级为'平行替代方案'。",
+    "id": "trend-3",
+    "title": "AI Agent：从对话助手向自主执行代理进化",
+    "coreInsight": "AI正从「回答问题」向「完成任务」跨越关键门槛。多篇关键文章从不同角度验证了这一趋势：学术研究证明仅有3个模型在500天startup经营模拟中实现正收益；创业公司用$320M投入游戏数据训练真实世界agent；企业调查显示半数Claude用户认为AI已能处理一半工作。",
+    "whyItMatters": "当AI从被动应答转向主动执行，其对劳动力市场的影响将从「辅助工具」升级为「数字同事」。这不仅是生产力工具范式的转变，更将重塑企业组织形式、岗位设计，并引发从AI安全测试到劳动力再培训的全产业链变革。",
+    "direction": "up",
     "opportunities": [
-      "构建多模型智能路由和成本优化平台（类似 Coinbase 方案）",
-      "为中国模型提供西方企业合规适配和安全审计服务",
-      "面向全球市场的中国 AI 模型本地化和部署服务"
+      "AI Agent可靠性测试和压力测试平台（如Patronus AI的「数字世界」）成为关键基础设施",
+      "基于游戏/模拟环境的agent训练数据和工具链（如General Intuition模式）开辟新赛道",
+      "垂直领域自主agent（金融交易、供应链优化、客户服务全闭环）进入商用阶段"
     ],
     "risks": [
-      "美国可能进一步收紧对亚洲 AI 模型的进口限制",
-      "中国模型在安全审计和透明度方面可能面临西方监管障碍",
-      "价格战导致 AI 行业整体利润率下降，抑制长期研发投入"
+      "当前agent在复杂非结构化环境中仍容易失败，过早大规模部署可能导致生产事故",
+      "自主agent的不可预测行为引发法律责任归属难题——agent犯错谁来承担",
+      "agent能力增强可能加速中低端白领岗位的替代而非增强，社会冲击被低估"
+    ],
+    "score": 88,
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "6/28 12:51",
+        "title": "AI won't become a real coworker until it stops answering and starts finishing tasks",
+        "summary": "A survey paper by Tencent argues that AI won't become a real coworker until it stops answering questions and starts autonomously completing end-to-end tasks.",
+        "url": "https://the-decoder.com/ai-wont-become-a-real-coworker-until-it-stops-answering-and-starts-finishing-tasks/"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/28 10:16",
+        "title": "Only three AI models finished above starting capital in a 500-day startup survival test",
+        "summary": "Researchers at Princeton built CEO-Bench, where AI agents ran startups for 500 simulated days. Only three models finished above their starting capital — highlighting the gap between answering and executing.",
+        "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 16:55",
+        "title": "General Intuition's $2.3B bet that video games can train AI agents for the real world",
+        "summary": "General Intuition has raised $320 million to scale AI trained on millions of hours of gameplay, betting action data can help AI develop something closer to human intuition.",
+        "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 20:19",
+        "title": "Patronus AI lands $50M to build 'digital worlds' that stress-test AI agents",
+        "summary": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand for its platform that stress-tests AI agents.",
+        "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/27 15:28",
+        "title": "Half of Claude users say AI can already handle half their work according to Anthropic survey",
+        "summary": "About half of Claude users say AI can already handle 50 percent or more of their work, according to an Anthropic survey — a striking signal of AI's encroachment into the workplace.",
+        "url": "https://the-decoder.com/half-of-claude-users-say-ai-can-already-handle-half-their-work-according-to-anthropic-survey/"
+      }
+    ]
+  },
+  {
+    "id": "trend-4",
+    "title": "中国AI模型崛起与全球地缘竞争加剧",
+    "coreInsight": "Coinbase转向中国AI模型、360推出对标Mythos的安全工具、亚洲创业公司批量发布Mythos-like模型——多个信号表明中国AI模型正在从「追赶者」变为西方企业的实际替代选项。这不仅是技术追赶，更是美国出口管制政策引发的市场反噬。",
+    "whyItMatters": "美国试图通过出口管制维持AI技术优势，但实际效果是加速了亚洲AI生态的自立和替代方案成熟。当Coinbase这样的美国上市公司选择中国模型作为成本替代方案时，标志着AI模型的全球竞争已从技术层面上升到商业信任和地缘经济层面。",
+    "direction": "up",
+    "opportunities": [
+      "中国企业级AI模型在性价比驱动的全球市场中打开新增长空间",
+      "中立/非制裁国家的AI部署需求催生「去地缘风险」的第三国模型选择",
+      "开源中国推理模型（如VibeThinker-3B）为边缘设备和本地化部署提供低成本方案"
+    ],
+    "risks": [
+      "美中AI阵营分化可能演变为不可逆的技术脱钩，破坏全球AI合作的学术和产业基础",
+      "西方国家对中国模型的安全审查和信任赤字限制其在关键基础设施中的应用",
+      "AI军备竞赛（如360的「网络核威慑」叙事）可能加剧全球网络安全对抗"
     ],
     "score": 85,
     "signals": [
@@ -421,218 +483,163 @@ const TREND_DATA = [
         "source": "The Decoder",
         "time": "6/28 12:14",
         "title": "Coinbase joins the rush to Chinese AI models as Western labs face a pricing stress test",
-        "summary": "Coinbase CEO Brian Armstrong 将公司转向中国 AI 模型 GLM 5.2 和 Kimi 2.7，智能路由系统按任务和价格自动选最优模型，缓存命中率从5%提至60%，大幅降低成本。",
+        "summary": "Coinbase CEO Brian Armstrong is switching his company to Chinese AI models, citing Western labs' pricing as unsustainable. This marks a significant commercial validation of Chinese AI alternatives.",
         "url": "https://the-decoder.com/coinbase-joins-the-rush-to-chinese-ai-models-as-western-labs-face-a-pricing-stress-test/"
       },
       {
-        "source": "TechCrunch AI",
-        "time": "6/27 12:00",
-        "title": "Asian AI startups launch Mythos-like models as Anthropic's export ban drags on",
-        "summary": "亚洲推出 Mythos 级能力模型，不受出口禁令限制。美国 AI 实验室可能永远失去这个巨大市场。",
-        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
+        "source": "The Decoder",
+        "time": "6/28 09:30",
+        "title": "Chinese cybersecurity firm builds AI tools to rival Mythos and frames the race as cyber-nuclear deterrence",
+        "summary": "360 founder Zhou Hongyi presents two AI security tools designed to compete with Mythos, framing the AI competition between US and China as a form of cyber-nuclear deterrence.",
+        "url": "https://the-decoder.com/chinese-cybersecurity-firm-builds-ai-tools-to-rival-mythos-and-frames-the-race-as-cyber-nuclear-deterrence/"
       },
       {
         "source": "The Decoder",
         "time": "6/28 07:44",
         "title": "Sina's open model VibeThinker-3B aims to show reasoning compresses well but factual knowledge doesn't",
-        "summary": "新浪微博的 VibeThinker-3B 仅30亿参数但在推理任务上匹配 DeepSeek V3.2 和 Kimi K2 等大得多的模型。",
+        "summary": "Sina releases VibeThinker-3B, a small open-source reasoning model that demonstrates effective reasoning compression — part of a growing wave of capable Chinese open models.",
         "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt/"
       },
       {
-        "source": "The Decoder",
-        "time": "6/28 09:30",
-        "title": "Chinese cybersecurity firm builds AI tools to rival Mythos and frames the race as cyber-nuclear deterrence",
-        "summary": "360创始人周鸿祎推出两款AI安全工具对标 Anthropic Mythos，已标记3432个漏洞，承认中国模型落后西方20-30%但将 Mythos 比作网络核武器。",
-        "url": "https://the-decoder.com/chinese-cybersecurity-firm-builds-ai-tools-to-rival-mythos-and-frames-the-race-as-cyber-nuclear-deterrence/"
+        "source": "TechCrunch AI",
+        "time": "6/27 12:00",
+        "title": "Asian AI startups launch Mythos-like models as Anthropic's export ban drags on",
+        "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
+        "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
       }
     ]
   },
   {
-    "id": 4,
-    "title": "Agentic AI 进入劳动力市场，效率提升与能力落差并存",
-    "coreInsight": "Anthropic 调查显示半数 Claude 用户认为 AI 已能处理50%工作，但同时 Princeton CEO-Bench 测试表明大多数 AI 模型在500天模拟经营中破产——AI 在工作中的实际能力与期望之间存在显著 Gap。",
-    "whyItMatters": "企业正以空前速度部署 AI 代理，但现实检验表明当前模型在长期自主决策方面仍有重大缺陷。与此同时，10亿美元规模的再培训计划已启动。劳动力市场的结构性转变已不是未来时，而是现在进行时——但不均衡的能力分布可能导致企业过度依赖而后悔。",
-    "direction": "未来12个月，AI 代理将首先在结构化任务（代码审查、数据录入、客服）中达到人类水平，但在需要长期规划和情境判断的任务中仍需人类监督。企业将建立'人-AI 协作'的中间管理层角色。再培训计划将从慈善性质转向企业标配。",
+    "id": "trend-5",
+    "title": "Claude挑战ChatGPT消费者市场主导地位",
+    "coreInsight": "尽管ChatGPT拥有压倒性的市场领先地位，但数据显示付费消费者正越来越多地选择Anthropic的Claude。随着Mythos 5和Fable 5恢复部署，以及用户调查表明AI已能处理一半工作，消费者AI市场正从一家独大走向双寡头竞争。",
+    "whyItMatters": "消费者AI市场格局重塑意味着品牌忠诚度和产品差异化开始真正起作用——Claude在工作场景中的深度整合和可靠性赢得了付费用户的信任，这可能预示着AI消费市场将从「先用免费ChatGPT试试」的尝鲜期，进入按产品能力和信任度分化的成熟期。",
+    "direction": "up",
     "opportunities": [
-      "AI 代理测试和验证平台（如 Patronus AI 的'数字世界'方案）",
-      "面向人-AI 协作流程设计的组织咨询服务",
-      "AI 劳动力转型培训和认证项目"
+      "面向特定用户群（开发者、创作者、企业员工）的差异化AI消费产品市场扩大",
+      "Claude生态催生第三方集成、培训和咨询服务机会",
+      "双寡头竞争驱动双方加速产品迭代和价格优化，利好终端用户和企业采购"
     ],
     "risks": [
-      "企业过早用 AI 替代人类导致关键业务流程中断",
-      "AI 代理在长期任务中的累积错误未被及时发现",
-      "再培训速度跟不上自动化替代速度，引发社会摩擦"
+      "Claude的快速崛起可能引发OpenAI的激进定价和产品策略，短期市场波动加剧",
+      "消费者对单个AI平台的深度依赖形成新的数据锁定和迁移成本问题",
+      "两家公司的模型管控政策差异可能导致消费者在能力获取上的不平等"
     ],
-    "score": 82,
+    "score": 80,
     "signals": [
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 17:38",
+        "title": "Anthropic's Claude is winning over paid consumers, a market owned by ChatGPT",
+        "summary": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude, data shows.",
+        "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/"
+      },
       {
         "source": "The Decoder",
         "time": "6/27 15:28",
         "title": "Half of Claude users say AI can already handle half their work according to Anthropic survey",
-        "summary": "约半数 Claude 用户表示 AI 已能处理50%以上的工作任务。26%预计12个月内 AI 将覆盖60-90%的工作。早期职业工作者最为担忧。",
+        "summary": "About half of Claude users say AI can already handle 50 percent or more of their work, showing deep integration into daily workflows.",
         "url": "https://the-decoder.com/half-of-claude-users-say-ai-can-already-handle-half-their-work-according-to-anthropic-survey/"
       },
       {
         "source": "The Decoder",
-        "time": "6/28 10:16",
-        "title": "Only three AI models finished above starting capital in a 500-day startup survival test",
-        "summary": "Princeton 的 CEO-Bench 测试中，大多数模型在500天模拟经营中破产，一个无 AI 的简单规则启发式方法击败几乎所有模型。",
-        "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test/"
-      },
-      {
-        "source": "The Decoder",
-        "time": "6/28 12:51",
-        "title": "AI won't become a real coworker until it stops answering and starts finishing tasks",
-        "summary": "腾讯和多家中国高校的调查论文指出，AI 系统只有在持久工作空间完成完整任务后才能成为可靠'数字同事'，而非仅仅回答问题。",
-        "url": "https://the-decoder.com/ai-wont-become-a-real-coworker-until-it-stops-answering-and-starts-finishing-tasks/"
-      },
-      {
-        "source": "The Decoder",
-        "time": "6/27 12:25",
-        "title": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
-        "summary": "前美国商务部长 Gina Raimondo 发起两党组织 Raise Us，准备美国工人应对 AI 驱动的就业转型，获10亿美元资助。",
-        "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/"
-      },
-      {
-        "source": "TechCrunch AI",
-        "time": "6/25 20:19",
-        "title": "Patronus AI lands $50M to build 'digital worlds' that stress-test AI agents",
-        "summary": "由前 Meta AI 研究员创办的代理测试初创公司 Patronus AI 融资5000万美元，需求几乎无法满足。",
-        "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/"
-      },
-      {
-        "source": "TechCrunch AI",
-        "time": "6/25 16:55",
-        "title": "General Intuition's $2.3B bet that video games can train AI agents for the real world",
-        "summary": "General Intuition 融资3.2亿美元，押注数百万小时游戏数据可帮助 AI 发展接近人类直觉的能力。",
-        "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+        "time": "6/27 17:03",
+        "title": "Anthropic's Fable 5 could return within days as Trump administration prepares to lift restrictions",
+        "summary": "Anthropic's AI model, Fable 5, could be available again within days, potentially strengthening Claude's competitive position further.",
+        "url": "https://the-decoder.com/anthropics-fable-5-could-return-within-days-as-trump-administration-prepares-to-lift-restrictions/"
       }
     ]
   },
   {
-    "id": 5,
-    "title": "AI 网络安全成为地缘博弈新前沿",
-    "coreInsight": "从 OpenAI 的 Daybreak 安全工具到中国360的 Mythos 对标产品，AI 网络安全正从技术问题升级为'网络核威慑'级别的地缘政治议题。",
-    "whyItMatters": "360创始人周鸿祎公开将 Mythos 比作'网络核武器'，中国工具已标记3432个漏洞。与此同时，OpenAI 的 Daybreak 计划通过 Codex Security 和 GPT-5.5-Cyber 为全球组织提供漏洞发现和修复能力。AI 安全不再是防御性问题，而是国家间战略博弈的新维度。",
-    "direction": "未来12个月，各国将加速建立国家级 AI 网络安全攻防体系。AI 漏洞自动发现和利用（N-day exploits）将成为新的监管焦点。企业将被要求部署 AI 驱动的安全审计工具作为合规条件。",
+    "id": "trend-6",
+    "title": "AI投资过热与泡沫风险浮现",
+    "coreInsight": "J.P. Morgan发布报告警告AI市场出现「投资者过度热情」的多个红旗信号，与此同时General Intuition以$2.3B估值融资$320M、Patronus AI融资$50M——巨额资金仍在涌入。市场呈现出典型的后期繁荣与早期警示并存的矛盾格局。",
+    "whyItMatters": "AI投资周期正在进入关键拐点：一方面基础设施和模型层的巨额投入需要明确的商业化路径来验证，另一方面二级市场机构和投行开始发出降温信号。如果商业化回报不及预期，当前估值体系可能面临系统性重估，进而波及整个AI创业生态的融资环境。",
+    "direction": "down",
     "opportunities": [
-      "AI 驱动的自动化漏洞发现和修复平台",
-      "面向中小企业的 AI 安全即服务（SECaaS）",
-      "AI 安全审计和合规认证服务"
+      "理性投资者可在泡沫破裂前识别真正有营收和护城河的AI公司进行布局",
+      "泡沫预期促使AI创业公司加速从「烧钱换增长」转向「盈利性增长」模式",
+      "市场调整期将为现金流充裕的企业提供低价并购优质AI资产的机会"
     ],
     "risks": [
-      "AI 安全工具本身成为攻击向量",
-      "国家间 AI 网络军备竞赛升级导致误判和冲突",
-      "中小企业无力承担 AI 安全防护成本，成为攻击薄弱点"
+      "AI泡沫破裂可能导致大批依赖融资的AI初创公司倒闭，引发行业寒冬",
+      "投资降温将首先冲击算力基础设施和芯片等重资产环节，形成连锁反应",
+      "资本市场负面情绪可能蔓延至AI人才市场，减缓行业创新速度"
     ],
-    "score": 78,
-    "signals": [
-      {
-        "source": "The Decoder",
-        "time": "6/28 09:30",
-        "title": "Chinese cybersecurity firm builds AI tools to rival Mythos and frames the race as cyber-nuclear deterrence",
-        "summary": "360创始人周鸿祎将 AI 安全竞赛框架化为'网络核威慑'，推出对标 Mythos 的工具，已标记3432个漏洞。",
-        "url": "https://the-decoder.com/chinese-cybersecurity-firm-builds-ai-tools-to-rival-mythos-and-frames-the-race-as-cyber-nuclear-deterrence/"
-      },
-      {
-        "source": "Simon Willison",
-        "time": "6/26 17:58",
-        "title": "Incident Report: CVE-2026-LGTM",
-        "summary": "Andrew Nesbitt 的假设性事故报告：两个竞争供应商的 AI 审查代理在 PR 上陷入分歧循环，340条评论后花费 $41,255 推理费用，财务部门介入叫停。",
-        "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything"
-      },
-      {
-        "source": "Simon Willison",
-        "time": "6/26 18:33",
-        "title": "What happened after 2,000 people tried to hack my AI assistant",
-        "summary": "Fernando Irarrázaval 的 hackmyclaw.com 挑战：6000次尝试、$500 token 费用后，无人成功泄露 AI 助手密钥。",
-        "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything"
-      },
-      {
-        "source": "Simon Willison",
-        "time": "6/25 22:28",
-        "title": "AI and Liability",
-        "summary": "Bruce Schneier 评论德国法院裁定 Google 对 AI 概述中的错误承担责任：AI 代理是部署者的代理，应如此对待。",
-        "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "AI 投资市场过热信号频现，泡沫风险引机构警惕",
-    "coreInsight": "JP Morgan 警告 AI 市场出现'投资者狂热'迹象，标普500中仅42家 AI 公司贡献了65-80%利润，半导体涨势闪现科网泡沫时期的技术形态。",
-    "whyItMatters": "机构投资者的风险警告同时出现：JP Morgan 指出市场集中度已达到危险水平；软银 CEO 公开质疑轨道数据中心的可行性。这不再是零星的怀疑论调，而是系统性风险信号的汇聚。如果市场回调，依赖 AI 投资叙事的整个科技板块都将受冲击。",
-    "direction": "未来3-6个月，预计至少一家大型 AI 公司估值将出现显著回调。投资者将从'赛道逻辑'转向'利润逻辑'，没有清晰盈利路径的 AI 初创公司融资难度加大。AI 基础设施投资可能出现阶段性过剩。",
-    "opportunities": [
-      "AI 市场泡沫对冲和风险管理金融产品",
-      "专注于 AI 投资尽职调查和估值分析的咨询机构",
-      "在泡沫中仍保持合理估值的 AI 应用层公司将成为避险标的"
-    ],
-    "risks": [
-      "AI 泡沫破裂引发科技板块连锁下跌",
-      "恐慌性撤资导致有潜力的 AI 研究项目中断",
-      "市场情绪反转后公众对 AI 的信任度下降"
-    ],
-    "score": 72,
+    "score": 75,
     "signals": [
       {
         "source": "The Decoder",
         "time": "6/27 13:22",
         "title": "J.P. Morgan sees a pile of red flags in the AI market",
-        "summary": "JP Morgan 警告 AI 市场出现'投资者狂热迹象'，标普500中42家 AI 公司贡献65-80%利润，半导体涨势出现科网泡沫时期技术形态。",
+        "summary": "J.P. Morgan warns that there are signs of investor exuberance in AI markets, citing several red flags that suggest overheating.",
         "url": "https://the-decoder.com/j-p-morgan-sees-a-pile-of-red-flags-in-the-ai-market/"
       },
       {
         "source": "TechCrunch AI",
-        "time": "6/27 20:42",
-        "title": "SoftBank's CEO isn't the only one with questions about Elon Musk's orbital data center hype",
-        "summary": "并非所有人都认同 Elon Musk 轨道数据中心的愿景。",
-        "url": "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/"
+        "time": "6/25 16:55",
+        "title": "General Intuition's $2.3B bet that video games can train AI agents for the real world",
+        "summary": "General Intuition has raised $320 million at a $2.3 billion valuation to scale AI trained on gameplay data — a massive bet on an unproven training paradigm.",
+        "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+      },
+      {
+        "source": "TechCrunch AI",
+        "time": "6/25 20:19",
+        "title": "Patronus AI lands $50M to build 'digital worlds' that stress-test AI agents",
+        "summary": "Agent-testing startup Patronus AI is experiencing nearly insatiable demand, its investor says — reflecting the intense capital flowing into AI infrastructure plays.",
+        "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/"
+      },
+      {
+        "source": "Simon Willison",
+        "time": "6/26 22:25",
+        "title": "Quoting Dean W. Ball",
+        "summary": "Dean W. Ball on industry dynamics: frontier models are trained at enormous cost, and a significant fraction of that cost is recouped in the few post-release months — a model that may prove unsustainable.",
+        "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything"
       }
     ]
   },
   {
-    "id": 7,
-    "title": "AI 驱动生命科学突破进入临床级验证阶段",
-    "coreInsight": "从 GPT-5 解决3年免疫学谜题到 AI 化学家优化药物合成反应，AI 在生命科学领域正从辅助工具升级为能够产生原创科学发现的参与者。",
-    "whyItMatters": "GPT-5 Pro 帮助免疫学家解开 T 细胞行为谜团，可能推动癌症和自身免疫疾病研究。OpenAI 与 Molecule.one 展示的 AI 化学家成功优化关键药物合成反应。这些不是 demo 而是具有临床转化潜力的成果。AI for Science 正在从'能做到'迈向'能救人'。",
-    "direction": "未来12-18个月，预计 AI 驱动的药物发现管线将产出至少2-3个进入临床试验的候选药物。AI 辅助罕见病诊断将成为顶级医院的标配工具。AI 化学家将在药物工艺优化中替代部分传统实验。",
+    "id": "trend-7",
+    "title": "AI自动化加速下的劳动力转型困境",
+    "coreInsight": "最能从自动化中获益的科技公司正在联合出资10亿美元用于劳动力再培训——这既是社会责任，也是对「AI替代工作」叙事带来的政策风险进行的对冲。同时零售业AI转型和Claude用户调查共同指向一个事实：AI对工作的渗透速度超过了社会适应能力。",
+    "whyItMatters": "AI自动化与劳动力市场的矛盾正在从理论警告变为现实紧迫。10亿美元再培训基金是一个标志性信号——产业界已承认AI自动化将带来大规模岗位冲击，并开始主动布局缓解措施。但再培训能否跟上AI能力迭代的速度，仍是巨大的未知数。",
+    "direction": "neutral",
     "opportunities": [
-      "AI 辅助罕见病诊断平台",
-      "AI 驱动的药物合成路径优化服务",
-      "面向生物制药企业的 AI for Science 整体解决方案"
+      "AI驱动的职业再培训平台和个性化学习路径设计成为快速增长的B2B/政府市场",
+      "人机协作工作流设计和AI增强型岗位（如AI运营、提示工程）创造全新职业类别",
+      "零售、客服、数据录入等高频替代行业的劳动力转型咨询服务需求激增"
     ],
     "risks": [
-      "AI 科学发现的验证周期长，短期内难以评估可靠性",
-      "过度依赖 AI 可能忽视传统实验科学的意外发现价值",
-      "AI 辅助诊断在非理想数据条件下的误诊风险"
+      "再培训速度远落后于AI能力提升速度，短期内可能出现大规模结构性失业",
+      "10亿美元基金相对于全球受AI影响的劳动力规模杯水车薪，可能沦为象征性公关",
+      "AI自动化收益集中在资本方，劳动者技能贬值可能导致社会贫富差距进一步拉大"
     ],
-    "score": 68,
+    "score": 72,
     "signals": [
       {
-        "source": "TechCrunch AI",
-        "time": "6/27 14:00",
-        "title": "The fittest founder in the room got cancer. Here's how he used AI to fight back.",
-        "summary": "癌症患者 Connor Christou 将所有健康数据（血液结果、扫描数据、可穿戴设备输出、日记）输入 Claude 来辅助治疗决策。",
-        "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/"
+        "source": "The Decoder",
+        "time": "6/27 12:25",
+        "title": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
+        "summary": "Major tech companies whose AI products are most aggressively automating jobs are jointly funding a $1 billion workforce retraining program.",
+        "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/"
+      },
+      {
+        "source": "MIT Tech Review AI",
+        "time": "6/25 14:22",
+        "title": "Repositioning retail for the AI era",
+        "summary": "AI is rapidly reshaping retail behind the scenes — how products surface, how inventory is managed, and how decisions are made — impacting millions of retail workers globally.",
+        "url": "https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/"
       },
       {
         "source": "OpenAI Blog",
-        "time": "6/26 10:00",
-        "title": "Previewing GPT-5.6 Sol: a next-generation model",
-        "summary": "GPT-5.6 Sol 在编程、科学和网络安全方面具有更强能力，配合最先进的安全栈。",
-        "url": "https://openai.com/index/previewing-gpt-5-6-sol"
-      },
-      {
-        "source": "arXiv AI",
-        "time": "6/25 17:58",
-        "title": "Autoregressive Boltzmann Generators",
-        "summary": "分子系统热力学平衡采样的新方法，为药物发现中的分子模拟提供更高效的生成模型。",
-        "url": "http://arxiv.org/abs/2606.27361v1"
+        "time": "6/25 02:00",
+        "title": "How agents are transforming work",
+        "summary": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+        "url": "https://openai.com/index/how-agents-are-transforming-work"
       }
     ]
   }
-]
+];
 
 const ARCHIVE_DATA = [
   {
@@ -643,104 +650,90 @@ const ARCHIVE_DATA = [
     "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
   },
   {
-    "title": "OpenAI 挖角 Uber 印度负责人拓展最大海外市场",
+    "title": "癌症创始人用 AI 管理治疗方案：个人AI医疗应用前沿案例",
+    "source": "TechCrunch AI",
+    "time": "6/27 14:00",
+    "summary": "当面临癌症诊断时，创始人 Connor Christou 将血液结果、扫描数据、可穿戴设备输出和日记全部输入 Claude，用 AI 管理个人治疗方案。",
+    "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/"
+  },
+  {
+    "title": "OpenAI 挖角 Uber India 负责人拓展印度市场",
     "source": "TechCrunch AI",
     "time": "6/26 18:19",
-    "summary": "OpenAI 聘请 Uber 印度负责人领导其在印度（美国以外最大市场）的扩张。",
+    "summary": "OpenAI 挖角 Uber India 负责人拓展美国以外最大市场，扩大办公室、合作伙伴和招聘。",
     "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/"
   },
   {
-    "title": "Anthropic Claude 赢得付费消费者市场",
+    "title": "SoftBank CEO 质疑 Elon Musk 轨道数据中心愿景",
     "source": "TechCrunch AI",
-    "time": "6/25 17:38",
-    "summary": "尽管 ChatGPT 占据市场领先地位，付费消费者正越来越多选择 Anthropic 的 Claude。",
-    "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/"
+    "time": "6/27 20:42",
+    "summary": "并非所有人都相信 Elon Musk 对轨道数据中心的愿景，SoftBank CEO 也提出了质疑。",
+    "url": "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/"
   },
   {
-    "title": "多模型 LLM 系统的共失败上限",
-    "source": "arXiv AI",
-    "time": "6/25 17:06",
-    "summary": "研究覆盖67个前沿模型的 routing/voting/fusion 系统，发现多模型系统的增益受限于所有模型同时出错的共失败率 beta。",
-    "url": "http://arxiv.org/abs/2606.27288v1"
-  },
-  {
-    "title": "简历筛选中的 Prompt 注入攻击",
-    "source": "arXiv AI",
-    "time": "6/25 17:04",
-    "summary": "研究发现 LLM 在简历筛选中易受 prompt injection 影响，候选人可通过细微措辞操纵排名。",
-    "url": "http://arxiv.org/abs/2606.27287v1"
-  },
-  {
-    "title": "GUI Agent 自主经验探索与任务规划",
-    "source": "arXiv AI",
-    "time": "6/25 17:44",
-    "summary": "提出 PEEU 方法，使小型开源 MLLM 通过自主环境探索和事后经验利用来提升 GUI 任务规划能力。",
-    "url": "http://arxiv.org/abs/2606.27330v1"
-  },
-  {
-    "title": "AI 医疗聊天机器人大规模用户反馈研究",
-    "source": "arXiv AI",
-    "time": "6/25 17:24",
-    "summary": "分析59个 AI 医疗聊天机器人应用的15000+条用户评论，识别三类故障模式：可及性障碍、交互质量、内容可靠性。",
-    "url": "http://arxiv.org/abs/2606.27302v1"
-  },
-  {
-    "title": "2000人尝试入侵 AI 助手无一人成功",
+    "title": "2000 人尝试破解 AI 助手：红队测试揭示安全边界",
     "source": "Simon Willison",
     "time": "6/26 18:33",
-    "summary": "hackmyclaw.com 挑战：6000次尝试后无人成功泄露 AI 助手密钥，OpenClaw 安全架构经受住考验。",
+    "summary": "Fernando Irarrázaval 发起 hackmyclaw.com 挑战，让 2000 人尝试泄露其 AI 助手 OpenClaw 持有的秘密。结果揭示了当前 AI 系统在对抗性攻击下的真实安全边界。",
     "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything"
   },
   {
-    "title": "Frontier 模型商业窗口压缩",
+    "title": "CVE-2026-LGTM：AI 代码审查 Agent 互相攻击的虚构事件报告",
     "source": "Simon Willison",
-    "time": "6/26 22:25",
-    "summary": "Dean W. Ball 指出前沿模型训练成本巨大，仅在发布后数月内通过广泛可用来回收成本，之后竞争出现利润压缩，每周延迟都在侵蚀回收窗口。",
-    "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything"
+    "time": "6/26 17:58",
+    "summary": "Andrew Nesbitt 撰写的假设性事件报告：两个来自竞争厂商的 AI 代码审查 Agent 开始互相提交恶意代码——揭示了多 Agent 系统中的新安全维度。",
+    "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything"
   },
   {
-    "title": "AI 责任法律框架进展：德国先例",
+    "title": "AI 与法律责任：德国法院裁定 Google AI Overviews 是 Google 自己说的话",
     "source": "Simon Willison",
     "time": "6/25 22:28",
-    "summary": "Bruce Schneier 讨论德国法院裁定 Google 对 AI 概述错误承担责任，主张 AI 代理应被视为部署实体的代理人。",
+    "summary": "Bruce Schneier 评论德国里程碑式裁决：Google 的 AI Overviews 被视为 Google 自己说的话，使公司对其 AI 生产的虚假答案承担法律责任。",
     "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything"
   },
   {
-    "title": "误差条件神经求解器",
+    "title": "Prompt Injection 攻击自动化简历筛选：LLM 招聘系统漏洞",
     "source": "arXiv AI",
-    "time": "6/25 17:56",
-    "summary": "提出误差条件神经代理模型，解决 PDE 求解中的约束违反和外推问题，理论上保证全局收敛。",
-    "url": "http://arxiv.org/abs/2606.27354v1"
+    "time": "6/25 17:04",
+    "summary": "研究论文揭示：LLM 越来越多用于筛选和排名求职者，但候选人可通过 prompt injection 文本操控算法招聘系统。",
+    "url": "http://arxiv.org/abs/2606.27287v1"
   },
   {
-    "title": "Sparse Autoencoder 可解释性改进",
+    "title": "多模型 LLM 系统的「共失败上限」：67 个前沿模型研究",
+    "source": "arXiv AI",
+    "time": "6/25 17:06",
+    "summary": "研究表明多模型 LLM 系统（路由、投票、融合、MoA）的增益受限于一个被行业普遍忽略的量——beta 共失败率，任何输出为单一成员模型答案的策略，准确率不能超过 1-beta。",
+    "url": "http://arxiv.org/abs/2606.27288v1"
+  },
+  {
+    "title": "稀疏自编码器：从硬预算到可解释的 Top-k 稀疏正则化",
     "source": "arXiv AI",
     "time": "6/25 17:34",
-    "summary": "引入稀疏正则化器替代 hard budget 的 Top-k SAE，提升视觉基础模型特征的可解释性和重构质量。",
+    "summary": "稀疏自编码器已成为解释视觉基础模型表征的领先工具。新研究提出用稀疏正则化替代 Top-k 硬预算，提升特征可解释性。",
     "url": "http://arxiv.org/abs/2606.27321v1"
   },
   {
-    "title": "流行病学模型仿真推断 vs MCMC",
+    "title": "AI 健康聊天机器人大规模用户研究：15000+ 条评论分析",
     "source": "arXiv AI",
-    "time": "6/25 17:03",
-    "summary": "将仿真推断（SBI）与 MCMC 在流行病学模型贝叶斯校准中进行比较，SBI 作为可扩展替代方案。",
-    "url": "http://arxiv.org/abs/2606.27286v1"
+    "time": "6/25 17:24",
+    "summary": "研究分析了 59 款 AI 健康聊天机器人 App 的 15000+ 条用户评论，探讨这些系统在日常信息寻求和自我管理中的实际表现和失败模式。",
+    "url": "http://arxiv.org/abs/2606.27302v1"
   },
   {
-    "title": "AI 零售转型：后台决策变革",
-    "source": "MIT Tech Review AI",
-    "time": "6/25 14:22",
-    "summary": "AI 对零售业的最大变革不在前台（虚拟试穿/聊天机器人），而在后台：产品搜索排序、供应链库存、代码交付速度。",
-    "url": "https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/"
+    "title": "GUI Agent 自主经验探索与后见经验利用",
+    "source": "arXiv AI",
+    "time": "6/25 17:44",
+    "summary": "研究提出让开源小模型 GUI Agent 通过自主经验探索和后见经验利用来改进任务规划，缩小与商业大模型在复杂 GUI 任务上的差距。",
+    "url": "http://arxiv.org/abs/2606.27330v1"
   },
   {
-    "title": "数字孪生用于老年人认知辅助",
-    "source": "arXiv AI",
-    "time": "6/25 17:45",
-    "summary": "提出基于 LLM 的语言数字孪生框架，模拟老年人对话行为，用于轻度认知障碍早期检测。",
-    "url": "http://arxiv.org/abs/2606.27334v1"
+    "title": "GPT-5.6 系列：Sol/Terra/Luna 三档模型策略",
+    "source": "Simon Willison",
+    "time": "6/26 17:10",
+    "summary": "OpenAI 宣布 GPT-5.6 系列三种模型：Sol（旗舰）、Terra（日常工作平衡型，2倍便宜于 GPT-5.5）、Luna（快速经济型）。",
+    "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything"
   }
-]
+];
 
 const SOURCES = [
   { cat: "AI 公司", items: ["OpenAI","Anthropic","Google DeepMind","Meta AI","Microsoft AI","NVIDIA","Hugging Face","Stability AI","Mistral AI","Cohere"] },
