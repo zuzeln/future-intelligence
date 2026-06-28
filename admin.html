@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Intelligence · Admin</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0e14; --surface: #11161e; --surface-hover: #161c26;
+  --border: #1e2632; --text: #e6e8ec; --text2: #8b919c; --text3: #5c626e;
+  --accent: #4a9eff; --accent-dim: #2d5a8c; --danger: #f85149; --warn: #d29922;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
+h1 { font-size: 1.3em; font-weight: 700; margin-bottom: 4px; }
+h1 span { font-size: 0.65em; color: var(--text3); font-weight: 400; }
+.toolbar {
+  display: flex; gap: 10px; align-items: center; margin: 20px 0; flex-wrap: wrap;
+  padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+}
+.btn {
+  padding: 8px 18px; border-radius: 6px; font-size: 0.82em; cursor: pointer; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font-weight: 600; transition: all 0.15s;
+}
+.btn:hover { background: var(--surface-hover); }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.danger { border-color: var(--danger); color: var(--danger); }
+.btn.danger:hover { background: rgba(248,81,73,0.1); }
+.stats { font-size: 0.78em; color: var(--text3); margin-left: auto; }
+
+.section-title {
+  font-size: 0.78em; color: var(--text3); text-transform: uppercase; letter-spacing: 1.5px;
+  padding: 24px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 12px;
+}
+.item {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px 18px; margin-bottom: 10px; transition: all 0.15s;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.item.removed { opacity: 0.3; text-decoration: line-through; background: var(--bg); }
+.item .grip { color: var(--text3); cursor: grab; font-size: 1.1em; padding: 2px 0; user-select: none; }
+.item .body { flex: 1; min-width: 0; }
+.item .body h3 { font-size: 0.95em; font-weight: 600; margin-bottom: 3px; }
+.item .body .meta { font-size: 0.72em; color: var(--text3); }
+.item .body .meta span { margin-right: 12px; }
+.item .body .insight { font-size: 0.82em; color: var(--accent); margin-top: 4px; }
+.item .body .signals-preview { font-size: 0.78em; color: var(--text2); margin-top: 4px; }
+.item .actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+.item .actions button {
+  width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--bg); cursor: pointer; font-size: 1em; display: flex; align-items: center;
+  justify-content: center; transition: all 0.15s; color: var(--text2);
+}
+.item .actions button:hover { background: var(--surface-hover); }
+.item .actions button.del:hover { color: var(--danger); border-color: var(--danger); }
+.item .actions button.restore { color: var(--accent); border-color: var(--accent-dim); }
+.item .actions input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+
+.archive-item {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 16px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;
+  transition: all 0.15s;
+}
+.archive-item.removed { opacity: 0.25; text-decoration: line-through; }
+.archive-item .body { flex: 1; }
+.archive-item .body strong { font-size: 0.85em; display: block; }
+.archive-item .body .meta { font-size: 0.7em; color: var(--text3); margin-top: 2px; }
+.archive-item .body .desc { font-size: 0.78em; color: var(--text2); margin-top: 2px; }
+
+.preview-box {
+  margin-top: 20px; padding: 10px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; font-size: 0.7em; color: var(--text3); max-height: 200px; overflow: auto;
+  font-family: monospace; white-space: pre-wrap; display: none;
+}
+.preview-box.show { display: block; }
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px;
+  font-size: 0.85em; font-weight: 600; z-index: 100;
+  opacity: 0; transition: opacity 0.2s; pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+@media (max-width: 640px) {
+  .container { padding: 20px 12px 60px; }
+  .item { flex-direction: column; }
+  .item .actions { align-self: flex-end; }
+  .toolbar { flex-direction: column; align-items: flex-start; }
+  .stats { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Future Intelligence <span>Admin</span></h1>
+  <p style="color:var(--text3);font-size:0.78em;margin-top:4px;">勾选保留 · 点击 ✕ 删除 · 保存后重新生成主页</p>
+
+  <div class="toolbar">
+    <button class="btn primary" onclick="save()">保存并生成主页</button>
+    <button class="btn" onclick="resetAll()">重置全部</button>
+    <span class="stats" id="stats"></span>
+  </div>
+
+  <div class="section-title">趋势 Trends (<span id="trendCount">0</span>)</div>
+  <div id="trendList"></div>
+
+  <div class="section-title" style="margin-top:12px;">归档 Archive (<span id="archiveCount">0</span>)</div>
+  <div id="archiveList"></div>
+
+  <div class="preview-box" id="preview"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// Load from HTML
+let TREND_DATA = [];
+let ARCHIVE_DATA = [];
+let trendRemoved = new Set();
+let archiveRemoved = new Set();
+
+async function loadData() {
+  const resp = await fetch('index.html');
+  const html = await resp.text();
+  const m1 = html.match(/const TREND_DATA\s*=\s*(\[[\s\S]*?\]);/);
+  const m2 = html.match(/const ARCHIVE_DATA\s*=\s*(\[[\s\S]*?\]);/);
+  if (m1) TREND_DATA = JSON.parse(m1[1]);
+  if (m2) ARCHIVE_DATA = JSON.parse(m2[1]);
+  // Load saved state
+  try {
+    const saved = JSON.parse(localStorage.getItem('fi_admin_state') || '{}');
+    if (saved.trendRemoved) trendRemoved = new Set(saved.trendRemoved);
+    if (saved.archiveRemoved) archiveRemoved = new Set(saved.archiveRemoved);
+  } catch(e) {}
+  render();
+}
+
+function persistState() {
+  localStorage.setItem('fi_admin_state', JSON.stringify({
+    trendRemoved: [...trendRemoved],
+    archiveRemoved: [...archiveRemoved]
+  }));
+}
+
+function render() {
+  const activeTrends = TREND_DATA.filter((_, i) => !trendRemoved.has(i));
+  const activeArchive = ARCHIVE_DATA.filter((_, i) => !archiveRemoved.has(i));
+
+  document.getElementById('trendCount').textContent = activeTrends.length + '/' + TREND_DATA.length;
+  document.getElementById('archiveCount').textContent = activeArchive.length + '/' + ARCHIVE_DATA.length;
+  document.getElementById('stats').textContent = `保留趋势 ${activeTrends.length} · 归档 ${activeArchive.length} · 已删 ${trendRemoved.size + archiveRemoved.size}`;
+
+  // Trends
+  document.getElementById('trendList').innerHTML = TREND_DATA.map((t, i) => {
+    const rm = trendRemoved.has(i);
+    const signalsPreview = t.signals.slice(0,3).map(s => s.source).join(' / ');
+    return `
+    <div class="item${rm ? ' removed' : ''}">
+      <span class="grip">☰</span>
+      <div class="body">
+        <h3>#${t.id} ${esc(t.title)}</h3>
+        <div class="meta"><span>score ${t.score}</span><span>${t.signals.length} signals</span></div>
+        <div class="insight">${esc(t.coreInsight)}</div>
+        <div class="signals-preview">${esc(signalsPreview)}</div>
+      </div>
+      <div class="actions">
+        <input type="checkbox" ${rm ? '' : 'checked'} onchange="toggleTrend(${i})" title="保留/删除">
+        <button class="${rm ? 'restore' : 'del'}" onclick="toggleTrend(${i})" title="${rm ? '恢复' : '删除'}">${rm ? '↩' : '✕'}</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Archive
+  document.getElementById('archiveList').innerHTML = ARCHIVE_DATA.map((a, i) => {
+    const rm = archiveRemoved.has(i);
+    return `
+    <div class="archive-item${rm ? ' removed' : ''}">
+      <input type="checkbox" ${rm ? '' : 'checked'} onchange="toggleArchive(${i})" style="margin-top:3px;">
+      <div class="body">
+        <strong>${esc(a.title)}</strong>
+        <div class="meta">${esc(a.source)} · ${a.time}</div>
+        <div class="desc">${esc(a.summary)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleTrend(i) {
+  if (trendRemoved.has(i)) trendRemoved.delete(i);
+  else trendRemoved.add(i);
+  persistState();
+  render();
+}
+function toggleArchive(i) {
+  if (archiveRemoved.has(i)) archiveRemoved.delete(i);
+  else archiveRemoved.add(i);
+  persistState();
+  render();
+}
+
+function resetAll() {
+  if (!confirm('确定要重置所有删除操作，恢复全部趋势和归档？')) return;
+  trendRemoved.clear();
+  archiveRemoved.clear();
+  persistState();
+  render();
+  toast('已重置全部内容');
+}
+
+async function save() {
+  const active = TREND_DATA.filter((_, i) => !trendRemoved.has(i));
+  const arch = ARCHIVE_DATA.filter((_, i) => !archiveRemoved.has(i));
+
+  // Reload original HTML template to preserve structure
+  const resp = await fetch('index.html');
+  let html = await resp.text();
+
+  // Replace data blocks
+  html = html.replace(
+    /const TREND_DATA\s*=\s*\[[\s\S]*?\];/,
+    'const TREND_DATA = ' + JSON.stringify(active, null, 2) + ';'
+  );
+  html = html.replace(
+    /const ARCHIVE_DATA\s*=\s*\[[\s\S]*?\];/,
+    'const ARCHIVE_DATA = ' + JSON.stringify(arch, null, 2) + ';'
+  );
+
+  // Download
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'index.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  // Show preview
+  const prev = document.getElementById('preview');
+  prev.classList.add('show');
+  prev.textContent = `已生成 index.html 包含：\n${active.length} 个趋势\n${arch.length} 条归档\n\n下载完成，将此文件替换部署目录中的 index.html 即可。`;
+
+  toast(`已导出：${active.length} 趋势 + ${arch.length} 归档`);
+}
+
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function esc(s) {
+  if (!s) return '';
+  const div = document.createElement('div');
+  div.textContent = s;
+  return div.innerHTML;
+}
+
+loadData();
+</script>
+</body>
+</html>
