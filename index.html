@@ -96,11 +96,12 @@ body {
 .signal-item {
   display: block; background: var(--bg); border: 1px solid var(--border);
   border-radius: 10px; padding: 14px 16px; text-decoration: none;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, color 0.15s;
 }
-.signal-item:hover { border-color: var(--accent-dim); }
+.signal-item:hover { border-color: var(--accent-dim); color: var(--accent); }
 .signal-item .signal-source { font-size: 0.75em; color: var(--text-tertiary); margin-bottom: 3px; }
-.signal-item .signal-title { font-size: 0.88em; color: var(--text-primary); font-weight: 600; margin-bottom: 4px; }
+.signal-item .signal-title { font-size: 0.88em; color: var(--text-primary); font-weight: 600; margin-bottom: 4px; transition: color 0.15s; }
+.signal-item:hover .signal-title { color: var(--accent); }
 .signal-item .signal-summary { font-size: 0.82em; color: var(--text-secondary); line-height: 1.5; }
 
 /* Archive */
@@ -115,10 +116,12 @@ body {
 .archive-content { display: none; padding: 16px 0; }
 .archive-content.open { display: block; }
 .archive-item {
-  padding: 12px 0; border-bottom: 1px solid var(--border);
+  padding: 12px 0; border-bottom: 1px solid var(--border); transition: all 0.2s;
 }
 .archive-item:last-child { border-bottom: none; }
-.archive-item strong { font-size: 0.9em; display: block; margin-bottom: 3px; }
+.archive-item:hover { background: rgba(255,255,255,0.03); }
+.archive-item strong { font-size: 0.9em; display: block; margin-bottom: 3px; transition: color 0.2s; }
+.archive-item:hover strong { color: var(--accent); }
 .archive-item span { font-size: 0.8em; color: var(--text-tertiary); }
 .archive-item .archive-desc { font-size: 0.82em; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
 
