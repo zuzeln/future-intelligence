@@ -54,7 +54,7 @@ body {
 /* Trend Cards */
 .trend-card {
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 36px 40px; margin-bottom: 18px;
+  border-radius: 14px; padding: 48px 56px; margin-bottom: 18px;
   cursor: pointer; transition: all 0.2s;
 }
 .trend-card:hover { background: var(--surface-hover); border-color: #2a3340; }
@@ -169,7 +169,7 @@ body {
 @media (max-width: 640px) {
   .container { padding: 0 14px 60px; }
   .hero h2 { font-size: 1.4em; }
-  .trend-card { padding: 28px 20px; }
+  .trend-card { padding: 36px 24px; }
   .trend-card h3 { font-size: 1.05em; }
 }
 
@@ -316,7 +316,7 @@ body {
   </div>
 
   <div class="hero editable-block" data-block="hero">
-    <h2 contenteditable="false" style="background: red; color: white;">今日重要趋势</h2>
+    <h2 contenteditable="false">今日重要趋势</h2>
     <div class="update-badge" id="updateTime" contenteditable="false"></div>
   </div>
 
