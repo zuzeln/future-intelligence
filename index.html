@@ -250,11 +250,6 @@ body {
 
   <div class="hero editable-block" data-block="hero">
     <h2 contenteditable="false">每刻重要趋势</h2>
-    <div id="hero-summary" style="display:flex;gap:12px;margin:16px 0;flex-wrap:wrap;">
-      <span id="summary-trends" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.82em;color:var(--accent);">趋势 7</span>
-      <span id="summary-signals" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.82em;color:var(--text-secondary);">信息来源 36</span>
-      <span id="summary-archives" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.82em;color:var(--text-secondary);">归档 16</span>
-    </div>
     <div class="update-badge" id="updateTime" contenteditable="false"></div>
   </div>
 
@@ -940,12 +935,12 @@ function exportHTML() {
 function renderTrends() {
   const container = document.getElementById('trends');
   container.innerHTML = TREND_DATA.map((trend, i) => `
-    <div class="trend-card editable-block" id="trend-${trend.id}">
+    <div class="trend-card editable-block" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
       <div class="card-header">
-        <h3 contenteditable="false" style="cursor:pointer" onclick="this.closest('.trend-card').classList.add('expanded')">${esc(trend.title)}</h3>
+        <h3 contenteditable="false">${esc(trend.title)}</h3>
         <span class="trend-rank">#${i + 1}</span>
       </div>
-      <div class="core-insight" contenteditable="false" style="cursor:pointer" onclick="this.closest('.trend-card').classList.add('expanded')">${esc(trend.coreInsight)}</div>
+      <div class="core-insight" contenteditable="false">${esc(trend.coreInsight)}</div>
       <div class="card-footer">
         <span class="signal-count">${trend.signals.length} 个信息来源</span>
         <span class="divider"></span>
@@ -984,7 +979,7 @@ function renderTrends() {
             `).join('')}
           </div>
         </div>
-        <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');document.querySelector('.sources-section').scrollIntoView({behavior:'smooth',block:'start'});event.stopPropagation()">收起</button>
+        <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');event.stopPropagation()">收起</button>
       </div>
     </div>
   `).join('');
@@ -998,12 +993,6 @@ function renderTrends() {
     </div>
   `).join('');
   document.getElementById('archiveLabel').textContent = `归档 · ${ARCHIVE_DATA.length} 条`;
-
-  // Update hero summary bar
-  const totalSignals = TREND_DATA.reduce((sum, t) => sum + t.signals.length, 0);
-  document.getElementById('summary-trends').textContent = `趋势 ${TREND_DATA.length}`;
-  document.getElementById('summary-signals').textContent = `信息来源 ${totalSignals}`;
-  document.getElementById('summary-archives').textContent = `归档 ${ARCHIVE_DATA.length}`;
 
   // Sources
   document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
