@@ -87,6 +87,7 @@ body {
 .detail-section p, .detail-section li { font-size: 0.9em; color: var(--text-primary); line-height: 1.7; }
 .detail-section ul { list-style: none; padding: 0; }
 .detail-section ul li { padding: 4px 0; }
+.opp-list li, .risk-list li { padding: 0; }
 .detail-section ul li::before { content: '→ '; color: var(--accent); font-weight: 600; }
 .opp-list li::before, .risk-list li::before { content: none !important; }
 
@@ -234,18 +235,28 @@ body {
 .edit-bar-btn.export:hover { color: #fff; border-color: var(--text-secondary); }
 
 /* 机会卡片 */
-.opp-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-.opp-item {
+.opp-list, .risk-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.opp-item, .risk-item {
   display: flex; align-items: baseline;
+  padding: 16px 20px;
+  font-size: 0.85em;
+  color: var(--text-primary);
+  line-height: 1.6;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+.opp-item {
   background: rgba(63,185,80,0.05);
   border: 1px solid rgba(63,185,80,0.16);
-  border-radius: 10px;
-  padding: 14px 16px;
-  font-size: 0.84em;
-  color: var(--text-primary);
-  line-height: 1.7;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+}
+.risk-item {
+  background: rgba(248,81,73,0.05);
+  border: 1px solid rgba(248,81,73,0.16);
 }
 .opp-item::before {
   content: '';
@@ -256,24 +267,6 @@ body {
   margin-right: 10px;
   vertical-align: middle;
   flex-shrink: 0;
-}
-/* 风险卡片 */
-.risk-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-.risk-item {
-  display: flex; align-items: baseline;
-  background: rgba(248,81,73,0.05);
-  border: 1px solid rgba(248,81,73,0.16);
-  border-radius: 12px;
-  padding: 16px 20px;
-  font-size: 0.85em;
-  color: var(--text-primary);
-  line-height: 1.6;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  width: 100%;
-  box-sizing: border-box;
-  word-break: break-word;
 }
 .risk-item::before {
   content: '';
