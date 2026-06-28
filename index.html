@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Intelligence — 今日最重要的未来趋势</title>
+<style>
+  :root {
+    --bg: #0a0e14;
+    --surface: #11161e;
+    --surface-hover: #161c26;
+    --border: #1e2632;
+    --text-primary: #e6e8ec;
+    --text-secondary: #8b919c;
+    --text-tertiary: #5c626e;
+    --accent: #4a9eff;
+    --accent-dim: #2d5a8c;
+    --danger: #ff6b6b;
+    --success: #4ade80;
+    --warning: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
+
+  /* Header */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .brand-mark {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 6px;
+    position: relative;
+  }
+  .brand-mark::after {
+    content: '';
+    position: absolute;
+    top: 6px; left: 6px;
+    width: 8px; height: 8px;
+    background: var(--bg);
+    border-radius: 2px;
+  }
+  .brand h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+  }
+  .brand span {
+    font-size: 0.75em;
+    color: var(--text-tertiary);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  .hero p {
+    font-size: 1.05em;
+    color: var(--text-secondary);
+    max-width: 600px;
+  }
+  .hero .update-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 14px;
+    background: rgba(74, 158, 255, 0.08);
+    border: 1px solid rgba(74, 158, 255, 0.15);
+    border-radius: 20px;
+    font-size: 0.82em;
+    color: var(--accent);
+  }
+
+  /* Trend Card */
+  .trend-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .trend-card:hover { background: var(--surface-hover); border-color: #2a3340; }
+  .trend-card.expanded { border-color: var(--accent-dim); background: var(--surface-hover); }
+
+  .trend-card .trend-index {
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    font-size: 0.78em;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+  .trend-card h3 {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-right: 60px;
+    letter-spacing: -0.2px;
+  }
+  .trend-card .core-conclusion {
+    font-size: 0.95em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .trend-card .meta-row {
+    display: flex;
+    gap: 24px;
+    font-size: 0.82em;
+    color: var(--text-tertiary);
+    flex-wrap: wrap;
+  }
+  .trend-card .meta-row span { display: flex; align-items: center; gap: 6px; }
+  .trend-card .meta-row .signal-count { color: var(--accent); font-weight: 600; }
+
+  /* Expand Content */
+  .trend-detail {
+    display: none;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    animation: fadeIn 0.2s ease;
+  }
+  .trend-card.expanded .trend-detail { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .detail-section {
+    margin-bottom: 24px;
+  }
+  .detail-section h4 {
+    font-size: 0.82em;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+  .detail-section p, .detail-section ul {
+    font-size: 0.92em;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+  .detail-section ul { list-style: none; padding: 0; }
+  .detail-section ul li {
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .detail-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+  }
+  .pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 0.82em;
+    font-weight: 500;
+  }
+  .pill-green { background: rgba(74, 222, 128, 0.1); color: var(--success); }
+  .pill-red { background: rgba(255, 107, 107, 0.1); color: var(--danger); }
+
+  .signal-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .signal-item .signal-source {
+    font-size: 0.78em;
+    color: var(--text-tertiary);
+    margin-bottom: 4px;
+  }
+  .signal-item .signal-title {
+    font-size: 0.92em;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+  .signal-item .signal-summary {
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .signal-item a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.82em;
+  }
+  .signal-item a:hover { text-decoration: underline; }
+
+  /* Archive */
+  .archive-toggle {
+    text-align: center;
+    margin-top: 48px;
+    padding: 12px;
+    color: var(--text-tertiary);
+    font-size: 0.85em;
+    cursor: pointer;
+    border-top: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .archive-toggle:hover { color: var(--text-secondary); }
+  .archive-section { display: none; }
+  .archive-section.open { display: block; }
+  .archive-item {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88em;
+    color: var(--text-secondary);
+  }
+  .archive-item a { color: var(--accent); text-decoration: none; }
+  .archive-item a:hover { text-decoration: underline; }
+
+  /* Footer */
+  .footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--text-tertiary);
+  }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-tertiary);
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 32px 16px 60px; }
+    .hero h2 { font-size: 1.5em; }
+    .trend-card { padding: 20px 20px; }
+    .trend-card h3 { font-size: 1.1em; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="brand">
+    <div class="brand-mark"></div>
+    <div>
+      <h1>Future Intelligence</h1>
+      <span>Future Trend Discovery</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h2>今日最重要的未来趋势</h2>
+    <p>今天的信号说明未来正在发生什么。</p>
+    <div class="update-badge" id="updateTime">更新于 2026-06-28</div>
+  </div>
+
+  <div id="trends"></div>
+
+  <div class="archive-toggle" onclick="toggleArchive()">
+    <span id="archiveLabel">归档区 · 3 条</span>
+  </div>
+  <div class="archive-section" id="archiveSection"></div>
+
+  <div class="footer">
+    Future Intelligence · 趋势基于 AI HOT 公开数据源分析生成 · 不追逐新闻，只发现趋势
+  </div>
+
+</div>
+
+<script>
+// ========== 趋势数据 ==========
+const TREND_DATA = [
+  {
+    id: 1,
+    title: "AI竞争从软件延伸到物理世界",
+    coreConclusion: "AI公司正在跨越软硬件边界，竞争进入航天、硬件、能源等物理基础设施层面。这标志着AI竞争从"谁的模型更强"升级为"谁掌控物理基础设施"。",
+    whyImportant: "这轮人才和资本的流动方向表明，AI领导地位不仅取决于算法，还取决于算力基础设施、硬件整合能力和能源控制。竞争维度发生了质变。",
+    whatItMeans: "未来3-5年，AI公司将不再是纯粹的软件公司。从SpaceX与xAI的合并到OpenAI挖角硬件人才，AI正在从云端走向物理世界。这意味着芯片、能源、航天等硬科技领域将与AI深度绑定。",
+    beneficiaries: ["AI芯片厂商 (NVIDIA/AMD)", "硬件供应链企业", "拥有物理基础设施的AI公司", "航天+AI交叉领域创业者"],
+    riskExposure: ["纯软件AI公司", "没有硬件布局的云厂商", "传统消费电子公司人才流失"],
+    nextSignals: ["SpaceXAI首个产品发布", "更多AI公司宣布硬件并购", "AI硬件领域融资额变化"],
+    signals: [
+      {
+        source: "X: cb_doge", time: "6/28 04:51",
+        title: "SpaceX 注册 SpaceXAI 商标，xAI 将解散并入",
+        summary: "马斯克宣布 xAI 不再作为独立公司，将成为 SpaceXAI——即 SpaceX 的 AI 产品。AI 公司与航天巨头的深度整合。",
+        url: "https://x.com/cb_doge/status/2070973276562530507"
+      },
+      {
+        source: "X: Berry Xia", time: "6/28 01:05",
+        title: "苹果Vision产品副总裁跳槽OpenAI硬件部门",
+        summary: "苹果Vision Pro及AR眼镜研发负责人Paul Meade离职加入OpenAI硬件部门。苹果市值因涨价蒸发2300亿美元。AI硬件人才争夺战白热化。",
+        url: "https://x.com/berryxia/status/2070916520822321292"
+      },
+      {
+        source: "GitHub (Hacker News)", time: "6/28 11:55",
+        title: "Adrafinil: AI agent工作时阻止Mac睡眠的菜单栏工具",
+        summary: "开发者需要让物理设备在AI agent工作时保持唤醒——AI agent正在对物理设备提出新的运行要求。",
+        url: "https://github.com/kageroumado/adrafinil"
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "AI推理成本断崖式下降，应用层爆发前夜",
+    coreConclusion: "推理加速技术开源化+企业用脚投票选择性价比模型，正在推动AI使用成本大幅下降。AI从"奢侈品"走向"日用品"的商业拐点正在到来。",
+    whyImportant: "成本是AI应用普及的最大障碍。当推理成本降低60-85%，大量之前不可行的AI应用突然变得经济可行。这是AI应用创业的黄金窗口。",
+    whatItMeans: "AI基础设施正在从'最强模型通吃'转向'按需匹配最合适的模型'。这意味着AI应用创业者不再被高昂的API费用束缚，可以以极低成本构建AI产品。同时，模型厂商的竞争维度从纯粹的能力比拼扩展到成本效率。",
+    beneficiaries: ["AI应用创业者", "DeepSeek等性价比模型厂商", "模型路由/成本优化工具", "中小企业AI采用者"],
+    riskExposure: ["依赖高价API的AI产品", "缺乏成本优势的闭源模型厂商", "纯靠模型能力溢价的商业模式"],
+    nextSignals: ["更多企业公布模型切换后的成本节省数据", "新一批AI应用公司融资潮", "OpenAI/Anthropic是否会调整定价策略"],
+    signals: [
+      {
+        source: "MarkTechPost", time: "6/28 00:59",
+        title: "DeepSeek 开源 DSpark 投机解码框架，加速 V4 生成速度 60-85%",
+        summary: "在DeepSeek-V4权重上附加草稿模块，通过半自回归生成实现无损加速。生产环境下V4-Flash和V4-Pro每用户生成速度较MTP-1基线分别提升60-85%和57-78%。配套DeepSpec训练代码库MIT开源。",
+        url: "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1"
+      },
+      {
+        source: "IT之家", time: "6/27 16:16",
+        title: "AI账单失控后 DeepSeek 成"香饽饽"，美国企业 100% 切换",
+        summary: "旧金山公司Lindy每月AI账单超支超过员工工资，已将100%流量切换到DeepSeek，预计节省数百万美元。企业开始采用模型路由按任务匹配模型，不再将最贵前沿模型用于所有场景。",
+        url: "https://www.ithome.com/0/969/400.htm"
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: "AI劳动力转型进入制度化应对阶段",
+    coreConclusion: "AI对就业的冲击不再只是学术讨论或行业预警。美国政府、企业和资本已开始投入真金白银（10亿美元级别）进行系统性应对。",
+    whyImportant: "这是AI劳动力影响从'预警'转向'行动'的标志性事件。10亿美元不是小数目，且发起方包括前商务部长和四州政府，代表了制度层面的承认。",
+    whatItMeans: "AI劳动力转型将成为未来5-10年的政策和商业焦点。这不仅是社会问题，更是一个巨大的新兴产业——AI职业导航、技能再培训、工资保险等。同时需要注意，出资方正是造成就业冲击的AI公司本身，独立性和效果存疑。",
+    beneficiaries: ["AI培训与再教育平台", "职业转型服务机构", "劳动力政策咨询公司"],
+    riskExposure: ["被AI替代风险高的白领岗位", "未布局员工再培训的企业", "传统教育机构（如不能快速适应）"],
+    nextSignals: ["其他国家的类似计划推出", "第一批培训效果数据公布", "AI公司是否继续追加资金"],
+    signals: [
+      {
+        source: "The Decoder", time: "6/27 20:25",
+        title: ""Raise Us"启动：筹资10亿美元应对AI就业冲击",
+        summary: "前美国商务部长Raimondo发起非营利计划，已锁定5亿美元。Amazon、Anthropic、Microsoft、OpenAI等支持。将在四州试点AI职业导航、工资保险等。但独立性受质疑——出资方正是AI冲击的制造者。",
+        url: "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "AI Agent从实验走向生产，可靠性仍是关键瓶颈",
+    coreConclusion: "AI Agent正在进入生产环境（开发工具、游戏、自动化），但实验表明"感知-执行"闭环仍是最大短板，而非"智力不足"。",
+    whyImportant: "Agent是AI商业化的下一个形态，可靠性直接决定其能否真正替代人类工作。当前的实验数据（感知检查仅1-2%、执行率48-66%）表明距离可靠的生产级Agent还有明显差距。",
+    whatItMeans: "Agent能力的提升方向需要从'更强的模型'转向'更好的感知和执行系统'。这意味着Agent基础设施——监控、可观测性、容错、环境感知——将成为重要的技术赛道和创业机会。",
+    beneficiaries: ["Agent基础设施工具开发商", "AI可观测性/监控平台", "Agent测试框架创业者"],
+    riskExposure: ["过早承诺Agent能力的产品公司", "低估Agent落地难度的投资者", "依赖Agent替代人工的企业"],
+    nextSignals: ["更多Agent生产环境可靠性报告", "Agent监控类创业公司融资", "模型厂商是否将感知/执行能力作为新卖点"],
+    signals: [
+      {
+        source: "IT之家", time: "6/28 10:45",
+        title: "四大顶级AI对决《文明VI》：Claude核平法国仍输，暴露感知与执行短板",
+        summary: "四模型23场对局实验发现：AI主动检查全局状态仅占1-2%（感知盲区），计划执行率仅48-66%（知行差距）。Claude核平法国后仍因外交失败输掉比赛。结论：智商非瓶颈，感知与执行才是关键。",
+        url: "https://www.ithome.com/0/969/570.htm"
+      },
+      {
+        source: "GitHub (HN)", time: "6/28 11:55",
+        title: "Adrafinil: AI agent工作时阻止Mac睡眠的工具",
+        summary: "开发者围绕AI agent的工作模式开发配套工具——agent从辅助角色变成需要持续运行的"数字同事"，对操作系统提出新要求。",
+        url: "https://github.com/kageroumado/adrafinil"
+      }
+    ]
+  }
+];
+
+const ARCHIVE_DATA = [
+  {
+    title: "一次失败的（民族国家？）攻击的剖析 — 开源供应链安全",
+    source: "Hacker News", time: "6/27 23:39",
+    summary: "伪装成VC的定向攻击，通过npm补丁注入后门PinpinRAT，目标是Rust包维护者。AI辅助的社会工程攻击手段更加隐蔽。",
+    url: "https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack"
+  },
+  {
+    title: "Runway API 推出广告本地化 Recipe",
+    source: "X: Runway", time: "6/27 21:02",
+    summary: "通过单次API调用翻译静态广告和图形资产。AI创意工具API化的又一个案例。",
+    url: "https://x.com/runwayml/status/2070855164584726791"
+  },
+  {
+    title: "阿里千问输入法上线 macOS 版",
+    source: "IT之家", time: "6/27 11:39",
+    summary: "支持AI语音输入、自动润色、9种方言。产品更新，趋势分析价值有限。",
+    url: "https://www.ithome.com/0/969/334.htm"
+  }
+];
+
+// ========== 渲染 ==========
+function renderTrends() {
+  const container = document.getElementById('trends');
+  container.innerHTML = TREND_DATA.map((trend, index) => `
+    <div class="trend-card" id="trend-${trend.id}" onclick="toggleTrend(${trend.id})">
+      <span class="trend-index">趋势 ${index + 1} / ${TREND_DATA.length}</span>
+      <h3>${escapeHtml(trend.title)}</h3>
+      <p class="core-conclusion">${escapeHtml(trend.coreConclusion)}</p>
+      <div class="meta-row">
+        <span class="signal-count">${trend.signals.length} 个支撑信号</span>
+        <span>${getUpdateTime(trend)}</span>
+        <span style="color:var(--text-tertiary);font-size:0.78em">点击展开完整分析</span>
+      </div>
+      <div class="trend-detail">
+        <div class="detail-section">
+          <h4>为什么重要</h4>
+          <p>${escapeHtml(trend.whyImportant)}</p>
+        </div>
+        <div class="detail-section">
+          <h4>这意味着什么</h4>
+          <p>${escapeHtml(trend.whatItMeans)}</p>
+        </div>
+        <div class="detail-section">
+          <h4>受益方</h4>
+          <div class="pill-group">
+            ${trend.beneficiaries.map(b => `<span class="pill pill-green">${escapeHtml(b)}</span>`).join('')}
+          </div>
+        </div>
+        <div class="detail-section">
+          <h4>风险暴露方</h4>
+          <div class="pill-group">
+            ${trend.riskExposure.map(r => `<span class="pill pill-red">${escapeHtml(r)}</span>`).join('')}
+          </div>
+        </div>
+        <div class="detail-section">
+          <h4>下一步观察信号</h4>
+          <ul>
+            ${trend.nextSignals.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h4>支撑信号</h4>
+          ${trend.signals.map(s => `
+            <div class="signal-item">
+              <div class="signal-source">${escapeHtml(s.source)} · ${s.time}</div>
+              <div class="signal-title">${escapeHtml(s.title)}</div>
+              <div class="signal-summary">${escapeHtml(s.summary)}</div>
+              <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">阅读原文</a>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Archive
+  document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map(item => `
+    <div class="archive-item">
+      <strong>${escapeHtml(item.title)}</strong>
+      <span style="color:var(--text-tertiary);font-size:0.82em"> — ${item.source} · ${item.time}</span>
+      <div style="margin-top:4px;font-size:0.85em">${escapeHtml(item.summary)}</div>
+      <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">阅读原文</a>
+    </div>
+  `).join('');
+  document.getElementById('archiveLabel').textContent = `归档区 · ${ARCHIVE_DATA.length} 条`;
+}
+
+function toggleTrend(id) {
+  const card = document.getElementById('trend-' + id);
+  card.classList.toggle('expanded');
+}
+
+function toggleArchive() {
+  document.getElementById('archiveSection').classList.toggle('open');
+}
+
+function getUpdateTime(trend) {
+  const times = trend.signals.map(s => s.time).filter(Boolean);
+  if (times.length === 0) return '';
+  return '最新信号 ' + times[0];
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+document.getElementById('updateTime').textContent = '更新于 2026-06-28 凌晨 · 基于过去24小时信号分析';
+
+renderTrends();
+</script>
+</body>
+</html>
