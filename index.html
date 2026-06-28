@@ -148,7 +148,6 @@ body {
 .source-category li { padding: 2px 0; font-size: 0.78em; color: var(--text-secondary); }
 .source-category li a { color: var(--text-secondary); text-decoration: none; }
 .source-category li a:hover { color: var(--accent); }
-.source-category li .source-date { font-size: 0.78em; color: var(--text-tertiary); margin-left: 8px; }
 
 /* Collapse btn */
 .collapse-btn {
@@ -819,11 +818,11 @@ const ARCHIVE_DATA = [
 ];
 
 const SOURCES = [
-  { cat: "AI 公司", items: [{ name: "OpenAI", url: "https://openai.com", date: "6/26" },{ name: "Anthropic", url: "https://www.anthropic.com", date: "6/26" },{ name: "Google DeepMind", url: "https://deepmind.google", date: "6/28" },{ name: "Meta AI", url: "https://ai.meta.com", date: "6/28" },{ name: "Microsoft AI", url: "https://www.microsoft.com/en-us/ai", date: "6/28" },{ name: "NVIDIA", url: "https://www.nvidia.com/en-us/ai/", date: "6/28" },{ name: "Hugging Face", url: "https://huggingface.co", date: "6/28" },{ name: "Stability AI", url: "https://stability.ai", date: "6/28" },{ name: "Mistral AI", url: "https://mistral.ai", date: "6/28" },{ name: "Cohere", url: "https://cohere.com", date: "6/28" }] },
-  { cat: "AI 媒体", items: [{ name: "TechCrunch AI", url: "https://techcrunch.com/category/artificial-intelligence/", date: "6/27" },{ name: "VentureBeat AI", url: "https://venturebeat.com/category/ai/", date: "6/27" },{ name: "The Verge AI", url: "https://www.theverge.com/ai-artificial-intelligence", date: "6/28" },{ name: "Ars Technica", url: "https://arstechnica.com/ai/", date: "6/28" },{ name: "MarkTechPost", url: "https://www.marktechpost.com", date: "6/26" },{ name: "AI News", url: "https://www.artificialintelligence-news.com", date: "6/28" },{ name: "The Decoder", url: "https://the-decoder.com", date: "6/28" },{ name: "MIT Tech Review", url: "https://www.technologyreview.com/topic/artificial-intelligence/", date: "6/26" }] },
-  { cat: "研究机构", items: [{ name: "arXiv cs.AI", url: "https://arxiv.org/list/cs.AI/recent", date: "6/25" },{ name: "Stanford HAI", url: "https://hai.stanford.edu", date: "6/28" },{ name: "Google Research", url: "https://research.google", date: "6/28" },{ name: "Microsoft Research", url: "https://www.microsoft.com/en-us/research/", date: "6/28" },{ name: "BAIR", url: "https://bair.berkeley.edu", date: "6/28" }] },
-  { cat: "投资机构", items: [{ name: "a16z", url: "https://a16z.com", date: "6/28" },{ name: "Sequoia Capital", url: "https://www.sequoiacap.com", date: "6/28" },{ name: "Benchmark", url: "https://www.benchmark.com", date: "6/28" },{ name: "Y Combinator", url: "https://www.ycombinator.com", date: "6/28" }] },
-  { cat: "社区信号", items: [{ name: "Hacker News", url: "https://news.ycombinator.com", date: "6/28" },{ name: "GitHub Trending", url: "https://github.com/trending", date: "6/28" },{ name: "Reddit ML", url: "https://www.reddit.com/r/MachineLearning/", date: "6/28" },{ name: "Product Hunt", url: "https://www.producthunt.com", date: "6/28" },{ name: "X/Twitter", url: "https://x.com", date: "6/28" },{ name: "AI HOT", url: "https://aihot.virxact.com", date: "6/28" }] }
+  { cat: "AI 公司", items: [{ name: "OpenAI", url: "https://openai.com" },{ name: "Anthropic", url: "https://www.anthropic.com" },{ name: "Google DeepMind", url: "https://deepmind.google" },{ name: "Meta AI", url: "https://ai.meta.com" },{ name: "Microsoft AI", url: "https://www.microsoft.com/en-us/ai" },{ name: "NVIDIA", url: "https://www.nvidia.com/en-us/ai/" },{ name: "Hugging Face", url: "https://huggingface.co" },{ name: "Stability AI", url: "https://stability.ai" },{ name: "Mistral AI", url: "https://mistral.ai" },{ name: "Cohere", url: "https://cohere.com" }] },
+  { cat: "AI 媒体", items: [{ name: "TechCrunch AI", url: "https://techcrunch.com/category/artificial-intelligence/" },{ name: "VentureBeat AI", url: "https://venturebeat.com/category/ai/" },{ name: "The Verge AI", url: "https://www.theverge.com/ai-artificial-intelligence" },{ name: "Ars Technica", url: "https://arstechnica.com/ai/" },{ name: "MarkTechPost", url: "https://www.marktechpost.com" },{ name: "AI News", url: "https://www.artificialintelligence-news.com" },{ name: "The Decoder", url: "https://the-decoder.com" },{ name: "MIT Tech Review", url: "https://www.technologyreview.com/topic/artificial-intelligence/" }] },
+  { cat: "研究机构", items: [{ name: "arXiv cs.AI", url: "https://arxiv.org/list/cs.AI/recent" },{ name: "Stanford HAI", url: "https://hai.stanford.edu" },{ name: "Google Research", url: "https://research.google" },{ name: "Microsoft Research", url: "https://www.microsoft.com/en-us/research/" },{ name: "BAIR", url: "https://bair.berkeley.edu" }] },
+  { cat: "投资机构", items: [{ name: "a16z", url: "https://a16z.com" },{ name: "Sequoia Capital", url: "https://www.sequoiacap.com" },{ name: "Benchmark", url: "https://www.benchmark.com" },{ name: "Y Combinator", url: "https://www.ycombinator.com" }] },
+  { cat: "社区信号", items: [{ name: "Hacker News", url: "https://news.ycombinator.com" },{ name: "GitHub Trending", url: "https://github.com/trending" },{ name: "Reddit ML", url: "https://www.reddit.com/r/MachineLearning/" },{ name: "Product Hunt", url: "https://www.producthunt.com" },{ name: "X/Twitter", url: "https://x.com" },{ name: "AI HOT", url: "https://aihot.virxact.com" }] }
 ];
 
 // ============================================================
@@ -877,7 +876,7 @@ function setAllEditable(editable) {
     '.core-insight', '.detail-section p', '.detail-section li',
     '.signal-source', '.signal-title', '.signal-summary',
     '.archive-item strong', '.archive-item span', '.archive-desc',
-    '.source-category h5', '.source-category li', '.source-date',
+    '.source-category h5', '.source-category li',
     '.footer'
   ];
   attrs.forEach(function(sel) {
@@ -963,7 +962,7 @@ function saveToLocal() {
     '.detail-section p', '.detail-section li',
     '.signal-source', '.signal-title', '.signal-summary',
     '.archive-item strong', '.archive-item span', '.archive-desc',
-    '.source-category h5', '.source-category li', '.source-date',
+    '.source-category h5', '.source-category li',
     '.footer'
   ];
   selectors.forEach(function(sel) {
@@ -1086,7 +1085,7 @@ function renderTrends() {
   document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
     <div class="source-category">
       <h5 contenteditable="false">${cat.cat}</h5>
-      <ul>${cat.items.map(i => `<li contenteditable="false"><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.name)}</a><span class="source-date">${esc(i.date)}</span></li>`).join('')}</ul>
+      <ul>${cat.items.map(i => `<li contenteditable="false"><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.name)}</a></li>`).join('')}</ul>
     </div>
   `).join('');
 
