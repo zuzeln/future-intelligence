@@ -65,7 +65,7 @@ body {
 }
 .trend-card h3 { font-size: 1.15em; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.01em; flex: 1; }
 .trend-card .core-insight {
-  font-size: 0.95em; color: var(--accent); margin-bottom: 12px; line-height: 1.6;
+  font-size: 0.95em; color: rgba(255,255,255,0.75); margin-bottom: 12px; line-height: 1.6; transition: color 0.2s;
 }
 .trend-card .card-footer {
   display: flex; gap: 16px; font-size: 0.8em; color: var(--text-tertiary);
@@ -149,11 +149,11 @@ body {
 /* Collapse btn */
 .collapse-btn {
   display: inline-block; margin-top: 16px; padding: 6px 16px;
-  font-size: 0.8em; color: var(--accent); cursor: pointer;
+  font-size: 0.8em; color: rgba(255,255,255,0.7); cursor: pointer;
   background: none; border: 1px solid var(--accent-dim); border-radius: 6px;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
-.collapse-btn:hover { background: var(--accent-glow); }
+.collapse-btn:hover { color: var(--accent); background: rgba(74,158,255,0.12); border-color: rgba(74,158,255,0.2); }
 
 /* Footer */
 .footer {
@@ -285,10 +285,10 @@ body {
 .signal-collapse-bar {
   display: flex; align-items: center; gap: 6px; padding: 10px 14px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-  cursor: pointer; font-size: 0.85em; color: var(--accent); font-weight: 600;
-  user-select: none; transition: border-color 0.15s;
+  cursor: pointer; font-size: 0.85em; color: rgba(255,255,255,0.85); font-weight: 600;
+  user-select: none; transition: all 0.2s;
 }
-.signal-collapse-bar:hover { border-color: var(--accent-dim); }
+.signal-collapse-bar:hover { color: var(--accent); border-color: var(--accent-dim); }
 .signal-collapse-wrapper { position: relative; }
 .signal-collapse-wrapper .signals-grid { display: none; margin-top: 10px; }
 .signal-collapse-wrapper.expanded .signals-grid { display: flex; }
