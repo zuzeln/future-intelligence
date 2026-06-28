@@ -1003,7 +1003,7 @@ function exportHTML() {
   var url = URL.createObjectURL(blob);
   var a = document.createElement('a');
   a.href = url;
-  a.download = 'future-intelligence-' + new Date().toISOString().slice(0,10) + '.html';
+  a.download = 'future-intelligence-' + new Date().toLocaleString('zh-CN', {timeZone:'Asia/Shanghai', year:'numeric', month:'2-digit', day:'2-digit'}).replace(/\//g, '-') + '.html';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -1111,7 +1111,7 @@ function esc(str) {
   return div.innerHTML;
 }
 
-document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toISOString().slice(0,16).replace('T',' ');
+document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toLocaleString('zh-CN', {timeZone:'Asia/Shanghai', year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false}).replace(/\//g, '-');
 
 renderTrends();
 function toggleSignals(id) {
