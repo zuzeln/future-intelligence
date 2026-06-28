@@ -245,7 +245,7 @@ body {
 
   <div class="brand editable-block" data-block="brand">
     <h1 contenteditable="false">Future Intelligence</h1>
-    <span contenteditable="false">Trend Discovery · Not News</span>
+    <span contenteditable="false">趋势发现 · 不追逐新闻</span>
   </div>
 
   <div class="hero editable-block" data-block="hero">
@@ -949,33 +949,33 @@ function renderTrends() {
       </div>
       <div class="core-insight" contenteditable="false">${esc(trend.coreInsight)}</div>
       <div class="card-footer">
-        <span class="signal-count">${trend.signals.length} signals</span>
+        <span class="signal-count">${trend.signals.length} 个信息来源</span>
         <span class="divider"></span>
         <span>${trend.updatedAt || ''}</span>
       </div>
       <div class="trend-detail">
         <div class="detail-section">
-          <h4>Why It Matters</h4>
+          <h4>为什么重要</h4>
           <p contenteditable="false">${esc(trend.whyItMatters)}</p>
         </div>
         <div class="detail-section">
-          <h4>Direction</h4>
+          <h4>未来方向</h4>
           <p contenteditable="false">${esc(trend.direction)}</p>
         </div>
         <div class="detail-section">
-          <h4>Opportunities</h4>
+          <h4>机会</h4>
           <ul>
             ${(trend.opportunities || []).map(o => `<li contenteditable="false">${esc(o)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
-          <h4>Risks</h4>
+          <h4>风险</h4>
           <ul>
             ${(trend.risks || []).map(r => `<li contenteditable="false">${esc(r)}</li>`).join('')}
           </ul>
         </div>
         <div class="detail-section">
-          <h4>Supporting Signals</h4>
+          <h4>信息来源</h4>
           <div class="signals-grid">
             ${trend.signals.map(s => `
               <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
@@ -999,7 +999,7 @@ function renderTrends() {
       <div class="archive-desc" contenteditable="false">${esc(item.summary)}</div>
     </div>
   `).join('');
-  document.getElementById('archiveLabel').textContent = `Archive · ${ARCHIVE_DATA.length} 条历史趋势`;
+  document.getElementById('archiveLabel').textContent = `归档 · ${ARCHIVE_DATA.length} 条`;
 
   // Sources
   document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
@@ -1032,7 +1032,7 @@ function esc(str) {
   return div.innerHTML;
 }
 
-document.getElementById('updateTime').textContent = 'Updated · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 102 signals analyzed';
+document.getElementById('updateTime').textContent = '更新于 · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 102 signals analyzed';
 
 renderTrends();
 </script>
