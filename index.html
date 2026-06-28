@@ -1063,7 +1063,7 @@ function renderTrends() {
             </div>
           </div>
         </div>
-        <button class="collapse-btn" onclick="const c=document.getElementById('trend-${trend.id}');c.classList.remove('expanded');c.scrollIntoView({block:'center'});event.stopPropagation()">收起</button>
+        <button class="collapse-btn" onclick="const c=document.getElementById('trend-${trend.id}');c.classList.remove('expanded');document.querySelector('.sources-section').scrollIntoView({behavior:'smooth',block:'center'});event.stopPropagation()">收起</button>
       </div>
     </div>
   `).join('');
