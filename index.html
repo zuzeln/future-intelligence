@@ -63,7 +63,7 @@ body {
   font-size: 0.78em; color: var(--text-tertiary); font-weight: 600;
   white-space: nowrap; padding-top: 3px;
 }
-.trend-card h3 { font-size: 1.2em; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.2px; flex: 1; }
+.trend-card h3 { font-size: 1.15em; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.01em; flex: 1; }
 .trend-card .core-insight {
   font-size: 0.95em; color: var(--accent); margin-bottom: 12px; line-height: 1.6;
 }
@@ -1063,7 +1063,7 @@ function renderTrends() {
             </div>
           </div>
         </div>
-        <button class="collapse-btn" onclick="const c=document.getElementById('trend-${trend.id}');c.classList.remove('expanded');document.querySelector('.sources-section').scrollIntoView({behavior:'smooth',block:'center'});event.stopPropagation()">收起</button>
+        <button class="collapse-btn" onclick="const card=document.getElementById('trend-${trend.id}');const src=document.querySelector('.sources-section');src.scrollIntoView({behavior:'smooth',block:'center'});requestAnimationFrame(()=>{requestAnimationFrame(()=>{card.classList.remove('expanded');})})">收起</button>
       </div>
     </div>
   `).join('');
