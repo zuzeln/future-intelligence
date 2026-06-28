@@ -1125,6 +1125,10 @@ function toggleSignals(id) {
   } else {
     wrap.classList.add('expanded');
     bar.textContent = bar.textContent.replace('▸', '▾');
+    // 展开底部信息来源并滚动到该区域
+    var srcGrid = document.getElementById('sourcesSection');
+    if (!srcGrid.classList.contains('open')) srcGrid.classList.add('open');
+    document.querySelector('.sources-section').scrollIntoView({behavior:'smooth', block:'start'});
   }
 }
 
