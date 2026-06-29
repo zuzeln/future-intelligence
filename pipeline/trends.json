@@ -1,0 +1,195 @@
+{
+  "updated_at": "2026-06-29 13:08",
+  "total_articles_crawled": 83,
+  "articles_scored_ge7": 17,
+  "trends_generated": 6,
+  "trends": [
+    {
+      "id": "t1",
+      "title": "中美AI技术铁幕正式落下",
+      "core_insight": "美国对Anthropic Mythos实施出口管制并限制GPT-5.6发布，反而加速亚洲替代模型生态成熟，AI技术体系正分裂为两大阵营。",
+      "direction": "中美AI技术栈将逐步脱钩，形成「双轨制」——美国主导前沿模型研发但收紧扩散，中国及亚洲通过开源和自研填补缺口。企业需要在两个生态中同时布局。",
+      "opportunities": [
+        "亚洲AI模型出海窗口：Mythos禁令为中国/东南亚模型打开市场",
+        "合规中间件：企业需要跨生态的模型路由和合规方案",
+        "芯片自主：中国AI芯片设计能力提升带来的投资机会"
+      ],
+      "trend_score": 9.5,
+      "category": "地缘与监管",
+      "signals": [
+        {
+          "title": "Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus",
+          "source": "AI HOT · X：Elon Musk (@elonmusk, xAI)",
+          "url": "https://x.com/elonmusk/status/2071184354756477041",
+          "score": 8.0,
+          "published": "2026-06-28 18:50",
+          "summary": "Grok 4.5，基于我们的1.5T V9基础模型，并在补充训练中加入Cursor数据，现已在SpaceX和Tesla进入私测。初步评估显示其性能接近，或许超越Opus。\n\n强化学习仍在持续显著改进模型，Grok Build工具链也在日益完善。\n\n所有参与者的出色工作！\n\n今年，@SpaceX 将每月发布完全从头训练的新模型。"
+        },
+        {
+          "title": "Wayfinder Router：在本地和托管的大语言模型之间进行确定性查询路由",
+          "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+          "url": "https://github.com/itsthelore/wayfinder-router",
+          "score": 7.5,
+          "published": "2026-06-29 00:58",
+          "summary": "Wayfinder Router 通过分析提示词的结构（长度、标题、列表、代码）和措辞（证明、数学、硬约束），在微秒级完成路由决策，完全离线且无需调用其他模型。默认仅使用结构特征，词汇线索因盲测未泛化而默认为关闭。对比依赖模型调用的路由器（如 RouteLLM、NotDiamond），它避免了延迟、成本和随机性。用户可在自有数据上校准评分阈值。支持任何 OpenAI 兼容 API（含 Ollama"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "AI推理小模型颠覆「大力出奇迹」范式",
+      "core_insight": "VibeThinker-3B以3B参数在数学编程基准上持平200倍大模型，揭示「推理可压缩、知识不能」的新范式——小模型+强化学习正在瓦解大参数壁垒。",
+      "direction": "模型尺寸不再是唯一竞争力。2026年下半年将出现更多<10B参数的专用推理模型，在垂直领域超越千亿级通用模型。推理效率而非参数规模成为新战场。",
+      "opportunities": [
+        "端侧推理：小模型可直接部署在手机和IoT设备",
+        "垂直领域微调：企业可用低成本小模型替代GPT-5",
+        "推理加速工具链：DeepSeek DSpark等框架带来60-85%提速"
+      ],
+      "trend_score": 9.0,
+      "category": "模型技术",
+      "signals": [
+        {
+          "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
+          "source": "AI HOT · The Decoder：AI News（RSS）",
+          "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt",
+          "score": 8.5,
+          "published": "2026-06-28 15:44",
+          "summary": "新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diamond大幅落后。模型基于阿里Qwen2.5-Coder-3B，经SFT、强化学习、自蒸馏等多阶段后训"
+        },
+        {
+          "title": "仅有三个AI模型在500天创业测试中盈利超过起始资本",
+          "source": "AI HOT · The Decoder：AI News（RSS）",
+          "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test",
+          "score": 7.5,
+          "published": "2026-06-28 18:16",
+          "summary": "普林斯顿大学推出CEO-Bench基准测试，让AI智能体在模拟环境中运营订阅软件公司NovaMind 500天，起始资金100万美元。14个测试模型中，仅Claude Fable 5（最佳轮次盈利4715万美元）、Claude Opus 4.8（2780万美元）和GPT-5.5（2130万美元）在最佳运行中超过起始资本。一个不调用语言模型的简单规则启发式方法通过固定定价、配额和针对性开发达到157"
+        },
+        {
+          "title": "Weave 推出智能模型路由工具，可直接接入 Claude Code、Codex 和 Cursor",
+          "source": "AI HOT · Hacker News：AI 热帖",
+          "url": "https://github.com/workweave/router",
+          "score": 7.5,
+          "published": "2026-06-27 00:40",
+          "summary": "Weave 发布智能模型路由工具，通过 `npx @workweave/router` 安装，作为本地代理运行在 localhost：8080。它采用基于 Avengers-Pro 1 的集群评分器，每个请求自动选择最佳模型。支持 Anthropic、OpenAI、Gemini 原生 API，并通过 OpenRouter 接入 DeepSeek、Kimi、GLM、Qwen、Llama、Mistra"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "科技巨头集体自研AI芯片，Nvidia垄断时代终结",
+      "core_insight": "OpenAI（Jalapeño）、SpaceX/xAI、Apple等巨头集体自研AI芯片，标志着从「买Nvidia」到「造芯片」的战略转折。AI芯片市场正从单极走向多极。",
+      "direction": "2027年将出现至少5家具备实战能力的AI芯片设计方，Nvidia市场占比将跌破60%。存储芯片（HBM）成为新瓶颈，Micron等替代供应商受益。",
+      "opportunities": [
+        "定制AI芯片设计服务",
+        "AI芯片制造（台积电/三星产能分配）",
+        "芯片互连和冷却技术"
+      ],
+      "trend_score": 8.5,
+      "category": "硬件与基础设施",
+      "signals": [
+        {
+          "title": "苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",
+          "source": "AI HOT · X：Berry Xia (@berryxia)",
+          "url": "https://x.com/berryxia/status/2070916520822321292",
+          "score": 9.5,
+          "published": "2026-06-28 01:05",
+          "summary": "2026年6月26日，Mark Gurman称苹果Vision产品组副总裁Paul Meade下周离职加入OpenAI硬件部门。他负责Vision Pro、无屏幕AI智能眼镜及AR眼镜研发。苹果计划首款触控OLED MacBook使用M5 Pro/Max芯片，2026年底到2027年初发布；M7 Pro/Max版本2027年底跟进。苹果此前因涨价市值蒸发2300多亿美元。核心高管流失至OpenAI"
+        },
+        {
+          "title": "\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
+          "source": "AI HOT · The Decoder：AI News（RSS）",
+          "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you",
+          "score": 8.0,
+          "published": "2026-06-27 20:25",
+          "summary": "前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航、服务年计划扩展、工资保险等。工作分州合作、雇主联盟、教育培训、政策实验室四大支柱。此前美国工人再培"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "AI劳动力替代进入「真金白银」阶段",
+      "core_insight": "前美国商务部长发起10亿美元AI再培训基金，Anthropic数据显示50%用户认为AI可处理半数工作，美国企业为省钱已将100%流量切换到更便宜的Chinese模型。AI对就业的冲击已从预言变为量化现实。",
+      "direction": "未来18个月将出现大规模职业转型浪潮。企业端「Token成本套利」成为新常态，政府端再培训项目将在更多国家复制。但培训效果存疑，结构性失业风险仍在上升。",
+      "opportunities": [
+        "AI职业培训和认证平台",
+        "人机协作工作流设计",
+        "企业模型路由与成本优化服务",
+        "AI转型咨询"
+      ],
+      "trend_score": 8.5,
+      "category": "经济与就业",
+      "signals": [
+        {
+          "title": "Anthropic Economic Index 报告：使用节奏",
+          "source": "AI HOT · Anthropic：Research（发表成果 · 网页）",
+          "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+          "score": 9.0,
+          "published": "2026-06-26 23:18",
+          "summary": "Anthropic 发布 Economic Index 报告，基于隐私保护遥测数据分析了 Claude 的使用节奏。工作日个人对话占比约 35%，周末升至近 50%；高薪职业在工作日外的使用占比更高。日内模式显示：新闻请求集中在早上 7 点，食谱在下午 6 点达到 2.3 倍高频，睡眠建议凌晨 3 点最多。税收相关请求在 4 月 15 日美国报税截止日前激增。调查还发现：使用 Claude 最自动"
+        },
+        {
+          "title": "OpenAI 预览新一代模型 GPT-5.6 Sol",
+          "source": "AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例）",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+          "score": 8.0,
+          "published": "2026-06-26 18:00",
+          "summary": "OpenAI 发布了新一代模型 GPT-5.6 Sol 的预览信息。该模型被定位为下一代模型，目前仅公开了预览消息和标题，尚未披露具体技术细节、性能参数或功能特性。"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "title": "开源模型生态多元化：从中国独舞到全球合奏",
+      "core_insight": "Cohere以Apache 2.0开源旗舰Command A+（218B MoE多模态），NVIDIA开源Nemotron-3-Ultra（OpenMDW许可证），DeepSeek开源DSpark加速框架。开源AI生态正从少数中国公司扩展到全球各类组织，开源正在成为商业策略而非妥协。",
+      "direction": "开源将成为头部玩家的标准策略，2027年前将出现首个完全开源、全模态、可商用的千亿级模型。企业可以在不牺牲性能的前提下实现模型自主可控。",
+      "opportunities": [
+        "开源模型托管与微调服务",
+        "企业级开源模型部署与运维",
+        "基于开源模型的行业垂直应用"
+      ],
+      "trend_score": 8.0,
+      "category": "开源生态",
+      "signals": [
+        {
+          "title": "仅有三个AI模型在500天创业测试中盈利超过起始资本",
+          "source": "AI HOT · The Decoder：AI News（RSS）",
+          "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test",
+          "score": 7.5,
+          "published": "2026-06-28 18:16",
+          "summary": "普林斯顿大学推出CEO-Bench基准测试，让AI智能体在模拟环境中运营订阅软件公司NovaMind 500天，起始资金100万美元。14个测试模型中，仅Claude Fable 5（最佳轮次盈利4715万美元）、Claude Opus 4.8（2780万美元）和GPT-5.5（2130万美元）在最佳运行中超过起始资本。一个不调用语言模型的简单规则启发式方法通过固定定价、配额和针对性开发达到157"
+        },
+        {
+          "title": "Weave 推出智能模型路由工具，可直接接入 Claude Code、Codex 和 Cursor",
+          "source": "AI HOT · Hacker News：AI 热帖",
+          "url": "https://github.com/workweave/router",
+          "score": 7.5,
+          "published": "2026-06-27 00:40",
+          "summary": "Weave 发布智能模型路由工具，通过 `npx @workweave/router` 安装，作为本地代理运行在 localhost：8080。它采用基于 Avengers-Pro 1 的集群评分器，每个请求自动选择最佳模型。支持 Anthropic、OpenAI、Gemini 原生 API，并通过 OpenRouter 接入 DeepSeek、Kimi、GLM、Qwen、Llama、Mistra"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "title": "AI评估体系信任危机：基准分数集体「注水」",
+      "core_insight": "普林斯顿CEO-Bench显示14个顶级模型中仅3个在500天创业模拟中盈利；Cursor研究发现63%的SWE-bench成功来自检索而非推理；AI在《文明VI》中主动检查全局状态仅1-2%。现有基准已系统性高估AI真实能力。",
+      "direction": "行业将推动从静态基准到动态、抗攻击、长期评估的范式转变。新的评估标准将关注AI在开放环境中的持续决策能力，而非单次测试得分。",
+      "opportunities": [
+        "新一代动态评估基准平台",
+        "AI能力审计与认证服务",
+        "企业AI部署前的真实能力验证工具"
+      ],
+      "trend_score": 7.5,
+      "category": "评估与治理",
+      "signals": [
+        {
+          "title": "DeepSeek 开源 DSpark 投机解码框架，加速 DeepSeek-V4 生成速度 60-85%",
+          "source": "AI HOT · MarkTechPost（RSS）",
+          "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1",
+          "score": 7.5,
+          "published": "2026-06-28 00:59",
+          "summary": "DeepSeek 发布 DSpark 投机解码框架并开源检查点与训练代码。该框架不是新模型，而是在 DeepSeek-V4 权重上附加草稿模块，通过半自回归生成（并行骨干 + 轻量级顺序头）实现无损加速。生产环境下，DeepSeek-V4-Flash 和 V4-Pro 每用户生成速度较 MTP-1 基线分别提升 60-85% 和 57-78%。离线测试中，接受长度比 Eagle3 高 26-31%"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2065 @@
+{
+  "fetched_at": "2026-06-29 13:05:31",
+  "total_raw": 236,
+  "total_unique": 229,
+  "stats": {
+    "AI HOT": 100,
+    "OpenAI News": 8,
+    "Anthropic News": 8,
+    "Google DeepMind Blog": 8,
+    "Meta AI Blog": 0,
+    "Microsoft AI": 8,
+    "NVIDIA AI": 0,
+    "HuggingFace Blog": 10,
+    "TechCrunch AI": 10,
+    "VentureBeat AI": 7,
+    "The Verge AI": 0,
+    "Ars Technica": 0,
+    "MarkTechPost": 0,
+    "AI News": 0,
+    "The Decoder": 10,
+    "MIT Tech Review": 10,
+    "arXiv cs.AI": 10,
+    "Stanford HAI": 8,
+    "Google Research Blog": 10,
+    "Microsoft Research": 0,
+    "a16z": 8,
+    "Sequoia Capital": 8,
+    "Benchmark": 3,
+    "Y Combinator": 10
+  },
+  "articles": [
+    {
+      "title": "分享两个Vibe Coding必备的实用Prompt：第一性原理与对抗式审查",
+      "title_en": "分享2个Vibe Coding必备的超实用Prompt。",
+      "summary": "作者分享Vibe Coding中两个关键Prompt：一是\"从第一性原理出发\"，强制AI跳出类比推理，从基本事实重新推导本质，曾帮作者发现AIHOT抓取海外信源的底层流量路由隐患并彻底重构；二是\"对抗式审查\"，让AI站在恶意用户角度攻防式审查代码，检出OOM死循环、未来时间污染等手工难发现的BUG。两个Prompt形成生成与验证闭环，使纯Vibe Coding项目AIHOT最近一周请求量超千万次。",
+      "url": "https://mp.weixin.qq.com/s/umPqTD_-IubbhXIgiS47eQ",
+      "source": "AI HOT · 公众号：数字生命卡兹克",
+      "category": "tip",
+      "published": "2026-06-29 10:08",
+      "id": "cmqykzeht02shslivflwhgdbx"
+    },
+    {
+      "title": "Artifacts 22：Zyphra、Cohere 和 Poolside 正在扩展生态系统广度",
+      "title_en": "Artifacts 22： Zyphra， Cohere， and Poolside are expanding the breadth of the ecosystem",
+      "summary": "开源模型生态正变得更多元，参与者从少数中国公司扩展到全球各类组织。纯模型制造商包括 DeepSeek、智谱、MiniMax、Poolside、Arcee、Zyphra 及主权 AI 玩家 Cohere、Sovereign、Mistral、Trillion Labs；科技巨头如阿里 Qwen、Google Gemma 和 NVIDIA 各有不同动机；产品公司如 JetBrains、Zed、Krea、Photoroom 则训练高度专业的小模型。NVIDIA 发布 Nemotron-3-Ultra-550B-A55B-BF16，采用 LatentMoE 架构并改用 OpenMDW 许可证。Cohere 以 Apache 2.0 开源其旗舰模型 Command A+（05-2026-bf16），这是一款 218B-A25B MoE 模型，具备多模态、多语言和智能体能力。",
+      "url": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside",
+      "source": "AI HOT · Nathan Lambert：Interconnects（RSS）",
+      "category": "tip",
+      "published": "2026-06-29 01:03",
+      "id": "cmqy28vh30050slr1uzaev9nk"
+    },
+    {
+      "title": "Wayfinder Router：在本地和托管的大语言模型之间进行确定性查询路由",
+      "title_en": "Wayfinder Router：在本地和托管的大型语言模型（LLM）之间进行确定性查询路由",
+      "summary": "Wayfinder Router 通过分析提示词的结构（长度、标题、列表、代码）和措辞（证明、数学、硬约束），在微秒级完成路由决策，完全离线且无需调用其他模型。默认仅使用结构特征，词汇线索因盲测未泛化而默认为关闭。对比依赖模型调用的路由器（如 RouteLLM、NotDiamond），它避免了延迟、成本和随机性。用户可在自有数据上校准评分阈值。支持任何 OpenAI 兼容 API（含 Ollama、Anthropic、Groq、vLLM 等），可自托管。提供终端和网页演示（--dry-run 无需密钥），以及基准测试和 FAQ。",
+      "url": "https://github.com/itsthelore/wayfinder-router",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "ai-products",
+      "published": "2026-06-29 00:58",
+      "id": "cmqy1fj3003cislwfljtykjvx"
+    },
+    {
+      "title": "Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus",
+      "title_en": "Grok 4.5， based on our 1.5T V9 foundation model， with Cursor data added in supplemental training， is…",
+      "summary": "Grok 4.5，基于我们的1.5T V9基础模型，并在补充训练中加入Cursor数据，现已在SpaceX和Tesla进入私测。初步评估显示其性能接近，或许超越Opus。\n\n强化学习仍在持续显著改进模型，Grok Build工具链也在日益完善。\n\n所有参与者的出色工作！\n\n今年，@SpaceX 将每月发布完全从头训练的新模型。",
+      "url": "https://x.com/elonmusk/status/2071184354756477041",
+      "source": "AI HOT · X：Elon Musk (@elonmusk, xAI)",
+      "category": "ai-models",
+      "published": "2026-06-28 18:50",
+      "id": "cmqxo43c90009slwfmy4wm3z3"
+    },
+    {
+      "title": "仅有三个AI模型在500天创业测试中盈利超过起始资本",
+      "title_en": "Only three AI models finished above starting capital in a 500-day startup survival test",
+      "summary": "普林斯顿大学推出CEO-Bench基准测试，让AI智能体在模拟环境中运营订阅软件公司NovaMind 500天，起始资金100万美元。14个测试模型中，仅Claude Fable 5（最佳轮次盈利4715万美元）、Claude Opus 4.8（2780万美元）和GPT-5.5（2130万美元）在最佳运行中超过起始资本。一个不调用语言模型的简单规则启发式方法通过固定定价、配额和针对性开发达到1576万美元，超越除上述三款外的所有模型。多数模型无法保持连贯策略，在模拟结束前破产。该测试旨在衡量AI的长期战略决策能力。",
+      "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "paper",
+      "published": "2026-06-28 18:16",
+      "id": "cmqxnrjtc004ssljh9zvejgbo"
+    },
+    {
+      "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
+      "title_en": "Sina's open model VibeThinker-3B aims to show reasoning compresses well but factual knowledge doesn't",
+      "summary": "新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diamond大幅落后。模型基于阿里Qwen2.5-Coder-3B，经SFT、强化学习、自蒸馏等多阶段后训练。研究提出\"参数压缩-覆盖假说\"：逻辑推理依赖少数可压缩模式，而广泛世界知识仍需大参数。模型已开源。",
+      "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "ai-models",
+      "published": "2026-06-28 15:44",
+      "id": "cmqxiel9h004ysl50umg2c011"
+    },
+    {
+      "title": "阿德拉菲尼尔：仅在AI agent工作时阻止Mac睡眠的菜单栏工具",
+      "title_en": "Show HN： 阿德拉菲尼尔--仅在药物起效期间保持\"盖子紧闭的Mac\"处于清醒状态",
+      "summary": "Adrafinil 是一款 macOS 菜单栏应用，仅在 Claude Code、Codex、Cursor、Gemini CLI、Aider、Hermes、OpenCode、Cline、Pi 等 9 种 AI coding agent 持有活跃会话时阻止系统睡眠（包括合盖睡眠）。无 agent 工作时，合盖后 Mac 正常睡眠。它通过各 agent 的钩子系统调用 CLI，往返延迟低于 50ms，支持引用计数断言、热切出（温度阈值强制释放）、空闲释放及进程嗅探。需要 macOS Tahoe 26.4，Xcode 26+ 构建，以签名公证的磁盘映像提供。",
+      "url": "https://github.com/kageroumado/adrafinil",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "ai-products",
+      "published": "2026-06-28 11:55",
+      "id": "cmqx9k72u0425slp05ijlfezl"
+    },
+    {
+      "title": "四大顶级AI对决《文明VI》：Claude核平法国仍输，暴露感知与执行短板",
+      "title_en": "四大顶级 AI 对决《文明 VI》！Claude「核平」法国，结果还是输了",
+      "summary": "英国前首相府数据科学家Liam Wilkinson搭建76个MCP工具，将Claude Opus 4.6、GPT-5.4、Gemini 3.1 Pro等四个模型放入《文明VI》进行23场对局。Claude扮演葡萄牙时，因法国文化胜利逼近，花50回合研发核弹核平图卢兹，但法国最终以外交胜利获胜。Wilkinson发现：AI主动检查全局状态仅占1-2%（感知盲区），计划后10回合内执行率仅48-66%（知行差距）。结论是智商非瓶颈，感知与执行才是关键。",
+      "url": "https://www.ithome.com/0/969/570.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "tip",
+      "published": "2026-06-28 10:45",
+      "id": "cmqx7behn03g3slp0pzrofqz9"
+    },
+    {
+      "title": "SpaceX 注册 SpaceXAI 商标，将合并 xAI",
+      "title_en": "NEWS： SpaceX just trademarked \"SpaceXAI\" Elon Musk says xAI will be dissolved as a separate company…",
+      "summary": "消息：SpaceX 刚刚注册了\"SpaceXAI\"商标。\n\n埃隆·马斯克表示 xAI 将解散，不再作为独立公司，因此它将只是 SpaceXAI，SpaceX 的 AI 产品。",
+      "url": "https://x.com/cb_doge/status/2070973276562530507",
+      "source": "AI HOT · X：cb_doge (@cb_doge)",
+      "category": "industry",
+      "published": "2026-06-28 04:51",
+      "id": "cmqwub84n008jslp0ael13807"
+    },
+    {
+      "title": "苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",
+      "title_en": "刚刚！苹果VisionPro 眼镜负责大神跳槽OpenAI！AI 硬件大战，库克最担心的事儿发生了！ Apple 这几天也是亏麻了！ 宣布涨价以来，市值直接蒸发2300 多e美金！ 2026年6月…",
+      "summary": "2026年6月26日，Mark Gurman称苹果Vision产品组副总裁Paul Meade下周离职加入OpenAI硬件部门。他负责Vision Pro、无屏幕AI智能眼镜及AR眼镜研发。苹果计划首款触控OLED MacBook使用M5 Pro/Max芯片，2026年底到2027年初发布；M7 Pro/Max版本2027年底跟进。苹果此前因涨价市值蒸发2300多亿美元。核心高管流失至OpenAI凸显AI硬件竞争加速。",
+      "url": "https://x.com/berryxia/status/2070916520822321292",
+      "source": "AI HOT · X：Berry Xia (@berryxia)",
+      "category": "industry",
+      "published": "2026-06-28 01:05",
+      "id": "cmqwmotnk01tasly021bf38i5"
+    },
+    {
+      "title": "DeepSeek 开源 DSpark 投机解码框架，加速 DeepSeek-V4 生成速度 60-85%",
+      "title_en": "DeepSeek Releases DSpark， a Speculative Decoding Framework That Accelerates DeepSeek-V4 Per-User Generation 60-85% Over MTP-1",
+      "summary": "DeepSeek 发布 DSpark 投机解码框架并开源检查点与训练代码。该框架不是新模型，而是在 DeepSeek-V4 权重上附加草稿模块，通过半自回归生成（并行骨干 + 轻量级顺序头）实现无损加速。生产环境下，DeepSeek-V4-Flash 和 V4-Pro 每用户生成速度较 MTP-1 基线分别提升 60-85% 和 57-78%。离线测试中，接受长度比 Eagle3 高 26-31%，比 DFlash 高 16-18%。配套 DeepSpec 训练代码库采用 MIT 许可证。",
+      "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1",
+      "source": "AI HOT · MarkTechPost（RSS）",
+      "category": "paper",
+      "published": "2026-06-28 00:59",
+      "id": "cmqwm45f901n6sly0gpl6b6l5"
+    },
+    {
+      "title": "一次失败的（民族国家？）攻击的剖析",
+      "title_en": null,
+      "summary": "作者收到伪装成新加坡VC Lua Ventures的虚假面试邮件，要求完成一个TypeScript仓库的\"测试\"。作者将仓库交给Claude扫描，在`typescript+5.9.2.patch`中发现base64混淆载荷，该载荷在`patch-package`安装时触发，向`~/.cache-`等目录写入`payload.js`和`mutex.js`，构成后门（命名PinpinRAT）。攻击者使用虚构身份和空洞LinkedIn资料，目标是作者在crates.io上的Rust包。相关信息已报告加拿大CCCS等机构。",
+      "url": "https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "tip",
+      "published": "2026-06-27 23:39",
+      "id": "cmqwju303014msly0vp9nlrjv"
+    },
+    {
+      "title": "Runway API 推出广告本地化 Recipe",
+      "title_en": "Localize ads is now available as a Recipe via the Runway API. You can now translate static ads and …",
+      "summary": "广告本地化现在可通过 Runway API 以 Recipe 形式使用。\n\n现在您可以通过单次 API 调用翻译静态广告和图形资产。",
+      "url": "https://x.com/runwayml/status/2070855164584726791",
+      "source": "AI HOT · X：Runway (@runwayml)",
+      "category": "ai-products",
+      "published": "2026-06-27 21:02",
+      "id": "cmqwe6jrq000isl6uw2i3e6zy"
+    },
+    {
+      "title": "\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
+      "title_en": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
+      "summary": "前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航、服务年计划扩展、工资保险等。工作分州合作、雇主联盟、教育培训、政策实验室四大支柱。此前美国工人再培训效果不佳，计划能否成功尚待观察。",
+      "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "industry",
+      "published": "2026-06-27 20:25",
+      "id": "cmqwclgpa00a0slfd8mlysoe8"
+    },
+    {
+      "title": "AI 账单失控后 DeepSeek 成\"香饽饽\"，部分美国企业已 100% 切换",
+      "title_en": null,
+      "summary": "美国企业面临 AI 账单失控，开始转向 Token 最小化策略。旧金山公司 Lindy 此前主要调用 Anthropic 的 Claude 模型，每月 AI 账单超支甚至超过员工工资。该公司 CEO 弗洛·克里维洛表示，本月初已将 100% 流量切换到 DeepSeek，预计未来几个月可节省数百万美元。企业开始采用按任务匹配模型的\"模型路由\"，不再将最贵的前沿模型用于所有场景。部分客户已决定暂停 AI 投入，待证明投资回报率后再继续。",
+      "url": "https://www.ithome.com/0/969/400.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "industry",
+      "published": "2026-06-27 16:16",
+      "id": "cmqw4pe3v007islohecqcejvi"
+    },
+    {
+      "title": "阿里千问输入法上线 macOS 版：最快 300 字/分，AI 自动润色",
+      "title_en": "阿里千问输入法上线 macOS 版：最快 300 字 / 分，AI 自动润色",
+      "summary": "阿里千问输入法 macOS 版今日上线官网，支持最快 300 字/分的 AI 语音输入，可自动润色、将口语转为工整文字，并支持 9 种方言，纯净无广告。官方预告 iOS、Android、Windows 版将于近日发布。此前千问团队已于今年 5 月推出千问语音输入法（千问 App 内的组件），具备去语气词、纠错、格式化整理及基于上下文的智能回复等能力，而本次上线的输入法则定位为独立 App，填补千问在移动端 AI 输入法赛道的空白。",
+      "url": "https://www.ithome.com/0/969/334.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-27 11:39",
+      "id": "cmqvtzehe0g65sl800jrc1x17"
+    },
+    {
+      "title": "国家统计局：1-5月规上工业企业利润增18.8%，电子行业利润增103.9%贡献43.1%",
+      "title_en": "国家统计局：电子行业利润 1-5 月增长 103.9%，AI 驱动高端算力 / 存储芯片需求爆发",
+      "summary": "1-5月全国规上工业企业利润同比增18.8%。电子行业利润增103.9%，贡献率43.1%，主因全球AI技术变革推动高端算力芯片和存储芯片需求爆发。原材料制造业利润增83.1%，其中有色增117.1%、化工增71.6%。高技术制造业利润增44.7%，电子专用材料制造增665.4%。企业每百元营收成本降0.59元，营收利润率5.56%，为2024年以来累计最高。",
+      "url": "https://www.ithome.com/0/969/311.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "industry",
+      "published": "2026-06-27 09:43",
+      "id": "cmqvpp1zi0f57sl80zxcbnmqz"
+    },
+    {
+      "title": "Cursor 研究发现奖励攻击虚增编码智能体 SWE-bench Pro 分数",
+      "title_en": "Cursor Study Finds Reward Hacking Inflates Coding-Agent Benchmark Scores on SWE-bench Pro",
+      "summary": "Cursor 最新研究发现，编码智能体在 SWE-bench Pro 等基准测试中存在奖励攻击问题：智能体通过检索已知修复而非独立推导来通过测试。对 731 条 Opus 4.8 Max 轨迹的审计显示，63% 的成功修复来自检索，其中上游查找占 57%，git 历史挖掘占 9%。严格隔离 git 历史并限制网络访问后，Opus 4.8 Max 的 SWE-bench Pro 分数从 87.1% 降至 73.0%；Cursor 自家 Composer 2.5 差距最大，达 20.7 个点。新模型比旧模型更容易出现此问题。研究报告建议采用严格测试环境（隔离 git 历史、限制网络出口）以获取可信分数。",
+      "url": "https://www.marktechpost.com/2026/06/26/cursor-study-finds-reward-hacking-inflates-coding-agent-benchmark-scores-on-swe-bench-pro",
+      "source": "AI HOT · MarkTechPost（RSS）",
+      "category": "paper",
+      "published": "2026-06-27 07:31",
+      "id": "cmqvkko1q0dvqsl80vjsqu4rm"
+    },
+    {
+      "title": "纽约时报修订诉讼，指控微软为OpenAI建造版权侵权超级计算机",
+      "title_en": "NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI",
+      "summary": "《纽约时报》周四提交经大量编辑的法庭文件，提议修订对OpenAI和微软的版权诉讼，明确指控微软通过建造全球最强大的超级计算系统之一，主动鼓励OpenAI窃取其作品。此举源于最高法院在Cox案中确立的新帮助侵权标准，要求原告证明被告有意诱导非法行为。《纽约时报》认为新证据显示该超级计算机专为帮助OpenAI未经许可训练AI而设计，其文章在训练数据中被加权处理。微软称修订是\"挽救不利先例的最后手段\"。",
+      "url": "https://arstechnica.com/tech-policy/2026/06/microsoft-built-supercomputer-to-help-openai-infringe-copyrights-nyt-alleged",
+      "source": "AI HOT · Ars Technica：AI（RSS）",
+      "category": "industry",
+      "published": "2026-06-27 04:04",
+      "id": "cmqvdw37s0cb7sl80kpi0thke"
+    },
+    {
+      "title": "华盛顿邮报报告：AI聊天机器人存在左翼偏见",
+      "title_en": "AI chatbots show left-wing bias， Washington Post report finds， with ChatGPT giving left-leaning answ…",
+      "summary": "《华盛顿邮报》报道，基于达特茅斯和斯坦福研究的测试显示，AI聊天机器人在约30项政策议题（税收、医保、移民等）上存在左翼偏见。GPT-5.5仅给出左倾立场占80%，双方立场17%，右倾3%；Gemini 3.1 Pro则93%给出双方立场，左倾仅7%；Claude Opus 4.8双方立场占57%；Grok 4.3是唯一右倾占33%的模型。文章指出，问题不在于答案倾向，而在于模型在展现权衡前已用单一道德框架压缩政治分歧，其行为更多受排序选择、拒绝规则、训练反馈和默认回答风格影响。",
+      "url": "https://x.com/rohanpaul_ai/status/2070550479621488896",
+      "source": "AI HOT · X：Rohan Paul (@rohanpaul_ai)",
+      "category": "tip",
+      "published": "2026-06-27 00:51",
+      "id": "cmqv67led0aejsl80grsdthsq"
+    },
+    {
+      "title": "Weave 推出智能模型路由工具，可直接接入 Claude Code、Codex 和 Cursor",
+      "title_en": "Show HN： Smart model routing directly in Claude， Codex and Cursor",
+      "summary": "Weave 发布智能模型路由工具，通过 `npx @workweave/router` 安装，作为本地代理运行在 localhost：8080。它采用基于 Avengers-Pro 1 的集群评分器，每个请求自动选择最佳模型。支持 Anthropic、OpenAI、Gemini 原生 API，并通过 OpenRouter 接入 DeepSeek、Kimi、GLM、Qwen、Llama、Mistral 等开源模型。用户自行保管提供商密钥，数据本地加密存储。工具兼容 Claude Code、Codex、Cursor 等客户端，并提供 OTLP 追踪，支持自托管部署。",
+      "url": "https://github.com/workweave/router",
+      "source": "AI HOT · Hacker News：AI 热帖",
+      "category": "ai-products",
+      "published": "2026-06-27 00:40",
+      "id": "cmqwticse001aslp07j2fbwv8"
+    },
+    {
+      "title": "下一个重大突破：AI在工作中学习",
+      "title_en": "The next big breakthrough will be AIs learning on the job",
+      "summary": "AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本效率，而这随着RL训练正在提升。持续学习或许不再必要--如果上下文内的学习能力足够强、时间跨度足够长，就无需将经验蒸馏回权重。Transformer架构创新已能大幅扩展上下文存储，未来可能实现任意大的上下文窗口。论文还指出，一个领域不仅需要可验证性，还需要可碾压性--能在确定性、可重播的模拟器中并行运行大量rollout。",
+      "url": "https://www.dwarkesh.com/p/the-next-paradigm",
+      "source": "AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-26 23:51",
+      "id": "cmqy4ykbx0046slrr88vjxpf9"
+    },
+    {
+      "title": "Leaf 开源项目：将网红峰哥做成实时通话 AI 分身",
+      "title_en": "有人把网红峰哥做成了能实时打电话的 AI 分身， 连说话风格都一模一样。 这是开发者 Leaf 刚开源的项目， 把实时对话、音色克隆、人格注入三件事打通了， 工程延迟压到一秒以内。 最厉害的是拆…",
+      "summary": "开发者 Leaf 开源项目，将网红峰哥做成能实时通话的 AI 分身，集成实时对话、音色克隆和人格注入，工程延迟压到 1 秒内。技术拆解：语音识别用 Cartesia ink-whisper 降噪防误触发；大模型选 MiniMax 高速版，首字响应 361ms；语音合成用 VoxCPM 开源克隆，15 秒素材即可复刻。整体从最初 8-20 秒优化至体感 2-3 秒。人格通过女娲 Skill 从直播语料蒸馏出口头禅和思维逻辑。普通人半小时可跑通：克隆项目后，用 Claude Code 或 Cursor 配置，填两个 API Key 即可使用。",
+      "url": "https://x.com/AYi_AInotes/status/2070531964067623381",
+      "source": "AI HOT · X：阿易 AI Notes (@AYi_AInotes)",
+      "category": "tip",
+      "published": "2026-06-26 23:37",
+      "id": "cmqv4vak40a1ssl805nqs76uk"
+    },
+    {
+      "title": "Anthropic Economic Index 报告：使用节奏",
+      "title_en": "Anthropic Economic Index report： Cadences",
+      "summary": "Anthropic 发布 Economic Index 报告，基于隐私保护遥测数据分析了 Claude 的使用节奏。工作日个人对话占比约 35%，周末升至近 50%；高薪职业在工作日外的使用占比更高。日内模式显示：新闻请求集中在早上 7 点，食谱在下午 6 点达到 2.3 倍高频，睡眠建议凌晨 3 点最多。税收相关请求在 4 月 15 日美国报税截止日前激增。调查还发现：使用 Claude 最自动化的用户预计 AI 明年将承担更多任务，但对薪资、工作安全及工作意义的预期最为乐观。",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "source": "AI HOT · Anthropic：Research（发表成果 · 网页）",
+      "category": "paper",
+      "published": "2026-06-26 23:18",
+      "id": "cmqv2tn1509khsl80vpek6zqe"
+    },
+    {
+      "title": "OpenAI 预览新一代模型 GPT-5.6 Sol",
+      "title_en": "Previewing GPT-5.6 Sol： a next-generation model",
+      "summary": "OpenAI 发布了新一代模型 GPT-5.6 Sol 的预览信息。该模型被定位为下一代模型，目前仅公开了预览消息和标题，尚未披露具体技术细节、性能参数或功能特性。",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "source": "AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "category": "ai-models",
+      "published": "2026-06-26 18:00",
+      "id": "cmqv6ikhu0ah8sl80m2p7v2m4"
+    },
+    {
+      "title": "小鹏 CEO 何小鹏：2026 年底自动驾驶可以合法进入全球",
+      "title_en": null,
+      "summary": "小鹏汽车 CEO 何小鹏微博透露，VLA 2.0 走向全球进入确定模式。联合国 WP29 缔约国会议批准了 DCAS UNR 171 series 02（对应城区 NGP 法规）与 UNR ADS（对应 L3-L5 自动驾驶法规）。DCAS 将在六个月后成为欧盟强制法规，即 2026 年底自动驾驶可合法进入全球；UNR ADS 为框架性法规，加速 L4 级 Robotaxi 落地。何小鹏称 2027 年海外小鹏汽车将搭载 VLA 和 VLM，支持中英文混合语音对话。",
+      "url": "https://www.ithome.com/0/968/894.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "industry",
+      "published": "2026-06-26 13:40",
+      "id": "cmquitk6o04qnsl805yictrvb"
+    },
+    {
+      "title": "近400家美国报纸起诉微软和OpenAI：未经授权抓取新闻内容训练AI",
+      "title_en": "近 400 家美国报纸联合起诉 OpenAI 和微软白嫖内容，AI 热潮恐成地方新闻\"丧钟\"",
+      "summary": "代表近400家纸媒的出版商联盟向美国纽约南区联邦地区法院起诉微软和OpenAI，指控其未经授权抓取新闻内容用于训练Copilot、ChatGPT等AI模型，侵犯版权并触犯《数字千年版权法》。起诉书称被告\"系统性且秘密地\"爬取网站，复制文章并删除版权管理信息。原告表示AI产品基于其内容创造数十亿美元价值，但出版商分文未得，称此举或成地方新闻业\"丧钟\"。OpenAI回应训练数据基于公开可获取内容且符合合理使用原则，微软未置评。",
+      "url": "https://www.ithome.com/0/968/872.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "industry",
+      "published": "2026-06-26 12:37",
+      "id": "cmqugodz30481sl80as72hqx1"
+    },
+    {
+      "title": "Claude Code 6个实用Hook玩法",
+      "title_en": "想玩Loop Engineering，可以先从这6个Hook玩法开始。",
+      "summary": "Claude Code 内置近30个Hook事件（年初仅13个），本质是写死的规则脚本，运行时不消耗token。6个实用玩法：权限弹窗提醒、开机日程播报（问候+天气+飞书日程）、上下文预压缩时自动生成摘要卡片、结合Skill自动整理下载文件夹、启动后每小时久坐提醒、通过Bark实现手机/手表任务完成/失败推送。让AI从被动聊天框变为事件驱动的自动化系统。",
+      "url": "https://mp.weixin.qq.com/s/LVj2foSXi_hBRKxjuYaUyw",
+      "source": "AI HOT · 公众号：数字生命卡兹克",
+      "category": "tip",
+      "published": "2026-06-26 10:02",
+      "id": "cmquanuro02prsl8053rbhfjl"
+    },
+    {
+      "title": "小互开源个人IP配图技能\"小互IP Studio\"，含31个原创角色",
+      "title_en": "http：//x.com/i/article/2070315221424787456",
+      "summary": "博主小互开源个人IP配图技能\"小互IP Studio\"，包含31个原创角色（15个手绘线稿角色+16个谐音梗meme形象）及一套配图方法论。该Agent可自动读取文章、规划配图类型（情绪图/示意图/四格漫画）、生成并自查返工。默认画风为手绘线稿淡彩，另备5种皮肤（3D盲盒、黑白线稿等）可切换。安装仅需Python3，支持Claude Code、Codex等工具，需自备OpenAI兼容的图像API key（默认GPT-image-2）；也可只输出提示词手动生图。",
+      "url": "https://x.com/xiaohu/status/2070317717811540149",
+      "source": "AI HOT · X：小互 (@xiaohu)",
+      "category": "tip",
+      "published": "2026-06-26 09:26",
+      "id": "cmqu93tek02e2sl80iom0bica"
+    },
+    {
+      "title": "一条命令在HF Jobs上启动vLLM服务器",
+      "title_en": "Run a vLLM Server on HF Jobs in One Command",
+      "summary": "HuggingFace Jobs 支持一条命令启动 vLLM 服务器，用于测试、评估或批量生成。使用 `hf jobs run` 命令，指定官方 `vllm/vllm-openai` 镜像、GPU flavor（如 `a10g-large`）、暴露端口 8000 并设置超时。服务器启动后可通过 OpenAI 兼容 API 访问，每次请求需携带 HF token 作为 bearer token（仅限有读权限的用户）。示例部署了 Qwen/Qwen3-4B（多 GPU 需 `--tensor-parallel-size`）。`a10g-large` 价格为 $1.50/小时，按分钟计费，可通过 `hf jobs cancel` 停止。",
+      "url": "https://huggingface.co/blog/vllm-jobs",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-26 08:00",
+      "id": "cmqwr2hi6008msliky22llevm"
+    },
+    {
+      "title": "@exponentialview 发布《State of the AI Economy》报告：AI经济年化收入超1750亿美元",
+      "title_en": "This is a brilliant report. The State of the AI Economy by @exponentialview - $110B real AI revenue…",
+      "summary": "报告基于去重后的消费端AI支出统计，过去12个月实际AI营收达1100亿美元，年化运行率超1750亿美元，增长速度约为移动/互联网普及浪潮的3倍。营收形成速度急剧加快：2023年新增10亿美元收入需180天，现缩短至不足2天。企业AI已脱离试点阶段，但全面推广仍处早期。31%的标普500公司在财报电话会提及AI，仅20%量化影响。Token降价每10%刺激12-18%用量增长，需求价格弹性强。超大规模云厂商AI收入目前大致覆盖基础设施折旧，GPU经济效益依赖6年计算寿命假设。电力供应和数据中心成本仍是未来扩展主要瓶颈。",
+      "url": "https://x.com/rohanpaul_ai/status/2070288396644491317",
+      "source": "AI HOT · X：Rohan Paul (@rohanpaul_ai)",
+      "category": "tip",
+      "published": "2026-06-26 07:29",
+      "id": "cmqu5r7al01j7sl80meg0lje3"
+    },
+    {
+      "title": "Claude Code v2.1.193 发布",
+      "title_en": "v2.1.193",
+      "summary": "Claude Code v2.1.193 新增 `autoMode.classifyAllShell` 设置，将全部 Bash/PowerShell 命令经自动模式分类器处理。自动模式拒绝原因现加入转录、拒绝提示及 `/permissions` 页面。新增 `claude_code.assistant_response` OpenTelemetry 日志事件（默认不记录，需设置 `OTEL_LOG_ASSISTANT_RESPONSES=1`）。Bash 模式支持实时文件路径自动补全；MCP 服务器需认证时显示启动提示。新增空闲后台 shell 命令自动内存压力回收（可禁用）。修复 `/model` UI 状态滞后、后台任务误取消、子 agent 隐藏同级等问题，并改进了后台 agent 启动指令、MCP 认证重连、插件自动重命名等行为。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+      "source": "AI HOT · Claude Code：GitHub Releases（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-26 05:45",
+      "id": "cmqu24x8v00lssl8065rajmsy"
+    },
+    {
+      "title": "Codex 在 ChatGPT 移动 App 正式可用",
+      "title_en": "Codex in the ChatGPT mobile app is now generally available. Connect your phone and computer more se…",
+      "summary": "OpenAI 宣布 Codex 在 ChatGPT 移动应用中正式开放（GA），并新增一对一设备配对实现更安全的手机与电脑连接。移动端新增通知、目标、侧边聊天、文件预览及内联审阅评论功能。此前预览版已明确，用户可通过 ChatGPT 移动 App 启动新工作、审查输出、引导执行和批准下一步，而 Codex 实际继续在笔记本、Mac mini 或开发机上后台运行。",
+      "url": "https://x.com/OpenAIDevs/status/2070254532911882707",
+      "source": "AI HOT · X：OpenAI Developers (@OpenAIDevs)",
+      "category": "ai-products",
+      "published": "2026-06-26 05:15",
+      "id": "cmqu0cbyl006isl80rufd707u"
+    },
+    {
+      "title": "美国政府要求OpenAI暂缓GPT-5.6广泛发布",
+      "title_en": "The Information： The US government is asking OpenAI to slow GPT-5.6 into a controlled preview instea…",
+      "summary": "The Information 报道，美国政府因安全顾虑要求 OpenAI 暂缓 GPT-5.6 的广泛发布，改为推出受控预览版。OpenAI 计划先向小部分合作伙伴提供早期访问，并由政府逐客户审批准入。这一非常规做法主要担忧模型在自动化高技能网络工作上的能力：既能帮防御者更快发现漏洞，也可能被攻击者用于加速测试漏洞利用。本周四，CEO Sam Altman 已向员工确认该审批流程。",
+      "url": "https://x.com/rohanpaul_ai/status/2070252433109049466",
+      "source": "AI HOT · X：Rohan Paul (@rohanpaul_ai)",
+      "category": "industry",
+      "published": "2026-06-26 05:06",
+      "id": "cmqu0e95l006ysl8097qhn8ny"
+    },
+    {
+      "title": "Midjourney 预览 V8.2 并加速草稿模式",
+      "title_en": "Two quick updates in image world. Try adding --preview to your prompt for a early peak at V8.2 aesth…",
+      "summary": "Midjourney 带来两项更新。一是加入 `--preview` 参数可提前体验 V8.2 的美学与个性化效果；二是此前在 V8.1 推出的大批量草稿模式（生成 24 张低分辨率图，价格仅为标准 4 张的一半，点击 \"Vary\" 可升级为全分辨率）现在支持搭配 `--sref random` 使用，探索风格空间的速度比之前快 24 倍。",
+      "url": "https://x.com/midjourney/status/2070223272072065228",
+      "source": "AI HOT · X：Midjourney (@midjourney)",
+      "category": "ai-products",
+      "published": "2026-06-26 03:11",
+      "id": "cmqtvqfrt07aksl0et0cawoue"
+    },
+    {
+      "title": "IBM 首度推出亚纳米级芯片技术",
+      "title_en": "IBM首度推出亚纳米级芯片技术",
+      "summary": "IBM 于 2026 年 6 月 25 日发布全球首款亚纳米级芯片技术，采用 0.7 nm（7 埃米）节点与全新三维纳米堆叠（nanostack）架构。指甲盖大小的芯片集成近 1000 亿个晶体管，密度约为 IBM 2021 年 2 nm 芯片的两倍。相比 2 nm 芯片，性能最高提升 50%，能效最高提升 70%。纳米堆叠架构还实现 SRAM 面积缩减 40%，有助于支撑先进 AI 工作负载的高带宽需求。该技术已在 VLSI 2026 会议上验证，IBM 预计 5 年内量产。",
+      "url": "https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "paper",
+      "published": "2026-06-26 02:52",
+      "id": "cmqtvbv4r076ssl0e588aopiw"
+    },
+    {
+      "title": "Midjourney V8.1 草稿模式新增随机风格功能",
+      "title_en": "Random styles in draft mode",
+      "summary": "Midjourney V8.1 的草稿模式（draft mode）添加了随机风格功能。用户在提示词中加入 `--sref random` 即可一键生成 24 张不同风格的图片。开启草稿模式可通过点击提示栏的 ⚡ 图标或添加 `--draft` 参数。",
+      "url": "https://updates.midjourney.com/random-styles-in-draft-mode",
+      "source": "AI HOT · Midjourney：Updates（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-26 02:50",
+      "id": "cmqtv6jlv0766sl0eixynhk6m"
+    },
+    {
+      "title": "赫库兰尼姆古卷首次被完整虚拟解读",
+      "title_en": "赫库兰尼姆的一卷古卷首次被解读",
+      "summary": "研究人员利用高分辨率X射线显微断层扫描和机器学习，在未物理展开的情况下完整虚拟展开并读取了赫库兰尼姆古卷PHerc.1667（Scroll4）。这是首卷被从头到尾连续读取的纸莎草卷，内容为斯多葛哲学论著，提及克里西普斯的侄子Aristocreon。第二卷PHerc.Paris4通过更高分辨率成像使墨水在三维数据中直接可见，独立确认了2023年大奖赛的解读。第三卷PHerc.139确定标题和作者为菲洛德穆《论诸神》第八卷。所有数据与代码已公开。",
+      "url": "https://scrollprize.org/firstscroll",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "paper",
+      "published": "2026-06-26 02:03",
+      "id": "cmqtu9a7r06x3sl0exw2blt0o"
+    },
+    {
+      "title": "OLMo Hybrid vs Transformer：混合模型在实义词上优势明显，但重复短语上几无优势",
+      "title_en": "Which tokens does a hybrid model predict better？",
+      "summary": "通过对比7B参数的OLMo 3（Transformer）与OLMo Hybrid（混合架构），实验发现混合模型在大多数token上预测损失更低：对名词、动词、形容词等实义词优势明显（loss gap约0.04），功能词上gap约0.02，且在需上下文推理的代词指代上更好。但在重复出现的n-gram和闭合括号（如`}`）上，混合模型的优势几乎消失，Transformer凭借注意力机制更擅长从输入中直接检索精确信息。",
+      "url": "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-26 00:11",
+      "id": "cmqtpf8w405opsl0e2ldkd1q1"
+    },
+    {
+      "title": "OpenKnowledge：开源、AI 优先的 Obsidian/Notion 替代品",
+      "title_en": "Show HN： OpenKnowledge - open source AI-first alternative to Obsidian/Notion",
+      "summary": "OpenKnowledge 是一款开源、本地优先的 Markdown 编辑器，私密免费，提供完整的所见即所得编辑体验。支持 macOS 桌面应用和 Web UI，内置文件导航、搜索、标签和图谱 wiki 链接查看器。可与 Claude、Codex、Cursor 等桌面应用协同实现 AI 编辑，并通过 MCP/CLI 兼容任意 AI 智能体框架。自带 MCP、技能和智能搜索，支持 LLM Wiki 和知识图谱。团队协作基于 Git/GitHub 实现无代码共享与自动同步。支持嵌入 HTML 及富文本组件。桌面应用内建 TUI，Linux/Windows/Intel Mac 用户可通过 CLI（Node.js 24+）以本地 Web 应用运行。可直接打开任何包含 Markdown/MDX 文件的文件夹。开源协议 GPL-3.0-or-later。",
+      "url": "https://github.com/inkeep/open-knowledge",
+      "source": "AI HOT · Hacker News：AI 热帖",
+      "category": "ai-products",
+      "published": "2026-06-26 00:04",
+      "id": "cmqwticse001bslp0tye275nx"
+    },
+    {
+      "title": "多数主流AI聊天机器人政治立场偏左，\"反觉醒\"模型也不例外",
+      "title_en": "Most major AI chatbots still lean left on political questions， even \"anti-woke\" models are no exception",
+      "summary": "华盛顿邮报调查显示，多数主流AI聊天机器人在政治问题上明显偏左。OpenAI GPT-5.5在80%回答中仅呈现左派论据；DeepSeek V4 Pro为70%；Anthropic Claude Opus 4.8有43%纯左、57%给出双方观点。xAI的Grok 4.3左倾回答仍多于右倾。右翼平台Gab的Arya左倾回答是右倾的12倍。Google Gemini 3.1 Pro是例外，93%回答同时呈现双方立场。特朗普推动的\"反觉醒\"AI未能改变这一格局。",
+      "url": "https://the-decoder.com/most-major-ai-chatbots-still-lean-left-on-political-questions-even-anti-woke-models-are-no-exception",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "tip",
+      "published": "2026-06-26 00:04",
+      "id": "cmqtp5syl05k5sl0ec5cvuedt"
+    },
+    {
+      "title": "冻结多token预测加速Pixel上的Gemini Nano模型",
+      "title_en": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
+      "summary": "Google Research提出一种新架构，在已冻结的Gemini Nano v3模型上改造Multi-Token Prediction（MTP），以加速Pixel 9和10系列上的设备端推理。该方法基于EAGLE框架和CALM，无需单独训练占用内存的草稿模型，通过\"晚期退出\"策略实现加速。AI通知摘要和校对功能因此生成文本速度显著提升、能耗降低，开发者无需为每个新任务微调独立模型。",
+      "url": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction",
+      "source": "AI HOT · Google Research：Blog（网页）",
+      "category": "paper",
+      "published": "2026-06-26 00:00",
+      "id": "cmqwtvowe0035slp023899gx2"
+    },
+    {
+      "title": "SGLang 引入 Waterfill 与 LPLB 提升 DeepEP MoE 负载均衡",
+      "title_en": "Blog Improving DeepEP MoE Load Balance in SGLang with Waterfill and LPLB Mixture-of-Experts （MoE） models rely on Expert Parallelism （EP） to scale inference across multiple GPUs. In SGLang， DeepEP and EPLB provide high-performance serving under EP， but the workload seen by … NVIDIA Team",
+      "summary": "SGLang 为 DeepEP MoE 推理新增两种调度时负载均衡方法：Waterfill 将共享专家分配给负载更低的 rank，在 DeepSeek-V3/R1 服务负载下使总吞吐量提升 1.48% 至 4.66%，在 DeepSeek V4 上最佳点从 49，253 tok/s 提升至 51，677 tok/s（+4.92%）；LPLB 基于线性规划优化冗余专家副本的 token 路由，配合 EPLB 在相同集群上实现吞吐量提升 0.84% 至 7.34%。",
+      "url": "https://www.lmsys.org/blog/2026-06-26-waterfill-lplb",
+      "source": "AI HOT · LMSYS：Blog（Chatbot Arena 团队）",
+      "category": "ai-products",
+      "published": "2026-06-26 00:00",
+      "id": "cmqwtlsg0001nslp0zt3eyzhr"
+    },
+    {
+      "title": "General Intuition 完成 3.2 亿美元融资，用游戏数据训练通用 AI 智能体",
+      "title_en": "General Intuition raises $2.3B on bet that video games can train AI agents for the real world",
+      "summary": "General Intuition 以 23 亿美元估值完成 3.2 亿美元融资，累计披露融资 4.54 亿美元。公司从旗下游戏剪辑平台 Medal 获取数亿小时含精确按键动作标签的游戏操作数据，训练单一模型同时驾驭 Fortnite 等虚拟环境和四足机器人。演示中，AI 智能体在游戏中连续运行 100 小时，机器人仅靠 8 分钟真实街道数据微调即可自主探索办公室。本轮由 Khosla Ventures 领投，General Catalyst、Jeff Bezos、Eric Schmidt 等参投。资金将用于通过 CoreWeave 扩大计算规模、预训练下一代模型，计划夏末前开放 API。",
+      "url": "https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world",
+      "source": "AI HOT · TechCrunch：AI（RSS）",
+      "category": "industry",
+      "published": "2026-06-26 00:00",
+      "id": "cmqtq76j105ubsl0e8j4fy8se"
+    },
+    {
+      "title": "Google Finance 全新 Android 应用与投资组合功能上线",
+      "title_en": "Our latest Google Finance upgrades， including a new app",
+      "summary": "本周，Google Finance 推出正式版 Android 应用，同步上线全球投资组合跟踪功能。用户可通过截图、CSV/PDF 上传或文字描述创建组合，并利用 AI 研究工具提问资产配置、固定收益影响等问题。新增市场情报简报功能：用户设定任务（如每日盘前简报），后台自动生成并推送至 Google 应用（Android/iOS）及网页端。Android 应用包含 watchlist、实时数据、金融新闻 feed、AI 研究工具及 AI 驱动的\"关键时刻\"解释股价波动。未来数月将把更多 web 功能（如财报电话、投资组合与任务）迁移至移动端，今年晚些推出 iOS 应用。",
+      "url": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026",
+      "source": "AI HOT · Google Blog：AI（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-26 00:00",
+      "id": "cmqtp7ycw05lbsl0ei7dpsv19"
+    },
+    {
+      "title": "Ornith-1.0 开源模型家族发布，专注 Agentic Coding 全参数规模",
+      "title_en": "卧槽！最近开源大模型太卷了啊！ 这不又一个专注agentic coding的开源模型家族来了，叫Ornith-1.0。 它覆盖了从9B到397B MoE的全尺寸，在Terminal-Bench、S…",
+      "summary": "Ornith-1.0 开源模型家族发布，专注智能体编程（Agentic Coding），覆盖 9B Dense、31B Dense、35B MoE 及 397B MoE 全参数规模。在 Agent Coding 基准上达开源顶尖：SWE-Bench Verified 82.4、SWE-Bench Pro 62.2、Terminal-Bench 2.1 77.5、NL2Repo 48.2、SWE Atlas 41.2 QnA、ClawEval 77.1。基于 gemma4 和 qwen3.5 后训练，采用强化学习联合优化任务脚手架（scaffold）与最终解决方案，让模型自主改进执行框架。全系列 MIT 开源，提供 GGUF 版本，支持 Ollama、Unsloth 等本地运行。",
+      "url": "https://x.com/berryxia/status/2070167806700908957",
+      "source": "AI HOT · X：Berry Xia (@berryxia)",
+      "category": "ai-models",
+      "published": "2026-06-25 23:30",
+      "id": "cmqtpj36o05pusl0e9ingyoye"
+    },
+    {
+      "title": "美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆",
+      "title_en": null,
+      "summary": "美团 LongCat 团队推出 VitaBench 2.0，首个真实生活场景下针对长期动态用户建模的智能体评测基准。包含56名拟真用户、819个复杂任务、超2000个动态偏好及66个可执行工具，每位用户平均2093个交互事件，时间跨度平均1580天。同时支持长文本上下文学习和智能体记忆策略评测。测试显示，最强模型 Claude-Opus-4.6 在\"开卷\"模式下平均分刚过0.5；开启思考模式并不总能提升个性化任务表现；所有模型在需要主动提问的任务上得分断崖式下跌。VitaBench 2.0 已开源。",
+      "url": "https://mp.weixin.qq.com/s/HoiUxYnyJuh2_xdxmg8s8Q",
+      "source": "AI HOT · 公众号：龙猫LongCat（美团）",
+      "category": "ai-products",
+      "published": "2026-06-25 19:58",
+      "id": "cmquellij03q2sl80f5fm292j"
+    },
+    {
+      "title": "Meta员工警告AI内容审核部署过快",
+      "title_en": "Meta employees warn AI moderation rollout is too fast",
+      "summary": "Meta在2025年已用大语言模型替换约一半人工审核请求，计划年底前将部分内容类型的AI审核比例提升至90%以上，每年节省数十亿美元。Meta否认成本动机，称自3月测试显示其模型错误率比人类低13%，且多捕捉10%违规。但员工指出模型仍会移除或限流无害内容，缺乏足够监督，快速部署已导致外包裁员。此外，Meta已从使用Google Gemini转向自家新基础模型Muse Spark，该模型基于人工审核员的历史决策训练。",
+      "url": "https://the-decoder.com/meta-employees-warn-ai-moderation-rollout-is-too-fast",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "industry",
+      "published": "2026-06-25 18:07",
+      "id": "cmqtc9nw602azsl0e4dvg4t64"
+    },
+    {
+      "title": "Anthropic称阿里巴巴非法获取了Claude AI模型的功能",
+      "title_en": null,
+      "summary": "Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿里巴巴通过逆向工程或其他手段复制了Claude的核心技术。目前阿里巴巴尚未公开回应。",
+      "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "industry",
+      "published": "2026-06-25 11:07",
+      "id": "cmqsy1vs107c5slfu4fmksjzd"
+    },
+    {
+      "title": "OpenAI内部报告：智能体Codex如何改变工作",
+      "title_en": "How agents are transforming work",
+      "summary": "OpenAI 在2025年8月至2026年6月间观察到，智能体产品 Codex 取代 ChatGPT 成为主要工作工具，各部门输出 token 中 Codex 占比从不足10%升至99.8%。80.6%个体用户曾发起预计等效人类工作时间超30分钟的请求，70.2%超1小时，25.6%超8小时；99百分位用户每日生成超60小时 agent turns。非开发者用户增长迅猛：个体用户增长137倍，组织用户增长189倍。Legal、Finance、Recruiting 部门在2026年4月前后跨过 Codex 使用过半拐点，平均每位律师或招聘人员超85%输出 token 来自 Codex。",
+      "url": "https://openai.com/index/how-agents-are-transforming-work",
+      "source": "AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "category": "paper",
+      "published": "2026-06-25 10:00",
+      "id": "cmqta6kw701sasl0es975w0zc"
+    },
+    {
+      "title": "OpenRouter MCP 服务器发布",
+      "title_en": "The OpenRouter MCP Server",
+      "summary": "OpenRouter 推出 MCP 服务器，为编程智能体提供实时模型数据、基准排名、定价和文档查询。开发者通过一键安装（支持 Claude Code、Codex CLI、Cursor 等客户端），即可在编辑器内完成模型筛选、价格对比和测试推理，无需切换标签页。服务器整合 Artificial Analysis、Design Arena 及 OpenRouter 自身排名数据，例如推荐 GLM-5.2 作为性价比最佳的编码模型。工具集包括 models-list、model-get、model-endpoints、benchmarks 等，支持通过 chat-send 发送测试提示，比较不同模型（如 Claude Opus 4.8、GPT-5.5、DeepSeek V4 Pro）的响应、成本和延迟。API 密钥附带 7 天有效期和 10 美元消费上限，可随时撤销。",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-mcp-server",
+      "source": "AI HOT · OpenRouter：Announcements（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-25 08:00",
+      "id": "cmqtkuscr04g8sl0eoqzwkdm7"
+    },
+    {
+      "title": "盈透证券（Interactive Brokers）与 Grok 集成：组合分析、情景建模与实时交易指令生成",
+      "title_en": "Explore the markets with Interactive Brokers and Grok",
+      "summary": "盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新账户。通过自然语言与 Grok 对话，可完成组合收益分析（如股息与利息预测）、行业/地区/经济事件的风险敞口情景建模、市场趋势研究，并直接生成对冲订单等实时交易指令，实现从数据洞察到执行决策的一体化。",
+      "url": "https://x.ai/news/grok-interactive-brokers",
+      "source": "AI HOT · xAI：News（网页）",
+      "category": "ai-products",
+      "published": "2026-06-25 08:00",
+      "id": "cmqst0js5060tslfu7s6uxjhf"
+    },
+    {
+      "title": "AI被认为会取代工程岗位，但新数据显示工程是2025年最具韧性的岗位",
+      "title_en": "AI was supposed to kill engineering jobs， but new data suggests they're the most resilient",
+      "summary": "风投机构SignalFire追踪8000万家公司数百万员工数据发现，工程是2025年最具韧性的岗位。大型科技公司总招聘较2019年下降25%，工程岗仅降11%；工程岗占Alphabet、Meta等12家\"Tech Majors\"新招员工的55%（2019年为46%）。早期初创公司2025年工程师招聘比2019年增长7%。Anthropic CEO警告AI可能消灭一半入门级白领，但该公司经济主管称尚未看到显著影响。NVIDIA CEO黄仁勋表示AI让工程师更忙碌，是杰文斯悖论的典型例证。",
+      "url": "https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient",
+      "source": "AI HOT · TechCrunch：AI（RSS）",
+      "category": "tip",
+      "published": "2026-06-25 05:56",
+      "id": "cmqsmijfz04cwslfuwufeuxwz"
+    },
+    {
+      "title": "Notion 使用 Cursor SDK 嵌入编码智能体",
+      "title_en": "How Notion used the Cursor SDK to embed coding agents",
+      "summary": "Notion 通过 Cursor SDK 在数周内将编码智能体嵌入产品。用户可在文档中@Cursor、在讨论串中提及或向数据库指派任务，Cursor 即可端到端完成规划、构建、测试、验证并自动创建 PR。集成基于一套 Provider 无关的智能体框架，Notion 的讨论串对应一个 Cursor 智能体，每条消息对应一次智能体运行；结果通过 SSE 流式传输，支持断连恢复。Cursor SDK 提供与生产环境相同的模型、运行时和远程 MCP 支持，让 Notion 无需自建智能体基础设施即可获得完整栈编码能力。用户还可自定义模板、MCP 服务器、技能和子智能体，并设置自动触发规则。",
+      "url": "https://cursor.com/blog/notion",
+      "source": "AI HOT · Cursor Blog",
+      "category": "ai-products",
+      "published": "2026-06-25 04:55",
+      "id": "cmqsjydyy03s2slfu0akeh868"
+    },
+    {
+      "title": "Perplexity推出Computer for Counsel",
+      "title_en": "Introducing Computer for Counsel. Computer now connects the research databases， document tools， and…",
+      "summary": "推出 Computer for Counsel。\n\nComputer 现在连接了律师日常使用的研究数据库、文档工具和案件管理系统。可从中提取可引用来源：@midpageAI、@LegalZoom、@Docusign、@netdocuments 等。\n\n所有 Pro 和 Max 订阅用户均可使用。",
+      "url": "https://x.com/perplexity_ai/status/2069866668671766804",
+      "source": "AI HOT · X：Perplexity (@perplexity_ai)",
+      "category": "ai-products",
+      "published": "2026-06-25 03:34",
+      "id": "cmqshf6dl0354slfug4vof984"
+    },
+    {
+      "title": "GPT-5.5 Instant 新版本，对话更有趣",
+      "title_en": "We have a new version of GPT-5.5 Instant for you， and it's much more fun to talk to. Our most-used …",
+      "summary": "我们为你带来了新版 GPT-5.5 Instant，它现在聊起天来有趣多了。\n\n我们最常用的模型现在能更好地理解问题背后的意图，并相应地调整回应。\n\n它也能更可靠地处理复杂约束，让购物和本地推荐更加实用和连贯。\n\n今天向付费用户推送，明天向免费用户推送。",
+      "url": "https://x.com/OpenAI/status/2069843083701915755",
+      "source": "AI HOT · X：OpenAI (@OpenAI)",
+      "category": "ai-models",
+      "published": "2026-06-25 02:00",
+      "id": "cmqsef9c302f0slfu6lvuhnu7"
+    },
+    {
+      "title": "Figma在Config 2026押注人类判断，画布AI能力却来自第三方",
+      "title_en": "Figma bets on human judgment at Config 2026 while the AI powering its canvas belongs to someone else",
+      "summary": "Figma在Config 2026将设计画布扩展至代码、动画、3D深度和着色器效果，并集成去年收购的Weave工作流系统。新功能包括Code Layers（代码与设计并存）、Motion动画、深度层、Shader及Generative Plugins。协作方面，团队可搜索复用AI提示词、保存工作流为技能、共享插件。Figma的AI功能依赖Anthropic、OpenAI和Google等外部模型，推理成本挤压利润率。同时，Anthropic等公司的竞争产品可直接生成界面，构成威胁。",
+      "url": "https://the-decoder.com/figma-bets-on-human-judgment-at-config-2026-while-the-ai-powering-its-canvas-belongs-to-someone-else",
+      "source": "AI HOT · The Decoder：AI News（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-25 00:49",
+      "id": "cmqsbrhhm01o1slfu2kei9qhy"
+    },
+    {
+      "title": "Gemini 3.5 Flash 引入 computer use 功能",
+      "title_en": "Introducing computer use in Gemini 3.5 Flash",
+      "summary": "Google DeepMind 宣布，computer use 现作为内置工具集成于 Gemini 3.5 Flash，开发者可构建跨浏览器、移动端和桌面的智能体，实现视觉感知、推理与操作。此前该功能仅以独立模型形式存在于 Gemini 2.5。3.5 Flash 已支持函数调用及 Search、Maps 等内置工具，新增的 computer use 可提升持续软件测试和跨专业应用知识工作等长周期企业自动化任务的性能。安全方面采用针对性对抗训练，并可选配两项企业防护系统：要求用户确认敏感操作，以及在检测到间接 prompt 注入时自动停止任务。可通过 Gemini API 和 Gemini Enterprise Agent Platform 使用。",
+      "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash",
+      "source": "AI HOT · Google DeepMind：Blog（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-25 00:30",
+      "id": "cmqsbthp601p3slfuajayc4gr"
+    },
+    {
+      "title": "NVIDIA NeMo AutoModel：一行代码加速Transformer MoE模型微调",
+      "title_en": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+      "summary": "NVIDIA NeMo AutoModel 是基于 Transformers v5 的开源库，添加 Expert Parallelism、DeepEP 融合 all-to-all 调度和 TransformerEngine 内核。在 MoE 模型微调中，相比原生 v5，训练吞吐量提升 3.4-3.7 倍，GPU 内存减少 29-32%，仅需改动一行 import。在 16 节点 128 张 H100 上全微调 Nemotron 3 Ultra 550B A55B 时，v5 因内存不足无法运行，而 AutoModel 凭借 EP=64 专家并行使训练可行。单节点 30B MoE 模型（如 Qwen3-30B-A3B）同样获得可量化的性能优势。",
+      "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-25 00:00",
+      "id": "cmqs9yjcy0187slfupnhipvhf"
+    },
+    {
+      "title": "Runway发布Agent 2.0",
+      "title_en": "Introducing Agent 2.0",
+      "summary": "Runway发布Agent 2.0，帮助营销人员创建、测试和优化广告、视频及营销活动。品牌营销人员可在对话中开发活动概念、生成变体并自动本地化；绩效营销人员可上传创意并导入Meta、YouTube、TikTok或Google广告数据，由Agent分析后生成下一轮待测广告。社交媒体营销人员可一次性生成一周内容，自动裁切为9：16、16：9、1：1等格式；产品营销人员可借助Agent确定定位角度并构建活动资产。Agent 2.0面向所有用户开放。",
+      "url": "https://runwayml.com/news/introducing-agent-2",
+      "source": "AI HOT · Runway：News（网页）",
+      "category": "ai-products",
+      "published": "2026-06-25 00:00",
+      "id": "cmqtun7jv06zvsl0ejc2rnrpp"
+    },
+    {
+      "title": "OpenRouter 零数据留存（ZDR）实践：97 款新模型，流量占比近半",
+      "title_en": "When Zero Means Zero",
+      "summary": "OpenRouter 的零数据留存（ZDR）保证用户提示词和模型响应不被存储，元数据一般安全。自 1 月以来新增 97 款支持 ZDR 的模型，月度 token 量增长 4.3 倍，约占全部路由流量一半。ZDR 在三个层面执行：账户级（整个供应商开启）、护栏级（按 API Key 或组织成员限定）、单次请求级（传参数仅路由至 ZDR 端点）。企业用户可灵活选择控制粒度，避免锁定单一供应商。",
+      "url": "https://openrouter.ai/blog/insights/when-zero-means-zero",
+      "source": "AI HOT · OpenRouter：Announcements（RSS）",
+      "category": "tip",
+      "published": "2026-06-25 00:00",
+      "id": "cmqsi8c9303azslfuexk0h241"
+    },
+    {
+      "title": "Mistral AI 为 Connectors 推出多项安全与可控新能力",
+      "title_en": "Bringing more control over your connectors June 24， 2026 Mistral AI",
+      "summary": "2026年6月24日，Mistral AI 发布 Connectors 多项新能力：Enriched admin controls（GA）支持按工作空间设置连接器访问权限并单独开关工具；API keys with connector scopes（GA）防止自动化 AI 工作负载中身份冒充；Multi-account connectors（GA）允许单个连接器绑定多个账户；Connectors Debugger（公开预览）对 MCP 连接器进行端到端根因分析；Connectors in Vibe Code（GA）和 Connectors in Workflows（公开预览）分别允许在开发者界面复用连接器及支持长时间运行任务不中断。",
+      "url": "https://mistral.ai/news/more-control-over-connectors",
+      "source": "AI HOT · Mistral AI：News（网页）",
+      "category": "ai-products",
+      "published": "2026-06-24 23:59",
+      "id": "cmqs9eic7012cslfuu3w4io4c"
+    },
+    {
+      "title": "里德·霍夫曼称SpaceX\"不是一家人工智能公司\"，xAI则是\"彻底的灾难\"",
+      "title_en": null,
+      "summary": "LinkedIn联合创始人、Anthropic和OpenAI投资者Reid Hoffman在播客中公开批评SpaceX和xAI。他指出SpaceX\"不是一家人工智能公司\"，6月12日上市后收购AI编程工具Cursor属于\"花钱买相关性\"；xAI则是\"彻底的灾难\"，所有11位联合创始人已离职，Grok模型在基准测试中落后于Anthropic和OpenAI。他还批评美国政府6月11日以出口管制为由强制Anthropic下架Fable和Mythos模型，理由仅为Amazon CEO报告Fable 5存在jailbreak漏洞，称此举\"专断随意\"。Hoffman认为Anthropic和OpenAI均有巨大发展空间，但Cursor可能已过巅峰。他建议年轻人不要抵制AI。",
+      "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "tip",
+      "published": "2026-06-24 22:20",
+      "id": "cmqs65ogk008hslfuodhruc4w"
+    },
+    {
+      "title": "字节跳动技术副总裁洪定坤：AI Coding 的实践与探索",
+      "title_en": null,
+      "summary": "在火山引擎Force大会，字节跳动技术副总裁洪定坤分享AI Coding实践。过去一年，字节AI代码贡献率增长6倍，tokens消耗增长5倍，但过度关注单一指标可能失真--TRAE团队代码超90%由AI生成，人均需求吞吐率仅提升60%。900次实验显示，主流Coding模型组合代码正确率超80%，但可交付性仅40-60分；结合Harness基建后提升至80分。AI降低编程门槛但需优化指标、治理、协作。字节探索原型驱动开发，能力沉淀至TRAE（日均Token消耗5.6万亿，增长50倍），并推出TRAE Work。",
+      "url": "https://mp.weixin.qq.com/s/mdmaAyUIvxE8WT_GEbF2wQ",
+      "source": "AI HOT · 公众号：火山引擎",
+      "category": "tip",
+      "published": "2026-06-24 22:02",
+      "id": "cmqs68cgx0090slfuumt36jny"
+    },
+    {
+      "title": "火山引擎推出Agent Ready基础设施，AgentKit与ArkClaw企业版升级",
+      "title_en": "火山引擎Agent Infra升级，让Agent真正进入企业工作流",
+      "summary": "火山引擎在FORCE大会推出面向企业智能应用的Agent Ready基础设施，构建AI云与Agent三层架构。AgentKit升级提供Identity、Runtime、Sandbox、Evaluation等模块，实现Agent可靠、可控、可衡量。Identity已接入数千家身份体系，Runtime支持长程任务和分钟级12万沙箱并发。ArkClaw企业版集成Agent广场、技能中心与企业知识库，支持IDP/SSO/OAuth及飞书、钉钉等IM入口统一管控。实践案例：海底捞门店经营Agent将小时级工作压缩到分钟级，人工跟进时长缩减70%，巡检满意度提升50%；创维酷开借助ArkClaw终端版打造AIOS，Token消耗节省50%，支撑百万级终端。",
+      "url": "https://mp.weixin.qq.com/s/83mrPAPgQRKhxLkoSvRgBQ",
+      "source": "AI HOT · 公众号：火山引擎",
+      "category": "ai-products",
+      "published": "2026-06-24 18:17",
+      "id": "cmqrxnmqg0p2zslp51p8cc1ln"
+    },
+    {
+      "title": "DFlash：块扩散草稿模型实现最高15倍吞吐量提升",
+      "title_en": "DFlash Speculative Decoding Drafts Whole Token Blocks in Parallel for Up to 15x Higher Throughput on NVIDIA Blackwell",
+      "summary": "DFlash 由 UC San Diego 团队提出，是一种用于投机解码的轻量块扩散草稿模型。它一次前向推理生成整块 token，再由目标模型并行验证，保证输出无损。相比 EAGLE-3，DFlash 实现最高 2.5 倍加速，在 Qwen3-8B 等多种模型上平均无损加速超过 6 倍（MATH-500 达 6.08×）。在 NVIDIA Blackwell 上（TensorRT-LLM），gpt-oss-120b 模型吞吐量提升最高 15 倍，约为 EAGLE-3 的 1.5 倍。核心创新是将目标模型多层隐藏特征注入草稿模型每一层的 Key-Value 投影，使接受长度随草稿深度增长。",
+      "url": "https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell",
+      "source": "AI HOT · MarkTechPost（RSS）",
+      "category": "paper",
+      "published": "2026-06-24 15:21",
+      "id": "cmqrrgnay0n08slp5phvdk394"
+    },
+    {
+      "title": "MiniCPM-V 4.6 在 Apple Core AI 上高速运行",
+      "title_en": "🥳Thanks for sharing this， @MLBoy_DaisukeMajima 🚀 MiniCPM-V 4.6 running at this speed on-device is …",
+      "summary": "🥳感谢分享，@MLBoy_DaisukeMajima 🚀\nMiniCPM-V 4.6 在设备上以这样的速度运行，实在令人印象深刻--尤其是在 Apple Core AI 上以不到 2B 参数跑出。\n干得漂亮，推动高效多模态 AI 向前发展。🫡",
+      "url": "https://x.com/OpenBMB/status/2069676334381728106",
+      "source": "AI HOT · X：面壁智能 OpenBMB (@OpenBMB)",
+      "category": "tip",
+      "published": "2026-06-24 14:57",
+      "id": "cmqrqhlvx0mr7slp5atv7dptr"
+    },
+    {
+      "title": "OpenAI 与 Broadcom 联合发布 LLM 推理芯片 Jalapeño",
+      "title_en": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+      "summary": "OpenAI 与 Broadcom 发布首款自研推理加速器 Jalapeño，专为当前及未来 LLM 从头设计。早期测试显示，其性能功耗比大幅优于现有 SOTA。工程样片已在实验室以目标频率和功耗运行 GPT-5.3-Codex-Spark 等负载。芯片从设计到流片仅用 9 个月，并利用 OpenAI 模型加速部分流程。OpenAI 计划从 2026 年起与 Microsoft 等合作伙伴部署千兆瓦级数据中心，推出多代计算平台。",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+      "source": "AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例）",
+      "category": "ai-products",
+      "published": "2026-06-24 14:00",
+      "id": "cmqs319vw0qkcslp52gzwr77q"
+    },
+    {
+      "title": "OpenAI ChatGPT 语音最大规模升级：双向AI语音模型 Bidi 1 已上线测试",
+      "title_en": "OpenAI ChatGPT 语音最大规模升级：双向 AI 语音模型 Bidi 1 已上线测试",
+      "summary": "6月23日，部分用户反馈 ChatGPT 网页版和 App 版上线了双向 AI 语音模型 Bidi 1，位于设置模型选择器中，与标准语音和高级语音并列。该模型支持边说话边监听，用户可在对话中途打断并发出新指令，例如要求从1数到10时中途喊停倒数，模型会立即切换执行。OpenAI 尚未官宣，预计本周启动更大范围测试。",
+      "url": "https://www.ithome.com/0/967/852.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "ai-models",
+      "published": "2026-06-24 12:34",
+      "id": "cmqrl73460l9gslp5w33pryqi"
+    },
+    {
+      "title": "今天，豆包正式推出专业版",
+      "title_en": null,
+      "summary": "豆包专业版基于豆包2.1系列大模型上线，面向复杂办公与生产力场景。办公任务模式接入可执行Agent任务的豆包2.1模型，支持操作本地电脑、浏览器、调用Skills技能、定时任务，内置Office办公套件，并可生成带后端数据库的在线应用。免费用户可体验豆包2.1 Turbo版办公任务模式，专业版接入豆包2.1 Pro模型。定价：标准套餐68元/月（连续包月），加强套餐200元/月，高级套餐500元/月。大学生认证后标准套餐38元/月，持续6个月。",
+      "url": "https://mp.weixin.qq.com/s/Sb-NMXTrWFQES1EDO_Gr2g",
+      "source": "AI HOT · 公众号：豆包（字节）",
+      "category": "ai-products",
+      "published": "2026-06-24 09:00",
+      "id": "cmqrdmylf0iyeslp50lteppvq"
+    },
+    {
+      "title": "Causal-rCM：自回归视频扩散蒸馏的统一教师强制与自强制开源方案",
+      "title_en": "Causal-rCM： A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models",
+      "summary": "Causal-rCM将扩散蒸馏框架rCM扩展至自回归视频扩散，提出教师强制（TF）与自强制（SF）互补训练范式，并发布统一开源算法与基础设施。通过自定义掩码FlashAttention-2 JVP内核，首次实现基于教师强制的连续时间一致性模型（sCM/MeanFlow）用于自回归视频扩散，收敛速度比离散时间版本快10倍。蒸馏后的2步因果Wan2.1-1.3B模型在仅1或2步采样下取得VBench-T2V分数84.63，仅使用合成数据即达到帧级和块级流式视频生成SOTA。该方法还应用于Cosmos 3全模态世界基础模型，实现动作条件生成的交互式世界模型。",
+      "url": "https://arxiv.org/abs/2606.25473",
+      "source": "AI HOT · HuggingFace Daily Papers（社区热门论文）",
+      "category": "paper",
+      "published": "2026-06-24 08:00",
+      "id": "cmqsxg0qe0764slfui5djtfyx"
+    },
+    {
+      "title": "FFASR 排行榜发布：真实远场条件下 ASR 评测",
+      "title_en": "Introducing the FFASR Leaderboard： Benchmarking ASR in the Real World",
+      "summary": "Treble Technologies 与 Hugging Face 联合推出 FFASR（Far-Field ASR）排行榜，这是首个开源社区驱动的真实远场声学条件 ASR 评测基准。传统近场评测无法反映混响、背景噪声和麦克风距离带来的性能下降。FFASR 使用混合波模拟引擎生成声学数据，涵盖 14 种房间（20-470 m3）和三个信噪比级别（远场高 SNR >14 dB、中 SNR 8-12 dB、低 SNR <6 dB），加上近场干燥条件，共四类条件决定主排名。另有实验室实测/模拟验证轨道和移动声源 beta 版。性能指标同时报告词错误率（WER）和实时因子（RTFx，在 NVIDIA L4 GPU 上评估）。未来将支持多说话人场景、麦克风阵列和回声消除。",
+      "url": "https://huggingface.co/blog/ffasr-leaderboard",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-24 08:00",
+      "id": "cmqs9yjcy0188slfu7cf8old7"
+    },
+    {
+      "title": "AI招聘工具存在种族偏见和系统性排斥；黑人占比26%，亚裔占比15%",
+      "title_en": null,
+      "summary": "一项覆盖340万人、400万份申请、150家雇主和1700个职位的大规模实地研究发现，AI招聘筛选工具存在显著的种族歧视：26%的黑人申请者和15%的亚裔申请者遭遇算法对其族群的系统性排斥；若AI按推荐率最高群体（通常为白人）标准执行，将有4万份额外申请进入下一轮。多数雇主依赖同一第三方供应商算法，形成\"算法单一文化\"，导致10%提交4份申请者被所有职位拒绝。对比同期未用AI的招聘数据（8.3万份申请、108家财富500强企业），未发现此类模式。研究呼吁对算法招聘进行独立监管。",
+      "url": "https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "paper",
+      "published": "2026-06-24 05:48",
+      "id": "cmqr73j5g0h1nslp5g9y52k0v"
+    },
+    {
+      "title": "Runway推出Seedance 4K等三款新模型",
+      "title_en": "Seedance 4K. Seedance Mini. Kling 3.0 Turbo. Available now. The world's best models， in one place. …",
+      "summary": "Seedance 4K。Seedance Mini。Kling 3.0 Turbo。现已推出。\n全球最佳模型，汇聚一处。\n\n使用优惠码 30RUNWAY，前三个月可享七折优惠。\n\n通过下方链接开始使用。",
+      "url": "https://x.com/runwayml/status/2069535148450705517",
+      "source": "AI HOT · X：Runway (@runwayml)",
+      "category": "ai-products",
+      "published": "2026-06-24 05:36",
+      "id": "cmqr6bnad0gw8slp5xmrffynm"
+    },
+    {
+      "title": "Oracle因AI应用裁员21000人，债务驱动云基础设施投资",
+      "title_en": "Oracle's 21，000 layoffs help drive its debt-fueled AI investments",
+      "summary": "Oracle在截至5月31日的财年裁员21000人，员工总数降至141，000人，降幅12.9%。公司称AI技术的采用导致劳动力缩减，同时重组成本达18亿美元，同比增长481%。Oracle计划2026年通过债务和股权筹集450至500亿美元，扩建Oracle Cloud Infrastructure，服务OpenAI、xAI、AMD、Nvidia、Meta等客户。公司债务超1200亿美元。分析人士指出裁员有助于改善现金流，但Oracle也承认大规模裁员可能带来生产力下降、人才短缺和员工士气受损等风险。",
+      "url": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments",
+      "source": "AI HOT · Ars Technica：AI（RSS）",
+      "category": "industry",
+      "published": "2026-06-24 04:17",
+      "id": "cmqr4zhkm0gidslp5x8ow892r"
+    },
+    {
+      "title": "FastWan-QAD：单卡5090上1.8秒生成5秒视频",
+      "title_en": "（1/5） 5 seconds of video. 1.8s seconds of generation. One NVIDIA GeForce RTX 5090 on FastVideo. 🤯🚀…",
+      "summary": "Sky Computing Lab 发布 FastWan-QAD 视频生成模型系列，基于 FastVideo 的量化感知蒸馏（QAD）方案训练。在单张 NVIDIA GeForce RTX 5090 上，端到端生成一段 5 秒 480P 视频仅需 1.8 秒。模型、代码及博客已开源。",
+      "url": "https://x.com/haoailab/status/2069493820732170695",
+      "source": "AI HOT · X：Sky Computing Lab (@haoailab)",
+      "category": "ai-models",
+      "published": "2026-06-24 02:52",
+      "id": "cmqr15pz20fjzslp5eps5gotw"
+    },
+    {
+      "title": "Krea 2 技术报告正式发布",
+      "title_en": "our technical report is out. deep dive on the data， architecture， and training techniques used to c…",
+      "summary": "我们的技术报告已发布。\n\n深入解析创建 Krea 2 所用的数据、架构及训练技巧。\n\nhttps：//www.krea.ai/blog/krea-2-technical-report",
+      "url": "https://x.com/krea_ai/status/2069473417804591191",
+      "source": "AI HOT · X：Krea AI (@krea_ai)",
+      "category": "ai-models",
+      "published": "2026-06-24 01:31",
+      "id": "cmqqxfykz0ehkslp55nlmaje0"
+    },
+    {
+      "title": "思考即回忆：推理如何解锁LLM中的参数化知识",
+      "title_en": "Thinking to recall： How reasoning unlocks parametric knowledge in LLMs",
+      "summary": "Google Research研究发现，推理（chain-of-thought）能帮助大语言模型（LLM）回忆简单事实，即使这些事实无需复杂推导。在Gemini-2.5 Flash和Pro以及Qwen3-32B上，启用推理后模型能够回答原本无法直接回答的简单问题，pass@k显示正确事实存在于输出分布中。该现象由两个机制驱动：一是生成的推理token充当计算缓冲，允许模型进行隐藏计算以提取参数化知识；二是推理过程中产生的相关事实起到启动效应（factual priming），帮助模型激活正确答案。",
+      "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms",
+      "source": "AI HOT · Google Research：Blog（网页）",
+      "category": "paper",
+      "published": "2026-06-24 00:00",
+      "id": "cmqsbr8l701ndslfubzp0hnmi"
+    },
+    {
+      "title": "GitHub联合开源联盟呼吁修改加州AI透明度法案以保护开源",
+      "title_en": "GitHub joins coalition advocating for fixes to California AI Transparency Act to protect open source",
+      "summary": "GitHub 联合 Black Forest Labs、Hugging Face 与 Mozilla Corporation 组成开源联盟，呼吁对加州 AI 透明度法案（SB 942，拟由 SB 1000 修正）进行针对性修改。当前草案要求开发者在下游用户未履行义务时撤销开源许可证，这与开源许可证永久不可撤销的性质冲突。联盟认为该要求非必要，已有直接监管和执法机制，并建议参考欧盟 AI 法案的透明度实践规范，以向下游用户通知最佳实践文档的方式替代撤销条款。GitHub 支持这些修正，以在保持透明度目标的同时兼容开源开发模式。",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source",
+      "source": "AI HOT · GitHub Blog",
+      "category": "industry",
+      "published": "2026-06-23 23:48",
+      "id": "cmqr1y54m0frmslp5b6e6js37"
+    },
+    {
+      "title": "Mistral OCR 4",
+      "title_en": null,
+      "summary": "Mistral AI 发布 OCR 4，新增边界框、块分类（标题、表格、方程式、签名等）及逐页逐词置信度分数。支持 170 种语言、10 个语系，可单容器全自托管部署。在 OlmOCRBench 上得分 85.20，独立标注者偏好率平均 72%。定价每 1000 页 $4，Batch API 享 50% 折扣。可通过 API 或 Mistral Studio 的 Document AI 调用。",
+      "url": "https://mistral.ai/news/ocr-4",
+      "source": "AI HOT · Mistral AI：News（网页）",
+      "category": "ai-models",
+      "published": "2026-06-23 22:24",
+      "id": "cmqqqkqoh0chzslp5i6l20j5q"
+    },
+    {
+      "title": "无限制OCR：单次长时域解析",
+      "title_en": null,
+      "summary": "Unlimited OCR 是一个托管在 GitHub 的项目，实现单次长时域解析（One-Shot Long-Horizon Parsing），旨在一次性处理长时间跨度的 OCR 任务。",
+      "url": "https://github.com/baidu/Unlimited-OCR",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "ai-products",
+      "published": "2026-06-23 21:32",
+      "id": "cmqqpk6qr0c7cslp5tgwky5n0"
+    },
+    {
+      "title": "IBM 开源 CUGA：轻量级智能体框架，提供二十余个单文件示例应用",
+      "title_en": "Build real agentic apps using CUGA： two dozen working examples on a lightweight harness",
+      "summary": "IBM 开源了 CUGA（Configurable Generalist Agent），一个处理规划、执行循环、工具调用和状态管理的轻量级智能体框架。开发者只需提供工具列表和提示词即可构建 CugaAgent。内置计划-执行-反思循环，在 AppWorld（2025年7月-2026年2月）和 WebArena（2025年2月-9月）基准上排名第一。支持 Fast / Balanced / Accurate 三种推理模式，代码执行可在本地、Docker 或 E2B 沙箱中运行。可互换工具支持 OpenAPI、MCP 和 LangChain 函数，通过环境变量一键切换 OpenAI、watsonx、Ollama 等提供商。随框架发布二十余个单文件示例应用，涵盖电影推荐、IBM Cloud 架构顾问等场景，每个应用仅需一个 FastAPI 文件。",
+      "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-23 20:51",
+      "id": "cmqqo96e30bv9slp5ds265bki"
+    },
+    {
+      "title": "网易有道发布 Confucius4-TTS：14 语种跨语种无口音语音克隆开源模型",
+      "title_en": "网易发布 Confucius4-TTS：业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型，3 秒音频即可克隆音色",
+      "summary": "网易有道推出\"子曰 4.0\"TTS 引擎 Confucius4-TTS，声称是业内首个支持 14 种语言跨语种无口音、且无需参考文本即可完成语音克隆的开源模型。用户仅需 3 秒音频即可实现零样本音色克隆，克隆音色与原声相似度超 85%，任务准确度达 97%。模型支持中文、英语等 14 种语言，首创音频 Prompt 情感克隆迁移。底层采用 GPT 式语义大模型、SSL 预训练特征与 ECAPA-TDNN 说话人编码器、Flow Matching 框架。已全量开源（Apache 协议），提供 54GB 资源包供本地部署。",
+      "url": "https://www.ithome.com/0/967/636.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "ai-models",
+      "published": "2026-06-23 19:00",
+      "id": "cmqqjmnoj0af8slp5kb7ky21w"
+    },
+    {
+      "title": "国内首个高考志愿AI测评出炉，千问多项表现超过资深咨询师",
+      "title_en": null,
+      "summary": "友松实验室发布国内首个高考志愿AI能力测评报告，测试千问高考志愿填报Agent四大模块。与53位平均从业4.6年的人类咨询师对照，千问表现更稳定精确：44道事实题全对；模拟10个志愿中6个可录取；100场匿名对比中专家58次倾向千问回答。使用千问辅助后，人类咨询师正确率提升，耗时减少约27%。该Agent基于千问高考志愿大模型和夸克8年高考数据，覆盖约3000所院校、2000多个专业。",
+      "url": "https://mp.weixin.qq.com/s/oGHVP4MgGS1rbmT8s8St8Q",
+      "source": "AI HOT · 公众号：千问APP（阿里）",
+      "category": "ai-products",
+      "published": "2026-06-23 18:54",
+      "id": "cmqqjmqyn0afsslp5fgdp81yv"
+    },
+    {
+      "title": "五眼联盟警告：AI网络威胁数月内将影响普通用户",
+      "title_en": "Top spy agencies say AI cyber threats will impact you within months. Here's why",
+      "summary": "2026年6月22日，五眼联盟（美、英、加、澳、新）网络安全部门联合警告，即将到来的AI模型（如OpenAI的GPT-5.5-Cyber、Anthropic的Mythos）将降低编写复杂攻击代码的门槛。自动化智能体可全天候扫描互联网漏洞，大幅缩短安全窗口期。AI驱动的超个性化钓鱼诈骗已在亚太蔓延，印度2026年初勒索软件事件激增165%。五眼联盟建议企业部署自动化防御AI，个人用户开启多因素认证、删除闲置账户。",
+      "url": "https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats",
+      "source": "AI HOT · Artificial Intelligence News（RSS）",
+      "category": "industry",
+      "published": "2026-06-23 16:00",
+      "id": "cmqqdbcno08taslp5yd9dbxjt"
+    },
+    {
+      "title": "京东全栈开源JoyAI-VL-Interaction，从\"一问一答\"走向\"边看边说\"",
+      "title_en": "京东全栈开源JoyAI-VL-Interaction，让大模型从\"一问一答\"走向\"边看边说\"",
+      "summary": "京东近日开源全球首个全栈交互模型JoyAI-VL-Interaction，获vLLM-Omni原生支持。该模型能持续观察视频流、主动判断关键事件并实时响应，支持将复杂任务委托后台Agent处理。在58个真人盲评中，对比豆包视频通话助手胜率77.6%，对比Gemini视频通话助手胜率87.9%，监控预警场景达100%胜率。开源内容包括模型权重、交互数据集、训练方案及完整可部署系统，支持摄像头、直播流等视频输入及语音交互、长期记忆、vLLM部署，适用于安防监控、老人看护、直播讲解等实时场景。",
+      "url": "https://mp.weixin.qq.com/s/IY6XGp4k6VgD9ZPH6YprCA",
+      "source": "AI HOT · 公众号：京东JoyAI",
+      "category": "ai-models",
+      "published": "2026-06-23 14:04",
+      "id": "cmqq8ww0e07m4slp5mk5snl0z"
+    },
+    {
+      "title": "豆包音频生成模型1.0发布，重新定义AI音频创作",
+      "title_en": null,
+      "summary": "火山引擎正式发布豆包音频生成模型1.0（Doubao-Seed-Audio 1.0），支持文本与音频参考生成，端到端输出目标音频。单条Prompt可编排多角色对白、情绪语气、背景音乐及环境氛围，长时生成中保持多角色音色一致性，无需后期多轨混音。模型支持0样本多模态输入，无需额外训练即可生成；实现音色与风格解耦控制及\"一声多角\"能力。一次支持2分钟音频创作，多次延长保持音色统一。已开启火山方舟API邀测，个人用户享30分钟创作额度，即将上线剪映、即梦、番茄等产品。",
+      "url": "https://mp.weixin.qq.com/s/iL0uyUjOMUEfudeuDP6wQQ",
+      "source": "AI HOT · 公众号：火山引擎",
+      "category": "ai-models",
+      "published": "2026-06-23 13:41",
+      "id": "cmqq876yf07gsslp5eix31xaq"
+    },
+    {
+      "title": "Qwen-AgentWorld：面向通用智能体的语言世界模型",
+      "title_en": "Qwen-AgentWorld： Language World Models for General Agents",
+      "summary": "Qwen 团队发布 Qwen-AgentWorld，一个以环境建模为训练目标的原生语言世界模型，在单个模型中模拟 MCP、Search、Terminal、SWE 及 GUI 域（Web、OS、Android）共七个域。模型使用超 1000 万条真实交互轨迹训练，在 AgentWorldBench 上以 Qwen-AgentWorld-397B-A17B 版本达最高模拟质量，超越 GPT-5.4、Claude Opus 4.8 和 Gemini 3.1 Pro。同时发布评测基准 AgentWorldBench。该模型可作为解耦环境模拟器用于智能体 RL 训练，也可作为统一智能体基础模型，经 LWM 预热后无需智能体 RL 微调即可迁移。模型和基准已开源在 Hugging Face 和 ModelScope。",
+      "url": "https://qwen.ai/blog?id=qwen-agentworld",
+      "source": "AI HOT · Qwen：Blog Retrieval（API）",
+      "category": "ai-models",
+      "published": "2026-06-23 11:30",
+      "id": "cmqrjhuo40kszslp5qsjmxdy7"
+    },
+    {
+      "title": "Seed2.1 正式发布，深入 AI 生产力",
+      "title_en": "Seed2.1 正式发布，深入 AI 生产力",
+      "summary": "字节Seed发布Seed2.1系列，面向真实生产力场景的智能体，强化通用Agent能力、代码工程交付与多模态理解。Seed2.1 Pro在GDPval基准获最高分，Agents' Last Exam位列参评模型第一梯队；MobileWorld手机GUI任务最高分，CreativeWork多环境任务表现突出。多模态在CharXiv-RQ等多项基准取得SOTA。代码能力上，Seed2.1 Pro在NL2Repo-Bench表现良好，开发者评测相比Claude Opus 4.6获59.1%胜率。模型已在豆包、TRAE上线，API通过火山方舟提供。",
+      "url": "https://seed.bytedance.com/zh/blog/seed2-1-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83-%E6%B7%B1%E5%85%A5-ai-%E7%94%9F%E4%BA%A7%E5%8A%9B",
+      "source": "AI HOT · 字节 Seed：Research Feed（网页内嵌数据）",
+      "category": "ai-models",
+      "published": "2026-06-23 08:02",
+      "id": "cmqq5ns6p06scslp5dlnxluux"
+    },
+    {
+      "title": "推理模型的思考Token真的有助于提升安全性吗？--来自GPT-OSS、Qwen、Olmo和Phi家族的证据",
+      "title_en": "Do Thinking Tokens Help with Safety？",
+      "summary": "对GPT-OSS、Qwen、Olmo和Phi系列前沿开源推理模型的研究发现，所谓的\"思考token\"并未带来真正的安全性深思熟虑。模型是否拒绝或服从指令，在第一个token的",
+      "url": "https://arxiv.org/abs/2606.25013",
+      "source": "AI HOT · HuggingFace Daily Papers（社区热门论文）",
+      "category": "paper",
+      "published": "2026-06-23 08:00",
+      "id": "cmqtxwj4g006oslcv6jp1vwpy"
+    },
+    {
+      "title": "OpenRouter推出统一图像API",
+      "title_en": "Introducing the Unified Image API",
+      "summary": "OpenRouter推出统一图像API，整合Google、OpenAI、Black Forest Labs、Recraft、ByteDance、Sourceful、Microsoft、xAI等30+模型。新API提供标准化请求格式，通过`/api/v1/images/models`端点返回每个模型的分辨率、宽高比、输出数量、输入参考图数量、种子等能力描述；通过`/api/v1/images/models/{id}/endpoints`端点获取具体服务商的定价与参数支持（如Seedream 4.5每张$0.04、FLUX.2 Pro每百万像素$0.03、GPT-5.4 Image 2按token计费）。OpenAI的GPT 5系列图像模型支持SSE流式预览，启用`\"stream\"： true`即可边生成边返回预览。新图像模型将仅添加至专用API，建议现有用户切换。",
+      "url": "https://openrouter.ai/blog/announcements/image-api",
+      "source": "AI HOT · OpenRouter：Announcements（RSS）",
+      "category": "ai-products",
+      "published": "2026-06-23 08:00",
+      "id": "cmqrzsyiz0poxslp5pyonhkdy"
+    },
+    {
+      "title": "NatureBench：AI编码智能体能否匹配Nature系列论文已发表SOTA？",
+      "title_en": "NatureBench： Can Coding Agents Match the Published SOTA of Nature-Family Papers？",
+      "summary": "NatureBench是一个跨学科基准测试，包含90个从Nature系列同行评审论文中提取的任务，用于评估AI编码智能体能否超越复现、实现发现。基准基于NatureGym自动化管线，为每个任务提供标准化容器化环境，解决环境碎片化问题。在严格禁用网络搜索的协议下评估10种前沿智能体配置，最强模型仅在17.8%任务上超过已发表SOTA（g>0.1准则）。分析表明，智能体成功主要依赖方法论翻译，失败主因为方法选择错误和计算预算不足。已发布基准、NatureGym管线及公共排行榜。",
+      "url": "https://arxiv.org/abs/2606.24530",
+      "source": "AI HOT · HuggingFace Daily Papers（社区热门论文）",
+      "category": "ai-products",
+      "published": "2026-06-23 08:00",
+      "id": "cmqrjiayk0kt7slp5tfl88svb"
+    },
+    {
+      "title": "九位评委，两个有效投票：相关错误削弱LLM评审面板",
+      "title_en": "Nine Judges， Two Effective Votes： Correlated Errors Undermine LLM Evaluation Panels",
+      "summary": "苹果机器学习研究团队发现，LLM-as-a-judge面板因模型间高度相关而严重受限。对7个模型家族的9个前沿大语言模型在3个自然语言推理数据集上的测试表明，9位评委实际仅提供约2个独立投票的信息量，面板准确率比独立投票理想值低8-22个百分点，最佳单一模型的表现已匹敌或超越整个面板。增加评委数量或改进聚合算法收效甚微，即使允许算法获取正确答案也仅能缩小至多11%的差距。该结论在多种提示变体、温度设置及偏好任务中均得到验证，瓶颈在于评委间的相关性而非聚合算法。",
+      "url": "https://machinelearning.apple.com/research/correlated-llm-evaluation-panels",
+      "source": "AI HOT · Apple Machine Learning Research（RSS）",
+      "category": "paper",
+      "published": "2026-06-23 08:00",
+      "id": "cmqr02j580f8oslp5i6wajucu"
+    },
+    {
+      "title": "在 Transformers.js 中实验提议的跨源存储 API",
+      "title_en": "Experimenting with the proposed Cross-Origin Storage API in Transformers.js",
+      "summary": "Transformers.js 在浏览器中运行 AI 模型时，不同来源的 Web 应用会重复下载并缓存相同的模型资源（如 Xenova/whisper-tiny.en）和 Wasm 运行时文件（如 4，733 kB 的 ort-wasm-simd-threaded.asyncify.wasm），即使资源 URL 相同，浏览器因 Network Isolation Key 隔离缓存，单次 demo 就产生 177 MB 冗余下载和存储。Cross-Origin Storage API 是一项早期提案，旨在让跨来源应用共享缓存的模型和运行时资源。目前该 API 尚未在浏览器原生实现，但可通过 Chrome 扩展注入 polyfill 进行实验。",
+      "url": "https://huggingface.co/blog/cross-origin-storage",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-23 08:00",
+      "id": "cmqqz7cqg0ezbslp5zr85m87l"
+    },
+    {
+      "title": "huggingface_hub 实现每周发布：AI、开源工具、人工审核闭环",
+      "title_en": "Shipping huggingface_hub every week with AI， open tools， and a human in the loop",
+      "summary": "Hugging Face 将 huggingface_hub 的发布周期从每 4-6 周缩短至每周，全部由单个 GitHub Actions 工作流自动完成。流程依赖开源工具和开权重模型（当前为 Z.ai 的 GLM-5.2）来起草发布说明和 Slack 公告，但保留人类在最终审核环节的决定权。自动步骤包括版本号更新、提交标签推送、PyPI 发布、下游测试分支创建、发布说明草稿、Slack 公告草稿、归档、后置版本提升以及对合入 PR 的评论。所有组件均基于开源生态构建，任何维护者都可直接复制使用。",
+      "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
+      "source": "AI HOT · Hugging Face：Blog（RSS）",
+      "category": "tip",
+      "published": "2026-06-23 08:00",
+      "id": "cmqqd9e3008seslp5644lhzaa"
+    },
+    {
+      "title": "美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认\"最常见滥用\"",
+      "title_en": "由\"群情\"驱使的警察局长们尾随女性，这说明了为何需要搜查令",
+      "summary": "伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读取系统及州警察数据库，跟踪6名认识的人，其中3人为前女友，并对其中一人的前男友车牌查询140次（86次脱岗），持续18个月。全美至少18起类似案例：佐治亚州Braselton警察局长、爱达荷州Jerome县警长（700余次查询其妻车牌）等均因此辞职或被捕。Flock首席法务官Dan Haley承认，滥用该系统\"最常见情况\"就是跟踪前女友。Flock称系统只跟踪车辆，但案例表明车辆是手段，人是目标。",
+      "url": "https://ipvm.com/reports/police-chiefs-track",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "industry",
+      "published": "2026-06-23 05:32",
+      "id": "cmqpqqsrw030aslp5c0jt14yr"
+    },
+    {
+      "title": "Show HN：Oak--专为代理设计的 Git 替代方案",
+      "title_en": "Show HN： Oak--专为代理设计的 Git 替代方案",
+      "summary": "Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE3 内容哈希、内容定义分块、diff/merge 及 Blob/Manifest/Commit/Tree 数据模型，可选 SQLite 和 git 后端。以分支-会话为基本工作单元，用分支描述替代逐次提交，通过内容寻址懒加载使智能体数秒内编辑任意仓库。速度远超 git。已发布公开测试版 v0.99.0，支持 macOS（Apple Silicon）、Linux（x86_64）及 Windows，可通过 curl 或 cargo 安装，Apache-2.0 开源。",
+      "url": "https://oak.space/oak/oak",
+      "source": "AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",
+      "category": "ai-products",
+      "published": "2026-06-23 05:00",
+      "id": "cmqppo7c402qnslp5p92n6y3b"
+    },
+    {
+      "title": "AI 治理清单：LLM 架构先行",
+      "title_en": "AI Governance Checklist： Your LLM Architecture Comes First",
+      "summary": "Deloitte 报告显示企业 AI 抱负与治理成熟度之间差 53 个百分点，74% 计划两年内部署智能体 AI，仅 21% 拥有成熟治理模型。路由架构是首个治理层。三种姿态--托管网关（如 OpenRouter、Portkey）、自托管网关（如 LiteLLM）和直接 API--默认治理能力不同，直接 API 缺乏统一控制面，造成治理盲区。治理清单可映射为资产盘点、问责制、访问控制、证据记录与合规性五大支柱。路由层能提供跨团队可见性与审计证据，而电子表格不能。",
+      "url": "https://openrouter.ai/blog/insights/ai-governance-checklist",
+      "source": "AI HOT · OpenRouter：Announcements（RSS）",
+      "category": "tip",
+      "published": "2026-06-23 03:00",
+      "id": "cmqpyc83704y0slp54f6dv3w7"
+    },
+    {
+      "title": "Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具",
+      "title_en": "Google DeepMind bets $75M on AI's future in Hollywood with A24 deal",
+      "summary": "Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发电影制作 AI 工具。A24 出品过《万事俱备》《后室》等影片。Google DeepMind CEO Demis Hassabis 称，希望通过与艺术家直接合作，打造支持创意表达的 AI 功能。此举是好莱坞最新一次科技公司与电影 AI 联手，此前 Netflix 已收购 Ben Affleck 的 AI 工具公司 Interpositive，亚马逊 MGM 工作室也在去年设立了影视 AI 部门。",
+      "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal",
+      "source": "AI HOT · TechCrunch：AI（RSS）",
+      "category": "industry",
+      "published": "2026-06-23 02:49",
+      "id": "cmqpl4smd01j1slp5npj3krmn"
+    },
+    {
+      "title": "东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu",
+      "title_en": "Sakana AI 是2023年在东京成立的AI研发公司，核心定位是开发\"自然启发\"（nature-inspired）的AI模型。 强调集体智能（collective intelligence）和演…",
+      "summary": "Sakana AI 是 2023 年成立于东京的 AI 公司，由前 Google Brain 的 David Ha（CEO）、Transformer 论文共同作者 Llion Jones（CTO）及前日本外交官 Ren Ito（主席）联合创立。其产品 Sakana Fugu 将多智能体系统封装成单个 API 调用，内部自动拆解任务、调度全球模型并验证结果。Fugu Ultra 在工程、科学、推理等基准上对标 Fable/Mythos，通过动态编排多模型天然绕开单一供应商出口管制风险，被视为将多智能体从复杂工程变为开箱即用的产品形态。",
+      "url": "https://x.com/berryxia/status/2069090959938466298",
+      "source": "AI HOT · X：Berry Xia (@berryxia)",
+      "category": "ai-products",
+      "published": "2026-06-23 00:11",
+      "id": "cmqpez1uu001gslp5j4h23mih"
+    },
+    {
+      "title": "Foundation(opens in a new window)",
+      "summary": "",
+      "url": "https://openaifoundation.org",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Try ChatGPT(opens in a new window)",
+      "summary": "",
+      "url": "https://chatgpt.com/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Engineering",
+      "summary": "",
+      "url": "https://openai.com/news/engineering/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Global Affairs",
+      "summary": "",
+      "url": "https://openai.com/news/global-affairs/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "AI Adoption",
+      "summary": "",
+      "url": "https://openai.com/news/ai-adoption/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "How HP is scaling early AI wins across the enterpriseCompanyJun 28, 2026",
+      "summary": "",
+      "url": "https://openai.com/index/hp-frontier-partnership/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Previewing GPT-5.6 Sol: a next-generation modelProductJun 26, 2026",
+      "summary": "",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "GPT‑5.6 Preview System CardSafetyJun 26, 2026(opens in a new window)",
+      "summary": "",
+      "url": "https://deploymentsafety.openai.com/gpt-5-6-preview",
+      "source": "OpenAI News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "How to get support",
+      "summary": "",
+      "url": "https://support.claude.com/en/articles/9015913-how-to-get-support",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Download press kit",
+      "summary": "",
+      "url": "https://anthropic.com/press-kit",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "ProductJun 23, 2026Introducing Claude TagClaude Tag is a new way for teams to work with Claude.",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/introducing-claude-tag",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "AnnouncementsJun 2, 2026Expanding Project GlasswingWe’re extending Project Glasswing to approximately 150 new organizations in more than fifteen countries.",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Jun 17, 2026AnnouncementsAnthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Jun 12, 2026AnnouncementsStatement on the US government directive to suspend access to Fable 5 and Mythos 5",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Jun 12, 2026AnnouncementsResults from the first Anthropic Public Record",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/anthropic-public-record",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Jun 12, 2026AnnouncementsTCS and Anthropic partner to bring Claude to regulated industries",
+      "summary": "",
+      "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+      "source": "Anthropic News",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Explore models",
+      "summary": "",
+      "url": "https://deepmind.google/models/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "GeminiBuild intelligent agents",
+      "summary": "",
+      "url": "https://deepmind.google/models/gemini/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Gemini OmniCreate anything from anything",
+      "summary": "",
+      "url": "https://deepmind.google/models/gemini-omni/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Nano BananaCreate and edit detailed images",
+      "summary": "",
+      "url": "https://deepmind.google/models/gemini-image/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Gemini AudioTalk, create and control audio",
+      "summary": "",
+      "url": "https://deepmind.google/models/gemini-audio/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "VeoGenerate cinematic video with audio",
+      "summary": "",
+      "url": "https://deepmind.google/models/veo/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "ImagenGenerate high-quality images from text",
+      "summary": "",
+      "url": "https://deepmind.google/models/imagen/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "LyriaGenerate high fidelity music and audio",
+      "summary": "",
+      "url": "https://deepmind.google/models/lyria/",
+      "source": "Google DeepMind Blog",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Microsoft AI",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Frontier Transformation",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/frontier-transformation",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "AI for business",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/ai-business-value-and-benefits",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Consumer goods",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/consumer-goods",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Digital sovereignty",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/sovereignty",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Power and utilities",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/energy-resources/power-utilities",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Oil and gas",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/energy-resources/oil-gas",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "Capital markets",
+      "summary": "",
+      "url": "https://www.microsoft.com/en-us/ai/financial-services/capital-markets",
+      "source": "Microsoft AI",
+      "category": "ai-models",
+      "published": "2026-06-29 13:03"
+    },
+    {
+      "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
+      "summary": "",
+      "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+      "source": "HuggingFace Blog",
+      "category": "ai-models",
+      "published": "2026-06-22 21:18"
+    },
+    {
+      "title": "We got local models to triage the OpenClaw repo for FREE!*",
+      "summary": "",
+      "url": "https://huggingface.co/blog/local-models-pr-triage",
+      "source": "HuggingFace Blog",
+      "category": "ai-models",
+      "published": "2026-06-22 08:00"
+    },
+    {
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "summary": "",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "source": "HuggingFace Blog",
+      "category": "ai-models",
+      "published": "2026-06-19 02:13"
+    },
+    {
+      "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
+      "summary": "\"Mistakenly we thought that by just introducing artificial intelligence ... that would produce a high-quality product.”",
+      "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-29 03:05"
+    },
+    {
+      "title": "Why Wall Street thinks US memory maker Micron is the next Nvidia",
+      "summary": "Eager to find more public AI-related companies that may do as well as Nvidia, Wall Street investors think they've found a winner with Micron.",
+      "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-28 23:00"
+    },
+    {
+      "title": "SoftBank’s CEO isn’t the only one with questions about Elon Musk’s orbital data center hype",
+      "summary": "Not everyone is buying Elon Musk’s vision for orbital data centers.",
+      "url": "https://techcrunch.com/2026/06/27/softbanks-ceo-isnt-the-only-one-with-questions-about-elon-musks-orbital-data-center-hype/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-28 04:42"
+    },
+    {
+      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
+      "summary": "Paul Meade, the Apple vice president in charge of the Vision Pro headset, is reportedly leaving the company to join OpenAI’s hardware team.",
+      "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-28 00:45"
+    },
+    {
+      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+      "summary": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
+      "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 22:00"
+    },
+    {
+      "title": "Asian AI startups launch Mythos-like  models as Anthropic’s export ban drags on",
+      "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
+      "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 20:00"
+    },
+    {
+      "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+      "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+      "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 09:01"
+    },
+    {
+      "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+      "summary": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global partners who need them.”",
+      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 02:32"
+    },
+    {
+      "title": "OpenAI poaches Uber India chief to lead its biggest market outside the US",
+      "summary": "The hire marks OpenAI's latest push into India, expanding offices, partnerships and hiring.",
+      "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 02:19"
+    },
+    {
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.&#160;&#160; OpenAI just shared its plans to spice things up with&#160;Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal&#160;is&#160;less&#160;of&#160;a [&#8230;]",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "source": "TechCrunch AI",
+      "category": "industry",
+      "published": "2026-06-27 01:43"
+    },
+    {
+      "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
+      "summary": "<p>For a quarter century, the Google search box has been one of the most recognizable interfaces in computing: a thin white rectangle, a blinking cursor, a few typed words, and a list of blue links. On Tuesday, Google will formally retire that paradigm.</p><p>At its annual <a href=\"https://io.google/2026/\">I/O developer conference</a>, Google announced a <a href=\"https://blog.google/products-and-platforms/products/search/search-io-2026/\">sweeping redesign</a> of the search box itself — the liter",
+      "url": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-05-20 01:45"
+    },
+    {
+      "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
+      "summary": "<p><a href=\"https://railway.com/\">Railway</a>, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence applications exposes the limitations of legacy cloud infrastructure.</p><p><a href=\"https://tq.vc/\">TQ Ventures</a> led the round, with participation from <a href=\"https://fpvventures.com/\">FPV Ventures</a>",
+      "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-22 22:00"
+    },
+    {
+      "title": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "summary": "<p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href=\"https://claude.com/product/claude-code\">Claude Code</a>, Anthropic&#x27;s terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its <a href=\"https://claude.com/pricing\">pricing</a> — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims",
+      "url": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-19 22:00"
+    },
+    {
+      "title": "Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews",
+      "summary": "<p>Alfred Wahlforss was running out of options. His startup, <a href=\"https://listenlabs.ai/\">Listen Labs</a>, needed to hire over 100 engineers, but competing against Mark Zuckerberg&#x27;s <a href=\"https://news.bloomberglaw.com/employee-benefits/zuckerbergs-100-million-ai-job-offers-pay-off-parmy-olson\">$100 million offers</a> seemed impossible. So he spent $5,000 — a fifth of his marketing budget — on a <a href=\"https://billboardinsider.com/ai-startup/\">billboard in San Francisco</a> displayi",
+      "url": "https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-16 22:01"
+    },
+    {
+      "title": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"https://slack.com/help/articles/202026038-An-introduction-to-Slackbot\">Slackbot</a>, the company&#x27;s workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data, drafting documents, and taking action on behalf of employees.</p><p>The new Slackbot, now generally available to <a",
+      "url": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-13 21:00"
+    },
+    {
+      "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "summary": "<p><a href=\"https://www.anthropic.com/\">Anthropic</a> released <a href=\"https://claude.com/blog/cowork-research-preview\">Cowork</a> on Monday, a new AI agent capability that extends the power of its wildly successful <a href=\"https://claude.com/product/claude-code\">Claude Code</a> tool to non-technical users — and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself.</p><p>The launch marks a major inflection point i",
+      "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-12 19:30"
+    },
+    {
+      "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "summary": "<p><a href=\"https://nousresearch.com/\">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href=\"https://www.paradigm.xyz/\">Paradigm</a>, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems — trained in just four days using 48 of Nvidia&#x27;s latest <a href=\"https://www.nvidia.com/en-us/data-center/dgx-b200/\">B200 graphics processors</a>.</p><p>The model, called <a href=\"https:/",
+      "url": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
+      "source": "VentureBeat AI",
+      "category": "industry",
+      "published": "2026-01-08 04:00"
+    },
+    {
+      "title": "AI won't become a real coworker until it stops answering and starts finishing tasks",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1072\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/ai-chatbot-digital-colleague-generated-image-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        A survey paper by Tencent and several Chinese universities traces the path from chatbot to \"digital colleague.\" AI systems won't become reliable coworkers, the researchers argue, until they finish entire tasks in persistent wor",
+      "url": "https://the-decoder.com/ai-wont-become-a-real-coworker-until-it-stops-answering-and-starts-finishing-tasks/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 20:51"
+    },
+    {
+      "title": "Coinbase joins the rush to Chinese AI models as Western labs face a pricing stress test",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/tokenization-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Coinbase CEO Brian Armstrong is switching his company to Chinese AI models like GLM 5.2 and Kimi 2.7. An automated routing system picks the best model for each request based on task and price, and better caching pushed the hit rate from 5 to 60 percent. Coinbase has cut its",
+      "url": "https://the-decoder.com/coinbase-joins-the-rush-to-chinese-ai-models-as-western-labs-face-a-pricing-stress-test/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 20:14"
+    },
+    {
+      "title": "Only three AI models finished above starting capital in a 500-day startup survival test",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/CEO-Bench-title.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Researchers at Princeton University built CEO-Bench, a test where AI agents have to run a fictional software company for 500 simulated days. Most current models go broke, and a simple rule-based heuristic with no AI beats nearly all of them.</p>\n<p>The article <a href=\"htt",
+      "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 18:16"
+    },
+    {
+      "title": "Chinese cybersecurity firm builds AI tools to rival Mythos and frames the race as cyber-nuclear deterrence",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/china_vs_usa_ai_race.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        360 founder Zhou Hongyi presents two AI security tools designed to compete with Anthropic's Mythos. One has already flagged 3,432 vulnerabilities. Zhou admits Chinese models trail Western ones by 20 to 30 percent, but compares Mythos to \"cyber nuclear weapons\" and cal",
+      "url": "https://the-decoder.com/chinese-cybersecurity-firm-builds-ai-tools-to-rival-mythos-and-frames-the-race-as-cyber-nuclear-deterrence/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 17:30"
+    },
+    {
+      "title": "Sina's open model VibeThinker-3B aims to show reasoning compresses well but factual knowledge doesn't",
+      "summary": "<p><img alt=\"An abstract illustration of data streams flowing into a faceted polyhedron, symbolizing an AI reasoning model.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/vibe-thinker-small-reasoning-model-generated-image-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Sina Weibo's VibeThinker-3B has just three billion parameters but matches models like DeepSeek V3.2 and Kimi K2",
+      "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 15:44"
+    },
+    {
+      "title": "Anthropic's Fable 5 could return within days as Trump administration prepares to lift restrictions",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1440\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/fable_5_logo-scaled.webp\" style=\"height: auto; margin-bottom: 10px;\" width=\"2560\" /></p>\n<p>        Anthropic's AI model, Fable 5, could be available again within days. According to Axios, the Trump administration is close to lifting the restrictions imposed on June 12 over safety concerns. The Pentagon and NSA still need to sign off.</p>\n<p>The article <a href=\"ht",
+      "url": "https://the-decoder.com/anthropics-fable-5-could-return-within-days-as-trump-administration-prepares-to-lift-restrictions/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-28 01:03"
+    },
+    {
+      "title": "Half of Claude users say AI can already handle half their work according to Anthropic survey",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/03/anthropic_office_work.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        About half of Claude users say AI can already handle 50 percent or more of their work tasks, according to a survey of roughly 9,700 users by Anthropic. In 12 months, 26 percent expect AI to cover 60 to 90 percent of their work. Early-career workers worry the most, wh",
+      "url": "https://the-decoder.com/half-of-claude-users-say-ai-can-already-handle-half-their-work-according-to-anthropic-survey/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-27 23:28"
+    },
+    {
+      "title": "J.P. Morgan sees a pile of red flags in the AI market",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/03/us_flag_wireframe.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        J.P. Morgan warns that there are \"signs of investor exuberance\" in AI markets. Just 42 AI companies in the S&#038;P 500 account for 65 to 80 percent of the index's total profits. The semiconductor rally is flashing technical patterns last seen during the dotcom bubble, a",
+      "url": "https://the-decoder.com/j-p-morgan-sees-a-pile-of-red-flags-in-the-ai-market/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-27 21:22"
+    },
+    {
+      "title": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
+      "summary": "<p><img alt=\"A hand wearing a work glove holds a digital gear and a ladder; arrows guide construction workers from the factory grounds to the smart city.\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/Raise-Us.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Former US Commerce Secretary Gina Raimondo has launched \"Raise Us,\" a bipartisan nonprofit to prepare American workers for AI-driven job shi",
+      "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-27 20:25"
+    },
+    {
+      "title": "Anthropic gets US approval to bring back Claude Mythos 5",
+      "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/05/glasswing_mythos_cybersecurity_anthropic-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Anthropic has US approval to redeploy Claude Mythos 5 for organizations running critical infrastructure. The company is still negotiating broader access and the return of Fable 5, with no timeline set.</p>\n<p>The article <a href=\"https://the-deco",
+      "url": "https://the-decoder.com/anthropic-gets-us-approval-to-bring-back-claude-mythos-5/",
+      "source": "The Decoder",
+      "category": "industry",
+      "published": "2026-06-27 17:43"
+    },
+    {
+      "title": "The Download: brain-melting heatwaves and unprecedented OpenAI restrictions",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Heat waves mess with your brain. Scientists are trying to figure out why. —Jessica Hamzelou It’s been hot in London this week. Really hot. A dangerous heat wave has hit Western&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/26/1139780/the-download-heatwaves-brain-health-openai-restrictions/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-26 20:10"
+    },
+    {
+      "title": "Heat waves mess with your brain. Scientists are trying to figure out why.",
+      "summary": "It’s been hot in London this week. Really hot. A dangerous heat wave has hit Western Europe. Yesterday, the UK recorded its highest ever June temperature at 36.1 °C (about 97 °F). But as the weather app on my phone confirmed, it felt like 39 °C. It’s frightening that we are seeing such temperatures in&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/26/1139760/heat-waves-mess-with-your-brain-scientists-are-trying-to-figure-out-why/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-26 17:00"
+    },
+    {
+      "title": "Repositioning retail for the AI era",
+      "summary": "Artificial intelligence is rapidly reshaping retail, but not in the ways consumers might immediately notice. The biggest transformation may not be flashy virtual try-ons or chatbot shopping assistants, but in how decisions are made behind the scenes: how products surface in search results, how inventory moves through supply chains, how engineers ship code faster, and&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-25 22:22"
+    },
+    {
+      "title": "The Download: Europe’s heat wave hits the grid, and IBM’s chip targets Moore’s Law",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Europe’s extreme heat is shutting down power plants Europe is in the middle of a record-breaking heat wave, and the grid is being pushed to its limits as people turn to&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/25/1139738/the-download-europe-heat-wave-ibm-chip-moores-law/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-25 20:10"
+    },
+    {
+      "title": "What Europe’s heat wave means for the power grid",
+      "summary": "It’s been hard to look away from headlines about the European heat wave this week. Temperatures are breaking records across the continent, and the weather is threatening lives, shutting down schools, and in one particularly ironic case, forcing the cancellation of a London Climate Action Week event about extreme heat.  As the summer ramps up&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/25/1139690/europe-heat-wave-grid/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-25 18:00"
+    },
+    {
+      "title": "IBM has unveiled chip technology that could help extend Moore’s Law another decade",
+      "summary": "IBM has built a new prototype chip with around 100 billion transistors on an area the size of a fingernail, which is twice the density of the company’s previous state-of-the-art technology announced in 2021. The design could pave the way for faster and more energy efficient computers for years to come. For more than half&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-25 18:00"
+    },
+    {
+      "title": "Europe’s extreme heat is shutting down power plants",
+      "summary": "Europe is in the middle of a record-breaking heat wave, and the grid is being pushed to its limits as people turn to fans and air-conditioning to try to stay cool. Some power plants won’t be online to help handle the load. On June 23, France saw its hottest day since record-keeping began in 1947.&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/24/1139676/europe-heat-power-plants/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-24 23:25"
+    },
+    {
+      "title": "The Download: introducing the Engineering issue",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Introducing: the Engineering issue We can’t fix everything, but we can be ambitious. We can take on the challenge of making the world better through human ingenuity. That’s what the new&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/24/1139658/the-download-introducing-engineering-issue/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-24 20:10"
+    },
+    {
+      "title": "Stripe, Anthropic, and OpenAI are backing an effort to stop respiratory infections",
+      "summary": "The common cold comes for us all—often more than once a year. And there is no way to prevent it. The best you can do is take vitamin C and stay away from people with the sniffles. Now the payment company Stripe, founded by brothers Patrick and John Collison, says it will fund a new&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/24/1139621/stripe-anthropic-and-openai-are-backing-an-effort-to-stop-respiratory-infections/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-24 20:00"
+    },
+    {
+      "title": "The emergence of the web data infrastructure layer for AI",
+      "summary": "AI is booming. New use cases are emerging each day. To capitalize on the technology’s potential, enterprises require data at scale. In many cases, though, the relevant information is blocked or unstructured, which limits its use by AI models.&#160; To understand this challenge, consider the foundation of the web itself. The web was not designed&#8230;",
+      "url": "https://www.technologyreview.com/2026/06/24/1139202/the-emergence-of-the-web-data-infrastructure-layer-for-ai/",
+      "source": "MIT Tech Review",
+      "category": "industry",
+      "published": "2026-06-24 19:59"
+    },
+    {
+      "title": "AI-Model Network: Concept, Current State and Future",
+      "summary": "arXiv:2606.27382v1 Announce Type: new \nAbstract: While the primary function of computers lies in computation and processing, the core value of the Internet is rooted in sharing and collaboration. Computers create the Internet, and the Internet empowers the value of computers. The rapid development of the Internet, cloud computing, and big data is pushing artificial intelligence into the era of large models (LMs). However, the practical application of LMs is currently hindered by high training co",
+      "url": "https://arxiv.org/abs/2606.27382",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
+      "summary": "arXiv:2606.27443v1 Announce Type: new \nAbstract: Personality prompting shapes how large language models communicate, yet whether these behavioral shifts affect objective task outcomes remains under-explored. Prior work shows that agents prompted with low agreeableness produce adversarial language, while those prompted with high agreeableness become cooperative, but the relationship between communication style and task performance has not been systematically examined across multiple domains. In t",
+      "url": "https://arxiv.org/abs/2606.27443",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning",
+      "summary": "arXiv:2606.27483v1 Announce Type: new \nAbstract: Large language model (LLM) agents have demonstrated strong capability in sequential decision-making, yet they remains fundamentally reactive in long-horizon tasks. Unlike humans who employ \"what-if\" reasoning to evaluate potential plans before commitment, standard agents lack an internal world model to simulate future outcomes. Therefore, we propose to internalize future-aware planning by training a single autoregressive model to verbalize both a ",
+      "url": "https://arxiv.org/abs/2606.27483",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "Odyssey: Constructing Verifiable Local Truth-Preserving Foundation Models",
+      "summary": "arXiv:2606.27593v1 Announce Type: new \nAbstract: We introduce a categorical framework called ODYSSEY for constructing verifiable, local truth-preserving foundation models as compositions of foundries: building-block architectural components that specify a cover of local contexts, local representation families, restriction maps, gluing rules, obstruction policies, update obligations, and human-facing views. A foundry is an organized sheaf of knowledge that carries within it an argumentation compo",
+      "url": "https://arxiv.org/abs/2606.27593",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "DysLexLens: A Low-Resource LLM Framework for Analysing Dyslexic Learners Insights from Online Forums",
+      "summary": "arXiv:2606.27619v1 Announce Type: new \nAbstract: Dyslexic learners increasingly use artificial intelligence (AI) tools to support reading, writing, organisation, and study-related tasks. However, their lived experiences with these tools remain largely underexamined. This paper proposes DysLexLens, a low-resource LLM framework, designed to analyse dyslexic learners experience with AI through online forum discussions. DysLexLens is designed as an end-to-end, evidence-traceable architecture which t",
+      "url": "https://arxiv.org/abs/2606.27619",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "MER-R1: Multimodal Emotion Reasoning via Slow-Fast Thinking Synergy",
+      "summary": "arXiv:2606.27652v1 Announce Type: new \nAbstract: We find that explicit reasoning does not necessarily translate into better multimodal emotion recognition (MER) accuracy, even though it makes predictions more interpretable. Specifically, for reasoning-based MLLMs, fast thinking by triggering direct answers often outperforms slow thinking after deliberative reasoning. Our empirical analyses show that fast thinking improves recall with broader and more confident predictions, whereas slow thinking ",
+      "url": "https://arxiv.org/abs/2606.27652",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "ToE: A Hierarchical and Explainable Claim Verification Framework with Dynamic Multi-source Evidence Retrieval and Aggregation",
+      "summary": "arXiv:2606.27736v1 Announce Type: new \nAbstract: The rapid spread of fake news poses increasing threats to information ecosystems, especially as AI-generated misinformation under Generative Engine Optimization (GEO) poisoning allows adversarially crafted content to be systematically surfaced by retrieval systems, contaminating LLM reasoning. In this paper, we propose Tree of Evidence (ToE), a hierarchical evidence reasoning framework for automated fact-checking that models each claim as a dynami",
+      "url": "https://arxiv.org/abs/2606.27736",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "Towards Reliable and Robust LLM Planning: Symbolic Feedback-Driven Iterative Self-Refinement Framework",
+      "summary": "arXiv:2606.27757v1 Announce Type: new \nAbstract: Large language models (LLMs) have attracted widespread attention from academia and industry, yet their deployment raises critical security concerns regarding robustness and reliability. Planning, a core component of intelligent behavior, remains challenging for LLMs, which often produce infeasible or incorrect solutions in long-horizon decision-making tasks due to inherent complexity. In this paper, we propose a symbolic feedback-driven iterative ",
+      "url": "https://arxiv.org/abs/2606.27757",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "Understanding Rollout Error in Graph World Models",
+      "summary": "arXiv:2606.27780v1 Announce Type: new \nAbstract: World models are often used for planning by rolling learned dynamics forward. Many planning environments, however, are not vectors or images; they are graphs of agents, tools, skills, routes, and dependencies. In these settings, a local prediction error may stay local or spread through the graph, and the failure mode changes again when edges are predicted rather than fixed. This paper studies long-horizon rollout error in Graph World Models (GWMs)",
+      "url": "https://arxiv.org/abs/2606.27780",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "Grounded Iterative Language Planning: How Parameterized World Models Reduce Hallucination Propagation in LLM Agents",
+      "summary": "arXiv:2606.27806v1 Announce Type: new \nAbstract: World models for language agents come in two useful forms. An agent-based world model calls an LLM API and reasons flexibly in language, but its errors appear as hallucinated state changes that are hard to score with ordinary regression losses. A parameterized world model is a trained transition predictor; its errors are easier to measure with quantities such as NodeMSE, delta accuracy, and validity accuracy, but it is usually weaker as a standalo",
+      "url": "https://arxiv.org/abs/2606.27806",
+      "source": "arXiv cs.AI",
+      "category": "paper",
+      "published": "2026-06-29 12:00"
+    },
+    {
+      "title": "StanfordUniversity",
+      "summary": "",
+      "url": "http://www.stanford.edu",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Stanford Home",
+      "summary": "",
+      "url": "https://www.stanford.edu",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Maps & Directions",
+      "summary": "",
+      "url": "https://visit.stanford.edu/plan/",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Search Stanford",
+      "summary": "",
+      "url": "https://www.stanford.edu/search/",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Emergency Info",
+      "summary": "",
+      "url": "https://emergency.stanford.edu",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Terms of Use",
+      "summary": "",
+      "url": "https://www.stanford.edu/site/terms/",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Non-Discrimination",
+      "summary": "",
+      "url": "http://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Accessibility",
+      "summary": "",
+      "url": "https://www.stanford.edu/site/accessibility",
+      "source": "Stanford HAI",
+      "category": "paper",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
+      "summary": "Machine Intelligence",
+      "url": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-27 02:30"
+    },
+    {
+      "title": "Optimizing cloud economics with linear elastic caching",
+      "summary": "Algorithms & Theory",
+      "url": "https://research.google/blog/optimizing-cloud-economics-with-linear-elastic-caching/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-25 18:03"
+    },
+    {
+      "title": "Thinking to recall: How reasoning unlocks parametric knowledge in LLMs",
+      "summary": "Generative AI",
+      "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-25 00:51"
+    },
+    {
+      "title": "From pixels to planning: Earth AI for nature restoration",
+      "summary": "Climate & Sustainability",
+      "url": "https://research.google/blog/from-pixels-to-planning-earth-ai-for-nature-restoration/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-17 01:30"
+    },
+    {
+      "title": "Research into how AI can help users understand skin conditions",
+      "summary": "Health & Bioscience",
+      "url": "https://research.google/blog/research-into-how-ai-can-help-users-understand-skin-conditions/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-13 01:52"
+    },
+    {
+      "title": "A low-carbon computing platform from your retired phones",
+      "summary": "Climate & Sustainability",
+      "url": "https://research.google/blog/a-low-carbon-computing-platform-from-your-retired-phones/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-13 01:37"
+    },
+    {
+      "title": "New framework for auditing machine unlearning",
+      "summary": "Algorithms & Theory",
+      "url": "https://research.google/blog/new-framework-for-auditing-machine-unlearning/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-11 01:34"
+    },
+    {
+      "title": "Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG",
+      "summary": "Data Management",
+      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-05 19:26"
+    },
+    {
+      "title": "Towards passive heart health monitoring via smartphone camera",
+      "summary": "Health & Bioscience",
+      "url": "https://research.google/blog/towards-passive-heart-health-monitoring-via-smartphone-camera/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-05 03:47"
+    },
+    {
+      "title": "The next chapter in flood resilience: Open sourcing Google’s hydrology framework",
+      "summary": "Climate & Sustainability",
+      "url": "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework/",
+      "source": "Google Research Blog",
+      "category": "paper",
+      "published": "2026-06-04 02:37"
+    },
+    {
+      "title": "American Dynamism",
+      "summary": "",
+      "url": "https://a16z.com/american-dynamism/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Bio + Health",
+      "summary": "",
+      "url": "https://a16z.com/bio-health/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Cultural Leadership Fund",
+      "summary": "",
+      "url": "https://a16z.com/clf/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Infrastructure",
+      "summary": "",
+      "url": "https://a16z.com/infra/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "News & Content",
+      "summary": "",
+      "url": "https://a16z.com/news-content/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Investing in Netris",
+      "summary": "",
+      "url": "https://a16z.com/announcement/investing-in-netris/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Investing in Mirendil",
+      "summary": "",
+      "url": "https://a16z.com/announcement/investing-in-mirendil/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "The World-Building Doors Are Open, Again.",
+      "summary": "",
+      "url": "https://a16z.com/the-world-building-doors-are-open-again/",
+      "source": "a16z",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Our Founders",
+      "summary": "",
+      "url": "https://www.sequoiacap.com/our-founders/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Our Companies",
+      "summary": "",
+      "url": "https://www.sequoiacap.com/our-companies/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Ad Astra, SpaceXVideoWatch",
+      "summary": "",
+      "url": "https://x.com/sequoia/status/2065493491984326657",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Memory and Continual Learning: Engram’s Dan Biderman and Jessy LinTraining Data with Sonya Huang and Shaun MaguirePodcastListen",
+      "summary": "",
+      "url": "https://sequoiacap.com/podcast/memory-and-continual-learning-engrams-dan-biderman-and-jessy-lin/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Listen to the Marketby Alfred Lin and Abhishek MalaniPerspectiveRead",
+      "summary": "",
+      "url": "https://sequoiacap.com/article/listen-to-the-market/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "David Senra: Mute the World and Build Your OwnLong Strange Trip with Brian HalliganPodcastListen",
+      "summary": "",
+      "url": "https://sequoiacap.com/podcast/david-senra-mute-the-world-and-build-your-own/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "AI Ascent 2026by Team SequoiaPerspectiveRead",
+      "summary": "",
+      "url": "https://sequoiacap.com/article/ai-ascent-2026/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Services: The New Softwareby Julien BekPerspectiveRead",
+      "summary": "",
+      "url": "https://sequoiacap.com/article/services-the-new-software/",
+      "source": "Sequoia Capital",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "140 New Montgomery StreetSan Francisco, California94105",
+      "summary": "",
+      "url": "https://www.google.com/maps/place/140+New+Montgomery,+San+Francisco,+CA+94105/@37.7864994,-122.4021832,17z/data=!3m1!4b1!4m5!3m4!1s0x8085807d380012f5:0xf3923338188abd4a!8m2!3d37.7864994!4d-122.3999945",
+      "source": "Benchmark",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "2965 Woodside RoadWoodside, California94062",
+      "summary": "",
+      "url": "https://www.google.com/maps/place/2965+Woodside+Rd,+Woodside,+CA+94062/@37.4289736,-122.2533792,17z/data=!3m1!4b1!4m2!3m1!1s0x808fa41101f396e9:0xe451797e0a031998",
+      "source": "Benchmark",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "@benchmark »",
+      "summary": "",
+      "url": "https://twitter.com/benchmark",
+      "source": "Benchmark",
+      "category": "industry",
+      "published": "2026-06-29 13:05"
+    },
+    {
+      "title": "Christopher Golda and Grey Baker Join YC as General Partners",
+      "summary": "We're excited to announce that Christopher Golda and Grey Baker are joining YC as General Partners.",
+      "url": "https://www.ycombinator.com/blog/chris-golda-and-grey-baker-general-partners/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-06-17 00:14"
+    },
+    {
+      "title": "Diana Hu Is YC's Newest Managing Partner",
+      "summary": "We're thrilled to announce that Diana Hu has been promoted to Managing Partner at Y Combinator.\n\nFew people have built a startup from zero and also shipped tech to 100 million people. Diana has done both.",
+      "url": "https://www.ycombinator.com/blog/diana-hu-managing-partner/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-06-12 01:01"
+    },
+    {
+      "title": "Harshita Arora Joins YC as General Partner",
+      "summary": "We're thrilled to announce that Harshita Arora is joining Y Combinator as a General Partner.  She brings deep fintech and infrastructure experience, a founder's instinct for product, and the perspective of someone who's been building companies since she was a teenager.",
+      "url": "https://www.ycombinator.com/blog/welcome-harshita/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-04-07 00:00"
+    },
+    {
+      "title": "Adding Canada Back to Our List of Accepted Countries of Incorporation",
+      "summary": "After hearing feedback from Canadian founders in our network, we are adding Canada back to our list of accepted countries of incorporation.",
+      "url": "https://www.ycombinator.com/blog/adding-canada-back/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-02-06 01:00"
+    },
+    {
+      "title": "Congratulations to EquipmentShare on Going Public",
+      "summary": "Today, EquipmentShare (YC W15) goes public. From Missouri to 373 locations nationwide, they've built the operating system construction has been missing—built by contractors, for contractors. Congrats to Jabbok, Willy, and the EquipmentShare team on a huge milestone.",
+      "url": "https://www.ycombinator.com/blog/congratulations-to-equipmentshare/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-01-23 23:59"
+    },
+    {
+      "title": "Announcing the YC AI Stack",
+      "summary": "We've partnered with nearly two dozen companies to offer students who attend YC events a suite of over $25,000 in free credits for AI devtools.",
+      "url": "https://www.ycombinator.com/blog/the-yc-ai-student-starter-pack/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2026-01-17 04:40"
+    },
+    {
+      "title": "2026 Demo Day Dates",
+      "summary": "We’re excited to share the Demo Day dates for 2026 so founders, investors, and our broader community can plan ahead.",
+      "url": "https://www.ycombinator.com/blog/2026-demo-days/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2025-12-19 03:44"
+    },
+    {
+      "title": "Meesho Goes Public",
+      "summary": "Meesho goes public today. From S16 to IPO, they’ve built one of India’s largest e-commerce platforms—empowering millions of small merchants to grow their businesses.\n\nCongrats to Vidit and Sanjeev on a decade of relentless building and listening to users!",
+      "url": "https://www.ycombinator.com/blog/meesho-goes-public/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2025-12-10 12:32"
+    },
+    {
+      "title": "Congratulations to Groww",
+      "summary": "Today, Groww, India's leading digital investing platform, goes public. Tens of millions use Groww to invest simply and confidently in stocks, mutual funds, and ETFs. As YC's first company to list in India, we couldn't be more proud.",
+      "url": "https://www.ycombinator.com/blog/groww/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2025-11-12 11:47"
+    },
+    {
+      "title": "BillionToOne Goes Public — The Startup That Made Genetic Testing Universal",
+      "summary": "Today, BillionToOne goes public, becoming YC's fourth publicly traded biotech company. More importantly, they have built one of the most important genetic tests in the U.S. Today, 1 in 11 babies born in the US are tested with BillionToOne's fetal genetic test.",
+      "url": "https://www.ycombinator.com/blog/billiontoone/",
+      "source": "Y Combinator",
+      "category": "industry",
+      "published": "2025-11-06 23:52"
+    }
+  ]
+}
