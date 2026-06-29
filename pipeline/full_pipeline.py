@@ -471,11 +471,49 @@ def cluster_trends(articles):
     elif "general" in valid_themes:
         valid_themes["general"] = theme_articles.get("general", [])
 
-    log(f"聚类完成: {len(valid_themes)} 个主题组")
-    for t, arts in sorted(valid_themes.items(), key=lambda x: -len(x[1])):
+    # 去重合并：如果两个主题共享超过 50% 的文章，合并到文章更多的主题
+    theme_keys = sorted(valid_themes.keys(), key=lambda k: -len(valid_themes[k]))
+    merged_themes = {}
+    merged = set()
+    for i, t1 in enumerate(theme_keys):
+        if t1 in merged:
+            continue
+        merged_themes[t1] = valid_themes[t1]
+        urls_t1 = set(a.get("url", "") for a in valid_themes[t1] if a.get("url"))
+        for t2 in theme_keys[i + 1:]:
+            if t2 in merged:
+                continue
+            urls_t2 = set(a.get("url", "") for a in valid_themes[t2] if a.get("url"))
+            if urls_t1 and urls_t2:
+                overlap = len(urls_t1 & urls_t2)
+                if overlap >= min(len(urls_t1), len(urls_t2)) * 0.5:
+                    merged_themes[t1].extend(valid_themes[t2])
+                    merged.add(t2)
+                    theme_sources[t1].update(theme_sources[t2])
+        if t1 in merged_themes:
+            # 去重组内文章
+            seen = set()
+            deduped = []
+            for a in merged_themes[t1]:
+                u = a.get("url", "")
+                if u and u in seen:
+                    continue
+                if u:
+                    seen.add(u)
+                deduped.append(a)
+            merged_themes[t1] = deduped
+
+    # 重新过滤（合并后可能 <2）
+    final_themes = {}
+    for t, arts in merged_themes.items():
+        if len(arts) >= 2:
+            final_themes[t] = arts
+
+    log(f"聚类完成: {len(final_themes)} 个主题组（合并去重后）")
+    for t, arts in sorted(final_themes.items(), key=lambda x: -len(x[1])):
         log(f"  {t}: {len(arts)} 篇, {len(theme_sources.get(t, set()))} 来源")
 
-    return valid_themes, theme_sources
+    return final_themes, theme_sources
 
 
 # ==================== STEP 4: Trend 生成 ====================
@@ -583,12 +621,19 @@ def generate_trend(theme, articles, all_sources):
 
     # 生成标题
     titles = sorted(articles, key=lambda a: a.get("news_score", 0), reverse=True)
-    top_title = titles[0].get("title", "")[:60] if titles else ""
+    top_title = (titles[0].get("title", "")[:40] if titles else "")
 
-    # 根据主题选择标题
-    title = rnd.choice(tmpl["title_pfx"])
-    if top_title:
+    # 智能标题：当组内文章≥4篇时用模板标题；否则用 top article 标题做语义摘要
+    if len(articles) >= 4:
+        title = rnd.choice(tmpl["title_pfx"])
+        # 附带一个信号摘要使标题更具体
+        short_sig = top_title[:20]
+        if short_sig and short_sig not in title:
+            title = title + "：观测到集中信号"
+    else:
         title = top_title if len(top_title) <= 50 else top_title[:48] + ".."
+        if not title:
+            title = rnd.choice(tmpl["title_pfx"])
 
     # 核心洞察
     core_insight = rnd.choice(tmpl["insight_pfx"])

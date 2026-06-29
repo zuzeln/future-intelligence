@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-29 13:37",
-  "total_scored": 77,
+  "updated_at": "2026-06-29 13:40",
+  "total_scored": 91,
   "articles": [
     {
       "title": "分享两个Vibe Coding必备的实用Prompt：第一性原理与对抗式审查",
@@ -251,16 +251,6 @@
       "published": "2026-06-26 18:00",
       "ts": 1782468000.0,
       "news_score": 7.5
-    },
-    {
-      "title": "小鹏 CEO 何小鹏：2026 年底自动驾驶可以合法进入全球",
-      "summary": "小鹏汽车 CEO 何小鹏微博透露，VLA 2.0 走向全球进入确定模式。联合国 WP29 缔约国会议批准了 DCAS UNR 171 series 02（对应城区 NGP 法规）与 UNR ADS（对应 L3-L5 自动驾驶法规）。DCAS 将在六个月后成为欧盟强制法规，即 2026 年底自动驾驶可合法进入全球；UNR ADS 为框架性法规，加速 L4 级 Robotaxi 落地。何小鹏称 2027 年海外小鹏汽车将搭载 VLA 和 VLM，支持中英文混合语音对话。",
-      "url": "https://www.ithome.com/0/968/894.htm",
-      "source": "AI HOT · IT之家（RSS）",
-      "category": "industry",
-      "published": "2026-06-26 13:40",
-      "ts": 1782452452.0,
-      "news_score": 5.0
     },
     {
       "title": "HP Inc. launches Frontier strategic partnership with OpenAI",
@@ -771,6 +761,156 @@
       "published": "2026-06-29 12:00",
       "ts": 1782705600.0,
       "news_score": 6.0
+    },
+    {
+      "title": "Some Simple Economics of AGI",
+      "summary": "Article URL: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6298838 Comments URL: https://news.ycombinator.com/item?id=48714919 Points: 21 # Comments: 4",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6298838",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 12:47",
+      "ts": 1782708473.0,
+      "news_score": 5.5
+    },
+    {
+      "title": "Age verification is just a precursor to automated attribution of speech",
+      "summary": "Article URL: https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 Comments URL: https://news.ycombinator.com/item?id=48714529 Points: 212 # Comments: 88",
+      "url": "https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 11:42",
+      "ts": 1782704527.0,
+      "news_score": 5.5
+    },
+    {
+      "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
+      "summary": "Article URL: https://danunparsed.com/p/hackerrank-open-source-ats Comments URL: https://news.ycombinator.com/item?id=48713832 Points: 71 # Comments: 26",
+      "url": "https://danunparsed.com/p/hackerrank-open-source-ats",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 09:44",
+      "ts": 1782697480.0,
+      "news_score": 6.0
+    },
+    {
+      "title": "Knowledge Distillation of Black-Box Large Language Models (2024)",
+      "summary": "Article URL: https://arxiv.org/abs/2401.07013 Comments URL: https://news.ycombinator.com/item?id=48712420 Points: 76 # Comments: 13",
+      "url": "https://arxiv.org/abs/2401.07013",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 06:32",
+      "ts": 1782685924.0,
+      "news_score": 5.5
+    },
+    {
+      "title": "Show HN: Bash4LLM+ – A lightweight, dependency-free Bash wrapper for LLM APIs",
+      "summary": "Bash4LLM is a single-file Bash wrapper for interacting with LLMs from the terminal.  I created it because I wanted something simple that worked without installing Python, Node, or any other runtime. It uses only Bash, curl, and jq. You can send prompts, start a small chat, process files line by line",
+      "url": "https://github.com/kamaludu/bash4llm/",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 03:43",
+      "ts": 1782675790.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "TOP500 at ISC’26: We have a New Number 1 Supercomputer",
+      "summary": "Article URL: https://chipsandcheese.com/p/top500-at-isc26-we-have-a-new-number Comments URL: https://news.ycombinator.com/item?id=48710775 Points: 91 # Comments: 53",
+      "url": "https://chipsandcheese.com/p/top500-at-isc26-we-have-a-new-number",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 03:38",
+      "ts": 1782675480.0,
+      "news_score": 6.0
+    },
+    {
+      "title": "Librepods: AirPods liberated",
+      "summary": "Article URL: https://github.com/librepods-org/librepods Comments URL: https://news.ycombinator.com/item?id=48710232 Points: 331 # Comments: 107",
+      "url": "https://github.com/librepods-org/librepods",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 02:48",
+      "ts": 1782672533.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Historical memory prices 1960-2026",
+      "summary": "Article URL: https://dam.stanford.edu/memory-prices.html Comments URL: https://news.ycombinator.com/item?id=48710092 Points: 251 # Comments: 89",
+      "url": "https://dam.stanford.edu/memory-prices.html",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 02:32",
+      "ts": 1782671573.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "GLM 5.2 beats Claude in our benchmarks",
+      "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.com/item?id=48709670 Points: 645 # Comments: 313",
+      "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 01:50",
+      "ts": 1782669047.0,
+      "news_score": 7.0
+    },
+    {
+      "title": "Working around dragons with the Lemote Yeeloong laptop and OpenBSD",
+      "summary": "Article URL: http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html Comments URL: https://news.ycombinator.com/item?id=48709187 Points: 101 # Comments: 28",
+      "url": "http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:58",
+      "ts": 1782665939.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Professor denounces mass AI fraud on an exam at Brown",
+      "summary": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html Comments URL: https://news.ycombinator.com/item?id=48708991 Points: 342 # Comments: 455",
+      "url": "https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:41",
+      "ts": 1782664872.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "I used Claude Code to get a second opinion on my MRI",
+      "summary": "Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus Comments URL: https://news.ycombinator.com/item?id=48708941 Points: 390 # Comments: 507",
+      "url": "https://antoine.fi/mri-analysis-using-claude-code-opus",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:35",
+      "ts": 1782664519.0,
+      "news_score": 7.5
+    },
+    {
+      "title": "Daisugi, the Japanese technique of growing trees out of other trees (2020)",
+      "summary": "https://x.com/wrathofgnon/status/1250287741247426565 , https://xcancel.com/wrathofgnon/status/1250287741247426565 Comments URL: https://news.ycombinator.com/item?id=48708859 Points: 125 # Comments: 39",
+      "url": "https://www.openculture.com/2020/10/daisugi.html",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:28",
+      "ts": 1782664130.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Tokenmaxxing is dead, long live tokenmaxxing",
+      "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing Comments URL: https://news.ycombinator.com/item?id=48708795 Points: 131 # Comments: 156",
+      "url": "https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:24",
+      "ts": 1782663850.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Examining circuit boards from the Space Shuttle's I/O Processor",
+      "summary": "Article URL: https://www.righto.com/2026/06/space-shuttle-io-processor-boards.html Comments URL: https://news.ycombinator.com/item?id=48708700 Points: 96 # Comments: 22",
+      "url": "https://www.righto.com/2026/06/space-shuttle-io-processor-boards.html",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 00:16",
+      "ts": 1782663367.0,
+      "news_score": 5.0
     }
   ]
 }
