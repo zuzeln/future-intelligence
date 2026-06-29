@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-06-29 13:43",
-  "total_articles_crawled": 91,
-  "articles_scored_ge7": 43,
+  "updated_at": "2026-06-29 16:03",
+  "total_articles_crawled": 92,
+  "articles_scored_ge7": 44,
   "trends_generated": 8,
   "trends": [
     {
-      "title": "模型能力跃升：观测到集中信号",
+      "title": "前沿模型竞赛：观测到集中信号",
       "coreInsight": "多家实验室同日发布新模型，多模态与推理能力成为标配，15 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, AI HOT · X：Rohan Paul (@rohanpaul_ai), The Decoder 等 13 个来源的 15 条信号共同指向这一趋势——多家实验室同日发布新模型，多模态与推理能力成为标配，15",
-      "direction": "推理模型将从前沿特性升级为独立品类",
+      "whyItMatters": "来自 AI HOT · Hacker News：AI 热帖, Hacker News, The Decoder 等 13 个来源的 15 条信号共同指向这一趋势——多家实验室同日发布新模型，多模态与推理能力成为标配，15 条信号集中出现",
+      "direction": "6个月内不具备多模态能力的模型将被市场淘汰",
       "opportunities": [
         "基于超长上下文的企业知识管理平台",
         "多模型能力对比评估与选型推荐工具",
@@ -69,10 +69,10 @@
       "source_count": 13
     },
     {
-      "title": "AI 商业化：观测到集中信号",
+      "title": "AI 行业应用：观测到集中信号",
       "coreInsight": "世界500强企业大规模部署 AI 进入核心业务，8 条信号集中出现",
-      "whyItMatters": "来自 arXiv cs.AI, OpenAI, The Decoder 等 7 个来源的 8 条信号共同指向这一趋势——世界500强企业大规模部署 AI 进入核心业务，8 条信号集中出现",
-      "direction": "财富500强一半以上将拥有核心 AI 业务流程",
+      "whyItMatters": "来自 AI HOT · Hacker News：AI 热帖, The Decoder, AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例） 等 7 个来源的 8 条信号共同指向这一趋势——世界500强企业大规模部署 AI 进入核心业务，8 条信号集中出现",
+      "direction": "AI 就绪度成为投资者评估新维度",
       "opportunities": [
         "传统行业 AI 转型咨询与实施",
         "企业级 AI 治理合规与风险管理",
@@ -133,9 +133,9 @@
       "source_count": 7
     },
     {
-      "title": "基准测试诚信：观测到集中信号",
-      "coreInsight": "评估体系面临根本性质疑，7 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, AI HOT · X：Rohan Paul (@rohanpaul_ai), AI HOT · The Decoder：AI News（RSS） 等 5 个来源的 7 条信号共同指向这一趋势——评估体系面临根本",
+      "title": "AI 评估体系：观测到集中信号",
+      "coreInsight": "AI 模型在基准测试中系统性虚增分数，7 条信号集中出现",
+      "whyItMatters": "来自 Hacker News, AI HOT · X：Rohan Paul (@rohanpaul_ai), AI HOT · MarkTechPost（RSS） 等 5 个来源的 7 条信号共同指向这一趋势——AI 模型在基准测试中系统性虚增分数，7 条信号集中出现",
       "direction": "评估即服务将成为独立赛道",
       "opportunities": [
         "防篡改 AI 基准测试平台",
@@ -197,9 +197,9 @@
       "source_count": 5
     },
     {
-      "title": "安全对齐进展：观测到集中信号",
+      "title": "AI 风险应对：观测到集中信号",
       "coreInsight": "安全问题伴随 AI 规模化部署而放大，6 条信号集中出现",
-      "whyItMatters": "来自 arXiv cs.AI, The Decoder, TechCrunch 等 5 个来源的 6 条信号共同指向这一趋势——安全问题伴随 AI 规模化部署而放大，6 条信号集中出现",
+      "whyItMatters": "来自 Hacker News, The Decoder, TechCrunch 等 5 个来源的 6 条信号共同指向这一趋势——安全问题伴随 AI 规模化部署而放大，6 条信号集中出现",
       "direction": "网络安全攻防双方都在用 AI 武装自己",
       "opportunities": [
         "AI 模型安全评估与监测第三方服务",
@@ -261,10 +261,10 @@
       "source_count": 5
     },
     {
-      "title": "AI 驱动发现：观测到集中信号",
+      "title": "科学 AI 突破：观测到集中信号",
       "coreInsight": "前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, Anthropic, AI HOT · Anthropic：Research（发表成果 · 网页） 等 5 个来源的 5 条信号共同指向这一趋势——前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
-      "direction": "AI 将成为生物学实验室标准联合研究员",
+      "whyItMatters": "来自 Anthropic, AI HOT · The Decoder：AI News（RSS）, AI HOT · X：Elon Musk (@elonmusk, xAI) 等 5 个来源的 5 条信号共同指向这一趋势——前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
+      "direction": "AI 设计蛋白质进入临床试验",
       "opportunities": [
         "AI 原生生物技术公司发现管线",
         "AI 设计实验的闭环验证平台",
@@ -319,9 +319,9 @@
     },
     {
       "title": "智能体产品化：观测到集中信号",
-      "coreInsight": "桌面智能体重新定义人机交互，5 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, arXiv cs.AI, The Decoder 等 5 个来源的 5 条信号共同指向这一趋势——桌面智能体重新定义人机交互，5 条信号集中出现",
-      "direction": "智能体感知与执行一致性成为新维度",
+      "coreInsight": "AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",
+      "whyItMatters": "来自 The Decoder, Anthropic, AI HOT · The Decoder：AI News（RSS） 等 5 个来源的 5 条信号共同指向这一趋势——AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",
+      "direction": "主流 SaaS 产品都将内置 AI 智能体",
       "opportunities": [
         "企业级 AI 智能体编排与安全沙盒",
         "跨平台智能体一致性管理",
@@ -375,10 +375,10 @@
       "source_count": 5
     },
     {
-      "title": "AI 推理小模型：观测到集中信号",
+      "title": "端侧 AI 新范式：观测到集中信号",
       "coreInsight": "小模型+强化学习正在瓦解大参数壁垒，6 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Nathan Lambert：Interconnects（RSS）, AI HOT · X：Rohan Paul (@rohanpaul_ai), arXiv cs.AI 等 6 个来源的 6 条信号共同指向这一趋势——小模型+强化学习正在瓦解大参数壁垒，6 条信号集中出现",
-      "direction": "端侧 AI 推理将从梦想走向实用",
+      "whyItMatters": "来自 AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）, AI HOT · Nathan Lambert：Interconnects（RSS）, AI HOT · X：Rohan Paul (@rohanpaul_ai) 等 6 个来源的 6 条信号共同指向这一",
+      "direction": "3B-7B级别专用推理模型将大量涌现",
       "opportunities": [
         "端侧推理模型部署方案",
         "垂直领域低成本专用推理模型",
@@ -439,61 +439,54 @@
       "source_count": 6
     },
     {
-      "title": "AI 民主化：观测到集中信号",
-      "coreInsight": "开源旗舰模型商业可用性追平闭源，5 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Nathan Lambert：Interconnects（RSS）, AI HOT · The Decoder：AI News（RSS）, AI HOT · Hacker News：AI 热帖 等 5 个来源的 5 条信号共同指向这一趋势——开源旗舰模型商业可用性追平闭源，5",
-      "direction": "企业面临「自部署 vs API」路线决策",
+      "title": "AI 估值与 IPO：观测到集中信号",
+      "coreInsight": "AI 资本市场进入密集活跃期，4 条信号集中出现",
+      "whyItMatters": "来自 AI HOT · The Decoder：AI News（RSS）, AI HOT · X：Berry Xia (@berryxia), AI HOT · IT之家（RSS） 等 4 个来源的 4 条信号共同指向这一趋势——AI 资本市场进入密集活跃期，4 条信号集中出现",
+      "direction": "AI 估值从技术愿景转向收入与合规",
       "opportunities": [
-        "开源旗舰模型企业私有化部署",
-        "多模型混合架构推理路由平台",
-        "开源 vs 闭源 TCO 分析决策咨询",
-        "开源模型安全审计与合规服务"
+        "AI 公司 IPO 的法律合规与风险披露",
+        "面向 AI 行业的投资研究与估值分析",
+        "AI 法律责任保险等新型金融产品",
+        "AI 公司融资顾问与估值服务"
       ],
       "risks": [
-        "开源模型被恶意行为者利用",
-        "模型供给过剩导致企业决策瘫痪"
+        "大额融资可能催生 AI 泡沫",
+        "上市后短期业绩压力偏离安全投入"
       ],
       "signals": [
         {
+          "source": "AI HOT · X：Berry Xia (@berryxia)",
+          "time": "6/28 01:05",
+          "title": "苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",
+          "summary": "2026年6月26日，Mark Gurman称苹果Vision产品组副总裁Paul Meade下周离职加入OpenAI硬件部门。他负责Vision Pro、无屏幕AI智能眼镜及AR眼镜研发。苹果计划首款触控OLED MacBook使用M5 Pro/Max芯片，2026年底到2027年初发布；M7 P",
+          "url": "https://x.com/berryxia/status/2070916520822321292"
+        },
+        {
           "source": "AI HOT · The Decoder：AI News（RSS）",
-          "time": "6/28 15:44",
-          "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
-          "summary": "新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diam",
-          "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt"
+          "time": "6/27 20:25",
+          "title": "\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
+          "summary": "前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航",
+          "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
         },
         {
-          "source": "AI HOT · MarkTechPost（RSS）",
-          "time": "6/28 00:59",
-          "title": "DeepSeek 开源 DSpark 投机解码框架，加速 DeepSeek-V4 生成速度 60-85%",
-          "summary": "DeepSeek 发布 DSpark 投机解码框架并开源检查点与训练代码。该框架不是新模型，而是在 DeepSeek-V4 权重上附加草稿模块，通过半自回归生成（并行骨干 + 轻量级顺序头）实现无损加速。生产环境下，DeepSeek-V4-Flash 和 V4-Pro 每用户生成速度较 MTP-1 ",
-          "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1"
+          "source": "AI HOT · IT之家（RSS）",
+          "time": "6/29 14:44",
+          "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
+          "summary": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转",
+          "url": "https://www.ithome.com/0/969/953.htm"
         },
         {
-          "source": "AI HOT · Nathan Lambert：Interconnects（RSS）",
-          "time": "6/29 01:03",
-          "title": "Artifacts 22：Zyphra、Cohere 和 Poolside 正在扩展生态系统广度",
-          "summary": "开源模型生态正变得更多元，参与者从少数中国公司扩展到全球各类组织。纯模型制造商包括 DeepSeek、智谱、MiniMax、Poolside、Arcee、Zyphra 及主权 AI 玩家 Cohere、Sovereign、Mistral、Trillion Labs；科技巨头如阿里 Qwen、Goog",
-          "url": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside"
-        },
-        {
-          "source": "AI HOT · Hacker News：AI 热帖",
-          "time": "6/27 00:40",
-          "title": "Weave 推出智能模型路由工具，可直接接入 Claude Code、Codex 和 Cursor",
-          "summary": "Weave 发布智能模型路由工具，通过 `npx @workweave/router` 安装，作为本地代理运行在 localhost：8080。它采用基于 Avengers-Pro 1 的集群评分器，每个请求自动选择最佳模型。支持 Anthropic、OpenAI、Gemini 原生 API，并通过",
-          "url": "https://github.com/workweave/router"
-        },
-        {
-          "source": "AI HOT · X：阿易 AI Notes (@AYi_AInotes)",
-          "time": "6/26 23:37",
-          "title": "Leaf 开源项目：将网红峰哥做成实时通话 AI 分身",
-          "summary": "开发者 Leaf 开源项目，将网红峰哥做成能实时通话的 AI 分身，集成实时对话、音色克隆和人格注入，工程延迟压到 1 秒内。技术拆解：语音识别用 Cartesia ink-whisper 降噪防误触发；大模型选 MiniMax 高速版，首字响应 361ms；语音合成用 VoxCPM 开源克隆，15",
-          "url": "https://x.com/AYi_AInotes/status/2070531964067623381"
+          "source": "AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",
+          "time": "6/26 23:51",
+          "title": "下一个重大突破：AI在工作中学习",
+          "summary": "AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",
+          "url": "https://www.dwarkesh.com/p/the-next-paradigm"
         }
       ],
-      "trendScore": 9.8,
-      "theme": "opensource",
-      "article_count": 5,
-      "source_count": 5
+      "trendScore": 9.9,
+      "theme": "funding",
+      "article_count": 4,
+      "source_count": 4
     }
   ]
 }

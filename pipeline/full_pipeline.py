@@ -771,13 +771,16 @@ def write_data(scored_articles, final_trends):
 
 # ==================== STEP 7: 更新网站 ====================
 def sanitize_js_string(s):
-    """转义 JS 字符串中的特殊字符"""
+    """转义 JS 字符串中的特殊字符（用于双引号包裹的字符串）"""
     if not isinstance(s, str):
         return ""
-    s = s.replace("\\", "\\\\")
-    s = s.replace("'", "\\'")
-    s = s.replace("\n", " ")
-    s = s.replace("\r", "")
+    s = s.replace("\\", "\\\\")   # 反斜杠优先转义
+    s = s.replace('"', '\\"')     # 双引号 → 转义
+    s = s.replace("'", "\\'")     # 单引号 → 转义（防御性）
+    s = s.replace("\n", " ")       # 换行 → 空格
+    s = s.replace("\r", "")        # 回车删除
+    s = s.replace("<", "\\u003C")  # 防止 </script> 注入
+    s = s.replace(">", "\\u003E")
     return s
 
 

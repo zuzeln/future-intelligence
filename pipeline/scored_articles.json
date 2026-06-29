@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-06-29 13:43",
-  "total_scored": 91,
+  "updated_at": "2026-06-29 16:03",
+  "total_scored": 92,
   "articles": [
+    {
+      "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
+      "summary": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转变，构建韩国智能市场。此外，SK 海力士将向韩国西南部投资 400 万亿韩元，半导体供应项目总投资达 1100 万亿韩元（约 4.84 万亿元人民币）。",
+      "url": "https://www.ithome.com/0/969/953.htm",
+      "source": "AI HOT · IT之家（RSS）",
+      "category": "industry",
+      "published": "2026-06-29 14:44",
+      "ts": 1782715455.0,
+      "news_score": 7.0
+    },
     {
       "title": "分享两个Vibe Coding必备的实用Prompt：第一性原理与对抗式审查",
       "summary": "作者分享Vibe Coding中两个关键Prompt：一是\"从第一性原理出发\"，强制AI跳出类比推理，从基本事实重新推导本质，曾帮作者发现AIHOT抓取海外信源的底层流量路由隐患并彻底重构；二是\"对抗式审查\"，让AI站在恶意用户角度攻防式审查代码，检出OOM死循环、未来时间污染等手工难发现的BUG。两个Prompt形成生成与验证闭环，使纯Vibe Coding项目AIHOT最近一周请求量超千万次。",
@@ -763,18 +773,38 @@
       "news_score": 6.0
     },
     {
-      "title": "Some Simple Economics of AGI",
-      "summary": "Article URL: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6298838 Comments URL: https://news.ycombinator.com/item?id=48714919 Points: 21 # Comments: 4",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6298838",
+      "title": "Replacing Systemd with OpenRC in Debian",
+      "summary": "Article URL: https://danielcordova.me/blog/debian-openrc/ Comments URL: https://news.ycombinator.com/item?id=48715630 Points: 11 # Comments: 2",
+      "url": "https://danielcordova.me/blog/debian-openrc/",
       "source": "Hacker News",
       "category": "社区",
-      "published": "2026-06-29 12:47",
-      "ts": 1782708473.0,
-      "news_score": 5.5
+      "published": "2026-06-29 14:37",
+      "ts": 1782715064.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Lore – Give your coding agent the decisions your team made",
+      "summary": "Article URL: https://github.com/itsthelore/rac-core Comments URL: https://news.ycombinator.com/item?id=48714880 Points: 27 # Comments: 20",
+      "url": "https://github.com/itsthelore/rac-core",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 12:40",
+      "ts": 1782708035.0,
+      "news_score": 5.0
+    },
+    {
+      "title": "Herdr: Agent multiplexer that lives in your terminal",
+      "summary": "Article URL: https://github.com/ogulcancelik/herdr Comments URL: https://news.ycombinator.com/item?id=48714802 Points: 45 # Comments: 16",
+      "url": "https://github.com/ogulcancelik/herdr",
+      "source": "Hacker News",
+      "category": "社区",
+      "published": "2026-06-29 12:27",
+      "ts": 1782707266.0,
+      "news_score": 5.0
     },
     {
       "title": "Age verification is just a precursor to automated attribution of speech",
-      "summary": "Article URL: https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 Comments URL: https://news.ycombinator.com/item?id=48714529 Points: 212 # Comments: 88",
+      "summary": "Article URL: https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 Comments URL: https://news.ycombinator.com/item?id=48714529 Points: 353 # Comments: 190",
       "url": "https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026",
       "source": "Hacker News",
       "category": "社区",
@@ -784,7 +814,7 @@
     },
     {
       "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
-      "summary": "Article URL: https://danunparsed.com/p/hackerrank-open-source-ats Comments URL: https://news.ycombinator.com/item?id=48713832 Points: 71 # Comments: 26",
+      "summary": "Article URL: https://danunparsed.com/p/hackerrank-open-source-ats Comments URL: https://news.ycombinator.com/item?id=48713832 Points: 288 # Comments: 89",
       "url": "https://danunparsed.com/p/hackerrank-open-source-ats",
       "source": "Hacker News",
       "category": "社区",
@@ -794,7 +824,7 @@
     },
     {
       "title": "Knowledge Distillation of Black-Box Large Language Models (2024)",
-      "summary": "Article URL: https://arxiv.org/abs/2401.07013 Comments URL: https://news.ycombinator.com/item?id=48712420 Points: 76 # Comments: 13",
+      "summary": "Article URL: https://arxiv.org/abs/2401.07013 Comments URL: https://news.ycombinator.com/item?id=48712420 Points: 87 # Comments: 14",
       "url": "https://arxiv.org/abs/2401.07013",
       "source": "Hacker News",
       "category": "社区",
@@ -803,18 +833,8 @@
       "news_score": 5.5
     },
     {
-      "title": "Show HN: Bash4LLM+ – A lightweight, dependency-free Bash wrapper for LLM APIs",
-      "summary": "Bash4LLM is a single-file Bash wrapper for interacting with LLMs from the terminal.  I created it because I wanted something simple that worked without installing Python, Node, or any other runtime. It uses only Bash, curl, and jq. You can send prompts, start a small chat, process files line by line",
-      "url": "https://github.com/kamaludu/bash4llm/",
-      "source": "Hacker News",
-      "category": "社区",
-      "published": "2026-06-29 03:43",
-      "ts": 1782675790.0,
-      "news_score": 5.0
-    },
-    {
       "title": "TOP500 at ISC’26: We have a New Number 1 Supercomputer",
-      "summary": "Article URL: https://chipsandcheese.com/p/top500-at-isc26-we-have-a-new-number Comments URL: https://news.ycombinator.com/item?id=48710775 Points: 91 # Comments: 53",
+      "summary": "Article URL: https://chipsandcheese.com/p/top500-at-isc26-we-have-a-new-number Comments URL: https://news.ycombinator.com/item?id=48710775 Points: 105 # Comments: 66",
       "url": "https://chipsandcheese.com/p/top500-at-isc26-we-have-a-new-number",
       "source": "Hacker News",
       "category": "社区",
@@ -824,7 +844,7 @@
     },
     {
       "title": "Librepods: AirPods liberated",
-      "summary": "Article URL: https://github.com/librepods-org/librepods Comments URL: https://news.ycombinator.com/item?id=48710232 Points: 331 # Comments: 107",
+      "summary": "Article URL: https://github.com/librepods-org/librepods Comments URL: https://news.ycombinator.com/item?id=48710232 Points: 359 # Comments: 124",
       "url": "https://github.com/librepods-org/librepods",
       "source": "Hacker News",
       "category": "社区",
@@ -834,7 +854,7 @@
     },
     {
       "title": "Historical memory prices 1960-2026",
-      "summary": "Article URL: https://dam.stanford.edu/memory-prices.html Comments URL: https://news.ycombinator.com/item?id=48710092 Points: 251 # Comments: 89",
+      "summary": "Article URL: https://dam.stanford.edu/memory-prices.html Comments URL: https://news.ycombinator.com/item?id=48710092 Points: 279 # Comments: 101",
       "url": "https://dam.stanford.edu/memory-prices.html",
       "source": "Hacker News",
       "category": "社区",
@@ -844,7 +864,7 @@
     },
     {
       "title": "GLM 5.2 beats Claude in our benchmarks",
-      "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.com/item?id=48709670 Points: 645 # Comments: 313",
+      "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.com/item?id=48709670 Points: 768 # Comments: 365",
       "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
       "source": "Hacker News",
       "category": "社区",
@@ -854,7 +874,7 @@
     },
     {
       "title": "Working around dragons with the Lemote Yeeloong laptop and OpenBSD",
-      "summary": "Article URL: http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html Comments URL: https://news.ycombinator.com/item?id=48709187 Points: 101 # Comments: 28",
+      "summary": "Article URL: http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html Comments URL: https://news.ycombinator.com/item?id=48709187 Points: 108 # Comments: 30",
       "url": "http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html",
       "source": "Hacker News",
       "category": "社区",
@@ -864,7 +884,7 @@
     },
     {
       "title": "Professor denounces mass AI fraud on an exam at Brown",
-      "summary": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html Comments URL: https://news.ycombinator.com/item?id=48708991 Points: 342 # Comments: 455",
+      "summary": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html Comments URL: https://news.ycombinator.com/item?id=48708991 Points: 379 # Comments: 503",
       "url": "https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html",
       "source": "Hacker News",
       "category": "社区",
@@ -874,7 +894,7 @@
     },
     {
       "title": "I used Claude Code to get a second opinion on my MRI",
-      "summary": "Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus Comments URL: https://news.ycombinator.com/item?id=48708941 Points: 390 # Comments: 507",
+      "summary": "Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus Comments URL: https://news.ycombinator.com/item?id=48708941 Points: 415 # Comments: 544",
       "url": "https://antoine.fi/mri-analysis-using-claude-code-opus",
       "source": "Hacker News",
       "category": "社区",
@@ -884,7 +904,7 @@
     },
     {
       "title": "Daisugi, the Japanese technique of growing trees out of other trees (2020)",
-      "summary": "https://x.com/wrathofgnon/status/1250287741247426565 , https://xcancel.com/wrathofgnon/status/1250287741247426565 Comments URL: https://news.ycombinator.com/item?id=48708859 Points: 125 # Comments: 39",
+      "summary": "https://x.com/wrathofgnon/status/1250287741247426565 , https://xcancel.com/wrathofgnon/status/1250287741247426565 Comments URL: https://news.ycombinator.com/item?id=48708859 Points: 130 # Comments: 43",
       "url": "https://www.openculture.com/2020/10/daisugi.html",
       "source": "Hacker News",
       "category": "社区",
@@ -894,22 +914,12 @@
     },
     {
       "title": "Tokenmaxxing is dead, long live tokenmaxxing",
-      "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing Comments URL: https://news.ycombinator.com/item?id=48708795 Points: 131 # Comments: 156",
+      "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing Comments URL: https://news.ycombinator.com/item?id=48708795 Points: 143 # Comments: 176",
       "url": "https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing",
       "source": "Hacker News",
       "category": "社区",
       "published": "2026-06-29 00:24",
       "ts": 1782663850.0,
-      "news_score": 5.0
-    },
-    {
-      "title": "Examining circuit boards from the Space Shuttle's I/O Processor",
-      "summary": "Article URL: https://www.righto.com/2026/06/space-shuttle-io-processor-boards.html Comments URL: https://news.ycombinator.com/item?id=48708700 Points: 96 # Comments: 22",
-      "url": "https://www.righto.com/2026/06/space-shuttle-io-processor-boards.html",
-      "source": "Hacker News",
-      "category": "社区",
-      "published": "2026-06-29 00:16",
-      "ts": 1782663367.0,
       "news_score": 5.0
     }
   ]

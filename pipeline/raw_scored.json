@@ -1,0 +1,200 @@
+[
+  {
+    "id": "cmqy28vh30050slr1uzaev9nk",
+    "title": "Artifacts 22：Zyphra、Cohere 和 Poolside 正在扩展生态系统广度",
+    "url": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside",
+    "source": "Nathan Lambert：Interconnects（RSS）",
+    "publishedAt": "2026-06-28T17:03:07.000Z",
+    "summary": "开源模型生态正变得更多元，参与者从少数中国公司扩展到全球各类组织。纯模型制造商包括 DeepSeek、智谱、MiniMax、Poolside、Arcee、Zyphra 及主权 AI 玩家 Cohere、Sovereign、Mistral、Trillion Labs；科技巨头如阿里 Qwen、Google Gemma 和 NVIDIA 各有不同动机；产品公司如 JetBrains、Zed、Krea、Photoroom 则训练高度专业的小模型。NVIDIA 发布 Nemotron-3-Ultra-550B-A55B-BF16，采用 LatentMoE 架构并改用 OpenMDW 许可证。Cohere 以 Apache 2.0 开源其旗舰模型 Command A+（05-2026-bf16），这是一款 218B-A25B MoE 模型，具备多模态、多语言和智能体能力。",
+    "category": "tip",
+    "score": 10,
+    "api_score": 60
+  },
+  {
+    "id": "cmqybng5d00h1slivo3wr0ujh",
+    "title": "智谱GLM-5.2在网络安全漏洞发现上匹敌Mythos",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity",
+    "source": "The Verge：AI（RSS）",
+    "publishedAt": "2026-06-28T21:42:51.000Z",
+    "summary": "中国智谱发布开源权重模型GLM-5.2，研究人员称其在某些漏洞发现和网络安全场景下能匹敌Anthropic的Mythos。尽管GLM在通用任务上仍落后于Anthropic和OpenAI的模型，但在漏洞发现能力上中美差距已显著缩小。作为开源权重模型，GLM-5.2可在普通硬件上自由下载运行，灵活性高但易被滥用。美国政府此前已限制中国获取Mythos、Fable等先进模型及训练硬件，此番进展引发进一步担忧。",
+    "category": "ai-models",
+    "score": 9.5,
+    "api_score": 51
+  },
+  {
+    "id": "cmqxiel9h004ysl50umg2c011",
+    "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
+    "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt",
+    "source": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-06-28T07:44:41.000Z",
+    "summary": "新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diamond大幅落后。模型基于阿里Qwen2.5-Coder-3B，经SFT、强化学习、自蒸馏等多阶段后训练。研究提出\"参数压缩-覆盖假说\"：逻辑推理依赖少数可压缩模式，而广泛世界知识仍需大参数。模型已开源。",
+    "category": "ai-models",
+    "score": 9.5,
+    "api_score": 70
+  },
+  {
+    "id": "cmqys8vud011mslmcm1fpenqq",
+    "title": "Flash系列模型横评：Gemini-3.5-Flash、Step-3.7-Flash、DeepSeek-V4-Flash",
+    "url": "https://x.com/karminski3/status/2071463271186735293",
+    "source": "X：karminski (@karminski3)",
+    "publishedAt": "2026-06-29T05:18:24.000Z",
+    "summary": "推文对三款Flash级模型（Gemini-3.5-Flash、Step-3.7-Flash、DeepSeek-V4-Flash）进行横评。这些模型定位为多智能体系统和RAG系统的驱动模型。评测维度包括Agent Loop迭代能力、Agent能力、前端/后端、空间理解、美学、性价比等。Gemini-3.5-Flash更适合前端页面、建模等\"漂亮活\"。Step-3.7-Flash极具性价比，在Agent测试中Token效率极高（用最少Token完成最多任务），适合作为OpenClaw、Hermes等Agent框架的驱动模型。DeepSeek-V4-Flash后端能力出色，适合写脚本或驱动ClaudeCode用于AI-Ops。",
+    "category": "tip",
+    "score": 8.5,
+    "api_score": 61
+  },
+  {
+    "id": "cmqyii1d90279slivt2um5dm4",
+    "title": "我国开源生态版图扩容，新增人工智能与具身智能等7项目",
+    "url": "https://www.ithome.com/0/969/742.htm",
+    "source": "IT之家（RSS）",
+    "publishedAt": "2026-06-29T00:02:04.000Z",
+    "summary": "央视财经报道，我国开源生态版图进一步扩容，新增人工智能、具身智能等7个项目。开放原子开源基金会称，2026年将引入相关前沿项目，抢占大模型和RISC-V新架构先机。2025年国内活跃开源项目超425万个，开发者达263万。工信部副部长熊继军表示将提升开源供给能力，支持基础软件、工业软件、AI等领域开源发展。《2025中国开源年度报告》显示，GitHub中国活跃开发者超210万全球第三，整体开发者规模预计超350万全球第二；中国OpenRank贡献度254，963全球第二，增速差超10%，预计7年后将超越美国。",
+    "category": "industry",
+    "score": 8.5,
+    "api_score": 57
+  },
+  {
+    "id": "cmqy001e802zbslwfis85g6nc",
+    "title": "DeepSeek 开源 DSpark 投机解码框架",
+    "url": "https://x.com/berryxia/status/2071261357920682276",
+    "source": "X：Berry Xia (@berryxia)",
+    "publishedAt": "2026-06-28T15:56:04.000Z",
+    "summary": "DeepSeek 开源 DSpark，一个面向生产环境的投机解码框架。核心解决传统投机解码中 draft 模型猜测后期 token 错误率高、浪费算力的问题。DSpark 采用并行 backbone + 顺序 Markov head 混合架构，消除后缀衰减；并引入置信度 head 和负载感知调度器，动态控制验证数量。在 DeepSeek-V4 生产系统中，单用户生成速度比 MTP-1 基线快 60-85%，吞吐提升 1.5x 至 5x。开源内容包括基于 V4 权重的 `DeepSeek-V4-Pro-DSpark`/`Flash-DSpark` checkpoint，以及 MIT 协议的 DeepSpec 训练代码，与北京大学联合开发。",
+    "category": "ai-products",
+    "score": 8.5,
+    "api_score": 50
+  },
+  {
+    "id": "cmqybxkri00k1slivp6nq5z38",
+    "title": "RepoPrompt 已开源，社区版上线GitHub",
+    "url": "https://x.com/dotey/status/2071348102263378085",
+    "source": "X：宝玉 (@dotey)",
+    "publishedAt": "2026-06-28T21:40:46.000Z",
+    "summary": "RepoPrompt 已开源，社区版上线GitHub。作者Provencher被OpenAI招安，条件是为付费用户做好安排：先免费再开源，付费用户获赠Codex Credits。该工具从仓库挑选文件生成prompt，解决超32K token使模型变笨的问题，称为\"上下文工程\"。开源版反转架构：内置MCP server为主控，底层CLI工具可替换，支持推理模型规划并并行分发子任务。目前仅支持macOS，可通过Homebrew安装。",
+    "category": "ai-products",
+    "score": 8.0,
+    "api_score": 68
+  },
+  {
+    "id": "cmqyb3dwm00dhslivblxvl2e9",
+    "title": "GLM 5.2 在 IDOR 检测中超越 Claude Code",
+    "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "publishedAt": "2026-06-28T21:30:51.737Z",
+    "summary": "Semgrep 团队用 IDOR 基准测试比较开源模型与前沿编码智能体。GLM 5.2（智谱 AI，开源权重，MIT 许可）以 39% F1 成绩超越 Claude Code（32%），每发现一个漏洞成本约 0.17 美元，但仍低于 Semgrep 多模态流水线（53-61% F1）。GLM 5.2 采用 MoE 架构，总参数 7500 亿，每 token 仅激活约 400 亿，支持 200K 至 1M token 上下文。在 Terminal-Bench 2.1 上得分 81.0（GLM 5.1 为 63.5，Claude Opus 4.8 为 85.0），SWE-bench Pro 上达 62.1。定价约为同类前沿模型的六分之一。Z.ai 披露 GLM 5.2 在训练中存在更多奖励黑客行为，已构建反黑客防护。",
+    "category": "tip",
+    "score": 8.0,
+    "api_score": 57
+  },
+  {
+    "id": "cmqy33fkm002msl51j0stvc8w",
+    "title": "OpenRouter公开GPQA和TAU-Bench评测结果",
+    "url": "https://x.com/OpenRouter/status/2071283228908896655",
+    "source": "X：OpenRouter (@OpenRouter)",
+    "publishedAt": "2026-06-28T17:22:59.000Z",
+    "summary": "提示：OpenRouter 持续在大多数开源权重模型上运行 GPQA 和 TAU-Bench 评测，并公开发布结果。\n\n这些结果用于构建我们的 AutoExacto 元基准，在路由工具调用时默认使用。\n\n以下，@Parasail_io 和 @Zai_org 排名第一：https：//openrouter.ai/z-ai/glm-5.2#performance",
+    "category": "ai-products",
+    "score": 8.0,
+    "api_score": 61
+  },
+  {
+    "id": "cmqy2a4wn005sslr1qqlpxhue",
+    "title": "中国开发者通过灰色市场API中转站以低价购买Claude token",
+    "url": "https://x.com/rohanpaul_ai/status/2071278038533407036",
+    "source": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-06-28T17:02:21.000Z",
+    "summary": "中国开发者通过灰色市场API中转站以官方价格5%-10%购买Claude token。中转站利用免费额度、折扣账户、共享订阅、海外支付绕过、虚假验证及盗刷信用卡汇集多个账户，通过微信/支付宝收款。低价源于账户农场、免费额度滥用、未使用配额转售、订阅拆分及可能盗刷信用卡，并可能将用户提示词和输出用作训练数据创收。风险包括：中转站可能替换为更弱模型、虚报token用量、存储用户私有数据并出售或用于模型训练。这破坏了KYC、账户封禁和滥用监控的有效性--Anthropic只能封禁中转站，无法触及真实用户。",
+    "category": "tip",
+    "score": 8.0,
+    "api_score": 53
+  },
+  {
+    "id": "cmqxlmc1i00aqslxptgduyoha",
+    "title": "中国网络安全公司360推出AI工具对抗Mythos，周鸿祎呼吁建立网络核威慑",
+    "url": "https://the-decoder.com/chinese-cybersecurity-firm-builds-ai-tools-to-rival-mythos-and-frames-the-race-as-cyber-nuclear-deterrence",
+    "source": "The Decoder：AI News（RSS）",
+    "publishedAt": "2026-06-28T09:30:18.000Z",
+    "summary": "中国网络安全公司360安全科技发布两款AI工具：\"屠龙锋\"用于自动化漏洞挖掘，\"倚天镇\"用于自动化网络防御。创始人周鸿祎称\"屠龙锋\"已发现3432个漏洞。他认为中国顶级AI模型仍落后西方20%-30%，因此采用基于智能体的方法将模型与安全专业知识及自动化工具结合。周鸿祎将Mythos类模型比作\"AI时代的网络核武器\"，呼吁中国建立对等战略威慑能力，避免美国垄断。清华大学教授唐杰（Z.ai创始人，近期发布GLM-5.2）预测中国\"类Mythos\"模型将在2027年第一季度前出现。",
+    "category": "ai-products",
+    "score": 8.0,
+    "api_score": 46
+  },
+  {
+    "id": "cmqyh7aaq01vtsliv5wi9it5x",
+    "title": "BestBlogs早报：OpenAI Codex谈品味策展、Cloudflare机器人流量超人类、陪伴机器人\"小伴\"、DSpark推测解码等",
+    "url": "https://x.com/hongming731/status/2071376955480604689",
+    "source": "X：洪明 (@hongming731)",
+    "publishedAt": "2026-06-28T23:35:25.000Z",
+    "summary": "OpenAI Codex负责人称，代码实现成本趋近于零后，产品瓶颈转向品味与策展。Cloudflare CEO预测2026上半年机器人流量超人类，五年后或达千倍，广告模式难以为继，公司已裁20%团队并扩管理幅度至12：1。陪伴机器人\"小伴\"采用端侧1.7B+7B模型，延迟压至0.4秒。Grok 4.5在SpaceX/特斯拉私测，基于1.5T参数V9模型，性能接近Opus。DeepSeek发布DSpark推测解码框架，DeepSeek-V4单用户生成速度提升60-85%。路由层降AI成本60%但质量损失代价为节省额4-5倍。2000人次6000多次提示词注入攻击下，Claude Opus 4.6成功保护secrets.env文件。",
+    "category": "industry",
+    "score": 7.5,
+    "api_score": 50
+  },
+  {
+    "id": "cmqyd05yj00u2slivkqrv68ap",
+    "title": "Anthropic 发布 Claude Tag，在 Slack 内 @Claude 异步执行任务",
+    "url": "https://x.com/dotey/status/2071356525570924563",
+    "source": "X：宝玉 (@dotey)",
+    "publishedAt": "2026-06-28T22:14:14.000Z",
+    "summary": "Anthropic 上周面向 Team 和 Enterprise 用户 beta 发布 Claude Tag，允许在 Slack 频道内 @Claude 布置任务，后台异步执行并回复。Andrej Karpathy 称这是 LLM 交互的第三次重新设计--从网站到 App 再到持久存在的云端智能体。Gergely Orosz 指出真正突破是云端 AI 接入公司内部系统并开箱即用，Slack 仅为入口。该模式对新人、非工程师及不熟悉代码库的开发者尤其有用。Claude Tag 与 GitHub Copilot、OpenAI Codex 等竞争，差异化在于频道共享身份与持久记忆，但集成难度仍是关键。",
+    "category": "tip",
+    "score": 7.5,
+    "api_score": 67
+  },
+  {
+    "id": "cmqy9seqc000vslivd8hy6fz8",
+    "title": "FT：Google限制Meta使用Gemini",
+    "url": "https://x.com/rohanpaul_ai/status/2071336727617433955",
+    "source": "X：Rohan Paul (@rohanpaul_ai)",
+    "publishedAt": "2026-06-28T20:55:34.000Z",
+    "summary": "Google限制了Meta对Gemini模型的使用，原因是Meta要求的计算容量超出Google供应能力。Meta在安全自动化、客服、广告工具、编程及内部工作流中均依赖Gemini。Google面临自身云客户、Gemini产品与有限数据中心容量之间的资源竞争。Google Cloud 3月季度收入增至200亿美元，CEO Sundar Pichai表示计算容量短缺制约了增长，并导致未交付订单较前一季度近乎翻倍。",
+    "category": "industry",
+    "score": 7.5,
+    "api_score": 52
+  },
+  {
+    "id": "cmqy001e802zcslwfxmnv8wyp",
+    "title": "姚老师免费开源GEO内容工程全套资料，价值上万元课程公开",
+    "url": "https://x.com/berryxia/status/2071255665587490917",
+    "source": "X：Berry Xia (@berryxia)",
+    "publishedAt": "2026-06-28T15:33:27.000Z",
+    "summary": "Berry Xia称赞@yaojingang（姚老师）将本可卖到上万元的GEO内容工程课程资料全部免费开源。资源包括：3份核心文档（操作手册、研究报告、实操教程）、2本推荐书籍、3篇学术论文；GEO改写提示词、改写Skill、单篇内容GEO特征标注演示；以及3个GitHub开源仓库（GEO Skills、GEOFlow、Meta skill）。所有资源通过链接直接获取，无需付费或陪跑课程。",
+    "category": "tip",
+    "score": 7.5,
+    "api_score": 72
+  },
+  {
+    "id": "cmqxyh41d02l0slwfepfbyiwg",
+    "title": "GLM-5.2 发布：AI 圈称第二个 DeepSeek 时刻，白宫负责人警告美国勿让模型\"炼狱\"",
+    "url": "https://x.com/kimmonismus/status/2071254545217290422",
+    "source": "X：Kim (@kimmonismus)",
+    "publishedAt": "2026-06-28T15:29:00.000Z",
+    "summary": "中国开源权重模型 GLM-5.2 发布，被评价为继 DeepSeek 之后的第二次\"DeepSeek 时刻\"。有评论指出，其性能已可与 OpenAI 和 Anthropic 当前可用模型媲美。白宫 AI 负责人 David Sacks 就此警告，美国若继续将自身模型置于\"炼狱\"（指过度监管或限制），世界将转向中国技术，美国公司将在竞赛中落后。该言论呼应了此前 DeepSeek 开源模型的全球影响，凸显中美 AI 开源竞争进入新阶段。",
+    "category": "tip",
+    "score": 7.5,
+    "api_score": 45
+  },
+  {
+    "id": "cmqy13hgz0392slwfvh52xhhf",
+    "title": "美光因AI内存短缺股价飙升236%，市值一度超越Meta和特斯拉",
+    "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia",
+    "source": "TechCrunch：AI（RSS）",
+    "publishedAt": "2026-06-28T15:00:00.000Z",
+    "summary": "内存芯片制造商美光受益于AI数据中心建设导致的DRAM和NAND（尤其是HBM）供应短缺，股价过去一个月飙升236%，市值接近1.27万亿美元，一度超越Meta和特斯拉。第三季度营收同比增至414.5亿美元，利润从18.8亿美元暴涨至282亿美元，并预测第四季度营收490至510亿美元。美光已与英伟达、Anthropic等签订16项长期战略客户协议。分析认为需求增长持续超过新产线投产速度，缺货（RAMageddon）预计持续至2027年。",
+    "category": "industry",
+    "score": 7.5,
+    "api_score": 65
+  },
+  {
+    "id": "cmqxljbqy00a6slxphmpdmc0q",
+    "title": "传言称智谱AI新模型在网络安全上对标美国顶尖模型，但信息源存疑",
+    "url": "https://x.com/kimmonismus/status/2071162604601463049",
+    "source": "X：Kim (@kimmonismus)",
+    "publishedAt": "2026-06-28T09:23:39.000Z",
+    "summary": "有传言称zAI新模型在网络安全方面至少与Fable5相当。博主@Kim查找发现只有《华尔街日报》一篇相关文章，但提及的是智谱AI的GLM-5.2，并非新模型。WSJ称GLM-5.2在某些找bug场景可匹配美国顶尖模型；360安全称其Tulongfeng工具可比肩Anthropic的Mythos。@Polymarket也曾引用消息称智谱AI新模型在查找安全漏洞上达到Claude Mythos水平。目前这些说法均未获官方确认，存在信息混淆可能。",
+    "category": "industry",
+    "score": 7.5,
+    "api_score": 68
+  }
+]
