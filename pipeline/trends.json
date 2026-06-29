@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-06-29 16:03",
+  "updated_at": "2026-06-29 16:23",
   "total_articles_crawled": 92,
   "articles_scored_ge7": 44,
   "trends_generated": 8,
   "trends": [
     {
       "title": "前沿模型竞赛：观测到集中信号",
-      "coreInsight": "多家实验室同日发布新模型，多模态与推理能力成为标配，15 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News：AI 热帖, Hacker News, The Decoder 等 13 个来源的 15 条信号共同指向这一趋势——多家实验室同日发布新模型，多模态与推理能力成为标配，15 条信号集中出现",
-      "direction": "6个月内不具备多模态能力的模型将被市场淘汰",
+      "coreInsight": "前沿模型军备竞赛进入白热化，15 条信号集中出现",
+      "whyItMatters": "来自 The Decoder, AI HOT · X：Elon Musk (@elonmusk, xAI), Hacker News 等 13 个来源的 15 条信号共同指向这一趋势——前沿模型军备竞赛进入白热化，15 条信号集中出现",
+      "direction": "推理模型将从前沿特性升级为独立品类",
       "opportunities": [
         "基于超长上下文的企业知识管理平台",
         "多模型能力对比评估与选型推荐工具",
@@ -69,10 +69,10 @@
       "source_count": 13
     },
     {
-      "title": "AI 行业应用：观测到集中信号",
-      "coreInsight": "世界500强企业大规模部署 AI 进入核心业务，8 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Hacker News：AI 热帖, The Decoder, AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例） 等 7 个来源的 8 条信号共同指向这一趋势——世界500强企业大规模部署 AI 进入核心业务，8 条信号集中出现",
-      "direction": "AI 就绪度成为投资者评估新维度",
+      "title": "企业 AI 部署：观测到集中信号",
+      "coreInsight": "AI 从实验阶段进入生产核心，8 条信号集中出现",
+      "whyItMatters": "来自 arXiv cs.AI, The Decoder, OpenAI 等 7 个来源的 8 条信号共同指向这一趋势——AI 从实验阶段进入生产核心，8 条信号集中出现",
+      "direction": "财富500强一半以上将拥有核心 AI 业务流程",
       "opportunities": [
         "传统行业 AI 转型咨询与实施",
         "企业级 AI 治理合规与风险管理",
@@ -100,10 +100,10 @@
         },
         {
           "source": "The Decoder",
-          "time": "6/27 17:43",
-          "title": "Anthropic gets US approval to bring back Claude Mythos 5",
-          "summary": "Anthropic has US approval to redeploy Claude Mythos 5 for organizations running critical infrastructure. The company is still negotiating broader acce",
-          "url": "https://the-decoder.com/anthropic-gets-us-approval-to-bring-back-claude-mythos-5/"
+          "time": "6/29 16:17",
+          "title": "Samsung and SK Hynix plan $590 billion chip investment as AI demand sends memory prices soaring",
+          "summary": "Samsung and SK Hynix, backed by the South Korean government, are pouring $590 billion into new chip factories and packaging centers as AI data center ",
+          "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring/"
         },
         {
           "source": "AI HOT · OpenAI：官网动态（RSS · 排除企业/客户案例）",
@@ -133,10 +133,10 @@
       "source_count": 7
     },
     {
-      "title": "AI 评估体系：观测到集中信号",
-      "coreInsight": "AI 模型在基准测试中系统性虚增分数，7 条信号集中出现",
-      "whyItMatters": "来自 Hacker News, AI HOT · X：Rohan Paul (@rohanpaul_ai), AI HOT · MarkTechPost（RSS） 等 5 个来源的 7 条信号共同指向这一趋势——AI 模型在基准测试中系统性虚增分数，7 条信号集中出现",
-      "direction": "评估即服务将成为独立赛道",
+      "title": "智能体评测：观测到集中信号",
+      "coreInsight": "评估体系面临根本性质疑，7 条信号集中出现",
+      "whyItMatters": "来自 AI HOT · MarkTechPost（RSS）, Hacker News, AI HOT · Hacker News 热门（buzzing.cc 中文翻译） 等 5 个来源的 7 条信号共同指向这一趋势——评估体系面临根本性质疑，7 条信号集中出现",
+      "direction": "防篡改基准测试框架将出现",
       "opportunities": [
         "防篡改 AI 基准测试平台",
         "第三方 AI 模型评估与认证服务",
@@ -198,9 +198,9 @@
     },
     {
       "title": "AI 风险应对：观测到集中信号",
-      "coreInsight": "安全问题伴随 AI 规模化部署而放大，6 条信号集中出现",
-      "whyItMatters": "来自 Hacker News, The Decoder, TechCrunch 等 5 个来源的 6 条信号共同指向这一趋势——安全问题伴随 AI 规模化部署而放大，6 条信号集中出现",
-      "direction": "网络安全攻防双方都在用 AI 武装自己",
+      "coreInsight": "AI 安全从学术讨论进入产品级基础设施，7 条信号集中出现",
+      "whyItMatters": "来自 arXiv cs.AI, The Decoder, Hacker News 等 5 个来源的 7 条信号共同指向这一趋势——AI 安全从学术讨论进入产品级基础设施，7 条信号集中出现",
+      "direction": "安全分类器将成为 AI 基础设施标准组件",
       "opportunities": [
         "AI 模型安全评估与监测第三方服务",
         "面向政府和组织的 AI 安全政策咨询",
@@ -235,6 +235,13 @@
         },
         {
           "source": "The Decoder",
+          "time": "6/29 16:17",
+          "title": "Samsung and SK Hynix plan $590 billion chip investment as AI demand sends memory prices soaring",
+          "summary": "Samsung and SK Hynix, backed by the South Korean government, are pouring $590 billion into new chip factories and packaging centers as AI data center ",
+          "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring/"
+        },
+        {
+          "source": "The Decoder",
           "time": "6/28 17:30",
           "title": "Chinese cybersecurity firm builds AI tools to rival Mythos and frames the race as cyber-nuclear dete",
           "summary": "360 founder Zhou Hongyi presents two AI security tools designed to compete with Anthropic's Mythos. One has already flagged 3,432 vulnerabilities. Zho",
@@ -246,24 +253,74 @@
           "title": "Towards Reliable and Robust LLM Planning: Symbolic Feedback-Driven Iterative Self-Refinement Framewo",
           "summary": "arXiv:2606.27757v1 Announce Type: new \nAbstract: Large language models (LLMs) have attracted widespread attention from academia and industry, yet thei",
           "url": "https://arxiv.org/abs/2606.27757"
-        },
-        {
-          "source": "Hacker News",
-          "time": "6/29 01:50",
-          "title": "GLM 5.2 beats Claude in our benchmarks",
-          "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.",
-          "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
         }
       ],
       "trendScore": 10,
       "theme": "safety",
-      "article_count": 6,
+      "article_count": 7,
+      "source_count": 5
+    },
+    {
+      "title": "AI 投融资：观测到集中信号",
+      "coreInsight": "大额融资验证了 AI 赛道的商业价值，5 条信号集中出现",
+      "whyItMatters": "来自 AI HOT · X：Berry Xia (@berryxia), The Decoder, AI HOT · IT之家（RSS） 等 5 个来源的 5 条信号共同指向这一趋势——大额融资验证了 AI 赛道的商业价值，5 条信号集中出现",
+      "direction": "AI 估值从技术愿景转向收入与合规",
+      "opportunities": [
+        "AI 公司 IPO 的法律合规与风险披露",
+        "面向 AI 行业的投资研究与估值分析",
+        "AI 法律责任保险等新型金融产品",
+        "AI 公司融资顾问与估值服务"
+      ],
+      "risks": [
+        "大额融资可能催生 AI 泡沫",
+        "上市后短期业绩压力偏离安全投入"
+      ],
+      "signals": [
+        {
+          "source": "AI HOT · X：Berry Xia (@berryxia)",
+          "time": "6/28 01:05",
+          "title": "苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",
+          "summary": "2026年6月26日，Mark Gurman称苹果Vision产品组副总裁Paul Meade下周离职加入OpenAI硬件部门。他负责Vision Pro、无屏幕AI智能眼镜及AR眼镜研发。苹果计划首款触控OLED MacBook使用M5 Pro/Max芯片，2026年底到2027年初发布；M7 P",
+          "url": "https://x.com/berryxia/status/2070916520822321292"
+        },
+        {
+          "source": "AI HOT · The Decoder：AI News（RSS）",
+          "time": "6/27 20:25",
+          "title": "\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
+          "summary": "前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航",
+          "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
+        },
+        {
+          "source": "The Decoder",
+          "time": "6/29 16:17",
+          "title": "Samsung and SK Hynix plan $590 billion chip investment as AI demand sends memory prices soaring",
+          "summary": "Samsung and SK Hynix, backed by the South Korean government, are pouring $590 billion into new chip factories and packaging centers as AI data center ",
+          "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring/"
+        },
+        {
+          "source": "AI HOT · IT之家（RSS）",
+          "time": "6/29 14:44",
+          "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
+          "summary": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转",
+          "url": "https://www.ithome.com/0/969/953.htm"
+        },
+        {
+          "source": "AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",
+          "time": "6/26 23:51",
+          "title": "下一个重大突破：AI在工作中学习",
+          "summary": "AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",
+          "url": "https://www.dwarkesh.com/p/the-next-paradigm"
+        }
+      ],
+      "trendScore": 10,
+      "theme": "funding",
+      "article_count": 5,
       "source_count": 5
     },
     {
       "title": "科学 AI 突破：观测到集中信号",
       "coreInsight": "前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
-      "whyItMatters": "来自 Anthropic, AI HOT · The Decoder：AI News（RSS）, AI HOT · X：Elon Musk (@elonmusk, xAI) 等 5 个来源的 5 条信号共同指向这一趋势——前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
+      "whyItMatters": "来自 AI HOT · X：Elon Musk (@elonmusk, xAI), Anthropic, AI HOT · Anthropic：Research（发表成果 · 网页） 等 5 个来源的 5 条信号共同指向这一趋势——前沿 AI 在生命科学领域产生真正突破，5 条信号集中出现",
       "direction": "AI 设计蛋白质进入临床试验",
       "opportunities": [
         "AI 原生生物技术公司发现管线",
@@ -318,9 +375,9 @@
       "source_count": 5
     },
     {
-      "title": "智能体产品化：观测到集中信号",
+      "title": "AI 智能体：观测到集中信号",
       "coreInsight": "AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",
-      "whyItMatters": "来自 The Decoder, Anthropic, AI HOT · The Decoder：AI News（RSS） 等 5 个来源的 5 条信号共同指向这一趋势——AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",
+      "whyItMatters": "来自 arXiv cs.AI, The Decoder, Anthropic 等 5 个来源的 5 条信号共同指向这一趋势——AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",
       "direction": "主流 SaaS 产品都将内置 AI 智能体",
       "opportunities": [
         "企业级 AI 智能体编排与安全沙盒",
@@ -375,83 +432,19 @@
       "source_count": 5
     },
     {
-      "title": "端侧 AI 新范式：观测到集中信号",
-      "coreInsight": "小模型+强化学习正在瓦解大参数壁垒，6 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）, AI HOT · Nathan Lambert：Interconnects（RSS）, AI HOT · X：Rohan Paul (@rohanpaul_ai) 等 6 个来源的 6 条信号共同指向这一",
-      "direction": "3B-7B级别专用推理模型将大量涌现",
+      "title": "AI 硬件博弈：观测到集中信号",
+      "coreInsight": "自研芯片打破单一供应商依赖，4 条信号集中出现",
+      "whyItMatters": "来自 AI HOT · X：Berry Xia (@berryxia), The Decoder, TechCrunch 等 3 个来源的 4 条信号共同指向这一趋势——自研芯片打破单一供应商依赖，4 条信号集中出现",
+      "direction": "AI 实验室将大规模部署定制推理芯片",
       "opportunities": [
-        "端侧推理模型部署方案",
-        "垂直领域低成本专用推理模型",
-        "推理加速工具链（投机解码等）",
-        "面向 IoT 的超轻量 AI 推理"
+        "AI 推理架构芯片设计自动化",
+        "跨异构定制芯片的云编排平台",
+        "定制芯片策略评估咨询",
+        "芯片供应链管理与产能预测工具"
       ],
       "risks": [
-        "小模型在知识密集型任务上严重幻觉",
-        "过度追求压缩导致能力退化"
-      ],
-      "signals": [
-        {
-          "source": "AI HOT · The Decoder：AI News（RSS）",
-          "time": "6/28 15:44",
-          "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
-          "summary": "新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diam",
-          "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt"
-        },
-        {
-          "source": "AI HOT · X：Rohan Paul (@rohanpaul_ai)",
-          "time": "6/27 00:51",
-          "title": "华盛顿邮报报告：AI聊天机器人存在左翼偏见",
-          "summary": "《华盛顿邮报》报道，基于达特茅斯和斯坦福研究的测试显示，AI聊天机器人在约30项政策议题（税收、医保、移民等）上存在左翼偏见。GPT-5.5仅给出左倾立场占80%，双方立场17%，右倾3%；Gemini 3.1 Pro则93%给出双方立场，左倾仅7%；Claude Opus 4.8双方立场占57%；",
-          "url": "https://x.com/rohanpaul_ai/status/2070550479621488896"
-        },
-        {
-          "source": "AI HOT · Nathan Lambert：Interconnects（RSS）",
-          "time": "6/29 01:03",
-          "title": "Artifacts 22：Zyphra、Cohere 和 Poolside 正在扩展生态系统广度",
-          "summary": "开源模型生态正变得更多元，参与者从少数中国公司扩展到全球各类组织。纯模型制造商包括 DeepSeek、智谱、MiniMax、Poolside、Arcee、Zyphra 及主权 AI 玩家 Cohere、Sovereign、Mistral、Trillion Labs；科技巨头如阿里 Qwen、Goog",
-          "url": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside"
-        },
-        {
-          "source": "AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",
-          "time": "6/26 23:51",
-          "title": "下一个重大突破：AI在工作中学习",
-          "summary": "AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",
-          "url": "https://www.dwarkesh.com/p/the-next-paradigm"
-        },
-        {
-          "source": "AI HOT · X：阿易 AI Notes (@AYi_AInotes)",
-          "time": "6/26 23:37",
-          "title": "Leaf 开源项目：将网红峰哥做成实时通话 AI 分身",
-          "summary": "开发者 Leaf 开源项目，将网红峰哥做成能实时通话的 AI 分身，集成实时对话、音色克隆和人格注入，工程延迟压到 1 秒内。技术拆解：语音识别用 Cartesia ink-whisper 降噪防误触发；大模型选 MiniMax 高速版，首字响应 361ms；语音合成用 VoxCPM 开源克隆，15",
-          "url": "https://x.com/AYi_AInotes/status/2070531964067623381"
-        },
-        {
-          "source": "arXiv cs.AI",
-          "time": "6/29 12:00",
-          "title": "ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents",
-          "summary": "arXiv:2606.27814v1 Announce Type: new \nAbstract: Training small language-model agents for long-horizon interactive tasks requires both fast imitation ",
-          "url": "https://arxiv.org/abs/2606.27814"
-        }
-      ],
-      "trendScore": 9.9,
-      "theme": "small_models",
-      "article_count": 6,
-      "source_count": 6
-    },
-    {
-      "title": "AI 估值与 IPO：观测到集中信号",
-      "coreInsight": "AI 资本市场进入密集活跃期，4 条信号集中出现",
-      "whyItMatters": "来自 AI HOT · The Decoder：AI News（RSS）, AI HOT · X：Berry Xia (@berryxia), AI HOT · IT之家（RSS） 等 4 个来源的 4 条信号共同指向这一趋势——AI 资本市场进入密集活跃期，4 条信号集中出现",
-      "direction": "AI 估值从技术愿景转向收入与合规",
-      "opportunities": [
-        "AI 公司 IPO 的法律合规与风险披露",
-        "面向 AI 行业的投资研究与估值分析",
-        "AI 法律责任保险等新型金融产品",
-        "AI 公司融资顾问与估值服务"
-      ],
-      "risks": [
-        "大额融资可能催生 AI 泡沫",
-        "上市后短期业绩压力偏离安全投入"
+        "硬件标准碎片化导致部署复杂",
+        "无力自研芯片的初创公司被排除"
       ],
       "signals": [
         {
@@ -462,31 +455,31 @@
           "url": "https://x.com/berryxia/status/2070916520822321292"
         },
         {
-          "source": "AI HOT · The Decoder：AI News（RSS）",
-          "time": "6/27 20:25",
-          "title": "\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
-          "summary": "前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航",
-          "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
+          "source": "TechCrunch",
+          "time": "6/27 01:43",
+          "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+          "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.   OpenAI just shared its plans to spice things up ",
+          "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/"
         },
         {
-          "source": "AI HOT · IT之家（RSS）",
-          "time": "6/29 14:44",
-          "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
-          "summary": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转",
-          "url": "https://www.ithome.com/0/969/953.htm"
+          "source": "TechCrunch",
+          "time": "6/26 22:00",
+          "title": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+          "summary": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.   OpenAI just shared its plans to spice things up ",
+          "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/"
         },
         {
-          "source": "AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",
-          "time": "6/26 23:51",
-          "title": "下一个重大突破：AI在工作中学习",
-          "summary": "AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",
-          "url": "https://www.dwarkesh.com/p/the-next-paradigm"
+          "source": "The Decoder",
+          "time": "6/29 16:17",
+          "title": "Samsung and SK Hynix plan $590 billion chip investment as AI demand sends memory prices soaring",
+          "summary": "Samsung and SK Hynix, backed by the South Korean government, are pouring $590 billion into new chip factories and packaging centers as AI data center ",
+          "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring/"
         }
       ],
-      "trendScore": 9.9,
-      "theme": "funding",
+      "trendScore": 10.0,
+      "theme": "chips",
       "article_count": 4,
-      "source_count": 4
+      "source_count": 3
     }
   ]
 }

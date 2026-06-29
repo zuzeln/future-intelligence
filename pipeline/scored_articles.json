@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29 16:03",
+  "updated_at": "2026-06-29 16:23",
   "total_scored": 92,
   "articles": [
     {
@@ -533,6 +533,16 @@
       "news_score": 5.5
     },
     {
+      "title": "Samsung and SK Hynix plan $590 billion chip investment as AI demand sends memory prices soaring",
+      "summary": "Samsung and SK Hynix, backed by the South Korean government, are pouring $590 billion into new chip factories and packaging centers as AI data center demand surges. According to Jefferies, memory prices could climb to 50 percent per quarter through 2027. The two companies control nearly 80 percent o",
+      "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring/",
+      "source": "The Decoder",
+      "category": "AI 媒体",
+      "published": "2026-06-29 16:17",
+      "ts": 1782721061.0,
+      "news_score": 8.0
+    },
+    {
       "title": "AI won't become a real coworker until it stops answering and starts finishing tasks",
       "summary": "A survey paper by Tencent and several Chinese universities traces the path from chatbot to \"digital colleague.\" AI systems won't become reliable coworkers, the researchers argue, until they finish entire tasks in persistent work environments instead of just generating answers. The key lies in combin",
       "url": "https://the-decoder.com/ai-wont-become-a-real-coworker-until-it-stops-answering-and-starts-finishing-tasks/",
@@ -591,16 +601,6 @@
       "published": "2026-06-27 21:22",
       "ts": 1782566564.0,
       "news_score": 5.5
-    },
-    {
-      "title": "Anthropic gets US approval to bring back Claude Mythos 5",
-      "summary": "Anthropic has US approval to redeploy Claude Mythos 5 for organizations running critical infrastructure. The company is still negotiating broader access and the return of Fable 5, with no timeline set. The article Anthropic gets US approval to bring back Claude Mythos 5 appeared first on The Decoder",
-      "url": "https://the-decoder.com/anthropic-gets-us-approval-to-bring-back-claude-mythos-5/",
-      "source": "The Decoder",
-      "category": "AI 媒体",
-      "published": "2026-06-27 17:43",
-      "ts": 1782553419.0,
-      "news_score": 8.0
     },
     {
       "title": "The Download: brain-melting heatwaves and unprecedented OpenAI restrictions",
@@ -774,7 +774,7 @@
     },
     {
       "title": "Replacing Systemd with OpenRC in Debian",
-      "summary": "Article URL: https://danielcordova.me/blog/debian-openrc/ Comments URL: https://news.ycombinator.com/item?id=48715630 Points: 11 # Comments: 2",
+      "summary": "Article URL: https://danielcordova.me/blog/debian-openrc/ Comments URL: https://news.ycombinator.com/item?id=48715630 Points: 18 # Comments: 14",
       "url": "https://danielcordova.me/blog/debian-openrc/",
       "source": "Hacker News",
       "category": "社区",
@@ -784,7 +784,7 @@
     },
     {
       "title": "Lore – Give your coding agent the decisions your team made",
-      "summary": "Article URL: https://github.com/itsthelore/rac-core Comments URL: https://news.ycombinator.com/item?id=48714880 Points: 27 # Comments: 20",
+      "summary": "Article URL: https://github.com/itsthelore/rac-core Comments URL: https://news.ycombinator.com/item?id=48714880 Points: 29 # Comments: 24",
       "url": "https://github.com/itsthelore/rac-core",
       "source": "Hacker News",
       "category": "社区",
@@ -794,7 +794,7 @@
     },
     {
       "title": "Herdr: Agent multiplexer that lives in your terminal",
-      "summary": "Article URL: https://github.com/ogulcancelik/herdr Comments URL: https://news.ycombinator.com/item?id=48714802 Points: 45 # Comments: 16",
+      "summary": "Article URL: https://github.com/ogulcancelik/herdr Comments URL: https://news.ycombinator.com/item?id=48714802 Points: 51 # Comments: 19",
       "url": "https://github.com/ogulcancelik/herdr",
       "source": "Hacker News",
       "category": "社区",
@@ -804,7 +804,7 @@
     },
     {
       "title": "Age verification is just a precursor to automated attribution of speech",
-      "summary": "Article URL: https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 Comments URL: https://news.ycombinator.com/item?id=48714529 Points: 353 # Comments: 190",
+      "summary": "Article URL: https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026 Comments URL: https://news.ycombinator.com/item?id=48714529 Points: 370 # Comments: 198",
       "url": "https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026",
       "source": "Hacker News",
       "category": "社区",
@@ -814,7 +814,7 @@
     },
     {
       "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
-      "summary": "Article URL: https://danunparsed.com/p/hackerrank-open-source-ats Comments URL: https://news.ycombinator.com/item?id=48713832 Points: 288 # Comments: 89",
+      "summary": "Article URL: https://danunparsed.com/p/hackerrank-open-source-ats Comments URL: https://news.ycombinator.com/item?id=48713832 Points: 317 # Comments: 102",
       "url": "https://danunparsed.com/p/hackerrank-open-source-ats",
       "source": "Hacker News",
       "category": "社区",
@@ -844,7 +844,7 @@
     },
     {
       "title": "Librepods: AirPods liberated",
-      "summary": "Article URL: https://github.com/librepods-org/librepods Comments URL: https://news.ycombinator.com/item?id=48710232 Points: 359 # Comments: 124",
+      "summary": "Article URL: https://github.com/librepods-org/librepods Comments URL: https://news.ycombinator.com/item?id=48710232 Points: 365 # Comments: 124",
       "url": "https://github.com/librepods-org/librepods",
       "source": "Hacker News",
       "category": "社区",
@@ -854,7 +854,7 @@
     },
     {
       "title": "Historical memory prices 1960-2026",
-      "summary": "Article URL: https://dam.stanford.edu/memory-prices.html Comments URL: https://news.ycombinator.com/item?id=48710092 Points: 279 # Comments: 101",
+      "summary": "Article URL: https://dam.stanford.edu/memory-prices.html Comments URL: https://news.ycombinator.com/item?id=48710092 Points: 283 # Comments: 104",
       "url": "https://dam.stanford.edu/memory-prices.html",
       "source": "Hacker News",
       "category": "社区",
@@ -864,7 +864,7 @@
     },
     {
       "title": "GLM 5.2 beats Claude in our benchmarks",
-      "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.com/item?id=48709670 Points: 768 # Comments: 365",
+      "summary": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/ Comments URL: https://news.ycombinator.com/item?id=48709670 Points: 786 # Comments: 370",
       "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
       "source": "Hacker News",
       "category": "社区",
@@ -874,7 +874,7 @@
     },
     {
       "title": "Working around dragons with the Lemote Yeeloong laptop and OpenBSD",
-      "summary": "Article URL: http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html Comments URL: https://news.ycombinator.com/item?id=48709187 Points: 108 # Comments: 30",
+      "summary": "Article URL: http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html Comments URL: https://news.ycombinator.com/item?id=48709187 Points: 109 # Comments: 30",
       "url": "http://oldvcr.blogspot.com/2026/06/working-around-dragons-with-lemote.html",
       "source": "Hacker News",
       "category": "社区",
@@ -884,7 +884,7 @@
     },
     {
       "title": "Professor denounces mass AI fraud on an exam at Brown",
-      "summary": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html Comments URL: https://news.ycombinator.com/item?id=48708991 Points: 379 # Comments: 503",
+      "summary": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html Comments URL: https://news.ycombinator.com/item?id=48708991 Points: 386 # Comments: 509",
       "url": "https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html",
       "source": "Hacker News",
       "category": "社区",
@@ -894,7 +894,7 @@
     },
     {
       "title": "I used Claude Code to get a second opinion on my MRI",
-      "summary": "Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus Comments URL: https://news.ycombinator.com/item?id=48708941 Points: 415 # Comments: 544",
+      "summary": "Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus Comments URL: https://news.ycombinator.com/item?id=48708941 Points: 417 # Comments: 545",
       "url": "https://antoine.fi/mri-analysis-using-claude-code-opus",
       "source": "Hacker News",
       "category": "社区",
@@ -904,7 +904,7 @@
     },
     {
       "title": "Daisugi, the Japanese technique of growing trees out of other trees (2020)",
-      "summary": "https://x.com/wrathofgnon/status/1250287741247426565 , https://xcancel.com/wrathofgnon/status/1250287741247426565 Comments URL: https://news.ycombinator.com/item?id=48708859 Points: 130 # Comments: 43",
+      "summary": "https://x.com/wrathofgnon/status/1250287741247426565 , https://xcancel.com/wrathofgnon/status/1250287741247426565 Comments URL: https://news.ycombinator.com/item?id=48708859 Points: 131 # Comments: 43",
       "url": "https://www.openculture.com/2020/10/daisugi.html",
       "source": "Hacker News",
       "category": "社区",
@@ -914,7 +914,7 @@
     },
     {
       "title": "Tokenmaxxing is dead, long live tokenmaxxing",
-      "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing Comments URL: https://news.ycombinator.com/item?id=48708795 Points: 143 # Comments: 176",
+      "summary": "Article URL: https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing Comments URL: https://news.ycombinator.com/item?id=48708795 Points: 144 # Comments: 182",
       "url": "https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing",
       "source": "Hacker News",
       "category": "社区",
