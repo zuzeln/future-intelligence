@@ -3,354 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>未来智能 · 今日最重要的未来趋势</title>
+<title>Future Intelligence — Today's Most Important Future Trends</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #080B12;
-  --sidebar-bg: #12161F;
+  --bg: #0a0e14;
   --surface: #11161e;
-  --border: #1F2937;
-  --text-primary: #E2E8F0;
-  --text-secondary: #94A3B8;
-  --text-tertiary: #64748B;
-  --accent-light: #6BA3D9;
-  --accent: #3388CC;
-  --accent-deep: #1A5FB4;
-  --accent-dim: rgba(51,136,204,0.15);
-  --accent-glow: rgba(51,136,204,0.07);
-  --accent-gradient: linear-gradient(135deg, #6BA3D9 0%, #3388CC 40%, #1A5FB4 100%);
-  --sidebar-width: 300px;
+  --surface-hover: #161c26;
+  --border: #1e2632;
+  --text-primary: #e6e8ec;
+  --text-secondary: #8b919c;
+  --text-tertiary: #5c626e;
+  --accent: #4a9eff;
+  --accent-dim: #2d5a8c;
+  --accent-glow: rgba(74,158,255,0.12);
+  --success: #3fb950;
+  --warning: #d29922;
+  --danger: #f85149;
 
-  /* 液态玻璃渐变色 */
-  --glass-highlight: rgba(255,255,255,0.06);
-  --glass-border: rgba(255,255,255,0.06);
-  --glass-card-bg: rgba(255,255,255,0.03);
-  --glass-card-border: rgba(255,255,255,0.05);
-  --glass-card-hover-border: rgba(255,255,255,0.12);
-  --glass-sidebar-bg: rgba(13,17,25,0.72);
-  --glass-sidebar-border: rgba(255,255,255,0.06);
-  --glass-accent-bg: rgba(79,195,247,0.12);
-  --glass-accent-text: #4FC3F7;
-  --glass-accent-line: #4FC3F7;
-  --glass-shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-  --glass-shadow-md: 0 4px 20px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3);
-  --glass-shadow-lg: 0 8px 40px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4);
+  /* Edit mode */
+  --edit-border: rgba(248,81,73,0.35);
+  --edit-hl: rgba(74,158,255,0.08);
 }
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  background: #080B12;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* Brand */
+.brand { padding: 24px 0 16px; }
+.brand h1 { font-size: 1.6em; font-weight: 800; letter-spacing: -0.5px; }
+.brand span { font-size: 0.78em; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 2px; }
+
+/* Hero */
+.hero { padding: 32px 0 8px; }
+.hero h2 { font-size: 1.8em; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 8px; }
+.hero .subtitle { font-size: 0.9em; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px; }
+.update-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.78em; color: var(--text-tertiary);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 6px 14px;
 }
 
-/* ====== 液态背景光斑层 ====== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    /* 左上紫罗兰光斑 */
-    radial-gradient(ellipse 900px 700px at 15% 10%, rgba(124,58,237,0.28) 0%, transparent 70%),
-    /* 左上第二个紫光斑 */
-    radial-gradient(ellipse 600px 500px at 5% 30%, rgba(139,92,246,0.22) 0%, transparent 65%),
-    /* 右上青色光斑 */
-    radial-gradient(ellipse 700px 550px at 85% 15%, rgba(14,165,233,0.18) 0%, transparent 65%),
-    /* 右侧蓝紫光斑 */
-    radial-gradient(ellipse 500px 600px at 92% 50%, rgba(37,99,235,0.2) 0%, transparent 60%),
-    /* 左下深蓝光斑 */
-    radial-gradient(ellipse 650px 500px at 10% 90%, rgba(30,58,95,0.25) 0%, transparent 65%),
-    /* 右下蓝色光斑 */
-    radial-gradient(ellipse 800px 600px at 90% 85%, rgba(37,99,235,0.22) 0%, transparent 70%),
-    /* 中间偏上微弱的青蓝光斑 */
-    radial-gradient(ellipse 400px 350px at 50% 30%, rgba(14,165,233,0.1) 0%, transparent 60%),
-    /* 斜向高光线（微弱白色半透明细线 + 光晕） */
-    linear-gradient(132deg, rgba(255,255,255,0.03) 0%, transparent 8%, rgba(255,255,255,0.06) 38%, transparent 48%, rgba(255,255,255,0.02) 80%, transparent 100%);
-  filter: blur(40px);
+/* Trend Cards */
+.trend-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 30px; margin-bottom: 18px;
+  cursor: pointer; transition: all 0.2s;
 }
+.trend-card:hover { background: var(--surface-hover); border-color: #2a3340; }
+.trend-card.expanded { border-color: var(--accent-dim); background: var(--surface-hover); }
+.trend-card .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.trend-card .trend-rank {
+  font-size: 0.78em; color: var(--text-tertiary); font-weight: 600;
+  white-space: nowrap; padding-top: 3px;
+}
+.trend-card h3 { font-size: 1.2em; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.2px; flex: 1; }
+.trend-card .core-insight {
+  font-size: 0.95em; color: var(--accent); margin-bottom: 12px; line-height: 1.6;
+}
+.trend-card .card-footer {
+  display: flex; gap: 16px; font-size: 0.8em; color: var(--text-tertiary);
+  align-items: center; flex-wrap: wrap;
+}
+.trend-card .card-footer .signal-count { color: var(--accent); font-weight: 600; }
+.trend-card .card-footer .divider { width: 4px; height: 4px; background: var(--border); border-radius: 50%; }
 
-/* 第二层光斑——更模糊更深层 */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(ellipse 1000px 800px at 25% 40%, rgba(124,58,237,0.15) 0%, transparent 70%),
-    radial-gradient(ellipse 800px 700px at 75% 55%, rgba(30,58,95,0.18) 0%, transparent 65%),
-    radial-gradient(ellipse 600px 500px at 55% 75%, rgba(37,99,235,0.12) 0%, transparent 60%);
-  filter: blur(80px);
-}
-
-.app { display: flex; height: 100vh; position: relative; z-index: 1; }
-
-/* ====== 侧边栏 —— 毛玻璃 ====== */
-.sidebar {
-  width: var(--sidebar-width); min-width: var(--sidebar-width);
-  background: var(--glass-sidebar-bg);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
-  border-right: 1px solid var(--glass-sidebar-border);
-  display: flex; flex-direction: column; overflow: hidden;
-  position: relative;
-  box-shadow: 2px 0 30px rgba(0,0,0,0.4);
-}
-
-/* 侧边栏顶部光泽 —— 模拟玻璃边缘反光 */
-.sidebar::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255,255,255,0.12) 15%,
-    rgba(255,255,255,0.2) 30%,
-    rgba(255,255,255,0.08) 50%,
-    rgba(255,255,255,0.15) 70%,
-    transparent 100%
-  );
-  z-index: 2;
-}
-
-/* 侧边栏右上角反光高光 */
-.sidebar::after {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 120px; height: 120px;
-  background: radial-gradient(ellipse at 100% 0%, rgba(255,255,255,0.04) 0%, transparent 70%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.sidebar-header { padding: 24px 20px 12px; flex-shrink: 0; position: relative; z-index: 3; cursor: pointer; user-select: none; }
-.sidebar-header:hover .sidebar-title { color: #E2E8F0; }
-.sidebar-header .sidebar-title {
-  font-size: 22px; font-weight: 700; color: #FFFFFF;
-  display: flex; align-items: center; gap: 6px; cursor: pointer;
-  text-shadow: 0 1px 8px rgba(79,195,247,0.25);
-  transition: color 0.25s;
-}
-.sidebar-header .sidebar-title .title-arrow { font-size: 10px; color: #64748B; display: inline-block; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.sidebar-header .sidebar-zh-title { font-size: 22px; color: #FFFFFF; letter-spacing: 2px; margin-top: 1px; }
-.sidebar-header .sidebar-subtitle {
-  font-size: 12px; color: #64748B; letter-spacing: 0.5px;
-  margin-top: 2px;
-}
-.sidebar-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; position: relative; z-index: 3; max-height: 9999px; opacity: 1; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.sidebar.collapsed .sidebar-scroll { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; flex: 0 0 0; }
-.date-sub-header {
-  font-size: 11px; color: var(--text-tertiary); padding: 14px 10px 6px;
-  letter-spacing: 0.3px;
-}
-.trend-item {
-  display: flex; align-items: flex-start; gap: 8px;
-  padding: 8px 10px; border-radius: 8px; cursor: pointer;
-  transition: background 0.2s;
-  position: relative;
-}
-.trend-item:hover { background: rgba(255,255,255,0.04); }
-.trend-item.active {
-  background: var(--glass-accent-bg);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-/* 选中条目左侧细亮线 */
-.trend-item.active::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 6px; bottom: 6px;
-  width: 2.5px;
-  background: var(--glass-accent-line);
-  border-radius: 0 2px 2px 0;
-  box-shadow: 0 0 10px rgba(79,195,247,0.5);
-}
-.trend-item .trend-number {
-  font-size: 20px; font-weight: 700; color: #455A64;
-  min-width: 26px; line-height: 1.3; flex-shrink: 0;
-}
-.trend-item.active .trend-number { color: #4FC3F7; }
-.trend-item .trend-content { flex: 1; min-width: 0; }
-.trend-item .trend-title {
-  font-size: 13px; font-weight: 500; color: #B0BEC5; line-height: 1.4;
-  overflow: hidden; text-overflow: ellipsis; display: -webkit-box;
-  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-}
-.trend-item.active .trend-title { color: #4FC3F7; }
-.trend-item .trend-meta {
-  display: flex; align-items: center; gap: 8px; margin-top: 4px;
-}
-.trend-item .trend-tag {
-  font-size: 10px; color: var(--text-tertiary);
-  background: rgba(255,255,255,0.05); padding: 1px 6px;
-  border-radius: 3px; letter-spacing: 0.5px;
-}
-.trend-item .trend-signals {
-  font-size: 10px; color: #9E9E9E;
-}
-.trend-item.active .trend-signals { color: #4FC3F7; }
-
-/* ====== 右侧主内容区 ====== */
-.main { flex: 1; overflow-y: auto; padding: 40px 48px 60px; position: relative; z-index: 1; contain: layout style; will-change: contents; }
-.content-header { margin-bottom: 28px; }
-.content-header .rank-big {
-  font-size: 48px; font-weight: 800;
-  background: linear-gradient(135deg, #4FC3F7 0%, #7C3AED 50%, #8B5CF6 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; line-height: 1; letter-spacing: -1px;
-  filter: drop-shadow(0 2px 6px rgba(124,58,237,0.3));
-}
-.content-header .category-tag {
-  display: inline-block; font-size: 12px; color: var(--text-tertiary);
-  text-transform: uppercase; letter-spacing: 1.5px; margin-top: 8px;
-  padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 4px;
-  background: rgba(255,255,255,0.02);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-/* ====== 卡片 —— 毛玻璃 ====== */
-.cards { display: flex; flex-direction: column; gap: 20px; }
-.card {
-  background: rgba(255,255,255,0.025);
-  backdrop-filter: blur(6px) saturate(140%);
-  -webkit-backdrop-filter: blur(6px) saturate(140%);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 14px;
-  padding: 24px;
-  box-shadow:
-    0 2px 10px rgba(0,0,0,0.3),
-    0 1px 2px rgba(0,0,0,0.2);
-  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
-  position: relative;
-  will-change: transform;
-  transform: translateZ(0);
-}
-.card:hover {
-  border-color: rgba(255,255,255,0.12);
-  box-shadow:
-    0 4px 20px rgba(0,0,0,0.4),
-    0 1px 3px rgba(0,0,0,0.3),
-    inset 0 1px 0 rgba(255,255,255,0.03);
-}
-
-.card-title {
-  font-size: 20px; font-weight: 600; color: var(--text-primary);
-  margin-bottom: 14px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-}
-.card-body {
-  font-size: 15px; color: var(--text-primary); line-height: 1.75;
-}
-
-/* core-insight —— 更明显的蓝色调玻璃质感 */
-.card.core-insight {
-  background: rgba(30,58,95,0.12);
-  backdrop-filter: blur(8px) saturate(160%);
-  -webkit-backdrop-filter: blur(8px) saturate(160%);
-  border: 1px solid rgba(79,195,247,0.15);
-  box-shadow:
-    0 4px 24px rgba(0,0,0,0.4),
-    0 0 30px rgba(79,195,247,0.06),
-    0 2px 4px rgba(0,0,0,0.2);
-  position: relative;
-  overflow: hidden;
-}
-.card.core-insight::before {
-  content: '';
-  position: absolute;
-  top: -50%; right: -30%;
-  width: 350px; height: 350px;
-  background: radial-gradient(ellipse, rgba(79,195,247,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.card.core-insight .card-body { color: #B0D4F1; font-weight: 400; letter-spacing: 0.2px; }
-.card.core-insight:hover {
-  border-color: rgba(79,195,247,0.3);
-  box-shadow:
-    0 6px 30px rgba(0,0,0,0.5),
-    0 0 40px rgba(79,195,247,0.1),
-    0 2px 6px rgba(0,0,0,0.3);
-}
-
-.section-label {
-  font-size: 12px; font-weight: 600; color: var(--text-tertiary);
+/* Expand Detail */
+.trend-detail { display: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); animation: fadeIn 0.25s ease; }
+.trend-card.expanded .trend-detail { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.detail-section { margin-bottom: 20px; }
+.detail-section h4 {
+  font-size: 0.8em; font-weight: 600; color: var(--text-secondary);
   text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;
 }
+.detail-section p, .detail-section li { font-size: 0.9em; color: var(--text-primary); line-height: 1.7; }
+.detail-section ul { list-style: none; padding: 0; }
+.detail-section ul li { padding: 4px 0; }
+.detail-section ul li::before { content: '→ '; color: var(--accent); font-weight: 600; }
 
-.detail-row { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
-.detail-row ul { list-style: none; padding: 0; }
-.detail-row ul li {
-  font-size: 15px; color: var(--text-primary); line-height: 1.75; padding: 3px 0;
-}
-.detail-row ul li::before { content: '→ '; color: var(--accent); font-weight: 600; }
-
-.signals-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+/* Signals Grid */
+.signals-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 .signal-item {
-  display: block;
-  background: rgba(255,255,255,0.02);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.04);
-  border-radius: 10px;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  display: block; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px; text-decoration: none;
+  transition: border-color 0.15s;
 }
-.signal-item:hover {
-  border-color: rgba(79,195,247,0.35);
-  background: rgba(79,195,247,0.04);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-.signal-item .signal-source { font-size: 12px; color: var(--text-tertiary); margin-bottom: 3px; }
-.signal-item .signal-title { font-size: 14px; color: var(--text-primary); font-weight: 600; margin-bottom: 4px; }
-.signal-item .signal-summary { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.signal-item:hover { border-color: var(--accent-dim); }
+.signal-item .signal-source { font-size: 0.75em; color: var(--text-tertiary); margin-bottom: 3px; }
+.signal-item .signal-title { font-size: 0.88em; color: var(--text-primary); font-weight: 600; margin-bottom: 4px; }
+.signal-item .signal-summary { font-size: 0.82em; color: var(--text-secondary); line-height: 1.5; }
 
-.empty-state {
+/* Archive */
+.archive-section { margin-top: 40px; }
+.archive-toggle {
+  display: flex; align-items: center; gap: 6px; padding: 12px 0;
+  font-size: 0.82em; color: var(--text-tertiary); cursor: pointer;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.archive-toggle:hover { color: var(--text-secondary); }
+.archive-content { display: none; padding: 16px 0; }
+.archive-content.open { display: block; }
+.archive-item {
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.archive-item:last-child { border-bottom: none; }
+.archive-item strong { font-size: 0.9em; display: block; margin-bottom: 3px; }
+.archive-item span { font-size: 0.8em; color: var(--text-tertiary); }
+.archive-item .archive-desc { font-size: 0.82em; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+
+/* Sources */
+.sources-section { margin-top: 32px; }
+.sources-toggle {
+  display: flex; align-items: center; gap: 6px; padding: 12px 0;
+  font-size: 0.82em; color: var(--text-tertiary); cursor: pointer;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.sources-toggle:hover { color: var(--text-secondary); }
+.sources-grid { display: none; padding: 20px 0; }
+.sources-grid.open { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+.source-category h5 {
+  font-size: 0.76em; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 8px; padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.source-category ul { list-style: none; padding: 0; }
+.source-category li { padding: 2px 0; font-size: 0.78em; color: var(--text-secondary); }
+.source-category li a { color: var(--text-secondary); text-decoration: none; }
+.source-category li a:hover { color: var(--accent); }
+
+/* Collapse btn */
+.collapse-btn {
+  display: inline-block; margin-top: 16px; padding: 6px 16px;
+  font-size: 0.8em; color: var(--accent); cursor: pointer;
+  background: none; border: 1px solid var(--accent-dim); border-radius: 6px;
+  transition: all 0.15s;
+}
+.collapse-btn:hover { background: var(--accent-glow); }
+
+/* Footer */
+.footer {
+  margin-top: 48px; padding-top: 24px;
+  font-size: 0.75em; color: var(--text-tertiary); text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .container { padding: 28px 14px 60px; }
+  .hero h2 { font-size: 1.4em; }
+  .trend-card { padding: 20px 18px; }
+  .trend-card h3 { font-size: 1.05em; }
+}
+
+/* ================================================================
+   EDIT MODE STYLES — isolated, no effect when edit mode is off
+   ================================================================ */
+#edit-toggle {
+  position: fixed; top: 16px; right: 20px; z-index: 9999;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-secondary); font-size: 1.25em; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  height: calc(100vh - 100px); color: var(--text-tertiary); font-size: 14px;
+  transition: all 0.2s;
+}
+#edit-toggle:hover { background: var(--surface-hover); color: #fff; }
+#edit-toggle.active { background: var(--danger); border-color: var(--danger); color: #fff; }
+
+.edit-mode .editable-block {
+  position: relative;
+  border: 1px dashed var(--edit-border) !important;
+  border-radius: 8px;
+  transition: border 0.15s;
+}
+.edit-mode .editable-block:hover { border-style: solid !important; }
+
+.hide-btn {
+  display: none;
+  position: absolute; top: -6px; right: -6px; z-index: 10;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--danger); color: #fff; border: none;
+  font-size: 10px; line-height: 18px; text-align: center; cursor: pointer;
+  pointer-events: auto;
+}
+.edit-mode .hide-btn { display: block; }
+
+.edit-mode [contenteditable="true"] {
+  cursor: text !important;
+  border-radius: 3px;
+  transition: background 0.12s;
+}
+.edit-mode [contenteditable="true"]:hover {
+  background: var(--edit-hl);
+}
+.edit-mode [contenteditable="true"]:focus {
+  background: rgba(74,158,255,0.14);
+  outline: 1px solid var(--accent-dim);
 }
 
-.content-footer {
-  margin-top: 40px; text-align: center; font-size: 12px; color: var(--text-tertiary);
+/* Floating edit bar */
+#edit-bar {
+  display: none;
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 9998;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 28px; padding: 8px 8px; gap: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
 }
-
-/* ====== 滚动条 ====== */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.08); border-radius: 2px;
+.edit-mode #edit-bar { display: flex; }
+.edit-bar-btn {
+  padding: 10px 22px; border-radius: 22px; border: none;
+  font-size: 0.82em; font-weight: 600; cursor: pointer;
+  transition: all 0.15s;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.14); }
-
-@media (max-width: 768px) {
-  .app { flex-direction: column; }
-  .sidebar { width: 100%; min-width: 100%; max-height: 40vh; }
-  .main { padding: 24px 16px 40px; }
-  .content-header .rank-big { font-size: 36px; }
-  .card { padding: 18px; }
+.edit-bar-btn.save {
+  background: var(--accent); color: #fff;
 }
+.edit-bar-btn.save:hover { background: #5db3ff; }
+.edit-bar-btn.export {
+  background: transparent; color: var(--text-secondary); border: 1px solid var(--border);
+}
+.edit-bar-btn.export:hover { color: #fff; border-color: var(--text-secondary); }
 </style>
 </head>
 <body>
-<div class="app">
-<aside class="sidebar">
-  <div class="sidebar-header" id="sidebarHeader" onclick="toggleSidebar()"><div class="sidebar-title">FUTURE INTELLIGENCE <span class="title-arrow" id="titleArrow">▼</span></div><div class="sidebar-zh-title">未来智能</div><div class="sidebar-subtitle">2026年6月</div></div>
-  <div class="sidebar-scroll" id="sidebarScroll"></div>
-</aside>
-<main class="main" id="mainContent"><div class="empty-state">选择左侧条目查看详情</div></main>
+
+<button id="edit-toggle" title="切换编辑模式" onclick="toggleEditMode()">&#9881;</button>
+
+<div id="edit-bar">
+  <button class="edit-bar-btn save" onclick="saveToLocal()">保存到浏览器</button>
+  <button class="edit-bar-btn export" onclick="exportHTML()">导出 HTML</button>
 </div>
+
+<div class="container">
+
+  <div class="brand editable-block" data-block="brand">
+    <h1 contenteditable="false">Future Intelligence</h1>
+    <span contenteditable="false">Trend Discovery · Not News</span>
+  </div>
+
+  <div class="hero editable-block" data-block="hero">
+    <h2 contenteditable="false">Today's Most Important Future Trends</h2>
+    <p class="subtitle" contenteditable="false">从信号中提取趋势，而非追逐新闻。帮助理解未来正在发生什么。</p>
+    <div class="update-badge" id="updateTime" contenteditable="false"></div>
+  </div>
+
+  <div id="trends"></div>
+
+  <!-- Archive -->
+  <div class="archive-section editable-block" data-block="archive-section">
+    <div class="archive-toggle" onclick="toggleArchive()" contenteditable="false">
+      <span id="archiveLabel">Archive · 近期存档</span>
+    </div>
+    <div class="archive-content" id="archiveSection"></div>
+  </div>
+
+  <!-- Sources -->
+  <div class="sources-section editable-block" data-block="sources-section">
+    <div class="sources-toggle" onclick="toggleSources()" contenteditable="false">
+      <span contenteditable="false">数据来源 · 信息源</span>
+    </div>
+    <div class="sources-grid" id="sourcesSection"></div>
+  </div>
+
+  <div class="footer editable-block" data-block="footer" contenteditable="false">
+    趋势基于公开数据源分析生成 · 不追逐新闻，只发现趋势
+  </div>
+
+</div>
+
 <script>
-var ALL_ITEMS = [
+// ============================================================
+// TREND DATA
+// ============================================================
+const ALL_ITEMS = [
 {id:36,date:'2026-06-01',title:"OpenAI 双线出击：从生物防御到机器人，AI 从语言模型走向物理世界",coreInsight:"OpenAI 同日发布生物防御 AI 工具 Rosalind 并宣布正式进军机器人领域——不再满足于语言和代码，开始将前沿 AI 能力延伸到生命科学与物理硬件。",whyItMatters:"Rosalind 是 OpenAI 首个生物防御专用工具，标志着 AI 实验室开始承担国家安全级使命。同时进军机器人意味着 OpenAI 正从「纯软件公司」向「软硬一体」的 AI 巨头演进——这与苹果、特斯拉的路线形成直接竞争。",direction:"12-18 个月内，主流 AI 实验室将陆续成立机器人部门或硬件团队。AI+生物学交叉领域将成为新的投资热点。",opportunities:["AI 生物安全与生物防御的垂直工具市场", "面向 AI 机器人公司的仿真训练与安全测试平台", "AI+生命科学的跨领域研究与产品化服务"],risks:["AI 进入物理世界带来新的安全与伦理风险——机器人误操作可能直接造成人身伤害", "AI 实验室过度多元化可能导致核心研究能力分散"],signals:[{"source": "X: Sam Altman", "time": "6/1", "title": "OpenAI 发布生物防御 AI 工具 Rosalind", "summary": "首个面向生物安全领域的专用 AI 工具。", "url": "https://x.com/sama/status/2061101875303530871"}, {"source": "X: Sam Altman", "time": "6/1", "title": "OpenAI 正式进军机器人领域并启动招聘", "summary": "标志着 OpenAI 从纯软件向软硬一体战略延伸。", "url": "https://x.com/sama/status/2061117302528188712"}]},
 {id:37,date:'2026-06-01',title:"苹果 WWDC 前夕 AI 路线图曝光：Gemini 蒸馏模型本地运行，但外核依赖成隐患",coreInsight:"苹果将在 WWDC 推出由 Gemini 蒸馏模型驱动的本地 AI 升级，在隐私优先的同时暴露了对 Google 技术栈的深度外部依赖——「AI 主权」正在成为消费电子巨头的新战略命题。",whyItMatters:"苹果选择蒸馏 Gemini 而非自研模型，表明即使是最注重垂直整合的科技公司也在 AI 模型层面做出妥协。特斯拉 FSD 同日完成 6000 公里横穿加拿大的零干预自动驾驶——两条新闻共同揭示：AI 从云端走进终端的速度远超预期。",direction:"12 个月内，手机厂商将面临「自研模型 vs 第三方模型」的战略分水岭。自动驾驶长距离验证将成为行业新标准。",opportunities:["面向移动端的模型蒸馏与本地推理优化服务", "车规级 AI 系统的远程验证与安全认证平台", "帮助手机厂商评估自研 vs 第三方 AI 模型的决策咨询"],risks:["苹果对 Google Gemini 的深度依赖可能在未来谈判中失去议价权", "自动驾驶长途验证通过不等于所有场景安全——边缘案例仍需大量测试"],signals:[{"source": "X: Kim", "time": "6/1", "title": "苹果 WWDC 将推 AI 升级：Gemini 蒸馏模型本地运行", "summary": "技术栈外部依赖显著，引发 AI 主权讨论。", "url": "https://x.com/kimmonismus/status/2061058117304262999"}, {"source": "IT之家", "time": "6/1", "title": "特斯拉 FSD 完成全球首次横穿加拿大 6000 公里零干预自动驾驶", "summary": "自动驾驶从演示走向超级长途验证。", "url": "https://www.ithome.com/0/957/718.htm"}]},
 {id:38,date:'2026-06-01',title:"个人 GPU 算力民主化：数据中心级芯片进入消费市场",coreInsight:"技术爱好者以 200 英镑将数据中心级 GPU 装入游戏电脑——AI 算力正在从集中式云服务向分散的个人端渗透，暗示着「人人可运行的 AI」新范式。",whyItMatters:"这不仅是极客实验，更是算力民主化的标志性信号。当个人可以拥有曾属于数据中心的高性能 GPU，端侧 AI 推理的成本门槛将被大幅拉低。同时教皇对 AI 的评论超过 Hinton 的认知深度引发热议——AI 的哲学与伦理讨论正在走出实验室，进入公众话语。",direction:"12-24 个月内，消费级 AI 硬件将成为新品类。二手/退役数据中心 GPU 市场将形成规模化的个人 AI 算力供给。",opportunities:["消费级 AI 推理硬件的设计与销售", "面向个人用户的端侧大模型优化工具", "退役数据中心 GPU 翻新与适配消费市场的供应链"],risks:["个人持有高性能 GPU 可能被用于恶意 AI 应用", "消费级 AI 硬件的安全与散热标准尚未建立"],signals:[{"source": "Hacker News / buzzing.cc", "time": "6/1", "title": "200 英镑把数据中心级 GPU 装进游戏电脑", "summary": "个人 AI 算力民主化的标志性实验。", "url": "https://blog.tymscar.com/posts/v100localllm"}, {"source": "Gary Marcus", "time": "6/1", "title": "教皇似乎比 Geoffrey Hinton 更懂人工智能", "summary": "AI 伦理讨论进入公众话语和宗教界。", "url": "https://garymarcus.substack.com/p/the-pope-appears-to-understand-ai"}]},
@@ -425,84 +357,416 @@ var ALL_ITEMS = [
   {id:72,date:'2026-06-29',title:"AI 资本市场：观测到集中信号",coreInsight:"AI 资本市场进入密集活跃期，5 条信号集中出现",whyItMatters:"来自 AI HOT · X：Berry Xia (@berryxia), AI HOT · IT之家（RSS）, AI HOT · Dwarkesh Patel：Podcast & Blog（RSS） 等 4 个来源的 5 条信号共同指向这一趋势——AI 资本市场进入密集活跃期，5 条信号集中出现",direction:"至少3-5家 AI 公司在12个月内完成 IPO",opportunities:["AI 公司 IPO 的法律合规与风险披露","面向 AI 行业的投资研究与估值分析","AI 法律责任保险等新型金融产品","AI 公司融资顾问与估值服务"],risks:["大额融资可能催生 AI 泡沫","上市后短期业绩压力偏离安全投入"],signals:[{source:"AI HOT · X：Berry Xia (@berryxia)",time:"6/28 01:05",title:"苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",summary:"2026年6月26日，Mark Gurman称苹果Vision产品组副总裁Paul Meade下周离职加入OpenAI硬件部门。他负责Vision Pro、无屏幕AI智能眼镜及AR眼镜研发。苹果计划首款触控OLED MacBook使用M5 Pro/Max芯片，2026年底到2027年初发布；M7 P",url:"https://x.com/berryxia/status/2070916520822321292"},{source:"AI HOT · The Decoder：AI News（RSS）",time:"6/27 20:25",title:"\"Raise Us\"启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",summary:"前美国商务部长Raimondo与前印第安纳州长Holcomb共同发起非营利\"Raise Us\"，目标为AI经济下工人再培训筹集10亿美元，已锁定5亿。Amazon、Anthropic、Microsoft、OpenAI等支持，引发独立性质疑。将在阿肯色、康涅狄格、马里兰、犹他四州试点，包括AI职业导航",url:"https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"},{source:"AI HOT · The Decoder：AI News（RSS）",time:"6/29 16:17",title:"三星和SK海力士计划投资5900亿美元扩产芯片，AI需求推高内存价格",summary:"在韩国政府支持下，三星和SK海力士计划投入5900亿美元扩大芯片产能，包括800万亿韩元新建四座工厂、81万亿韩元建封装中心，以及未来15年30万亿韩元用于研发下一代芯片。AI数据中心需求是主要驱动力。Jefferies预测，2026年Q3内存价格将上涨40%至50%，Q4再涨30%至40%，202",url:"https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring"},{source:"AI HOT · IT之家（RSS）",time:"6/29 14:44",title:"SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",summary:"SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转",url:"https://www.ithome.com/0/969/953.htm"},{source:"AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",time:"6/26 23:51",title:"下一个重大突破：AI在工作中学习",summary:"AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",url:"https://www.dwarkesh.com/p/the-next-paradigm"}]},
   {id:73,date:'2026-06-29',title:"科学 AI 突破：观测到集中信号",coreInsight:"AI 从工具向科学家演进，5 条信号集中出现",whyItMatters:"来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, AI HOT · X：Elon Musk (@elonmusk, xAI), AI HOT · The Decoder：AI News（RSS） 等 5 个来源的 5 条信号共同指向这一趋势——AI 从工具向科",direction:"AI 设计蛋白质进入临床试验",opportunities:["AI 原生生物技术公司发现管线","AI 设计实验的闭环验证平台","生命科学 AI 基准测试与验证服务","AI 科学发现的商业化转化服务"],risks:["AI 发现在湿实验室中无法复现","前沿 AI 获取不平等造成发现鸿沟"],signals:[{source:"AI HOT · X：Elon Musk (@elonmusk, xAI)",time:"6/28 18:50",title:"Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus",summary:"Grok 4.5，基于我们的1.5T V9基础模型，并在补充训练中加入Cursor数据，现已在SpaceX和Tesla进入私测。初步评估显示其性能接近，或许超越Opus。  强化学习仍在持续显著改进模型，Grok Build工具链也在日益完善。  所有参与者的出色工作！  今年，@SpaceX 将每",url:"https://x.com/elonmusk/status/2071184354756477041"},{source:"AI HOT · The Decoder：AI News（RSS）",time:"6/28 15:44",title:"新浪开源VibeThinker-3B：推理可压缩，事实知识不能",summary:"新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diam",url:"https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt"},{source:"AI HOT · Anthropic：Research（发表成果 · 网页）",time:"6/26 23:18",title:"Anthropic Economic Index 报告：使用节奏",summary:"Anthropic 发布 Economic Index 报告，基于隐私保护遥测数据分析了 Claude 的使用节奏。工作日个人对话占比约 35%，周末升至近 50%；高薪职业在工作日外的使用占比更高。日内模式显示：新闻请求集中在早上 7 点，食谱在下午 6 点达到 2.3 倍高频，睡眠建议凌晨 3 ",url:"https://www.anthropic.com/research/economic-index-june-2026-report"},{source:"AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",time:"6/27 23:39",title:"一次失败的（民族国家？）攻击的剖析",summary:"作者收到伪装成新加坡VC Lua Ventures的虚假面试邮件，要求完成一个TypeScript仓库的\"测试\"。作者将仓库交给Claude扫描，在`typescript+5.9.2.patch`中发现base64混淆载荷，该载荷在`patch-package`安装时触发，向`~/.cache-`等",url:"https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack"},{source:"Anthropic",time:"",title:"Jun 5, 2026 Science Making Claude a chemist",summary:"",url:"https://www.anthropic.com/research/making-claude-a-chemist"}]},
   {id:74,date:'2026-06-29',title:"AI 智能体：观测到集中信号",coreInsight:"AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",whyItMatters:"来自 AI HOT · Hacker News 热门（buzzing.cc 中文翻译）, AI HOT · The Decoder：AI News（RSS）, Anthropic 等 5 个来源的 5 条信号共同指向这一趋势——AI 智能体从实验室演示走向规模化部署，5 条信号集中出现",direction:"主流 SaaS 产品都将内置 AI 智能体",opportunities:["企业级 AI 智能体编排与安全沙盒","跨平台智能体一致性管理","智能体客户服务质量监控与人工兜底","面向超级 App 的智能体应用开发"],risks:["智能体大规模部署引发安全隐私问题","商业场景中的错误决策造成经济损失"],signals:[{source:"AI HOT · The Decoder：AI News（RSS）",time:"6/28 18:16",title:"仅有三个AI模型在500天创业测试中盈利超过起始资本",summary:"普林斯顿大学推出CEO-Bench基准测试，让AI智能体在模拟环境中运营订阅软件公司NovaMind 500天，起始资金100万美元。14个测试模型中，仅Claude Fable 5（最佳轮次盈利4715万美元）、Claude Opus 4.8（2780万美元）和GPT-5.5（2130万美元）在最",url:"https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test"},{source:"Anthropic",time:"",title:"Alignment May 8, 2026 Teaching Claude why New research on how we\'ve reduced agentic misalignment.",summary:"",url:"https://www.anthropic.com/research/teaching-claude-why"},{source:"The Decoder",time:"6/28 20:14",title:"Coinbase joins the rush to Chinese AI models as Western labs face a pricing stress test",summary:"Coinbase CEO Brian Armstrong is switching his company to Chinese AI models like GLM 5.2 and Kimi 2.7. An automated routing system picks the best model",url:"https://the-decoder.com/coinbase-joins-the-rush-to-chinese-ai-models-as-western-labs-face-a-pricing-stress-test/"},{source:"AI HOT · Hacker News 热门（buzzing.cc 中文翻译）",time:"6/28 11:55",title:"阿德拉菲尼尔：仅在AI agent工作时阻止Mac睡眠的菜单栏工具",summary:"Adrafinil 是一款 macOS 菜单栏应用，仅在 Claude Code、Codex、Cursor、Gemini CLI、Aider、Hermes、OpenCode、Cline、Pi 等 9 种 AI coding agent 持有活跃会话时阻止系统睡眠（包括合盖睡眠）。无 agent 工作",url:"https://github.com/kageroumado/adrafinil"},{source:"arXiv cs.AI",time:"6/29 12:00",title:"ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents",summary:"arXiv:2606.27814v1 Announce Type: new  Abstract: Training small language-model agents for long-horizon interactive tasks requires both fast imitation ",url:"https://arxiv.org/abs/2606.27814"}]},
-  {id:75,date:'2026-06-29',title:"参数压缩革命：观测到集中信号",coreInsight:"小参数模型在推理基准上挑战大模型，揭示「推理可压缩」新范式，6 条信号集中出现",whyItMatters:"来自 AI HOT · X：Rohan Paul (@rohanpaul_ai), AI HOT · The Decoder：AI News（RSS）, AI HOT · Nathan Lambert：Interconnects（RSS） 等 6 个来源的 6 条信号共同指向这一趋势——小参数模型在",direction:"3B-7B级别专用推理模型将大量涌现",opportunities:["端侧推理模型部署方案","垂直领域低成本专用推理模型","推理加速工具链（投机解码等）","面向 IoT 的超轻量 AI 推理"],risks:["小模型在知识密集型任务上严重幻觉","过度追求压缩导致能力退化"],signals:[{source:"AI HOT · The Decoder：AI News（RSS）",time:"6/28 15:44",title:"新浪开源VibeThinker-3B：推理可压缩，事实知识不能",summary:"新浪发布仅3B参数的VibeThinker-3B，在AIME26等数学编程基准上持平DeepSeek V3.2等大200-333倍的模型，LiveCodeBench超越所有20B以下模型，LeetCode竞赛解决123/128题超过GPT-5.2、Kimi K2.5等。但知识密集型GPQA-Diam",url:"https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt"},{source:"AI HOT · X：Rohan Paul (@rohanpaul_ai)",time:"6/27 00:51",title:"华盛顿邮报报告：AI聊天机器人存在左翼偏见",summary:"《华盛顿邮报》报道，基于达特茅斯和斯坦福研究的测试显示，AI聊天机器人在约30项政策议题（税收、医保、移民等）上存在左翼偏见。GPT-5.5仅给出左倾立场占80%，双方立场17%，右倾3%；Gemini 3.1 Pro则93%给出双方立场，左倾仅7%；Claude Opus 4.8双方立场占57%；",url:"https://x.com/rohanpaul_ai/status/2070550479621488896"},{source:"AI HOT · Nathan Lambert：Interconnects（RSS）",time:"6/29 01:03",title:"Artifacts 22：Zyphra、Cohere 和 Poolside 正在扩展生态系统广度",summary:"开源模型生态正变得更多元，参与者从少数中国公司扩展到全球各类组织。纯模型制造商包括 DeepSeek、智谱、MiniMax、Poolside、Arcee、Zyphra 及主权 AI 玩家 Cohere、Sovereign、Mistral、Trillion Labs；科技巨头如阿里 Qwen、Goog",url:"https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside"},{source:"AI HOT · Dwarkesh Patel：Podcast & Blog（RSS）",time:"6/26 23:51",title:"下一个重大突破：AI在工作中学习",summary:"AI实验室的研究赌注是：在数千个多样化RL环境中训练模型完成数百万可验证任务，就能构建AGI。这种训练会培养出能连续数周处理开放任务、应对错误和歧义的问题解决技能。虽然模型训练时的样本效率仅为人类的百万分之一，但训练成本是一次性的，可摊销到数十亿次用户会话中；真正重要的是模型在单个会话内的智能和样本",url:"https://www.dwarkesh.com/p/the-next-paradigm"},{source:"AI HOT · X：阿易 AI Notes (@AYi_AInotes)",time:"6/26 23:37",title:"Leaf 开源项目：将网红峰哥做成实时通话 AI 分身",summary:"开发者 Leaf 开源项目，将网红峰哥做成能实时通话的 AI 分身，集成实时对话、音色克隆和人格注入，工程延迟压到 1 秒内。技术拆解：语音识别用 Cartesia ink-whisper 降噪防误触发；大模型选 MiniMax 高速版，首字响应 361ms；语音合成用 VoxCPM 开源克隆，15",url:"https://x.com/AYi_AInotes/status/2070531964067623381"},{source:"arXiv cs.AI",time:"6/29 12:00",title:"ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents",summary:"arXiv:2606.27814v1 Announce Type: new  Abstract: Training small language-model agents for long-horizon interactive tasks requires both fast imitation ",url:"https://arxiv.org/abs/2606.27814"}]}
 ];
 
-function formatDateLabel(ds){var d=new Date(ds+'T00:00:00');return (d.getMonth()+1)+'月'+d.getDate()+'日 周'+['日','一','二','三','四','五','六'][d.getDay()];}
-function groupByDate(items){var g={};items.forEach(function(i){if(!g[i.date])g[i.date]=[];g[i.date].push(i);});var sd=Object.keys(g).sort(function(a,b){return b.localeCompare(a);});return sd.map(function(d){return {date:d,items:g[d]};});}
+const ARCHIVE_DATA = [
+  {
+    "title": "Anthropic launches Cowork desktop agent working directly in files",
+    "source": "VentureBeat AI",
+    "time": "6/23 00:00",
+    "summary": "Anthropic released Cowork, a Claude Desktop agent capability that works directly with user files without requiring coding, extending AI assistance to non-technical tasks.",
+    "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no/"
+  },
+  {
+    "title": "Samsung deploys ChatGPT Enterprise and Codex to employees worldwide",
+    "source": "OpenAI Blog",
+    "time": "6/21 23:00",
+    "summary": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI's largest enterprise AI rollouts.",
+    "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment"
+  },
+  {
+    "title": "Apple Vision Pro exec reportedly leaving for OpenAI hardware team",
+    "source": "TechCrunch AI",
+    "time": "6/27 16:45",
+    "summary": "Paul Meade, Apple VP in charge of Vision Pro, is reportedly leaving to join OpenAI's hardware team, signaling OpenAI's serious hardware ambitions.",
+    "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
+  },
+  {
+    "title": "OpenAI poaches Uber India chief to lead biggest market outside US",
+    "source": "TechCrunch AI",
+    "time": "6/26 18:19",
+    "summary": "OpenAI hires Uber India chief to lead its expansion in India, its largest market outside the US, signaling aggressive international growth.",
+    "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/"
+  },
+  {
+    "title": "The companies most likely to automate your job are funding a $1B retraining program",
+    "source": "The Decoder",
+    "time": "6/27 12:25",
+    "summary": "Major AI companies are collectively funding a $1 billion program to retrain workers whose jobs are most at risk of automation.",
+    "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/"
+  },
+  {
+    "title": "Google DeepMind introduces computer use in Gemini 3.5 Flash",
+    "source": "Google DeepMind",
+    "time": "6/24 16:30",
+    "summary": "Gemini 3.5 Flash gains computer use capability, enabling the model to interact with screens and applications directly.",
+    "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
+  },
+  {
+    "title": "DiffusionGemma: 4x faster text generation with diffusion models",
+    "source": "Google DeepMind",
+    "time": "6/10 16:24",
+    "summary": "Google DeepMind releases DiffusionGemma, achieving 4x faster text generation using diffusion-based architectures instead of traditional autoregressive methods.",
+    "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/"
+  },
+  {
+    "title": "GPT-5.6 Sol cheats on software tests more than any model before it",
+    "source": "The Decoder",
+    "time": "6/27 09:23",
+    "summary": "METR study finds OpenAI's new GPT-5.6 Sol exhibits more 'reward hacking' behavior on software benchmarks than any previous model, raising evaluation integrity concerns.",
+    "url": "https://the-decoder.com/gpt-5-6-sol-cheats-on-software-tests-more-than-any-model-before-it/"
+  },
+  {
+    "title": "Cursor study finds reward hacking inflates coding-agent benchmark scores",
+    "source": "MarkTechPost",
+    "time": "6/27 09:23",
+    "summary": "A Cursor study shows coding agents retrieve known fixes instead of deriving them, inflating SWE-bench Pro scores through runtime contamination.",
+    "url": "https://www.marktechpost.com/2026/06/27/cursor-study-finds-reward-hacking/"
+  },
+  {
+    "title": "Prompt injection risks in automated resume screening with LLMs",
+    "source": "arXiv AI",
+    "time": "6/25 17:04",
+    "summary": "Research demonstrates that candidates can strategically manipulate LLM-based hiring systems through prompt injection, creating new risks in algorithmic hiring.",
+    "url": "http://arxiv.org/abs/2606.27287v1"
+  },
+  {
+    "title": "Helping build shared standards for advanced AI through the Appia Foundation",
+    "source": "OpenAI Blog",
+    "time": "6/23 13:00",
+    "summary": "OpenAI supports the Appia Foundation to build evaluation frameworks, safety practices, and global cooperation standards for advanced AI.",
+    "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai"
+  },
+  {
+    "title": "Stripe, Anthropic, and OpenAI back effort to stop respiratory infections",
+    "source": "MIT Tech Review AI",
+    "time": "6/24 12:00",
+    "summary": "Major tech companies are funding research to prevent common respiratory infections, leveraging AI for drug discovery against the common cold.",
+    "url": "https://www.technologyreview.com/2026/06/24/1139621/stripe-anthropic-and-openai-are-backing-an-effort-to-stop-respiratory-infections/"
+  },
+  {
+    "title": "HSBC expands AI banking partnership with Google Cloud",
+    "source": "AI News",
+    "time": "6/24 12:00",
+    "summary": "HSBC enters multi-year partnership with Google Cloud to develop and deploy AI tools across its global banking operations.",
+    "url": "https://www.artificialintelligence-news.com/news/hsbc-expands-ai-banking-partnership-with-google-cloud/"
+  },
+  {
+    "title": "Perplexity launches Computer for Counsel: multi-model agentic layer for legal",
+    "source": "MarkTechPost",
+    "time": "6/27 17:03",
+    "summary": "Perplexity extends its Computer product to legal teams, routing 20+ models with cited outputs that lawyers can verify.",
+    "url": "https://www.marktechpost.com/2026/06/27/perplexity-launches-computer-for-counsel/"
+  },
+  {
+    "title": "L'Oréal brings Maybelline virtual try-on to ChatGPT",
+    "source": "AI News",
+    "time": "6/18 17:00",
+    "summary": "L'Oréal partners with OpenAI to bring Maybelline New York's virtual makeup try-on feature into ChatGPT, expanding AI into consumer beauty.",
+    "url": "https://www.artificialintelligence-news.com/news/loreal-brings-maybelline-virtual-try-on-to-chatgpt/"
+  },
+  {
+    "title": "Railway secures $100M to challenge AWS with AI-native cloud infrastructure",
+    "source": "VentureBeat AI",
+    "time": "1/22 14:00",
+    "summary": "Railway, a cloud platform with 2M developers, raises $100M to build AI-native cloud infrastructure that could challenge AWS's dominance.",
+    "url": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud"
+  }
+];
 
-var groups=groupByDate(ALL_ITEMS),activeItemId=ALL_ITEMS[0].id,sidebarCollapsed=false;
+const SOURCES = [
+  { cat: "AI 公司", items: ["OpenAI","Anthropic","Google DeepMind","Meta AI","Microsoft AI","NVIDIA","Hugging Face","Stability AI","Mistral AI","Cohere"] },
+  { cat: "AI 媒体", items: ["TechCrunch AI","VentureBeat AI","The Verge AI","Ars Technica","MarkTechPost","AI News","The Decoder","MIT Tech Review"] },
+  { cat: "研究机构", items: ["arXiv cs.AI","Stanford HAI","Google Research","Microsoft Research","BAIR"] },
+  { cat: "投资机构", items: ["a16z","Sequoia Capital","Benchmark","Y Combinator"] },
+  { cat: "社区信号", items: ["Hacker News","GitHub Trending","Reddit ML","Product Hunt","X/Twitter","AI HOT"] }
+];
 
-function toggleSidebar(){
-  sidebarCollapsed=!sidebarCollapsed;
-  var sb=document.querySelector('.sidebar');
-  var arrow=document.getElementById('titleArrow');
-  if(sidebarCollapsed){
-    sb.classList.add('collapsed');
-    arrow.textContent='▶';
-  }else{
-    sb.classList.remove('collapsed');
-    arrow.textContent='▼';
+// ============================================================
+// EDIT MODE ENGINE
+// ============================================================
+const LS_PREFIX = 'fi_edit_';
+let editMode = false;
+
+function lsKey(k) { return LS_PREFIX + k; }
+
+// Restore hidden blocks from localStorage
+function restoreHidden() {
+  const hidden = JSON.parse(localStorage.getItem(lsKey('hidden')) || '[]');
+  hidden.forEach(function(sel) {
+    var el = document.querySelector(sel);
+    if (el) el.style.display = 'none';
+  });
+}
+
+// Restore text edits from localStorage
+function restoreTextEdits() {
+  const edits = JSON.parse(localStorage.getItem(lsKey('textEdits')) || '{}');
+  Object.keys(edits).forEach(function(sel) {
+    var el = document.querySelector(sel);
+    if (el && edits[sel] !== null) el.textContent = edits[sel];
+  });
+}
+
+function toggleEditMode() {
+  editMode = !editMode;
+  var btn = document.getElementById('edit-toggle');
+  if (editMode) {
+    document.body.classList.add('edit-mode');
+    btn.classList.add('active');
+    btn.title = '退出编辑模式';
+    setAllEditable(true);
+    injectHideButtons();
+  } else {
+    document.body.classList.remove('edit-mode');
+    btn.classList.remove('active');
+    btn.title = '切换编辑模式';
+    setAllEditable(false);
+    removeHideButtons();
   }
 }
 
-/* ====== 性能优化：防抖 + RAF 批量 DOM 更新 ====== */
-var _selectTimeout=null,_selectPending=null;
-function selectItem(id){
-  if(_selectTimeout){clearTimeout(_selectTimeout);}
-  if(_selectPending){cancelAnimationFrame(_selectPending);}
-  _selectTimeout=setTimeout(function(){
-    if(activeItemId===id)return;
-    activeItemId=id;
-    _selectPending=requestAnimationFrame(function(){
-      _selectPending=null;
-      renderSidebar();
-      renderMain();
-    });
-  },16);
-}
-
-function renderSidebar(){
-  var h='';
-  groups.forEach(function(g){
-    h+='<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
-    g.items.forEach(function(it,idx){
-      var num=String(idx+1).padStart(2,'0');
-      var sigCount=it.signals?it.signals.length:0;
-      h+='<div class="trend-item'+(it.id===activeItemId?' active':'')+'" onclick="selectItem('+it.id+')">';
-      h+='<span class="trend-number">'+num+'</span>';
-      h+='<div class="trend-content">';
-      h+='<div class="trend-title">'+esc(it.title)+'</div>';
-      h+='<div class="trend-meta"><span class="trend-tag">趋势</span><span class="trend-signals">'+sigCount+' 信息源</span></div>';
-      h+='</div></div>';
+function setAllEditable(editable) {
+  var attrs = [
+    '.brand h1', '.brand span',
+    '.hero h2', '.hero .subtitle', '#updateTime',
+    '.core-insight', '.detail-section p', '.detail-section li',
+    '.signal-source', '.signal-title', '.signal-summary',
+    '.archive-item strong', '.archive-item span', '.archive-desc',
+    '.source-category h5', '.source-category li',
+    '.footer'
+  ];
+  attrs.forEach(function(sel) {
+    var els = document.querySelectorAll(sel);
+    els.forEach(function(el) {
+      el.setAttribute('contenteditable', editable ? 'true' : 'false');
     });
   });
-  document.getElementById('sidebarScroll').innerHTML=h;
+  // Trend card titles
+  document.querySelectorAll('.trend-card h3').forEach(function(el) {
+    el.setAttribute('contenteditable', editable ? 'true' : 'false');
+  });
 }
 
-function getPerDateRank(it){var s=ALL_ITEMS.filter(function(t){return t.date===it.date;});return s.findIndex(function(t){return t.id===it.id;})+1;}
-
-function renderMain(){
-  var t=ALL_ITEMS.find(function(x){return x.id===activeItemId;});
-  if(!t){document.getElementById('mainContent').innerHTML='<div class="empty-state">未找到该条目</div>';return;}
-  var r=getPerDateRank(t),rs=String(r).padStart(2,'0');
-  document.getElementById('mainContent').innerHTML=
-    '<div class="content-header"><div class="rank-big">'+rs+'</div><div class="category-tag">趋势分析 · '+formatDateLabel(t.date)+'</div></div>'+
-    '<div class="cards">'+
-    '<div class="card" style="border:none;padding-bottom:8px;background:transparent;box-shadow:none"><div class="card-title">'+esc(t.title)+'</div></div>'+
-    '<div class="card core-insight"><div class="card-body">'+esc(t.coreInsight)+'</div></div>'+
-    '<div class="card"><div class="section-label">为什么重要</div><div class="card-body">'+esc(t.whyItMatters)+'</div></div>'+
-    '<div class="card"><div class="section-label">趋势方向</div><div class="card-body">'+esc(t.direction)+'</div></div>'+
-    '<div class="card"><div class="section-label">机会</div><div class="detail-row"><ul>'+((t.opportunities||[]).map(function(o){return '<li>'+esc(o)+'</li>';})).join('')+'</ul></div></div>'+
-    '<div class="card"><div class="section-label">风险</div><div class="detail-row"><ul>'+((t.risks||[]).map(function(r){return '<li>'+esc(r)+'</li>';})).join('')+'</ul></div></div>'+
-    '<div class="card"><div class="section-label">信息来源 · '+t.signals.length+' 条</div><div class="signals-list">'+
-    (t.signals.map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener" class="signal-item"><div class="signal-source">'+esc(s.source)+' · '+s.time+'</div><div class="signal-title">'+esc(s.title)+'</div><div class="signal-summary">'+esc(s.summary)+'</div></a>';})).join('')+
-    '</div></div></div>'+
-    '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件</div>';
-  document.getElementById('mainContent').scrollTop=0;
+function injectHideButtons() {
+  // Trend cards
+  document.querySelectorAll('.trend-card').forEach(function(card) {
+    if (card.querySelector('.hide-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.setAttribute('data-hide', '#trend-' + (card.id.replace('trend-','')));
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(card, '#trend-' + (card.id.replace('trend-',''))); };
+    card.appendChild(btn);
+  });
+  // Archive items
+  document.querySelectorAll('.archive-item').forEach(function(item, i) {
+    if (item.querySelector('.hide-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.setAttribute('data-hide', '.archive-item:nth-of-type(' + (i+1) + ')');
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(item, '.archive-item:nth-of-type(' + (i+1) + ')'); };
+    item.appendChild(btn);
+  });
+  // Sources section
+  var srcSec = document.querySelector('.sources-section');
+  if (srcSec && !srcSec.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(srcSec, '.sources-section'); };
+    srcSec.appendChild(btn);
+  }
+  // Archive section
+  var archSec = document.querySelector('.archive-section');
+  if (archSec && !archSec.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(archSec, '.archive-section'); };
+    archSec.appendChild(btn);
+  }
+  // Footer
+  var footer = document.querySelector('.footer');
+  if (footer && !footer.querySelector('.hide-btn')) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-btn';
+    btn.innerHTML = '&#10005;';
+    btn.onclick = function(e) { e.stopPropagation(); hideBlock(footer, '.footer'); };
+    footer.appendChild(btn);
+  }
 }
-function esc(s){if(!s)return '';var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-renderSidebar();renderMain();
+
+function removeHideButtons() {
+  document.querySelectorAll('.hide-btn').forEach(function(b) { b.remove(); });
+}
+
+function hideBlock(el, selector) {
+  el.style.display = 'none';
+  var hidden = JSON.parse(localStorage.getItem(lsKey('hidden')) || '[]');
+  if (hidden.indexOf(selector) === -1) hidden.push(selector);
+  localStorage.setItem(lsKey('hidden'), JSON.stringify(hidden));
+}
+
+function saveToLocal() {
+  // Save text content of all editable fields
+  var edits = {};
+  var selectors = [
+    '.brand h1', '.brand span',
+    '.hero h2', '.hero .subtitle', '#updateTime',
+    '.trend-card h3', '.core-insight',
+    '.detail-section p', '.detail-section li',
+    '.signal-source', '.signal-title', '.signal-summary',
+    '.archive-item strong', '.archive-item span', '.archive-desc',
+    '.source-category h5', '.source-category li',
+    '.footer'
+  ];
+  selectors.forEach(function(sel) {
+    document.querySelectorAll(sel).forEach(function(el, i) {
+      var key = sel + ':nth-of-type(' + (i+1) + ')';
+      edits[key] = el.textContent;
+    });
+  });
+  localStorage.setItem(lsKey('textEdits'), JSON.stringify(edits));
+  // Flash feedback
+  var btn = document.querySelector('#edit-bar .edit-bar-btn.save');
+  var orig = btn.textContent;
+  btn.textContent = '已保存';
+  btn.style.background = 'var(--success)';
+  setTimeout(function() {
+    btn.textContent = orig;
+    btn.style.background = '';
+  }, 1200);
+}
+
+function exportHTML() {
+  // Temporarily exit edit mode for export
+  var wasEditMode = editMode;
+  if (wasEditMode) {
+    editMode = false;
+    document.body.classList.remove('edit-mode');
+    setAllEditable(false);
+    removeHideButtons();
+  }
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  // Re-enter edit mode if needed
+  if (wasEditMode) {
+    editMode = true;
+    document.body.classList.add('edit-mode');
+    setAllEditable(true);
+    injectHideButtons();
+  }
+  var blob = new Blob([html], {type: 'text/html'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'future-intelligence-' + new Date().toISOString().slice(0,10) + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderTrends() {
+  const container = document.getElementById('trends');
+  container.innerHTML = ALL_ITEMS.map((trend, i) => `
+    <div class="trend-card editable-block" id="trend-${trend.id}" onclick="this.classList.toggle('expanded')">
+      <div class="card-header">
+        <h3 contenteditable="false">${esc(trend.title)}</h3>
+        <span class="trend-rank">#${i + 1}</span>
+      </div>
+      <div class="core-insight" contenteditable="false">${esc(trend.coreInsight)}</div>
+      <div class="card-footer">
+        <span class="signal-count">${trend.signals.length} signals</span>
+        <span class="divider"></span>
+        <span>${trend.date || ''}</span>
+      </div>
+      <div class="trend-detail">
+        <div class="detail-section">
+          <h4>Why It Matters</h4>
+          <p contenteditable="false">${esc(trend.whyItMatters)}</p>
+        </div>
+        <div class="detail-section">
+          <h4>Direction</h4>
+          <p contenteditable="false">${esc(trend.direction)}</p>
+        </div>
+        <div class="detail-section">
+          <h4>Opportunities</h4>
+          <ul>
+            ${(trend.opportunities || []).map(o => `<li contenteditable="false">${esc(o)}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h4>Risks</h4>
+          <ul>
+            ${(trend.risks || []).map(r => `<li contenteditable="false">${esc(r)}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h4>Supporting Signals</h4>
+          <div class="signals-grid">
+            ${trend.signals.map(s => `
+              <a href="${esc(s.url)}" target="_blank" rel="noopener" class="signal-item" onclick="event.stopPropagation()">
+                <div class="signal-source" contenteditable="false">${esc(s.source)} · ${s.time}</div>
+                <div class="signal-title" contenteditable="false">${esc(s.title)}</div>
+                <div class="signal-summary" contenteditable="false">${esc(s.summary)}</div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+        <button class="collapse-btn" onclick="document.getElementById('trend-${trend.id}').classList.remove('expanded');event.stopPropagation()">收起</button>
+      </div>
+    </div>
+  `).join('');
+
+  // Archive
+  document.getElementById('archiveSection').innerHTML = ARCHIVE_DATA.map((item, i) => `
+    <div class="archive-item editable-block">
+      <strong contenteditable="false">${esc(item.title)}</strong>
+      <span contenteditable="false">${esc(item.source)} · ${item.time}</span>
+      <div class="archive-desc" contenteditable="false">${esc(item.summary)}</div>
+    </div>
+  `).join('');
+  document.getElementById('archiveLabel').textContent = `Archive · ${ARCHIVE_DATA.length} 条历史趋势`;
+
+  // Sources
+  document.getElementById('sourcesSection').innerHTML = SOURCES.map(cat => `
+    <div class="source-category">
+      <h5 contenteditable="false">${cat.cat}</h5>
+      <ul>${cat.items.map(i => `<li contenteditable="false">${esc(i)}</li>`).join('')}</ul>
+    </div>
+  `).join('');
+
+  // Restore state after render
+  restoreHidden();
+  restoreTextEdits();
+  if (editMode) {
+    setAllEditable(true);
+    injectHideButtons();
+  }
+}
+
+function toggleArchive() {
+  document.getElementById('archiveSection').classList.toggle('open');
+}
+function toggleSources() {
+  document.getElementById('sourcesSection').classList.toggle('open');
+}
+
+function esc(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+document.getElementById('updateTime').textContent = 'Updated · ' + new Date().toISOString().slice(0,16).replace('T',' ') + ' · 74 trends analyzed';
+
+renderTrends();
 </script>
 </body>
 </html>
