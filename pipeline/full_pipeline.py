@@ -471,27 +471,31 @@ def cluster_trends(articles):
     elif "general" in valid_themes:
         valid_themes["general"] = theme_articles.get("general", [])
 
-    # 去重合并：如果两个主题共享超过 50% 的文章，合并到文章更多的主题
+    # 去重合并：如果两个小主题共享超过 66% 相同文章，合并
+    # 但 model_race（最大主题）和 general 不参与合并，防止吸走所有文章
+    MERGE_THRESHOLD = 0.66
+    PROTECT_THEMES = {"model_race", "general"}
     theme_keys = sorted(valid_themes.keys(), key=lambda k: -len(valid_themes[k]))
     merged_themes = {}
     merged = set()
     for i, t1 in enumerate(theme_keys):
         if t1 in merged:
             continue
-        merged_themes[t1] = valid_themes[t1]
+        merged_themes[t1] = list(valid_themes[t1])
+        if t1 in PROTECT_THEMES:
+            continue
         urls_t1 = set(a.get("url", "") for a in valid_themes[t1] if a.get("url"))
         for t2 in theme_keys[i + 1:]:
-            if t2 in merged:
+            if t2 in merged or t2 in PROTECT_THEMES:
                 continue
             urls_t2 = set(a.get("url", "") for a in valid_themes[t2] if a.get("url"))
             if urls_t1 and urls_t2:
                 overlap = len(urls_t1 & urls_t2)
-                if overlap >= min(len(urls_t1), len(urls_t2)) * 0.5:
+                if overlap >= min(len(urls_t1), len(urls_t2)) * MERGE_THRESHOLD:
                     merged_themes[t1].extend(valid_themes[t2])
                     merged.add(t2)
                     theme_sources[t1].update(theme_sources[t2])
         if t1 in merged_themes:
-            # 去重组内文章
             seen = set()
             deduped = []
             for a in merged_themes[t1]:
@@ -503,10 +507,13 @@ def cluster_trends(articles):
                 deduped.append(a)
             merged_themes[t1] = deduped
 
-    # 重新过滤（合并后可能 <2）
+    # 重新过滤（合并后可能 <2），model_race 上限 15 篇
     final_themes = {}
     for t, arts in merged_themes.items():
         if len(arts) >= 2:
+            if t == "model_race" and len(arts) > 15:
+                arts.sort(key=lambda a: a.get("news_score", 0), reverse=True)
+                arts = arts[:15]
             final_themes[t] = arts
 
     log(f"聚类完成: {len(final_themes)} 个主题组（合并去重后）")
