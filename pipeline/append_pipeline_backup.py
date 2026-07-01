@@ -14,7 +14,6 @@ import re
 import time
 import random
 import hashlib
-import shutil
 import subprocess
 from datetime import datetime, timezone, timedelta
 from collections import Counter, defaultdict
@@ -41,7 +40,6 @@ REQUEST_TIMEOUT = 15
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 INDEX_PATH = os.path.join(REPO_DIR, "index.html")
-DATA_JSON_PATH = os.path.join(REPO_DIR, "data.json")
 SCORED_PATH = os.path.join(PIPELINE_DIR, "scored_articles.json")
 TRENDS_PATH = os.path.join(PIPELINE_DIR, "trends.json")
 
@@ -249,7 +247,7 @@ def fetch_html(src):
 
 def fetch_all():
     """Step 1: 抓取所有源"""
-    log("===== Step 1/8: 抓取 28 个数据源 =====")
+    log("===== Step 1/7: 抓取 28 个数据源 =====")
     all_articles = []
 
     # 优先 aihot
@@ -314,7 +312,7 @@ def fetch_all():
 # ==================== STEP 2: News Score 评分 ====================
 def score_articles(articles):
     """对每条文章计算 News Score 0-10"""
-    log("===== Step 2/8: News Score 评分 =====")
+    log("===== Step 2/7: News Score 评分 =====")
     scored = []
     for a in articles:
         title = (a.get("title") or "")[:120].lower()
@@ -426,7 +424,7 @@ TOPIC_KEYWORDS = {
 
 def cluster_trends(articles):
     """将 ≥7 分的文章按主题聚类"""
-    log("===== Step 3/8: 趋势聚类 =====")
+    log("===== Step 3/7: 趋势聚类 =====")
     theme_articles = defaultdict(list)
     theme_sources = defaultdict(set)
 
@@ -702,7 +700,7 @@ def generate_trend(theme, articles, all_sources):
 
 def generate_trends(theme_articles, theme_sources):
     """Step 4: 为所有主题生成趋势"""
-    log("===== Step 4/8: 生成趋势 =====")
+    log("===== Step 4/7: 生成趋势 =====")
     trends = []
     for theme, articles in sorted(theme_articles.items(), key=lambda x: -len(x[1])):
         if len(articles) < 2:
@@ -719,7 +717,7 @@ def generate_trends(theme_articles, theme_sources):
 # ==================== STEP 5: 过滤 ====================
 def filter_trends(trends):
     """过滤趋势：Trend Score >= 7，保留 3-8 个"""
-    log("===== Step 5/8: 过滤趋势 =====")
+    log("===== Step 5/7: 过滤趋势 =====")
     filtered = [t for t in trends if t["trendScore"] >= 7]
 
     if len(filtered) < 3:
@@ -735,120 +733,182 @@ def filter_trends(trends):
     return filtered
 
 
-# ==================== STEP 6: 读取现有 data.json ====================
+# ==================== STEP 6: 读取现有 ALL_ITEMS ====================
 def read_existing_items():
-    """从 data.json 读取现有条目，返回 (existing_data, max_id, existing_titles)"""
-    log("===== Step 6/8: 读取现有数据 =====")
+    """从 index.html 读取现有 ALL_ITEMS 数组"""
+    log("===== Step 6/7: 读取现有数据 =====")
     try:
-        with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
-            existing_data = json.load(f)
-        if not isinstance(existing_data, list):
-            raise ValueError("data.json 不是数组")
-
-        max_id = max((item.get("id", 0) for item in existing_data), default=100)
-        existing_titles = set()
-        for item in existing_data:
-            title = item.get("title", "").strip()
-            if title:
-                existing_titles.add(title)
-
-        log(f"  读取到 {len(existing_data)} 个现有趋势（id: {existing_data[0].get('id') if existing_data else '无'} 到 {existing_data[-1].get('id') if existing_data else '无'}）")
-        return existing_data, max_id, existing_titles
-
-    except FileNotFoundError:
-        log(f"  ⚠️ data.json 不存在，尝试从 .bak 恢复")
-        bak = DATA_JSON_PATH + ".bak"
-        if os.path.exists(bak):
-            shutil.copy2(bak, DATA_JSON_PATH)
-            log(f"  已从 {bak} 恢复")
-            return read_existing_items()
-        else:
-            log("  无备份可用，从空数据起步")
-            return [], 100, set()
-
-    except (json.JSONDecodeError, ValueError) as e:
-        log(f"  ⚠️ data.json 解析失败: {e}，尝试从 .bak 恢复")
-        bak = DATA_JSON_PATH + ".bak"
-        if os.path.exists(bak):
-            shutil.copy2(bak, DATA_JSON_PATH)
-            log(f"  已从 {bak} 恢复")
-            return read_existing_items()
-        else:
-            log("  无备份可用，从空数据起步")
-            return [], 100, set()
+        with open(INDEX_PATH, "r", encoding="utf-8") as f:
+            html = f.read()
+        
+        # 查找 var ALL_ITEMS = [ ... ];
+        pattern = r"var ALL_ITEMS = \[([\s\S]*?)\];"
+        match = re.search(pattern, html)
+        if not match:
+            log("  ❌ 未找到 ALL_ITEMS 数组")
+            return []
+        
+        items_js = match.group(1)
+        # 简单解析 JS 数组
+        items = []
+        lines = items_js.strip().split("\n")
+        for line in lines:
+            line = line.strip().rstrip(",")
+            if not line or line == "[" or line == "]":
+                continue
+            # 提取 id 和 date
+            id_match = re.search(r'id:(\d+)', line)
+            date_match = re.search(r"date:'([^']+)'", line)
+            if id_match and date_match:
+                item_id = int(id_match.group(1))
+                item_date = date_match.group(1)
+                items.append({
+                    "id": item_id,
+                    "date": item_date,
+                    "raw_line": line
+                })
+        
+        log(f"  读取到 {len(items)} 个现有趋势（id: {items[0]['id'] if items else '无'} 到 {items[-1]['id'] if items else '无'}）")
+        return items
+    except Exception as e:
+        log(f"  读取现有数据错误: {e}")
+        return []
 
 
 # ==================== STEP 7: 追加新趋势 ====================
-def append_new_trends(existing_data, max_id, existing_titles, new_trends):
-    """追加新趋势到现有数据（标题精确去重），返回 (updated_data, appended_count)"""
-    log("===== Step 7/8: 追加新趋势 =====")
-
+def append_new_trends(existing_items, new_trends):
+    """追加新趋势到现有数据，去重"""
+    log("===== Step 7/7: 追加新趋势 =====")
+    
+    # 获取现有标题用于去重
+    existing_titles = set()
+    for item in existing_items:
+        # 从 raw_line 提取标题
+        title_match = re.search(r'title:"([^"]+)"', item["raw_line"])
+        if title_match:
+            existing_titles.add(title_match.group(1))
+    
+    # 过滤新趋势：去重 + 日期为今天
+    today = TODAY
     to_append = []
-    next_id = max_id + 1
-
     for trend in new_trends:
-        title = trend.get("title", "").strip()
+        title = trend.get("title", "")
         if title in existing_titles:
             log(f"  跳过重复标题: {title[:50]}...")
             continue
         if trend.get("trendScore", 0) < 7:
             log(f"  跳过低分趋势: {title[:50]}... (score: {trend.get('trendScore')})")
             continue
-
-        # 从 trend 中仅提取 data.json 需要的字段，不保留 trendScore / theme 等内部字段
-        item = {
-            "id": next_id,
-            "date": TODAY,
-            "title": title,
-            "coreInsight": trend.get("coreInsight", ""),
-            "whyItMatters": trend.get("whyItMatters", ""),
-            "direction": trend.get("direction", ""),
-            "opportunities": trend.get("opportunities", []),
-            "risks": trend.get("risks", []),
-            "signals": trend.get("signals", []),
-        }
-        to_append.append(item)
-        existing_titles.add(title)
-        next_id += 1
-
+        to_append.append(trend)
+    
     if not to_append:
         log("  ✅ 无新趋势可追加")
-        return existing_data, 0
+        return existing_items, 0
+    
+    # 生成新趋势的 JS 行
+    new_items_js = []
+    next_id = max([item["id"] for item in existing_items], default=100) + 1
+    
+    for i, trend in enumerate(to_append):
+        item_id = next_id + i
+        title = trend.get("title", "")
+        
+        # 转义字符串
+        def esc(s):
+            if not isinstance(s, str):
+                return ""
+            s = s.replace("\\", "\\\\")
+            s = s.replace('"', '\\"')
+            s = s.replace("'", "\\'")
+            s = s.replace("\n", " ")
+            s = s.replace("\r", "")
+            s = s.replace("<", "\\u003C")
+            s = s.replace(">", "\\u003E")
+            return s
+        
+        core = esc(trend.get("coreInsight", ""))
+        why = esc(trend.get("whyItMatters", ""))
+        direction = esc(trend.get("direction", ""))
+        ops = [esc(o) for o in trend.get("opportunities", [])]
+        risks = [esc(r) for r in trend.get("risks", [])]
+        
+        ops_str = "[" + ",".join(f'"{o}"' for o in ops if o) + "]"
+        risks_str = "[" + ",".join(f'"{r}"' for r in risks if r) + "]"
+        
+        # 格式化 signals
+        signals = []
+        for sig in trend.get("signals", []):
+            source = esc(sig.get("source", ""))
+            time_str = esc(sig.get("time", ""))
+            sig_title = esc(sig.get("title", ""))
+            summary = esc(sig.get("summary", ""))
+            url = esc(sig.get("url", ""))
+            signals.append(
+                "{" + f'source:"{source}",time:"{time_str}",title:"{sig_title}",'
+                f'summary:"{summary}",url:"{url}"' + "}"
+            )
+        sigs_str = "[" + ",".join(signals) + "]"
+        
+        line = (
+            "  {id:" + f"{item_id},date:'{today}',title:\"{esc(title)}\","
+            f"coreInsight:\"{core}\",whyItMatters:\"{why}\","
+            f"direction:\"{direction}\",opportunities:{ops_str},"
+            f"risks:{risks_str},signals:{sigs_str}" + "}"
+        )
+        new_items_js.append(line)
+        
+        # 添加到 existing_items 用于后续构建
+        existing_items.append({
+            "id": item_id,
+            "date": today,
+            "raw_line": line
+        })
+    
+    log(f"  追加 {len(to_append)} 个新趋势（id: {next_id} 到 {next_id + len(to_append) - 1}）")
+    return existing_items, len(to_append)
 
-    updated_data = existing_data + to_append
-    first_id = to_append[0]["id"]
-    last_id = to_append[-1]["id"]
-    log(f"  追加 {len(to_append)} 个新趋势（id: {first_id} 到 {last_id}）")
-    return updated_data, len(to_append)
 
-
-# ==================== STEP 8: 写入 data.json ====================
-def write_data_json(updated_data):
-    """将 updated_data 写入 data.json（含写入前备份 + 写入后长度校验），返回写入条目数"""
-    log("===== Step 8/8: 写入 data.json =====")
-
+# ==================== STEP 8: 更新网站 ====================
+def update_index_html_append(existing_items):
+    """更新 index.html 中的 ALL_ITEMS 数组（追加模式）"""
+    log("===== Step 8/7: 更新网站（追加模式） =====")
+    
     try:
-        # 写入前备份
-        if os.path.exists(DATA_JSON_PATH):
-            shutil.copy2(DATA_JSON_PATH, DATA_JSON_PATH + ".bak")
-            log(f"  已备份到 data.json.bak")
-
-        with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
-            json.dump(updated_data, f, ensure_ascii=False, indent=2)
-
-        # 写入后校验
-        with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
-            verify = json.load(f)
-        if len(verify) != len(updated_data):
-            log(f"  ❌ 校验失败: 期望 {len(updated_data)} 条，实际 {len(verify)} 条")
-            return 0
-
-        log(f"  ✅ data.json 写入成功（共 {len(updated_data)} 条）")
-        return len(updated_data)
-
+        with open(INDEX_PATH, "r", encoding="utf-8") as f:
+            html = f.read()
+        
+        # 构建新的 ALL_ITEMS 数组
+        all_lines = []
+        for item in existing_items:
+            all_lines.append(item["raw_line"])
+        
+        new_all_items = "[\n" + ",\n".join(all_lines) + "\n];"
+        
+        # 替换 ALL_ITEMS 数组
+        pattern = r"(var ALL_ITEMS = )\[[\s\S]*?\n\];"
+        replacement = r"\1" + new_all_items
+        updated = re.sub(pattern, replacement, html, count=1)
+        
+        if updated == html:
+            log("  ❌ 未找到 ALL_ITEMS 数组，替换失败")
+            return False
+        
+        # 更新 footer 中的日期和条目数
+        total_count = len(existing_items)
+        updated = re.sub(
+            r"2026年6月 · 共 \d+ 条趋势 · 覆盖.*?</div>",
+            f"2026年6月 · 共 {total_count} 条趋势 · 更新于 {NOW_STR} BJS</div>",
+            updated,
+        )
+        
+        with open(INDEX_PATH, "w", encoding="utf-8") as f:
+            f.write(updated)
+        
+        log(f"  ✅ index.html 已更新（共 {total_count} 条趋势）")
+        return True
     except Exception as e:
-        log(f"  ❌ 写入 data.json 失败: {e}")
-        return 0
+        log(f"  ❌ 更新网站错误: {e}")
+        return False
 
 
 # ==================== STEP 9: Git 操作 ====================
@@ -857,7 +917,7 @@ def git_commit_push():
     log("===== Git 部署 =====")
     try:
         subprocess.run(
-            ["git", "add", "data.json", "pipeline/"],
+            ["git", "add", "index.html", "pipeline/"],
             cwd=REPO_DIR, check=True, capture_output=True, text=True,
         )
         commit_msg = f"auto: append pipeline update {NOW_STR}"
@@ -911,28 +971,28 @@ def run_append_pipeline():
         log("❌ 无趋势通过过滤，终止")
         return
 
-    # Step 6: 读取现有 data.json
-    existing_data, max_id, existing_titles = read_existing_items()
+    # Step 6: 读取现有数据
+    existing_items = read_existing_items()
 
     # Step 7: 追加新趋势
-    updated_data, appended_count = append_new_trends(existing_data, max_id, existing_titles, final_trends)
+    updated_items, appended_count = append_new_trends(existing_items, final_trends)
     if appended_count == 0:
         log("✅ 无新趋势可追加，任务完成")
         return
 
-    # Step 8: 写入 data.json
-    written = write_data_json(updated_data)
-    if written == 0:
-        log("❌ data.json 写入失败")
+    # Step 8: 更新网站
+    updated = update_index_html_append(updated_items)
+    if not updated:
+        log("❌ 网站更新失败")
         return
 
-    # Git 部署
+    # Step 9: Git
     git_ok = git_commit_push()
 
     # 总结
     log("========== 追加模式管线完成 ==========")
     log(f"抓取: {len(articles)} 条 → ≥7分: {len(high_score)} 条 → 新趋势: {appended_count} 个")
-    log(f"总趋势数: {len(updated_data)} 条")
+    log(f"总趋势数: {len(updated_items)} 条")
     log(f"部署: {'✅ 成功' if git_ok else '⚠️ Git 推送失败（文件已更新）'}")
 
     return appended_count

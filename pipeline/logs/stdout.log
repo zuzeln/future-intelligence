@@ -1,0 +1,89 @@
+[12:49:16] 模式: 追加模式（只追加今天新趋势，保持历史数据不变）
+[12:49:16] ========== 未来趋势信息系统 · 追加模式管线启动 ==========
+[12:49:16] 时间: 2026-07-01 12:49 (北京时间)
+[12:49:16] 仓库: /Users/air/future-intelligence-repo
+[12:49:16] ===== Step 1/8: 抓取 28 个数据源 =====
+[12:49:17]   aihot: 51 条
+[12:49:20]   OpenAI: 15 条
+[12:49:25]   Anthropic: 14 条
+[12:52:59]   DeepMind: 0 条
+[12:52:59]   Meta AI: 跳过（已知 400 错误）
+[12:53:03]   Microsoft AI: 0 条
+[12:53:03]   NVIDIA AI: 跳过（已知 ProxyError）
+[12:54:20]   Hugging Face: 0 条
+[12:54:21]   TechCrunch: 15 条
+[12:54:21]   VentureBeat: 跳过（已知 429 限流）
+[12:54:24]   The Verge: 0 条
+[12:54:27]   Ars Technica: 0 条
+[12:54:31]   MarkTechPost: 10 条
+[12:54:36]   AI News: 12 条
+[12:54:39]   The Decoder: 10 条
+[12:54:41]   MIT Tech Review: 10 条
+[12:55:07]   arXiv cs.AI: 15 条
+[12:55:11]   Stanford HAI: 0 条
+[12:56:28]   Google Research: 0 条
+[12:57:44]   Microsoft Research: 0 条
+[12:57:47]   a16z: 0 条
+[12:57:51]   Sequoia: 10 条
+[12:57:54]   Benchmark: HTTP 404
+[12:57:58]   Y Combinator: 15 条
+[12:58:02]   Hacker News: 15 条
+[12:58:02]   GitHub Trending: 跳过（需要 JS 渲染）
+[12:58:02]   Reddit ML: 跳过（已知封禁）
+[12:58:02]   Reddit LocalLLaMA: 跳过（已知封禁）
+[12:58:02]   ProductHunt: 跳过（已知封禁）
+[12:58:02] 抓取总计: 192 → 去重: 185 → 3天内: 143
+[12:58:02] ===== Step 2/8: News Score 评分 =====
+[12:58:02] 评分完成: 63/143 条 ≥7 分
+[12:58:02] ===== Step 3/8: 趋势聚类 =====
+[12:58:02] 聚类完成: 12 个主题组（合并去重后）
+[12:58:02]   agents: 24 篇, 17 来源
+[12:58:02]   model_race: 15 篇, 16 来源
+[12:58:02]   enterprise: 13 篇, 9 来源
+[12:58:02]   science: 11 篇, 9 来源
+[12:58:02]   safety: 11 篇, 8 来源
+[12:58:02]   evaluation: 10 篇, 8 来源
+[12:58:02]   funding: 9 篇, 7 来源
+[12:58:02]   chips: 9 篇, 6 来源
+[12:58:02]   opensource: 5 篇, 5 来源
+[12:58:02]   labor: 5 篇, 5 来源
+[12:58:02]   general: 5 篇, 5 来源
+[12:58:02]   small_models: 4 篇, 4 来源
+[12:58:02] ===== Step 4/8: 生成趋势 =====
+[12:58:02] 趋势生成: 12 个
+[12:58:02] ===== Step 5/8: 过滤趋势 =====
+[12:58:02] 最终保留: 8 个趋势
+[12:58:02]   [10] AI 智能体：观测到集中信号
+[12:58:02]   [10] 模型能力跃升：观测到集中信号
+[12:58:02]   [10] 企业 AI 部署：观测到集中信号
+[12:58:02]   [10] 科学 AI 突破：观测到集中信号
+[12:58:02]   [10] AI 风险应对：观测到集中信号
+[12:58:02]   [10] 基准测试诚信：观测到集中信号
+[12:58:02]   [10] AI 估值与 IPO：观测到集中信号
+[12:58:02]   [10] AI 硬件博弈：观测到集中信号
+[12:58:02] ===== Step 6/8: 读取现有数据 =====
+[12:58:02]   读取到 74 个现有趋势（id: 36 到 74）
+[12:58:02] ===== Step 7/8: 追加新趋势 =====
+[12:58:02]   追加 8 个新趋势（id: 75 到 82）
+[12:58:02] ===== Step 8/8: 写入 data.json =====
+[12:58:02]   已备份到 data.json.bak
+[12:58:02]   ✅ data.json 写入成功（共 82 条）
+[12:58:02] ===== Git 部署 =====
+[12:58:02]   Git 错误: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'air@Mac.(none)')
+
+[12:58:02] ========== 追加模式管线完成 ==========
+[12:58:02] 抓取: 143 条 → ≥7分: 63 条 → 新趋势: 8 个
+[12:58:02] 总趋势数: 82 条
+[12:58:02] 部署: ⚠️ Git 推送失败（文件已更新）

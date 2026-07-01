@@ -352,18 +352,6 @@ body::after {
 .content-footer {
   margin-top: 40px; text-align: center; font-size: 12px; color: var(--text-tertiary);
 }
-.toast {
-  position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-  background: var(--accent-gradient);
-  color: #fff; padding: 10px 24px; border-radius: 20px;
-  font-size: 14px; font-weight: 600;
-  box-shadow: 0 4px 20px rgba(51,136,204,0.4);
-  z-index: 100;
-  opacity: 0; transition: opacity 0.35s;
-  pointer-events: none;
-}
-.toast.visible { opacity: 1; }
-.last-update { color: var(--text-tertiary); margin-left: 8px; }
 
 /* ====== 移动端浮动按钮 ====== */
 .mobile-fab {
@@ -450,7 +438,6 @@ body::after {
 <button class="mobile-fab" id="mobileFab" onclick="toggleMobileSidebar()" aria-label="浏览趋势" aria-expanded="false">浏览趋势</button>
 <!-- 移动端蒙层 -->
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileSidebar()"></div>
-<div class="toast" id="toast"></div>
 
 <!-- noscript -->
 <noscript>
@@ -496,7 +483,7 @@ body::after {
     mainEl.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><span>加载趋势数据中...</span></div>';
     sidebarScroll.innerHTML = '';
 
-    fetch('data.json?_=' + Date.now())
+    fetch('data.json')
       .then(function(res){
         if(!res.ok) throw new Error('HTTP '+res.status);
         return res.json();
@@ -508,63 +495,10 @@ body::after {
         activeItemId = ALL_ITEMS[0].id;
         renderSidebar();
         renderMain();
-        lastUpdateTime = new Date();
-        startPolling();
       })
       .catch(function(err){
         mainEl.innerHTML = '<div class="error-state"><span>数据加载失败：'+esc(err.message)+'</span><span style="font-size:13px;color:var(--text-tertiary)">请确认 data.json 文件存在于同目录下</span><button class="retry-btn" onclick="location.reload()">重新加载</button></div>';
       });
-  }
-
-  // ===== 轮询机制 =====
-  var pollTimer = null;
-  var lastUpdateTime = null;
-
-  function startPolling(){
-    if(pollTimer) clearInterval(pollTimer);
-    pollTimer = setInterval(checkForUpdates, 300000);
-  }
-
-  function checkForUpdates(){
-    fetch('data.json?_=' + Date.now())
-      .then(function(res){
-        if(!res.ok) return;
-        return res.json();
-      })
-      .then(function(data){
-        if(!data || !data.length) return;
-        if(data.length > ALL_ITEMS.length){
-          var newCount = data.length - ALL_ITEMS.length;
-          ALL_ITEMS = data;
-          groups = groupByDate(ALL_ITEMS);
-          lastUpdateTime = new Date();
-          renderSidebar();
-          if(!ALL_ITEMS.find(function(x){return x.id===activeItemId;})){
-            activeItemId = ALL_ITEMS[0].id;
-          }
-          renderMain();
-          showToast('发现 ' + newCount + ' 条新趋势');
-        }
-      })
-      .catch(function(){});
-  }
-
-  function showToast(msg){
-    var toast = document.getElementById('toast');
-    if(!toast) return;
-    toast.textContent = msg;
-    toast.classList.add('visible');
-    setTimeout(function(){
-      toast.classList.remove('visible');
-    }, 3000);
-  }
-
-  function getLastUpdateTime(){
-    if(!lastUpdateTime) return '--:--:--';
-    var h = String(lastUpdateTime.getHours()).padStart(2,'0');
-    var m = String(lastUpdateTime.getMinutes()).padStart(2,'0');
-    var s = String(lastUpdateTime.getSeconds()).padStart(2,'0');
-    return h + ':' + m + ':' + s;
   }
 
   // ===== 侧边栏折叠 =====
@@ -741,7 +675,7 @@ body::after {
       '<div class="card"><div class="section-label">信息来源 · '+t.signals.length+' 条</div><div class="signals-list">'+
       (t.signals.map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener" class="signal-item"><div class="signal-source">'+esc(s.source)+' · '+s.time+'</div><div class="signal-title">'+esc(s.title)+'</div><div class="signal-summary">'+esc(s.summary)+'</div></a>';})).join('')+
       '</div></div></div>'+
-      '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件<span class="last-update">上次更新：'+getLastUpdateTime()+'</span></div>';
+      '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件</div>';
     document.getElementById('mainContent').scrollTop=0;
   }
 
