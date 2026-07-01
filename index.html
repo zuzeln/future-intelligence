@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Future Intelligence - AI行业趋势洞察</title>
 <meta name="description" content="Future Intelligence（未来智能）每日追踪全球AI行业最前沿趋势，涵盖模型发布、产业动态、资本流向、政策监管、安全研究等领域，提供结构化趋势分析与商业洞察。">
 <meta property="og:title" content="Future Intelligence - AI行业趋势洞察">
@@ -417,7 +417,9 @@ body::after {
   .sidebar-header { padding: 16px 20px 4px; }
   .sidebar-header .sidebar-title { font-size: 18px; }
   .sidebar-header .sidebar-zh-title { font-size: 18px; }
-  .main { padding: 24px 16px 100px; }
+  .main { padding: calc(24px + env(safe-area-inset-top, 0px)) 16px 100px; }
+  .content-header { padding-top: env(safe-area-inset-top, 0px); }
+  .sidebar-scroll { -webkit-overflow-scrolling: touch; }
   .content-header .rank-big { font-size: 36px; }
   .card { padding: 18px; }
   .mobile-fab { display: block; }
@@ -596,7 +598,6 @@ body::after {
         _selectPending=null;
         renderSidebar();
         renderMain();
-        if(window.innerWidth<=768){closeMobileSidebar();}
       });
     },16);
   };
