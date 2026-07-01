@@ -537,7 +537,7 @@ TREND_TEMPLATES = {
     "chips": {
         "title_pfx": ["定制 AI 芯片", "AI 硬件博弈", "算力格局重塑"],
         "insight_pfx": ["自研芯片打破单一供应商依赖", "AI 芯片格局正在从垄断走向多元化"],
-        "direction_pfx": ["AI 实验室将大规模部署定制推理芯片", "芯片设计出现 AI 优先的新范式"],
+        "direction_pfx": ["AI 实验室将大规模部署定制推理芯片", "芯片设计出现 AI 优先的新范式", "异构计算集群管理将成为云计算厂商的核心差异化能力"],
     },
     "opensource": {
         "title_pfx": ["开源 AI 生态", "开放模型浪潮", "AI 民主化"],
@@ -552,7 +552,7 @@ TREND_TEMPLATES = {
     "evaluation": {
         "title_pfx": ["AI 评估体系", "基准测试诚信", "智能体评测"],
         "insight_pfx": ["AI 模型在基准测试中系统性虚增分数", "评估体系面临根本性质疑"],
-        "direction_pfx": ["防篡改基准测试框架将出现", "评估即服务将成为独立赛道"],
+        "direction_pfx": ["防篡改基准测试框架将出现", "评估即服务将成为独立赛道", "企业采购将要求第三方评估认证作为准入门槛"],
     },
     "agents": {
         "title_pfx": ["AI 智能体", "智能体产品化", "桌面 AI 助手"],
@@ -572,7 +572,7 @@ TREND_TEMPLATES = {
     "enterprise": {
         "title_pfx": ["企业 AI 部署", "AI 行业应用", "AI 商业化"],
         "insight_pfx": ["世界500强企业大规模部署 AI 进入核心业务", "AI 从实验阶段进入生产核心"],
-        "direction_pfx": ["财富500强一半以上将拥有核心 AI 业务流程", "AI 就绪度成为投资者评估新维度"],
+        "direction_pfx": ["财富500强一半以上将拥有核心 AI 业务流程", "AI 就绪度成为投资者评估新维度", "传统企业 AI 转型将从「试点项目」进入「全组织推广」阶段"],
     },
     "science": {
         "title_pfx": ["AI for Science", "科学 AI 突破", "AI 驱动发现"],
@@ -620,17 +620,50 @@ def generate_trend(theme, articles, all_sources):
     source_bonus = min(1.5, len(all_sources) * 0.3)
     trend_score = round(min(10, avg_score + cluster_bonus + source_bonus), 1)
 
-    # 生成标题
-    titles = sorted(articles, key=lambda a: a.get("news_score", 0), reverse=True)
-    top_title = (titles[0].get("title", "")[:40] if titles else "")
+    # 从 top 3 文章标题中提取核心关键词（去括号、去常见连接词后的短实体片段）
+    def _extract_keywords(raw_title, max_len=24):
+        import re
+        # 去掉常见连接词/标点，按逗号/空格/破折号切分，取靠前的有意义片段
+        cleaned = re.sub(r'[【】\[\]（）\(\)「」""]', '', raw_title)
+        parts = re.split(r'[，,、\s——\-—]+', cleaned)
+        words = []
+        for p in parts:
+            p = p.strip()
+            # 过滤过短或纯标点
+            if len(p) >= 3 and not re.match(r'^[\d\.\,\;\:\!\?]+$', p):
+                words.append(p)
+        # 拼接前几个词，控制总长
+        result = ""
+        for w in words:
+            if len(result) + len(w) + 1 > max_len:
+                break
+            result = (result + "、" + w) if result else w
+        return result
 
-    # 智能标题：当组内文章≥4篇时用模板标题；否则用 top article 标题做语义摘要
+    # 智能标题：当组内文章≥4篇时用模板标题 + 具体事件拼接
+    titles_sorted = sorted(articles, key=lambda a: a.get("news_score", 0), reverse=True)
+    top_title = (titles_sorted[0].get("title", "")[:40] if titles_sorted else "")
+
     if len(articles) >= 4:
-        title = rnd.choice(tmpl["title_pfx"])
-        # 附带一个信号摘要使标题更具体
-        short_sig = top_title[:20]
-        if short_sig and short_sig not in title:
-            title = title + "：观测到集中信号"
+        title_prefix = rnd.choice(tmpl["title_pfx"])
+        # 从 top 3 文章提取具体事件关键词拼接
+        top_keywords = []
+        for a in titles_sorted[:3]:
+            kw = _extract_keywords(a.get("title", ""))
+            if kw:
+                top_keywords.append(kw)
+        if top_keywords:
+            # 去重并取 2-3 个
+            seen_kw = set()
+            unique_kw = []
+            for kw in top_keywords:
+                if kw not in seen_kw:
+                    unique_kw.append(kw)
+                    seen_kw.add(kw)
+            event_suffix = "、".join(unique_kw[:3]) if len(unique_kw) >= 2 else unique_kw[0]
+            title = f"{title_prefix}——{event_suffix}"
+        else:
+            title = title_prefix
     else:
         title = top_title if len(top_title) <= 50 else top_title[:48] + ".."
         if not title:
@@ -638,16 +671,35 @@ def generate_trend(theme, articles, all_sources):
 
     # 核心洞察
     core_insight = rnd.choice(tmpl["insight_pfx"])
-    if len(articles) >= 4:
-        core_insight += f"，{len(articles)} 条信号集中出现"
 
-    # whyItMatters
-    top_sources = ", ".join(list(all_sources)[:3])
-    why = f"来自 {top_sources} 等 {len(all_sources)} 个来源的 {len(articles)} 条信号共同指向这一趋势——"
-    why += core_insight[:80]
+    # whyItMatters：从行业痛点做因果推演，不提及来源/信号数量
+    _why_causal = {
+        "geopolitics": "这一趋势表明 AI 技术主权正在取代全球化协作，企业的供应链与技术栈选型将受制于地缘政治边界。",
+        "model_race": "这意味着模型能力的竞争维度已从单点性能转向多模态与推理的综合能力，落后玩家将在 6-12 个月内失去市场准入。",
+        "small_models": "这意味着推理能力不再是大模型的专利，端侧与垂直场景的 AI 部署成本将大幅下降，催生新一轮应用爆发。",
+        "chips": "这一趋势表明算力供给正从通用 GPU 转向专用架构，无法自研或获取定制芯片的企业将面临性能天花板。",
+        "opensource": "这意味着开源模型的商业可用性已追平闭源，企业的模型选型从「能不能用」变为「要不要自建」——TCO 和治理成为核心决策变量。",
+        "labor": "这一趋势表明 AI 对就业的结构性冲击已从预测变为现实，企业与社会需要在生产率提升与人力过渡之间找到平衡窗口。",
+        "evaluation": "这意味着现有 AI 评估体系存在系统性漏洞，企业和政府基于虚高分数做出的采购与监管决策面临重大风险。",
+        "agents": "这一趋势表明 AI 智能体正从实验性 Demo 进入生产环境，企业需要同时应对自动化效率提升与安全可控的双重挑战。",
+        "safety": "这一趋势表明 AI 安全已从学术议题升级为产品级基础设施需求，缺乏安全护栏的 AI 部署将带来不可逆的业务风险。",
+        "funding": "这意味着 AI 行业正在从技术验证期进入资本验证期，融资能力与商业化进展将直接决定下一阶段的市场格局。",
+        "enterprise": "这一趋势表明 AI 在企业端的渗透已越过实验线进入核心业务流程，传统行业的数字化转型正在被 AI 重新定义节奏和边界。",
+        "science": "这意味着 AI 在科学发现中的角色正从辅助工具升级为核心驱动力，率先建立 AI+实验闭环的机构将获得结构性先发优势。",
+        "general": "这一趋势表明 AI 产业正在技术突破、商业落地与治理框架三线并进，任何单一维度的滞后都将形成系统性短板。",
+    }
+    why = _why_causal.get(theme, _why_causal["general"])
 
-    # direction
-    direction = rnd.choice(tmpl["direction_pfx"])
+    # direction：取多条方向预测拼接（如 2-3 条），而非单条笼统表述
+    dir_opts = list(tmpl["direction_pfx"])
+    if len(dir_opts) >= 3:
+        n_dir = rnd.randint(2, 3)
+        selected_dirs = rnd.sample(dir_opts, n_dir)
+    elif len(dir_opts) == 2:
+        selected_dirs = dir_opts
+    else:
+        selected_dirs = dir_opts
+    direction = "；".join(selected_dirs)
 
     # opportunities
     ops_map = {
