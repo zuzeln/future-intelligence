@@ -505,7 +505,7 @@ body::after {
         ALL_ITEMS = data;
         if(!ALL_ITEMS.length) throw new Error('数据为空');
         groups = groupByDate(ALL_ITEMS);
-        activeItemId = ALL_ITEMS[0].id;
+        activeItemId = ALL_ITEMS[ALL_ITEMS.length-1].id;
         renderSidebar();
         renderMain();
         lastUpdateTime = new Date();
@@ -540,7 +540,7 @@ body::after {
           lastUpdateTime = new Date();
           renderSidebar();
           if(!ALL_ITEMS.find(function(x){return x.id===activeItemId;})){
-            activeItemId = ALL_ITEMS[0].id;
+            activeItemId = ALL_ITEMS[ALL_ITEMS.length-1].id;
           }
           renderMain();
           showToast('发现 ' + newCount + ' 条新趋势');
