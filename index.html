@@ -710,6 +710,8 @@ body::after {
     document.getElementById('sidebar').classList.add('mobile-open');
     document.getElementById('mobileOverlay').classList.add('visible');
     document.getElementById('mobileFab').setAttribute('aria-expanded', 'true');
+    document.getElementById('mobileFab').style.display = 'none';
+    document.body.style.overflow = 'hidden';
   }
 
   window.closeMobileSidebar = function(){
@@ -717,6 +719,8 @@ body::after {
     document.getElementById('sidebar').classList.remove('mobile-open');
     document.getElementById('mobileOverlay').classList.remove('visible');
     document.getElementById('mobileFab').setAttribute('aria-expanded', 'false');
+    document.getElementById('mobileFab').style.display = '';
+    document.body.style.overflow = '';
   };
 
   // ===== 渲染主内容 =====
