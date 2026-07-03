@@ -150,6 +150,24 @@ body::after {
   text-align: center; color: var(--text-tertiary); font-size: 13px;
   padding: 40px 20px;
 }
+/* 月份折叠组 */
+.month-group { margin-bottom: 2px; }
+.month-header {
+  font-size: 12px; font-weight: 600; color: var(--text-secondary);
+  padding: 10px 10px 4px; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 4px;
+  transition: color 0.2s;
+}
+.month-header:hover { color: var(--text-primary); }
+.month-header .month-arrow {
+  font-size: 10px; display: inline-block; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-tertiary); min-width: 12px;
+}
+.month-body {
+  max-height: 3000px; overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.month-body.collapsed { max-height: 0; }
 .sidebar-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; position: relative; z-index: 3; max-height: 9999px; opacity: 1; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .sidebar.collapsed .sidebar-scroll { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; flex: 0 0 0; }
 .sidebar.collapsed .search-wrap { display: none; }
@@ -365,20 +383,7 @@ body::after {
 .toast.visible { opacity: 1; }
 .last-update { color: var(--text-tertiary); margin-left: 8px; }
 
-/* ====== 移动端浮动按钮 ====== */
-.mobile-fab {
-  display: none;
-  position: fixed; bottom: 24px; right: 24px; z-index: 10;
-  padding: 12px 24px;
-  background: var(--accent-gradient);
-  color: #fff; font-size: 14px; font-weight: 600;
-  border: none; border-radius: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(51,136,204,0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.mobile-fab:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(51,136,204,0.5); }
-.mobile-fab:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 2px; }
+/* ====== 移动端浮动按钮（已废弃，由底部导航栏替代） ====== */
 
 /* ====== 移动端蒙层 ====== */
 .mobile-overlay {
@@ -399,31 +404,200 @@ body::after {
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.14); }
 
 /* ====== 响应式 ====== */
+/* ====== 顶部下拉趋势面板（移动端） ====== */
+.trend-panel {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+  max-height: 60vh;
+  background: var(--glass-sidebar-bg);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border-bottom: 1px solid var(--glass-sidebar-border);
+  border-radius: 0 0 16px 16px;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.trend-panel.open { transform: translateY(0); }
+.panel-handle-row {
+  display: flex; justify-content: center; padding: 10px 0 0;
+  flex-shrink: 0;
+}
+.panel-handle-row::after {
+  content: ''; width: 36px; height: 4px;
+  background: rgba(255,255,255,0.22); border-radius: 2px;
+}
+.panel-top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 20px 0; flex-shrink: 0;
+}
+.panel-top-bar .panel-title {
+  font-size: 14px; font-weight: 600; color: var(--text-secondary);
+}
+.panel-top-bar .panel-close {
+  font-size: 13px; color: var(--text-tertiary); cursor: pointer;
+  padding: 4px 8px; border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.panel-top-bar .panel-close:active { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+.panel-search-wrap { padding: 8px 20px 12px; flex-shrink: 0; }
+.panel-search-input {
+  width: 100%; padding: 8px 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: var(--text-primary); font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.panel-search-input::placeholder { color: var(--text-tertiary); }
+.panel-search-input:focus {
+  border-color: rgba(79,195,247,0.4);
+  background: rgba(255,255,255,0.08);
+}
+.panel-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; -webkit-overflow-scrolling: touch; }
+
+/* ====== 趋势条目预览摘要 ====== */
+.trend-summary {
+  font-size: 12px; color: var(--text-tertiary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  margin-top: 2px; max-width: 100%;
+}
+
+/* ====== 内容区滑动过渡动画 ====== */
+.swipe-area {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.swipe-area.swiping-next { transform: translateX(-110%); opacity: 0.3; }
+.swipe-area.swiping-prev { transform: translateX(110%); opacity: 0.3; }
+
+/* ====== 底部导航栏（移动端） ====== */
+/* ====== 关于弹窗 ====== */
+.about-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 30;
+  background: rgba(0,0,0,0.6);
+  align-items: center; justify-content: center;
+}
+.about-modal.visible { display: flex; }
+.about-dialog {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 24px;
+  max-width: 320px; width: calc(100% - 48px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+.about-dialog h3 {
+  font-size: 18px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 12px;
+}
+.about-dialog p {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.7;
+  margin-bottom: 8px;
+}
+.about-dialog .about-close {
+  margin-top: 16px; width: 100%; padding: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; color: var(--text-primary); font-size: 14px;
+  cursor: pointer; transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.about-dialog .about-close:active { background: rgba(255,255,255,0.12); }
+
 @media (max-width: 768px) {
   .app { flex-direction: column; }
   .sidebar {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
-    width: 100%; min-width: 100%; max-height: 50vh;
-    border-right: none;
-    border-top: 1px solid var(--glass-sidebar-border);
-    border-radius: 16px 16px 0 0;
-    transform: translateY(100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
+    display: none !important;
   }
-  .sidebar.mobile-open { transform: translateY(0); }
-  .sidebar.collapsed { transform: translateY(100%); }
-  .sidebar.collapsed .sidebar-scroll { max-height: 9999px; opacity: 1; overflow-y: auto; padding: 0 12px 20px; flex: 1; }
   .sidebar-header { padding: 16px 20px 4px; }
   .sidebar-header .sidebar-title { font-size: 18px; }
   .sidebar-header .sidebar-zh-title { font-size: 18px; }
-  .main { padding: calc(24px + env(safe-area-inset-top, 0px)) 16px 100px; }
+  .main { padding: calc(24px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px)); }
   .content-header { padding-top: env(safe-area-inset-top, 0px); }
-  .sidebar-scroll { -webkit-overflow-scrolling: touch; }
-  .content-header .rank-big { font-size: 36px; }
+  .content-header .rank-big {
+    font-size: 28px;
+    font-weight: 700;
+    background: var(--accent);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    background-clip: unset;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    filter: none;
+  }
   .card { padding: 18px; }
-  .mobile-fab { display: block; }
+  .trend-panel { display: flex; }
   .mobile-overlay { display: block; }
+  .mobile-fab { display: none !important; }
+}
+
+/* ====== Date Capsule Bar (Mobile) ====== */
+.date-capsule-bar { display: none; }
+.date-separator { display: none; }
+.category-tag.date-title { display: none; }
+
+@media (max-width: 768px) {
+  .date-capsule-bar {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding: 4px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .date-capsule-bar::-webkit-scrollbar { display: none; }
+  .date-capsule {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .date-capsule.active {
+    background: var(--accent-gradient);
+    color: #fff;
+    border-color: transparent;
+  }
+  .category-tag.date-title {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    margin-top: 12px;
+    line-height: 1.3;
+  }
+  .category-tag.desktop-tag { display: none; }
+  .date-separator {
+    display: block;
+    height: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1px 0;
+    margin: 20px 0;
+  }
 }
 </style>
 </head>
@@ -433,7 +607,7 @@ body::after {
   <div class="sidebar-header" id="sidebarHeader" onclick="toggleSidebar()" role="button" tabindex="0" aria-expanded="true" aria-label="折叠侧边栏" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleSidebar();}">
     <div class="sidebar-title">FUTURE INTELLIGENCE <span class="title-arrow" id="titleArrow">▼</span></div>
     <div class="sidebar-zh-title">未来智能</div>
-    <div class="sidebar-subtitle">2026年6月</div>
+    <div class="sidebar-subtitle" id="sidebarSubtitle"></div>
   </div>
   <div class="search-wrap">
     <input type="text" class="search-input" id="searchInput" placeholder="搜索趋势..." aria-label="搜索趋势" oninput="onSearch(this.value)">
@@ -441,6 +615,7 @@ body::after {
   <div class="sidebar-scroll" id="sidebarScroll" role="listbox" aria-label="趋势条目列表"></div>
 </aside>
 <main class="main" id="mainContent" role="main" aria-label="趋势详情">
+  <div class="date-capsule-bar" id="dateCapsuleBar"></div>
   <div class="loading-state" id="loadingState">
     <div class="loading-spinner"></div>
     <span>加载趋势数据中...</span>
@@ -448,10 +623,32 @@ body::after {
 </main>
 </div>
 
-<!-- 移动端浮动按钮 -->
-<button class="mobile-fab" id="mobileFab" onclick="toggleMobileSidebar()" aria-label="浏览趋势" aria-expanded="false">浏览趋势</button>
+<!-- 顶部下拉趋势面板（移动端） -->
+<div class="trend-panel" id="trendPanel" role="dialog" aria-label="趋势列表">
+  <div class="panel-handle-row"></div>
+  <div class="panel-top-bar">
+    <span class="panel-title">趋势列表</span>
+    <span class="panel-close" id="panelClose" onclick="closeTrendPanel()" role="button" tabindex="0" aria-label="关闭">关闭</span>
+  </div>
+  <div class="panel-search-wrap">
+    <input type="text" class="panel-search-input" id="panelSearchInput" placeholder="搜索趋势..." aria-label="搜索趋势" oninput="onPanelSearch(this.value)">
+  </div>
+  <div class="panel-scroll" id="panelScroll" role="listbox" aria-label="趋势条目列表"></div>
+</div>
+
 <!-- 移动端蒙层 -->
-<div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileSidebar()"></div>
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeTrendPanel()"></div>
+
+<!-- 关于弹窗 -->
+<div class="about-modal" id="aboutModal" onclick="closeAboutModal(event)">
+  <div class="about-dialog" onclick="event.stopPropagation()">
+    <h3>Future Intelligence</h3>
+    <p>未来智能 · AI行业趋势洞察</p>
+    <p>每日追踪全球AI行业最前沿趋势，涵盖模型发布、产业动态、资本流向、政策监管、安全研究等领域，提供结构化趋势分析与商业洞察。</p>
+    <button class="about-close" onclick="closeAboutModal()">关闭</button>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <!-- noscript -->
@@ -477,9 +674,10 @@ body::after {
   var groups = [];
   var activeItemId = null;
   var sidebarCollapsed = false;
-  var mobileSidebarOpen = false;
+  var panelOpen = false;
   var searchQuery = '';
-  var highlightedItemIdx = -1; // for keyboard nav
+  var panelSearchQuery = '';
+  var highlightedItemIdx = -1;
 
   function esc(s){ if(!s)return ''; var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
   function formatDateLabel(ds){ var d=new Date(ds+'T00:00:00'); return (d.getMonth()+1)+'月'+d.getDate()+'日 周'+['日','一','二','三','四','五','六'][d.getDay()]; }
@@ -496,7 +694,7 @@ body::after {
     var mainEl = document.getElementById('mainContent');
     var sidebarScroll = document.getElementById('sidebarScroll');
     mainEl.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><span>加载趋势数据中...</span></div>';
-    sidebarScroll.innerHTML = '';
+    if(sidebarScroll) sidebarScroll.innerHTML = '';
 
     fetch('data.json?_=' + Date.now())
       .then(function(res){
@@ -509,7 +707,9 @@ body::after {
         groups = groupByDate(ALL_ITEMS);
         activeItemId = groups[0].items[0].id;
         renderSidebar();
+        renderPanel();
         renderMain();
+        renderDateCapsules();
         lastUpdateTime = new Date();
         startPolling();
       })
@@ -541,10 +741,12 @@ body::after {
           groups = groupByDate(ALL_ITEMS);
           lastUpdateTime = new Date();
           renderSidebar();
+          renderPanel();
           if(!ALL_ITEMS.find(function(x){return x.id===activeItemId;})){
             activeItemId = groups[0].items[0].id;
           }
           renderMain();
+          renderDateCapsules();
           showToast('发现 ' + newCount + ' 条新趋势');
         }
       })
@@ -569,7 +771,7 @@ body::after {
     return h + ':' + m + ':' + s;
   }
 
-  // ===== 侧边栏折叠 =====
+  // ===== 侧边栏折叠（桌面端） =====
   window.toggleSidebar = function(){
     sidebarCollapsed = !sidebarCollapsed;
     var sb = document.getElementById('sidebar');
@@ -597,7 +799,11 @@ body::after {
       _selectPending=requestAnimationFrame(function(){
         _selectPending=null;
         renderSidebar();
+        renderPanel();
         renderMain();
+        renderDateCapsules();
+        // Close panel after selection on mobile
+        if(panelOpen) closeTrendPanel();
       });
     },16);
   };
@@ -609,36 +815,169 @@ body::after {
     renderSidebar();
   };
 
-  // ===== 渲染侧边栏 =====
+  // ===== 面板搜索（移动端） =====
+  window.onPanelSearch = function(q){
+    panelSearchQuery = q.trim().toLowerCase();
+    renderPanel();
+  };
+
+  // ===== 构建趋势条目HTML =====
+  function buildTrendItemHtml(it, g, query){
+    var titleLower = it.title.toLowerCase();
+    if(query && titleLower.indexOf(query)===-1) return null;
+    var num = String(g.items.findIndex(function(t){return t.id===it.id;})+1).padStart(2,'0');
+    var sigCount = it.signals?it.signals.length:0;
+    var displayTitle = query ? highlightText(it.title, query) : esc(it.title);
+    var summary = it.coreInsight ? it.coreInsight.substring(0, 20) : '';
+    var html = '<div class="trend-item'+(it.id===activeItemId?' active':'')+'" role="option" aria-selected="'+(it.id===activeItemId)+'" tabindex="0" data-id="'+it.id+'" onclick="selectItem('+it.id+')" onkeydown="onItemKeydown(event,'+it.id+')">';
+    html += '<span class="trend-number">'+num+'</span>';
+    html += '<div class="trend-content">';
+    html += '<div class="trend-title">'+displayTitle+'</div>';
+    if(summary){
+      html += '<div class="trend-summary">'+esc(summary)+'</div>';
+    }
+    html += '<div class="trend-meta"><span class="trend-tag">趋势</span><span class="trend-signals">'+sigCount+' 信息源</span></div>';
+    html += '</div></div>';
+    return {hasVisible: true, html: html};
+  }
+
+  // ===== 渲染侧边栏（桌面端） =====
   function renderSidebar(){
-    var h='';
+    var monthGroups = [];
+    var currentMonth = null;
     groups.forEach(function(g){
-      var groupHasVisible = false;
-      var groupHtml = '';
-      g.items.forEach(function(it,idx){
-        var titleLower = it.title.toLowerCase();
-        if(searchQuery && titleLower.indexOf(searchQuery)===-1) return;
-        groupHasVisible = true;
-        var num = String(g.items.findIndex(function(t){return t.id===it.id;})+1).padStart(2,'0');
-        var sigCount = it.signals?it.signals.length:0;
-        var displayTitle = searchQuery ? highlightText(it.title, searchQuery) : esc(it.title);
-        groupHtml += '<div class="trend-item'+(it.id===activeItemId?' active':'')+'" role="option" aria-selected="'+(it.id===activeItemId)+'" tabindex="0" data-id="'+it.id+'" onclick="selectItem('+it.id+')" onkeydown="onItemKeydown(event,'+it.id+')">';
-        groupHtml += '<span class="trend-number">'+num+'</span>';
-        groupHtml += '<div class="trend-content">';
-        groupHtml += '<div class="trend-title">'+displayTitle+'</div>';
-        groupHtml += '<div class="trend-meta"><span class="trend-tag">趋势</span><span class="trend-signals">'+sigCount+' 信息源</span></div>';
-        groupHtml += '</div></div>';
+      var monthKey = g.date.substring(0, 7);
+      if(!currentMonth || currentMonth.key !== monthKey){
+        currentMonth = { key: monthKey, dates: [] };
+        monthGroups.push(currentMonth);
+      }
+      currentMonth.dates.push(g);
+    });
+
+    updateSubtitle(monthGroups);
+
+    var h = '';
+    monthGroups.forEach(function(mg, mgIdx){
+      var parts = mg.key.split('-');
+      var monthLabel = parts[0] + '年' + parseInt(parts[1]) + '月';
+      var isFirst = mgIdx === 0;
+      var monthBodyHtml = '';
+
+      mg.dates.forEach(function(g){
+        var groupHasVisible = false;
+        var groupHtml = '';
+        g.items.forEach(function(it){
+          var result = buildTrendItemHtml(it, g, searchQuery);
+          if(result){
+            groupHasVisible = true;
+            groupHtml += result.html;
+          }
+        });
+        if(groupHasVisible){
+          monthBodyHtml += '<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
+          monthBodyHtml += groupHtml;
+        }
       });
-      if(groupHasVisible){
-        h += '<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
-        h += groupHtml;
+
+      if(monthBodyHtml){
+        h += '<div class="month-group">';
+        h += '<div class="month-header" onclick="toggleMonth(this)">';
+        h += '<span class="month-arrow">'+(isFirst?'▼':'▶')+'</span> '+monthLabel;
+        h += '</div>';
+        h += '<div class="month-body'+(isFirst?'':' collapsed')+'">';
+        h += monthBodyHtml;
+        h += '</div></div>';
       }
     });
+
     if(!h){
       h = '<div class="search-empty">未找到匹配的趋势</div>';
     }
-    document.getElementById('sidebarScroll').innerHTML = h;
+    var sidebarScroll = document.getElementById('sidebarScroll');
+    if(sidebarScroll) sidebarScroll.innerHTML = h;
   }
+
+  // ===== 渲染下拉面板（移动端） =====
+  function renderPanel(){
+    var panelScroll = document.getElementById('panelScroll');
+    if(!panelScroll) return;
+
+    var monthGroups = [];
+    var currentMonth = null;
+    groups.forEach(function(g){
+      var monthKey = g.date.substring(0, 7);
+      if(!currentMonth || currentMonth.key !== monthKey){
+        currentMonth = { key: monthKey, dates: [] };
+        monthGroups.push(currentMonth);
+      }
+      currentMonth.dates.push(g);
+    });
+
+    var h = '';
+    monthGroups.forEach(function(mg, mgIdx){
+      var parts = mg.key.split('-');
+      var monthLabel = parts[0] + '年' + parseInt(parts[1]) + '月';
+      var isFirst = mgIdx === 0;
+      var monthBodyHtml = '';
+
+      mg.dates.forEach(function(g){
+        var groupHasVisible = false;
+        var groupHtml = '';
+        g.items.forEach(function(it){
+          var result = buildTrendItemHtml(it, g, panelSearchQuery);
+          if(result){
+            groupHasVisible = true;
+            groupHtml += result.html;
+          }
+        });
+        if(groupHasVisible){
+          monthBodyHtml += '<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
+          monthBodyHtml += groupHtml;
+        }
+      });
+
+      if(monthBodyHtml){
+        h += '<div class="month-group">';
+        h += '<div class="month-header" onclick="toggleMonth(this)">';
+        h += '<span class="month-arrow">'+(isFirst?'▼':'▶')+'</span> '+monthLabel;
+        h += '</div>';
+        h += '<div class="month-body'+(isFirst?'':' collapsed')+'">';
+        h += monthBodyHtml;
+        h += '</div></div>';
+      }
+    });
+
+    if(!h){
+      h = '<div class="search-empty">未找到匹配的趋势</div>';
+    }
+    panelScroll.innerHTML = h;
+  }
+
+  function updateSubtitle(monthGroups){
+    var el = document.getElementById('sidebarSubtitle');
+    if(!el) return;
+    if(!monthGroups || monthGroups.length === 0){ el.textContent = ''; return; }
+    if(monthGroups.length === 1){
+      var parts = monthGroups[0].key.split('-');
+      el.textContent = parts[0] + '年' + parseInt(parts[1]) + '月';
+    } else {
+      var first = monthGroups[0].key.split('-');
+      var last = monthGroups[monthGroups.length-1].key.split('-');
+      el.textContent = first[0] + '年' + parseInt(first[1]) + '月 - ' + last[0] + '年' + parseInt(last[1]) + '月';
+    }
+  }
+
+  window.toggleMonth = function(header){
+    var body = header.nextElementSibling;
+    var arrow = header.querySelector('.month-arrow');
+    if(body.classList.contains('collapsed')){
+      body.classList.remove('collapsed');
+      arrow.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      arrow.textContent = '▶';
+    }
+  };
 
   function highlightText(text, query){
     var escaped = esc(text);
@@ -688,43 +1027,162 @@ body::after {
   // ===== 全局键盘事件 =====
   document.addEventListener('keydown', function(e){
     if(e.key==='Escape'){
-      if(mobileSidebarOpen){
-        closeMobileSidebar();
+      if(panelOpen){
+        closeTrendPanel();
       }else if(!sidebarCollapsed){
         toggleSidebar();
       }
     }
-    // Arrow keys in sidebar
     if((e.key==='ArrowDown'||e.key==='ArrowUp') && document.activeElement && document.activeElement.closest('#sidebarScroll')){
       e.preventDefault();
     }
   });
 
-  // ===== 移动端 =====
-  window.toggleMobileSidebar = function(){
-    if(mobileSidebarOpen){ closeMobileSidebar(); }
-    else { openMobileSidebar(); }
+  // ===== 移动端：顶部下拉面板 =====
+  window.openTrendPanel = function(focusSearch){
+    panelOpen = true;
+    renderPanel();
+    document.getElementById('trendPanel').classList.add('open');
+    document.getElementById('mobileOverlay').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+    if(focusSearch){
+      setTimeout(function(){
+        var input = document.getElementById('panelSearchInput');
+        if(input) input.focus();
+      }, 400);
+    }
   };
 
-  function openMobileSidebar(){
-    mobileSidebarOpen = true;
-    document.getElementById('sidebar').classList.add('mobile-open');
-    document.getElementById('mobileOverlay').classList.add('visible');
-    document.getElementById('mobileFab').setAttribute('aria-expanded', 'true');
-    document.getElementById('mobileFab').style.display = 'none';
-    document.body.style.overflow = 'hidden';
-  }
-
-  window.closeMobileSidebar = function(){
-    mobileSidebarOpen = false;
-    document.getElementById('sidebar').classList.remove('mobile-open');
+  window.closeTrendPanel = function(){
+    panelOpen = false;
+    document.getElementById('trendPanel').classList.remove('open');
     document.getElementById('mobileOverlay').classList.remove('visible');
-    document.getElementById('mobileFab').setAttribute('aria-expanded', 'false');
-    document.getElementById('mobileFab').style.display = '';
     document.body.style.overflow = '';
   };
 
-  // ===== 渲染主内容 =====
+  // ===== 移动端：下拉面板手势关闭 =====
+  (function(){
+    var panel = document.getElementById('trendPanel');
+    var touchStartY = 0;
+    var touchStartTime = 0;
+    panel.addEventListener('touchstart', function(e){
+      touchStartY = e.touches[0].clientY;
+      touchStartTime = Date.now();
+    }, {passive: true});
+    panel.addEventListener('touchmove', function(e){
+      var deltaY = e.touches[0].clientY - touchStartY;
+      if(deltaY > 40 && panel.scrollTop <= 5){
+        // User is pulling down at the top of the panel
+        e.preventDefault();
+      }
+    }, {passive: false});
+    panel.addEventListener('touchend', function(e){
+      var deltaY = e.changedTouches[0].clientY - touchStartY;
+      var elapsed = Date.now() - touchStartTime;
+      if(deltaY > 60 && elapsed < 500 && panel.scrollTop <= 5){
+        closeTrendPanel();
+      }
+    });
+  })();
+
+  // ===== 移动端：内容区左右滑动翻页 =====
+  (function(){
+    var main = document.getElementById('mainContent');
+    var touchStartX = 0, touchStartY = 0;
+    var isSwiping = false;
+
+    main.addEventListener('touchstart', function(e){
+      if(e.touches.length !== 1) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      isSwiping = false;
+    }, {passive: true});
+
+    main.addEventListener('touchmove', function(e){
+      if(e.touches.length !== 1) return;
+      if(isSwiping) {
+        e.preventDefault();
+        return;
+      }
+      var deltaX = e.touches[0].clientX - touchStartX;
+      var deltaY = e.touches[0].clientY - touchStartY;
+      if(Math.abs(deltaX) > 15 && Math.abs(deltaX) > Math.abs(deltaY)){
+        isSwiping = true;
+        e.preventDefault();
+      }
+    }, {passive: false});
+
+    main.addEventListener('touchend', function(e){
+      if(!isSwiping) return;
+      isSwiping = false;
+      var deltaX = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(deltaX) < 50) return;
+
+      // Find current item's position in its date group
+      var currentItem = ALL_ITEMS.find(function(x){return x.id===activeItemId;});
+      if(!currentItem) return;
+      var dateGroup = groups.find(function(g){return g.date===currentItem.date;});
+      if(!dateGroup) return;
+      var idx = dateGroup.items.findIndex(function(it){return it.id===activeItemId;});
+      if(idx === -1) return;
+
+      var targetItem = null;
+      if(deltaX < -50 && idx < dateGroup.items.length - 1){
+        // Swipe left → next
+        targetItem = dateGroup.items[idx + 1];
+      } else if(deltaX > 50 && idx > 0){
+        // Swipe right → previous
+        targetItem = dateGroup.items[idx - 1];
+      }
+
+      if(targetItem){
+        var swipeArea = main.querySelector('.swipe-area');
+        if(swipeArea){
+          if(deltaX < -50){
+            swipeArea.classList.add('swiping-next');
+          } else {
+            swipeArea.classList.add('swiping-prev');
+          }
+          setTimeout(function(){
+            activeItemId = targetItem.id;
+            renderSidebar();
+            renderPanel();
+            renderMain();
+            renderDateCapsules();
+          }, 300);
+        }
+      }
+    });
+  })();
+
+  window.closeAboutModal = function(e){
+    if(e && e.target !== document.getElementById('aboutModal')) return;
+    document.getElementById('aboutModal').classList.remove('visible');
+  };
+
+  // ===== 日期胶囊（移动端） =====
+  function renderDateCapsules(){
+    var bar = document.getElementById('dateCapsuleBar');
+    if(!bar) return;
+    var html = '';
+    groups.forEach(function(g, idx){
+      var isActive = g.items.some(function(it){ return it.id === activeItemId; });
+      var label = idx === 0 ? '今天' : (function(){
+        var d = new Date(g.date + 'T00:00:00');
+        return (d.getMonth()+1) + '月' + d.getDate() + '日';
+      })();
+      html += '<div class="date-capsule' + (isActive ? ' active' : '') + '" data-date="' + g.date + '" onclick="selectDateCapsule(\'' + g.date + '\')">' + label + '</div>';
+    });
+    bar.innerHTML = html;
+  }
+
+  window.selectDateCapsule = function(date){
+    var g = groups.find(function(grp){ return grp.date === date; });
+    if(!g || !g.items.length) return;
+    selectItem(g.items[0].id);
+  };
+
+  // ===== 渲染主内容（含滑动包裹层） =====
   function getPerDateRank(it){
     var s = ALL_ITEMS.filter(function(t){return t.date===it.date;});
     return s.findIndex(function(t){return t.id===it.id;})+1;
@@ -734,8 +1192,13 @@ body::after {
     var t = ALL_ITEMS.find(function(x){return x.id===activeItemId;});
     if(!t){document.getElementById('mainContent').innerHTML='<div class="empty-state">未找到该条目</div>';return;}
     var r=getPerDateRank(t),rs=String(r).padStart(2,'0');
+    var d=new Date(t.date+'T00:00:00'),wd=['日','一','二','三','四','五','六'];
+    var dateTitle=d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日 · 周'+wd[d.getDay()];
     document.getElementById('mainContent').innerHTML=
-      '<div class="content-header"><div class="rank-big">'+rs+'</div><div class="category-tag">趋势分析 · '+formatDateLabel(t.date)+'</div></div>'+
+      '<div class="swipe-area" id="swipeArea">'+
+      '<div class="date-capsule-bar" id="dateCapsuleBar"></div>'+
+      '<div class="content-header"><div class="rank-big">'+rs+'</div><div class="category-tag date-title">'+dateTitle+'</div><div class="category-tag desktop-tag">趋势分析 · '+formatDateLabel(t.date)+'</div></div>'+
+      '<div class="date-separator"></div>'+
       '<div class="cards">'+
       '<div class="card" style="border:none;padding-bottom:8px;background:transparent;box-shadow:none"><div class="card-title">'+esc(t.title)+'</div></div>'+
       '<div class="card core-insight"><div class="card-body">'+esc(t.coreInsight)+'</div></div>'+
@@ -746,7 +1209,8 @@ body::after {
       '<div class="card"><div class="section-label">信息来源 · '+t.signals.length+' 条</div><div class="signals-list">'+
       (t.signals.map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener" class="signal-item"><div class="signal-source">'+esc(s.source)+' · '+s.time+'</div><div class="signal-title">'+esc(s.title)+'</div><div class="signal-summary">'+esc(s.summary)+'</div></a>';})).join('')+
       '</div></div></div>'+
-      '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件<span class="last-update">上次更新：'+getLastUpdateTime()+'</span></div>';
+      '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件<span class="last-update">上次更新：'+getLastUpdateTime()+'</span></div>'+
+      '</div>';
     document.getElementById('mainContent').scrollTop=0;
   }
 
