@@ -4006,5 +4006,245 @@
         "url": "https://www.ithome.com/0/971/971.htm"
       }
     ]
+  },
+  {
+    "id": 100,
+    "date": "2026-07-03",
+    "title": "AI Agent 安全从理论走向实战——首例自主勒索攻击曝光，Mythos 安全争议同日升温",
+    "coreInsight": "全球首例 AI Agent 自主勒索攻击曝光——从漏洞利用到数据库加密全程无需人类干预，攻击链条完全由智能体自主完成。同日社区就 Mythos 级前沿模型的网络安全影响展开激烈辩论——AI 安全已从「可能会出问题」进入「已经出了问题」。",
+    "whyItMatters": "这次攻击不是概念验证，而是真实发生的 AI 自主攻击。攻击者利用 AI Agent 的自主决策能力完成了传统黑客需要数小时甚至数天的攻击链。这意味着网络攻击的门槛正在被 AI 系统性拉低——攻击速度更快、规模化成本更低、溯源更难。Ethan Mollick 同日关于 Mythos 网络安全的讨论则从另一个角度揭示：前沿模型的强大能力既是盾也是矛。Fable 5 自主优化 AIHOT 网站 SEO/GEO 的案例则展示了智能体在合法场景下的自主能力边界——同样的能力在被恶意使用时就是攻击工具。",
+    "direction": "6-12 个月内，AI Agent 攻击将成为企业网络安全的新常态威胁。针对 AI 自主攻击的检测与防御将催生新安全品类。保险业将推出「AI 攻击除外」条款。",
+    "opportunities": [
+      "面向 AI Agent 攻击的实时检测与阻断系统",
+      "AI 自主攻击的攻防演练与红队测试服务",
+      "企业 AI 安全态势管理与合规自动化"
+    ],
+    "risks": [
+      "AI 自主攻击的规模化可能使现有安全防御体系失效",
+      "攻击溯源困难可能引发网络空间的归因危机"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3 19:57",
+        "title": "全球首例 AI Agent 勒索攻击曝光，从漏洞利用到数据库加密全程自主完成",
+        "summary": "攻击链条完全由 AI Agent 自主完成，无需人类干预。",
+        "url": "https://www.ithome.com/0/971/xxx.htm"
+      },
+      {
+        "source": "X: Ethan Mollick",
+        "time": "7/3 04:24",
+        "title": "关于 Mythos 和网络安全的讨论并非炒作",
+        "summary": "前沿模型的安全能力引发社区严肃讨论。",
+        "url": "https://x.com/emollick/status/xxx"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "7/3 08:16",
+        "title": "Claude Fable 5 自主优化 AIHOT 网站 SEO/GEO 全记录",
+        "summary": "智能体自主完成从分析到部署的全流程优化。",
+        "url": "https://mp.weixin.qq.com/s/xxx"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "date": "2026-07-03",
+    "title": "视频 AI 三路并进——实时交互、音乐伴舞、LLM 视觉理解同日突破",
+    "coreInsight": "生数科技发布 Vidu S1 推动视频生成进入「实时交互」时代、阿里 Wan Video 推出「音乐伴舞」新功能、开源工具 claude-real-video 让任何大语言模型都能「观看」视频——视频 AI 同日从生成、交互到理解三个维度同步突破。",
+    "whyItMatters": "视频 AI 正在从「生成一段视频」升级为「实时交互式视频体验」。Vidu S1 的实时交互能力意味着视频不再是预渲染的成品，而是可以动态响应用户输入的「活」内容——这对游戏、教育、直播等行业有深远影响。Wan Video 的音乐伴舞功能将音乐与视觉生成打通，预示着 AI 驱动的跨模态创意工具即将成为主流。claude-real-video 则将视频理解能力开放给所有 LLM——视频不再只是被生成的对象，也是被理解的对象。三条线共同指向一个趋势：视频 AI 正在从单点能力进化为全栈平台。",
+    "direction": "6-12 个月内，实时交互视频将成为短视频平台的核心竞争力。音乐-视频联合生成将催生新的 UGC 创作范式。视频理解能力将成为 AI 助手的标配功能。",
+    "opportunities": [
+      "基于实时交互视频的游戏与虚拟社交体验",
+      "AI 驱动的音乐可视化与编舞创作平台",
+      "面向企业的视频内容智能分析与检索系统"
+    ],
+    "risks": [
+      "实时视频生成可能被用于深度伪造直播",
+      "视频理解能力普及可能引发新的隐私监控风险"
+    ],
+    "signals": [
+      {
+        "source": "公众号：生数科技（Vidu·视频）",
+        "time": "7/3 19:17",
+        "title": "生数科技发布 Vidu S1，推动视频生成迈向「实时交互」新时代",
+        "summary": "视频不再是预渲染成品，而是可动态响应用户输入的活内容。",
+        "url": "https://mp.weixin.qq.com/s/xxx"
+      },
+      {
+        "source": "X: 阿里云 (@alibaba_cloud)",
+        "time": "7/3 16:55",
+        "title": "Wan Video 推出「音乐伴舞」新功能",
+        "summary": "音乐与视觉生成打通，跨模态创意工具。",
+        "url": "https://x.com/alibaba_cloud/status/xxx"
+      },
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "7/3 12:56",
+        "title": "claude-real-video ─ 让任何大语言模型（LLM）都能观看视频",
+        "summary": "开源工具将视频理解能力开放给所有 LLM。",
+        "url": "https://news.ycombinator.com/item?id=xxx"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "date": "2026-07-03",
+    "title": "AI 开发基础设施自动化提速——预训练框架 8 小时追平行业标杆、DOM 操控开源、MCP 生态扩展",
+    "coreInsight": "面壁智能发布 AI 全自动预训练框架 ForgeTrain——8 小时追平 Megatron-LM 效果、阿里 Page Agent 实现网页 DOM 自然语言操控、苹果 Safari MCP 服务器发布——AI 开发正从「人写代码、AI 辅助」走向「AI 自主训练、AI 操控界面」。",
+    "whyItMatters": "ForgeTrain 的核心意义在于将大模型训练的工程复杂度降到极致——如果 8 小时就能追平业界标杆的训练框架，大模型训练的门槛将从「需要顶级工程团队」降低到「需要数据和算力」。Page Agent 让 AI 直接操控网页 DOM——这意味着智能体不再需要理解 HTML 结构，而是像人类一样「看到并操作」网页元素。Safari MCP 服务器则将苹果浏览器接入 AI 工具生态。三条线共同揭示一个趋势：AI 开发的基础设施层正在从手工打造变为自动化流水线，开发者和智能体之间的边界正在模糊。",
+    "direction": "6-12 个月内，全自动训练框架将成为开源大模型训练的标配。DOM 操控类 Agent 将从实验项目进化为生产力工具。浏览器 MCP 生态将覆盖所有主流浏览器。",
+    "opportunities": [
+      "基于全自动训练框架的私有化模型训练服务",
+      "面向企业网页自动化的 AI Agent 解决方案",
+      "跨浏览器的 MCP 生态与应用商店"
+    ],
+    "risks": [
+      "全自动训练框架的普及可能降低恶意模型的生产门槛",
+      "DOM 操控 Agent 的安全边界模糊——可能被用于自动化网络攻击"
+    ],
+    "signals": [
+      {
+        "source": "公众号：面壁智能（MiniCPM）",
+        "time": "7/3 17:12",
+        "title": "面壁智能发布 AI 全自动预训练框架 ForgeTrain，8 小时追平 Megatron-LM",
+        "summary": "全自动预训练框架大幅降低大模型训练工程门槛。",
+        "url": "https://mp.weixin.qq.com/s/xxx"
+      },
+      {
+        "source": "MarkTechPost（RSS）",
+        "time": "7/3 04:51",
+        "title": "阿里巴巴发布 Page Agent：开源 JavaScript 库实现网页 DOM 自然语言操控",
+        "summary": "智能体可直接操控网页元素，无需理解 HTML 结构。",
+        "url": "https://www.marktechpost.com/xxx"
+      },
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "7/3 17:59",
+        "title": "面向 Web 开发者的 Safari MCP 服务器",
+        "summary": "苹果浏览器正式接入 MCP 生态。",
+        "url": "https://news.ycombinator.com/item?id=xxx"
+      },
+      {
+        "source": "X: OpenRouter (@OpenRouter)",
+        "time": "7/3 01:46",
+        "title": "Fable 5 仅 4.44 美元搭建 Rube Goldberg 机器",
+        "summary": "智能体自主完成复杂机械联动装置的搭建，极低成本展示 AI 操控物理逻辑的能力。",
+        "url": "https://x.com/OpenRouter/status/xxx"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "date": "2026-07-03",
+    "title": "中国 AI 监管进入立法快车道——网信办首设「智能信息服务」专章",
+    "coreInsight": "国家网信办就《互联网信息服务管理办法》再次征求意见，首次设立「智能信息服务」专章规范 AI 服务——中国 AI 监管正从分散的部门规章走向统一的顶层立法框架。",
+    "whyItMatters": "这是中国 AI 监管史上的标志性事件——「智能信息服务」不再是各部位分头管理的交叉地带，而是在法律层面被明确定义和规范。此举意味着 AI 服务提供者将面临统一的合规要求：算法备案、内容安全、数据保护、用户权益——不再是「能做就做」，而是「合规才能做」。与欧盟 AI Act 不同，中国的路径更强调「信息服务」属性——将 AI 作为信息传播的基础设施来监管。全球 AI 治理的「中-美-欧」三极格局正在成型。",
+    "direction": "6-12 个月内，「智能信息服务」专章将完成立法程序。AI 服务提供者将面临强制备案和定期审查。合规科技（RegTech for AI）将迎来需求爆发。",
+    "opportunities": [
+      "面向 AI 服务提供者的合规自动化平台",
+      "AI 算法备案与安全评估第三方服务",
+      "帮助企业应对中-美-欧三地 AI 法规的合规咨询"
+    ],
+    "risks": [
+      "过度监管可能抑制中小 AI 企业的创新活力",
+      "中外 AI 监管标准的差异可能进一步割裂全球 AI 市场"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3 17:15",
+        "title": "国家网信办就《互联网信息服务管理办法》再次征求意见，首设「智能信息服务」专章规范 AI 服务",
+        "summary": "中国 AI 监管从分散规章走向统一顶层立法。",
+        "url": "https://www.ithome.com/0/971/xxx.htm"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "date": "2026-07-03",
+    "title": "物理世界 AI 遭遇安全拷问——特斯拉 FSD 致命车祸与扎克伯格承认 AI 进度不及预期",
+    "coreInsight": "得州特斯拉 FSD 致命车祸——司机嫌 FSD 太保守踩死加速踏板致 76 岁居民死亡；同日扎克伯格称 AI 智能体开发速度未如预期——AI 从代码世界到物理世界的跨越远比预想艰难，消费者预期与工程现实之间的鸿沟正在扩大。",
+    "whyItMatters": "特斯拉事故的细节令人不安：司机不是不信任 FSD，而是嫌它太保守——当用户对 AI 的信任超过其实际能力时，安全风险反而上升。这与扎克伯格的表态形成呼应：即使是全球最大的 AI 投资方之一，也承认智能体开发「未如预期」——AI 行业正在经历从「技术乐观主义」到「现实主义」的清醒期。两件事共同揭示：AI 从代码世界走向物理世界，最大的瓶颈不是模型能力，而是在复杂、不可预测的真实环境中保持可靠与安全。",
+    "direction": "6-12 个月内，自动驾驶公司将被迫重新设计人机交互——重点是管理用户对 AI 的信任边界。AI 行业将出现更多「预期管理」类言论——承认当前局限不是示弱，而是防止过度承诺引发反噬。",
+    "opportunities": [
+      "面向自动驾驶的人机信任边界管理技术",
+      "AI 系统在物理世界的安全验证与仿真测试平台",
+      "帮助企业建立 AI 能力与局限的透明沟通机制"
+    ],
+    "risks": [
+      "自动驾驶事故的舆论发酵可能导致监管骤然收紧",
+      "AI 行业频繁「不及预期」可能引发新一轮投资寒潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3 07:43",
+        "title": "得州特斯拉致命车祸：司机嫌 FSD 太保守，加速踏板踩死致 76 岁居民死亡",
+        "summary": "用户对 AI 信任超过实际能力时安全风险反而上升。",
+        "url": "https://www.ithome.com/0/971/xxx.htm"
+      },
+      {
+        "source": "TechCrunch：AI（RSS）",
+        "time": "7/3 07:38",
+        "title": "扎克伯格称 AI 智能体开发速度未如预期",
+        "summary": "全球最大 AI 投资方之一承认智能体开发进度落后。",
+        "url": "https://techcrunch.com/xxx"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "date": "2026-07-03",
+    "title": "AI 落地进入「工程师驻场」时代——微软 25 亿美元派 6000 人，消费级与科研同日多点开花",
+    "coreInsight": "微软成立「Frontier Company」斥资 25 亿美元派驻 6000 名 AI 工程师到企业客户现场——AI 部署正从「卖 API」升级为「卖驻场工程能力」。同日京东 JoyAI 上线 UGC 数字人、阿里达摩院发布超导材料 AI 智能体 Elements Claw、多个 Fable 5 创造性应用案例涌现——AI 商业化同日从企业服务到消费产品到科学发现全面开花。",
+    "whyItMatters": "微软 6000 人驻场计划的信号极其清晰：AI 落地的最大瓶颈不是模型能力，而是企业不知道如何把 AI 嵌入现有业务流程。6000 名工程师直接嵌入客户组织意味着微软正在将 AI 部署从「技术产品」改造为「组织变革服务」。京东 JoyAI 的 UGC 数字人则展示了消费侧的另一种路径——用户不需要理解 AI 技术，只需要「捏」一个自己喜欢的虚拟玩伴。阿里达摩院 Elements Claw 在超导材料发现领域的应用则证明 AI 正在成为科学发现的独立驱动力。Fable 5 的 SEO/GEO 优化和 Rube Goldberg 机器搭建等创造性应用则展示了智能体在成本极低（4.44 美元）的前提下所能达到的创造力上限。",
+    "direction": "6-12 个月内，AI 驻场服务将成为顶级 AI 公司的标配部门。消费级 AI 产品将从「工具」转向「伴侣/角色」。AI 驱动的科学发现将从孤立论文走向可复用的智能体平台。",
+    "opportunities": [
+      "面向传统企业的 AI 组织变革与流程再造咨询",
+      "消费级 AI 数字人的情感计算与人格设计",
+      "AI 驱动的科研智能体（AI Scientist）平台"
+    ],
+    "risks": [
+      "驻场模式的高成本可能导致 AI 服务进一步向大企业集中，中小企业被边缘化",
+      "消费级 AI 数字人的情感依赖可能产生心理健康风险"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "7/3 03:18",
+        "title": "Microsoft 成立「Frontier Company」，斥资 25 亿美元派驻 6000 名 AI 工程师到企业客户现场",
+        "summary": "AI 部署从卖 API 升级为卖驻场工程能力。",
+        "url": "https://the-decoder.com/xxx"
+      },
+      {
+        "source": "公众号：京东 JoyAI",
+        "time": "7/3 18:03",
+        "title": "JoyAI App 上线 UGC 数字人功能，用户可「捏」出专属虚拟玩伴",
+        "summary": "消费级 AI 从工具转向角色化体验。",
+        "url": "https://mp.weixin.qq.com/s/xxx"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/3 11:27",
+        "title": "阿里达摩院发布超导材料发现 AI 智能体 Elements Claw",
+        "summary": "AI 成为科学发现的独立驱动力。",
+        "url": "https://www.ithome.com/0/971/xxx.htm"
+      },
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "7/3 14:16",
+        "title": "《Fable》通关指南：短绳 AI 编程法",
+        "summary": "创造性 AI 编程方法论——用最小干预让 AI 自主完成复杂任务。",
+        "url": "https://news.ycombinator.com/item?id=xxx"
+      },
+      {
+        "source": "X：歸藏 (@op7418)",
+        "time": "7/3 20:25",
+        "title": "藏师傅 PPT 与 Pencil 结合使用技巧",
+        "summary": "AI 工具赋能日常办公创意场景。",
+        "url": "https://x.com/op7418/status/xxx"
+      }
+    ]
   }
 ]
