@@ -803,6 +803,23 @@ body::after {
     return h + ':' + m + ':' + s;
   }
 
+  function getFooterText(){
+    if(!ALL_ITEMS.length) return '';
+    var dates=Array.from(new Set(ALL_ITEMS.map(function(i){return i.date;}))).sort();
+    var fd=parseInt(dates[0].substr(8,2));
+    var fm=parseInt(dates[0].substr(5,2));
+    var fy=parseInt(dates[0].substr(0,4));
+    var ld=parseInt(dates[dates.length-1].substr(8,2));
+    var lm=parseInt(dates[dates.length-1].substr(5,2));
+    var ly=parseInt(dates[dates.length-1].substr(0,4));
+    var monthStr=fy===ly&&fm===lm?(fy+'年'+fm+'月'):(fy+'年'+fm+'月-'+ly+'年'+lm+'月');
+    var rangeStr=fm===lm?('覆盖'+fm+'月'+fd+'日至'+ld+'日'):('覆盖'+fm+'月'+fd+'日至'+lm+'月'+ld+'日');
+    var d1=new Date(dates[0]),d2=new Date(dates[dates.length-1]);
+    var spanDays=Math.floor((d2-d1)/86400000)+1;
+    var cov=dates.length===spanDays?'每天均有 AI 重大事件':('共 '+dates.length+' 天有 AI 重大事件');
+    return monthStr+' · 共 '+ALL_ITEMS.length+' 条趋势 · '+rangeStr+'，'+cov;
+  }
+
   // ===== 侧边栏折叠（桌面端） =====
   window.toggleSidebar = function(){
     sidebarCollapsed = !sidebarCollapsed;
@@ -1237,7 +1254,7 @@ body::after {
       '<div class="card"><div class="section-label">信息来源 · '+t.signals.length+' 条</div><div class="signals-list">'+
       (t.signals.map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener" class="signal-item"><div class="signal-source">'+esc(s.source)+' · '+s.time+'</div><div class="signal-title">'+esc(s.title)+'</div><div class="signal-summary">'+esc(s.summary)+'</div></a>';})).join('')+
       '</div></div></div>'+
-      '<div class="content-footer">2026年6月 · 共 '+ALL_ITEMS.length+' 条趋势 · 覆盖 6月1日至29日，每天均有 AI 重大事件<span class="last-update">上次更新：'+getLastUpdateTime()+'</span></div>'+
+      '<div class="content-footer">'+getFooterText()+'<span class="last-update">上次更新：'+getLastUpdateTime()+'</span></div>'+
       '</div>';
     document.getElementById('mainContent').scrollTop=0;
   }
