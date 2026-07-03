@@ -742,11 +742,11 @@ body::after {
         if(!ALL_ITEMS.length) throw new Error('数据为空');
         groups = groupByDate(ALL_ITEMS);
         activeItemId = groups[0].items[0].id;
+        lastUpdateTime = new Date();
         renderSidebar();
         renderPanel();
         renderMain();
         renderDateCapsules();
-        lastUpdateTime = new Date();
         startPolling();
       })
       .catch(function(err){

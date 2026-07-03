@@ -164,3 +164,80 @@ fatal: unable to auto-detect email address (got 'air@Mac.(none)')
 [13:31:03] 抓取: 134 条 → ≥7分: 60 条 → 新趋势: 8 个
 [13:31:03] 总趋势数: 87 条
 [13:31:03] 部署: ✅ 成功
+[14:01:03] 模式: 追加模式（只追加今天新趋势，保持历史数据不变）
+[14:01:03] ========== 未来趋势信息系统 · 追加模式管线启动 ==========
+[14:01:03] 时间: 2026-07-01 14:01 (北京时间)
+[14:01:03] 仓库: /Users/air/future-intelligence-repo
+[14:01:03] ===== Step 1/8: 抓取 28 个数据源 =====
+[14:01:03]   aihot: 51 条
+[14:01:09]   OpenAI: 15 条
+[14:01:19]   Anthropic: 14 条
+[14:01:28]   DeepMind: 15 条
+[14:01:28]   Meta AI: 跳过（已知 400 错误）
+[14:01:36]   Microsoft AI: 0 条
+[14:01:36]   NVIDIA AI: 跳过（已知 ProxyError）
+[14:01:43]   Hugging Face: 15 条
+[14:01:48]   TechCrunch: 15 条
+[14:01:48]   VentureBeat: 跳过（已知 429 限流）
+[14:01:55]   The Verge: 0 条
+[14:02:01]   Ars Technica: 0 条
+[14:02:08]   MarkTechPost: 0 条
+[14:02:14]   AI News: 0 条
+[14:02:20]   The Decoder: 10 条
+[14:02:26]   MIT Tech Review: 10 条
+[14:02:33]   arXiv cs.AI: 15 条
+[14:02:39]   Stanford HAI: 0 条
+[14:02:50]   Google Research: 15 条
+[14:02:57]   Microsoft Research: 10 条
+[14:03:05]   a16z: 0 条
+[14:03:14]   Sequoia: 10 条
+[14:03:23]   Benchmark: HTTP 404
+[14:03:27]   Y Combinator: 15 条
+[14:03:34]   Hacker News: 15 条
+[14:03:34]   GitHub Trending: 跳过（需要 JS 渲染）
+[14:03:34]   Reddit ML: 跳过（已知封禁）
+[14:03:34]   Reddit LocalLLaMA: 跳过（已知封禁）
+[14:03:34]   ProductHunt: 跳过（已知封禁）
+[14:03:34] 抓取总计: 225 → 去重: 218 → 3天内: 134
+[14:03:34] ===== Step 2/8: News Score 评分 =====
+[14:03:34] 评分完成: 59/134 条 ≥7 分
+[14:03:34] ===== Step 3/8: 趋势聚类 =====
+[14:03:34] 聚类完成: 12 个主题组（合并去重后）
+[14:03:34]   agents: 21 篇, 15 来源
+[14:03:34]   model_race: 15 篇, 15 来源
+[14:03:34]   enterprise: 11 篇, 8 来源
+[14:03:34]   science: 11 篇, 9 来源
+[14:03:34]   funding: 9 篇, 7 来源
+[14:03:34]   evaluation: 9 篇, 7 来源
+[14:03:34]   chips: 9 篇, 6 来源
+[14:03:34]   safety: 9 篇, 7 来源
+[14:03:34]   opensource: 5 篇, 5 来源
+[14:03:34]   labor: 5 篇, 5 来源
+[14:03:34]   small_models: 4 篇, 4 来源
+[14:03:34]   general: 4 篇, 4 来源
+[14:03:34] ===== Step 4/8: 生成趋势 =====
+[14:03:34] 趋势生成: 12 个
+[14:03:34] ===== Step 5/8: 过滤趋势 =====
+[14:03:34] 最终保留: 8 个趋势
+[14:03:34]   [10] 智能体产品化——Acti、智能体直接放入手机键盘、Amazon、launches、new
+[14:03:34]   [10] 模型能力跃升——Acti、智能体直接放入手机键盘、Claude、Science、科研工作台正式上线
+[14:03:34]   [10] AI 商业化——Amazon、launches、new、Claude、Science、科研工作台正式上线
+[14:03:34]   [10] AI for Science——Claude、Science、科研工作台正式上线、Claude、Code、GitHub、
+[14:03:34]   [10] AI 估值与 IPO——Nvidia、competitor、Etched、Acti、智能体直接放入手机键盘、Amazon
+[14:03:34]   [10] 智能体评测——Acti、智能体直接放入手机键盘
+[14:03:34]   [10] 定制 AI 芯片——Nvidia、competitor、Etched、Building、tech、the、OpenAI、
+[14:03:34]   [10] 安全对齐进展——Deepseek's、DSpark、boosts、Trump、drops、restrictions、Cl
+[14:03:34] ===== Step 6/8: 读取现有数据 =====
+[14:03:34]   读取到 79 个现有趋势（id: 36 到 79）
+[14:03:34] ===== Step 7/8: 追加新趋势 =====
+[14:03:34]   追加 8 个新趋势（id: 80 到 87）
+[14:03:34] ===== Step 8/8: 写入 data.json =====
+[14:03:34]   已备份到 data.json.bak
+[14:03:34]   ✅ data.json 写入成功（共 87 条）
+[14:03:34] ===== Git 部署 =====
+[14:03:34]   commit: auto: append pipeline update 2026-07-01 14:01
+[14:03:42]   ✅ git push 成功
+[14:03:42] ========== 追加模式管线完成 ==========
+[14:03:42] 抓取: 134 条 → ≥7分: 59 条 → 新趋势: 8 个
+[14:03:42] 总趋势数: 87 条
+[14:03:42] 部署: ✅ 成功
