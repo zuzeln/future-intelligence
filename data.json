@@ -5020,5 +5020,31 @@
         "url": "https://www.marktechpost.com/2026/07/02/the-google-health-api-got-a-cli-ghealth-is-an-open-source-tool-for-your-fitbit-air-data"
       }
     ]
-  }
+  },
+{
+  "id": 125,
+  "date": "2026-07-04",
+  "title": "信任即效率：Simon Willison 发现 AI Agent 交互范式正从「精确指令」转向「信任判断力」——让 Fable 自己决定比写死规则更省 token",
+  "coreInsight": "Simon Willison 从 Claude Code 团队获得的核心理念是：给 Fable 和 Opus 等高级模型赋予判断自主权——让它自己决定何时写测试、何时委托子任务——比硬编码规则更高效。配套的 token 节省策略（Sonnet 做实现、Haiku 做机械修改、主模型保留判断与审计）表明，AI Agent 的最佳使用方式不是「把模型当工具精确操控」，而是「把模型当同事信任其判断力并分层调度资源」。",
+  "whyItMatters": "这不仅是省 token 的技巧，更是 Agent 交互范式的分水岭。当前主流思路是「越来越精确的系统提示词」，而 Claude Code 团队和 Willison 的实践证明相反方向效果更好。如果这一范式被广泛采纳，将深刻影响 AI 开发工具的产品逻辑、提示词工程最佳实践，以及企业如何定义人与 AI Agent 的协作边界。",
+  "direction": "6-12 个月内，「模型自主判断权限」将成为 Agent 工具的核心设计维度。token 经济化（分层调度不同功耗模型）将从个人技巧走向产品化能力。提示词工程可能面临「精确指令派」与「信任判断力派」的范式分裂。",
+  "opportunities": [
+    "AI Agent 的模型分层调度与 token 路由中间件",
+    "面向企业的 Agent 判断力审计与治理工具",
+    "基于模型自主度的 Agent 效能评估与优化 SaaS"
+  ],
+  "risks": [
+    "过度信任模型判断可能导致代码质量不稳定或关键决策失误",
+    "分层调度中不同模型产出风格不一致，增加 Code Review 与维护成本"
+  ],
+  "signals": [
+    {
+      "source": "Simon Willison 博客",
+      "time": "2026-07-03",
+      "title": "Fable 的判断力：让 AI Agent 自己决定而非硬性规定行为",
+      "summary": "Simon Willison 在 AIE 上与 Claude Code 团队交流后建议，让 Fable 用自己的判断力工作，而非硬性规定行为。例如直接让 Fable 自行决定何时编写测试，比给出具体规则更好。为节省 Fable token，Jesse Vincent 的技巧是告诉 Fable 将较小任务委托给较低功耗模型（Sonnet 用于实现、Haiku 用于机械修改），主循环保留判断、审计和数据合成。Willison 已将提示词存入 Claude Code 记忆文件，Fable token 消耗速度明显下降。",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement"
+    }
+  ]
+}
 ]
