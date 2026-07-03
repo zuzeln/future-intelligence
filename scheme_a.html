@@ -735,7 +735,7 @@ body::after {
     mainEl.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><span>加载趋势数据中...</span></div>';
     if(sidebarScroll) sidebarScroll.innerHTML = '';
 
-    Promise.resolve([
+    Promise.resolve(Promise.resolve([
   {
     "id": 1,
     "date": "2026-06-01",
@@ -5758,33 +5758,1193 @@ body::after {
       }
     ]
   },
-{
-  "id": 125,
-  "date": "2026-07-04",
-  "title": "信任即效率：Simon Willison 发现 AI Agent 交互范式正从「精确指令」转向「信任判断力」——让 Fable 自己决定比写死规则更省 token",
-  "coreInsight": "Simon Willison 从 Claude Code 团队获得的核心理念是：给 Fable 和 Opus 等高级模型赋予判断自主权——让它自己决定何时写测试、何时委托子任务——比硬编码规则更高效。配套的 token 节省策略（Sonnet 做实现、Haiku 做机械修改、主模型保留判断与审计）表明，AI Agent 的最佳使用方式不是「把模型当工具精确操控」，而是「把模型当同事信任其判断力并分层调度资源」。",
-  "whyItMatters": "这不仅是省 token 的技巧，更是 Agent 交互范式的分水岭。当前主流思路是「越来越精确的系统提示词」，而 Claude Code 团队和 Willison 的实践证明相反方向效果更好。如果这一范式被广泛采纳，将深刻影响 AI 开发工具的产品逻辑、提示词工程最佳实践，以及企业如何定义人与 AI Agent 的协作边界。",
-  "direction": "6-12 个月内，「模型自主判断权限」将成为 Agent 工具的核心设计维度。token 经济化（分层调度不同功耗模型）将从个人技巧走向产品化能力。提示词工程可能面临「精确指令派」与「信任判断力派」的范式分裂。",
-  "opportunities": [
-    "AI Agent 的模型分层调度与 token 路由中间件",
-    "面向企业的 Agent 判断力审计与治理工具",
-    "基于模型自主度的 Agent 效能评估与优化 SaaS"
-  ],
-  "risks": [
-    "过度信任模型判断可能导致代码质量不稳定或关键决策失误",
-    "分层调度中不同模型产出风格不一致，增加 Code Review 与维护成本"
-  ],
-  "signals": [
-    {
-      "source": "Simon Willison 博客",
-      "time": "2026-07-03",
-      "title": "Fable 的判断力：让 AI Agent 自己决定而非硬性规定行为",
-      "summary": "Simon Willison 在 AIE 上与 Claude Code 团队交流后建议，让 Fable 用自己的判断力工作，而非硬性规定行为。例如直接让 Fable 自行决定何时编写测试，比给出具体规则更好。为节省 Fable token，Jesse Vincent 的技巧是告诉 Fable 将较小任务委托给较低功耗模型（Sonnet 用于实现、Haiku 用于机械修改），主循环保留判断、审计和数据合成。Willison 已将提示词存入 Claude Code 记忆文件，Fable token 消耗速度明显下降。",
-      "url": "https://simonwillison.net/2026/Jul/3/judgement"
-    }
-  ]
-}
-]).then(function(data){
+  {
+    "id": 125,
+    "date": "2026-07-04",
+    "title": "信任即效率：Simon Willison 发现 AI Agent 交互范式正从「精确指令」转向「信任判断力」——让 Fable 自己决定比写死规则更省 token",
+    "coreInsight": "Simon Willison 从 Claude Code 团队获得的核心理念是：给 Fable 和 Opus 等高级模型赋予判断自主权——让它自己决定何时写测试、何时委托子任务——比硬编码规则更高效。配套的 token 节省策略（Sonnet 做实现、Haiku 做机械修改、主模型保留判断与审计）表明，AI Agent 的最佳使用方式不是「把模型当工具精确操控」，而是「把模型当同事信任其判断力并分层调度资源」。",
+    "whyItMatters": "这不仅是省 token 的技巧，更是 Agent 交互范式的分水岭。当前主流思路是「越来越精确的系统提示词」，而 Claude Code 团队和 Willison 的实践证明相反方向效果更好。如果这一范式被广泛采纳，将深刻影响 AI 开发工具的产品逻辑、提示词工程最佳实践，以及企业如何定义人与 AI Agent 的协作边界。",
+    "direction": "6-12 个月内，「模型自主判断权限」将成为 Agent 工具的核心设计维度。token 经济化（分层调度不同功耗模型）将从个人技巧走向产品化能力。提示词工程可能面临「精确指令派」与「信任判断力派」的范式分裂。",
+    "opportunities": [
+      "AI Agent 的模型分层调度与 token 路由中间件",
+      "面向企业的 Agent 判断力审计与治理工具",
+      "基于模型自主度的 Agent 效能评估与优化 SaaS"
+    ],
+    "risks": [
+      "过度信任模型判断可能导致代码质量不稳定或关键决策失误",
+      "分层调度中不同模型产出风格不一致，增加 Code Review 与维护成本"
+    ],
+    "signals": [
+      {
+        "source": "Simon Willison 博客",
+        "time": "2026-07-03",
+        "title": "Fable 的判断力：让 AI Agent 自己决定而非硬性规定行为",
+        "summary": "Simon Willison 在 AIE 上与 Claude Code 团队交流后建议，让 Fable 用自己的判断力工作，而非硬性规定行为。例如直接让 Fable 自行决定何时编写测试，比给出具体规则更好。为节省 Fable token，Jesse Vincent 的技巧是告诉 Fable 将较小任务委托给较低功耗模型（Sonnet 用于实现、Haiku 用于机械修改），主循环保留判断、审计和数据合成。Willison 已将提示词存入 Claude Code 记忆文件，Fable token 消耗速度明显下降。",
+        "url": "https://simonwillison.net/2026/Jul/3/judgement"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "date": "2026-07-03",
+    "title": "AI Agent 成本优化三连击：pxpipe 图像压缩、Fable 判断力信任与智能路由——从「省 token」到「省思维」",
+    "coreInsight": "同日三条独立技术路线指向同一目标——降低 AI Agent 运行成本。pxpipe 将文本渲染为图像利用像素定价差异压缩 token、Simon Willison 发现信任 Fable 判断力比写死规则更省 token、Tomer Tunguz 论证智能路由可让 70-80% 流量跑本地模型，三者共同揭示一个范式转移：Agent 成本优化正从「压缩输入」进化到「重新设计认知架构」——让模型自己决定何时需要深度思考、何时可以「偷懒」。",
+    "whyItMatters": "对中国开发者而言，这三条路线各自可直接落地：pxpipe 可 fork 适配国内大模型 API、Fable 判断力技巧可直接写入 CLAUDE.md 或对应配置文件、智能路由架构适合接入国产开源模型（Qwen/LongCat）做本地分流。在 Anthropic Fable 5 出口管制背景下，掌握「用更少 token 做更多事」的方法论比等待模型降价更现实。",
+    "direction": "6-12 个月内，「Agent 成本工程」将成为一个独立的技术品类，出现专门的 token 压缩 SDK、模型路由中间件和「省 token 提示词模板市场」。",
+    "opportunities": [
+      "AI Agent token 压缩中间件/SDK（类似 pxpipe 的本地代理方案）",
+      "模型路由与成本优化 SaaS 平台，对接国内大模型 API 市场",
+      "面向 Claude Code/Cursor 等工具的「省 token 提示词模板库」"
+    ],
+    "risks": [
+      "图像压缩方案有信息损失，对精确数字/ID 敏感场景不适用",
+      "过度信任模型判断力可能导致关键决策被跳过"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门",
+        "time": "7/3",
+        "title": "pxpipe：通过图像化压缩输入token降低Claude Code成本",
+        "summary": "将25k文本token压缩为2.7k图像token，成本降低59-70%",
+        "url": "https://github.com/teamchong/pxpipe"
+      },
+      {
+        "source": "Simon Willison 博客",
+        "time": "7/3",
+        "title": "Fable 的判断力：让 AI Agent 自己决定而非硬性规定行为",
+        "summary": "让Fable自行判断何时写测试、何时委托低功耗模型，token消耗明显下降",
+        "url": "https://simonwillison.net/2026/Jul/3/judgement"
+      },
+      {
+        "source": "Tomer Tunguz 博客",
+        "time": "7/1",
+        "title": "构建AI智能体应优先设计路由",
+        "summary": "正确路由使70-80%流量跑本地免费模型，AI开销降低90%+",
+        "url": "https://www.tomtunguz.com/ai-execution-routing"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "date": "2026-07-03",
+    "title": "全球首例 AI Agent 自主勒索攻击曝光：从漏洞利用到数据库加密全程无人操作，Mythos 安全争议同日升温",
+    "coreInsight": "安全厂商 Sysdig 首次记录到 AI Agent「JADEPUFFER」自动完成完整勒索攻击链——从漏洞利用、凭证收集、横向移动到数据库加密，31 秒内自主修复失败操作，累计执行 600+ 攻击载荷。同日 Ethan Mollick 强调 Mythos 安全威胁并非炒作。这标志着 AI 自主攻击已从理论进入现实：攻击者无需精通技术，只需部署 Agent 即可发动复杂攻击，网络安全攻防不对称性被急剧放大。",
+    "whyItMatters": "中国大量企业使用 Langflow、Nacos 等开源组件，JADEPUFFER 的攻击路径（CVE-2025-3248 + CVE-2021-29441）可直接复现。国内云厂商（阿里云、腾讯云、华为云）的 API 密钥均在攻击收集范围内。这提醒中国安全团队：传统漏洞管理周期（数周至数月）已无法应对 AI Agent 的自动化攻击速度（31 秒自修复）。",
+    "direction": "12 个月内将出现 AI Agent 攻击即服务（AaaS）地下市场；AI 原生安全产品（AI Agent 检测、AI 攻击蜜罐）将成为融资热点。",
+    "opportunities": [
+      "AI Agent 攻击行为检测与防御平台",
+      "面向中小企业的「AI 攻击应急响应」SaaS 服务",
+      "AI 原生蜜罐与欺骗防御系统，针对 Agent 自主行为特征设计"
+    ],
+    "risks": [
+      "AI Agent 攻击速度远超人类响应能力，传统 SOC 流程失效",
+      "开源组件漏洞 + AI Agent 组合形成新型攻击面，现有防护工具覆盖不足"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3",
+        "title": "全球首例 AI Agent 勒索攻击曝光，从漏洞利用到数据库加密全程自主完成",
+        "summary": "AI自主利用Langflow漏洞，收集API密钥和云凭证，加密1342条数据",
+        "url": "https://www.ithome.com/0/972/424.htm"
+      },
+      {
+        "source": "X：Ethan Mollick",
+        "time": "7/2",
+        "title": "关于Mythos和网络安全的讨论并非炒作",
+        "summary": "使用Fable进行自主工作的人已认识到AI安全威胁的真实性",
+        "url": "https://x.com/emollick/status/2072778376494895139"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "date": "2026-07-03",
+    "title": "视频 AI 实时交互三线突破：Vidu S1 25FPS 实时通话 + Wan Video 音乐伴舞 + LLM 视频理解开源",
+    "coreInsight": "视频 AI 同日三条路径各取一端：Vidu S1 追求「实时交互」——25FPS 生成速度下实现语音控制视频走向，一张照片即可创建角色；Wan Video 切入「消费娱乐」——音乐伴舞将 AI 生成从工具变成社交内容引擎；claude-real-video 打通「LLM 视觉理解」——让任意大模型基于关键帧而非字幕理解视频。三者共同指向：视频 AI 正从「生成」走向「交互」，从「演示」走向「产品」。",
+    "whyItMatters": "中国在视频 AI 领域具有场景优势：抖音/快手等短视频生态为 AI 视频提供了天然分发渠道。Vidu S1 的实时交互能力可赋能直播电商、在线教育、虚拟陪伴等高频场景；Wan Video 的音乐伴舞切中短视频平台最核心的内容消费需求。中国创业者应关注「实时视频 AI + 垂直场景」的落地机会，而非单纯追求生成质量。",
+    "direction": "6-12 个月内，实时视频 AI 将催生「AI 直播助手」「AI 虚拟主播」「AI 视频客服」等新品类，延迟从秒级向毫秒级演进。",
+    "opportunities": [
+      "基于实时视频 AI 的直播电商互动工具",
+      "AI 虚拟主播/虚拟陪伴 SaaS 平台",
+      "面向 LLM 的视频理解 API 服务"
+    ],
+    "risks": [
+      "实时视频生成算力成本高，单位经济效益待验证",
+      "AI 虚拟角色可能被滥用于诈骗/虚假直播"
+    ],
+    "signals": [
+      {
+        "source": "公众号：生数科技",
+        "time": "7/3",
+        "title": "生数科技发布 Vidu S1，推动视频生成迈向实时交互新时代",
+        "summary": "25FPS实时视频通话+语音控制，一张照片创建角色，无限时长互动",
+        "url": "https://mp.weixin.qq.com/s/RuukpnoOA2tI0ERCNrLgtQ"
+      },
+      {
+        "source": "X：阿里云",
+        "time": "7/3",
+        "title": "Wan Video 推出音乐伴舞新功能",
+        "summary": "上传角色+歌曲生成同步舞蹈视频，支持街舞/K-Pop/中国古典舞",
+        "url": "https://x.com/alibaba_cloud/status/2072967570441834771"
+      },
+      {
+        "source": "Hacker News 热门",
+        "time": "7/3",
+        "title": "claude-real-video：让任何LLM都能观看视频",
+        "summary": "场景检测提取关键帧+Whisper转录，本地处理不上传云端",
+        "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "date": "2026-07-03",
+    "title": "中国 C 端 AI 产品集中爆发：京东 JoyAI 上线 UGC 数字人 + 蚂蚁阿宝开放无邀请码公测——AI 从工具走向「角色化伴侣」",
+    "coreInsight": "京东与蚂蚁同日推进 C 端 AI 产品，但切入点截然不同：JoyAI 走「情感陪伴」路线，用 UGC 数字人 + 全双工对话打造虚拟玩伴；蚂蚁阿宝走「超级助手」路线，以对话方式调用支付宝生态内所有小程序和服务。这代表了中国 C 端 AI 的两条主流路径——「造人」与「办事」。前者争夺用户时间，后者争夺交易入口。两者共同指向：AI 不再是一个工具按钮，而是具备人格特征的交互层。",
+    "whyItMatters": "对中国创业者而言，这两条路径分别对应不同的变现模式：数字人路线适合内容/IP/社交创业者，变现靠订阅和虚拟商品；超级助手路线适合交易/服务类公司，变现靠佣金和引流。关键启示是：C 端 AI 产品必须与已有生态深度绑定（JoyAI 依托京东电商生态，阿宝依托支付宝金融生态），纯独立 AI App 的获客成本已被巨头拉高到不可持续。",
+    "direction": "6-12 个月内，中国互联网巨头将全面推出 AI 人格化产品，美团/拼多多/抖音将跟进「AI 助手+交易」模式。",
+    "opportunities": [
+      "为零售/金融企业定制 AI 数字人解决方案",
+      "面向中小商家的「AI 导购」SaaS 工具",
+      "AI 角色语音/形象资产交易平台"
+    ],
+    "risks": [
+      "数字人/助手收集大量用户隐私数据，合规风险高",
+      "AI 人格化产品可能加剧用户孤独感和社会隔离"
+    ],
+    "signals": [
+      {
+        "source": "公众号：京东JoyAI",
+        "time": "7/3",
+        "title": "JoyAI App 上线 UGC 数字人功能，用户可捏出专属虚拟玩伴",
+        "summary": "上传一张照片生成数字分身，支持全双工对话+点外卖/金融咨询",
+        "url": "https://mp.weixin.qq.com/s/XfpxdblzNWa5HxahRoT9pg"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/2",
+        "title": "AI 版支付宝开放公测，蚂蚁阿宝无需邀请码即可体验",
+        "summary": "对话方式安排办事，自动匹配小程序和服务入口",
+        "url": "https://www.ithome.com/0/971/469.htm"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "date": "2026-07-03",
+    "title": "中国 AI 监管进入行政法规层面：网信办首设「智能信息服务」专章，要求公示训练数据来源与标识合成内容",
+    "coreInsight": "网信办在《互联网信息服务管理办法》修订草案中新增「智能信息服务」专章——这是中国首次在行政法规层面为 AI 服务设立系统性规范框架。草案要求公示技术原理和训练数据来源、对生成合成内容进行标识、禁止强制用户使用智能服务。从 2023 年《生成式 AI 管理办法》的「暂行规定」到如今的「行政法规」，中国 AI 监管正从柔性引导走向硬性约束。",
+    "whyItMatters": "对中国 AI 创业公司而言，训练数据来源公示要求将迫使企业重新审视数据合规——使用爬虫数据训练模型的法律风险急剧升高。「禁止强制用户使用智能服务」则限制了「AI 优先」产品策略的激进程度。但另一方面，明确的规则也为合规企业提供了确定性，降低了政策不确定性带来的投资风险。意见反馈截止 8 月 2 日，是参与规则制定的最后窗口。",
+    "direction": "2026 年底前将正式颁布，2027 年上半年进入执法阶段。AI 数据合规审计将成为新的企业服务品类。",
+    "opportunities": [
+      "AI 训练数据合规审计与溯源服务",
+      "AI 生成内容标识技术方案（数字水印/区块链存证）",
+      "面向 AI 企业的监管合规 SaaS 平台"
+    ],
+    "risks": [
+      "监管细则可能过度限制创新，中小 AI 企业合规成本过高",
+      "数据来源公示要求可能暴露企业核心数据资产"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3",
+        "title": "国家网信办就《互联网信息服务管理办法》再次征求意见",
+        "summary": "首设智能信息服务专章，要求公示技术原理+训练数据来源+标识合成内容",
+        "url": "https://www.ithome.com/0/972/341.htm"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "date": "2026-07-03",
+    "title": "AI 开发工具链加速覆盖全场景：Safari MCP 智能体调试 + ForgeTrain 自动训练 + Page Agent DOM 操控 + 智谱 ZCode 自建 IDE",
+    "coreInsight": "AI 开发工具正从「编码辅助」进化到「全流程自动化」：Safari MCP 让 AI 直接调试浏览器（DOM/网络/截图），Page Agent 让 AI 操控网页 DOM 而不依赖视觉模型，ForgeTrain 展示 AI 可以为自己写训练框架并在 8 小时内追平人类工程标杆，智谱 ZCode 则试图用垂直 IDE 绑定开发者生态。四者共同描绘一个未来：AI 不仅是编码助手，而是软件工程全链路的自主执行者。",
+    "whyItMatters": "对中国开发者而言，这条工具链的每个环节都有国产替代机会：Safari MCP 的思路可复制到国产浏览器（QQ/360）、Page Agent 的 DOM 操控范式适合嵌入国内企业后台系统、ForgeTrain 证明「AI 写 AI 训练代码」已可行——这对受限于芯片制裁的中国 AI 产业尤为重要：用 AI 优化国产芯片上的训练效率可能是破局关键。",
+    "direction": "12 个月内，AI 开发工具将形成「模型+IDE+MCP+Agent」四件套标准栈，国产 IDE 将密集集成 AI 调试和自动化能力。",
+    "opportunities": [
+      "面向国产芯片（昇腾/寒武纪）的 AI 自动训练优化工具",
+      "基于 MCP 协议的国产浏览器智能体调试插件",
+      "面向中小企业的「AI 全栈开发工作台」SaaS"
+    ],
+    "risks": [
+      "AI 自动生成的训练代码在国产芯片上可能存在兼容性问题",
+      "MCP 协议安全性尚未充分验证，Agent 可获取浏览器敏感数据"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门",
+        "time": "7/3",
+        "title": "面向 Web 开发者的 Safari MCP 服务器",
+        "summary": "Safari推出MCP服务器，AI可直接获取DOM/网络请求/截图调试",
+        "url": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers"
+      },
+      {
+        "source": "公众号：面壁智能",
+        "time": "7/3",
+        "title": "面壁智能发布AI全自动预训练框架ForgeTrain，8小时追平Megatron-LM",
+        "summary": "全球首个完全由AI编写的训练框架，8小时追平、2天反超Megatron-LM",
+        "url": "https://mp.weixin.qq.com/s/JVBbqU1O967ktzfEPuDERQ"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "7/2",
+        "title": "阿里巴巴发布 Page Agent：开源JS库实现网页DOM自然语言操控",
+        "summary": "不依赖截图，将DOM压缩为FlatDomTree让纯文本模型精准操作",
+        "url": "https://www.marktechpost.com/2026/07/02/meet-alibabas-page-agent-a-javascript-in-page-gui-agent-that-controls-web-interfaces-with-natural-language-through-the-dom"
+      },
+      {
+        "source": "X：智谱",
+        "time": "7/1",
+        "title": "智谱推出GLM-5.2官方开发环境ZCode",
+        "summary": "支持BYOK的本地IDE，GLM Coding Plan用户获1.5倍配额",
+        "url": "https://x.com/Zai_org/status/2072349453361557898"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "date": "2026-07-03",
+    "title": "AI Agent 工程化方法论集中沉淀：短绳法 + RLI 六倍增速 + 千问「多快好省」+ Video-use + Loop Engineering + Fable 5 自主 SEO",
+    "coreInsight": "多条独立实践同日指向同一结论——AI Agent 的有效使用需要一套工程方法论而非简单对话。短绳法强调人必须全程参与、每次审查 diff；千问「多快好省」将 Token 成本压至海外 1/10；SGLang 的 Loop Engineering 将性能优化分解为基准→分析→补丁→验证闭环；video-use 展示复杂的视频剪辑也可通过 Skill 文件让 LLM 可靠执行。Fable 5 自主 SEO 则展示了激进自动化能做到什么——22 个 Agent 独立完成从调研到工单提交的全流程。共同信号：Agent 工程正从「提示词技巧」升级为「系统化方法」。",
+    "whyItMatters": "中国 AI 创业团队面临的核心挑战不是「模型不够强」，而是「不知道怎么用好现有模型」。千问团队的数据极具说服力——同样任务 Token 消耗仅为海外 1/10，这意味着同等预算下中国团队可以多跑 10 倍任务。短绳法、Loop Engineering 等方法论可直接移植到国产模型（Qwen/LongCat）工作流中。关键的工程洞察是：Agent 的瓶颈不是模型能力，而是任务拆解、审查流程和反馈闭环的设计。",
+    "direction": "6-12 个月内，「Agent 工程」将成为一个独立工种，出现专门的 Agent 工作流设计工具和最佳实践知识库。",
+    "opportunities": [
+      "Agent 工作流设计与管理平台",
+      "面向中国开发者的「Agent 工程最佳实践」培训/课程",
+      "跨模型 Agent Skill 市场（可复用 Skill 的交易平台）"
+    ],
+    "risks": [
+      "过度自动化导致代码质量失控，Fable 5 自主 SEO 案例中仍出现需要人工介入的安全漏洞",
+      "方法论快速迭代导致团队学习成本高"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门",
+        "time": "7/3",
+        "title": "《Fable》通关指南：短绳AI编程法",
+        "summary": "开发者全程参与+每次变更前审查diff+拒绝不想要更改+双PR审查",
+        "url": "https://blog.okturtles.org/2026/07/short-leash-ai-method"
+      },
+      {
+        "source": "The Decoder",
+        "time": "7/2",
+        "title": "Fable 5 在 RLI 基准中达成 16.1% 自动化率",
+        "summary": "八个月提升六倍，超Opus 4.8(8.3%)和GPT-5.5(6.3%)",
+        "url": "https://the-decoder.com/ai-agents-can-now-complete-16-percent-of-freelance-jobs-at-pro-quality-up-from-2-5-percent-eight-months-ago"
+      },
+      {
+        "source": "公众号：千问APP",
+        "time": "7/2",
+        "title": "千问团队朱达：C端Agent Harness的多快好省工程哲学",
+        "summary": "Token消耗仅为海外产品1/10，从被动响应转向主动服务",
+        "url": "https://mp.weixin.qq.com/s/l70iUM0bIpG9EdV9Px7QPQ"
+      },
+      {
+        "source": "X：邵猛",
+        "time": "7/2",
+        "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+        "summary": "LLM通过ElevenLabs转写+timeline帧图+ffmpeg渲染完成视频剪辑",
+        "url": "https://x.com/shao__meng/status/2072644710523691110"
+      },
+      {
+        "source": "LMSYS Blog",
+        "time": "7/1",
+        "title": "Agent辅助的SGLang开发：初步探索",
+        "summary": "将GPU内核/扩散管道等工作流编码为可执行SKILL.md+Loop Engineering",
+        "url": "https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "7/3",
+        "title": "Claude Fable 5 自主优化 AIHOT 网站 SEO/GEO 全记录",
+        "summary": "22个Agent自主调研40分钟，发现异常、规划CDN、提交工单、修复安全漏洞",
+        "url": "https://mp.weixin.qq.com/s/L6R_SPWlOBv6dI0wWWHQrg"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "date": "2026-07-03",
+    "title": "Anthropic 信任危机三重奏：隐写术识别中国用户 + 五角大楼军事护栏分裂 + Claude 嵌入美军误炸伊朗学校",
+    "coreInsight": "Anthropic 同日陷入三重信任危机：社区逆向发现 Claude Code 通过隐写术识别中国用户并秘密标记请求；五角大楼将 Anthropic 列为供应链风险——因拒绝取消军事用途护栏；更早曝光的 Claude 嵌入美军 Palantir 系统首日建议约 1000 个打击目标但情报标记未送达致 120 名儿童死亡。三条线索交汇——Anthropic 在「安全」与「控制」之间摇摆：对中国用户不信任、对美国军方不配合、对武器化后果无法控制。安全理念与实际行为的裂缝正在吞噬其道德资本。",
+    "whyItMatters": "对中国的直接冲击：Claude Code 隐写术行为意味着 Anthropic 已将中国用户视为潜在对手而非服务对象。使用 Claude Code 的中国开发者应评估此行为的合规风险——Anthropic 可能将中国用户的行为数据标记后传输。更深远的信号：AI 公司正从「技术中立的工具提供者」滑向「地缘政治选边站」。中国必须加速国产替代（如 LongCat/Qwen + 国产 IDE）降低对 Anthropic 生态的依赖。",
+    "direction": "AI 工具将出现明确的「地缘政治分裂」——中国和西方各自形成独立 AI 开发生态，互不信任成为默认状态。",
+    "opportunities": [
+      "面向中国开发者的国产 AI 编码工具（替代 Claude Code/Cursor）",
+      "AI 工具安全审计与合规检测服务",
+      "模型使用行为的隐私保护中间件"
+    ],
+    "risks": [
+      "Anthropic 限制可能扩展到更多中国相关模型和服务",
+      "AI 地缘政治分裂导致全球 AI 发展降速和质量下降"
+    ],
+    "signals": [
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "7/1",
+        "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+        "summary": "读取时区和环境变量与147个中国域名比对，修改提示词字符标记传回服务器",
+        "url": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw"
+      },
+      {
+        "source": "X：Kim",
+        "time": "7/2",
+        "title": "Anthropic与五角大楼控权之争：Claude军事用途护栏分歧",
+        "summary": "Anthropic要求禁止全自主武器被拒，五角大楼将其列为供应链风险",
+        "url": "https://x.com/kimmonismus/status/2072718147279335507"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/29",
+        "title": "美军用AI选目标却误炸伊朗学校，Anthropic Claude嵌入Palantir首日建议约1000目标",
+        "summary": "Claude嵌入Maven系统建议目标，情报标记未送达指挥官致120名儿童死亡",
+        "url": "https://the-decoder.com/the-us-military-used-ai-to-pick-thousands-of-targets-but-missed-a-note-saying-one-was-a-school"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "date": "2026-07-03",
+    "title": "AI 基建军备竞赛白热化：微软 25 亿美元驻场 + AWS 10 亿驻场 + Meta 算力变现 + 黑石 300 亿日本 + 谷歌能耗暴增 37%",
+    "coreInsight": "AI 竞争已从「模型能力」全面升级到「基础设施+交付能力」的综合战。微软和 AWS 双双组建工程师驻场部队（6000 人 vs 数千人）——从卖 API 转向卖「组织变革服务」；Meta 将过剩算力包装为 Meta Compute 对外出售；黑石联合 Apollo、博通成立 AI XPV 平台目标 20GW 算力；谷歌能耗暴增 37% 揭示 AI 基建的环境代价。这不再是「谁模型更强」的比拼，而是「谁能把 AI 真正装进客户业务」的交付战。",
+    "whyItMatters": "对中国意味着两层压力：一是中国 AI 基建规模（五万卡集群虽已建成，但总量与美国差距仍在拉大）；二是驻场交付模式对国内云厂商（阿里云/华为云/腾讯云）构成竞争——如果微软/AWS 的驻场工程师模式在中国企业出海场景中形成标准，国内云厂商将被排除在外。但黑石在日本而非中国建数据中心，也留下了亚太市场的空白。",
+    "direction": "12-18 个月内，中国云厂商将跟进「AI 驻场交付」模式；AI 数据中心绿色化（液冷/核能）成为基建投资新主题。",
+    "opportunities": [
+      "面向中国企业的 AI 驻场实施与培训服务",
+      "AI 数据中心节能技术（液冷方案/智能调度）",
+      "亚太区 AI 算力租赁平台"
+    ],
+    "risks": [
+      "AI 基建投资过热可能导致产能过剩",
+      "谷歌级能耗增速不可持续，可能触发更严格的碳排放监管"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "7/2",
+        "title": "Microsoft 成立 Frontier Company，斥资 25 亿美元派驻 6000 名 AI 工程师",
+        "summary": "将6000名工程师派驻企业客户现场共同设计部署AI系统",
+        "url": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/1",
+        "title": "亚马逊 AWS 砸 10 亿美元，派遣工程师进驻客户公司",
+        "summary": "每批5-6组工程师驻场45天协助落地AI应用",
+        "url": "https://www.ithome.com/0/971/071.htm"
+      },
+      {
+        "source": "TechCrunch",
+        "time": "7/1",
+        "title": "Meta效仿SpaceX，将过剩AI算力变现",
+        "summary": "Meta Compute计划出售AI算力，承诺1829亿美元建设AI基础设施",
+        "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "黑石未来3~5年拟投300亿美元在日本建AI数据中心",
+        "summary": "联合成立AI XPV平台，目标2028年向OpenAI等提供超20GW算力",
+        "url": "https://www.ithome.com/0/970/583.htm"
+      },
+      {
+        "source": "Ars Technica",
+        "time": "7/2",
+        "title": "谷歌AI建设导致2025年用电量增长37%",
+        "summary": "数据中心年消耗超4200万兆瓦时，超新西兰等国总量",
+        "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "date": "2026-07-03",
+    "title": "中国 AI 商业化集中爆发：可灵 180 亿美元估值 + 宇树科创板 IPO + 美团万亿参数大模型 + 天工群聊智能体",
+    "coreInsight": "中国 AI 企业在资本、产品、技术三线同步突破：可灵以 180 亿美元估值完成 20 亿美元融资并计划赴港上市，宇树科技获批科创板 IPO——中国 AI 独角兽正密集登陆公开市场；美团 LongCat-2.0 在纯国产算力集群上训练 1.6T 参数模型并在 OpenRouter 月调用量冲入全球前三；天工 Skywork Tags 将 AI 智能体直接接入企业群聊。中国 AI 正从「追赶」进入「并行竞争」阶段——至少在企业级和消费级应用层面。",
+    "whyItMatters": "对于中国创业者和投资者，两个关键信号：一是 AI IPO 窗口已打开，可灵和宇树将测试公开市场对中国 AI 资产的定价能力；二是纯国产算力训练万亿参数模型的技术路线被 LongCat-2.0 验证可行——这直接缓解了对芯片制裁的担忧。天工的「群聊 Agent」模式也为中国 SaaS 产品提供了差异化路径：利用微信/飞书/钉钉的社交基础设施做 AI 分发，而非另起炉灶。",
+    "direction": "2026 年下半年将迎来中国 AI IPO 潮，DeepSeek、MiniMax 等可能跟进；国产算力训练的大模型将加速进入生产环境。",
+    "opportunities": [
+      "AI 企业上市前的财务审计与合规咨询服务",
+      "基于国产算力集群的 AI 模型训练托管服务",
+      "面向企业微信/飞书/钉钉的 AI Agent 插件生态"
+    ],
+    "risks": [
+      "AI IPO 估值可能虚高，上市后破发风险",
+      "国产算力集群的稳定性和效率仍需大规模生产验证"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/2",
+        "title": "快手可灵AI获初始投资者20.28亿美元注资，投后估值180亿美元",
+        "summary": "21名投资者20.28亿美元注资，预计12个月内赴港上市",
+        "url": "https://www.ithome.com/0/971/954.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/2",
+        "title": "证监会同意宇树科技科创板 IPO 注册申请",
+        "summary": "宇树科技科创板上市获批，四足机器人全球销量领先",
+        "url": "https://www.ithome.com/0/971/790.htm"
+      },
+      {
+        "source": "公众号：龙猫LongCat",
+        "time": "7/1",
+        "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+        "summary": "1.6T参数，五万卡国产集群训练，月调用量OpenRouter全球前三",
+        "url": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow"
+      },
+      {
+        "source": "公众号：昆仑万维",
+        "time": "7/2",
+        "title": "昆仑万维天工3.2发布Skywork Tags，AI智能体加入工作群聊",
+        "summary": "AI以团队成员身份接入Slack/飞书/钉钉等，共享版反超个人版",
+        "url": "https://mp.weixin.qq.com/s/OqL6ID-mAel8XN-slYgXOA"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "date": "2026-07-03",
+    "title": "企业 AI 成本失控警报：花旗 Adobe 限制旗舰模型使用，Claude Enterprise 同日推出成本管控——AI 消费从「无限畅饮」进入「精打细算」",
+    "coreInsight": "AI 订阅模式的隐性成本正在引爆：Atlassian 月度 AI 支出从 500 万飙至 1500 万美元，花旗因 GitHub 改为按量计费直接禁用 Claude Opus 和 GPT-5.5，Adobe 终止无限制使用协议。同日 Claude Enterprise 紧急推出按群组/用户分析用量、预算告警等成本管控功能——这个时间上的巧合揭示了 AI 厂商与客户之间的张力：厂商想卖更多 token，客户想控制账单。",
+    "whyItMatters": "这一趋势对中国 AI 市场是重大利好信号——国产模型（Qwen/LongCat/Kimi）的定价本就远低于 Anthropic/OpenAI。花旗 Adobe 的「降级使用」策略将加速企业从西方旗舰模型向国产高性价比模型迁移。对中国 AI 创业者而言，「帮你管 AI 预算」本身就是一个新兴 SaaS 品类——跨模型平台的成本分析和优化工具。",
+    "direction": "6-12 个月内，AI 成本管理（FinOps for AI）将成为独立的 SaaS 品类；按量计费模式将从模型 API 扩展到 AI 编码工具。",
+    "opportunities": [
+      "跨平台 AI 成本分析与优化 SaaS（AI FinOps）",
+      "面向企业的「模型降级策略」咨询与工具",
+      "国产模型 API 聚合平台，以成本优势吸引企业客户"
+    ],
+    "risks": [
+      "企业加速从旗舰模型切换到低价模型可能导致 AI 产出质量下降",
+      "按量计费模式下开发者可能因成本焦虑而减少 AI 使用"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/2",
+        "title": "花旗、Adobe等企业限制员工使用AI旗舰模型以控制成本",
+        "summary": "Atlassian AI月支出从500万飙至1500万美元，花旗禁用Opus和GPT-5.5",
+        "url": "https://www.ithome.com/0/971/937.htm"
+      },
+      {
+        "source": "Claude Blog",
+        "time": "7/1",
+        "title": "Claude Enterprise 新增用量与成本分析及支出管控功能",
+        "summary": "按群组分析用量成本、75%/90%预算告警、Admin API自动审批",
+        "url": "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "date": "2026-07-03",
+    "title": "模型层多线并进：GPT-5.6 Pro 三变体打破单一旗舰策略 + Sonnet 5 降本增效 + Leanstral 形式化验证 + Nemotron 扩散 LLM + Qwen 3.6 本地化",
+    "coreInsight": "模型层同日出现五个值得关注的趋势：OpenAI 首次在论文中列出三个 Pro 变体（Luna/Terra/Sol），暗示将产品分层而非依赖单一旗舰；Anthropic 用 Sonnet 5 证明「降级模型也能接近旗舰性能」——性能接近 Opus 4.8 但成本大降；Mistral 的 Leanstral 1.5 在数学证明上达到 100% 饱和——形式化验证与大模型的融合正在加速；NVIDIA 的 Nemotron 用扩散架构替代自回归，吞吐量提升 2.42 倍；Qwen 3.6 27B 在 MacBook 上达 30 tokens/s——本地 AI 的实用化已至临界点。",
+    "whyItMatters": "对中国 AI 产业的关键启示：模型竞争正从「最大最强」转向「分层覆盖+场景适配」。Qwen 3.6 27B 的本地部署能力为独立开发者和中小企业提供了不依赖云 API 的路径——这对数据敏感行业（金融/政务）尤为重要。Nemotron 的扩散架构创新提示：在芯片受限条件下，架构创新（而非堆参数）可能是中国模型弯道超车的路径。Sonnet 5 的「降本不减智」策略也值得国产模型厂商借鉴。",
+    "direction": "12 个月内，模型市场将形成「超大规模云端旗舰 + 中等规模企业级 + 小规模本地部署」三层格局，国产模型将在后两层建立优势。",
+    "opportunities": [
+      "基于 Qwen 3.6 的本地化 AI 应用开发",
+      "将 Nemotron 扩散架构适配到国产芯片",
+      "模型评测与选型咨询服务"
+    ],
+    "risks": [
+      "模型分层策略可能导致用户困惑（不知道该用哪个）",
+      "扩散语言模型在特定任务上可能不如自回归模型"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "7/1",
+        "title": "OpenAI论文揭示GPT-5.6三个Pro变体，打破单一顶级策略",
+        "summary": "Luna Pro/Terra Pro/Sol Pro，提升逐级递减，Sol Pro达31.5%",
+        "url": "https://the-decoder.com/openai-paper-reveals-three-gpt-5-6-pro-models-breaking-with-single-top-tier-strategy"
+      },
+      {
+        "source": "Anthropic Newsroom",
+        "time": "6/29",
+        "title": "Claude Sonnet 5 发布",
+        "summary": "性能接近Opus 4.8但定价更低，具备自主运行能力",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5"
+      },
+      {
+        "source": "Mistral AI",
+        "time": "7/1",
+        "title": "Leanstral 1.5：开源形式化验证模型，119B参数仅6B活跃",
+        "summary": "miniF2F达100%饱和，在57个开源仓库发现5个未知bug",
+        "url": "https://mistral.ai/news/leanstral-1-5"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "7/1",
+        "title": "NVIDIA 发布 Nemotron-Labs-TwoTower 开放权重扩散语言模型",
+        "summary": "双塔架构，生成吞吐量提升2.42倍，保留98.7%AR基线质量",
+        "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower"
+      },
+      {
+        "source": "Hacker News",
+        "time": "6/29",
+        "title": "Qwen 3.6 27B 是本地开发的理想选择",
+        "summary": "Macbook M5达30 tokens/s，首个真正具备通用智能的本地模型",
+        "url": "https://quesma.com/blog/qwen-36-is-awesome"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "date": "2026-07-03",
+    "title": "语音 AI 赛道升温 + 开源模型进驻 Copilot：xAI Voice Agent Builder 无代码上线，Kimi K2.7 成为 Copilot 首个开源模型",
+    "coreInsight": "xAI Voice Agent Builder 将语音智能体的创建门槛降至「2 分钟无代码」——集成电话、知识检索、MCP、Guardrails 等完整生产级能力，定价 $0.05/分钟音频。Kimi K2.7 成为 GitHub Copilot 模型选择器中首个开源权重模型——这一里程碑意味着微软承认开源模型在编程场景中的竞争力已足以与闭源模型并列提供。两条路线各走一端：xAI 推「低门槛商业化」，Kimi 推「开源生态嵌入」。",
+    "whyItMatters": "对中国开发者：Kimi K2.7 进驻 Copilot 是国产开源模型的巨大突破——首次进入全球最大的开发者 AI 工具平台作为正式选项。这意味着国产模型在编程能力上已获得国际认可。xAI Voice Agent Builder 则提示中国创业者：语音 AI 的产品化正在加速，国内类似平台可能在 6 个月内出现。关键是：谁能在微信/飞书生态中做「中国版 Voice Agent Builder」？",
+    "direction": "6-12 个月内，国产开源模型将加速进驻全球开发者工具生态；语音 AI 平台化将从海外扩展到中国市场。",
+    "opportunities": [
+      "基于国产语音模型的无代码 AI 呼叫中心平台",
+      "面向 GitHub Copilot 的国产模型适配与优化服务",
+      "企业级语音 Agent 定制开发服务"
+    ],
+    "risks": [
+      "语音 AI 可能被滥用于诈骗电话/深度伪造通话",
+      "Kimi K2.7 在 Copilot 上的用量计费可能对企业成本产生意外冲击"
+    ],
+    "signals": [
+      {
+        "source": "xAI News",
+        "time": "7/1",
+        "title": "xAI 发布 Voice Agent Builder 测试版",
+        "summary": "无代码平台2分钟创建语音智能体，每分钟$0.05+80+种语音",
+        "url": "https://x.ai/news/grok-voice-agent-builder"
+      },
+      {
+        "source": "Hacker News",
+        "time": "7/2",
+        "title": "Kimi K2.7 Code 已在 GitHub Copilot 上正式发布",
+        "summary": "首个进驻Copilot的开源权重模型，GitHub托管于Azure按量计费",
+        "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "date": "2026-07-03",
+    "title": "科学 AI 从预测走向验证闭环：阿里发现 4 种超导材料并实验证实 + Prover-Verifier 攻克 9 个数学难题 + GeneBench-Pro + Claude Science + TabFM",
+    "coreInsight": "科学 AI 同日五线突破，共同标志着一个转折点——AI 不再只是「预测可能有用」，而是进入「预测→实验验证→闭环」的完整科学发现流程。阿里达摩院 Elements Claw 用 28 GPU 小时筛选 240 万种晶体结构，预测的 4 种超导材料全部通过实验验证——这是 AI for Science 从论文走向实验室的关键证据。Prover-Verifier 循环攻克 9 个理论计算机科学开放问题，证明 AI 可以参与理论科学的突破性发现。OpenAI 的 GeneBench-Pro 和 Anthropic 的 Claude Science 则试图将科研 AI 基础设施化，Google 的 TabFM 让表格数据建模进入「零样本」时代。",
+    "whyItMatters": "对中国的战略意义：Elements Claw 证明中国在 AI+材料科学领域已具备从预测到实验验证的完整能力——这是中美科技竞争中为数不多中国领先的 AI for Science 案例。Claude Science 的科研工作台模式值得借鉴——如果中国能推出基于国产模型的「科学 AI 工作台」，将极大降低中国科研人员对海外 AI 工具的依赖。TabFM 的思路对数据密集型行业（金融风控/医疗诊断）有直接商业价值。",
+    "direction": "12-18 个月内，AI for Science 将从单个案例展示进入「科研基础设施」阶段，国家级 AI 科学平台将成为新基建。",
+    "opportunities": [
+      "面向材料/药物研发的 AI 科学发现平台",
+      "基于 TabFM 的企业数据分析工具",
+      "国产 AI 科研工作台（替代 Claude Science）"
+    ],
+    "risks": [
+      "AI 科学发现的实验验证周期长、成本高，产学研转化率可能低于预期",
+      "AI 在数学证明中的正确性仍需人类数学家逐行审查"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/3",
+        "title": "阿里达摩院发布超导材料发现AI智能体Elements Claw",
+        "summary": "28GPU小时筛选240万晶体结构，4种新材料全部实验验证",
+        "url": "https://www.ithome.com/0/972/089.htm"
+      },
+      {
+        "source": "X：AI Safety Memes",
+        "time": "6/30",
+        "title": "AI 用 prover-verifier LLM 循环攻克 9 个未解数学难题",
+        "summary": "哥伦比亚大学用prover-verifier循环解决9个理论计算机科学开放问题",
+        "url": "https://x.com/AISafetyMemes/status/2072085914558558402"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "6/30",
+        "title": "OpenAI 发布 GeneBench-Pro：计算生物学研究级基准测试",
+        "summary": "129个问题覆盖10领域，要求模型探索数据+选择分析路径+迭代实验",
+        "url": "https://openai.com/index/introducing-genebench-pro"
+      },
+      {
+        "source": "Anthropic Newsroom",
+        "time": "6/29",
+        "title": "Claude Science 科研工作台正式上线",
+        "summary": "超60项预配置技能覆盖基因组学/蛋白质组学，内置reviewer agent",
+        "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+      },
+      {
+        "source": "Google Research",
+        "time": "6/29",
+        "title": "Google Research 推出 TabFM：用于表格数据的零样本基础模型",
+        "summary": "无需训练/超参数调优/特征工程，单次前向传播即可预测",
+        "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "date": "2026-07-03",
+    "title": "AI 部署进入「驻场交付」时代：微软 25 亿 + AWS 10 亿工程师驻场，Google Cloud IDE 集成，Cloudflare 流量管控",
+    "coreInsight": "云厂商的 AI 竞争正从「卖 API」升级为「卖组织变革」：微软 Frontier Company 将 6000 人派驻客户现场，AWS 以 10 亿美元组建数千人驻场团队——两家都在复制 Palantir 和 Anthropic 已被验证的「嵌入客户」模式。这背后的逻辑是：企业 AI 落地的主要瓶颈不是模型能力，而是组织流程重构和员工技能升级。Google Cloud 则走工具路线——在 VS Code 中集成云端 Jupyter 环境降低开发者的 AI 门槛。Cloudflare 从网络层切入，提供 AI 爬虫的精细化管控。",
+    "whyItMatters": "对中国云厂商（阿里云/华为云/腾讯云）的直接挑战：如果微软/AWS 的驻场模式在跨国企业的中国分支或中国企业出海场景中形成标准，国内云厂商的「自助式 AI 服务」模式将被边缘化。但中国市场的特殊性（数据合规、信创要求）决定了国外驻场团队无法完全替代本土服务——这为国内云厂商提供了一个窗口期来建立自己的「AI 驻场交付」能力。",
+    "direction": "6-12 个月内，中国云厂商将推出类似驻场 AI 交付服务；AI 实施顾问将成为热门职业。",
+    "opportunities": [
+      "AI 驻场实施与变革管理咨询",
+      "面向中国出海企业的海外 AI 部署合规服务",
+      "AI 爬虫管理与网站流量优化工具"
+    ],
+    "risks": [
+      "驻场模式成本高，规模化后的利润率堪忧",
+      "云厂商的驻场工程师可能成为变相的企业数据收集渠道"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "7/2",
+        "title": "Microsoft 成立 Frontier Company",
+        "summary": "25亿美元将6000名AI工程师派驻企业客户现场",
+        "url": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/1",
+        "title": "亚马逊 AWS 砸 10 亿美元派遣工程师进驻客户公司",
+        "summary": "5-6组工程师驻场45天，首批客户含NBA与理光",
+        "url": "https://www.ithome.com/0/971/071.htm"
+      },
+      {
+        "source": "Google Developers Blog",
+        "time": "7/1",
+        "title": "Google Cloud Workbench Notebooks 扩展发布",
+        "summary": "VS Code中直接连接云端Jupyter环境，无需切换上下文",
+        "url": "https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available"
+      },
+      {
+        "source": "Cloudflare Blog",
+        "time": "7/1",
+        "title": "Cloudflare 推出全新AI流量管理选项",
+        "summary": "区分搜索/智能体/训练爬虫，保护广告页面",
+        "url": "https://blog.cloudflare.com/content-independence-day-ai-options"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "date": "2026-07-03",
+    "title": "物理世界 AI 遭遇信任拷问：特斯拉 FSD 致命车祸 + Cybercab 上路 + Siri AI 欧盟受阻 + OpenAI 向政府递橄榄枝",
+    "coreInsight": "AI 向物理世界的渗透在同一天遭遇「冰火两重天」：特斯拉 Cybercab 在奥斯汀启动无方向盘的量产路测——全无人驾驶的商业化只差临门一脚；但同时 FSD 致命车祸揭示了一个残酷现实——人类驾驶员可能因不信任 AI 而超控系统导致死亡。库克与欧盟就 Siri AI 的谈判陷入僵局：苹果拒绝向竞争对手开放用户数据权限。OpenAI 则试图以 426 亿美元估值向美国政府出让 5% 股份——这是 AI 巨头与国家权力深度绑定的历史性信号。",
+    "whyItMatters": "对中国 AI 产业的启示是多维的：特斯拉 FSD 事故提醒中国自动驾驶企业——「人机信任」是比「技术精度」更难解决的问题；Siri AI 的欧盟困境预示着中国 AI 产品出海将面临类似的监管博弈；OpenAI 向政府让股的模式可能被中国 AI 公司效仿——通过国家持股获取政策支持和合法性背书。宇树科技 IPO 的成功也说明：物理世界 AI（机器人/自动驾驶）是中国 AI 产业链中资本认可度最高的赛道。",
+    "direction": "12 个月内，中国自动驾驶将出现首例「无安全员商业化运营许可」；AI 公司与政府的股权合作将成为新的政企关系模式。",
+    "opportunities": [
+      "面向自动驾驶的「人机信任」交互设计解决方案",
+      "AI 产品欧盟合规咨询与认证服务",
+      "AI 企业与政府合作的投融资顾问服务"
+    ],
+    "risks": [
+      "人机信任问题如果无法解决，自动驾驶商业化可能被无限期推迟",
+      "AI 公司政府持股可能导致技术方向受政治因素干扰"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "7/2",
+        "title": "得州特斯拉致命车祸：司机嫌FSD太保守，加速踏板踩死致76岁居民死亡",
+        "summary": "司机多次搜索FSD不够激进，加速踏板100%超控FSD",
+        "url": "https://www.ithome.com/0/971/971.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "特斯拉Cybercab量产版在奥斯汀启动公开道路工程测试",
+        "summary": "无方向盘/踏板，34台在市中心验证硬件可靠性",
+        "url": "https://www.ithome.com/0/970/539.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
+        "summary": "苹果提可信系统代理方案被拒，要求18个月宽限期遭拒",
+        "url": "https://www.ithome.com/0/970/810.htm"
+      },
+      {
+        "source": "X：Testing Catalog",
+        "time": "7/2",
+        "title": "OpenAI提议美国政府持股5%估值426亿美元",
+        "summary": "Sam Altman称是与公众分享AI发展红利的最佳方式",
+        "url": "https://x.com/testingcatalog/status/2072585845542969583"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "date": "2026-07-03",
+    "title": "提示词工程与 AI Skill 设计的工业化：Emil 设计审美 Skills + Matt 可预测性指南 + Margot 实战方法论 + 藏师傅 PPT 工作流",
+    "coreInsight": "AI Skill 的设计正从「个人手艺」走向「可复制的工程方法」：Emil Kowalski 将 UI 动画原则编码为 AI 可执行的 Skill 文件（300ms 限制、transform/opacity 限定等）；Matt Pocock 的系统化 Skill 编写指南区分了自动/手动触发模式并诊断五种失败模式；Anthropic 工程师 Margot 强调「大部分时间在维护已有提示词而非从零编写」；藏师傅的 PPT+Pencil 工作流则是人机协作的实战典范——AI 生成+人类精修。这四者共同指向：AI 交互设计正成为一个独立的工程学科。",
+    "whyItMatters": "对中国 AI 应用开发者，Skill 设计方法论是「低门槛高杠杆」的能力：写好一个 Skill 文件可以让整个团队的 AI 工具输出质量飞跃。Margot 的观点尤其值得重视——中国团队常犯的错误是不断从零写提示词而非维护迭代已有方案。藏师傅的 PPT 工作流则揭示了中国 AI 应用的关键场景：AI 生成内容的「可编辑性」比「一次性完美」更重要——这对所有面向中国办公场景的 AI 产品都是核心洞察。",
+    "direction": "6-12 个月内，「AI Skill 开发者」将成为新的职业角色；Skill 市场（可复用 Skill 的交易平台）将出现。",
+    "opportunities": [
+      "面向中国开发者的 AI Skill 模板市场",
+      "AI 提示词/Skill A/B 测试与优化工具",
+      "AI 生成内容的可编辑化后处理工具"
+    ],
+    "risks": [
+      "Skill 文件可能被恶意修改导致 AI 行为异常",
+      "Skill 市场可能导致同质化，削弱产品差异化"
+    ],
+    "signals": [
+      {
+        "source": "X：邵猛",
+        "time": "7/2",
+        "title": "Emil Kowalski 发布设计工程师 Skills，让 AI 编码工具具备 UI 动画审美",
+        "summary": "动画控制在300ms内、只动画transform和opacity、尊重reduced-motion",
+        "url": "https://x.com/shao__meng/status/2072484635955900792"
+      },
+      {
+        "source": "X：邵猛",
+        "time": "7/1",
+        "title": "mattpocockuk 的 /writing-great-skills：编写可预测 AI Skill 的指南",
+        "summary": "区分model-invoked/user-invoked，三层信息结构，五种失败模式",
+        "url": "https://x.com/shao__meng/status/2072126769986220157"
+      },
+      {
+        "source": "X：Berry Xia",
+        "time": "6/29",
+        "title": "Anthropic工程师Margot Van Laar：提示词工程实战",
+        "summary": "大部分时间调试维护已有提示词而非从零编写，评估是唯一严谨方式",
+        "url": "https://x.com/berryxia/status/2071610700213191075"
+      },
+      {
+        "source": "X：歸藏",
+        "time": "7/3",
+        "title": "藏师傅PPT与Pencil结合使用技巧",
+        "summary": "AI生成PPT导入Pencil手动调整排版，大幅提升可编辑性",
+        "url": "https://x.com/op7418/status/2073020264083050811"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "date": "2026-07-03",
+    "title": "AI 开发工具链补齐最后一公里：Claude Code v2.1 后台 Agent + Claude Desktop Linux + ADK Go 2.0 工作流引擎 + Herdr 终端多路复用",
+    "coreInsight": "AI 开发基础设施正从「能用」走向「好用」：Claude Code v2.1 新增后台 Agent 自动提交 PR——将 AI 从「助手」推向「协作者」；Claude Desktop 登陆 Linux 补全了桌面生态的最后一块拼图；Google ADK Go 2.0 引入基于图的工作流引擎+人工参与循环——企业级多智能体编排有了标准化框架；Herdr 则解决了一个看似微小的痛点——在终端中同时管理多个 AI 会话。这些补齐的工具标志着 AI 开发正从「个人实验」进入「团队工程」阶段。",
+    "whyItMatters": "对中国开发者的影响分两层：一是 Claude 生态的完善增强了 Anthropic 的锁定效应——中国开发者如果深度使用 Claude Code v2.1 的后台 Agent/自动 PR 等功能，迁移成本会持续升高；二是 ADK Go 2.0 的工作流引擎思路值得国产 Agent 框架（如 Dify/Coze）借鉴——当前国产 Agent 框架在「人工参与循环」和「图编排」上仍有明显短板。Linux 端的 Claude Desktop 也提醒：国产 AI 工具的跨平台覆盖仍需加速。",
+    "direction": "6-12 个月内，国产 AI 开发工具将加速补全后台 Agent、工作流引擎、跨平台桌面端等能力；Agent 多路复用将成为终端工具的标配。",
+    "opportunities": [
+      "面向中国开发者的 AI Agent 工作流引擎（对标 ADK Go 2.0）",
+      "国产 AI 编码工具的终端多路复用功能",
+      "企业级多智能体编排平台"
+    ],
+    "risks": [
+      "Claude 生态锁定效应加深，中国开发者迁移成本升高",
+      "多智能体系统的调试和可观测性仍然是未解难题"
+    ],
+    "signals": [
+      {
+        "source": "Claude Code Releases",
+        "time": "7/1",
+        "title": "Claude Code v2.1.198 发布",
+        "summary": "后台Agent通知+自动PR+/dataviz技能+AWS Claude Platform",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198"
+      },
+      {
+        "source": "X：Claude Devs",
+        "time": "6/30",
+        "title": "Claude Desktop 推出 Linux 公测版",
+        "summary": "Ubuntu/Debian测试版，包含Claude Code/Cowork/聊天",
+        "url": "https://x.com/ClaudeDevs/status/2071988881717871065"
+      },
+      {
+        "source": "Google Developers Blog",
+        "time": "6/30",
+        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用",
+        "summary": "基于图的工作流引擎+人工参与循环+指数退避重试",
+        "url": "https://developers.googleblog.com/announcing-adk-go-20"
+      },
+      {
+        "source": "Hacker News",
+        "time": "6/29",
+        "title": "Herdr：驻留在终端中的AI智能体多路复用器",
+        "summary": "单一终端界面管理和切换多个AI智能体会话",
+        "url": "https://github.com/ogulcancelik/herdr"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "date": "2026-07-03",
+    "title": "AI 治理争议与就业悖论同框：Meta 秘密测试竞品 + AI 高投入企业反增员 + 具身智能数据荒 + ChatGPT 全球渗透",
+    "coreInsight": "同一天四条看似无关的新闻揭示 AI 治理的深层矛盾：Meta 背地里向竞品发送 4.5 万条未成年人危机提示做安全测试——测试结果被用于自身模型优化？AI 就业数据出现反直觉信号——高 AI 投入企业反而增员 10.2%，这与「AI 替代工作」的主流叙事矛盾；具身智能面临「数据荒」——全球物理交互数据不足 LLM 数据的 0.005%，催生日薪 200 元的「机器人老师」新工种；ChatGPT 在非洲和亚洲增速最快、非英语用户过半——AI 的普惠化正在最需要的地方率先发生。",
+    "whyItMatters": "对中国的三重意义：一是 Meta 的秘密测试模式提醒中国监管机构——AI 安全测试需要行业标准和透明度规则（而非公司自行秘密进行）；二是 AI 就业数据为中国的 AI 人才政策提供了新证据——与其恐慌「AI 导致失业」，不如关注「如何培养 AI + 行业的复合型人才」；三是具身智能数据荒是中国可以「弯道超车」的机会——中国在制造业场景中积累了大量物理交互数据，如果系统化采集和标注，可能在全球具身智能竞赛中建立数据壁垒。",
+    "direction": "12 个月内，AI 安全测试将建立行业互认标准；具身智能数据采集将成为新的劳动密集型产业。",
+    "opportunities": [
+      "具身智能数据采集与标注平台",
+      "AI 安全测试与红队评估第三方服务",
+      "面向 AI 时代的职业技能培训"
+    ],
+    "risks": [
+      "AI 就业数据可能被选择性解读，掩盖结构性失业问题",
+      "具身智能数据采集涉及大量个人隐私和物理空间信息"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder",
+        "time": "6/30",
+        "title": "Meta秘密测试ChatGPT等竞品：承包商假扮未成年发送数万条危机提示",
+        "summary": "代号Cannes项目，4.5万条敏感提示未告知被测试公司",
+        "url": "https://the-decoder.com/meta-secretly-tested-chatgpt-gemini-and-character-ai-with-thousands-of-minor-perspective-crisis-prompts"
+      },
+      {
+        "source": "TechCrunch",
+        "time": "6/30",
+        "title": "AI就业争论变得更加混乱",
+        "summary": "高AI投入企业总员工增长10.2%，入门级岗位增长12%",
+        "url": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "6/30",
+        "title": "具身智能数据采集员：日薪200元起，给机器人当老师",
+        "summary": "全球物理交互数据仅约50万小时，不足LLM训练数据两万分之一",
+        "url": "https://mp.weixin.qq.com/s/aSd4kLu7xHllZatrd5EGsw"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "6/30",
+        "title": "OpenAI Signals 数据揭示 ChatGPT 全球采用趋势",
+        "summary": "注册6月后日均消息量增50%，非英语用户过半，非洲亚洲增速最快",
+        "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "date": "2026-07-03",
+    "title": "学术前沿五线突破：RDM 一步生成 + PAW 模糊函数编程 + VLM 鲁棒性 + VideoFlexTok + 多智能体专家抑制——效率与可信度双线推进",
+    "coreInsight": "顶级 AI 实验室同日发布五篇重要论文，共同主题是在「效率」和「可信度」两个维度寻求突破：RDM 将四步扩散模型压缩为一步生成，在 ImageNet 上达 SOTA；PAW 提出「模糊函数编程」范式——用 0.6B 模型执行编译后的程序匹敌 32B 模型；Apple 三篇论文分别关注 VLM 微调后的忠实性漂移、视频 token 的高效压缩（1/8 的 token 量）、以及多智能体系统中有趣的发现——团队协作反而让专家表现变差 41.1%。这五篇论文共同提示：AI 的下一个前沿不是「更大更强的模型」，而是「更高效、更可信、更懂协作」的模型。",
+    "whyItMatters": "对中国 AI 研究者和工程师的启发：RDM 和 VideoFlexTok 的效率优化思路可直接应用于国产视频生成模型（如可灵/Vidu）降低推理成本；PAW 的「编译一次、廉价复用」范式对有大量重复任务的 B 端场景极具商业价值——例如用 PAW 将客服 QA 编译为轻量级神经制品；Apple 的多智能体研究发现对中国 Agent 框架开发者是重要警告——「堆更多 Agent 不一定更好」，需要设计机制防止「整合性妥协」。",
+    "direction": "12 个月内，PAW 和 RDM 的工程化实现将进入生产环境；多智能体协作机制将成为 Agent 框架的核心研究课题。",
+    "opportunities": [
+      "将 PAW 范式应用于企业客服/审核等重复性 AI 任务",
+      "基于 RDM 的国产视频生成模型推理加速方案",
+      "多智能体系统中的专家意见权重与冲突解决机制"
+    ],
+    "risks": [
+      "PAW 编译的神经制品在边缘场景可能产生不可预测行为",
+      "多智能体系统的调试复杂性可能抵消效率提升"
+    ],
+    "signals": [
+      {
+        "source": "HuggingFace Daily",
+        "time": "7/2",
+        "title": "表示分布匹配（RDM）用于一步视觉生成",
+        "summary": "将四步FLUX.2后训练为一步生成器，GenEval 0.826，仅需90 H200 GPU小时",
+        "url": "https://arxiv.org/abs/2607.02375"
+      },
+      {
+        "source": "HuggingFace Daily",
+        "time": "7/2",
+        "title": "Program-as-Weights：一种面向模糊函数的编程范式",
+        "summary": "0.6B解释器执行PAW程序匹敌Qwen3-32B，内存仅五十分之一",
+        "url": "https://arxiv.org/abs/2607.02512"
+      },
+      {
+        "source": "Apple ML Research",
+        "time": "7/2",
+        "title": "RL微调VLM的鲁棒性与思维链一致性研究",
+        "summary": "微调提升准确率但侵蚀CoT可靠性，忠实性感知奖励可恢复对齐",
+        "url": "https://machinelearning.apple.com/research/robustness-chain-thought-consistency"
+      },
+      {
+        "source": "Apple ML Research",
+        "time": "7/2",
+        "title": "VideoFlexTok：可变长度粗到细视频分词",
+        "summary": "1.1B参数达5.2B模型质量，10秒81帧仅需672个token",
+        "url": "https://machinelearning.apple.com/research/videoflextok"
+      },
+      {
+        "source": "Apple ML Research",
+        "time": "7/2",
+        "title": "多智能体团队阻碍专家发挥",
+        "summary": "团队倾向于整合性妥协，性能损失最高41.1%",
+        "url": "https://machinelearning.apple.com/research/multi-agent-teams-experts"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "date": "2026-07-03",
+    "title": "消费级 AI 产品多点开花：Acti 键盘智能体 + Apple Creator Studio + shot-scraper 演示录制 + NotebookLM 短视频 + OpenClaw 移动端",
+    "coreInsight": "AI 产品正从「独立 App」渗透到操作系统的每一层：Acti 将 AI 智能体直接嵌入手机键盘——这是比独立 App 更激进的「无处不在」策略；Apple Creator Studio 用 AI 增强专业创作工具——不改变用户习惯而是让已有工具更聪明；shot-scraper 让 AI Agent 自己录制演示视频——「AI 演示 AI」的闭环正在形成；NotebookLM 短视频将知识消费从阅读转向观看；OpenClaw 将 Agent 能力搬到手机。共同趋势：AI 正从「你要来找我」变成「我来找你」。",
+    "whyItMatters": "对中国 APP 创业者的关键启示：Acti 的键盘智能体模式可能催生「输入法即 AI 平台」的新范式——中国输入法市场（搜狗/百度/讯飞）本身就承载了数亿用户的日常输入，如果嵌入 AI Agent 能力，将直接颠覆现有 AI App 的获客模式。Apple Creator Studio 的「AI 增强已有工具」策略也值得中国 SaaS 产品借鉴——与其做一个全新的 AI 工具，不如让用户已有的工具变聪明。NotebookLM 的「知识转短视频」模式在中国短视频生态中潜力巨大。",
+    "direction": "6-12 个月内，手机输入法将成为 AI Agent 新入口；AI 生成短视频的知识类内容将迎来爆发。",
+    "opportunities": [
+      "基于手机输入法的 AI Agent 平台",
+      "面向中国短视频平台的「知识 AI 视频化」工具",
+      "AI 增强版国产设计/剪辑工具"
+    ],
+    "risks": [
+      "键盘级 AI 权限可能被滥用于窃取用户输入内容",
+      "AI 短视频的知识准确性难以保证"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch",
+        "time": "6/30",
+        "title": "Acti 将 AI 智能体直接放入手机键盘",
+        "summary": "长按T键翻译消息、C键发会议链接，两周创建1000+Skills",
+        "url": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard"
+      },
+      {
+        "source": "Apple Newsroom",
+        "time": "6/30",
+        "title": "Apple Creator Studio 更新：更智能更快速更互联",
+        "summary": "FCP新增AI字幕/剪辑检测/自动遮罩，$12.99/月",
+        "url": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected"
+      },
+      {
+        "source": "Simon Willison 博客",
+        "time": "6/30",
+        "title": "用 shot-scraper video 让 AI 智能体录制工作演示视频",
+        "summary": "storyboard.yml定义步骤+Playwright录屏，Agent可自产演示视频",
+        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video"
+      },
+      {
+        "source": "X：NotebookLM",
+        "time": "6/30",
+        "title": "NotebookLM Short Video Overviews 全量上线 Web 英文版",
+        "summary": "复杂资料自动转化为60秒竖屏视频解读",
+        "url": "https://x.com/NotebookLM/status/2072043680442245276"
+      },
+      {
+        "source": "X：OpenClaw",
+        "time": "6/29",
+        "title": "OpenClaw 发布原生 iOS 与 Android 应用",
+        "summary": "智能体装进口袋，频道/任务/回复随时处理",
+        "url": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "date": "2026-07-03",
+    "title": "硬件与芯片变局 + 行业自省：Rubin Ultra 因制造问题取消减半 + 黑石 AI XPV 350 亿美元起步 + 扎克伯格坦承 AI 进度不及预期",
+    "coreInsight": "AI 硬件的「摩尔定律叙事」正在出现裂缝：NVIDIA 发布仅 3 个月的 4-die Rubin Ultra 因制造执行问题被取消，新版性能减半——连英伟达也无法逃脱先进封装的良率诅咒。黑石联合 Apollo、博通成立 AI XPV 平台对冲芯片风险——绕过英伟达直接在数据中心层面做算力供给。扎克伯格在同日内部会议坦承 AI 智能体进度未达预期、大规模裁员调岗效果不佳——Meta 的 1450 亿美元 AI 投资尚未看到回报。这些信号共同指向：AI 行业正从「无限乐观」进入「现实检验」阶段。",
+    "whyItMatters": "对中国 AI 产业：Rubin Ultra 的挫折反而可能是利好——英伟达的产能瓶颈和良率问题让国产芯片（昇腾/寒武纪）获得了更长的追赶窗口。黑石 XPV 平台的模式也值得中国借鉴——与其等待国产芯片突破，不如在数据中心层面构建算力联盟（类似中国的「东数西算」+ 民间资本）。扎克伯格的坦承则提醒中国投资者：AI Agent 的商业化不会一蹴而就，需要更长的耐心和更务实的预期管理。",
+    "direction": "12 个月内，AI 芯片供应将从「英伟达主导」走向「多元化供给」；非芯片公司（云厂商/投资机构）将在算力层面扮演更重要角色。",
+    "opportunities": [
+      "国产 AI 芯片的替代性机会（借 Rubin 延迟扩大份额）",
+      "亚太区域 AI 算力联盟/交易平台",
+      "AI 投资回报率评估与咨询服务"
+    ],
+    "risks": [
+      "Rubin 延迟可能导致全球 AI 算力供应进一步收紧",
+      "扎克伯格的认错可能引发 AI 投资寒冬"
+    ],
+    "signals": [
+      {
+        "source": "X：SemiAnalysis",
+        "time": "6/29",
+        "title": "Rubin Ultra取消，新版尺寸性能减半",
+        "summary": "GTC 2026发布仅3个月，4-die版本因制造问题被取消",
+        "url": "https://x.com/SemiAnalysis_/status/2071700428249596290"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "黑石联合成立AI XPV平台，目标2028年提供超20GW算力",
+        "summary": "首期350亿美元支持Anthropic部署1GW，黑石/阿波罗/博通联手",
+        "url": "https://www.ithome.com/0/970/583.htm"
+      },
+      {
+        "source": "TechCrunch",
+        "time": "7/2",
+        "title": "扎克伯格称AI智能体开发速度未如预期",
+        "summary": "Meta裁员8000人+调岗7000人至AI团队，1450亿美元投资待验证",
+        "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped"
+      },
+      {
+        "source": "X：OpenRouter",
+        "time": "7/2",
+        "title": "Fable 5 仅 4.44 美元搭建 Rube Goldberg 机器",
+        "summary": "创意+低成本AI应用的边界正在快速扩展",
+        "url": "https://x.com/OpenRouter/status/2072738704922439689"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "date": "2026-07-03",
+    "title": "AI 能力评估与工程效率：Senior SWE-Bench 揭示模型上限 + X MCP 打通社交数据 + Google 小模型极致性价比 + Every 复利工程",
+    "coreInsight": "四条新闻从不同角度刻画 AI 的当前状态：Senior SWE-Bench 用更难的基准测试（高级工程师级任务）揭示了前沿模型的真实天花板——最强模型在超过 75% 的任务中未能达标，这与各种基准宣称的「超越人类」形成鲜明对比；X MCP 让 AI 直连社交媒体数据——信息获取的边界从「网页」扩展到「社交图谱」；Google 用 Nano Banana 2 Lite 展示「极致性价比」策略——4 秒出图仅 $0.034；Every 的复利工程则展示了单人+AI 的极限效率——80% 时间花在规划和审查，仅 20% 写代码。",
+    "whyItMatters": "对中国开发者的实用价值：Senior SWE-Bench 的结果意味着「AI 替代高级工程师」短期内不会发生，更现实的路径是 Every 的「复利工程」模式——用 AI 放大个人效率而非替代人。X MCP 模式对中国社交平台（微信/微博/抖音）有直接启示——如果这些平台开放 MCP 接口，将催生全新的 AI 数据分析生态。Google 小模型的极致性价比策略也值得国产模型厂商借鉴——不是所有场景都需要千亿参数。",
+    "direction": "6-12 个月内，社交平台 MCP 接口将成为 AI 数据获取的新标配；「复利工程」模式将被更多小型技术团队采用。",
+    "opportunities": [
+      "面向微信/微博的 MCP 协议适配服务",
+      "AI 能力评估与基准测试工具",
+      "面向小型团队的 AI 工作流效率咨询"
+    ],
+    "risks": [
+      "社交平台 MCP 可能加剧数据滥用和隐私泄露",
+      "Senior SWE-Bench 的「75% 未达标」可能被误解为 AI 没有进步"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News",
+        "time": "7/2",
+        "title": "Senior SWE-Bench：评估AI智能体作为高级工程师的基准测试",
+        "summary": "最强模型超75%任务未达高级工程师级别，中位指令仅SWE-Bench Pro 31%",
+        "url": "https://senior-swe-bench.snorkel.ai/"
+      },
+      {
+        "source": "X：歸藏",
+        "time": "6/30",
+        "title": "X（Twitter）发布 hosted X MCP，AI 智能体可直连 X API",
+        "summary": "每次调用$0.01，支持Grok/Cursor，拉三天书签仅$0.1",
+        "url": "https://x.com/op7418/status/2071816099986022650"
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "time": "6/30",
+        "title": "Google DeepMind 发布 Nano Banana 2 Lite 和 Gemini Omni Flash",
+        "summary": "图像生成4秒$0.034/1K分辨率，视频$0.10/秒",
+        "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash"
+      },
+      {
+        "source": "X：小互",
+        "time": "6/30",
+        "title": "一个人管理5款产品，80%时间不写代码？Every的复利工程",
+        "summary": "Plan→Work→Review→Compound四步循环，AI自动避坑",
+        "url": "https://x.com/xiaohu/status/2071796715162857477"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "date": "2026-07-03",
+    "title": "AI 工程基础设施深化：Claude Code 智能体循环设计 + Meta 百 EB 存储蓝图 + Grant Sanderson 数学 AGI 反思 + ghealth 健康数据",
+    "coreInsight": "AI 工程基础设施在同日从四个维度深化：Claude Code 系统化了 Agent 的四种循环模式（turn-based/goal-based/time-based/proactive）——将 Agent 行为从「随机尝试」变为「可控编排」；Meta 公布了数百 EB 级 AI 存储架构——揭示训练大模型的存储瓶颈（多层元数据查询导致 GPU 停顿）及基于 BLOB 的统一解决方案；Grant Sanderson 在对谈中冷静指出「IMO 金牌不等于 AGI」，提醒行业不要被基准测试误导；ghealth 展示了 AI Agent 进入个人健康数据领域的「Agent 优先」设计范式。",
+    "whyItMatters": "对中国 AI 基础设施团队：Meta 的存储蓝图提供了「如何避免 GPU 因 I/O 等待而浪费」的工程参考——对于五万卡集群（如 LongCat 所用），存储延迟的优化直接决定训练效率。Claude Code 的四种循环模式为国产 AI 编码工具（通义灵码/CodeBuddy）提供了产品设计蓝图。ghealth 的「Agent 优先设计」思路（确定性退出码、--dry-run、SKILL.md）值得中国健康科技公司借鉴——将 AI Agent 作为健康数据的一等公民而非事后嫁接。",
+    "direction": "12 个月内，AI 存储架构将成为数据中心设计的核心考量；Agent 生命周期管理（循环编排/监控/终止）将成独立工具品类。",
+    "opportunities": [
+      "面向国产算力集群的 AI 存储优化方案",
+      "AI Agent 生命周期管理平台（循环编排+监控+日志）",
+      "面向中国市场的个人健康 AI 数据分析工具"
+    ],
+    "risks": [
+      "个人健康数据的 AI 分析涉及极高隐私合规要求",
+      "循环编排过于复杂可能导致 Agent 行为不可预测"
+    ],
+    "signals": [
+      {
+        "source": "Claude Blog",
+        "time": "6/29",
+        "title": "Claude Code 入门：智能体循环",
+        "summary": "四种循环类型：turn-based/goal-based/time-based/proactive",
+        "url": "https://claude.com/blog/getting-started-with-loops"
+      },
+      {
+        "source": "Dwarkesh Patel",
+        "time": "6/30",
+        "title": "Grant Sanderson 谈 AI 与数学的未来",
+        "summary": "IMO金牌≠AGI，概念突破验证周期可长达一个世纪",
+        "url": "https://www.dwarkesh.com/p/grant-sanderson-2"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "7/2",
+        "title": "Google Health API 推出 CLI：ghealth 开源工具",
+        "summary": "40种健康数据类型JSON输出，Agent优先设计+SKILL.md",
+        "url": "https://www.marktechpost.com/2026/07/02/the-google-health-api-got-a-cli-ghealth-is-an-open-source-tool-for-your-fitbit-air-data"
+      },
+      {
+        "source": "Meta Engineering Blog",
+        "time": "7/1",
+        "title": "Meta 大规模 AI 存储蓝图",
+        "summary": "数百EB级存储集群，BLOB架构避免GPU因I/O等待停顿",
+        "url": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "date": "2026-07-03",
+    "title": "AI 信息生态进化：AI News Radar 自媒体聚合 + ChatGPT 全球渗透加速 + Fable 5 自主 SEO/GEO 运维",
+    "coreInsight": "AI 信息获取、分发和优化正在形成闭环：AI News Radar 新增自媒体板块，打通小红书/抖音/B站/X 等多平台信源——AI 驱动的信息聚合正从「官方来源」扩展到「全渠道」；ChatGPT 在非洲和亚洲增速最快、非英语用户过半——AI 的全球化渗透正在最需要信息平权的地方加速；Fable 5 自主完成 SEO/GEO 优化全流程——从发现数据异常到切换 CDN 到提交工单到修复安全漏洞——AI 不仅消费信息，还开始自主优化信息的传播效率。",
+    "whyItMatters": "对中国信息产业的启示：AI News Radar 的「多平台聚合+热度排序」模式可复制到更多细分领域（如金融资讯/产业政策/学术动态）。ChatGPT 在低 HDI 国家的快速增长提示——中国 AI 产品出海应优先关注东南亚/非洲等新兴市场而非欧美成熟市场。Fable 5 的 SEO 案例对中国网站运营者是颠覆性的——未来网站的 SEO 优化可能不再需要人类 SEO 专家，而是由 AI Agent 自主完成。但这也引发了伦理问题：当 AI 可以自主操控搜索排名时，搜索引擎的公正性如何保障？",
+    "direction": "12 个月内，AI 驱动的信息聚合将成为内容消费的主流入口；AI 自主 SEO 将迫使搜索引擎升级反作弊算法。",
+    "opportunities": [
+      "面向垂直领域的 AI 信息聚合平台",
+      "AI 驱动的 SEO/GEO 优化 SaaS 工具",
+      "面向新兴市场的多语言 AI 产品本地化服务"
+    ],
+    "risks": [
+      "AI 自主 SEO 可能导致搜索生态的信息污染",
+      "自媒体信息聚合的版权问题缺乏法律框架"
+    ],
+    "signals": [
+      {
+        "source": "公众号：卡尔的AI沃茨",
+        "time": "6/30",
+        "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+        "summary": "按热度推荐Top10+时间轴视图，完全开源可零API部署",
+        "url": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "6/30",
+        "title": "OpenAI Signals 数据揭示 ChatGPT 全球采用趋势",
+        "summary": "用户注册6月后日均消息量增50%，低人类发展指数国家增长显著",
+        "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "7/3",
+        "title": "Claude Fable 5 自主优化 AIHOT 网站 SEO/GEO 全记录",
+        "summary": "22个Agent调研40分钟，自行提交工单，发现安全漏洞并修复",
+        "url": "https://mp.weixin.qq.com/s/L6R_SPWlOBv6dI0wWWHQrg"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "date": "2026-07-03",
+    "title": "Google Research 双线推进 + Meta 脑机接口：TabFM 零样本表格模型 + 屋顶反射率数据 + Brain2Qwerty v2",
+    "coreInsight": "Google Research 同日展示 AI 在「数据」和「模型」两个维度的基础设施化：TabFM 让表格数据的建模告别「特征工程+超参数调优」的传统流程——单次前向传播即可在新表格上预测，这对企业数据分析是颠覆性简化；屋顶反射率数据集扩展至全球 50+ 城市——卫星图像+AI 的结合正让城市气候决策变得数据驱动。Meta 的 Brain2Qwerty v2 则展示了 AI 与脑科学的融合——非侵入式实时大脑到文本解码取得新的里程碑。",
+    "whyItMatters": "TabFM 对中国的商业价值直接而巨大：中国有海量企业仍在使用 Excel 和传统 BI 工具做数据分析，TabFM 的「零样本预测」范式如果被集成到国产数据分析平台（如阿里 DataV/帆软）中，将极大降低数据分析门槛。屋顶反射率数据集的方法论可复制到中国城市的「碳中和」规划中。Brain2Qwerty 提示：脑机接口+AI 的组合正在成为现实——中国在非侵入式脑机接口领域需要加速布局。",
+    "direction": "12-18 个月内，零样本表格模型将集成到主流 BI 和数据平台中；AI+卫星图像将成为城市治理的标准工具。",
+    "opportunities": [
+      "集成 TabFM 的国产数据分析平台",
+      "面向中国城市的 AI+卫星图像气候分析服务",
+      "非侵入式脑机接口的 AI 应用开发"
+    ],
+    "risks": [
+      "零样本模型在特定行业数据上的准确性未经充分验证",
+      "脑机接口技术可能引发新的隐私和人权争议"
+    ],
+    "signals": [
+      {
+        "source": "Google Research Blog",
+        "time": "6/29",
+        "title": "Google Research 推出 TabFM：用于表格数据的零样本基础模型",
+        "summary": "无需训练/超参数调优/特征工程，单次前向传播高质量预测",
+        "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data"
+      },
+      {
+        "source": "Google Research Blog",
+        "time": "6/29",
+        "title": "Google Research 将建筑屋顶反射率数据集扩展至全球 50+ 城市",
+        "summary": "Sentinel-2+Pléiades Neo卫星图像，开放获取Heat Resilience App",
+        "url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities"
+      },
+      {
+        "source": "X：AI at Meta",
+        "time": "6/29",
+        "title": "Meta发布Brain2Qwerty v2：非侵入式实时句子解码",
+        "summary": "非侵入式脑机接口，实时大脑到文本解码新里程碑",
+        "url": "https://x.com/AIatMeta/status/2071566924803395741"
+      }
+    ]
+  }
+])
+      .then(function(data){
         ALL_ITEMS = data;
         if(!ALL_ITEMS.length) throw new Error('数据为空');
         groups = groupByDate(ALL_ITEMS);
