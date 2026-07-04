@@ -8486,5 +8486,527 @@
       }
     ],
     "id": 230
+  },
+  {
+    "id": 231,
+    "date": "2026-06-27",
+    "title": "DeepSeek成本优势冲击美国市场——企业100%切换与AI商业化的中国路径加速",
+    "coreInsight": "部分美国企业已将AI使用100%切换至DeepSeek，AI初创Lindy放弃Claude全面转向DeepSeek以节省数百万美元——成本效率正式超越模型能力成为企业AI选型的首要驱动力。同日阿里千问输入法macOS版上线（最快300字/分），展示了中国AI从底层模型到消费应用的全栈竞争力。",
+    "whyItMatters": "「100%切换」的表述意味着部分美国企业已全面放弃OpenAI和Anthropic——不是混合使用、不是部分替代，而是彻底转向。国家统计局数据显示电子行业利润增长103.9%（贡献率43.1%），AI驱动的算力芯片需求正创造前所未有的经济价值。前美商务部长联合四州启动10亿美元「Raise Us」计划应对AI就业冲击——AI的经济红利与社会阵痛正在同步发酵。",
+    "direction": "6-12个月内，将有更多美国企业公开宣布从闭源模型全面转向开源/低成本模型。「AI迁移」将成为一个独立的服务品类。AI输入法将重塑移动端人机交互方式。",
+    "opportunities": [
+      "企业AI迁移——从高成本闭源模型到低成本开源模型的过渡服务",
+      "AI驱动的个性化职业技能再培训平台",
+      "面向AI输入法的语音识别与方言优化服务"
+    ],
+    "risks": [
+      "全面切换可能引发新的供应商锁定——从OpenAI锁定变为DeepSeek锁定",
+      "成本优先可能导致部分企业忽视AI安全与合规"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "6/27",
+        "title": "AI 账单失控后 DeepSeek 成「香饽饽」，部分美国企业已 100% 切换",
+        "summary": "美国企业面临AI账单失控，Lindy已将100%流量切换至DeepSeek，预计节省数百万美元。",
+        "url": "https://www.ithome.com/0/969/400.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/27",
+        "title": "国家统计局：1-5月电子行业利润增103.9%，AI驱动高端算力/存储芯片需求爆发",
+        "summary": "电子行业利润贡献率43.1%，主因全球AI技术变革推动高端算力芯片需求。",
+        "url": "https://www.ithome.com/0/969/311.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/27",
+        "title": "阿里千问输入法上线 macOS 版：最快 300 字/分，AI 自动润色",
+        "summary": "支持9种方言，纯净无广告，即将推出iOS/Android/Windows版。",
+        "url": "https://www.ithome.com/0/969/334.htm"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/27",
+        "title": "「Raise Us」启动：前美商务部长与四州合作筹集10亿美元应对AI就业冲击",
+        "summary": "Amazon、Anthropic、Microsoft、OpenAI等公司联合出资再培训基金。",
+        "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you"
+      },
+      {
+        "source": "X: Runway",
+        "time": "6/27",
+        "title": "Runway API 推出广告本地化 Recipe",
+        "summary": "通过单次API调用翻译静态广告和图形资产。",
+        "url": "https://x.com/runwayml/status/2070855164584726791"
+      },
+      {
+        "source": "Hacker News (buzzing.cc)",
+        "time": "6/27",
+        "title": "一次失败的（民族国家？）攻击的剖析：伪装VC面试植入后门PinpinRAT",
+        "summary": "攻击者伪装新加坡VC通过虚假面试邮件诱导安装后门，AI供应链安全风险凸显。",
+        "url": "https://grack.com/blog/2026/06/25/dissecting-a-failed-nation-state-attack"
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "date": "2026-06-28",
+    "title": "SpaceXAI诞生与AI智能体能力边界探索——从核平法国到500天创业测试",
+    "coreInsight": "SpaceX注册SpaceXAI商标并宣布合并xAI，马斯克的航天与AI两大帝国正式合流。同日四大顶级AI模型在《文明VI》中对决——Claude核平法国仍输掉比赛，暴露了AI智能体在长期战略中感知盲区（仅1-2%主动检查全局状态）和执行断层（计划后10回合执行率仅48-66%）两大核心短板。",
+    "whyItMatters": "SpaceXAI的诞生意味着一个同时拥有Starlink全球网络和前沿AI的超级实体正在成形——这可能是继OpenAI、Google之后的第三极AI力量。而《文明VI》测试和CEO-Bench 500天创业模拟共同揭示：当前AI的瓶颈不是智商，而是长期规划和执行力。Grok 4.5在SpaceX和Tesla私测、DeepSeek DSpark框架加速生成60-85%、OSWorld2.0基准发布——AI能力评测正从单点任务转向长时域复杂工作流。",
+    "direction": "12个月内SpaceXAI可能成为AI第三极。长期战略规划能力将成为下一代AI模型的核心竞争力指标。AI智能体评测将从benchmark分数转向真实世界长时域表现。",
+    "opportunities": [
+      "基于卫星网络的边缘AI服务——SpaceXAI+Starlink生态",
+      "面向AI智能体的长时域决策能力训练与评测平台",
+      "AI+游戏模拟环境的战略能力测试服务"
+    ],
+    "risks": [
+      "SpaceXAI同时掌握航天和AI的双重战略能力可能引发安全担忧",
+      "企业依赖AI做长期战略决策前，感知盲区和执行断层可能导致严重失误"
+    ],
+    "signals": [
+      {
+        "source": "X: cb_doge",
+        "time": "6/28",
+        "title": "SpaceX 注册 SpaceXAI 商标，将合并 xAI",
+        "summary": "马斯克宣布xAI将解散不再作为独立公司，成为SpaceXAI的一部分。",
+        "url": "https://x.com/cb_doge/status/2070973276562530507"
+      },
+      {
+        "source": "X: Elon Musk",
+        "time": "6/28",
+        "title": "Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus",
+        "summary": "基于1.5T V9基础模型，SpaceX将每月发布完全从头训练的新模型。",
+        "url": "https://x.com/elonmusk/status/2071184354756477041"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/28",
+        "title": "四大顶级AI对决《文明VI》：Claude核平法国仍输，暴露感知与执行短板",
+        "summary": "AI主动检查全局状态仅占1-2%，计划后10回合内执行率仅48-66%。",
+        "url": "https://www.ithome.com/0/969/570.htm"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/28",
+        "title": "仅有三个AI模型在500天创业测试中盈利超过起始资本",
+        "summary": "CEO-Bench基准测试让AI在模拟中运营公司500天，仅Claude Fable 5、Opus 4.8和GPT-5.5盈利。",
+        "url": "https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test"
+      },
+      {
+        "source": "HuggingFace Daily Papers",
+        "time": "6/28",
+        "title": "OSWorld2.0：长时域真实世界计算机使用工作流基准",
+        "summary": "108个长时域任务，Claude Opus 4.8得分最高仅20.6%，当前智能体远未达专业级。",
+        "url": "https://arxiv.org/abs/2606.29537"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "6/28",
+        "title": "DeepSeek 开源 DSpark 投机解码框架，加速 DeepSeek-V4 生成速度 60-85%",
+        "summary": "半自回归生成实现无损加速，生产环境每用户生成速度较MTP-1基线大幅提升。",
+        "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark"
+      },
+      {
+        "source": "X: Berry Xia",
+        "time": "6/28",
+        "title": "苹果Vision负责人跳槽OpenAI，触控OLED MacBook用M5芯片",
+        "summary": "Paul Meade离职加入OpenAI硬件部门，AI硬件竞争加速。",
+        "url": "https://x.com/berryxia/status/2070916520822321292"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/28",
+        "title": "新浪开源VibeThinker-3B：推理可压缩，事实知识不能",
+        "summary": "3B参数在推理基准上超越200-333倍大模型，提出参数压缩-覆盖假说。",
+        "url": "https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt"
+      },
+      {
+        "source": "Hacker News (buzzing.cc)",
+        "time": "6/28",
+        "title": "阿德拉菲尼尔：仅在AI agent工作时阻止Mac睡眠的菜单栏工具",
+        "summary": "支持Claude Code、Codex、Cursor等9种AI编码智能体，合盖仍保持运行。",
+        "url": "https://github.com/kageroumado/adrafinil"
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "date": "2026-06-29",
+    "title": "Anthropic全线出击：Claude Sonnet 5发布、Science工作台上线、企业网关与多平台部署同步推进",
+    "coreInsight": "Anthropic同日发布Claude Sonnet 5（性能接近Opus 4.8但定价更低）、Claude Science科研工作台（60+预配置技能覆盖基因组学到化学信息学）、Claude apps gateway（企业级自托管控制平面支持Amazon Bedrock和Google Cloud）、Claude在Microsoft Foundry正式可用——Anthropic正从模型提供商向全栈AI平台加速转型。",
+    "whyItMatters": "Sonnet 5在BrowseComp和OSWorld-Verified上严格优于上一代，价格仅为Opus的零头，这意味着一线AI模型正在快速「廉价化」。Science工作台整合60+科学工具和NVIDIA BioNeMo模型，是AI for Science从单点能力到体系化平台的关键一步。同时美军用AI选目标误炸伊朗学校致120名儿童死亡——AI军事化的惨痛代价敲响了治理警钟。国务院印发AI全学段教育规划、三星和SK海力士计划投资5900亿美元扩产芯片——这一天同时在AI产品、科研、军事、教育和基础设施五个维度发生了重大事件。",
+    "direction": "6-12个月内，Anthropic将从单一模型提供商演变为「模型+平台+基础设施」三位一体的AI巨头。AI for Science平台将成为主流科研机构的标配。AI军事决策将面临更严格的国际监管和问责机制。",
+    "opportunities": [
+      "基于Claude Science工作台的学科定制化科研流程开发",
+      "面向企业的Claude apps gateway部署与运维服务",
+      "AI军事决策的问责与合规审计体系"
+    ],
+    "risks": [
+      "AI军事化造成的平民伤亡可能引发全球性抵制",
+      "Anthropic全栈化可能导致生态锁定——类似AWS的「AI平台锁定」"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic Newsroom",
+        "time": "6/29",
+        "title": "Claude Sonnet 5 发布：性能接近Opus 4.8，定价更低",
+        "summary": "具备计划、浏览器和终端工具使用能力，价格输入$2/百万、输出$10/百万。",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5"
+      },
+      {
+        "source": "Anthropic Newsroom",
+        "time": "6/29",
+        "title": "Claude Science 科研工作台正式上线",
+        "summary": "60+预配置技能与连接器覆盖基因组学到化学信息学，集成NVIDIA BioNeMo模型。",
+        "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+      },
+      {
+        "source": "Claude Blog",
+        "time": "6/29",
+        "title": "Claude apps gateway 为 Amazon Bedrock 和 Google Cloud 推出",
+        "summary": "自托管控制平面，企业级SSO登录、集中策略管理、消费上限。",
+        "url": "https://claude.com/blog/introducing-the-claude-apps-gateway"
+      },
+      {
+        "source": "Claude Blog",
+        "time": "6/29",
+        "title": "Claude 在 Microsoft Foundry 正式可用",
+        "summary": "首批提供Claude Opus 4.8和Haiku 4.5，运行在NVIDIA GB300 GPU上。",
+        "url": "https://claude.com/blog/claude-in-microsoft-foundry"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/29",
+        "title": "美军用AI选目标却误炸伊朗学校，Anthropic Claude嵌入Palantir系统首日建议约1000目标",
+        "summary": "导弹袭击导致约120名儿童死亡，情报分析师标记未连接官方数据库。",
+        "url": "https://the-decoder.com/the-us-military-used-ai-to-pick-thousands-of-targets"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/29",
+        "title": "国务院印发《教育发展「十五五」规划》，推进人工智能全学段教育",
+        "summary": "提升学生AI素养及提出问题、解决问题的能力，目标2030年高质量教育体系基本建成。",
+        "url": "https://www.ithome.com/0/970/097.htm"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/29",
+        "title": "三星和SK海力士计划投资5900亿美元扩产芯片",
+        "summary": "AI需求推动内存价格飙升，Jefferies预测2026年Q3内存价格上涨40-50%。",
+        "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment"
+      },
+      {
+        "source": "X: Meta",
+        "time": "6/29",
+        "title": "Meta发布Brain2Qwerty v2：非侵入式实时句子解码",
+        "summary": "基于Nature发表的v1，从脑信号实时解码句子，有望帮助数百万沟通障碍人群。",
+        "url": "https://x.com/AIatMeta/status/2071566924803395741"
+      },
+      {
+        "source": "Google Research Blog",
+        "time": "6/29",
+        "title": "Google Research 推出 TabFM：用于表格数据的零样本基础模型",
+        "summary": "无需模型训练、超参数调优或特征工程，单次前向传播即可生成高质量预测。",
+        "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data"
+      },
+      {
+        "source": "MarkTechPost",
+        "time": "6/29",
+        "title": "EverOS：开源Markdown优先智能体记忆运行时，支持混合检索与自进化技能",
+        "summary": "LoCoMo得分93.05%，p95检索延迟低于500ms，记忆随使用自我进化。",
+        "url": "https://www.marktechpost.com/2026/06/29/meet-everos"
+      },
+      {
+        "source": "Cursor Blog",
+        "time": "6/29",
+        "title": "从任何地点构建——Cursor for iOS 公测版发布",
+        "summary": "支持语音输入、云端智能体和远程桌面智能体双向切换。",
+        "url": "https://cursor.com/blog/ios-mobile-app"
+      },
+      {
+        "source": "公众号：小红书技术",
+        "time": "6/29",
+        "title": "小红书 RedKnot 推理引擎：将 KV Cache 按注意力头拆解实现长文本加速",
+        "summary": "8卡H800上TTFT最高加速3.54×，单卡并发提升7.8×。",
+        "url": "https://mp.weixin.qq.com/s/qRrZvL0aZzYI82djFSrLug"
+      },
+      {
+        "source": "Claude Blog",
+        "time": "6/29",
+        "title": "Claude Code 入门：智能体循环",
+        "summary": "定义四种循环类型：turn-based、goal-based、time-based、proactive。",
+        "url": "https://claude.com/blog/getting-started-with-loops"
+      },
+      {
+        "source": "X: Berry Xia",
+        "time": "6/29",
+        "title": "Anthropic工程师：提示词工程实战——调试生产提示词为主，评估是唯一严谨方式",
+        "summary": "大部分时间在调试和维护已有生产提示词，强调评估（Eval）是唯一严谨方式。",
+        "url": "https://x.com/berryxia/status/2071610700213191075"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/29",
+        "title": "Claude Code 打开 GitHub 仓库即执行隐藏恶意代码，攻击者可获完全控制",
+        "summary": "安全研究人员发现新攻击向量：恶意代码从DNS条目拉取，对AI智能体不可见。",
+        "url": "https://the-decoder.com/claude-code-runs-a-github-repos-hidden-malware"
+      },
+      {
+        "source": "HuggingFace Daily Papers",
+        "time": "6/29",
+        "title": "Agents-A1：35B MoE 智能体模型通过扩展 horizon 达到万亿参数级性能",
+        "summary": "三阶段训练+多教师领域路由在线蒸馏，在多个基准上领先万亿参数模型。",
+        "url": "https://arxiv.org/abs/2606.30616"
+      },
+      {
+        "source": "SemiAnalysis",
+        "time": "6/29",
+        "title": "Rubin Ultra取消，新版尺寸性能减半",
+        "summary": "GTC 2026宣布仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。",
+        "url": "https://x.com/SemiAnalysis_/status/2071700428249596290"
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "date": "2026-06-30",
+    "title": "AI产品与安全的双螺旋——从键盘智能体到Meta秘密测试，创新与伦理同步加速",
+    "coreInsight": "AI正从独立应用深度嵌入日常工具的每个角落：Acti将智能体直接放入手机键盘、shot-scraper让AI录制工作演示视频、X官方推出MCP让智能体直连X API。同时Meta被曝秘密测试ChatGPT等竞品——承包商假扮未成年人向竞品发送4.5万条危机提示——AI行业的安全测试正在走向「相互渗透」。特斯拉Cybercab量产版已在奥斯汀公开道路启动工程测试，自动驾驶从演示走向真实交通。",
+    "whyItMatters": "Acti智能体键盘两周内用户创建超1000个Skills——AI的交互入口正在从独立App向操作系统级渗透。Google ADK Go 2.0引入基于图的工作流引擎，多智能体编排走向生产就绪。而Meta的秘密测试暴露了AI行业的一个灰色地带：各公司正在用非透明的方式互相测试安全性。黑石计划未来3-5年在日本投300亿美元建AI数据中心——AI基础设施投资仍在加速，与产品创新形成正反馈。",
+    "direction": "6-12个月内，AI智能体将从独立应用向键盘、输入法、系统级服务等更细粒度的交互入口渗透。AI安全测试将从自愿行为走向行业规范甚至强制要求。自动驾驶将从封闭测试走向更多城市的公开道路运营。",
+    "opportunities": [
+      "面向手机键盘和系统级入口的AI智能体SDK与开发平台",
+      "AI安全测试的标准化与第三方审计服务",
+      "AI数据中心的日本和亚太市场布局与本地化服务"
+    ],
+    "risks": [
+      "AI智能体嵌入系统级入口可能带来前所未有的隐私监控风险",
+      "各公司相互秘密测试可能引发法律纠纷和信任危机"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch",
+        "time": "6/30",
+        "title": "Acti 将 AI 智能体直接放入手机键盘",
+        "summary": "新加坡初创公司，基于Google Gemini，早期测试者两周创建超1000个Skills。",
+        "url": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard"
+      },
+      {
+        "source": "Google Developers Blog",
+        "time": "6/30",
+        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用",
+        "summary": "新增基于图的工作流引擎、内置人工参与循环、动态编排。",
+        "url": "https://developers.googleblog.com/announcing-adk-go-20"
+      },
+      {
+        "source": "X: 歸藏",
+        "time": "6/30",
+        "title": "X（Twitter）发布 hosted X MCP，AI 智能体可直连 X API",
+        "summary": "每次调用0.01美元，支持Grok、Cursor等工具。",
+        "url": "https://x.com/op7418/status/2071816099986022650"
+      },
+      {
+        "source": "The Decoder",
+        "time": "6/30",
+        "title": "Meta秘密测试ChatGPT等竞品：承包商假扮未成年发送数万条危机提示",
+        "summary": "代号「Cannes」项目，2025年8月一轮测试发送超4.5万条提示，被测试公司不知情。",
+        "url": "https://the-decoder.com/meta-secretly-tested-chatgpt-gemini-and-character-ai"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "特斯拉Cybercab量产版在奥斯汀启动公开道路工程测试",
+        "summary": "无方向盘与脚踏板，投入34台Cybercab，从概念车到实车上路约20个月。",
+        "url": "https://www.ithome.com/0/970/539.htm"
+      },
+      {
+        "source": "IT之家",
+        "time": "6/30",
+        "title": "黑石未来3-5年拟投300亿美元在日本建AI数据中心",
+        "summary": "联合成立AI XPV平台，目标2028年向OpenAI、Anthropic等提供超20GW算力。",
+        "url": "https://www.ithome.com/0/970/583.htm"
+      },
+      {
+        "source": "Simon Willison 博客",
+        "time": "6/30",
+        "title": "用 shot-scraper video 让 AI 智能体录制工作演示视频",
+        "summary": "通过storyboard.yml定义操作步骤，利用Playwright录制浏览器视频。",
+        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "6/30",
+        "title": "OpenAI 发布 GeneBench-Pro：计算生物学研究级基准测试",
+        "summary": "129个问题覆盖10个领域21个子领域，82个问题已由外部专家审核。",
+        "url": "https://openai.com/index/introducing-genebench-pro"
+      },
+      {
+        "source": "Apple Newsroom",
+        "time": "6/30",
+        "title": "Apple Creator Studio 更新：更智能、更快速、更互联",
+        "summary": "Final Cut Pro新增on-device AI字幕和编辑检测，Logic Pro新增Producer Project。",
+        "url": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected"
+      },
+      {
+        "source": "X: Claude Devs",
+        "time": "6/30",
+        "title": "Claude Desktop 推出 Linux 公测版",
+        "summary": "支持Ubuntu和Debian，提供Claude Code、Cowork和聊天的一流桌面体验。",
+        "url": "https://x.com/ClaudeDevs/status/2071988881717871065"
+      },
+      {
+        "source": "Google DeepMind Blog",
+        "time": "6/30",
+        "title": "Google DeepMind 发布 Nano Banana 2 Lite 和 Gemini Omni Flash",
+        "summary": "Nano Banana 2 Lite文本到图像仅需4秒、$0.034/1K分辨率；Omni Flash支持视频生成。",
+        "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash"
+      },
+      {
+        "source": "Dwarkesh Patel Podcast",
+        "time": "6/30",
+        "title": "Grant Sanderson 谈 AI 与数学的未来",
+        "summary": "3Blue1Brown创办人：AI在IMO获金牌不等于AGI，RIemann假设的AI证明能否被人类理解。",
+        "url": "https://www.dwarkesh.com/p/grant-sanderson-2"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "6/30",
+        "title": "OpenAI Signals 数据揭示 ChatGPT 全球采用趋势",
+        "summary": "用户注册六个月后日均消息量增加50%，女性名字用户已占全球多数。",
+        "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+      },
+      {
+        "source": "TechCrunch",
+        "time": "6/30",
+        "title": "AI就业争论变得更加混乱",
+        "summary": "高AI投入企业总员工数增长10.2%，入门级岗位增长12%，AI并非普遍导致岗位消失。",
+        "url": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier"
+      },
+      {
+        "source": "X: 小互",
+        "time": "6/30",
+        "title": "一个人管理5款产品，80%时间不写代码？Every的复利工程",
+        "summary": "四步循环Plan→Work→Review→Compound，26个专项agent、23条工作流命令。",
+        "url": "https://x.com/xiaohu/status/2071796715162857477"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "6/30",
+        "title": "具身智能数据采集员：日薪200元起，给机器人当老师",
+        "summary": "全球高质量物理交互数据仅约50万小时，不足LLM训练数据的两万分之一。",
+        "url": "https://mp.weixin.qq.com/s/aSd4kLu7xHllZatrd5EGsw"
+      },
+      {
+        "source": "公众号：卡尔的AI沃茨",
+        "time": "6/30",
+        "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+        "summary": "按热度推荐Top10，可在热度优先和时间优先间切换，项目完全开源。",
+        "url": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog"
+      },
+      {
+        "source": "Hacker News (buzzing.cc)",
+        "time": "6/30",
+        "title": "Qwen 3.6 27B 是本地开发的理想选择",
+        "summary": "Macbook Max M5上llama.cpp Q8_0量化可达30 tokens/s，首个真正具备通用智能的本地模型。",
+        "url": "https://quesma.com/blog/qwen-36-is-awesome"
+      },
+      {
+        "source": "X: OpenClaw",
+        "time": "6/30",
+        "title": "OpenClaw 发布原生 iOS 与 Android 应用",
+        "summary": "智能体装进口袋，频道、任务、回复随时随地处理。",
+        "url": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "date": "2026-07-01",
+    "title": "AI基础设施与信任危机同步升级——NVIDIA扩散模型、美团万亿参数、Anthropic隐写术事件",
+    "coreInsight": "NVIDIA发布Nemotron-Labs-TwoTower扩散语言模型（吞吐量提升2.42倍）、美团开源万亿参数LongCat-2.0（国产算力集群五万卡全流程训练）、亚马逊AWS砸10亿美元派工程师驻场客户公司——AI基础设施正向「更大规模+更高效率」双维度演进。同时Anthropic被发现在Claude Code中植入隐写术代码识别中国用户——通过本地时区和加密域名列表标记用户，被社区逆向发现后引发信任危机。",
+    "whyItMatters": "LongCat-2.0是首个在国产算力集群上完成全流程训练的万亿参数模型，月调用量已跻身OpenRouter全球前三——这是中国AI基础设施自主化的重要里程碑。Nemotron扩散模型证明了扩散架构在语言领域的可行性，可能成为transformer之外的又一主流路线。而Anthropic的隐写术事件则暴露了AI产品中「隐蔽监控」的伦理红线——在用户不知情的情况下植入识别代码，严重破坏开发者信任。xAI发布Voice Agent Builder（2分钟无代码创建语音智能体）、库克与欧盟就Siri AI举行建设性会谈——AI正同时在技术突破、商业落地和治理博弈三个战场推进。",
+    "direction": "6-12个月内，扩散语言模型将从实验走向工程化，可能形成与自回归模型并行的技术路线。国产万亿参数模型将进入更多国际榜单。AI产品中的隐性行为将面临更严格的监管审查和透明度要求。语音智能体将迎来无代码创建工具的爆发。",
+    "opportunities": [
+      "基于扩散语言模型的高吞吐量推理服务部署",
+      "国产万亿参数模型的国际商业化与API服务",
+      "AI产品透明度审计与信任评估第三方服务"
+    ],
+    "risks": [
+      "AI产品中隐蔽的身份识别和行为监控可能成为行业潜规则",
+      "扩散模型在精确性要求高的任务上可能不及自回归模型"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost",
+        "time": "7/1",
+        "title": "NVIDIA 发布 Nemotron-Labs-TwoTower 开放权重扩散语言模型",
+        "summary": "双塔架构，生成吞吐量提升2.42倍，总参数约60B，每token活跃参数约3B/塔。",
+        "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower"
+      },
+      {
+        "source": "公众号：龙猫LongCat（美团）",
+        "time": "7/1",
+        "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+        "summary": "总参数1.6T，平均激活约48B，原生1M超长上下文，五万卡国产算力全流程训练。",
+        "url": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/1",
+        "title": "亚马逊 AWS 砸 10 亿美元，派遣工程师进驻客户公司",
+        "summary": "组建前置驻场工程师团队，每批5-6组驻场45天，协助客户落地AI软件与智能体。",
+        "url": "https://www.ithome.com/0/971/071.htm"
+      },
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "7/1",
+        "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+        "summary": "读取本地时区+加密域名列表比对，替换提示词中Unicode字符作为标记传回服务器。",
+        "url": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw"
+      },
+      {
+        "source": "xAI News",
+        "time": "7/1",
+        "title": "xAI 发布 Voice Agent Builder 测试版",
+        "summary": "无代码平台，2分钟创建生产级语音智能体，Grok Voice Think Fast 1.0得分67.3%。",
+        "url": "https://x.ai/news/grok-voice-agent-builder"
+      },
+      {
+        "source": "IT之家",
+        "time": "7/1",
+        "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
+        "summary": "苹果提出「可信系统代理」方案，要求18个月监管宽限期遭欧盟拒绝。",
+        "url": "https://www.ithome.com/0/970/810.htm"
+      },
+      {
+        "source": "X: AI Safety Memes",
+        "time": "7/1",
+        "title": "AI 用 prover-verifier LLM 循环攻克 9 个未解数学难题",
+        "summary": "采用prover-verifier循环方法解决理论计算机科学9个重大开放问题。",
+        "url": "https://x.com/AISafetyMemes/status/2072085914558558402"
+      },
+      {
+        "source": "X: NotebookLM",
+        "time": "7/1",
+        "title": "NotebookLM Short Video Overviews 全量上线 Web 英文版",
+        "summary": "将复杂资料自动转化为60秒竖屏视频深入讲解概念，免费用户即将可用。",
+        "url": "https://x.com/NotebookLM/status/2072043680442245276"
+      },
+      {
+        "source": "X: 邵猛",
+        "time": "7/1",
+        "title": "mattpocockuk 的 /writing-great-skills：编写可预测 AI Skill 的指南",
+        "summary": "核心以过程可预测为目标，诊断五种失败模式，提供No-op测试作为有效性标准。",
+        "url": "https://x.com/shao__meng/status/2072126769986220157"
+      },
+      {
+        "source": "Tomer Tunguz 博客",
+        "time": "7/1",
+        "title": "构建AI智能体应优先设计路由",
+        "summary": "正确路由可使70-80%流量运行在免费本地模型或异步推理上，AI开销降低90%+。",
+        "url": "https://www.tomtunguz.com/ai-execution-routing"
+      }
+    ]
   }
 ]
