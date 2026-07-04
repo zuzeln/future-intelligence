@@ -4698,4 +4698,1405 @@
       }
     ]
   }
+,
+  {
+    "id": 132,
+    "date": "2026-07-02",
+    "title": "Anthropic与五角大楼控权之争：Claude军事用途护栏分歧",
+    "coreInsight": "WSJ法庭文件显示，Anthropic CEO Dario Amodei与五角大楼副部长Emil Michael数月邮件往来，核心分歧在于Claude的军事用途护栏。Anthropic要求禁止全自主武器及某些监控用途，五角大楼则希望Claude可用于所有合法国家安全场景。Michael称若分歧太大不愿\"强行推动\"。",
+    "whyItMatters": "WSJ法庭文件显示，Anthropic CEO Dario Amodei与五角大楼副部长Emil Michael数月邮件往来，核心分歧在于Claude的军事用途护栏。Anthropic要求禁止全自主武器及某些监控用途，五角大楼则希望Claude可用于所有合法国家安全场景。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "X：Kim (@kimmonismus)",
+        "time": "07-02",
+        "title": "Anthropic与五角大楼控权之争：Claude军事用途护栏分歧",
+        "summary": "WSJ法庭文件显示，Anthropic CEO Dario Amodei与五角大楼副部长Emil Michael数月邮件往来，核心分歧在于Claude的军事用途护栏。Anthropic要求禁止全自主武器及某些监控用途，五角大楼则希望Claude可用于所有合法国家安全场景。Michael称若分歧太大不愿\"强行推动\"。随后五角大楼将Anthropic列为供应链风险，阻止合作伙伴在国防部项目中使用其模型。法官暂停部分措施，政府正在上诉。Michael称原先采用Anthropic的操作中已有三分之二切换至其他AI工具。",
+        "url": "https://x.com/kimmonismus/status/2072718147279335507"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "date": "2026-07-02",
+    "title": "快手可灵AI获初始投资者20.28亿美元注资，投后估值180亿美元",
+    "coreInsight": "快手在港交所公告，21名初始投资者同意以138.24亿元人民币（20.28亿美元）现金注资北京可灵，后者将持有可灵AI相关资产。同日15名额外投资者追加出资52.235亿元人民币（7.6639亿美元），认购总上限为204.471亿元（30亿美元），对应北京可灵扩大后注册资本的16.67%。投后估值180亿美元。快手预计未来12个月内启动可灵AI赴港上市，募资用于扩充算力、建设数据中心及人才引进。",
+    "whyItMatters": "快手在港交所公告，21名初始投资者同意以138.24亿元人民币（20.28亿美元）现金注资北京可灵，后者将持有可灵AI相关资产。同日15名额外投资者追加出资52.235亿元人民币（7.6639亿美元），认购总上限为204.471亿元（30亿美元），对应北京可灵扩大后注册资本的16.67%。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "07-02",
+        "title": "快手可灵AI获初始投资者20.28亿美元注资，投后估值180亿美元",
+        "summary": "快手在港交所公告，21名初始投资者同意以138.24亿元人民币（20.28亿美元）现金注资北京可灵，后者将持有可灵AI相关资产。同日15名额外投资者追加出资52.235亿元人民币（7.6639亿美元），认购总上限为204.471亿元（30亿美元），对应北京可灵扩大后注册资本的16.67%。投后估值180亿美元。快手预计未来12个月内启动可灵AI赴港上市，募资用于扩充算力、建设数据中心及人才引进。",
+        "url": "https://www.ithome.com/0/971/954.htm"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "date": "2026-07-02",
+    "title": "花旗、Adobe等企业限制员工使用AI旗舰模型以控制成本",
+    "coreInsight": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。花旗银行因GitHub改为按量计费，于6月24日禁用Claude Opus 4.6、4.7及GPT-5.5等旗舰模型。Adobe于6月30日终止Claude无限制使用协议。",
+    "whyItMatters": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "07-02",
+        "title": "花旗、Adobe等企业限制员工使用AI旗舰模型以控制成本",
+        "summary": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力较低的大模型避免成本失控。至少一家企业月度AI开销增至三倍，超1500万美元。花旗银行因GitHub改为按量计费，于6月24日禁用Claude Opus 4.6、4.7及GPT-5.5等旗舰模型。Adobe于6月30日终止Claude无限制使用协议。Atlassian数据显示其AI月支出从500万美元飙升至1500万美元，本财年预计超1.2亿美元。GitHub计划改用开源模型并测试单人按量计费模式。",
+        "url": "https://www.ithome.com/0/971/937.htm"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "date": "2026-07-02",
+    "title": "Fable 5 在 RLI 基准中达成 16.1% 自动化率，较八个月前提升六倍",
+    "coreInsight": "Remote Labor Index（RLI）衡量 AI 智能体完成 240 个付费自由职业项目（总值 14.4 万美元）的专业质量比例。最新结果显示，Fable 5 自动化率达 16.1%，是八个月前最佳系统 2.5% 的六倍多，也超过 Opus 4.8（8.3%）和 GPT-5.5（6.3%）。因美国政府限制访问，Fable 5 仅完成 218/240 个项目评估，最坏情况仍达 14.6%。",
+    "whyItMatters": "Remote Labor Index（RLI）衡量 AI 智能体完成 240 个付费自由职业项目（总值 14.4 万美元）的专业质量比例。最新结果显示，Fable 5 自动化率达 16.1%，是八个月前最佳系统 2.5% 的六倍多，也超过 Opus 4.8（8.3%）和 GPT-5.5（6.3%）。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "07-02",
+        "title": "Fable 5 在 RLI 基准中达成 16.1% 自动化率，较八个月前提升六倍",
+        "summary": "Remote Labor Index（RLI）衡量 AI 智能体完成 240 个付费自由职业项目（总值 14.4 万美元）的专业质量比例。最新结果显示，Fable 5 自动化率达 16.1%，是八个月前最佳系统 2.5% 的六倍多，也超过 Opus 4.8（8.3%）和 GPT-5.5（6.3%）。因美国政府限制访问，Fable 5 仅完成 218/240 个项目评估，最坏情况仍达 14.6%。Gemini 3 Pro 仅 1.25%，落后于更老模型。AI 裁判会高估模型表现（GPT-5.5 评分偏高近三倍），仍需人类评估员打开专业软件（如 Blender）检验几何模型等细节。测试环境为虚拟 ",
+        "url": "https://the-decoder.com/ai-agents-can-now-complete-16-percent-of-freelance-jobs-at-pro-quality-up-from-2-5-percent-eight-months-ago"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "date": "2026-07-02",
+    "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+    "coreInsight": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。",
+    "whyItMatters": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。技术流水线包括转写、打包、生成 JSON 格式 EDL、ffmpeg 渲染及最多 3 轮自评估。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "X：邵猛 (@shao__meng)",
+        "time": "07-02",
+        "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+        "summary": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「video-use」，让 LLM 通过 ElevenLabs Scribe 将音频转写为约 12KB 文本（含逐词时间戳、说话人分离、事件标记），仅在决策点调用 timeline_view.py 生成 PNG 帧图。技术流水线包括转写、打包、生成 JSON 格式 EDL、ffmpeg 渲染及最多 3 轮自评估。渲染关键细节：分段提取 + `-c copy` 拼接、30ms 音频淡入淡出、PTS 时移、字幕最后叠加、HDR 自动映射、竖屏缩放、两-pass loudnorm。动画支持",
+        "url": "https://x.com/shao__meng/status/2072644710523691110"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "date": "2026-07-02",
+    "title": "证监会同意宇树科技科创板 IPO 注册申请",
+    "coreInsight": "7月2日，证监会同意宇树科技股份有限公司首次公开发行股票并在科创板上市的注册申请。宇树科技是国内头部民用足式、人形机器人研发企业，全球四足机器人销量领先，2016年由王兴兴在杭州创立，截至2025年6月员工总数超1000人。公司核心优势在于实现关节电机、减速器、控制器等核心零部件全栈自研，关键部件成本仅为进口产品的约1/3。批复自同意注册之日起12个月内有效。",
+    "whyItMatters": "7月2日，证监会同意宇树科技股份有限公司首次公开发行股票并在科创板上市的注册申请。宇树科技是国内头部民用足式、人形机器人研发企业，全球四足机器人销量领先，2016年由王兴兴在杭州创立，截至2025年6月员工总数超1000人。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "07-02",
+        "title": "证监会同意宇树科技科创板 IPO 注册申请",
+        "summary": "7月2日，证监会同意宇树科技股份有限公司首次公开发行股票并在科创板上市的注册申请。宇树科技是国内头部民用足式、人形机器人研发企业，全球四足机器人销量领先，2016年由王兴兴在杭州创立，截至2025年6月员工总数超1000人。公司核心优势在于实现关节电机、减速器、控制器等核心零部件全栈自研，关键部件成本仅为进口产品的约1/3。批复自同意注册之日起12个月内有效。",
+        "url": "https://www.ithome.com/0/971/790.htm"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "date": "2026-07-02",
+    "title": "Kimi K2.7 Code 已在 GitHub Copilot 上正式发布",
+    "coreInsight": "Kimi K2.7 Code 开源权重模型已在 GitHub Copilot 中正式可用，成为 Copilot 模型选择器首个可选的开源权重模型，为编程工作流提供更低成本选择。该模型由 GitHub 托管于 Microsoft Azure，按供应商列表价格以用量计费。",
+    "whyItMatters": "Kimi K2.7 Code 开源权重模型已在 GitHub Copilot 中正式可用，成为 Copilot 模型选择器首个可选的开源权重模型，为编程工作流提供更低成本选择。该模型由 GitHub 托管于 Microsoft Azure，按供应商列表价格以用量计费。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "07-02",
+        "title": "Kimi K2.7 Code 已在 GitHub Copilot 上正式发布",
+        "summary": "Kimi K2.7 Code 开源权重模型已在 GitHub Copilot 中正式可用，成为 Copilot 模型选择器首个可选的开源权重模型，为编程工作流提供更低成本选择。该模型由 GitHub 托管于 Microsoft Azure，按供应商列表价格以用量计费。逐步向 Copilot Pro、Pro+ 和 Max 计划用户推送，用户可在 Visual Studio Code 1.127.0 或更新版本、Visual Studio 17.14.6 或更新版本、JetBrains 1.9.1-251 或更新版本、Xcode、Eclipse 等 IDE 及 Copilot CLI、GitHub",
+        "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "date": "2026-07-02",
+    "title": "OpenAI提议美国政府持股5%估值426亿美元",
+    "coreInsight": "据Financial Times和CNBC报道，OpenAI提议向美国政府提供公司5%的股份，按近期8520亿美元估值计算，价值约426亿美元。OpenAI CEO Sam Altman表示，此举是与公众分享AI发展红利的最佳方式。",
+    "whyItMatters": "据Financial Times和CNBC报道，OpenAI提议向美国政府提供公司5%的股份，按近期8520亿美元估值计算，价值约426亿美元。OpenAI CEO Sam Altman表示，此举是与公众分享AI发展红利的最佳方式。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "X：Testing Catalog (@testingcatalog)",
+        "time": "07-02",
+        "title": "OpenAI提议美国政府持股5%估值426亿美元",
+        "summary": "据Financial Times和CNBC报道，OpenAI提议向美国政府提供公司5%的股份，按近期8520亿美元估值计算，价值约426亿美元。OpenAI CEO Sam Altman表示，此举是与公众分享AI发展红利的最佳方式。",
+        "url": "https://x.com/testingcatalog/status/2072585845542969583"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "date": "2026-07-02",
+    "title": "昆仑万维天工3.2发布Skywork Tags，AI智能体加入工作群聊",
+    "coreInsight": "昆仑万维天工3.2发布Skywork Tags，将AI智能体以团队成员身份接入Slack、飞书、钉钉、Discord、Telegram等即时通讯工具。团队可在原有工作群中@Skywork参与讨论，无需切换窗口或迁移数据。共享版Agent持续吸收多样上下文后表现反超精心调教的个人版，团队最终完全改用共享版。Skywork Tags不要求改变工作方式，让AI积累团队上下文并越用越强。",
+    "whyItMatters": "昆仑万维天工3.2发布Skywork Tags，将AI智能体以团队成员身份接入Slack、飞书、钉钉、Discord、Telegram等即时通讯工具。团队可在原有工作群中@Skywork参与讨论，无需切换窗口或迁移数据。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "公众号：昆仑万维（天工）",
+        "time": "07-02",
+        "title": "昆仑万维天工3.2发布Skywork Tags，AI智能体加入工作群聊",
+        "summary": "昆仑万维天工3.2发布Skywork Tags，将AI智能体以团队成员身份接入Slack、飞书、钉钉、Discord、Telegram等即时通讯工具。团队可在原有工作群中@Skywork参与讨论，无需切换窗口或迁移数据。共享版Agent持续吸收多样上下文后表现反超精心调教的个人版，团队最终完全改用共享版。Skywork Tags不要求改变工作方式，让AI积累团队上下文并越用越强。",
+        "url": "https://mp.weixin.qq.com/s/OqL6ID-mAel8XN-slYgXOA"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "date": "2026-07-02",
+    "title": "AI 版支付宝开放公测，蚂蚁阿宝无需邀请码即可体验",
+    "coreInsight": "支付宝阿宝 AI 助手今日正式开放公测，iOS 和安卓用户可在应用商店或支付宝 App 搜索\"阿宝\"或\"蚂蚁阿宝\"直接体验。开通后右滑进入新版，以对话方式安排办事，例如说出\"查公积金\"，阿宝会自动匹配对应小程序和服务入口，用户点击确认即可完成。支付宝承诺所有资金变动与支付环节均需用户本人确认，扫码、转账等功能已预留入口。",
+    "whyItMatters": "支付宝阿宝 AI 助手今日正式开放公测，iOS 和安卓用户可在应用商店或支付宝 App 搜索\"阿宝\"或\"蚂蚁阿宝\"直接体验。开通后右滑进入新版，以对话方式安排办事，例如说出\"查公积金\"，阿宝会自动匹配对应小程序和服务入口，用户点击确认即可完成。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "07-02",
+        "title": "AI 版支付宝开放公测，蚂蚁阿宝无需邀请码即可体验",
+        "summary": "支付宝阿宝 AI 助手今日正式开放公测，iOS 和安卓用户可在应用商店或支付宝 App 搜索\"阿宝\"或\"蚂蚁阿宝\"直接体验。开通后右滑进入新版，以对话方式安排办事，例如说出\"查公积金\"，阿宝会自动匹配对应小程序和服务入口，用户点击确认即可完成。支付宝承诺所有资金变动与支付环节均需用户本人确认，扫码、转账等功能已预留入口。",
+        "url": "https://www.ithome.com/0/971/469.htm"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "date": "2026-07-01",
+    "title": "智谱推出GLM-5.2官方开发环境ZCode",
+    "coreInsight": "推出 ZCode，GLM-5.2 的官方开发环境\n\n- GLM Coding Plan 订阅用户：现可在 ZCode 获得 1.5 倍使用配额\n- 支持 BYOK：可与您现有的订阅和 API 配合使用\n- 适用于 macOS、Windows 和 Linux\n\n立即下载：http://zcode.z.ai/en",
+    "whyItMatters": "推出 ZCode，GLM-5.2 的官方开发环境\n\n- GLM Coding Plan 订阅用户：现可在 ZCode 获得 1.5 倍使用配额\n- 支持 BYOK：可与您现有的订阅和 API 配合使用\n- 适用于 macOS、Windows 和 Linux\n\n立即下载：http://zcode.z.ai/en",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "X：智谱 Z.ai (@Zai_org)",
+        "time": "07-01",
+        "title": "智谱推出GLM-5.2官方开发环境ZCode",
+        "summary": "推出 ZCode，GLM-5.2 的官方开发环境\n\n- GLM Coding Plan 订阅用户：现可在 ZCode 获得 1.5 倍使用配额\n- 支持 BYOK：可与您现有的订阅和 API 配合使用\n- 适用于 macOS、Windows 和 Linux\n\n立即下载：http://zcode.z.ai/en",
+        "url": "https://x.com/Zai_org/status/2072349453361557898"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "date": "2026-07-01",
+    "title": "NVIDIA 发布 Nemotron-Labs-TwoTower 开放权重扩散语言模型",
+    "coreInsight": "NVIDIA 发布 Nemotron-Labs-TwoTower，基于冻结的自回归骨干 Nemotron-3-Nano-30B-A3B 的扩散语言模型。采用双塔架构：上下文塔冻结，降噪器塔训练，通过层对齐交叉注意力和状态播种协作。在 2×H100 上 BF16 评估，保留 98.7% 的 AR 基线质量，生成吞吐量提升 2.42 倍（γ=0.8，块大小 S=16）。",
+    "whyItMatters": "NVIDIA 发布 Nemotron-Labs-TwoTower，基于冻结的自回归骨干 Nemotron-3-Nano-30B-A3B 的扩散语言模型。采用双塔架构：上下文塔冻结，降噪器塔训练，通过层对齐交叉注意力和状态播种协作。",
+    "direction": "模型能力持续提升，竞争焦点从参数规模转向推理效率与垂直场景适配。6-12 个月内将有更多专用模型涌现。",
+    "opportunities": [
+      "模型微调与垂直场景适配服务",
+      "模型部署与推理优化工具"
+    ],
+    "risks": [
+      "模型能力与安全对齐之间的平衡风险",
+      "算力成本居高不下制约规模化部署"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost（RSS）",
+        "time": "07-01",
+        "title": "NVIDIA 发布 Nemotron-Labs-TwoTower 开放权重扩散语言模型",
+        "summary": "NVIDIA 发布 Nemotron-Labs-TwoTower，基于冻结的自回归骨干 Nemotron-3-Nano-30B-A3B 的扩散语言模型。采用双塔架构：上下文塔冻结，降噪器塔训练，通过层对齐交叉注意力和状态播种协作。在 2×H100 上 BF16 评估，保留 98.7% 的 AR 基线质量，生成吞吐量提升 2.42 倍（γ=0.8，块大小 S=16）。降噪器在约 2.1T token 上训练，骨干使用 25T token 预训练。总参数约 60B，每 token 活跃参数约 3B/塔。支持扩散、模拟 AR 和 AR 三种解码模式。",
+        "url": "https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "date": "2026-07-01",
+    "title": "亚马逊 AWS 砸 10 亿美元，派遣工程师进驻客户公司",
+    "coreInsight": "亚马逊 AWS 宣布设立新部门，组建前置驻场工程师团队，先期投入 10 亿美元（约 67.97 亿元人民币）。团队分批派驻客户企业，每批 5-6 组工程师，驻场周期 45 天，协助客户落地人工智能软件与智能体应用。该模式在 Palantir、Salesforce、Anthropic、谷歌云等企业已有先例，领英数据显示 2023 至 2025 年间同类岗位需求增长 42 倍。",
+    "whyItMatters": "亚马逊 AWS 宣布设立新部门，组建前置驻场工程师团队，先期投入 10 亿美元（约 67.97 亿元人民币）。团队分批派驻客户企业，每批 5-6 组工程师，驻场周期 45 天，协助客户落地人工智能软件与智能体应用。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "07-01",
+        "title": "亚马逊 AWS 砸 10 亿美元，派遣工程师进驻客户公司",
+        "summary": "亚马逊 AWS 宣布设立新部门，组建前置驻场工程师团队，先期投入 10 亿美元（约 67.97 亿元人民币）。团队分批派驻客户企业，每批 5-6 组工程师，驻场周期 45 天，协助客户落地人工智能软件与智能体应用。该模式在 Palantir、Salesforce、Anthropic、谷歌云等企业已有先例，领英数据显示 2023 至 2025 年间同类岗位需求增长 42 倍。新部门员工规模将达数千人，首批客户包括 NBA 与理光。",
+        "url": "https://www.ithome.com/0/971/071.htm"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "date": "2026-07-01",
+    "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+    "coreInsight": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。",
+    "whyItMatters": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。",
+    "direction": "模型能力持续提升，竞争焦点从参数规模转向推理效率与垂直场景适配。6-12 个月内将有更多专用模型涌现。",
+    "opportunities": [
+      "模型微调与垂直场景适配服务",
+      "模型部署与推理优化工具"
+    ],
+    "risks": [
+      "模型能力与安全对齐之间的平衡风险",
+      "算力成本居高不下制约规模化部署"
+    ],
+    "signals": [
+      {
+        "source": "公众号：龙猫LongCat（美团）",
+        "time": "07-01",
+        "title": "美团 LongCat-2.0 正式发布：国产算力集群训练的万亿参数大模型",
+        "summary": "美团于6月30日发布新一代万亿参数大模型LongCat-2.0并开源。总参数1.6T，平均激活约48B，原生支持1M超长上下文，在五万卡国产算力集群上完成全流程训练与推理。采用LSA稀疏注意力、零计算专家、ScMoE及MOPD多专家融合（Agent/Reasoning/Interaction三组专家）架构。评测中SWE-bench Pro获59.5，SWE-bench Multilingual获77.3。预览版已通过OpenRouter和longcat.ai开放，月调用量跻身OpenRouter全球前三。",
+        "url": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "date": "2026-07-01",
+    "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+    "coreInsight": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。",
+    "whyItMatters": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "07-01",
+        "title": "Anthropic在Claude Code中植入隐写术代码识别中国用户",
+        "summary": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行为被社区逆向发现后引发争议，被认为破坏用户信任。",
+        "url": "https://mp.weixin.qq.com/s/yLb4T2UC16ebKHApdBbgWw"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "date": "2026-07-01",
+    "title": "xAI 发布 Voice Agent Builder 测试版",
+    "coreInsight": "xAI 推出 Voice Agent Builder 测试版，这是一个基于 Grok Voice 的无代码平台，可在两分钟内创建生产级语音智能体。它集成电话、知识检索、工具、MCP、Guardrails 及可观测性，支持连接现有 SIP 号码、API 和 WebSocket，采用语音到语音路径。",
+    "whyItMatters": "xAI 推出 Voice Agent Builder 测试版，这是一个基于 Grok Voice 的无代码平台，可在两分钟内创建生产级语音智能体。它集成电话、知识检索、工具、MCP、Guardrails 及可观测性，支持连接现有 SIP 号码、API 和 WebSocket，采用语音到语音路径。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "xAI：News（网页）",
+        "time": "07-01",
+        "title": "xAI 发布 Voice Agent Builder 测试版",
+        "summary": "xAI 推出 Voice Agent Builder 测试版，这是一个基于 Grok Voice 的无代码平台，可在两分钟内创建生产级语音智能体。它集成电话、知识检索、工具、MCP、Guardrails 及可观测性，支持连接现有 SIP 号码、API 和 WebSocket，采用语音到语音路径。在 τ-voice Bench 上，Grok Voice Think Fast 1.0 得分 67.3%，领先 Gemini 3.1 Flash Live（43.8%）和 GPT Realtime 1.5（35.3%）。定价为每分钟音频 0.05 美元、电话费 0.01 美元，提供 80+ 种语音及声音",
+        "url": "https://x.ai/news/grok-voice-agent-builder"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "date": "2026-06-30",
+    "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
+    "coreInsight": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
+    "whyItMatters": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "06-30",
+        "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
+        "summary": "苹果CEO库克与欧盟科技事务负责人维尔库宁就新版Siri AI在欧推出举行建设性视频会议。新版Siri将转为可调用用户个人数据的聊天机器人，但因《数字市场法》互操作义务苹果拒绝向竞争对手开放同等数据权限，暂不在欧盟iPhone和iPad上推出。苹果提出\"可信系统代理\"方案，拟在设备与第三方AI模型间增加软件层，但未开发，并要求18个月监管宽限期，遭欧盟拒绝。欧盟收到数百封消费者邮件及死亡威胁。",
+        "url": "https://www.ithome.com/0/970/810.htm"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "date": "2026-06-30",
+    "title": "AI 用 prover-verifier LLM 循环攻克 9 个未解数学难题",
+    "coreInsight": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
+    "whyItMatters": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。",
+    "direction": "学术研究持续深入，从理论突破到工程落地的周期正在缩短。跨学科融合将成为新的突破点。",
+    "opportunities": [
+      "论文成果的工程化落地",
+      "跨学科 AI 研究合作"
+    ],
+    "risks": [
+      "学术成果与产业需求脱节",
+      "研究可复现性不足"
+    ],
+    "signals": [
+      {
+        "source": "X：AI Safety Memes (@AISafetyMemes)",
+        "time": "06-30",
+        "title": "AI 用 prover-verifier LLM 循环攻克 9 个未解数学难题",
+        "summary": "AI Safety Memes 推文指出，AI 刚刚解决了 9 个未解决的数学问题，但全球没有记者报道。引用 @WeinsteinOmri 的推文称，采用\"prover-verifier\"LLM 循环的方法，成功解决了理论计算机科学中 9 个重大开放问题，其中包括一个困扰其长达 2 年的难题。该研究由哥伦比亚大学合作者完成，并计划将这一方法扩展到所有科学领域。",
+        "url": "https://x.com/AISafetyMemes/status/2072085914558558402"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "date": "2026-06-30",
+    "title": "NotebookLM Short Video Overviews 全量上线 Web 英文版",
+    "coreInsight": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
+    "whyItMatters": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "X：NotebookLM (@NotebookLM)",
+        "time": "06-30",
+        "title": "NotebookLM Short Video Overviews 全量上线 Web 英文版",
+        "summary": "NotebookLM 正式向 Web 英文用户全量推出 Short Video Overviews（短视频概览）功能。该功能可将复杂资料自动转化为 60 秒竖屏视频，深入讲解任意概念。此前，这一功能已面向 Google AI Ultra 和 Pro 订阅者（移动端及 Web）推出，免费用户即将可用。",
+        "url": "https://x.com/NotebookLM/status/2072043680442245276"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "date": "2026-06-30",
+    "title": "Acti 将 AI 智能体直接放入手机键盘",
+    "coreInsight": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
+    "whyItMatters": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch：AI（RSS）",
+        "time": "06-30",
+        "title": "Acti 将 AI 智能体直接放入手机键盘",
+        "summary": "新加坡初创公司 Acti 发布基于 Google Gemini 的智能体键盘，可代替用户在应用中执行操作。核心功能 Skills 允许用自然语言创建快捷方式，如长按 T 键翻译消息、C 键发送会议链接。早期测试者两周内创建超 1000 个 Skills。采用本地优先架构，默认不访问私人消息。公司获 530 万美元种子轮融资，由 BITKRAFT Ventures 领投，现已开放下载。",
+        "url": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "date": "2026-06-30",
+    "title": "ADK Go 2.0 发布：构建可靠的多智能体应用，新增基于图的工作流引擎、人工参与循环与动态编排",
+    "coreInsight": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
+    "whyItMatters": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Google Developers Blog（RSS）",
+        "time": "06-30",
+        "title": "ADK Go 2.0 发布：构建可靠的多智能体应用，新增基于图的工作流引擎、人工参与循环与动态编排",
+        "summary": "Agent Development Kit （ADK） for Go 2.0 发布，引入了一类基于图的工作流引擎，用于组合复杂多智能体应用。新版本内置人工参与循环（HITL）编排、使用纯 Go 代码的动态执行、以及指数退避重试等自动弹性特性。统一执行模型后，单智能体应用与复杂图均运行在同一运行时上，简化了遥测与状态持久化。",
+        "url": "https://developers.googleblog.com/announcing-adk-go-20"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "date": "2026-06-30",
+    "title": "Apple Creator Studio 更新：更智能、更快速、更互联",
+    "coreInsight": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。",
+    "whyItMatters": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Apple：Newsroom（RSS）",
+        "time": "06-30",
+        "title": "Apple Creator Studio 更新：更智能、更快速、更互联",
+        "summary": "Apple Creator Studio 推出多项 AI 增强更新。Final Cut Pro 新增 on-device AI 驱动的 Generate Captions（自动转录音频生成字幕）和 Edit Detection（自动检测剪辑点）。Mac 版加入 Auto Mask（自动识别皮肤、天空等主体）、增强的 Match Color 和 Advanced Trimming。支持将帧发送至 Pixelmator Pro 编辑，并在 Keynote、Pages、Numbers 中直接调用 Pixelmator Pro 修改图片。Logic Pro 新增 Grammy 制作人制作的 Produ",
+        "url": "https://www.apple.com/newsroom/2026/06/apple-creator-studio-gets-smarter-faster-and-more-connected"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "date": "2026-06-30",
+    "title": "用 shot-scraper video 让 AI 智能体录制工作演示视频",
+    "coreInsight": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。",
+    "whyItMatters": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Simon Willison 博客",
+        "time": "06-30",
+        "title": "用 shot-scraper video 让 AI 智能体录制工作演示视频",
+        "summary": "shot-scraper 1.10 新增 shot-scraper video 命令，支持通过 storyboard.yml 文件定义操作步骤，并利用 Playwright 录制浏览器视频。演示视频展示了 Datasette 中从粘贴的 CSV/TSV/JSON 数据创建新表的功能。该功能依赖 Playwright 1.61.0 新增的 screencast 机制，解决了此前视频开头白帧、宽度固定 800px 等问题。开发者 Simon Willison 强调，将 --help 输出设计得足够详细，可使编码 Agent 直接利用该命令生成演示视频。",
+        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "date": "2026-06-30",
+    "title": "Claude Desktop 推出 Linux 公测版",
+    "coreInsight": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。\n\n除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
+    "whyItMatters": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "X：Claude Devs (@ClaudeDevs)",
+        "time": "06-30",
+        "title": "Claude Desktop 推出 Linux 公测版",
+        "summary": "Claude Desktop 现已在 Linux（Ubuntu 和 Debian）上推出测试版。\n\n除了浏览器和终端，你现在可以在所有付费计划中获得一流的桌面体验，包括 Claude Code、Claude Cowork 和聊天。",
+        "url": "https://x.com/ClaudeDevs/status/2071988881717871065"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "date": "2026-06-30",
+    "title": "Google DeepMind 发布 Nano Banana 2 Lite 和 Gemini Omni Flash",
+    "coreInsight": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.",
+    "whyItMatters": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.034，已上线 Google AI Studio、Gemini API 及消费者产品（AI Mode in Search、Gemini app 等）。",
+    "direction": "模型能力持续提升，竞争焦点从参数规模转向推理效率与垂直场景适配。6-12 个月内将有更多专用模型涌现。",
+    "opportunities": [
+      "模型微调与垂直场景适配服务",
+      "模型部署与推理优化工具"
+    ],
+    "risks": [
+      "模型能力与安全对齐之间的平衡风险",
+      "算力成本居高不下制约规模化部署"
+    ],
+    "signals": [
+      {
+        "source": "Google DeepMind：Blog（RSS）",
+        "time": "06-30",
+        "title": "Google DeepMind 发布 Nano Banana 2 Lite 和 Gemini Omni Flash",
+        "summary": "Google DeepMind 推出 Nano Banana 2 Lite（gemini-3.1-flash-lite-image），为 Nano Banana 系列速度最快、成本最低的图像模型，文本到图像输出仅需 4 秒，每 1K 分辨率图像成本 $0.034，已上线 Google AI Studio、Gemini API 及消费者产品（AI Mode in Search、Gemini app 等）。同时推出 Gemini Omni Flash（gemini-omni-flash-preview），支持高画质视频生成与对话式编辑，视频输出定价 $0.10/秒，面向开发者开放 API。",
+        "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "date": "2026-06-30",
+    "title": "Grant Sanderson 谈 AI 与数学的未来",
+    "coreInsight": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。即使 AI 未来解决千禧年大奖难题，仍可能存在大量人类任务无法被自动化。",
+    "whyItMatters": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "Dwarkesh Patel：Podcast & Blog（RSS）",
+        "time": "06-30",
+        "title": "Grant Sanderson 谈 AI 与数学的未来",
+        "summary": "3Blue1Brown 创办人 Grant Sanderson 正在制作记录 AI 在数学领域进展的新项目。他在与 Dwarkesh Patel 的对谈中指出，AI 在 IMO 获金牌并不等于 AGI，只是又一个被攻克的基准。即使 AI 未来解决千禧年大奖难题，仍可能存在大量人类任务无法被自动化。对话还探讨了概念突破验证周期可长达一个世纪、Riemann 假设的 AI 证明能否被人类理解、AI 能否在已有文献间发现隐藏联系，以及现实经济任务难以套用强化学习环境等话题。",
+        "url": "https://www.dwarkesh.com/p/grant-sanderson-2"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "date": "2026-06-30",
+    "title": "Meta秘密测试ChatGPT等竞品：承包商假扮未成年发送数万条危机提示",
+    "coreInsight": "Meta通过承包商Covelen发起代号\"Cannes\"的项目，雇佣数百人假扮未成年人，向ChatGPT、Gemini和Character.AI发送关于自杀、自残、饮食障碍和毒品的敏感提示，并将回复录入表格。2025年8月一轮测试中发送了超过4.5万条提示。Meta称这是行业标准安全测试，未将数据用于训练自家模型。",
+    "whyItMatters": "Meta通过承包商Covelen发起代号\"Cannes\"的项目，雇佣数百人假扮未成年人，向ChatGPT、Gemini和Character.AI发送关于自杀、自残、饮食障碍和毒品的敏感提示，并将回复录入表格。2025年8月一轮测试中发送了超过4.5万条提示。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "06-30",
+        "title": "Meta秘密测试ChatGPT等竞品：承包商假扮未成年发送数万条危机提示",
+        "summary": "Meta通过承包商Covelen发起代号\"Cannes\"的项目，雇佣数百人假扮未成年人，向ChatGPT、Gemini和Character.AI发送关于自杀、自残、饮食障碍和毒品的敏感提示，并将回复录入表格。2025年8月一轮测试中发送了超过4.5万条提示。Meta称这是行业标准安全测试，未将数据用于训练自家模型。被测试公司不知情--Character.AI表示违反其服务条款，OpenAI已调查，Google称未批准。青少年使用AI聊天机器人引发的担忧持续，此前已有用户自杀事件。",
+        "url": "https://the-decoder.com/meta-secretly-tested-chatgpt-gemini-and-character-ai-with-thousands-of-minor-perspective-crisis-prompts"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "date": "2026-06-30",
+    "title": "OpenAI Signals 数据揭示 ChatGPT 全球采用趋势",
+    "coreInsight": "OpenAI Signals 数据显示，用户注册六个月后日均消息量增加50%，尝试任务种类翻倍。自2023年7月以来，各大洲活跃用户均大幅增长，非洲和亚洲增速最快，低人类发展指数国家增长尤为显著。用户群体更加多元化，女性名字用户已占全球多数，巴西、哥伦比亚、波兰和纳米比亚等国女性用户显著多于男性。",
+    "whyItMatters": "OpenAI Signals 数据显示，用户注册六个月后日均消息量增加50%，尝试任务种类翻倍。自2023年7月以来，各大洲活跃用户均大幅增长，非洲和亚洲增速最快，低人类发展指数国家增长尤为显著。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "time": "06-30",
+        "title": "OpenAI Signals 数据揭示 ChatGPT 全球采用趋势",
+        "summary": "OpenAI Signals 数据显示，用户注册六个月后日均消息量增加50%，尝试任务种类翻倍。自2023年7月以来，各大洲活跃用户均大幅增长，非洲和亚洲增速最快，低人类发展指数国家增长尤为显著。用户群体更加多元化，女性名字用户已占全球多数，巴西、哥伦比亚、波兰和纳米比亚等国女性用户显著多于男性。非英语用户占活跃用户半数以上，领先语言为西班牙语、葡萄牙语和阿拉伯语；乌兹别克语、哈萨克语和缅甸语用户占比增长百分比最大。",
+        "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "date": "2026-06-30",
+    "title": "黑石未来3~5年拟投300亿美元在日本建AI数据中心，联合成立AI XPV平台",
+    "coreInsight": "黑石计划未来3~5年在日本AI数据中心领域投资300亿美元，此前的500MW基础上新增超1GW容量。黑石总裁认为AI投资仍处早期，真正风险是算力短缺而非基建泡沫；谷歌、亚马逊是英伟达潜在挑战者。此外，黑石、阿波罗、博通本月9日成立AI XPV平台，目标2028年向OpenAI、Anthropic等提供超20GW算力，首期350亿美元支持Anthropic在Fluidstack数据中心部署1GW基础。",
+    "whyItMatters": "黑石计划未来3~5年在日本AI数据中心领域投资300亿美元，此前的500MW基础上新增超1GW容量。黑石总裁认为AI投资仍处早期，真正风险是算力短缺而非基建泡沫；谷歌、亚马逊是英伟达潜在挑战者。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "06-30",
+        "title": "黑石未来3~5年拟投300亿美元在日本建AI数据中心，联合成立AI XPV平台",
+        "summary": "黑石计划未来3~5年在日本AI数据中心领域投资300亿美元，此前的500MW基础上新增超1GW容量。黑石总裁认为AI投资仍处早期，真正风险是算力短缺而非基建泡沫；谷歌、亚马逊是英伟达潜在挑战者。此外，黑石、阿波罗、博通本月9日成立AI XPV平台，目标2028年向OpenAI、Anthropic等提供超20GW算力，首期350亿美元支持Anthropic在Fluidstack数据中心部署1GW基础设施。",
+        "url": "https://www.ithome.com/0/970/583.htm"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "date": "2026-06-30",
+    "title": "特斯拉Cybercab量产版在奥斯汀启动公开道路工程测试",
+    "coreInsight": "2026年6月30日，特斯拉在奥斯汀公共道路启动首批量产版Cybercab工程测试。车辆无方向盘与脚踏板，配有安全监督员，马斯克发布实拍视频。从2024年10月概念车首秀到实车上路约20个月。目前不对外开放乘客，投入34台Cybercab在市中心验证硬件可靠性。Cybercab为双座车型，完全围绕无人驾驶打造，无后期改装。",
+    "whyItMatters": "2026年6月30日，特斯拉在奥斯汀公共道路启动首批量产版Cybercab工程测试。车辆无方向盘与脚踏板，配有安全监督员，马斯克发布实拍视频。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "06-30",
+        "title": "特斯拉Cybercab量产版在奥斯汀启动公开道路工程测试",
+        "summary": "2026年6月30日，特斯拉在奥斯汀公共道路启动首批量产版Cybercab工程测试。车辆无方向盘与脚踏板，配有安全监督员，马斯克发布实拍视频。从2024年10月概念车首秀到实车上路约20个月。目前不对外开放乘客，投入34台Cybercab在市中心验证硬件可靠性。Cybercab为双座车型，完全围绕无人驾驶打造，无后期改装。此前奥斯汀已有无安全员Model Y无人驾驶出租于1月启用、6月22日开放付费服务。",
+        "url": "https://www.ithome.com/0/970/539.htm"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "date": "2026-06-30",
+    "title": "X（Twitter）发布 hosted X MCP，AI 智能体可直连 X API",
+    "coreInsight": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。有用户实测拉取近三天书签仅花 0.1 美元。",
+    "whyItMatters": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "X：歸藏 (@op7418)",
+        "time": "06-30",
+        "title": "X（Twitter）发布 hosted X MCP，AI 智能体可直连 X API",
+        "summary": "X（Twitter）官方推出 hosted X MCP，AI 智能体可通过 MCP 协议直接调用 X API 获取实时信息，支持 Grok、Cursor 等工具。用户需注册 X API 并按量付费，个人优惠价每次调用 0.01 美元（1 美元 1000 次）。有用户实测拉取近三天书签仅花 0.1 美元。配置步骤：创建 APP 并充值、获取配置 ID、辅助配置（可交给 Codex/Claude）、授权启动。",
+        "url": "https://x.com/op7418/status/2071816099986022650"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "date": "2026-06-30",
+    "title": "AI就业争论变得更加混乱",
+    "coreInsight": "截至2026年5月，AI相关裁员接近9万个，预计未来五年美国最多15%的岗位将被AI替代。但Ramp与Revelio Labs对近22，000家公司的报告发现，高AI投入企业（前三个月人均月均支出30美元）总员工数增长10.2%，入门级岗位增长12%。报告认为AI并非普遍导致岗位消失，而是在资源充裕的科技企业里成为扩张工具--降低工程、销售、客服等职能的生产成本，从而推动整体增员。",
+    "whyItMatters": "截至2026年5月，AI相关裁员接近9万个，预计未来五年美国最多15%的岗位将被AI替代。但Ramp与Revelio Labs对近22，000家公司的报告发现，高AI投入企业（前三个月人均月均支出30美元）总员工数增长10.2%，入门级岗位增长12%。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch：AI（RSS）",
+        "time": "06-30",
+        "title": "AI就业争论变得更加混乱",
+        "summary": "截至2026年5月，AI相关裁员接近9万个，预计未来五年美国最多15%的岗位将被AI替代。但Ramp与Revelio Labs对近22，000家公司的报告发现，高AI投入企业（前三个月人均月均支出30美元）总员工数增长10.2%，入门级岗位增长12%。报告认为AI并非普遍导致岗位消失，而是在资源充裕的科技企业里成为扩张工具--降低工程、销售、客服等职能的生产成本，从而推动整体增员。但仅购买订阅而未持续投入的公司未见人头增长，可能加剧企业间的资源鸿沟。",
+        "url": "https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "date": "2026-06-30",
+    "title": "一个人管理5款产品，80%时间不写代码？Every的复利工程",
+    "coreInsight": "媒体软件公司Every公开「复利工程」方法论，以单人工程团队维护5款产品。核心是四步循环：Plan→Work→Review→Compound，其中Compound将每次解决问题的解法写入CLAUDE.md和docs/solutions/，使AI下次自动避坑。工程师80%时间花在Plan和Review，仅20%用于写代码。",
+    "whyItMatters": "媒体软件公司Every公开「复利工程」方法论，以单人工程团队维护5款产品。核心是四步循环：Plan→Work→Review→Compound，其中Compound将每次解决问题的解法写入CLAUDE.md和docs/solutions/，使AI下次自动避坑。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "X：小互 (@xiaohu)",
+        "time": "06-30",
+        "title": "一个人管理5款产品，80%时间不写代码？Every的复利工程",
+        "summary": "媒体软件公司Every公开「复利工程」方法论，以单人工程团队维护5款产品。核心是四步循环：Plan→Work→Review→Compound，其中Compound将每次解决问题的解法写入CLAUDE.md和docs/solutions/，使AI下次自动避坑。工程师80%时间花在Plan和Review，仅20%用于写代码。配套开源插件支持Claude Code等，含26个专项agent、23条工作流命令、13项技能，可零配置使用。/workflows：review一次并发14个agent审查代码，/workflows：plan在ultrathink模式下可并发40多个研究agent。",
+        "url": "https://x.com/xiaohu/status/2071796715162857477"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "date": "2026-06-30",
+    "title": "具身智能数据采集员：日薪200元起，给机器人当老师",
+    "coreInsight": "具身智能数据采集员以日薪200-250元招兼职，无需学历经验。面试先测量身高体重以适配采集手套，并询问是否晕VR。工作分两种：遥操作采集--穿戴设备控制双臂机器人完成分拣积木、叠纸杯等动作；无机器人示教采集--徒手重复动作（如叠衣服），设备记录轨迹。全球高质量物理交互数据截至2026年初仅约50万小时，不足大语言模型训练数据的两万分之一，需大量人力从零采集。",
+    "whyItMatters": "具身智能数据采集员以日薪200-250元招兼职，无需学历经验。面试先测量身高体重以适配采集手套，并询问是否晕VR。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "公众号：数字生命卡兹克",
+        "time": "06-30",
+        "title": "具身智能数据采集员：日薪200元起，给机器人当老师",
+        "summary": "具身智能数据采集员以日薪200-250元招兼职，无需学历经验。面试先测量身高体重以适配采集手套，并询问是否晕VR。工作分两种：遥操作采集--穿戴设备控制双臂机器人完成分拣积木、叠纸杯等动作；无机器人示教采集--徒手重复动作（如叠衣服），设备记录轨迹。全球高质量物理交互数据截至2026年初仅约50万小时，不足大语言模型训练数据的两万分之一，需大量人力从零采集。",
+        "url": "https://mp.weixin.qq.com/s/aSd4kLu7xHllZatrd5EGsw"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "date": "2026-06-30",
+    "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+    "coreInsight": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。",
+    "whyItMatters": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "公众号：卡尔的AI沃茨",
+        "time": "06-30",
+        "title": "AI News Radar 大更新：新增自媒体板块，支持订阅多平台账号",
+        "summary": "AI News Radar 迎来大更新，新增自媒体板块，支持订阅某书、某音、某站、某X等平台账号，每日按热度推荐 Top10 信息（无热门则不硬凑），同时保留时间轴视图，可在热度优先和时间优先间切换。官方来源包括 OpenAI、Anthropic、Google 等一手消息及 GitHub AI&ML 更新日志。信息流按来源、类型、信号等级分类，标注高优先级与多源认证。项目完全开源，可零 API 部署独立 AI 日报页面，支持手机移动端及暗色界面。",
+        "url": "https://mp.weixin.qq.com/s/iW5FVqbHtYi31mJ22Q_cog"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "date": "2026-06-30",
+    "title": "OpenAI 发布 GeneBench-Pro：计算生物学研究级基准测试",
+    "coreInsight": "OpenAI 发布 GeneBench-Pro，用于评估 AI 智能体在计算生物学中处理模糊性和做出判断性分析的能力。该基准包含 129 个问题，覆盖统计遗传学、群体遗传学等 10 个领域 21 个子领域。每个问题提供真实混乱的数据集和实验背景，要求模型探索数据、选择分析路径并迭代实验。采用合成数据构建，已知完整因果结构。82 个问题已由外部领域专家审核确认其现实性。",
+    "whyItMatters": "OpenAI 发布 GeneBench-Pro，用于评估 AI 智能体在计算生物学中处理模糊性和做出判断性分析的能力。该基准包含 129 个问题，覆盖统计遗传学、群体遗传学等 10 个领域 21 个子领域。",
+    "direction": "学术研究持续深入，从理论突破到工程落地的周期正在缩短。跨学科融合将成为新的突破点。",
+    "opportunities": [
+      "论文成果的工程化落地",
+      "跨学科 AI 研究合作"
+    ],
+    "risks": [
+      "学术成果与产业需求脱节",
+      "研究可复现性不足"
+    ],
+    "signals": [
+      {
+        "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "time": "06-30",
+        "title": "OpenAI 发布 GeneBench-Pro：计算生物学研究级基准测试",
+        "summary": "OpenAI 发布 GeneBench-Pro，用于评估 AI 智能体在计算生物学中处理模糊性和做出判断性分析的能力。该基准包含 129 个问题，覆盖统计遗传学、群体遗传学等 10 个领域 21 个子领域。每个问题提供真实混乱的数据集和实验背景，要求模型探索数据、选择分析路径并迭代实验。采用合成数据构建，已知完整因果结构。82 个问题已由外部领域专家审核确认其现实性。",
+        "url": "https://openai.com/index/introducing-genebench-pro"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "date": "2026-06-29",
+    "title": "Rubin Ultra取消，新版尺寸性能减半",
+    "coreInsight": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。1/4🧵",
+    "whyItMatters": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "X：SemiAnalysis (@SemiAnalysis_)",
+        "time": "06-29",
+        "title": "Rubin Ultra取消，新版尺寸性能减半",
+        "summary": "有意思：在GTC 2026宣布Rubin Ultra仅3个月后，原4-die Rubin Ultra因制造执行问题被取消。新的\"Rubin Ultra\"尺寸减半，实际性能约为原版的一半。1/4🧵",
+        "url": "https://x.com/SemiAnalysis_/status/2071700428249596290"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "date": "2026-06-29",
+    "title": "OpenClaw 发布原生 iOS 与 Android 应用",
+    "coreInsight": "OpenClaw 现已登陆 iOS 和 Android 🦞\n\n📱 原生移动应用，终于来了\n💬 智能体装进口袋\n🔔 频道、任务、回复，随时处理\n\n用你的大拇指，在任何地方运行智能体。\n\niOS： https://apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132\nAndroid： https://play.google.",
+    "whyItMatters": "OpenClaw 现已登陆 iOS 和 Android 🦞\n\n📱 原生移动应用，终于来了\n💬 智能体装进口袋\n🔔 频道、任务、回复，随时处理\n\n用你的大拇指，在任何地方运行智能体。iOS： https://apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132\nAndroid： https://play.google.com/store/apps/details?id=ai.openclaw.app。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "X：OpenClaw (@openclaw)",
+        "time": "06-29",
+        "title": "OpenClaw 发布原生 iOS 与 Android 应用",
+        "summary": "OpenClaw 现已登陆 iOS 和 Android 🦞\n\n📱 原生移动应用，终于来了\n💬 智能体装进口袋\n🔔 频道、任务、回复，随时处理\n\n用你的大拇指，在任何地方运行智能体。\n\niOS： https://apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132\nAndroid： https://play.google.com/store/apps/details?id=ai.openclaw.app",
+        "url": "https://x.com/openclaw/status/2071688039114342592"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "date": "2026-06-29",
+    "title": "Qwen 3.6 27B 是本地开发的理想选择",
+    "coreInsight": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。",
+    "whyItMatters": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "06-29",
+        "title": "Qwen 3.6 27B 是本地开发的理想选择",
+        "summary": "Qwen 3.6 27B 是一款密集参数本地大语言模型，原生支持 256k 上下文。在 Macbook Max M5 上运行 llama.cpp Q8_0 量化版（含多 token 预测）可达 30 tokens/s；用户反馈在 RTX 5090 上 Q6_K 量化可达 50 tokens/s。它可通过单个提示完成创意诗歌、用 pnpm 生成六边形扫雷游戏等任务，作者称其为首个真正具备通用智能的本地模型。另有一个 MoE 变体 35B A3B，但作者推荐 27B 版本。",
+        "url": "https://quesma.com/blog/qwen-36-is-awesome"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "date": "2026-06-29",
+    "title": "Google Research 推出 TabFM：用于表格数据的零样本基础模型",
+    "coreInsight": "Google Research 发布 TabFM，一种基于上下文学习（ICL）的零样本基础模型，专为表格数据的分类与回归任务设计。TabFM 将整个数据集（包含训练样本与待预测行）作为统一提示输入，在推理时直接从上下文中学习行列关系，无需模型训练、超参数调优或特征工程。与需大量人工调优的传统方法（如 XGBoost）不同，TabFM 通过单次前向传播即可在新表格上生成高质量预测。",
+    "whyItMatters": "Google Research 发布 TabFM，一种基于上下文学习（ICL）的零样本基础模型，专为表格数据的分类与回归任务设计。TabFM 将整个数据集（包含训练样本与待预测行）作为统一提示输入，在推理时直接从上下文中学习行列关系，无需模型训练、超参数调优或特征工程。",
+    "direction": "模型能力持续提升，竞争焦点从参数规模转向推理效率与垂直场景适配。6-12 个月内将有更多专用模型涌现。",
+    "opportunities": [
+      "模型微调与垂直场景适配服务",
+      "模型部署与推理优化工具"
+    ],
+    "risks": [
+      "模型能力与安全对齐之间的平衡风险",
+      "算力成本居高不下制约规模化部署"
+    ],
+    "signals": [
+      {
+        "source": "Google Research：Blog（网页）",
+        "time": "06-29",
+        "title": "Google Research 推出 TabFM：用于表格数据的零样本基础模型",
+        "summary": "Google Research 发布 TabFM，一种基于上下文学习（ICL）的零样本基础模型，专为表格数据的分类与回归任务设计。TabFM 将整个数据集（包含训练样本与待预测行）作为统一提示输入，在推理时直接从上下文中学习行列关系，无需模型训练、超参数调优或特征工程。与需大量人工调优的传统方法（如 XGBoost）不同，TabFM 通过单次前向传播即可在新表格上生成高质量预测。该模型已在 Hugging Face 和 GitHub 上开源。",
+        "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "date": "2026-06-29",
+    "title": "Google Research 将建筑屋顶反射率数据集扩展至全球 50+ 城市",
+    "coreInsight": "Google Research 发布扩展的建筑屋顶反射率数据集，覆盖全球 50 多个城市，旨在帮助城市规划者优先部署冷屋顶方案以缓解极端高温。该数据集融合 Sentinel-2 卫星数据与 30 厘米分辨率的 Airbus Pléiades Neo 卫星图像生成，可通过新的高分辨率 Heat Resilience Earth Engine App 开放获取。",
+    "whyItMatters": "Google Research 发布扩展的建筑屋顶反射率数据集，覆盖全球 50 多个城市，旨在帮助城市规划者优先部署冷屋顶方案以缓解极端高温。该数据集融合 Sentinel-2 卫星数据与 30 厘米分辨率的 Airbus Pléiades Neo 卫星图像生成，可通过新的高分辨率 Heat Resilience Earth Engine App 开放获取。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Google Research：Blog（网页）",
+        "time": "06-29",
+        "title": "Google Research 将建筑屋顶反射率数据集扩展至全球 50+ 城市",
+        "summary": "Google Research 发布扩展的建筑屋顶反射率数据集，覆盖全球 50 多个城市，旨在帮助城市规划者优先部署冷屋顶方案以缓解极端高温。该数据集融合 Sentinel-2 卫星数据与 30 厘米分辨率的 Airbus Pléiades Neo 卫星图像生成，可通过新的高分辨率 Heat Resilience Earth Engine App 开放获取。相关方法论发表于《Nature Communications》。此前 2024 年的试点已覆盖 14 个城市，其数据曾指导制定冷屋顶条例与适应计划。",
+        "url": "https://research.google/blog/expanding-our-heat-resilience-data-to-50-global-cities"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "date": "2026-06-29",
+    "title": "Claude Sonnet 5 发布",
+    "coreInsight": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。",
+    "whyItMatters": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。",
+    "direction": "模型能力持续提升，竞争焦点从参数规模转向推理效率与垂直场景适配。6-12 个月内将有更多专用模型涌现。",
+    "opportunities": [
+      "模型微调与垂直场景适配服务",
+      "模型部署与推理优化工具"
+    ],
+    "risks": [
+      "模型能力与安全对齐之间的平衡风险",
+      "算力成本居高不下制约规模化部署"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic：Newsroom（网页）",
+        "time": "06-29",
+        "title": "Claude Sonnet 5 发布",
+        "summary": "Claude Sonnet 5 是 Anthropic 推出的最新 Sonnet 模型，具备计划、浏览器和终端工具使用能力，可自主运行。性能接近 Opus 4.8，定价更低：即日起至 2026 年 8 月 31 日，输入 token $2/百万，输出 $10/百万，之后恢复为 $3/百万输入和 $15/百万输出。相比 Sonnet 4.6，在推理、工具使用、编程和知识工作等智能体能力上大幅提升。在 BrowseComp 和 OSWorld-Verified 评测中严格优于 Sonnet 4.6。安全评估显示不良行为率更低，幻觉和谄媚减少，但网络安全能力弱于 Opus 4.8。即日起在所有套餐及",
+        "url": "https://www.anthropic.com/news/claude-sonnet-5"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "date": "2026-06-29",
+    "title": "Claude Science 科研工作台正式上线",
+    "coreInsight": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。",
+    "whyItMatters": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic：Newsroom（网页）",
+        "time": "06-29",
+        "title": "Claude Science 科研工作台正式上线",
+        "summary": "Anthropic 推出 AI 科研工作台 Claude Science，整合常用工具与计算资源，支持从文献分析到多步骤研究的全流程。提供超 60 项预配置技能与连接器，覆盖基因组学、单细胞、蛋白质组学、结构生物学、化学信息学等领域；可在macOS/Linux本地运行，或通过SSH/HPC远程使用。生成含代码和环境的可审计成果（3D蛋白质结构、基因组浏览器轨迹等），内置reviewer agent自动检查引用与计算错误。通过NVIDIA BioNeMo接入Evo 2、Boltz-2等模型，也支持连接自有模型与管道。今日以beta版面向Claude Pro、Max、Team和Enterprise",
+        "url": "https://www.anthropic.com/news/claude-science-ai-workbench"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "date": "2026-06-29",
+    "title": "Claude Code 入门：智能体循环",
+    "coreInsight": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以。",
+    "whyItMatters": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "Claude：Blog（网页）",
+        "time": "06-29",
+        "title": "Claude Code 入门：智能体循环",
+        "summary": "Claude Code 团队将智能体循环定义为 agent 重复工作直到满足停止条件的过程，并划分出四种主要类型：turn-based 循环（用户提示触发，Claude 自行判断完成或需更多上下文）、goal-based 循环（通过 `/goal` 命令设定可验证完成标准与最大轮次）、time-based 循环（通过 `/loop` 按时间间隔重复执行，可用 `/schedule` 移至云端）、以及 proactive 循环（基于事件或计划自动运行，无人实时参与）。文章还介绍了如何编写 SKILL.md 文件将人工验证步骤编码，让 Claude 进行端到端自检，减少 turn-based 循环",
+        "url": "https://claude.com/blog/getting-started-with-loops"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "date": "2026-06-29",
+    "title": "Anthropic工程师Margot Van Laar：提示词工程实战--调试生产提示词为主，评估是唯一严谨方式",
+    "coreInsight": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词。",
+    "whyItMatters": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词更稳定，选用更强推理模型（Opus）。",
+    "direction": "AI 工程化实践正在快速迭代，最佳实践从少数先锋团队向全行业扩散。工具链和开发范式将持续演进。",
+    "opportunities": [
+      "关注该领域的商业化落地机会",
+      "探索相关方向的创业或投资机会"
+    ],
+    "risks": [
+      "技术成熟度不足的风险",
+      "市场竞争加剧的风险"
+    ],
+    "signals": [
+      {
+        "source": "X：Berry Xia (@berryxia)",
+        "time": "06-29",
+        "title": "Anthropic工程师Margot Van Laar：提示词工程实战--调试生产提示词为主，评估是唯一严谨方式",
+        "summary": "An anthropic应用AI工程师Margot Van Laar在Code with Claude分享提示词工程实战，核心观点：大部分时间在调试和维护已有生产提示词而非从零编写。两个场景：客服机器人维护中，用XML标签结构化清理，移除旧模型遗留的\"禁止列表\"指令（新模型会过度拟合），精确计算应调用工具，转人工决策需明确代价与收益；零售排班Agent从零构建时，拆成生成-评估-修复三个简单提示词更稳定，选用更强推理模型（Opus）。她反复强调：评估（Eval）是唯一严谨方式，没有评估就是碰运气。",
+        "url": "https://x.com/berryxia/status/2071610700213191075"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "date": "2026-06-29",
+    "title": "Herdr：驻留在终端中的AI智能体多路复用器",
+    "coreInsight": "Herdr是一个驻留在终端中的AI智能体多路复用器，允许用户在单一终端界面内管理和切换多个AI智能体会话。",
+    "whyItMatters": "Herdr是一个驻留在终端中的AI智能体多路复用器，允许用户在单一终端界面内管理和切换多个AI智能体会话。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "06-29",
+        "title": "Herdr：驻留在终端中的AI智能体多路复用器",
+        "summary": "Herdr是一个驻留在终端中的AI智能体多路复用器，允许用户在单一终端界面内管理和切换多个AI智能体会话。",
+        "url": "https://github.com/ogulcancelik/herdr"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "date": "2026-06-29",
+    "title": "美军用AI选目标却误炸伊朗学校，Anthropic Claude嵌入Palantir系统首日建议约1000目标",
+    "coreInsight": "美军在打击伊朗时首次大规模使用AI选择目标（Anthropic的Claude模型嵌入Palantir的Maven Smart System，首日建议约1000个目标），但对一所学校的导弹袭击导致约120名儿童死亡。调查发现，情报分析师早在2019年就通过数字工具标记该地点已变为小学，但该工具未连接军方官方目标数据库MIDB，信息从未送达指挥官。",
+    "whyItMatters": "美军在打击伊朗时首次大规模使用AI选择目标（Anthropic的Claude模型嵌入Palantir的Maven Smart System，首日建议约1000个目标），但对一所学校的导弹袭击导致约120名儿童死亡。调查发现，情报分析师早在2019年就通过数字工具标记该地点已变为小学，但该工具未连接军方官方目标数据库MIDB，信息从未送达指挥官。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "06-29",
+        "title": "美军用AI选目标却误炸伊朗学校，Anthropic Claude嵌入Palantir系统首日建议约1000目标",
+        "summary": "美军在打击伊朗时首次大规模使用AI选择目标（Anthropic的Claude模型嵌入Palantir的Maven Smart System，首日建议约1000个目标），但对一所学校的导弹袭击导致约120名儿童死亡。调查发现，情报分析师早在2019年就通过数字工具标记该地点已变为小学，但该工具未连接军方官方目标数据库MIDB，信息从未送达指挥官。MIDB建于1980年代，依赖手动输入，替代系统MARS多年延迟。五角大楼事后宣布推出agentic AI initiative。Project Maven创建人Jack Shanahan批评目标验证不力不可原谅。",
+        "url": "https://the-decoder.com/the-us-military-used-ai-to-pick-thousands-of-targets-but-missed-a-note-saying-one-was-a-school"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "date": "2026-06-29",
+    "title": "Meta发布Brain2Qwerty v2：非侵入式实时句子解码",
+    "coreInsight": "Meta公布Brain2Qwerty v2，这是非侵入式脑电信号解码研究的最新里程碑。基于当天发表在《Nature》的v1，v2是性能最高的端到端管道，能从原始脑信号实时解码句子。其从字符级性能提升至解码单词和语义，提高整体沟通准确性。该研究有望帮助数百万因脑损伤或疾病无法沟通的人群。",
+    "whyItMatters": "Meta公布Brain2Qwerty v2，这是非侵入式脑电信号解码研究的最新里程碑。基于当天发表在《Nature》的v1，v2是性能最高的端到端管道，能从原始脑信号实时解码句子。",
+    "direction": "学术研究持续深入，从理论突破到工程落地的周期正在缩短。跨学科融合将成为新的突破点。",
+    "opportunities": [
+      "论文成果的工程化落地",
+      "跨学科 AI 研究合作"
+    ],
+    "risks": [
+      "学术成果与产业需求脱节",
+      "研究可复现性不足"
+    ],
+    "signals": [
+      {
+        "source": "X：AI at Meta (@AIatMeta)",
+        "time": "06-29",
+        "title": "Meta发布Brain2Qwerty v2：非侵入式实时句子解码",
+        "summary": "Meta公布Brain2Qwerty v2，这是非侵入式脑电信号解码研究的最新里程碑。基于当天发表在《Nature》的v1，v2是性能最高的端到端管道，能从原始脑信号实时解码句子。其从字符级性能提升至解码单词和语义，提高整体沟通准确性。该研究有望帮助数百万因脑损伤或疾病无法沟通的人群。",
+        "url": "https://x.com/AIatMeta/status/2071566924803395741"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "date": "2026-06-29",
+    "title": "从任何地点构建--Cursor for iOS 公测版发布",
+    "coreInsight": "Cursor 推出 iOS 原生公测版，所有付费计划可用。开发者可在手机上启动始终在线的云端智能体，或远程操控电脑端智能体。支持语音输入、斜杠命令和选择前沿模型。智能体运行后，锁屏 Live Activities 和推送通知实时更新状态，完成或需要输入时提醒。云端智能体在隔离虚拟机中运行，可自动迭代生成合并就绪的 PR，并输出演示、截图和日志。本地与云端智能体支持双向切换。",
+    "whyItMatters": "Cursor 推出 iOS 原生公测版，所有付费计划可用。开发者可在手机上启动始终在线的云端智能体，或远程操控电脑端智能体。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "Cursor Blog",
+        "time": "06-29",
+        "title": "从任何地点构建--Cursor for iOS 公测版发布",
+        "summary": "Cursor 推出 iOS 原生公测版，所有付费计划可用。开发者可在手机上启动始终在线的云端智能体，或远程操控电脑端智能体。支持语音输入、斜杠命令和选择前沿模型。智能体运行后，锁屏 Live Activities 和推送通知实时更新状态，完成或需要输入时提醒。云端智能体在隔离虚拟机中运行，可自动迭代生成合并就绪的 PR，并输出演示、截图和日志。本地与云端智能体支持双向切换。移动端 Composer 2.5 享受 75% 折扣，优惠至 2026 年 7 月 5 日。",
+        "url": "https://cursor.com/blog/ios-mobile-app"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "date": "2026-06-29",
+    "title": "小红书 RedKnot 推理引擎：将 KV Cache 按注意力头拆解实现长文本加速",
+    "coreInsight": "RedKnot 将 KV Cache 沿注意力头维度拆解，通过头分类稀疏（局部头占 83.4%-96.8%）、稀疏 FFN 和 SegPagedAttention 三个机制统一算法与存储粒度。在 8 卡 H800 上，TTFT 最高加速 1.6-3.54×，单卡并发提升 4.7-7.8×，预填充 FLOPs 削减 67%-79.5%。",
+    "whyItMatters": "RedKnot 将 KV Cache 沿注意力头维度拆解，通过头分类稀疏（局部头占 83.4%-96.8%）、稀疏 FFN 和 SegPagedAttention 三个机制统一算法与存储粒度。在 8 卡 H800 上，TTFT 最高加速 1.6-3.54×，单卡并发提升 4.7-7.8×，预填充 FLOPs 削减 67%-79.5%。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "公众号：小红书技术（dots.llm）",
+        "time": "06-29",
+        "title": "小红书 RedKnot 推理引擎：将 KV Cache 按注意力头拆解实现长文本加速",
+        "summary": "RedKnot 将 KV Cache 沿注意力头维度拆解，通过头分类稀疏（局部头占 83.4%-96.8%）、稀疏 FFN 和 SegPagedAttention 三个机制统一算法与存储粒度。在 8 卡 H800 上，TTFT 最高加速 1.6-3.54×，单卡并发提升 4.7-7.8×，预填充 FLOPs 削减 67%-79.5%。DeepSeek-V4-Flash 上 128K 上下文 TTFT 加速达 5.16×，KV 传输最多省 6.3×。精度通常不低于稠密 F1 的 95%。",
+        "url": "https://mp.weixin.qq.com/s/qRrZvL0aZzYI82djFSrLug"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "date": "2026-06-29",
+    "title": "EverOS：开源Markdown优先智能体记忆运行时，支持混合检索与自进化技能",
+    "coreInsight": "EverMind 推出开源智能体记忆运行时 EverOS（Apache 2.0 许可）。它以可编辑的 Markdown 文件为记忆主体，经 SQLite 管理状态、LanceDB 实现混合检索（BM25 关键词 + 向量搜索 + 标量过滤）。每个完成的任务记录为 Case，离线提炼为可复用的 Skill，使记忆随使用自我进化。",
+    "whyItMatters": "EverMind 推出开源智能体记忆运行时 EverOS（Apache 2.0 许可）。它以可编辑的 Markdown 文件为记忆主体，经 SQLite 管理状态、LanceDB 实现混合检索（BM25 关键词 + 向量搜索 + 标量过滤）。",
+    "direction": "AI 产品正在从工具型向平台型演进，商业模式逐渐清晰。未来半年将看到更多 AI 原生应用的规模化落地。",
+    "opportunities": [
+      "AI 产品设计与用户体验优化",
+      "AI 原生应用的商业化路径探索"
+    ],
+    "risks": [
+      "用户付费意愿不足导致商业化受阻",
+      "巨头入场挤压初创公司生存空间"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost（RSS）",
+        "time": "06-29",
+        "title": "EverOS：开源Markdown优先智能体记忆运行时，支持混合检索与自进化技能",
+        "summary": "EverMind 推出开源智能体记忆运行时 EverOS（Apache 2.0 许可）。它以可编辑的 Markdown 文件为记忆主体，经 SQLite 管理状态、LanceDB 实现混合检索（BM25 关键词 + 向量搜索 + 标量过滤）。每个完成的任务记录为 Case，离线提炼为可复用的 Skill，使记忆随使用自我进化。v1.1.0 新增 Knowledge APIs（支持分类与话题搜索的 Markdown 页面）和 Reflection（跨会话优化 Profile 和 Skill）。据 EverMind 报告，LoCoMo 得分 93.05%，LongMemEval 83.00%，Ha",
+        "url": "https://www.marktechpost.com/2026/06/29/meet-everos-an-open-source-markdown-first-agent-memory-runtime-with-hybrid-bm25-vector-retrieval-and-self-evolving-skills"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "date": "2026-06-29",
+    "title": "Claude Code 打开 GitHub 仓库即执行隐藏恶意代码，攻击者可获完全控制",
+    "coreInsight": "安全研究人员在 Mozilla 的 GenAI 漏洞赏金平台 0DIN 发现新攻击向量。一个看似正常的 GitHub 仓库包含 setup 脚本，该脚本运行时从 DNS 条目拉取命令并执行，恶意代码从未存在于仓库中，对扫描器、代码审查和 AI 智能体不可见。",
+    "whyItMatters": "安全研究人员在 Mozilla 的 GenAI 漏洞赏金平台 0DIN 发现新攻击向量。一个看似正常的 GitHub 仓库包含 setup 脚本，该脚本运行时从 DNS 条目拉取命令并执行，恶意代码从未存在于仓库中，对扫描器、代码审查和 AI 智能体不可见。",
+    "direction": "学术研究持续深入，从理论突破到工程落地的周期正在缩短。跨学科融合将成为新的突破点。",
+    "opportunities": [
+      "论文成果的工程化落地",
+      "跨学科 AI 研究合作"
+    ],
+    "risks": [
+      "学术成果与产业需求脱节",
+      "研究可复现性不足"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "06-29",
+        "title": "Claude Code 打开 GitHub 仓库即执行隐藏恶意代码，攻击者可获完全控制",
+        "summary": "安全研究人员在 Mozilla 的 GenAI 漏洞赏金平台 0DIN 发现新攻击向量。一个看似正常的 GitHub 仓库包含 setup 脚本，该脚本运行时从 DNS 条目拉取命令并执行，恶意代码从未存在于仓库中，对扫描器、代码审查和 AI 智能体不可见。开发者使用 Claude Code 等 AI 编码工具打开该仓库时，Claude Code 在设置过程中遇到常规错误消息后自动运行该脚本，打开反向 shell，攻击者可窃取 API 密钥和登录凭据并维持持久访问。研究人员建议 AI 智能体应在运行前显示 setup 脚本内容，开发者应将第三方仓库的 setup 说明视为不受信任代码。",
+        "url": "https://the-decoder.com/claude-code-runs-a-github-repos-hidden-malware-without-verification-giving-attackers-full-control"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "date": "2026-06-29",
+    "title": "国务院印发《教育发展\"十五五\"规划》，推进人工智能全学段教育",
+    "coreInsight": "国务院日前印发《教育发展\"十五五\"规划》，要求推进人工智能全学段教育，提升学生人工智能素养及提出问题、解决问题的能力。规划明确完善科学教育体系，强化科技教育与人文教育协同，加强青少年科学素养、批判性思维和创新能力培养。同时实施学生体质强健计划、心理健康促进行动，加大拔尖创新人才自主培养力度，推动学科交叉融合，扩大优质本科招生规模。目标到2030年高质量教育体系基本建成。",
+    "whyItMatters": "国务院日前印发《教育发展\"十五五\"规划》，要求推进人工智能全学段教育，提升学生人工智能素养及提出问题、解决问题的能力。规划明确完善科学教育体系，强化科技教育与人文教育协同，加强青少年科学素养、批判性思维和创新能力培养。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "06-29",
+        "title": "国务院印发《教育发展\"十五五\"规划》，推进人工智能全学段教育",
+        "summary": "国务院日前印发《教育发展\"十五五\"规划》，要求推进人工智能全学段教育，提升学生人工智能素养及提出问题、解决问题的能力。规划明确完善科学教育体系，强化科技教育与人文教育协同，加强青少年科学素养、批判性思维和创新能力培养。同时实施学生体质强健计划、心理健康促进行动，加大拔尖创新人才自主培养力度，推动学科交叉融合，扩大优质本科招生规模。目标到2030年高质量教育体系基本建成。",
+        "url": "https://www.ithome.com/0/970/097.htm"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "date": "2026-06-29",
+    "title": "三星和SK海力士计划投资5900亿美元扩产芯片，AI需求推高内存价格",
+    "coreInsight": "在韩国政府支持下，三星和SK海力士计划投入5900亿美元扩大芯片产能，包括800万亿韩元新建四座工厂、81万亿韩元建封装中心，以及未来15年30万亿韩元用于研发下一代芯片。AI数据中心需求是主要驱动力。Jefferies预测，2026年Q3内存价格将上涨40%至50%，Q4再涨30%至40%，2027年继续上涨40%至45%，到2028年新产能仅上线15%至20%才可能缓解。",
+    "whyItMatters": "在韩国政府支持下，三星和SK海力士计划投入5900亿美元扩大芯片产能，包括800万亿韩元新建四座工厂、81万亿韩元建封装中心，以及未来15年30万亿韩元用于研发下一代芯片。AI数据中心需求是主要驱动力。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "06-29",
+        "title": "三星和SK海力士计划投资5900亿美元扩产芯片，AI需求推高内存价格",
+        "summary": "在韩国政府支持下，三星和SK海力士计划投入5900亿美元扩大芯片产能，包括800万亿韩元新建四座工厂、81万亿韩元建封装中心，以及未来15年30万亿韩元用于研发下一代芯片。AI数据中心需求是主要驱动力。Jefferies预测，2026年Q3内存价格将上涨40%至50%，Q4再涨30%至40%，2027年继续上涨40%至45%，到2028年新产能仅上线15%至20%才可能缓解。两家公司合计控制全球近80%的高带宽内存芯片市场。内存涨价已推高消费电子产品成本，苹果已上调Mac和MacBook售价。",
+        "url": "https://the-decoder.com/samsung-and-sk-hynix-plan-590-billion-chip-investment-as-ai-demand-sends-memory-prices-soaring"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "date": "2026-06-29",
+    "title": "OpenAI 报告：绘制欧洲 AI 劳动力机遇版图",
+    "coreInsight": "OpenAI 发布新报告，分析 AI 对欧盟就业的影响，划定哪些职业面临自动化、增长或工作流程变化。",
+    "whyItMatters": "OpenAI 发布新报告，分析 AI 对欧盟就业的影响，划定哪些职业面临自动化、增长或工作流程变化。",
+    "direction": "学术研究持续深入，从理论突破到工程落地的周期正在缩短。跨学科融合将成为新的突破点。",
+    "opportunities": [
+      "论文成果的工程化落地",
+      "跨学科 AI 研究合作"
+    ],
+    "risks": [
+      "学术成果与产业需求脱节",
+      "研究可复现性不足"
+    ],
+    "signals": [
+      {
+        "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+        "time": "06-29",
+        "title": "OpenAI 报告：绘制欧洲 AI 劳动力机遇版图",
+        "summary": "OpenAI 发布新报告，分析 AI 对欧盟就业的影响，划定哪些职业面临自动化、增长或工作流程变化。",
+        "url": "https://openai.com/index/mapping-ai-jobs-transition-eu"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "date": "2026-06-29",
+    "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
+    "coreInsight": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转变，构建韩国智能市场。",
+    "whyItMatters": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转变，构建韩国智能市场。",
+    "direction": "行业整合加速，巨头与初创公司的竞合关系日益复杂。监管与商业化之间的平衡将是未来一年的核心命题。",
+    "opportunities": [
+      "AI 合规与治理咨询服务",
+      "AI 行业研究报告与战略咨询"
+    ],
+    "risks": [
+      "监管政策不确定性增加合规成本",
+      "AI 泡沫破裂导致资本退潮"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "06-29",
+        "title": "SK 集团会长崔泰源：到 2035 年建设 15GW AI 数据中心，总投资达 1000 万亿韩元",
+        "summary": "SK 集团会长崔泰源 6 月 29 日宣布，计划到 2035 年建成 15GW AI 数据中心容量，作为韩国国家级基础设施和实体 AI 时代核心底座。项目总投资 1000 万亿韩元（约 4.4 万亿元人民币），未来 10 年保持年均 100 万亿韩元以上国内投资，旨在实现从出口传统商品向智能服务的转变，构建韩国智能市场。此外，SK 海力士将向韩国西南部投资 400 万亿韩元，半导体供应项目总投资达 1100 万亿韩元（约 4.84 万亿元人民币）。",
+        "url": "https://www.ithome.com/0/969/953.htm"
+      }
+    ]
+  }
 ]
