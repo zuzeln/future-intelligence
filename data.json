@@ -4697,8 +4697,7 @@
         "url": "https://the-decoder.com/a-26000-student-study-shows-ais-hidden-learning-cost-takes-two-full-years-to-surface"
       }
     ]
-  }
-,
+  },
   {
     "id": 132,
     "date": "2026-07-02",
@@ -6098,8 +6097,7 @@
         "url": "https://www.ithome.com/0/969/953.htm"
       }
     ]
-  }
-,
+  },
   {
     "id": 188,
     "date": "2026-06-29",
@@ -6305,6 +6303,35 @@
       "阻止系统睡眠可能加速 Mac 电池损耗和硬件老化，长期使用需权衡利弊",
       "依赖进程嗅探监控 Agent 状态，如果 Agent 更新进程名或架构则可能失效",
       "macOS Tahoe 26.4 的版本依赖限制了用户群体，旧版本 macOS 用户无法使用"
+    ]
+  },
+  {
+    "id": 199,
+    "date": "2026-07-05",
+    "title": "LlamaIndex 发布 legal-kb：基于 Index v2 的智能体检索参考应用",
+    "coreInsight": "LlamaIndex legal-kb 展示了 AI Agent 检索架构的新范式——Retrieval Harness。不是简单让 Agent 调一个 RAG API，而是赋予 Agent 四个文件系统风格工具（retrieve/findFiles/readFile/grepFile），让 Agent 像人类研究员一样自主规划检索路径。这代表了 Agent 工具设计的「组合优于单体」哲学。",
+    "whyItMatters": "法律文档场景对检索精度和可溯源性要求极高，传统 RAG 的「输入问题→返回片段」模式无法满足律师逐文件、逐段落核验的需求。legal-kb 的 Retrieval Harness 模式允许 Agent 先列出文件清单、再逐文件定位内容，整个检索链可审计可追溯。该模式可推广到金融合规、医疗记录、科研文献等所有高精度检索场景。",
+    "direction": "Agent 的工具设计正在从「单体 API」转向「文件系统原语组合」。未来的 AI Agent 不会只有一个 search() 函数，而是拥有一套完整的文件系统操作工具箱。Vercel AI SDK 6 的 ToolLoopAgent 为此类多工具编排提供了标准化框架，预训练模型+Agent 框架+垂直场景的三角组合将成为 Agent 应用的标准范式。",
+    "opportunities": [
+      "基于 Retrieval Harness 模式构建金融合规、医疗记录等垂直领域的 Agent 检索框架",
+      "将 legal-kb 的四个检索工具抽象为通用 Agent 检索 SDK，供企业级 RAG 系统集成",
+      "在 legal-kb 基础上增加检索链审计日志功能，满足法律行业的合规审查要求",
+      "参考 Retrieval Harness 模式，为科研文献检索、专利分析等场景设计专用 Agent 工具集"
+    ],
+    "risks": [
+      "Retrieval Harness 模式下 Agent 需要多步工具调用，延迟和 token 消耗显著高于单步 RAG，成本控制是落地障碍",
+      "正则 grep 和全量文件读取在大规模文档库中可能产生性能瓶颈，需要增加向量索引等加速手段",
+      "法律领域对 AI 检索结果的准确性要求极高，Agent 自主规划路径可能引入不可预测的检索遗漏",
+      "依赖 Vercel AI SDK 6 和特定 Agent 框架，技术栈锁定风险——框架迭代可能迫使应用重构"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost",
+        "time": "7/5 15:50",
+        "title": "LlamaIndex 发布 legal-kb：基于 Index v2 的智能体检索参考应用",
+        "summary": "基于 Index v2 和 Retrieval Harness 模式的法律文档检索 Agent 参考应用，赋予 Agent 四个文件系统风格工具。",
+        "url": "https://www.marktechpost.com/2026/07/05/llamaindex-legal-kb-agentic-retrieval-over-index-v2-with-retrieve-find-read-and-grep-tools"
+      }
     ]
   }
 ]
