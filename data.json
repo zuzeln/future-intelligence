@@ -6916,5 +6916,213 @@
         "url": "https://seldo.com/posts/ai-has-torched-the-market-for-junior-programmers"
       }
     ]
+  },
+  {
+    "id": 221,
+    "date": "2026-07-06",
+    "title": "Claude Code 团队详解四种智能体循环类型",
+    "coreInsight": "Claude Code团队正式定义四种智能体循环模式（回合/目标/时间/主动），为智能体自主运行提供了从简单到复杂的渐进式架构范式。",
+    "whyItMatters": "这是首次由顶级智能体产品团队系统化阐述智能体循环设计范式，为企业部署自主AI智能体提供了可操作的分级框架，直接指导何时该用简单循环、何时该用云端持续运行的主动循环。",
+    "direction": "6-12个月内，智能体产品将普遍采用分级循环架构。`/loop`和`/schedule`模式将催生「云端常驻AI助手」品类。",
+    "opportunities": [
+      "基于分级循环架构的企业智能体编排平台",
+      "面向云端持续运行的智能体托管服务",
+      "智能体循环模式的最佳实践咨询与培训"
+    ],
+    "risks": [
+      "主动循环模式下的无人值守可能导致不可逆的错误操作",
+      "云端常驻智能体的安全和合规风险尚待充分评估"
+    ],
+    "signals": [
+      {
+        "source": "X：Claude Devs (@ClaudeDevs)",
+        "time": "2026-07-06",
+        "title": "Claude Code 团队详解四种智能体循环类型",
+        "summary": "Claude Code 团队将\"设计循环\"定义为智能体重复工作直到满足停止条件，划分四种类型：1）回合循环--手动提示触发，Claude 自判完成，适合短任务，可通过 SKILL.md 提升验证；2）目标循环--`/goal` 手动触发，达",
+        "url": "https://x.com/ClaudeDevs/status/2074208949205881033"
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "date": "2026-07-06",
+    "title": "2026年科技公司AI裁员名单：Microsoft、Oracle、GitLab等十家公司裁减数千岗位",
+    "coreInsight": "2026年累计12万科技岗位被裁，Microsoft（4800）、Oracle（21000）、Meta（8000+7000转岗AI）领衔——AI裁员从「个案」升级为「行业趋势」，且裁减与AI投资直接挂钩。",
+    "whyItMatters": "12万不是抽象数字——Oracle裁减13%、Cloudflare裁减20%——这些比例说明AI替代不再是未来预警，而是正在发生的结构性就业转移。企业明确以「投资AI基础设施」为由裁员，意味着AI投资与人力成本正在同一张损益表上进行零和博弈。",
+    "direction": "2026下半年科技行业AI相关裁员将持续，非科技行业将在2027年跟进。AI转岗培训将成为企业标配。",
+    "opportunities": [
+      "面向被裁技术人员的AI技能转型培训平台",
+      "帮助企业规划AI人力转型的组织变革咨询",
+      "AI对就业影响的实时追踪与分析数据产品"
+    ],
+    "risks": [
+      "大规模AI裁员可能引发政府干预和劳工保护立法",
+      "AI投资回报若不及预期，裁员企业将面临双重损失"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch：AI（RSS）",
+        "time": "2026-07-06",
+        "title": "2026年科技公司AI裁员名单：Microsoft、Oracle、GitLab等十家公司裁减数千岗位",
+        "summary": "2026年以来，多家科技公司以AI为由大规模裁员。Microsoft裁减约4800岗位（2.1%），Oracle裁减21000人（13%），GitLab裁减350人（14%）以投资AI基础设施，Google Cloud持续裁减员工（外界估计",
+        "url": "https://techcrunch.com/2026/07/06/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai"
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "date": "2026-07-06",
+    "title": "Claude Fable实地指南：发现你的未知",
+    "coreInsight": "Anthropic正式发布Claude Fable协作方法论——将问题分为已知的已知、已知的未知、未知的已知、未知的未知四类，通过盲点检查、头脑风暴、原型设计和答辩解释迭代发现并解决问题。",
+    "whyItMatters": "这是首份系统化阐述如何与前沿AI模型协作的官方指南。核心洞察是：Fable的价值不在于给出正确答案，而在于帮助用户发现他们不知道的问题——「未知的未知」是最高价值区。",
+    "direction": "3-6个月内「AI协作方法论」将成为企业培训的新品类。已知-未知四象限框架将被更多AI产品文档采用。",
+    "opportunities": [
+      "面向企业团队的AI协作方法论培训课程",
+      "将四象限框架嵌入AI产品交互设计",
+      "基于未知发现的AI辅助代码审查工具"
+    ],
+    "risks": [
+      "方法论的过度包装可能让用户对AI能力产生不切实际的期望",
+      "依赖AI发现未知可能导致人类放弃主动探索"
+    ],
+    "signals": [
+      {
+        "source": "Claude：Blog（网页）",
+        "time": "2026-07-06",
+        "title": "Claude Fable实地指南：发现你的未知",
+        "summary": "Claude Fable是第一款要求用户主动澄清未知才能获得高质量工作的模型。与Claude Fable协作是一个在实现前后迭代发现未知的过程。通过将问题分解为已知的已知、已知的未知、未知的已知和未知的未知四类，用户可以借助Claude F",
+        "url": "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "date": "2026-07-06",
+    "title": "OpenClaw 登陆 HuggingFace 本地应用",
+    "coreInsight": "OpenClaw成为首个登陆HuggingFace本地应用商店的工具调用智能体——用户可在本地运行任意GGUF/MLX模型，实现完全离线的AI智能体操作。",
+    "whyItMatters": "「无云端、无密钥、无人监控」三点标志着AI智能体从云端API依赖走向本地自主运行。这在数据隐私敏感场景和政府机构中具有战略意义。",
+    "direction": "6-12个月内，本地优先的AI智能体将形成独立赛道。HuggingFace可能成为AI智能体的「应用商店」。",
+    "opportunities": [
+      "面向隐私敏感行业（医疗、金融、政府）的本地智能体解决方案",
+      "基于本地开源模型的垂直领域智能体定制服务",
+      "本地智能体的安全审计与合规认证"
+    ],
+    "risks": [
+      "本地运行缺乏云端的安全监控和滥用检测",
+      "开源模型的能力天花板可能限制复杂任务的表现"
+    ],
+    "signals": [
+      {
+        "source": "X：OpenClaw (@openclaw)",
+        "time": "2026-07-06",
+        "title": "OpenClaw 登陆 HuggingFace 本地应用",
+        "summary": "OpenClaw 登陆 @huggingface 本地应用 🦞🤝🤗\n\n1. 在 hf 上挑任意 GGUF/MLX 模型\n2. 复制 openclaw onboard 设置\n3. Voila，你得到一个完全本地的工具调用智能体。无云端、无密钥",
+        "url": "https://x.com/openclaw/status/2074187998602871212"
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "date": "2026-07-06",
+    "title": "SGLang 集成 DSpark 推测解码：置信度驱动的可变长度验证",
+    "coreInsight": "SGLang团队将DSpark推测解码算法集成到开源推理引擎中，实现了高并发下吞吐-延迟的最优权衡，采用置信度驱动的可变验证长度裁剪无效计算。",
+    "whyItMatters": "DSpark的核心创新在于「动态分配验证资源」——不浪费算力在高置信度的token上，在高负载下尤其有效。这解决了推测解码在大批量推理时性能退化的问题，为DeepSeek-V4等稀疏模型提供了实用加速方案。",
+    "direction": "6-12个月内，可变长度验证将成为推测解码的主流范式。SGLang凭借DSpark集成将巩固开源推理引擎的领先地位。",
+    "opportunities": [
+      "基于DSpark优化的高吞吐量模型推理API服务",
+      "面向企业自建推理集群的DSpark部署与调优",
+      "推测解码算法的跨框架移植与对比评测"
+    ],
+    "risks": [
+      "置信度头可能在某些边缘情况下误判，导致推理质量下降",
+      "可变压力的调度器复杂度增加，可能引入新的故障模式"
+    ],
+    "signals": [
+      {
+        "source": "LMSYS：Blog（Chatbot Arena 团队）",
+        "time": "2026-07-06",
+        "title": "SGLang 集成 DSpark 推测解码：置信度驱动的可变长度验证",
+        "summary": "SGLang 团队将 DSpark 推测解码算法集成到开源推理引擎中。该算法采用半自回归块起草器一次生成一组 token，并利用置信度头与顺序温度缩放（STS）为每个请求动态分配可变验证长度，从而在高负载下裁剪无效验证成本。SGLang 支",
+        "url": "https://www.lmsys.org/blog/2026-07-06-dspark-sglang"
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "date": "2026-07-06",
+    "title": "Google 更新隐私设置，默认用媒体数据训练 AI，用户可手动退出",
+    "coreInsight": "Google低调更新搜索服务隐私设置，新增默认开启的「保存媒体」选项——用户上传的图片、文件、音频和视频默认被用于AI训练，需手动退出。",
+    "whyItMatters": "从用户主动授权到默认收集+手动退出——这是AI训练数据获取的「选择退出」范式转变。Google的选择代表行业正在从「征得同意」转向「默认同意」，与Meta等其他公司的做法一致，可能引发新一轮隐私监管浪潮。",
+    "direction": "6-12个月内，欧盟将对此类默认收集行为展开调查。更多大型平台将采用opt-out模式获取AI训练数据。",
+    "opportunities": [
+      "帮助用户一键退出多个平台AI训练的隐私管理工具",
+      "面向企业的AI训练数据合规审计服务",
+      "基于非用户数据的AI训练替代方案（合成数据等）"
+    ],
+    "risks": [
+      "默认收集可能引发大规模用户反弹和监管罚款",
+      "用户媒体数据中的敏感信息可能被意外训练进模型"
+    ],
+    "signals": [
+      {
+        "source": "TechCrunch：AI（RSS）",
+        "time": "2026-07-06",
+        "title": "Google 更新隐私设置，默认用媒体数据训练 AI，用户可手动退出",
+        "summary": "Google 于 6 月通过客户邮件低调更新了搜索服务隐私设置，新增\"搜索服务历史\"和\"个性化推荐\"两项开关，默认将用户上传的图片、文件、音频和视频录制等媒体数据保存并用于训练 AI 模型。该更新适用于搜索、地图、购物、航班、酒店、翻译、新",
+        "url": "https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out"
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "date": "2026-07-06",
+    "title": "用可解释性理解标注者安全策略",
+    "coreInsight": "Apple发布Annotator Policy Models（APMs），仅从标注行为学习标注者内在的安全策略，准确率超80%，可揭示政策模糊和价值多元导致的安全分歧。",
+    "whyItMatters": "AI安全对齐的一个核心难题是「谁来定义安全」。APMs通过可解释模型揭示：不同标注者（以及不同人口群体）对安全的定义根本不同。这为「安全策略民主化」提供了技术基础。",
+    "direction": "12-24个月内，APMs方法将被更多AI安全团队采用。AI安全对齐将从「单一安全策略」转向「多元安全策略」。",
+    "opportunities": [
+      "基于APMs的多群体AI安全偏好调研与分析平台",
+      "面向企业AI部署的定制化安全策略工具",
+      "AI安全策略透明化报告的自动生成服务"
+    ],
+    "risks": [
+      "揭示群体安全差异可能被误解为支持某些群体的安全标准低于其他群体",
+      "APMs方法若被反向工程，可能暴露标注者的判断模式"
+    ],
+    "signals": [
+      {
+        "source": "Apple Machine Learning Research（RSS）",
+        "time": "2026-07-06",
+        "title": "用可解释性理解标注者安全策略",
+        "summary": "标注分歧可源于操作失败、政策模糊或价值多元。Annotator Policy Models（APMs）是一种可解释模型，仅从标注行为学习标注者内在的安全策略，无需额外负担。验证表明模型准确率超过80%，能忠实预测反事实编辑并恢复已知差异。将",
+        "url": "https://machinelearning.apple.com/research/annotator-safety-policy-interpretability"
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "date": "2026-07-06",
+    "title": "AI 世界观",
+    "coreInsight": "《经济学人》以世界价值观调查评测25个前沿AI模型发现：实验室来源对世界观的预测力弱于训练与对齐选择——Gemini与Qwen立场接近，GPT-4o与DeepSeek R1近乎相同，而同为DeepSeek系列的R1与V4 Flash截然不同。",
+    "whyItMatters": "模型的「价值观」不取决于创作者国籍或实验室背景，而取决于技术选择——这一发现打破了「中国模型=中国价值观」的简单化叙事。对企业和政府选择AI供应商的政策影响深远。",
+    "direction": "6-12个月内AI模型价值观评测将成为企业采购AI的标准环节。价值观透明度报告将像安全评测报告一样成为标配。",
+    "opportunities": [
+      "面向企业采购的AI模型价值观评测服务",
+      "跨模型价值观对比分析与选型推荐工具",
+      "AI价值观对齐的定制化训练服务"
+    ],
+    "risks": [
+      "价值观评测本身可能带有评测者的偏见",
+      "模型在代码生成等场景中价值观不可见，但在商业分析中活跃——这种场景差异可能导致盲区"
+    ],
+    "signals": [
+      {
+        "source": "Tomer Tunguz 博客（VC 分析）",
+        "time": "2026-07-06",
+        "title": "AI 世界观",
+        "summary": "《经济学人》以世界价值观调查评测 25 个前沿 AI 模型。实验室来源对世界观的预测力弱于训练与对齐选择：Gemini 与 Qwen 立场接近，GPT-4o 与 DeepSeek R1 近乎相同，而 DeepSeek R1 与 DeepSe",
+        "url": "https://www.tomtunguz.com/godless-hippies-ai-models-values"
+      }
+    ]
   }
 ]
