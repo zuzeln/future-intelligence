@@ -550,10 +550,10 @@ body::after {
   .main { padding: 0 16px calc(24px + env(safe-area-inset-bottom, 0px)); contain: none; will-change: auto; -webkit-overflow-scrolling: touch; }
   .content-header { padding-top: 0; }
   .date-capsule-bar {
-    padding-top: calc(16px + env(safe-area-inset-top, 0px));
-    padding-bottom: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     position: sticky;
-    top: 0;
+    top: env(safe-area-inset-top, 44px);
     z-index: 5;
     background: var(--bg);
   }
@@ -954,16 +954,6 @@ body::after {
 
       var dateGroups = groupByDate(itemsFlat);
 
-      // 构建移动端日期胶囊导航
-      var capsulesWrap = document.getElementById('capsulesWrap');
-      if (capsulesWrap) {
-        var capsHtml = '';
-        dateGroups.forEach(function(g) {
-          capsHtml += '<button class="date-capsule" onclick="document.getElementById(\'dg_' + g.date.replace(/-/g, '_') + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + formatDateLabel(g.date) + '</button>';
-        });
-        capsulesWrap.innerHTML = capsHtml;
-      }
-
       renderContent();
       renderTrendPanel(itemsFlat);
     }).catch(function(err) {
@@ -979,7 +969,11 @@ body::after {
   function renderContent() {
     var itemsFlat = ALL_ITEMS;
     var dateGroups = groupByDate(itemsFlat);
-    var html = '<div class="cards">';
+    var html = '<div class="date-capsule-bar" id="dateCapsuleBar"><button class="hamburger-btn" id="hamburgerBtn" onclick="toggleDrawer()"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button><div class="capsules-wrap" id="capsulesWrap">';
+    dateGroups.forEach(function(g) {
+      html += '<button class="date-capsule" onclick="document.getElementById(\'dg_' + g.date.replace(/-/g, '_') + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + formatDateLabel(g.date) + '</button>';
+    });
+    html += '</div></div><div class="cards">';
 
     dateGroups.forEach(function(g) {
       html += '<div class="date-separator" id="dg_' + g.date.replace(/-/g, '_') + '">' + formatDateLabel(g.date) + '</div>';
