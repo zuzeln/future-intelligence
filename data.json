@@ -8265,5 +8265,137 @@
         "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what"
       }
     ]
+  },
+  {
+    "id": 271,
+    "date": "2026-07-07",
+    "title": "Krea 2 身份保留：AI 图像生成从「随机抽卡」走向「精确控制」",
+    "coreInsight": "Krea 2 上线身份保留功能，用户可在连续多轮生成中保持同一人物的一致性外观——这标志着 AI 图像生成工具从单次随机生成向可控、可复用的工业化创作流程演进。",
+    "whyItMatters": "身份保留是 AI 图像生成从玩具到专业工具的关键突破。此前多轮生成中人物外观漂移是创作者最大痛点，Krea 2 解决了这一瓶颈，配合 ComfyUI 节点意味着专业工作流可直接集成。",
+    "direction": "6-12 个月内，身份一致性将成为所有主流 AI 图像工具的标配功能。视频生成领域的角色一致性也将受益于类似技术。",
+    "opportunities": [
+      "面向品牌/IP的AI角色一致性生成服务",
+      "结合ComfyUI的自动化创意工作流开发",
+      "AI辅助的连环画/分镜/角色设计工具"
+    ],
+    "risks": [
+      "身份保留技术的滥用可能导致深度伪造更难识别",
+      "过度依赖单一工具的身份系统可能造成创作者锁定"
+    ],
+    "signals": [
+      {
+        "source": "X：Krea AI (@krea_ai)",
+        "time": "7/7",
+        "title": "Krea 2 身份保留功能上线",
+        "summary": "Krea 2 的身份保留功能已发布，配套模型和 ComfyUI 节点也已上线。",
+        "url": "https://x.com/krea_ai/status/2074589965653303321"
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "date": "2026-07-07",
+    "title": "Meta 进军媒体生成：Muse Image/Video 以「Instagram 社交图谱」为护城河",
+    "coreInsight": "Meta Superintelligence Labs 发布首个媒体生成模型 Muse Image 和 Muse Video，深度整合 Instagram 社交上下文——Meta 正在用其 30 亿用户的社交数据构建差异化 AI 壁垒，这在纯技术公司主导的图像生成赛道中独树一帜。",
+    "whyItMatters": "在 OpenAI、Google、Midjourney 激战的图像/视频生成赛道，Meta 的差异化武器是 Instagram 的社交图谱。Muse Image 声称在指令遵循和精准编辑上达到 SOTA，但真正的竞争壁垒在于它能理解用户社交关系中的视觉偏好——这是纯粹的技术公司无法复制的。",
+    "direction": "12-18 个月内，社交媒体平台的 AI 生成功能将从辅助工具演变为核心内容生产引擎。社交数据训练的个性化生成模型将成为新赛道。",
+    "opportunities": [
+      "基于社交图谱的个性化AI创意工具",
+      "品牌在Instagram等平台的AI原生广告创意",
+      "面向中小企业的社交媒体AI视觉内容自动生成"
+    ],
+    "risks": [
+      "Instagram数据用于AI训练可能引发用户隐私争议",
+      "Meta在AI生成内容分发上的平台优势可能构成反垄断风险"
+    ],
+    "signals": [
+      {
+        "source": "X：AI at Meta (@AIatMeta)",
+        "time": "7/7",
+        "title": "Meta Superintelligence Labs 推出 Muse Image 和 Muse Video",
+        "summary": "Meta 发布首个媒体生成模型，能精确遵循指令、精准编辑、多参考构图，并利用 Instagram 社交上下文，集成 Muse Spark 智能体工具。",
+        "url": "https://x.com/AIatMeta/status/2074577662840832382"
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "date": "2026-07-07",
+    "title": "微软「降本换模」：Copilot 用自研 MAI 替换 OpenAI 与 Anthropic，用户为同等价格买到更弱的 AI",
+    "coreInsight": "微软正在 Excel、Outlook 等 Copilot 产品中系统性地用自研 MAI 模型替换 OpenAI 和 Anthropic 模型以削减成本。AI 负责人公开承认目标是「消除对 Anthropic 的支出」——云厂商的 AI 模型自研化正在以牺牲用户体验为代价推进。",
+    "whyItMatters": "这是 AI 产业「供应商-客户」关系的转折点。微软作为 OpenAI 最大投资方和 Anthropic 大客户，公开转向自研模型，标志着「AI 模型商品化」的加速。对用户而言，可能为同样的订阅价格获得更弱的 AI 能力——模型替换的成本节省并未传递给消费者。",
+    "direction": "6-12 个月内，更多云厂商和 SaaS 公司将启动「模型替换」计划。自研小模型+第三方顶级模型的分层定价将成为行业标准。",
+    "opportunities": [
+      "帮助企业评估和优化AI模型TCO的咨询服务",
+      "面向SaaS厂商的自研小模型训练与部署平台",
+      "第三方模型质量监控与基准测试工具"
+    ],
+    "risks": [
+      "MAI模型在基准测试上大幅落后OpenAI/Anthropic，实际使用体验可能显著下降",
+      "Common Crawl训练数据的版权合规风险可能引发企业客户诉讼",
+      "微软同时扮演AI模型供应商和平台方的角色可能构成不正当竞争"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "7/7",
+        "title": "微软为降成本在Copilot中用自研MAI模型替换OpenAI和Anthropic模型",
+        "summary": "微软正用自研MAI模型替换Copilot产品中的OpenAI和Anthropic模型以降低支出。AI负责人承认目标是削减并消除对Anthropic的支出。",
+        "url": "https://the-decoder.com/copilot-goes-cheap-as-microsoft-phases-out-openai-and-anthropic-models-to-cut-costs"
+      }
+    ]
+  },
+  {
+    "id": 274,
+    "date": "2026-07-07",
+    "title": "Hugging Face × SkyPilot：零出站费的跨云 AI 存储，打破 GPU 云锁定",
+    "coreInsight": "Hugging Face Storage 成为 SkyPilot 一级后端，用户通过 hf:// URL 即可将模型/数据集挂载到 20+ 云平台的 GPU 任务中且零出站费用——这是「算力在哪里，数据就在哪里」的云中立基础设施的关键拼图。",
+    "whyItMatters": "当前 AI 团队面临的核心困境是 GPU 容量分散在多个云厂商，但数据存储在一个云上——跨云读取数据要付出高昂出站费。Hugging Face + SkyPilot 的组合解决了这个结构性痛点：数据放在 Hugging Face（零出站费），算力由 SkyPilot 在任意有 GPU 的云上调度。",
+    "direction": "12-24 个月内，零出站费的 AI 数据存储将成为行业标配。多云/混合云的 AI 训练基础设施将从「可选」变为「默认」。",
+    "opportunities": [
+      "面向AI团队的多云GPU调度与成本优化平台",
+      "基于Hugging Face Storage的跨云模型训练流水线工具",
+      "帮助企业迁移到零出站存储架构的咨询服务"
+    ],
+    "risks": [
+      "Hugging Face零出站政策的持续性——若未来收费可能颠覆依赖该架构的业务模型",
+      "FUSE懒加载模式在高频随机读取场景下的性能瓶颈"
+    ],
+    "signals": [
+      {
+        "source": "Hugging Face：Blog（RSS）",
+        "time": "7/7",
+        "title": "Hugging Face Storage 成为 SkyPilot 一级后端：零出站费跨云存储",
+        "summary": "Hugging Face Storage 现为 SkyPilot 一级后端。用户通过 hf:// URL 即可挂载 Bucket 或模型/数据集仓库，支持 20+ 云平台调度，零出站费。",
+        "url": "https://huggingface.co/blog/skypilot-hf-storage"
+      }
+    ]
+  },
+  {
+    "id": 275,
+    "date": "2026-07-08",
+    "title": "Rowboat 开源桌面 AI 助手：本地优先的知识图谱式 Agent 平台",
+    "coreInsight": "Rowboat 将邮件、会议、Slack 等数据索引为 Obsidian 风格的知识图谱，以纯 Markdown 本地存储实现零供应商锁定——这是「数据主权」理念在桌面 AI 助手领域最彻底的实践，同时通过 MCP 协议连接外部工具，实现了本地优先与云端能力的平衡。",
+    "whyItMatters": "在 Claude Cowork 和 ChatGPT 桌面版激烈竞争的赛道上，Rowboat 提供了第三条路径——完全开源、本地优先的桌面 AI 助手。用户数据以 Markdown 格式存储在本机，不依赖任何云服务，同时仍可通过 MCP 接入 Exa 搜索、GitHub 等外部工具。这解决了企业和个人用户对 AI 助手「数据所有权」的深层焦虑，与 Anthropic 的云端 Cowork 形成差异化竞争。",
+    "direction": "6-12 个月内，本地优先的 AI 助手将从极客玩具走向企业就绪。桌面 AI 助手市场将分化为云端智能型（Claude Cowork）与本地主权型（Rowboat）两条路线。知识图谱式的持久记忆将成为桌面 AI 的标配架构。",
+    "opportunities": [
+      "面向企业的本地优先 AI 助手私有化部署服务",
+      "基于 Rowboat 的知识管理与企业搜索垂直应用",
+      "MCP 协议的本地工具生态——将更多企业应用接入桌面 AI",
+      "面向个人用户的本地 AI 数据管理与隐私保护方案"
+    ],
+    "risks": [
+      "本地优先架构的更新和维护节奏可能落后于云端竞品",
+      "本地模型（Ollama）的能力可能无法与云端大模型匹敌，实际使用体验存在差距"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News：AI 热帖",
+        "time": "7/7",
+        "title": "Rowboat：开源、本地优先的桌面AI助手",
+        "summary": "将邮件、会议、Slack 等数据索引为 Obsidian 风格的知识图谱，所有数据以纯 Markdown 本地存储，支持 MCP 协议接入外部工具。",
+        "url": "https://github.com/rowboatlabs/rowboat"
+      }
+    ]
   }
 ]
