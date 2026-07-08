@@ -550,9 +550,9 @@ body::after {
   }
   .app {
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
     /* 安全区 padding 从 body 移至 app，确保 flex 子元素（.main）正确继承布局 */
     padding-top: max(54px, env(safe-area-inset-top, 0px));
     box-sizing: border-box;
