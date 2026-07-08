@@ -540,8 +540,23 @@ body::after {
 .about-dialog .about-close:active { background: rgba(255,255,255,0.12); }
 
 @media (max-width: 768px) {
-            body { padding-top: max(54px, env(safe-area-inset-top, 0px)); box-sizing: border-box; }
-  .app { flex-direction: column; }
+  /* 移动端：取消 body 固定高度，避免 iOS 100vh + safe-area 冲突导致内容被裁剪 */
+  body {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+    padding-top: 0;
+  }
+  .app {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* 安全区 padding 从 body 移至 app，确保 flex 子元素（.main）正确继承布局 */
+    padding-top: max(54px, env(safe-area-inset-top, 0px));
+    box-sizing: border-box;
+  }
   .sidebar {
     display: none !important;
   }
@@ -553,10 +568,13 @@ body::after {
   .date-capsule-bar {
     padding-top: 12px;
     padding-bottom: 12px;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 5;
     background: var(--bg);
+    /* 确保胶囊条宽度撑满，防止收缩 */
+    width: 100%;
   }
   .content-header .rank-big {
     font-size: 28px;
