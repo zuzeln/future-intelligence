@@ -9046,5 +9046,88 @@
         "url": "https://www.ithome.com/0/972/896.htm"
       }
     ]
+  },
+  {
+    "id": 301,
+    "date": "2026-07-08",
+    "title": "AI 审计代理在 Cloudflare CIRCL 中发现 7 个漏洞",
+    "coreInsight": "zkSecurity 的 AI 审计代理 zkao 持续扫描 Cloudflare CIRCL 密码学库，使用 Opus 4.6 和 GPT-5.3 自动发现并确认 7 个真实漏洞，包括阈值 RSA 中 float64 精度丢失（Critical）和属性基加密（CP-ABE）访问控制完全失效（Critical，由 AI 自行发现并评估）。这是 AI 首次在工业级密码学库中独立完成漏洞发现-验证-定级全流程。",
+    "whyItMatters": "密码学库是安全基础设施的基石，一个未被发现的漏洞可能影响数百万用户的数据安全。AI 审计代理在 Cloudflare 这种顶级基础设施公司的核心库中发现 Critical 级漏洞，证明 AI 代码审计已从辅助工具升级为独立安全验证者。CP-ABE 漏洞由 AI「自行发现」而非依赖已知规则，说明 AI 正在掌握密码学领域的创造性推理能力。",
+    "direction": "6-12 个月内，AI 代码审计将从实验性部署升级为安全基础设施的标配流程，尤其在密码学、区块链智能合约、金融系统等高价值目标上。安全审计公司的商业模式将面临根本性重构。",
+    "opportunities": [
+      "面向密码学库和智能合约的 AI 持续审计 SaaS 服务",
+      "AI 安全审计与传统渗透测试的混合服务模式",
+      "企业安全团队内部部署 AI 审计代理的定制化方案",
+      "基于 AI 漏洞发现的漏洞赏金平台——自动化 + 人类验证"
+    ],
+    "risks": [
+      "AI 审计代理的误报率可能浪费安全团队大量验证时间",
+      "攻击者可能逆向利用 AI 审计工具发现漏洞并抢先利用",
+      "过度依赖 AI 审计可能导致人类安全专家的技能退化"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门",
+        "time": "2026-07-08",
+        "title": "AI 审计代理在 Cloudflare CIRCL 中发现 7 个漏洞",
+        "summary": "zkSecurity 的 AI 审计代理 zkao 持续扫描 Cloudflare 的 CIRCL 密码学库，使用 Opus 4.6 + skills 和 GPT-5.3 + skills 等模型发现并确认了 7 个真实漏洞。包括阈值 RSA 中 float64 精度丢失（AI 自评 Critical）和 CP-ABE 访问控制完全失效（Critical，由 zkao 自行发现）",
+        "url": "https://blog.zksecurity.xyz/posts/circl-bugs"
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "date": "2026-07-08",
+    "title": "美国商务部批准 OpenAI 大规模发布 GPT-5.6，Sol 明日亮相",
+    "coreInsight": "美国商务部正式批准 OpenAI 大规模发布 GPT-5.6，结束此前因国家安全考量施加的分阶段管控。GPT-5.6 Sol 将于本周四与 Terra 和 Luna 一同面向公众推出。美国商务部下属 AI 标准与创新中心执行了测试验证，最新 AI 行政令即将出台。这标志着美国 AI 出口管控从「堵」转向「疏」——测试合格后放行而非无限期封锁。",
+    "whyItMatters": "GPT-5.6 的全面放行不是常规产品发布，而是美国 AI 监管框架的首次实战检验。此前因国家安全考量的临时管控被业界解读为「技术封锁」，但本次批准证明：只要通过测试验证，顶级 AI 模型可以大规模发布。这对全球 AI 监管博弈有重大信号意义——证明美国正在建立「测试→批准」的可预测流程，而非随意封锁。最新 AI 行政令将固化这一框架。",
+    "direction": "6 个月内，美国 AI 出口管控的「测试-批准」框架将被其它国家效仿或对抗。GPT-5.6 三变体（Sol/Terra/Luna）全面上线将加速 AI 应用层的产品创新。",
+    "opportunities": [
+      "基于 GPT-5.6 三变体策略的企业级 AI 路由与成本优化方案",
+      "面向受控行业的 AI 合规测试与认证咨询服务",
+      "AI 监管政策跟踪与合规自动化工具——帮助 AI 公司提前自查"
+    ],
+    "risks": [
+      "三变体同时发布可能造成开发者选型混乱和使用成本飙升",
+      "测试-批准框架可能成为事实上的 AI 出口壁垒——小公司无力通过测试",
+      "Sol/Terra/Luna 的命名暗示差异化定位，但实际能力差距可能导致市场预期落空"
+    ],
+    "signals": [
+      {
+        "source": "IT之家",
+        "time": "2026-07-08",
+        "title": "美国商务部批准 OpenAI 大规模发布 GPT-5.6，Sol 明日亮相",
+        "summary": "美国商务部正式批准 OpenAI 大规模发布 GPT-5.6。GPT-5.6 Sol 将于本周四与 Terra 和 Luna 一同面向公众推出。此前因国家安全考量要求分阶段发布，此次全面放行标志着临时管控结束。",
+        "url": "https://www.ithome.com/0/973/922.htm"
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "date": "2026-07-08",
+    "title": "蚂蚁集团旗下 Robbyant 开源 LingBot-Vision：1B 参数边界中心视觉基础模型，用于密集空间感知",
+    "coreInsight": "蚂蚁集团旗下具身智能公司 Robbyant 开源 LingBot-Vision：一套自监督 Vision Transformer 家族，旗舰 ViT-g/16 仅 1.1B 参数，采用掩膜边界建模（Masked Boundary Modeling）将物体边界作为原生预训练信号。在密集空间感知任务中，该 1B 模型匹配甚至超越参数量 7 倍的大模型（如 7B DINOv3）。Apache-2.0 许可证，Hugging Face 开源。",
+    "whyItMatters": "这是一个「小模型撬动大效果」的教科书案例。LingBot-Vision 证明边界感知（而非像素重建）是空间理解的正确预训练信号——1B 就能打败 7B。这对具身智能和机器人视觉有直接推动意义：部署在机器狗、机械臂上的视觉模型不需要云端巨型模型，1B 参数即可实现实时高精度空间感知。Apache-2.0 开源意味着商业可用、无许可壁垒。",
+    "direction": "6-12 个月内，边界中心预训练方法将被 3+ 个视觉框架采纳。1B 级别的小参数空间感知模型将成为具身智能和 AR/VR 设备的标配视觉引擎。",
+    "opportunities": [
+      "面向仓储物流机器人的低成本实时空间感知方案",
+      "AR/VR 设备中基于 LingBot-Vision 的室内导航与物体识别",
+      "智能驾驶中低算力芯片（如 MCU）可部署的密集空间感知模型",
+      "面向具身智能初创公司、基于 LingBot-Vision 的二次开发与微调服务"
+    ],
+    "risks": [
+      "边界中心方法在极端光照/遮挡条件下的鲁棒性尚未大规模验证",
+      "1B 模型虽小但在边缘设备（如无人机 MCU）上仍可能触及算力上限",
+      "Robbyant 作为蚂蚁集团子公司，开源策略可能随商业战略调整而变动"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost",
+        "time": "2026-07-08",
+        "title": "蚂蚁集团旗下 Robbyant 开源 LingBot-Vision：1B 参数边界中心视觉基础模型，用于密集空间感知",
+        "summary": "蚂蚁集团旗下具身智能公司 Robbyant 开源 LingBot-Vision，一套自监督视觉 Transformer 家族，专为密集空间感知设计。旗舰 ViT-g/16 参数约 1.1B，采用掩膜边界建模训练，将边界作为原生预训练信号。",
+        "url": "https://www.marktechpost.com/2026/07/07/ant-groups-robbyant-open-sources-lingbot-vision-a-1b-boundary-centric-vision-foundation-model-for-dense-spatial-perception"
+      }
+    ]
   }
 ]
