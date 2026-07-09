@@ -10566,5 +10566,32 @@
         "url": "https://www.ithome.com/0/974/508.htm"
       }
     ]
+  },
+  {
+    "id": 357,
+    "date": "2026-07-09",
+    "title": "NVIDIA 发布 Nemotron-Labs-3-Puzzle-75B-A9B：压缩混合 MoE 模型，服务器吞吐量提升 2.03 倍",
+    "coreInsight": "NVIDIA 通过迭代 Puzzle 压缩方法将 120.7B 的 Nemotron-3-Super 压缩至 75.3B，活跃参数从 12.8B 降至 9.3B，同时保持 88 块混合布局（40 Mamba、40 MoE、8 注意力），在 8×B200 上实现 2.03 倍服务器吞吐量提升——用小得多的模型撬动更大的服务能力。",
+    "whyItMatters": "这标志着模型压缩技术从「论文实验」走向「生产降本」的拐点。75.3B 模型在服务器吞吐量上超越 120.7B 原版，意味着企业可以在相同硬件上服务更多用户。单 H100 权重占用从 70GB 降至 44.5GB，极大降低端侧部署门槛。压缩与性能的权衡（Arena-Hard-V2 降 4.2 分）也将成为新研究焦点。",
+    "direction": "6-12 个月内，模型压缩将在 MoE 架构上形成新范式——不是简单地减少参数，而是通过混合架构（Mamba + MoE + Attention）在压缩后保持甚至提升效率。Puzzle 迭代方法（平均得分比单步高 0.57）将启发更多迭代式压缩研究。",
+    "opportunities": [
+      "面向企业的模型压缩即服务——帮助客户在不损失过多性能的前提下降低推理成本",
+      "利用 NVFP4/BF16/FP8 多精度压缩部署边缘 AI 推理节点",
+      "Mamba-MoE-Attention 混合架构的自动化搜索与压缩工具链",
+      "退役/低端 GPU 集群上运行压缩大模型的推理优化方案"
+    ],
+    "risks": [
+      "压缩后的性能下降（Arena-Hard-V2 -4.2, SWE-Bench -2.6）在某些任务场景可能不可接受",
+      "企业过度追求压缩可能导致模型在边缘场景出现未预期的能力退化"
+    ],
+    "signals": [
+      {
+        "source": "MarkTechPost",
+        "time": "7/9",
+        "title": "NVIDIA 发布 Nemotron-Labs-3-Puzzle-75B-A9B：压缩混合 MoE 模型",
+        "summary": "总参数从 120.7B 降至 75.3B，活跃参数从 12.8B 降至 9.3B，服务器吞吐量提升 2.03 倍。",
+        "url": "https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput"
+      }
+    ]
   }
 ]
