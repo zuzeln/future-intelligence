@@ -10593,8 +10593,7 @@
         "url": "https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput"
       }
     ]
-  }
-,
+  },
   {
     "id": 358,
     "date": "2026-07-09",
@@ -10751,7 +10750,7 @@
       }
     ]
   },
-{
+  {
     "id": 364,
     "date": "2026-07-09",
     "title": "Anthropic长期利益信托任命本·伯南克为受托人",
@@ -10804,6 +10803,81 @@
         "title": "消息称特斯拉三代擎天柱人形机器人初步定型，马斯克放话达不成产能目标就开掉整个采购团队",
         "summary": "据晚点LatePost报道，特斯拉Optimus Gen 3经马斯克评审通过，即将量产。供应链要求供应商9月产能达1000台/周，年底升至2000-2500台/周，年产能可达10万台。马斯克六月底高管会上要求年底前实现产能目标，否则开除整个Optimus采购团队。弗里蒙特工厂已改造为Optimus生产线。",
         "url": "https://www.ithome.com/0/974/782.htm"
+      }
+    ]
+  },
+  {
+    "id": 366,
+    "date": "2026-07-09",
+    "title": "OpenAI 发布 GPT-5.6 系列与 ChatGPT Work——模型代际升级与智能体产品化双线出击",
+    "coreInsight": "OpenAI 同日发布 GPT-5.6 模型系列（旗舰 Sol、性价比 Terra、轻量 Luna）和 ChatGPT Work 智能体产品——前者完成了从 GPT-5.5 到 5.6 的代际跨越，后者将 Codex 能力嵌入一个可跨应用自主工作数小时的桌面智能体。这标志着 OpenAI 从「模型公司」向「AI 平台公司」的战略转型。",
+    "whyItMatters": "GPT-5.6 Sol 新增 max 和 ultra 推理档位，ultra 可调用多智能体并行处理——这是推理能力从「单模型回答」向「多智能体协作」的范式升级。ChatGPT Work 可跨 Google Drive、Slack 等应用执行复杂项目，支持定时任务，意味着 AI 从工具进化为可独立完成工作的「数字员工」。桌面应用合并 Chat、Work、Codex 三种模式，Codex 周活已超 500 万用户（其中 100 万+ 非开发场景）。GPT-5.4 将于 7 月 23 日退役。",
+    "direction": "6-12 个月内，AI 桌面智能体将从开发者工具走向白领标配。「多智能体并行推理」将成为模型能力的新标准维度。工作流自动化将从「API 集成」转向「AI 直接操控应用界面」。",
+    "opportunities": [
+      "基于 ChatGPT Work 的企业工作流自动化定制",
+      "面向 GPT-5.6 推理档位（max/ultra）的成本优化与最佳实践咨询",
+      "AI 桌面智能体的安全沙盒与权限管理方案",
+      "从 Claude Code 迁移到 Codex 的工具与服务"
+    ],
+    "risks": [
+      "AI 桌面智能体直接操控应用带来的数据安全和隐私风险",
+      "GPT-5.4 退役可能导致依赖旧版本的企业应用中断",
+      "多智能体并行推理的成本可能超出企业预算"
+    ],
+    "signals": [
+      {
+        "source": "X: Sam Altman",
+        "time": "7/9 18:59",
+        "title": "ChatGPT Work 发布：Codex 与 GPT-5.6 驱动",
+        "summary": "Codex 是 ChatGPT Work 的核心，不会消失。可在应用和文件中执行操作，必要时数小时跟进项目。",
+        "url": "https://x.com/sama/status/2075293792048136572"
+      },
+      {
+        "source": "X: 宝玉",
+        "time": "7/9 18:39",
+        "title": "OpenAI 推出 GPT-5.6 系列及多项产品更新",
+        "summary": "GPT-5.6 Sol/Terra/Luna 三档，API 定价 Sol 输入 $5/M、输出 $30/M，Luna $1/$6。新增 ultra 推理档位。ChatGPT 桌面应用与 Codex 合并，Sites 功能，浏览器升级。GPT-5.4 于 7/23 退役。",
+        "url": "https://x.com/dotey/status/2075288698585809214"
+      },
+      {
+        "source": "OpenAI 官网",
+        "time": "7/9 10:00",
+        "title": "ChatGPT Work：可跨应用自主工作的 AI 智能体",
+        "summary": "内置 Codex，500 万+ 周活用户。GPT-5.6 驱动，多步骤推理。面向 Pro/Enterprise/Edu，逐步扩展至 Plus/Business。桌面版合并 Chat/Work/Codex 三模式。",
+        "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
+      },
+      {
+        "source": "X: Sam Altman",
+        "time": "7/9 17:10",
+        "title": "OpenAI 发布最强模型与最佳博文",
+        "summary": "GPT-5.6 是有史以来最好的模型。",
+        "url": "https://x.com/sama/status/2075266471316615436"
+      }
+    ]
+  },
+  {
+    "id": 367,
+    "date": "2026-07-09",
+    "title": "Anthropic 发起「硬问题」倡议——主动邀请公众拷问 AI 的社会影响",
+    "coreInsight": "Anthropic 作为公益公司发起「硬问题」倡议，公开邀请公众就 AI 对就业、社会、家庭、科学医学等领域的影响提出最尖锐的问题——这是 AI 行业首次由头部实验室主动「请社会来问责」而非被动应对监管。",
+    "whyItMatters": "此举配合 Anthropic 的公益公司治理结构——此前已设立 Anthropic Institute 和 Long-Term Benefit Trust（最新任命前美联储主席伯南克为受托人），通过首轮 5.2 万美国人调查、159 国 8.1 万 Claude 用户访谈、数十场线下焦点小组收集社会关切。公司承诺公开追踪并报告针对这些问题的具体行动及成效。这标志着 AI 治理从「实验室内部安全评估」向「社会契约式问责」的范式转变。",
+    "direction": "6-12 个月内，更多 AI 实验室可能效仿 Anthropic 建立公众问责机制。AI 社会影响评估将从学术研究走向企业制度化。",
+    "opportunities": [
+      "面向 AI 公司的社会影响评估与公众参与平台",
+      "AI 治理咨询——帮助企业建立公益公司治理结构",
+      "AI 对就业、教育等垂直领域影响的深度研究与公众沟通"
+    ],
+    "risks": [
+      "公众参与可能流于形式——企业收集反馈但不采取实质行动",
+      "公益公司治理结构可能被用于 PR 而非法定约束"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic Newsroom",
+        "time": "7/9 17:40",
+        "title": "Anthropic 发起「硬问题」倡议",
+        "summary": "邀请公众提出 AI 相关最尖锐问题。已进行 5.2 万美国人调查、159 国 8.1 万用户访谈。设立 Anthropic Institute 和 LTBT，承诺公开追踪行动成效。",
+        "url": "https://www.anthropic.com/news/hard-questions"
       }
     ]
   }
