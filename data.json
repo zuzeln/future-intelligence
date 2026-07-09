@@ -10880,5 +10880,91 @@
         "url": "https://www.anthropic.com/news/hard-questions"
       }
     ]
+  },
+{
+    "id": 368,
+    "date": "2026-07-09",
+    "title": "Anthropic发起「硬问题」倡议，邀请公众提出AI相关尖锐问题",
+    "coreInsight": "Anthropic作为公益公司，正式发起「硬问题」倡议，系统化收集公众对AI影响就业、社会、家庭、科学医学等领域的最尖锐质疑——这标志着AI治理从「实验室自评」走向「公众问责」的制度化尝试。此前已通过5.2万美国人调查、159国8.1万Claude用户访谈、数十场线下焦点小组完成大规模意见收集。",
+    "whyItMatters": "Anthropic此举将AI安全讨论从精英圈层扩展到全球公众——159个国家70种语言的覆盖规模前所未有。Long-Term Benefit Trust和Anthropic Institute的设立表明公司正在建立超越管理团队的监督机制。如果这一模式被其他AI实验室效仿，将重塑整个行业的社会契约：AI公司不再只是「我们保证安全」，而是「我们接受公众检验」。",
+    "direction": "6-12个月内，公众参与AI治理将从Anthropic的单一实践演变为行业规范。更多AI实验室将设立类似公益监督机构。AI公司的「社会许可」将成为比技术能力更重要的竞争维度。",
+    "opportunities": [
+      "面向AI公司的公众参与治理方案设计与咨询",
+      "AI社会影响评估的第三方审计与认证服务",
+      "基于大规模公众意见的AI政策研究数据平台"
+    ],
+    "risks": [
+      "公众参与的样本偏差可能导致治理方向被特定群体裹挟",
+      "如果Anthropic未兑现追踪报告的承诺，将引发公信力危机并波及整个行业"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic Newsroom",
+        "time": "7/9 17:40",
+        "title": "Anthropic发起「硬问题」倡议，邀请公众提出AI相关尖锐问题",
+        "summary": "通过5.2万美国人调查、159国8.1万用户访谈完成大规模意见收集。",
+        "url": "https://www.anthropic.com/news/hard-questions"
+      }
+    ]
+  },
+  {
+    "id": 369,
+    "date": "2026-07-09",
+    "title": "OpenAI 发布 GPT-5.6 与 ChatGPT Work：最强模型驱动跨应用自主智能体",
+    "coreInsight": "OpenAI 同日发布最新前沿模型 GPT-5.6 和 ChatGPT Work 智能体——后者可跨应用和文件收集信息、将复杂项目分解为小步骤独立完成、持续工作数小时。这是AI从「单次问答」到「多步骤自主工作」的质变，Codex 每周超500万用户使用、其中超100万已用于非软件开发场景。",
+    "whyItMatters": "GPT-5.6 + ChatGPT Work 的组合标志着 OpenAI 正式进入「AI同事」时代。Sam Altman 称其为「有史以来最好的模型和最佳博文」暗示了信心程度。ChatGPT Work 的多步骤推理和按模板生成材料能力，使其不再只是问答工具而是真正能独立完成复杂项目的生产力引擎。这一发布直接对标 Anthropic Claude Cowork 和 Google Gemini 的计算机使用能力——桌面AI智能体之战正式打响。",
+    "direction": "6个月内，主流AI助手将标配多步骤自主工作能力。AI从「工具」到「同事」的角色转变将重塑知识工作者的日常工作流。跨应用AI智能体将成为企业采购决策的关键选型标准。",
+    "opportunities": [
+      "基于ChatGPT Work的垂直行业工作流自动化方案",
+      "面向企业的多步骤AI任务编排与监控平台",
+      "AI智能体的可审计日志与合规管理工具"
+    ],
+    "risks": [
+      "AI自主工作数小时的能力可能带来难以审计的错误传播链",
+      "跨应用AI智能体的安全权限管理存在未探明的攻击面"
+    ],
+    "signals": [
+      {
+        "source": "X: Sam Altman (@sama)",
+        "time": "7/9 17:10",
+        "title": "OpenAI 发布最强模型与最佳博文",
+        "summary": "GPT-5.6 被 Sam Altman 称为有史以来最好的模型。",
+        "url": "https://x.com/sama/status/2075266471316615436"
+      },
+      {
+        "source": "OpenAI Blog",
+        "time": "7/9 10:00",
+        "title": "ChatGPT Work：可跨应用自主工作的AI智能体",
+        "summary": "由GPT-5.6驱动，可将复杂项目分解为小步骤独立完成，持续工作数小时。",
+        "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
+      }
+    ]
+  },
+  {
+    "id": 370,
+    "date": "2026-07-07",
+    "title": "面向AI模型双重用途知识的「开关」：Anthropic与AE Studio提出GRAM方法",
+    "coreInsight": "Anthropic与AE Studio提出梯度路由辅助模块（GRAM）方法——在Transformer每层添加可移除的神经元模块，将病毒学、网络安全、核物理等双重用途知识仅路由到对应模块而非扩散至全局。训练后删除模块即可消除该能力，保留则供可信部署使用。实验在50M到5B参数模型上验证，效果与数据过滤相当，移除模块不降低通用性能，且比事后「遗忘」技术更难恢复。",
+    "whyItMatters": "GRAM为AI安全领域最棘手的「双重用途知识」问题提供了优雅的工程方案。传统方法（数据过滤、事后遗忘）要么影响通用能力，要么容易被恢复。GRAM的「模块化知识隔离」思路——训练时就把敏感知识锁在可移除的模块里——是AI安全从「事后修补」走向「架构原生安全」的标志性进展。如果这一方法在更大规模模型上被验证可行，将从根本上改变前沿AI模型的训练范式。",
+    "direction": "12-24个月内，模块化知识隔离将成为前沿AI模型训练的标准实践。类似GRAM的架构原生安全方案将催生新的AI安全研究子领域。具有可移除能力的模型将成为受监管场景下的首选架构。",
+    "opportunities": [
+      "基于GRAM的AI模型安全架构咨询与实施服务",
+      "面向特定敏感领域的可移除知识模块设计",
+      "AI模型的知识隔离与能力审计工具"
+    ],
+    "risks": [
+      "5B参数规模的验证结果可能无法线性扩展到100B+参数模型",
+      "攻击者可能通过精心设计的提示词绕过模块隔离机制"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic Research",
+        "time": "7/7 16:00",
+        "title": "面向AI模型双重用途知识的「开关」：GRAM方法",
+        "summary": "通过可移除的梯度路由模块实现敏感知识隔离，删除后能力消除且比伪遗忘更难恢复。",
+        "url": "https://www.anthropic.com/research/off-switch-dual-use"
+      }
+    ]
   }
+
 ]
