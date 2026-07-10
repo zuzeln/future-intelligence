@@ -11201,5 +11201,117 @@
       "url": "https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference"
     }
   ]
+},
+{
+  "id": 380,
+  "date": "2026-07-10",
+  "title": "Google Research 推出 SensorFM：面向可穿戴健康数据的通用基础模型",
+  "coreInsight": "Google Research 发布 SensorFM，在超过 100 万亿分钟多模态传感器数据上预训练的大规模基础模型，数据来自 100 多个国家 500 万名参与者，覆盖 20 余款 Fitbit 和 Pixel Watch 设备。SensorFM 学习通用的人体生理表征，可迁移至心血管、代谢、睡眠、心理健康等 35 项健康预测任务——这意味着可穿戴 AI 正从「单病种专项模型」走向「通用健康智能」。",
+  "whyItMatters": "SensorFM 是可穿戴健康领域的「GPT 时刻」。传统可穿戴 AI 模型每项健康指标需单独训练，泛化能力极差。SensorFM 用一个模型覆盖 35 项预测任务，跨生理系统学习通用表征，打开了「个人健康基础模型」的大门。对于苹果、三星、Garmin 等可穿戴厂商，这意味着健康功能可以大幅降本增效；对于医疗行业，这是从被动治疗转向主动预防的关键基础设施。",
+  "direction": "12-18 个月内，健康领域基础模型将成为可穿戴厂商的标配竞争点。苹果、三星将加速自研或授权类似模型。FDA 等监管机构将出台 AI 健康预测的审批框架。个人健康 AI 智能体将从概念走向产品。",
+  "opportunities": [
+    "基于健康基础模型的个人健康 AI 智能体，提供 24/7 健康监测和预警",
+    "面向保险公司的动态健康评估与个性化定价平台",
+    "面向药企临床试验的远程患者监测与数据分析服务",
+    "跨设备健康数据整合与统一健康档案服务"
+  ],
+  "risks": [
+    "500 万参与者健康数据的隐私边界与合规风险，GDPR/HIPAA 合规挑战巨大",
+    "模型在不同人种、年龄、性别人群上的偏差可能导致健康预测不公平",
+    "AI 健康预测被误用为医疗诊断可能引发法律纠纷"
+  ],
+  "signals": [
+    {
+      "source": "Google Research：Blog（网页）",
+      "time": "7/10",
+      "title": "Google Research 推出 SensorFM：面向可穿戴健康数据的通用基础模型",
+      "summary": "Google Research 发布 SensorFM，在超过 100 万亿分钟多模态传感器数据上预训练，来自 500 万参与者，覆盖 35 项健康预测任务。",
+      "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data"
+    }
+  ]
+},
+{
+  "id": 381,
+  "date": "2026-07-09",
+  "title": "SWE-1.7 的覆盖范围接近 GPT 5.5 和 Opus Intelligence",
+  "coreInsight": "Cognition 发布 SWE-1.7，通过异步 RL 训练和 top-p 采样等训练稳定性创新，以远低于前沿实验室的成本实现了接近 GPT-5.5 和 Opus Intelligence 的软件工程能力。关键技术突破包括 top-p 采样预防熵崩溃、NVFP4 低精度 rollout 和专家路由重放。",
+  "whyItMatters": "SWE-1.7 证明了一件事：成本效率优化可以在不牺牲能力的前提下追赶前沿模型。在各大实验室军备竞赛般烧钱的背景下，Cognition 用更聪明的训练方法而非更多 GPU 逼近 SOTA，这对整个行业的 ROI 叙事是重要修正。对于预算有限的创业公司和中小企业，这意味着顶级的 AI 编程能力不再是天价投入的专属。",
+  "direction": "6-12 个月内，SWE-bench 等编程评测将成为模型训练效率而非绝对能力的竞技场。更多中小型实验室将凭借训练方法论创新在细分基准上与前沿实验室竞争。成本-性能比将成为模型选型的关键指标。",
+  "opportunities": [
+    "面向中小企业的成本优化型 AI 编程助手，对标 Copilot 但价格大幅降低",
+    "RL 训练方法论咨询与优化服务，帮助 AI 公司降低训练成本",
+    "编程模型评测基准（benchmark）的构建与验证服务",
+    "企业内部代码库专用的经济型 AI 编程模型定制"
+  ],
+  "risks": [
+    "基准过拟合风险——SWE-1.7 在标准评测上的高分不一定转化为真实项目中的编程能力",
+    "前沿实验室拥有更多 GPU 资源，在全新类型任务上仍可能保持绝对优势",
+    "RL 训练的不稳定性可能限制方法向更大规模扩展"
+  ],
+  "signals": [
+    {
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "time": "7/9 21:46",
+      "title": "SWE-1.7 的覆盖范围接近 GPT 5.5 和 Opus Intelligence",
+      "summary": "Cognition 发布 SWE-1.7，通过异步 RL 和 top-p 采样创新，以低成本实现接近 GPT-5.5 的编程能力。",
+      "url": "https://cognition.com/blog/swe-1-7"
+    }
+  ]
+},
+{
+  "id": 382,
+  "date": "2026-07-09",
+  "title": "Anthropic 发起「硬问题」倡议，邀请公众提出 AI 相关尖锐问题",
+  "coreInsight": "Anthropic 作为公益公司发起「硬问题」倡议，邀请公众就 AI 对就业、社会、家庭、科学和医学等领域的影响提出最尖锐的问题。此前已通过大规模调研收集数据：5.2 万美国人问卷、159 个国家 70 种语言的 8.1 万 Claude 用户访谈、数十场线下焦点小组，并基于匿名数据研究 Claude 实际使用情况。这是迄今为止 AI 实验室最大规模的公众意见征询行动。",
+  "whyItMatters": "这是 AI 实验室从「闭门造车」到「开门纳谏」的范式转变。在 AI 治理争论日趋激烈的背景下，Anthropic 通过系统性的公众参与建立政策话语权和公众信任。尤其值得注意的是，长期利益信托（Long-Term Benefit Trust）已任命美联储前主席伯南克为受托人，与「硬问题」倡议形成制度-民意双重合法性构建。这对 OpenAI、Google 等竞争对手构成治理层面的压力。",
+  "direction": "6-12 个月内，公众参与将成为 AI 实验室的标配实践而非差异化优势。监管机构可能将公众意见征询纳入 AI 系统的审批或评估流程。长期利益信托/公益公司架构将被更多 AI 公司效仿。",
+  "opportunities": [
+    "AI 公众舆情分析与政策建议咨询服务",
+    "参与式 AI 治理平台开发，支持大规模公众意见收集与分析",
+    "跨文化 AI 影响研究，提供区域性 AI 政策建议",
+    "企业 AI 伦理培训与公众沟通策略咨询"
+  ],
+  "risks": [
+    "收集的数据可能被选择性使用以支持预先设定的叙事，而非真正指导决策",
+    "公众意见容易受媒体叙事影响，不一定反映经过深思熟虑的政策偏好",
+    "承诺与实际行动之间存在落差——跟踪问责机制的缺失可能导致倡议沦为 PR 工具"
+  ],
+  "signals": [
+    {
+      "source": "Anthropic：Newsroom（网页）",
+      "time": "7/9 17:40",
+      "title": "Anthropic 发起「硬问题」倡议，邀请公众提出 AI 相关尖锐问题",
+      "summary": "Anthropic 邀请公众就 AI 对社会各领域影响提出尖锐问题，已通过多轮大规模调研收集数据，承诺公开追踪并报告行动及成效。",
+      "url": "https://www.anthropic.com/news/hard-questions"
+    }
+  ]
+},
+{
+  "id": 383,
+  "date": "2026-07-09",
+  "title": "OpenAI 推出 ChatGPT Work：可跨应用自主工作的 AI 智能体",
+  "coreInsight": "OpenAI 发布 ChatGPT Work，由 GPT-5.6 驱动的 AI 智能体能跨应用和文件自主收集信息，将复杂项目分解为小步骤独立执行并持续工作数小时。内置 Codex 技术，每周超 500 万用户使用，其中超 100 万用于非软件开发场景。桌面版统一提供 Chat、Work 和 Codex 三种模式，标志着 AI 从对话工具向自主工作者的关键转折。",
+  "whyItMatters": "ChatGPT Work 是 OpenAI 迄今最野心勃勃的智能体产品，直接对标并超越 Anthropic 的 Claude Code 和 Computer Use。每周 500 万 Codex 用户已证明市场对「AI 自主工作」的强烈需求，其中 100 万非开发者用户意味着 AI 智能体正在破圈进入非技术人群。将 Chat、Work、Codex 统一在桌面应用中，暗示 OpenAI 正在构建一个「AI 操作系统」层——取代传统应用交互范式。",
+  "direction": "6-12 个月内，AI 智能体将从「辅助工具」演进为「自主工作者」，成为生产力软件的核心交互模式。竞争对手（Anthropic Claude、Google Gemini）将加速推出类似能力。企业对 AI 智能体的采用将从试验走向规模化部署，可能显著改变知识工作的组织方式。",
+  "opportunities": [
+    "面向企业的 AI 智能体集成与流程自动化服务",
+    "AI 智能体行为监控、审计与治理平台",
+    "垂直行业 AI 智能体开发（法律文件审查、财务报表分析、医疗记录整理）",
+    "AI 智能体工作效能评估与 ROI 分析工具"
+  ],
+  "risks": [
+    "智能体在长时间自主工作中累积错误可能造成复合型损害，难以回滚",
+    "智能体跨应用访问数据引发企业数据安全和合规新风险",
+    "智能体替代人工可能导致行政和知识工作者岗位的大规模替代，社会影响深远"
+  ],
+  "signals": [
+    {
+      "source": "OpenAI：官网动态",
+      "time": "7/9 10:00",
+      "title": "OpenAI 推出 ChatGPT Work：可跨应用自主工作的 AI 智能体",
+      "summary": "OpenAI 发布由 GPT-5.6 驱动的 ChatGPT Work，能跨应用自主工作数小时，内置 Codex，每周超 500 万用户。",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
+    }
+  ]
 }
 ]
