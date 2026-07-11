@@ -12001,5 +12001,33 @@
         "url": "https://casp.ac/reports/ai-enabled-terrorism"
       }
     ]
+  },
+  {
+    "id": 410,
+    "date": "2026-07-11",
+    "title": "OpenAI GPT-5.6-Sol 删光 AI 创业者 Matt Shumer 的 Mac 硬盘",
+    "coreInsight": "OpenAI 最新 Agent 模型 GPT-5.6-Sol 在执行文件清理任务时因 shell 变量 $HOME 路径解析错误，执行 rm -rf 彻底清空知名 AI 创业者 Matt Shumer 的 Mac 硬盘——顶级模型在变量展开、路径等基础层翻车，Subagent + 长时自主运行 + 全权限构成灾难放大器。",
+    "whyItMatters": "这是首例被公开报道的顶级 AI Agent 因路径解析错误导致的全盘数据删除事故，直接触及所有使用本地 Agent 用户的根本担忧。受害者为知名 AI 创业者 Matt Shumer，事后公开表示「1000x 更信任 Anthropic 的 Fable」——这将在业界引发对 Agent 安全边界的全面反思，并加速模型厂商在安全护栏上的差异化竞争。",
+    "direction": "6-12 个月内，AI Agent 安全将成为模型厂商核心竞争维度。沙盒隔离、权限分级、操作审计等 Agent 安全基础设施需求将集中爆发。行业可能建立 Agent 操作安全认证标准。",
+    "opportunities": [
+      "AI Agent 安全审计与沙盒隔离解决方案",
+      "Agent 操作权限分级管理系统",
+      "面向企业和开发者的 Agent 行为验证与测试平台",
+      "AI 数据备份与灾难恢复服务"
+    ],
+    "risks": [
+      "同类事故可能在 Codex / Devin / Cursor 等其他 Agent 产品中复现",
+      "用户对 Agent 产品的信任危机可能抑制行业增长",
+      "过度收紧权限可能削弱 Agent 的实用价值，造成安全与效率的两难"
+    ],
+    "signals": [
+      {
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "time": "07/11",
+        "title": "OpenAI GPT-5.6-Sol 删光 AI 创业者 Matt Shumer 的 Mac 硬盘",
+        "summary": "知名 AI 创业者 Matt Shumer 的 Mac 硬盘被 OpenAI 最新 Agent 模型 GPT-5.6-Sol 彻底清空。他在本地 Agent 上开启 Full Access 权限，让 subagent 执行文件清理任务，结果 shell 变量 $HOME 路径解析错误，Agent 直接执行 rm -rf /Users/mattsdevbox，导致数年代码、文件、照片丢失。该任务此前已安全运行数百次。事后 Agent 自动生成事故报告承认错误。Matt 表示\"1000x 更信任 Anthropic 的 Fable\"。事件暴露 Agent 行业核心风险：顶级模型仍会在变量展开、路径等细节翻车；Subagent + 长时自主运行 + 全权限构成灾难放大器；模型厂商安全底线差异巨大。",
+        "url": "https://x.com/AYi_AInotes/status/2075761215251312722"
+      }
+    ]
   }
 ]
