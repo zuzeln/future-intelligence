@@ -13056,5 +13056,57 @@
       "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf"
     }
   ]
-}
+},
+  {
+    "id": 449,
+    "date": "2026-07-12",
+    "title": "OpenAI CEO Altman 改口称 AI 净创造就业，Anthropic CEO 也修正早期言论",
+    "coreInsight": "OpenAI CEO Altman 从「AI 可能导致大规模失业」转向「相当确信 AI 净创造就业」，Anthropic CEO Amodei 也同步修正早期预测，将自动化重新定义为生产力倍增器。两位 AI 领袖的集体转向标志着行业叙事从「AI 取代人类」向「AI 增强人类」的历史性转变。",
+    "whyItMatters": "两大顶级 AI 实验室 CEO 同期修正对就业的预测，直接影响全球政策制定者和企业决策层对 AI 部署节奏的判断。如果「AI 净创造就业」成为新共识，各国对 AI 的监管紧迫感可能减弱，企业采用 AI 的速度将加快。但数据与叙事之间存在显著张力——多项研究尚未发现 AI 对整体生产力的显著影响。",
+    "direction": "6-12 个月内，「AI 对就业是替代还是增强」的争论将从实验室层面转向行业级实证研究。AI 公司将有更强动力发布就业影响白皮书以证明自身合法性，各国将陆续出台 AI 就业影响评估要求。",
+    "opportunities": [
+      "AI 就业影响评估与咨询服务——帮助企业量化 AI 部署对岗位的具体影响",
+      "面向被 AI 冲击岗位的转岗培训与再就业平台",
+      "AI 增强型工作流设计——将 AI 定位于生产力倍增器而非替代品"
+    ],
+    "risks": [
+      "叙事转向可能掩盖某些岗位已被 AI 实质性替代的现实——程序员和文案就业危机早于 ChatGPT 发布",
+      "如果后续数据继续不支持「净创造就业」结论，AI 行业将面临严重的公信力危机"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "7/12",
+        "title": "OpenAI CEO Altman 改口称 AI 净创造就业，Anthropic CEO 也修正早期言论",
+        "summary": "OpenAI CEO Sam Altman 表示，他\"相当确信\"AI 迄今为止净创造了就业，并承认\"这并非我预期\"。此前他曾警告 AI 影响可能快得\"有点吓人\"。Anthropic CEO Dario Amodei 也修正了早期言论，将自动",
+        "url": "https://the-decoder.com/openai-ceo-altman-is-now-pretty-sure-ai-is-net-job-creating-which-is-quite-the-pivot-from-predicting-mass-layoffs"
+      }
+    ]
+  },
+  {
+    "id": 450,
+    "date": "2026-07-11",
+    "title": "彭博社揭秘苹果起诉 OpenAI 内幕：前员工一句\"哈哈\"成窃密关键",
+    "coreInsight": "苹果起诉 OpenAI 的核心证据竟是一句「哈哈，我发现我还能访问网络存储」——前工程师离职后利用未修复漏洞持续访问内网，超 400 名苹果员工已跳槽至 OpenAI。这暴露了科技巨头间人才流动中知识产权保护的巨大漏洞。",
+    "whyItMatters": "苹果 vs OpenAI 的诉讼将定义 AI 时代商业秘密保护的边界。400+ 员工从苹果流向 OpenAI 的规模史无前例，如果苹果胜诉，将大幅提高 AI 公司从竞对挖人的法律风险，可能重塑整个 AI 行业的人才流动规则。案件还暴露了离职员工权限回收机制的系统性漏洞。",
+    "direction": "12-18 个月内，头部科技公司将全面升级离职员工权限回收机制并加强竞业限制执行。此类诉讼将成为 AI 人才战争的常态手段，可能导致行业出现「冷却期」惯例。",
+    "opportunities": [
+      "企业离职员工数字资产清理与权限审计服务",
+      "AI 行业商业秘密保护合规咨询与培训",
+      "面向科技公司的自动化权限回收与持续监控平台"
+    ],
+    "risks": [
+      "过度严格的商业秘密保护可能抑制 AI 行业正常人才流动和创新",
+      "苹果胜诉可能引发连锁诉讼，使 AI 公司陷入法律战而非技术竞争"
+    ],
+    "signals": [
+      {
+        "source": "IT之家（RSS）",
+        "time": "7/11",
+        "title": "彭博社揭秘苹果起诉 OpenAI 内幕：前员工一句\"哈哈\"成窃密关键",
+        "summary": "苹果起诉 OpenAI，指控前工程师 Chang Liu 离职时带走未归还的 MacBook、一名可分享内情的员工，并利用软件漏洞持续访问苹果内网。他发现漏洞后向同事分享\"哈哈，我发现我还能访问网络存储\"，后者协助其获取更多机密。苹果称 O",
+        "url": "https://www.ithome.com/0/975/634.htm"
+      }
+    ]
+  }
 ]
