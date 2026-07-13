@@ -16044,5 +16044,31 @@
         "url": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german"
       }
     ]
+  },
+  {
+    "id": 566,
+    "date": "2026-07-13",
+    "title": "OpenAI 面向普通用户发布提示词指南：从结果出发，少写步骤",
+    "coreInsight": "OpenAI 发布面向普通用户的提示词指南，核心主张是「从结果出发，少写步骤」——用一两条硬性规则替代逐步骤脚本，把 AI 当作协作伙伴而非执行机器。指南同时披露了 ChatGPT Work（基于 Codex+GPT-5.6）的三大新能力：Steer 中途重定向、Queue 排队下一条消息、沙盒模式。",
+    "whyItMatters": "这篇指南标志着 OpenAI 对提示工程理念的根本转变：从「工程师写精密 prompt」走向「普通人用自然语言描述目标」。ChatGPT Work 的 Steer/Queue/沙盒模式则代表 AI 工作流从「一步一问」升级为「多步自主执行」，这是 Agent 化能力向消费级用户渗透的关键信号。",
+    "direction": "6-12个月内，提示工程将分化为两条路径：普通用户用自然语言目标描述，专业用户用结构化约束。AI Agent 的中途干预和排队执行能力将成为消费级产品的标配，Codex 的 Steer 模式可能被其他厂商借鉴。",
+    "opportunities": [
+      "面向普通用户的提示词培训与模板库，降低 AI 使用门槛",
+      "基于多步自主执行的 AI Agent 工作流设计工具（如 Codex Steer/Queue 模式）",
+      "AI Agent 中途干预和可视化监控的产品化"
+    ],
+    "risks": [
+      "「少写步骤」可能导致用户对 AI 行为失去精确控制，尤其在安全敏感场景",
+      "多步自主执行模式下，错误可能在无人监控时被放大"
+    ],
+    "signals": [
+      {
+        "source": "The Decoder：AI News（RSS）",
+        "time": "7/13",
+        "title": "OpenAI 面向普通用户发布提示词指南：从结果出发，少写步骤",
+        "summary": "OpenAI 整合了一份面向普通用户的提示词指南，涵盖目标、上下文、输出格式和边界四个可选模块。指南建议以结果而非步骤开头，用一两条硬性规则替代逐步骤脚本。Chat 处理快速任务，基于 Codex 技术和 GPT-5.6 模型的 ChatGPT Work 负责多源、多步骤的复杂项目。Codex 新增 Steer（重定向当前运行）、Queue（排队下一条消息）和沙盒模式，支持 /plan、/goal 和 /review 等斜杠命令。用户无需一次性写对提示词，后续追问是预期调整方式。",
+        "url": "https://the-decoder.com/openais-new-prompting-guide-tells-users-to-stop-overthinking-and-start-with-the-result"
+      }
+    ]
   }
 ]
