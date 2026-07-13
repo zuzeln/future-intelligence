@@ -16070,5 +16070,33 @@
         "url": "https://the-decoder.com/openais-new-prompting-guide-tells-users-to-stop-overthinking-and-start-with-the-result"
       }
     ]
+  },
+  {
+    "id": 567,
+    "date": "2026-07-14",
+    "title": "前沿模型实际成本：tokenizer 差异导致隐性涨价",
+    "coreInsight": "AI 模型定价已不再是简单的输入/输出 token 单价问题——不同厂商的 tokenizer 差异可使同一内容的 token 计数相差 1.73 倍；即使同一厂商，新一代 tokenizer 也可能在标价不变的情况下使实际成本「隐性涨价」约 30%。",
+    "whyItMatters": "这揭示了 AI 成本透明度的新维度。企业在大规模采用 AI 时，需要测量不同提供商/模型上的实际 token 消耗量，而非仅比较标牌价格。一个表面上更便宜的模型，处理相同内容时可能反而更贵。随着 AI 支出从实验性走向规模化预算，tokenizer 效率将成为采购决策的关键隐性变量。",
+    "direction": "6-12 个月内，企业将开始要求 tokenizer 透明度和标准化基准测试。AI 成本计算工具将把 tokenizer 效率纳入与单 token 定价同等重要的指标。第三方审计服务将出现，专门评估不同模型的「有效任务成本」。",
+    "opportunities": [
+      "跨模型 token 消耗基准测试工具与成本对比平台",
+      "面向企业 AI 采购的「有效单任务成本」标准化指标",
+      "AI 成本审计与提供商选型咨询服务",
+      "支持多 tokenizer 的提示词优化工具——同一提示词针对不同模型自动压缩 token 数"
+    ],
+    "risks": [
+      "隐性成本膨胀侵蚀 AI 重度用户的预算可预测性",
+      "tokenizer 差异加剧厂商锁定——迁移模型时需重新评估全部成本结构",
+      "促销价结束后（如 Claude Sonnet 5 恢复原价），叠加 tokenizer 变化可能导致实际成本跳涨 30%+"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "7/13",
+        "title": "前沿模型实际成本：tokenizer 差异导致隐性涨价",
+        "summary": "同一份 TypeScript 文件在 GPT-5.x 上为 681 个 token，在 Claude 最新 tokenizer 下为 1,178 个，相差 1.73 倍。Anthropic 新 tokenizer 比旧版多产生约 30% 的 token，标价不变，构成隐性涨价。Claude Opus 4.6 与 Opus 4.8 标价同为 $5.00/$25.00，但新 tokenizer 使同一代码的 token 数增加约 32%。Claude Sonnet 5 的促销价 8 月底结束后将恢复 $3.00/$15.00，届时相同代码成本将比 Sonnet 4.6 高出约 32%。跨厂商对比中，Claude 新 tokenizer 在代码上比 GPT 多产生 1.50x 至 1.73x 的 token。",
+        "url": "https://playcode.io/blog/real-price-of-frontier-models"
+      }
+    ]
   }
 ]
