@@ -17856,5 +17856,59 @@
         "url": "https://www.marktechpost.com/2026/07/16/patter-sdk-guide-to-building-a-restaurant-booking-phone-agent-with-dynamic-variables-guardrails-latency-dashboards-and-eval-checks"
       }
     ]
+  },
+  {
+    "id": 634,
+    "date": "2026-07-16",
+    "title": "HYPIC：小红书联合北大、上交提出首个混合注意力大模型位置无关缓存系统",
+    "coreInsight": "小红书与北大、上交联合提出 HYPIC 系统，首次在混合注意力大模型上实现位置无关缓存（Position-Independent Cache），将首 token 延迟平均降低 3.25 倍，同 SLO 下持续 QPS 提升 1.66 倍，且任务质量仅下降 1.71 分。",
+    "whyItMatters": "混合注意力架构正在成为主流大模型的设计趋势，但传统 KV Cache 依赖于绝对位置编码，无法在不同序列位置间复用。HYPIC 突破这一限制，意味着混合注意力模型在生产部署中的吞吐瓶颈被大幅缓解，直接影响推理成本和服务质量。",
+    "direction": "6-12 个月内，位置无关缓存将成为混合注意力大模型推理优化的标配技术，可能引发新一轮推理框架的适配和 vLLM/SGLang 等生态的集成。",
+    "opportunities": [
+      "面向混合注意力大模型的推理优化与部署服务",
+      "适配 HYPIC 方法的开源推理框架插件或定制化方案",
+      "大模型推理效率基准测试与选型咨询服务",
+      "混合注意力架构在端侧部署场景的推理优化"
+    ],
+    "risks": [
+      "HYPIC 目前仅在 4 个生产模型上验证，泛化到其他架构的效果待观察",
+      "位置无关缓存可能引入额外的内存管理复杂度，需要推理框架协同适配"
+    ],
+    "signals": [
+      {
+        "source": "公众号：小红书技术",
+        "time": "7/16",
+        "title": "HYPIC：首个混合注意力大模型位置无关缓存系统",
+        "summary": "HYPIC 在混合注意力大模型上实现位置无关缓存，首 token 延迟降 3.25 倍，QPS 提升 1.66 倍。",
+        "url": "https://mp.weixin.qq.com/s/RWveWvw9yBH6YQINBQ-XjA"
+      }
+    ]
+  },
+  {
+    "id": 635,
+    "date": "2026-07-16",
+    "title": "Google Gemini Enterprise Agent Platform 新增 Parallel Web Search 网络接地",
+    "coreInsight": "Google Cloud 与 Parallel Web Systems 合作，将 Parallel 的搜索基础设施作为新的网络接地（Grounding）提供商原生集成到 Gemini Enterprise Agent Platform 中。开发者可将 AI 智能体锚定在可验证的实时网络结果上，并支持编程提取、永久缓存及跨 LLM 处理网络数据。",
+    "whyItMatters": "网络接地（Grounding）是缓解企业 AI 智能体幻觉的关键基础设施。Google 引入第三方搜索提供商作为接地源，打破了自身搜索垄断的形象，同时为企业开发者提供了更多选择。可编程缓存的设计意味着企业可以将搜索结果沉淀为可审计的数据资产。",
+    "direction": "6-18 个月内，多家 LLM 平台将竞相引入第三方接地提供商，形成类似「搜索引擎竞价」的接地生态。企业 AI 智能体的可审计性将成为合规采购的硬性要求。",
+    "opportunities": [
+      "面向企业 AI 智能体的多源接地聚合与切换服务",
+      "接地数据的缓存治理、版本管理与合规审计工具",
+      "垂直行业（金融、医疗、法律）的专用接地数据源",
+      "跨 LLM 平台的接地效果对比评测服务"
+    ],
+    "risks": [
+      "第三方接地提供商的搜索质量与覆盖范围可能影响智能体输出一致性",
+      "接地数据的永久缓存可能引发版权和数据使用权争议"
+    ],
+    "signals": [
+      {
+        "source": "Google Developers Blog",
+        "time": "7/16",
+        "title": "Gemini Enterprise Agent Platform 引入 Parallel Web Search 接地",
+        "summary": "Google Cloud 与 Parallel Web Systems 合作，将 Parallel 搜索基础设施作为新的网络接地提供商集成到 Gemini 企业智能体平台。",
+        "url": "https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search"
+      }
+    ]
   }
 ]
