@@ -29028,7 +29028,61 @@ body::after {
 
     Promise.resolve(JSON.parse(document.getElementById('init-data').textContent))
     .then(function(itemsFlat) {
-      ALL_ITEMS = itemsFlat[0];
+      ALL_ITEMS = itemsFlat[0,
+  {
+    id: 632,
+    date: "2026-07-16",
+    title: "台积电上调2026年资本支出至600~640亿美元：AI芯片需求推动的半导体军备竞赛进入新阶段",
+    coreInsight: "台积电将2026年资本支出从近560亿美元大幅上调至600~640亿美元，A14制程（1.4nm）进展超预期，预计2028年量产——半导体制造正从「供需平衡」进入「无限军备」模式。",
+    whyItMatters: "台积电资本支出是全球AI基础设施投资的风向标。Q3营收指引446~458亿美元、全年美元收入增幅超40%表明：AI芯片需求仍在加速而非放缓。A14制程被内部视为比2nm更大、更持久的工艺节点，将重塑下一代AI芯片的能效边界。",
+    direction: "6-12个月内，台积电资本支出超600亿美元将成为新常态。A14制程的移动+HPC双线需求将推动3nm/2nm客户加速向下一代工艺迁移，先进制程产能的供需缺口可能进一步扩大。",
+    opportunities: [
+      "A14制程生态链：EDA工具、IP核、先进封装等上游供应商的增量市场",
+      "2nm→A14过渡期内的芯片设计服务与工艺迁移咨询",
+      "台积电供应链企业（设备、材料、化学品）的投资机会",
+      "HPC客户对先进制程的定制化需求催生新的设计服务模式"
+    ],
+    risks: [
+      "资本支出持续膨胀可能导致行业产能过剩——2027年后AI需求增速若有回落，巨额折旧将侵蚀利润",
+      "先进制程集中度进一步上升，全球半导体供应链的地缘风险同步放大"
+    ],
+    signals: [
+    {
+      source: "IT之家",
+      time: "7/16",
+      title: "台积电上调2026年资本支出预测至600~640亿美元，A14制程进展顺利",
+      summary: "台积电Q2财报显示全年资本支出大幅上调，A14制程开发顺利，预计2028年量产。",
+      url: "https://www.ithome.com/0/977/544.htm"
+    }
+    ]
+  },
+  {
+    id: 633,
+    date: "2026-07-16",
+    title: "Patter SDK 发布语音智能体构建教程：从护栏到延迟仪表盘，电话AI走向工程化",
+    coreInsight: "Patter SDK的餐厅预订电话智能体教程展示了语音AI从「能对话」到「可工程化」的关键跨越——动态变量、输出护栏、延迟追踪和回归评估构成了一套完整的生产级Voice Agent管线。",
+    whyItMatters: "语音智能体是2026年AI应用层增长最快的赛道之一。Patter的教程揭示了行业当前的核心挑战不在模型能力，而在工程基础设施：PII脱敏、脏话过滤、话题范围限制、通话模拟测试、延迟/成本追踪——这些才是语音AI真正进入企业级部署的瓶颈。",
+    direction: "6-12个月内，语音智能体的开发工具链将从「模型+SDK」进化为「全栈管线平台」，护栏、评估、模拟测试和成本仪表盘将成为标配。具备完整可观测性和安全护栏的Voice Agent框架将加速取代传统呼叫中心方案。",
+    opportunities: [
+      "面向语音智能体的安全护栏与合规工具（PII脱敏、脏话过滤、行业合规）",
+      "Voice Agent的延迟与成本可观测性平台",
+      "基于脚本化通话模拟的Voice Agent回归测试服务",
+      "餐饮/酒店/医疗等垂直行业的语音智能体模板市场"
+    ],
+    risks: [
+      "语音智能体的安全护栏标准尚未统一，不同框架间的互操作性差",
+      "低延迟语音交互对网络和算力的要求可能限制在边缘设备上的部署"
+    ],
+    signals: [
+    {
+      source: "MarkTechPost",
+      time: "7/16",
+      title: "Patter SDK 教程：构建餐厅预订电话智能体，支持动态变量、护栏、延迟仪表盘与评估检查",
+      summary: "Patter SDK发布完整教程，演示语音智能体从通话模拟到安全护栏的全栈工程化管线。",
+      url: "https://www.marktechpost.com/2026/07/16/patter-sdk-guide-to-building-a-restaurant-booking-phone-agent-with-dynamic-variables-guardrails-latency-dashboards-and-eval-checks"
+    }
+    ]
+  }];
 
       var dateGroups = groupByDate(ALL_ITEMS);
 
