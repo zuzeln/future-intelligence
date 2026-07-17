@@ -168,13 +168,18 @@ body::after {
   transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .month-body.collapsed { max-height: 0; }
+.date-group-body { max-height: 3000px; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.date-group-body.collapsed { max-height: 0; }
 .sidebar-scroll { flex: 1; overflow-y: auto; padding: 0 12px 20px; position: relative; z-index: 3; max-height: 9999px; opacity: 1; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .sidebar.collapsed .sidebar-scroll { max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; flex: 0 0 0; }
 .sidebar.collapsed .search-wrap { display: none; }
 .date-sub-header {
   font-size: 11px; color: var(--text-tertiary); padding: 14px 10px 6px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.3px; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 4px; transition: color 0.2s;
 }
+.date-sub-header:hover { color: var(--text-secondary); }
+.date-arrow { font-size: 9px; display: inline-block; width: 12px; text-align: center; }
 .trend-item {
   display: flex; align-items: flex-start; gap: 8px;
   padding: 8px 10px; border-radius: 8px; cursor: pointer;
@@ -915,6 +920,7 @@ body::after {
       var parts = mg.key.split('-');
       var monthLabel = parts[0] + '年' + parseInt(parts[1]) + '月';
       var isFirst = mgIdx === 0;
+      var firstDate = isFirst;
       var monthBodyHtml = '';
 
       mg.dates.forEach(function(g){
@@ -928,8 +934,12 @@ body::after {
           }
         });
         if(groupHasVisible){
-          monthBodyHtml += '<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
-          monthBodyHtml += groupHtml;
+          monthBodyHtml += '<div class="date-sub-header" onclick="toggleDateGroup(this)">';
+          monthBodyHtml += '<span class="date-arrow">'+(firstDate?'▼':'▶')+'</span>';
+          monthBodyHtml += formatDateLabel(g.date)+'</div>';
+          monthBodyHtml += '<div class="date-group-body'+(firstDate?'':' collapsed')+'">';
+          monthBodyHtml += groupHtml+'</div>';
+          if(firstDate) firstDate = false;
         }
       });
 
@@ -972,6 +982,7 @@ body::after {
       var parts = mg.key.split('-');
       var monthLabel = parts[0] + '年' + parseInt(parts[1]) + '月';
       var isFirst = mgIdx === 0;
+      var firstDate = isFirst;
       var monthBodyHtml = '';
 
       mg.dates.forEach(function(g){
@@ -985,8 +996,12 @@ body::after {
           }
         });
         if(groupHasVisible){
-          monthBodyHtml += '<div class="date-sub-header">'+formatDateLabel(g.date)+'</div>';
-          monthBodyHtml += groupHtml;
+          monthBodyHtml += '<div class="date-sub-header" onclick="toggleDateGroup(this)">';
+          monthBodyHtml += '<span class="date-arrow">'+(firstDate?'▼':'▶')+'</span>';
+          monthBodyHtml += formatDateLabel(g.date)+'</div>';
+          monthBodyHtml += '<div class="date-group-body'+(firstDate?'':' collapsed')+'">';
+          monthBodyHtml += groupHtml+'</div>';
+          if(firstDate) firstDate = false;
         }
       });
 
@@ -1002,7 +1017,7 @@ body::after {
     });
 
     if(!h){
-      h = '<div class="search-empty">未找到匹配的趋势</div>';
+      h += '<div class="search-empty">未找到匹配的趋势</div>';
     }
     panelScroll.innerHTML = h;
   }
@@ -1024,6 +1039,18 @@ body::after {
   window.toggleMonth = function(header){
     var body = header.nextElementSibling;
     var arrow = header.querySelector('.month-arrow');
+    if(body.classList.contains('collapsed')){
+      body.classList.remove('collapsed');
+      arrow.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      arrow.textContent = '▶';
+    }
+  };
+
+  window.toggleDateGroup = function(header){
+    var body = header.nextElementSibling;
+    var arrow = header.querySelector('.date-arrow');
     if(body.classList.contains('collapsed')){
       body.classList.remove('collapsed');
       arrow.textContent = '▼';
