@@ -858,6 +858,7 @@ def append_new_trends(existing_data, max_id, existing_titles, new_trends):
             "opportunities": trend.get("opportunities", []),
             "risks": trend.get("risks", []),
             "signals": trend.get("signals", []),
+            "selected": True,
         }
         to_append.append(item)
         existing_titles.add(title)

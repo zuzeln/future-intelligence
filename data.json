@@ -20755,5 +20755,52 @@
         "category": "tip"
       }
     ]
+  },
+  {
+    "id": 719,
+    "date": "2026-07-19",
+    "title": "Qwen3.8 开源发布，2.4T 参数模型上线",
+    "url": "https://x.com/Alibaba_Qwen/status/2078754377473601787",
+    "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+    "category": "ai-models",
+    "score": 75,
+    "selected": true,
+    "coreInsight": "Qwen3.8 以 2.4T 参数规模开源发布，成为仅次于 Anthropic Fable 5 的全球第二大开源模型，阿里在超大规模开源模型领域实现突破，宣告开源生态正式进入万亿参数时代。",
+    "whyItMatters": "2.4T 参数的 Qwen3.8 开源意味着顶级 AI 能力不再被少数闭源厂商垄断。中国企业首次在超大规模开源模型上与全球最前沿对齐，将加速全球开发者生态向开源侧迁移，企业可在自有基础设施上部署接近前沿水平的模型。",
+    "direction": "开源超大规模模型将推动全球 AI 应用进入「平民化部署」阶段，6-12 个月内更多企业将在私有基础设施上运行千亿至万亿参数模型。",
+    "opportunities": [
+      "国内企业可基于 Qwen3.8 构建垂直行业大模型，降低对海外闭源 API 的依赖",
+      "AI 应用开发者可利用开源权重做深度微调，打造差异化产品",
+      "云厂商可围绕 Qwen3.8 推出托管推理服务，降低中小企业部署门槛",
+      "研究机构可基于 2.4T 模型进行可解释性、安全对齐等前沿研究"
+    ],
+    "risks": [
+      "开源超大规模模型可能被恶意使用，安全对齐机制的有效性待验证",
+      "Qwen3.8 在部分基准测试上仍落后 Fable 5，性能差距可能导致开发者预期落差",
+      "2.4T 参数模型的推理成本极高，中小团队实际可用性受限"
+    ]
+  },
+  {
+    "id": 720,
+    "date": "2026-07-19",
+    "title": "ChatGPT Work 功能：建站、邮件、文档处理",
+    "url": "https://x.com/thsottiaux/status/2078697631019303273",
+    "source": "X：Tibo (@thsottiaux)",
+    "category": "ai-products",
+    "score": 75,
+    "selected": true,
+    "coreInsight": "ChatGPT Work 将 AI 助手从对话界面升级为生产力工作台，集成建站、邮件管理、文档处理等办公核心能力，OpenAI 正式切入 Microsoft 365 和 Google Workspace 的腹地。",
+    "whyItMatters": "Work 功能让 ChatGPT 从「回答问题」进化为「替用户干活」，直接威胁 Office 和 Google Docs 的护城河。这是 AI 助手从信息层进入执行层的关键转折，标志着 AI 生产力工具的竞争格局将彻底重塑。",
+    "direction": "AI 助手将加速整合办公生产力工具，6-12 个月内 Google、微软将被迫推出类似深度集成功能作为防御。",
+    "opportunities": [
+      "企业可将 ChatGPT Work 作为轻量级办公入口，减少对传统办公套件的依赖",
+      "独立开发者可利用建站功能快速搭建 MVP 和 Landing Page",
+      "AI 邮件管理能力可切入企业客服和销售自动化场景"
+    ],
+    "risks": [
+      "AI 自动处理邮件和文档可能引发数据隐私和合规风险",
+      "自动生成的网站和文档质量参差不齐，可能影响企业品牌形象",
+      "与传统办公套件的功能差距仍大，深度办公场景难以替代"
+    ]
   }
 ]
