@@ -25426,4 +25426,104 @@
     "url": "https://www.anthropic.com/news/anthropic-economic-index-connector",
     "source": "Anthropic：Newsroom（网页）"
   }
+,
+
+  {
+    "id": 885,
+    "selected": true,
+    "date": "2026-07-23",
+    "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
+    "coreInsight": "DARPA 与美国空军在真实空战环境中完成 AI 自主飞行与战术机动测试——军事 AI 从模拟验证迈入实战化阶段，自主武器系统的技术可行性已被正式确认。",
+    "whyItMatters": "这是 AI 首次在真实战斗机上完成空战级别的自主操控，意味着 AI 军事化应用跨过关键门槛。此举将引发全球军事 AI 竞赛加速，自主武器系统的国际监管博弈进入实质阶段。",
+    "direction": "未来 12-18 个月，各国将加速 AI 军事化投入，自主无人机/战机的实战部署时间表将大幅提前。AI 军事伦理与军控条约的谈判将成为 G20/联合国核心议题。",
+    "opportunities": [
+      "军事 AI 训练与空战仿真平台",
+      "AI 无人机与自主飞行系统的民用转化（物流、救灾）",
+      "国防 AI 安全测试与对抗评估服务",
+      "军事 AI 伦理与合规咨询"
+    ],
+    "risks": [
+      "AI 武器化失控风险——自主系统在复杂战场中的不可预测行为",
+      "全球 AI 军备竞赛加剧地缘紧张，可能降低冲突门槛",
+      "AI 空战系统的误判或技术故障可能导致意外军事冲突",
+      "自主武器系统的问责归属难题——谁为 AI 的决定负责"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News (buzzing.cc)",
+        "time": "7/23",
+        "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
+        "summary": "AI 系统在真实空战环境中完成自主飞行与战术机动测试。",
+        "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16"
+      }
+    ],
+    "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+  },
+  {
+    "id": 886,
+    "selected": true,
+    "date": "2026-07-23",
+    "title": "Claude 语音模式现已支持 Opus、Sonnet 及连接工具与多语言",
+    "coreInsight": "Anthropic 将语音交互从 Haiku 扩展到全模型线（Opus/Sonnet/Haiku），并打通 Gmail、Slack 等工具生态——语音从辅助对话通道升级为覆盖全模型层级的生产力入口。",
+    "whyItMatters": "语音+工具连接意味着 AI 助手从「对话式」走向「行动式」——用户可通过语音直接操作 Gmail/Slack 等工作工具，这将重塑企业级 AI 助手的交互范式。同日 ChatGPT 也推出语音多智能体功能，标志语音已成为 AI 平台竞争的主战场。",
+    "direction": "语音将成为 AI 助手核心交互范式，工具连接生态（Gmail/Slack/Notion 等）将成为各 AI 平台差异化竞争的关键壁垒。6-12 个月内「语音优先」将从实验功能变为产品标配。",
+    "opportunities": [
+      "语音+企业工具集成的中间件与 API 网关",
+      "多语言语音 AI 在跨国企业协同办公场景的落地",
+      "语音驱动的 RPA 与工作流自动化平台",
+      "面向语音交互的 AI 安全与权限管理方案"
+    ],
+    "risks": [
+      "语音交互中的敏感信息泄露风险——办公场景的语音输入难以完全隔离",
+      "工具连接的权限滥用——AI 通过 Gmail/Slack 执行操作的边界模糊",
+      "多模型语音模式下模型切换的体验一致性挑战",
+      "企业数据通过语音+工具连接外泄的合规风险"
+    ],
+    "signals": [
+      {
+        "source": "Claude Blog",
+        "time": "7/23",
+        "title": "Claude 语音模式现已支持 Opus、Sonnet 及连接工具与多语言",
+        "summary": "所有用户可参与 beta 测试，免费版用 Haiku+一个工具，付费版全模型+全工具。",
+        "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode"
+      }
+    ],
+    "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+    "source": "Claude：Blog（网页）"
+  },
+  {
+    "id": 887,
+    "selected": true,
+    "date": "2026-07-23",
+    "title": "ChatGPT 桌面版上线语音控制多智能体",
+    "coreInsight": "OpenAI 将语音控制与多智能体编排（ChatGPT Work/Codex）结合，由 GPT-Live 驱动「边说边听边协调」——语音从对话接口进化为桌面操作系统级控制层，AI 助手正在成为新的 OS shell。",
+    "whyItMatters": "同日 Claude 和 ChatGPT 双双推出语音升级，标志着 AI 助手竞争的主战场从文本转向语音+多智能体协同。ChatGPT 更进一步将语音定位为「控制电脑和指挥多个智能体」的指挥中枢——桌面端 OS 级 AI 控制权争夺战正式打响。",
+    "direction": "未来 6-12 个月，语音控制+多智能体协同将成为桌面 AI 产品的标配。传统 OS（macOS/Windows）的 GUI 交互范式将面临 AI 语音层的重构，操作系统层面的 AI 集成将成为竞争焦点。",
+    "opportunities": [
+      "桌面级 AI 语音操作系统与 Shell 替代方案",
+      "多智能体编排与任务调度平台",
+      "AI 原生的语音驱动办公套件与生产力工具",
+      "面向桌面 AI 的隐私保护与权限管理中间件",
+      "跨智能体通信协议与标准化"
+    ],
+    "risks": [
+      "语音控制的误触发风险——桌面场景下的语音指令歧义与意外执行",
+      "多智能体协调的可靠性——任务编排失败可能导致工作流中断或数据丢失",
+      "桌面级 AI 的隐私边界——语音常驻监听与桌面数据访问的合规挑战",
+      "传统 OS 厂商（Apple/Microsoft）的反制可能形成新的平台锁定"
+    ],
+    "signals": [
+      {
+        "source": "X: OpenAI",
+        "time": "7/23",
+        "title": "ChatGPT 桌面版上线语音控制多智能体",
+        "summary": "由 GPT-Live 驱动，面向 macOS/Windows 的 Plus/Pro/Business/Edu/Enterprise 用户推送。",
+        "url": "https://x.com/OpenAI/status/2080378182469857576"
+      }
+    ],
+    "url": "https://x.com/OpenAI/status/2080378182469857576",
+    "source": "X：OpenAI (@OpenAI)"
+  }
+
 ]
