@@ -25356,5 +25356,74 @@
         "url": "https://x.com/joshwoodward/status/2079595879808569534"
       }
     ]
+  },
+  {
+    "id": 882,
+    "date": "2026-07-23",
+    "title": "TheNumbers.com 因 AI 爬虫与安全攻击导致网站崩溃重建",
+    "coreInsight": "AI爬虫和智能体的无节制流量已经对传统网站基础设施构成生存威胁。TheNumbers.com的案例表明，当AI流量占比高达90%时，服务器资源被完全耗尽，导致运行30年的旧系统被迫放弃，网站仅能恢复精简版，所有历史数据和高级功能丢失。这不仅是技术问题，更是AI生态中数据获取权与网站运营权之间的结构性冲突。",
+    "whyItMatters": "这是AI爬虫导致知名公共数据网站实质性崩溃的标志性案例。当AI公司无节制抓取数据时，中小型数据网站面临生存危机——它们承担基础设施成本，却无法从AI流量中获得任何回报。如果这种趋势持续，互联网上高质量的开放数据源将加速消失，最终损害整个AI生态的训练数据质量。",
+    "direction": "数据获取伦理与基础设施防护",
+    "opportunities": [
+      "开发针对AI爬虫的智能流量管理工具和服务",
+      "推动robots.txt协议升级，建立AI爬虫行为规范标准",
+      "为数据网站提供CDN级别的AI流量过滤解决方案",
+      "探索数据网站与AI公司的许可协议模式",
+      "构建去中心化的数据分发网络以分散AI流量压力"
+    ],
+    "risks": [
+      "更多高质量开放数据源因不堪重负而关闭或转为付费",
+      "AI训练数据质量下降，形成负反馈循环",
+      "小型网站被迫全面屏蔽AI爬虫，数据孤岛效应加剧",
+      "缺乏行业共识导致AI公司与内容方关系进一步恶化"
+    ],
+    "url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+  },
+  {
+    "id": 883,
+    "date": "2026-07-23",
+    "title": "OpenAI Workspace Agents 漏洞：一个 ChatGPT 链接即可创建恶意 AI 智能体",
+    "coreInsight": "AgentForger漏洞暴露了AI智能体权限继承模型的根本性缺陷——用户点击一个恶意链接即可在不知情的情况下创建自主运行的AI智能体，该智能体继承用户身份和已授权应用权限，绕过安全审批并设置定时任务从攻击者获取指令。这揭示了当前AI智能体平台在信任边界设计上的严重不足。",
+    "whyItMatters": "这是首个公开披露的AI智能体供应链攻击案例，证明了'链接即武器'的攻击模式在AI智能体领域已经成熟。随着企业越来越多地将AI智能体接入核心业务系统（邮件、日历、CRM等），此类漏洞可能被用于数据窃取、商业间谍甚至勒索。OpenAI虽在4天内修复，但其他AI平台可能面临类似风险。",
+    "direction": "AI智能体安全与权限治理",
+    "opportunities": [
+      "开发AI智能体行为监控和异常检测安全产品",
+      "推动AI智能体权限最小化和沙箱隔离标准",
+      "为企业提供AI智能体安全审计和渗透测试服务",
+      "构建AI智能体操作链的可追溯日志系统",
+      "开发智能体链接安全检查浏览器插件"
+    ],
+    "risks": [
+      "企业过早将AI智能体接入敏感系统，面临数据泄露风险",
+      "攻击者利用类似漏洞发起大规模AI供应链攻击",
+      "AI智能体的自主性使传统安全审计手段失效",
+      "修复后仍可能存在变种漏洞，攻击面持续扩大"
+    ],
+    "url": "https://the-decoder.com/one-tampered-chatgpt-link-could-spawn-a-rogue-ai-agent-that-took-orders-from-an-attacker-every-five-minutes",
+    "source": "The Decoder：AI News（RSS）"
+  },
+  {
+    "id": 884,
+    "date": "2026-07-21",
+    "title": "Claude 新增 Anthropic Economic Index 连接器，可直接查询 AI 对经济与职业的影响数据",
+    "coreInsight": "Anthropic将自身积累的Economic Index研究数据产品化为Claude的原生连接器，使用户可直接用自然语言查询AI对经济和职业影响的真实数据。这一举措将AI辅助决策从'模型推理'升级为'数据驱动'，标志着AI助手从对话工具向数据情报平台的进化，也展示了AI公司如何将其研究成果转化为产品差异化的护城河。",
+    "whyItMatters": "这是AI助手从通用对话能力向垂直数据集成迈出的重要一步。通过将真实的经济研究数据嵌入Claude，Anthropic不仅提升了产品的专业可信度，还为'AI+数据'的产品范式提供了范本。对研究机构、政策制定者和企业战略部门而言，这降低了获取AI经济影响洞察的门槛。",
+    "direction": "AI助手的数据集成与垂直专业化",
+    "opportunities": [
+      "将行业研究报告和数据直接集成为AI助手连接器",
+      "搭建企业内部的领域数据连接器，增强员工决策能力",
+      "开发AI经济影响数据的可视化分析工具",
+      "基于Economic Index数据构建职业转型路径推荐服务",
+      "推动开放数据标准，促进更多研究机构将数据产品化为AI连接器"
+    ],
+    "risks": [
+      "数据可能滞后或存在偏差，过度依赖可能导致误判",
+      "经济指数的方法论争议可能影响结论可靠性",
+      "竞争对手跟进导致数据连接器同质化",
+      "用户可能将相关性误读为因果性"
+    ],
+    "url": "https://www.anthropic.com/news/anthropic-economic-index-connector",
+    "source": "Anthropic：Newsroom（网页）"
   }
 ]
