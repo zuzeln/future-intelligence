@@ -27353,5 +27353,63 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 948,
+    "date": "2026-07-23",
+    "title": "Claude 5 代模型上下文工程新规则：Claude Code 系统提示词精简超 80%",
+    "coreInsight": "Anthropic 发现 Claude 5 代模型（Opus 5 / Fable 5）在编码任务中不再依赖冗长的系统提示词——Claude Code 原提示词超 80% 被删除后评测性能无显著损失。这标志着从「提示词越多越好」到「最小有效上下文」的范式转折。",
+    "whyItMatters": "当前 AI 工程实践中，精心设计的系统提示词被视为性能关键。此发现颠覆了长期积累的上下文工程经验：新一代模型的内在理解力已能替代大量显式指令，直接降低 token 消耗、延迟与提示词维护成本。对重度依赖 Claude Code 的开发团队是重大利好消息。",
+    "direction": "上下文工程将从「怎么写更好的提示词」转向「怎么识别最小有效上下文」。6-12 个月内，提示词压缩/剪枝工具和自动化精简服务将成为新的工具链热点。Anthropic 此举也暗示其内部可能已将更强的推理能力内化到模型权重中。",
+    "opportunities": [
+      "面向 Claude Code 的提示词自动精简与优化工具",
+      "企业级上下文工程审计与成本优化服务",
+      "新一代模型提示词最佳实践指南与培训课程",
+      "跨模型上下文效率对比评测基准"
+    ],
+    "risks": [
+      "过早对旧代模型套用精简策略可能导致性能退化，需逐代适配",
+      "过度依赖模型自身推理可能降低边缘 case 的可控性与可解释性",
+      "当前积累的大量提示词工程资产可能快速贬值"
+    ],
+    "signals": [
+      {
+        "source": "Claude：Blog（网页）",
+        "time": "07-23",
+        "title": "Claude 5 代模型上下文工程新规则：Claude Code 系统提示词精简超 80%",
+        "summary": "Anthropic 为 Claude Opus 5 和 Claude Fable 5 等新一代模型删除了 Claude Code 超过 80% 的系统提示词，且编码评测无显著损失。",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 949,
+    "date": "2026-07-23",
+    "title": "Anthropic 发布 Claude Opus 5",
+    "coreInsight": "Anthropic 发布 Claude Opus 5，智能水平接近旗舰 Claude Fable 5 但价格减半，在 Frontier-Bench v0.1 上性能超 Opus 4.8 两倍以上，ARC-AGI 3 得分为次优模型的 3 倍——以激进定价将前沿智能推向更广泛的用户群。",
+    "whyItMatters": "Opus 5 的发布展示了前沿 AI 能力的加速民主化：顶级推理能力不再局限于最贵的模型。ARC-AGI 3 上 3 倍于次优模型的得分尤其关键——ARC-AGI 被视为衡量通用智能的重要标尺，这一突破意味着 AI 在抽象推理与泛化能力上取得了质变级进步。",
+    "direction": "前沿 AI 智能正加速商品化——顶级能力以中位价格交付，迫使竞争者要么匹配价格性能曲线，要么在差异化维度（工具生态、隐私、部署灵活性）发力。未来 6 个月，预计 Gemini、GPT 系列都将被迫调整定价策略。",
+    "opportunities": [
+      "基于 Opus 5 的领域微调服务（法律、医疗、金融等专业推理）",
+      "ARC-AGI 高分模型在自动化科研与复杂推理场景的落地",
+      "面向企业的 Claude Max 部署咨询与成本优化",
+      "新一代模型评测基准——超越 ARC-AGI 3 的更严格通用推理测试"
+    ],
+    "risks": [
+      "Anthropic 若持续保持价格性能领先，可能导致推理市场的单极集中",
+      "前沿级推理能力以更低成本门槛开放，可能加速 AI 在敏感领域的滥用",
+      "ARC-AGI 3 的高分不一定完全对应真实世界复杂推理的可靠性"
+    ],
+    "signals": [
+      {
+        "source": "Anthropic：Newsroom（网页）",
+        "time": "07-23",
+        "title": "Anthropic 发布 Claude Opus 5",
+        "summary": "Claude Opus 5 智能水平接近 Claude Fable 5 但价格减半，Frontier-Bench v0.1 性能超 Opus 4.8 两倍以上，ARC-AGI 3 得分为次优模型三倍。即日起成为 Claude Max 默认模型。",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      }
+    ],
+    "selected": true
   }
 ]
