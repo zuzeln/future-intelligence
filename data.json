@@ -27555,8 +27555,7 @@
     ],
     "signals": [],
     "selected": true
-  }
-,
+  },
   {
     "id": 955,
     "title": "Suno 推出多项新功能，含MIDI导出等",
@@ -29642,5 +29641,27 @@
       "商业化路径不清晰"
     ],
     "api_id": "cmrsbql4401gxbiuaj7s1567n"
+  },
+  {
+    "id": 1057,
+    "title": "Suno 推出多项新功能，含MIDI导出等",
+    "url": "https://x.com/suno/status/2081443050312843765",
+    "source": "X：Suno (@suno)",
+    "date": "2026-07-26T18:14:29.000Z",
+    "summary": "Suno 推出多项新功能：高级音轨分离、将音轨导出为 MIDI、歌词合写与自动保存、截图生成歌曲、Apple CarPlay 与 Android Auto。这些更新标志着 Suno 从消费级 AI 音乐生成工具向专业音乐制作平台进化。",
+    "category": "ai-products",
+    "coreInsight": "Suno 本次更新从 AI 音乐生成工具向专业音乐制作平台进化——MIDI 导出、音轨分离、截图生成歌曲等功能表明其正突破「黑盒生成」，提供创作全流程的细粒度控制，将 AI 音乐带入 DAW 协作生态。",
+    "whyItMatters": "MIDI 导出使 Suno 从消费级娱乐切入专业音乐制作赛道，可与 Logic Pro、Ableton 等 DAW 无缝协作，极大拓展了 AI 音乐的商业应用场景。CarPlay 与 Android Auto 支持将 AI 音乐延伸至车载场景，标志着 AI 生成内容正从桌面走向全场景覆盖。",
+    "direction": "6-12 个月内，AI 音乐工具将从「一键生成」进入「专业协作」阶段，MIDI 导出、分轨编辑、多格式输出将成为标配。AI 音乐将与主流 DAW 生态深度融合，催生新的音乐制作工作流。",
+    "opportunities": [
+      "AI 音乐+DAW 工作流的中间件与插件工具市场",
+      "面向车载场景的 AI 音乐实时生成与个性化推荐服务",
+      "AI 音乐制作的教育培训与在线内容社区平台"
+    ],
+    "risks": [
+      "AI 辅助创作的音乐版权归属仍处于灰色地带，法律框架滞后于技术发展",
+      "专业音乐制作人对 AI 工具的抵触可能延缓生态整合进程"
+    ],
+    "api_id": "cms24qise02adro9fp4xzdhyd"
   }
 ]
