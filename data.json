@@ -29733,5 +29733,127 @@
       "ACM 框架的标准化可能导致 Agent 架构同质化，抑制多样化创新路径"
     ],
     "api_id": "cms2r21jz03qgro3fp5yo5b3v"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "当编码不再是瓶颈：Berkeley RDI 提出软件自主开发三级框架",
+    "coreInsight": "UC Berkeley RDI 提出软件自主开发三级框架（Code Autonomy → Pipeline Autonomy → Demand Autonomy），借鉴 SAE 自动驾驶分级理念，首次为 AI 编程从辅助到完全自主建立了一套共享词汇和责任划分体系。",
+    "whyItMatters": "目前「自主编程 Agent」一词含义模糊，从补全几行代码到自主发 PR 都被混为一谈。该框架为行业提供了统一的评估标尺，让企业能够明确当前处于哪个级别、下一步向哪走——这对 AI 编程工具的产品定位和商业化路线具有直接指导意义。",
+    "direction": "6-12 个月内，主流 AI 编程工具将开始引用或对标该三级框架。Level I 已接近实现（Claude Code/Codex 等），Level II 将是下一阶段竞争焦点——谁能率先实现无需人工审查的端到端流水线自主开发。",
+    "opportunities": [
+      "基于三级框架的 AI 编程工具评测与认证服务",
+      "面向 Level II 的自动化验证与安全审计工具链",
+      "面向高安全领域（医疗/航天）的受限自主开发平台",
+      "AI 编程工具的差异化定位与营销策略咨询"
+    ],
+    "risks": [
+      "Level II/III 的验证假设「无需人工审查中间产物」在关键系统中尚不可靠，过早推广可能导致安全事故",
+      "框架可能被用于夸大宣传——工具标注 Level II 但实际仅在有限场景下通过，误导企业采购决策"
+    ],
+    "signals": [
+      {
+        "source": "Berkeley RDI",
+        "title": "When Coding Stops Being the Bottleneck — Why AI will completely transform, not merely accelerate, software engineering"
+      }
+    ],
+    "id": 1061
+  },
+  {
+    "date": "2026-07-27",
+    "title": "用AI Skill自动生成可协作HTML PPT",
+    "coreInsight": "基于 Bento PPT 改造的 Skill，输入内容或主题即可自动生成可编辑、可在线演示、支持多人协作的 HTML PPT——将 AI Skill 的原子能力从代码生成拓展到了文档/演示创作领域。",
+    "whyItMatters": "PPT 制作是知识工作者的高频刚需，但传统工具（Keynote/PowerPoint）的 AI 能力薄弱。HTML 格式天然支持协作、版本管理和实时预览，以 Skill 形态封装意味着可以在任意 AI 编程环境中一键调出，极大降低了使用门槛。",
+    "direction": "3-6 个月内，基于 HTML 的 AI 生成演示工具将成为独立品类，与 Notion/Canva 等平台的 AI 幻灯片功能形成竞争。Skill 市场中的「内容创作类 Skill」将快速增长。",
+    "opportunities": [
+      "面向企业/教育场景的 AI PPT 生成 SaaS 服务",
+      "HTML PPT 模板市场与 Skill 生态",
+      "嵌入 AI Coding 工具的办公效率类 Skill 矩阵",
+      "与在线协作平台（飞书/钉钉）集成的 AI 演示方案"
+    ],
+    "risks": [
+      "HTML PPT 在复杂动画、品牌字体、导出兼容性上仍不及原生应用，企业正式场景可能不够用",
+      "AI 生成内容的质量控制与品牌一致性难以保证，需要人工二次调整的摩擦可能抵消效率提升"
+    ],
+    "signals": [
+      {
+        "source": "X: 向阳乔木",
+        "title": "基于 bento PPT 改造了一个 Skill，输入内容或主题自动生成可协作 HTML PPT"
+      }
+    ],
+    "id": 1062
+  },
+  {
+    "date": "2026-07-27",
+    "title": "浪费20亿Token后，我开源了帮Agent定义目标的Leader.skill",
+    "coreInsight": "卡兹克开源 Leader.skill——一个将模糊需求转化为结构化目标任务书的 Skill，核心理念是「Goal Engineering」而非 Loop Engineering：定义目标最重要的是 Harness（约束），即告诉 Agent 什么不能做，而非仅仅告诉它要做什么。内置「目标七问」方法论（Why/Done/Proof/Anti/Bounds/Trade/Unknown）。",
+    "whyItMatters": "随着 Claude Code/Codex 等工具支持 /goal 模式，Agent 可独立运行数小时甚至数天。但目标定义不清晰会导致 Agent 沿着错误方向狂奔——卡兹克一天浪费 20 亿 Token 即是典型案例。Leader.skill 填平了「人类模糊意图 → Agent 可执行目标」之间的鸿沟，直接关系到长程 Agent 任务的完成质量与 Token 成本。",
+    "direction": "3-6 个月内，目标定义将成为 AI Agent 工具链的标准环节。会有更多类似 Leader.skill 的工具出现，从 Goal Engineering 角度切入 Agent 基础设施。多模型组合（强规划模型 + 强执行模型）的协作模式将在开发者社区中普及。",
+    "opportunities": [
+      "面向企业的 Agent 任务管理与目标定义平台",
+      "多模型编排服务（规划模型 + 执行模型组合套餐）",
+      "目标模板市场与最佳实践知识库",
+      "Agent 任务执行监控与偏差预警工具",
+      "基于目标七问方法论的产品设计咨询服务"
+    ],
+    "risks": [
+      "目标定义本身仍是模糊的人类行为，Skill 只能辅助不能替代——过度依赖可能产生「目标定义幻觉」，以为写清楚了实际仍有歧义",
+      "工作流中增加一个规划环节会延长任务启动时间，简单任务的 ROI 可能为负"
+    ],
+    "signals": [
+      {
+        "source": "微信公众号: 卡兹克",
+        "title": "浪费20亿Token之后，我开源了一个帮自己定义目标的Skill"
+      }
+    ],
+    "id": 1063
+  },
+  {
+    "date": "2026-07-26",
+    "title": "Suno 推出多项新功能，含MIDI导出等",
+    "coreInsight": "AI 音乐生成平台 Suno 推出 MIDI 导出等新功能，将 AI 生成的音频从「只能听」变成「可编辑、可在专业 DAW 中继续加工」的中间产物，标志着 AI 音乐工具从消费级向专业创作工具的演进。",
+    "whyItMatters": "MIDI 导出解决了 AI 音乐生成最大的痛点之一：不可编辑性。音乐制作人可以将 AI 生成的旋律导入 Logic Pro/Ableton 等 DAW 进行精细调整，AI 因此从「替代创作」变为「辅助创作」——这会显著提高专业用户对 AI 音乐工具的接受度。",
+    "direction": "6-12 个月内，AI 音乐/音频工具将普遍支持分轨导出、MIDI 导出和 DAW 集成。AI+专业创作工具的融合（而非替代）将成为主流叙事。",
+    "opportunities": [
+      "AI 音乐 → DAW 工作流优化工具与插件",
+      "面向独立音乐人的 AI 辅助创作 + 发行一站式平台",
+      "游戏/影视配乐的 AI 辅助快速原型工具",
+      "AI 音乐素材的版权管理与授权平台"
+    ],
+    "risks": [
+      "MIDI 导出可能降低 AI 音乐模仿/侵权的技术门槛，版权争议风险上升",
+      "专业音乐人对 AI 工具的排斥情绪可能在短期内影响产品口碑与市场份额"
+    ],
+    "signals": [
+      {
+        "source": "X: Suno",
+        "title": "Suno launches multiple new features including MIDI export"
+      }
+    ],
+    "id": 1064
+  },
+  {
+    "date": "2026-07-23",
+    "title": "Agentic Context Management：将智能体记忆与成本问题重构为生命周期与架构挑战",
+    "coreInsight": "论文提出 Agentic Context Management（ACM）——将 AI Agent 的上下文管理从「存储与检索」问题重新定义为生命周期与架构问题，分解为五个原语：架构设计、摄取、范围界定、预判、压缩与整合。实验在 LongMemEval 达 92%、LoCoMo 达 93.2%，验证了压缩可实现线性成本与保真度的平衡。",
+    "whyItMatters": "生产环境 AI Agent 失败的首要原因不是推理能力不足，而是上下文管理失控——对话历史膨胀导致 token 成本指数增长、关键信息丢失。ACM 框架是首次将这个问题从工程修补提升到架构层面，提出的五原语模型为 Agent 基础设施的设计提供了系统化的理论依据。",
+    "direction": "6-12 个月内，ACM 的五原语模型将被主流 Agent 框架（LangChain/AutoGen/CrewAI 等）部分或全部采纳。上下文压缩与预判式加载将成为 Agent 中间件的标配能力，token 成本有望降低 30-60%。",
+    "opportunities": [
+      "基于 ACM 框架的 Agent 中间件/SDK 开发",
+      "企业级 Agent 上下文管理服务（多租户、组织范围层级）",
+      "Agent token 成本优化与监控平台",
+      "面向 Agent 的上下文质量基准测试服务",
+      "ACM 五原语的独立模块化实现（可插拔到现有框架）"
+    ],
+    "risks": [
+      "压缩算法可能存在信息丢失的「精度悬崖」——在关键决策场景下压缩掉关键信息可能导致灾难性错误",
+      "五原语模型的架构复杂度较高，中小团队可能难以正确实施，反而增加系统脆弱性"
+    ],
+    "signals": [
+      {
+        "source": "arXiv: 2607.21503",
+        "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems"
+      }
+    ],
+    "id": 1065
   }
 ]
