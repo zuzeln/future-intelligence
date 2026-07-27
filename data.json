@@ -29663,5 +29663,27 @@
       "专业音乐制作人对 AI 工具的抵触可能延缓生态整合进程"
     ],
     "api_id": "cms24qise02adro9fp4xzdhyd"
+  },
+  {
+    "id": 1058,
+    "title": "用AI Skill自动生成可协作HTML PPT",
+    "url": "https://x.com/vista8/status/2081568902241513786",
+    "source": "X：Vista (@vista8)",
+    "date": "2026-07-27T02:34:34.000Z",
+    "summary": "Vista 基于 bento PPT 改造了一个 Skill，输入内容或主题即可自动生成可编辑、在线演示并支持协作的 HTML PPT。安装指令为 npx skills add joeseesun/qiaomu-bento-ppt，推荐使用 Kimi K3 或 Opus 4.8+ 等前端审美好的模型。",
+    "category": "tip",
+    "coreInsight": "AI Skill 正在成为新一代内容创作范式：Vista 将 bento PPT 封装为可安装的 Skill，用户通过自然语言指令即可生成可协作的 HTML PPT——这意味着富交互文档生成从专业工具操作降维为一句提示词，AI 辅助创作正从文本/代码向富媒体/富交互内容全面延伸。",
+    "whyItMatters": "Skill 机制（如 npx skills add）让「AI 生成可协作富交互内容」的门槛从零开始触达普通用户。HTML PPT 天然支持在线协作、版本控制和跨平台分享，比传统 PPTX 文件更适合远程团队。这一趋势如果被主流采纳，将重塑内容生产工具链——从 Office 套件向 AI Skill 生态迁移。",
+    "direction": "6-12 个月内，基于 Skill/Plugin 的富内容生成工具将大量涌现，覆盖 PPT、海报、简历、报告、甚至简单 Web 应用。传统办公套件将被迫引入 AI Skill 商店或插件市场以应对用户流失。HTML 作为通用渲染层的优势将进一步凸显。",
+    "opportunities": [
+      "面向企业的 AI Skill 内容工厂——定制化 PPT/报告 Skill 开发与部署",
+      "AI Skill 市场的聚合平台——发现、评价、安装、管理各类内容生成 Skill",
+      "HTML PPT 协作托管服务——提供实时协作编辑、演示、分享的一站式 SaaS"
+    ],
+    "risks": [
+      "AI 生成的 HTML PPT 在排版一致性、品牌视觉规范方面可能不及专业设计师手工制作",
+      "Skill 生态碎片化——如果多个平台各自推出不兼容的 Skill 格式，用户将面临选择困境"
+    ],
+    "api_id": "cms2mylvu02nlro3f73afr69h"
   }
 ]
