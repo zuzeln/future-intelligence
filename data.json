@@ -30786,5 +30786,70 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1099,
+    "date": "2026-07-28",
+    "title": "Perplexity 推出 Windows 版个人电脑智能体",
+    "coreInsight": "Perplexity 将个人电脑智能体从 macOS 扩展到 Windows 平台，标志着 AI 助手正在从浏览器搜索框走向系统级本地智能体——直接操控本地文件、应用和网络，成为真正的「操作系统层」AI。",
+    "whyItMatters": "Windows 是全球最大的桌面操作系统，覆盖 10 亿+ 用户。Perplexity 此举意味着 AI 智能体开始进入企业 IT 和办公生产力核心场景，与 Microsoft Copilot 形成正面竞争。本地智能体的「文件+应用+网络」三角能力模型正在成为行业新基线。",
+    "direction": "6-12 个月内，主流 AI 产品（ChatGPT、Claude、Gemini）将陆续推出 Windows 原生智能体能力。操作系统厂商（微软、苹果）与 AI 公司之间在「谁控制桌面 AI 入口」上的竞争将加剧。",
+    "opportunities": [
+      "面向 Windows 企业环境的本地 AI 智能体部署与安全合规服务",
+      "跨本地文件和应用连接的 AI 工作流自动化工具（与 Perplexity 等智能体集成）",
+      "面向非技术用户的「AI 智能体 + 办公软件」培训与咨询服务",
+      "本地智能体的安全审计与数据泄露防护解决方案",
+      "Windows 智能体的行业垂直定制（金融、医疗、法律等合规场景）"
+    ],
+    "risks": [
+      "本地智能体直接访问文件和系统可能带来数据泄露风险——权限控制是否足够精细？",
+      "Windows 版本与 macOS 版能力不一致可能导致用户分裂和口碑分化",
+      "企业 IT 部门对「本地 AI 智能体」的安全顾虑可能延缓大规模部署",
+      "Microsoft Copilot 的生态壁垒（Office 365 集成）可能挤压第三方智能体空间",
+      "本地推理对硬件要求高，低配 Windows 设备体验可能大打折扣"
+    ],
+    "signals": [
+      {
+        "source": "X：Perplexity (@perplexity_ai)",
+        "time": "28/7",
+        "title": "Perplexity 推出 Windows 版个人电脑智能体",
+        "summary": "Personal Computer 现已在 Perplexity Windows 应用中可用。\n\nPersonal Computer 是面向你工作的本地智能体工具。它协调跨本地文件、已连接应用和网络的智能体。\n\n研究、编码、浏览和构建，全部在一个统一系统中完成。",
+        "url": "https://x.com/perplexity_ai/status/2082103880155046176"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1100,
+    "date": "2026-07-28",
+    "title": "Google Search 的 AI Mode 推出 5 项新功能，帮你规划线下生活",
+    "coreInsight": "Google 将 AI Mode 从「信息搜索」扩展到「线下生活规划」，通过连接日历、购物、购票、设计工具等，把搜索引擎变成生活操作系统——这不仅是从信息到行动的跨越，更是从线上到线下的 O2O AI 闭环。",
+    "whyItMatters": "Google 坐拥 10 亿+ 搜索用户，AI Mode 的线下扩展意味着 AI 开始渗透餐饮、娱乐、活动等本地生活服务领域。这对美团、Yelp、Eventbrite 等本地服务平台构成直接威胁，也迫使苹果 Siri 等竞品加速线下服务整合。",
+    "direction": "12 个月内，AI 搜索将全面从「给你链接」转向「帮你完成」——订餐、购票、预约等线下行动将成为标配。地图、支付、日历等工具的深度整合将成为 AI 助手的核心竞争力。",
+    "opportunities": [
+      "面向本地商家的 AI 搜索优化服务（ASO for AI Mode）",
+      "AI 驱动的线下活动智能推荐与规划平台",
+      "帮助传统票务/预订平台接入 AI 搜索的中间件服务",
+      "基于 AI Mode 的线下消费数据分析与营销工具",
+      "多平台 AI 助手体验对比评测与咨询服务",
+      "Calendar + AI 的智能日程规划垂直应用"
+    ],
+    "risks": [
+      "Google AI Mode 的线下扩张可能加速本地生活服务领域的垄断——中小平台将被边缘化",
+      "AI 自动预订和购买行为若出错（如订错日期/人数），责任归属不清",
+      "用户隐私风险加剧——AI 需要访问日历、位置、消费记录等敏感信息才能精准规划",
+      "线下商家若不在 Google 生态内，将被 AI 搜索「隐形」——形成新的数字鸿沟",
+      "Canva 等第三方工具整合带来数据跨平台流动的合规风险"
+    ],
+    "signals": [
+      {
+        "source": "Google Blog：AI（RSS）",
+        "time": "28/7",
+        "title": "Google Search 的 AI Mode 推出 5 项新功能，帮你规划线下生活",
+        "summary": "Google Search 的 AI Mode 新增 5 项工具，帮助用户规划线下活动。功能包括：通过 Personal Intelligence 连接 Google Calendar 推荐本地课程；在 AI Mode 内直接购物并查询附近库存；利用 Canvas 生成桌游策略指南并模拟对弈；根据预算和人数筛选并预订演唱会等门票；连接 Canva 生成邀请函设计。",
+        "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips"
+      }
+    ],
+    "selected": true
   }
 ]
