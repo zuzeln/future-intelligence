@@ -30471,5 +30471,146 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1088,
+    "date": "2026-07-27",
+    "title": "OpenRouter 发布 LLM 提供商性能评估指南：延迟、吞吐量、可用性与量化四大维度",
+    "coreInsight": "同一模型在不同提供商端点上的表现差异巨大——基础设施、量化策略、负载处理、路由默认值都会改变实际效果。评估应关注 TTFT 延迟的 p90/p99 而非平均值，量化精度是隐藏的质量变量。",
+    "whyItMatters": "开发者选模型时往往只关注模型本身，忽略了提供商端点对实际体验的决定性影响。这条指南系统化了提供商评估方法论，对生产环境的 LLM 应用选型有直接指导意义。",
+    "direction": "LLM 路由层正在成为基础设施的标配能力——从硬编码提供商名转向基于实测指标动态路由，是 LLM 工程化的必然趋势。",
+    "opportunities": [
+      "构建开源 LLM 提供商基准测试平台，持续监控主流提供商的延迟/吞吐量/可用性数据",
+      "开发基于指标的智能路由中间件，允许应用按 p90 延迟、吞吐量等条件动态切换提供商",
+      "为国内大模型 API 市场提供类似的提供商性能透明度工具"
+    ],
+    "risks": [
+      "基准测试结果具有时效性，单次跑分无法代表长期稳定性",
+      "国内 API 提供商的基础设施差异可能比海外更大，量化精度信息不透明"
+    ],
+    "signals": [
+      {
+        "time": "2026-07-28T00:00:00.000Z",
+        "selected": true,
+        "title": "如何评估不同 LLM 提供商在延迟、吞吐量和正常运行时间上的性能",
+        "summary": "OpenRouter 发布系统性指南，讲解如何从延迟（TTFT）、吞吐量、可用性和量化四个维度评估 LLM 提供商端点性能，并建议将评估结果转化为路由策略。",
+        "source": "OpenRouter Blog",
+        "url": "https://openrouter.ai/blog/insights/evaluate-llm-provider-performance"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1089,
+    "date": "2026-07-27",
+    "title": "基于 bento PPT 改造的 AI Skill 工具：输入主题即可自动生成可协作 HTML PPT",
+    "coreInsight": "AI Skill 生态正在从代码辅助扩展到内容创作工具链。qiaomu-bento-ppt 将 PPT 生成封装为可安装的 Skill，支持在线演示和多人协作，推荐配合 Kimi K3 或 Opus 4.8+ 等前端审美优秀的模型使用。",
+    "whyItMatters": "演示文稿是高频办公场景，将 PPT 生成标准化为 Skill 而非独立应用，意味着它可以直接嵌入各类 AI 编程助手的工作流，降低使用门槛并促进生态互通。",
+    "direction": "AI Skill 正在成为新一代「微型 SaaS」——轻量、可安装、可组合的工具单元，PPT、文档、图表等办公场景的 Skill 化将加速。",
+    "opportunities": [
+      "将类似 Skill 适配到更多国内 AI 助手平台，覆盖企业办公场景",
+      "开发配套的模板市场和主题库，提供行业垂直模板",
+      "结合多模态模型实现「截图转 PPT」「语音描述转 PPT」等交互方式"
+    ],
+    "risks": [
+      "生成质量高度依赖底层模型的前端审美能力，不同模型产出差异大",
+      "HTML PPT 在企业环境中的兼容性和安全性可能面临 IT 部门审核"
+    ],
+    "signals": [
+      {
+        "time": "2026-07-27T00:00:00.000Z",
+        "selected": true,
+        "title": "用 AI Skill 自动生成可协作 HTML PPT",
+        "summary": "向阳乔木基于 bento PPT 改造了一个 AI Skill，输入内容或主题即可自动生成可编辑、可在线演示、可多人协作的 HTML PPT，安装指令为 npx skills add joeseesun/qiaomu-bento-ppt。",
+        "source": "X（vista8）",
+        "url": "https://x.com/vista8/status/2081568902241513786"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1090,
+    "date": "2026-07-27",
+    "title": "卡兹克开源 Leader.skill：帮 AI Agent 定义目标的工具，历经 20 亿 Token 打磨",
+    "coreInsight": "AI Agent 的「目标漂移」是当前工程化落地的核心痛点。Leader.skill 通过在 Agent 执行前强制进行目标定义和范围锁定，系统性减少了 Token 浪费和执行偏离。20 亿 Token 的实战数据表明，明确的目标约束能显著提升 Agent 的任务完成率。",
+    "whyItMatters": "Agent 应用的 Token 消耗是成本控制的瓶颈，目标不清晰导致的重复尝试和偏离是最大的隐性浪费。Leader.skill 从工程角度给出了一种可复用的解决方案，开源后可直接融入现有 Agent 工作流。",
+    "direction": "Agent 工程化正在从「能跑就行」进入「可控、可预期」阶段，目标管理、范围锁定、执行监控等中间件层正在形成。",
+    "opportunities": [
+      "将 Leader.skill 集成到 LangChain、AutoGPT 等主流 Agent 框架中作为标准插件",
+      "开发 Agent 执行的 Dashboard 监控工具，可视化 Token 消耗与目标完成率的关联",
+      "在企业 Agent 平台中内置目标定义模板，降低普通用户的配置门槛"
+    ],
+    "risks": [
+      "过于严格的目标约束可能导致 Agent 在需要灵活性的场景中表现僵化",
+      "目标定义本身消耗 Token，在简单任务上可能得不偿失"
+    ],
+    "signals": [
+      {
+        "time": "2026-07-27T00:00:00.000Z",
+        "selected": true,
+        "title": "浪费 20 亿 Token 后，我开源了帮 Agent 定义目标的 Leader.skill",
+        "summary": "数字生命卡兹克开源了一款帮助 AI Agent 在执行前明确定义目标的 Skill 工具，历经 20 亿 Token 实战打磨，旨在解决 Agent 目标偏离和 Token 浪费问题。",
+        "source": "微信公众号（数字生命卡兹克）",
+        "url": "https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1091,
+    "date": "2026-07-27",
+    "title": "Suno 大更新：推出高级音轨分离、MIDI 导出、截图转歌等多项新功能",
+    "coreInsight": "Suno 正在从单纯的 AI 音乐生成工具向专业音乐创作平台演进。MIDI 导出打通了与传统 DAW 的工作流，高级音轨分离和歌词协作写作覆盖了从创作到后期制作的完整链路。CarPlay/Android Auto 的加入则拓展了消费场景。",
+    "whyItMatters": "MIDI 导出是 AI 音乐工具走向专业化的关键一步——它让 AI 生成的音乐可以被专业制作人在 Logic Pro、Ableton 等 DAW 中深度编辑，真正融入音乐工业流程。",
+    "direction": "AI 音乐工具正在补齐「生成 → 编辑 → 导出 → 协作」全链路，从玩具进化为生产力工具，对传统音乐制作流程的渗透将持续加深。",
+    "opportunities": [
+      "开发 Suno → DAW 的无缝工作流插件，降低专业用户的使用摩擦",
+      "基于截图转歌功能，拓展短视频创作者和广告行业的快速配乐需求",
+      "利用 MIDI 导出的开放性，构建第三方音色库和编曲模板市场"
+    ],
+    "risks": [
+      "AI 生成音乐的版权归属问题仍悬而未决，MIDI 导出可能加剧版权争议",
+      "专业音乐人对 AI 工具的接受度分化，部分群体可能抵制 AI 生成的音乐进入行业标准流程"
+    ],
+    "signals": [
+      {
+        "time": "2026-07-27T00:00:00.000Z",
+        "selected": true,
+        "title": "Suno 推出多项新功能，含 MIDI 导出等",
+        "summary": "Suno 宣布多项新功能上线，包括高级音轨分离（Advanced Stem Separation）、MIDI 导出、歌词协作写作与自动保存、截图转歌、以及 Apple CarPlay 和 Android Auto 支持。",
+        "source": "X（Suno）",
+        "url": "https://x.com/suno/status/2081443050312843765"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1092,
+    "date": "2026-07-28",
+    "title": "硅谷 AI 开源之争白热化：OpenAI 与 Anthropic 游说限制中国开源模型，黄仁勋马斯克领衔反对",
+    "coreInsight": "这是一场关于 AI 发展路线的根本性分歧。OpenAI/Anthropic 以安全为由推动闭源管控，英伟达/微软/Meta 以生态利益捍卫开源——背后是商业模式的对抗：前者依赖模型 API 收费，后者靠芯片和云服务从开源生态中获利。中国开源模型（智谱、月之暗面）的快速进步直接触发了这场博弈。",
+    "whyItMatters": "这场辩论的结果将决定全球 AI 产业的竞争格局——如果美国限制中国开源模型的获取，将加速中美 AI 生态脱钩；反之，开源阵营的胜利将维持技术扩散的惯性，有利于中国 AI 企业的全球化。",
+    "direction": "AI 地缘政治正在从「芯片管制」扩展到「模型管制」，开源/闭源路线之争将成为未来数年政策博弈的核心议题。中国开源模型的竞争力越强，美国的管制压力越大。",
+    "opportunities": [
+      "中国开源模型企业应抓住窗口期加速国际化，建立海外开发者社区和生态",
+      "开源模型托管平台（如 Hugging Face）的中立性价值凸显，可能催生新的去中心化模型分发基础设施",
+      "为出海企业提供合规咨询和替代方案——如何在不依赖受限模型的情况下构建 AI 应用"
+    ],
+    "risks": [
+      "若美国正式限制中国开源模型，国内依赖开源生态的 AI 创业公司将面临技术断供风险",
+      "中美 AI 生态脱钩可能导致全球出现两套互不兼容的技术栈，增加行业碎片化成本",
+      "开源与闭源阵营的对抗可能升级为更广泛的贸易和科技制裁"
+    ],
+    "signals": [
+      {
+        "time": "2026-07-28T00:00:00.000Z",
+        "selected": true,
+        "title": "OpenAI、Anthropic 游说美国限制中国开源模型，黄仁勋与马斯克公开反对",
+        "summary": "据纽约时报报道，OpenAI 和 Anthropic 在华盛顿游说监管机构限制中国开源 AI 模型。英伟达黄仁勋、微软纳德拉、Meta 扎克伯格、马斯克等科技领袖公开反对，近 200 家硅谷创业公司联署支持开源。中国智谱和月之暗面的模型进步是触发争论的关键因素。",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/981/797.htm"
+      }
+    ],
+    "selected": true
   }
 ]
