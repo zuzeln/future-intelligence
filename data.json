@@ -30612,5 +30612,66 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1093,
+    "date": "2026-07-28",
+    "title": "如何评估不同 LLM 提供商在延迟、吞吐量和正常运行时间上的性能",
+    "coreInsight": "同一模型在不同提供商端点上的性能差异源于基础设施、量化策略、负载处理和路由默认设置——OpenRouter 发布的这份评估指南首次系统化地定义了 LLM 提供商性能的四维评估框架。",
+    "whyItMatters": "企业多模型路由的核心痛点不是「选哪个模型」而是「选哪个提供商的同一个模型」。当 DeepSeek、Qwen 等开源模型被数十家提供商托管时，provider-level 的性能差异可能比 model-level 更大。这份指南填补了业界空白——此前没有系统化的 LLM 提供商评估方法论。",
+    "direction": "6-12 个月内，LLM 提供商性能基准测试将成为一个独立赛道。企业 AI 网关将内置 provider 级别的实时性能监控与自动切换。提供商将不得不公开 SLA 数据（延迟 P95、吞吐量、可用性）。",
+    "opportunities": [
+      "面向企业的 LLM 提供商性能实时监控与自动路由平台",
+      "跨提供商的模型性能基准测试与排名服务",
+      "基于 provider 级别 SLA 的 AI 成本优化工具"
+    ],
+    "risks": [
+      "提供商性能数据可能被选择性披露，存在美化偏差",
+      "过度追求 provider 层面优化可能导致基础设施复杂度失控"
+    ],
+    "signals": [
+      {
+        "source": "OpenRouter Blog",
+        "time": "7/28",
+        "title": "如何评估 LLM 提供商在延迟、吞吐量和正常运行时间上的性能",
+        "summary": "首次系统化定义 LLM 提供商四维评估框架，涵盖延迟、吞吐量、可用性和精度。",
+        "url": "https://openrouter.ai/blog/insights/evaluate-llm-provider-performance"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1094,
+    "date": "2026-07-27",
+    "title": "Kimi K3 开放日：模型权重、技术报告和关键 Infra 技术同步开放",
+    "coreInsight": "月之暗面以「开放日」形式同步开源 Kimi K3 模型权重、技术报告及 MoonEP/FlashKDA/AgentEnv 三项 Infra 技术——这是中国 AI 公司迄今为止最彻底的开放姿态，将 2.8 万亿参数 MoE 模型的完整技术栈推入公共领域。",
+    "whyItMatters": "Kimi K3 的 2.5 倍规模化效率提升（相对 K2.5）和 100 万 token 上下文窗口，加上原生视觉理解，使其成为目前开源生态中最具竞争力的中国模型。更重要的是——MoonEP（MoE 专家并行）、FlashKDA（高效注意力）和 AgentEnv（分布式智能体环境）三项 Infra 技术的开源，意味着其他团队可以直接复用这些基础设施训练自己的 MoE 模型。这是从「开源模型」到「开源 AI 基础设施」的范式升级。",
+    "direction": "6-12 个月内，中国 AI 公司将加速从「闭源追赶」转向「开源引领」策略。MoE 架构的开源基础设施将催生新一轮小团队训练大规模模型的浪潮。智能体训练环境（类似 AgentEnv）将成为下一代 AI Infra 的标准组件。",
+    "opportunities": [
+      "基于 Kimi K3 的垂直领域微调与应用开发",
+      "复用 MoonEP/FlashKDA 训练自定义 MoE 模型的 Infra 服务",
+      "基于 AgentEnv 的分布式智能体训练与评测平台"
+    ],
+    "risks": [
+      "2.8 万亿参数模型的开源可能被恶意利用——安全护栏难以覆盖所有下游用例",
+      "开源 Infra 技术的维护和社区治理需要持续投入，可能分散月之暗面核心研发精力"
+    ],
+    "signals": [
+      {
+        "source": "公众号：月之暗面（Kimi）",
+        "time": "7/27",
+        "title": "Kimi K3 开放日：2.8T 参数 MoE，100 万 token 上下文，原生视觉理解",
+        "summary": "规模化效率较 K2.5 提升 2.5 倍，同步开源权重、技术报告及三项 Infra 技术。",
+        "url": "https://mp.weixin.qq.com/s/IW9BdyA3hLvuuiX_aMCJEQ"
+      },
+      {
+        "source": "X: Kimi.ai",
+        "time": "7/27",
+        "title": "AgentEnv 开源：分布式智能体训练环境",
+        "summary": "为 Kimi K3 的智能体强化学习提供支撑，支持快速快照、恢复和分支。",
+        "url": "https://x.com/Kimi_Moonshot/status/2081762978391843020"
+      }
+    ],
+    "selected": true
   }
 ]
