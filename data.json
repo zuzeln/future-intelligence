@@ -30673,5 +30673,32 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1095,
+    "date": "2026-07-28",
+    "title": "FeyNoBg 发布：开源自动背景去除模型，在四项基准上达到 SOTA",
+    "coreInsight": "Feyn Labs 推出 FeyNoBg，一个基于 BiRefNet 架构的开源背景去除模型，参数量从 222M 扩展至 263M，在八项基准中四项取得最佳 S-measure 分数，其余四项与领先者差距在 2% 以内——同时开源了训练库 NoBg，降低了高质量背景去除技术的使用门槛。",
+    "whyItMatters": "背景去除是电商、视频会议、内容创作等领域的高频刚需，此前高精度方案主要依赖商业闭源服务（如 Remove.bg）。FeyNoBg 以开源姿态逼近甚至超越闭源 SOTA，且配套开源训练库——这意味着中小团队和独立开发者可以零成本获得商业级背景去除能力，并在此基础上定制训练自己的专有模型。",
+    "direction": "6-12 个月内，开源背景去除模型将在更多细分场景（医学影像、工业检测、AR/VR）中替代商业方案。训练库的开源将引发一波基于 BiRefNet 架构的微调创新——针对特定物体类别（人物、产品、动物）的专用背景去除模型将大量涌现。",
+    "opportunities": [
+      "基于 FeyNoBg 的电商产品图自动化处理流水线（批量去背景 + 场景合成）",
+      "面向视频会议/直播的实时背景去除插件或 SDK",
+      "针对垂直行业（医疗影像、工业质检）的 FeyNoBg 微调服务"
+    ],
+    "risks": [
+      "开源背景去除模型可能被用于深度伪造——将人物从原背景中分离后合成虚假场景",
+      "BiRefNet 架构的 263M 参数在移动端部署仍有性能瓶颈，实时推理可能受限"
+    ],
+    "signals": [
+      {
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "time": "7/28",
+        "title": "FeyNoBg 发布：开源自动背景去除模型，在四项基准上达到 SOTA",
+        "summary": "Feyn Labs 推出 FeyNoBg，一个用于自动背景去除的 SOTA 模型。它在八个基准测试中的四项上取得最佳 S-measure 分数，其余四项与领先者差距在 2% 以内。该模型基于 BiRefNet 架构，参数量从 222M 扩展至 263M，同时开源了训练库 NoBg，模型和代码分别可在 Hugging Face 和 GitHub 获取。",
+        "url": "https://usefeyn.com/blog/feynobg"
+      }
+    ],
+    "selected": true
   }
 ]
