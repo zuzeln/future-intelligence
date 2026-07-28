@@ -30851,5 +30851,59 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1101,
+    "date": "2026-07-28",
+    "title": "Gemini API Managed Agents 默认升级为 3.6 Flash，新增环境钩子与免费套餐",
+    "coreInsight": "Google DeepMind 将 Managed Agents 默认模型升级到 Gemini 3.6 Flash，通过环境钩子、免费套餐、预算控制和定时触发四位一体降低了智能体开发和运行的门槛——这是将智能体从「实验室特权」推向「开发者标配」的关键一步。",
+    "whyItMatters": "默认模型升级意味着所有使用 Managed Agents 的开发者无需任何改动即可获得最新模型的性能提升。环境钩子机制解决了智能体安全审计和代码质量控制的盲区——在每次工具调用前后插入自定义检查。免费套餐+预算控制+cron 定时触发组合，让个人开发者和小团队也能构建生产级智能体，Google 正在降低智能体开发的全链路成本。",
+    "direction": "6-12个月内，主流 AI 平台都将效仿推出智能体「免费套餐+预算控制」模式。环境钩子将成为智能体安全的标准组件。",
+    "opportunities": [
+      "基于 Gemini Managed Agents 的智能体应用开发平台",
+      "面向企业智能体的安全审查钩子模板市场",
+      "利用免费套餐的轻量级 AI 自动化 SaaS 工具"
+    ],
+    "risks": [
+      "免费套餐可能被恶意行为者滥用于大规模自动化攻击",
+      "预算控制机制不够精细可能导致开发者意外账单"
+    ],
+    "signals": [
+      {
+        "source": "Google Blog: AI",
+        "time": "7/28 16:00",
+        "title": "Expanding Managed Agents in the Gemini API: 3.6 Flash, hooks, and more",
+        "summary": "默认模型升级到 3.6 Flash，新增环境钩子、免费套餐、预算控制和 cron 定时触发。",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1102,
+    "date": "2026-07-28",
+    "title": "Kimi Linear：一种表现力强且高效的注意力架构",
+    "coreInsight": "月之暗面推出 Kimi Linear 混合线性注意力架构，首次在短上下文、长上下文和强化学习三个维度全面超越传统全注意力机制——这是对「Transformer 必须使用全注意力」这一架构信条的根本性挑战，且在工程上取得了系统性验证。",
+    "whyItMatters": "3B 激活参数模型在所有任务上全面超越全 MLA，KV cache 用量降低 75%、1M 上下文解码吞吐量提升 6 倍——线性注意力不再是「速度换取质量」的妥协方案，而是一条同时实现更快、更省、更好的新路径。已开源 KDA 内核、vLLM 实现和模型权重，研发社区可立即复现和推进。",
+    "direction": "6-12个月内，混合线性注意力将成为新模型架构的主流方向之一。KV cache 效率和长上下文推理成本将成为模型选型的关键指标。",
+    "opportunities": [
+      "基于 Kimi Linear 架构的垂直领域高效推理微调",
+      "将线性注意力集成到现有推理引擎的适配与优化服务",
+      "面向超长上下文场景的低成本 LLM API 服务"
+    ],
+    "risks": [
+      "线性注意力在需要逐 token 精确推理的任务上可能仍不及全注意力",
+      "架构切换需重新训练，已有模型投资的迁移成本较高"
+    ],
+    "signals": [
+      {
+        "source": "arXiv",
+        "time": "7/28 15:21",
+        "title": "Kimi Linear：混合线性注意力架构论文",
+        "summary": "3B 激活参数模型全面超越全 MLA，KV cache 降低 75%，1M 上下文解码吞吐量提升 6 倍。已开源 KDA 内核、vLLM 实现和权重。",
+        "url": "https://arxiv.org/abs/2510.26692"
+      }
+    ],
+    "selected": true
   }
 ]
