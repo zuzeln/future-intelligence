@@ -33029,5 +33029,36 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1179,
+    "date": "2026-07-29",
+    "title": "Science One Framework：通过 Chain-of-Evidence 实现可验证的自主科研框架",
+    "coreInsight": "Google Research 发布 Science One Framework——首个原生构建「证据链」（Chain-of-Evidence）的自主科研框架。其核心理念类似数据库的 ACID 原则：不规定智能体如何构建，而是规定其产出的可验证属性——每个声明必须携带完整、可追溯的证据链（完整性），且每条证据链必须真正支撑其对应的声明（正确性）。配套的 CoE Audit 协议可量化检测幻觉引用、不可复现结果、方法描述与代码不一致等科研诚信问题。",
+    "whyItMatters": "AI辅助科研当前面临的最大信任危机是「幻觉」——模型生成不存在的参考文献、不可复现的实验结果、或所写方法与实际代码不符。Science One 首次将这一问题从定性抱怨升级为可量化审计的工程框架：(1) 为AI科研产出建立了类似软件测试的「可验证性」标准；(2) CoE Audit 使得科研诚信检查自动化成为可能；(3) 如果该框架被学术出版界采纳，将从根本上改变AI生成科研内容的可信度评估方式——这对所有使用AI辅助科研的团队都是基础设施级的影响。",
+    "direction": "6-12个月内，证据链验证可能成为AI科研工具的标准功能。预计主流AI写作/研究助手将内置类似CoE的审计功能，学术期刊可能开始要求AI辅助论文附带可验证的证据链。谷歌此举可能推动「可验证AI科研」从概念走向行业标准。",
+    "opportunities": [
+      "基于CoE协议的科研诚信审计SaaS工具",
+      "面向学术期刊的AI辅助论文验证插件/API",
+      "集成证据链功能的AI科研写作助手",
+      "面向高校/企业的AI科研合规培训与认证服务",
+      "开源CoE验证工具与社区生态建设"
+    ],
+    "risks": [
+      "证据链验证可能增加AI科研的工程复杂度，推高使用门槛，使小型团队更难受益",
+      "CoE框架可能被过度解读为「AI科研已可完全信任」，反而降低人类审稿的警惕性",
+      "恶意行为者可能利用CoE协议「刷证据」制造更精密的学术造假",
+      "若谷歌垄断该标准，可能导致学术验证工具的供应商锁定风险"
+    ],
+    "signals": [
+      {
+        "source": "Google Research：Blog（网页）",
+        "time": "7/29",
+        "title": "Science One Framework：通过 Chain-of-Evidence 实现可验证的自主科研框架",
+        "summary": "Google Research推出Science One Framework，通过原生证据链（Chain-of-Evidence）消除模型幻觉，配套CoE Audit自动化评估协议。",
+        "url": "https://research.google/blog/science-one-framework-a-verifiable-autonomous-research-framework-via-chain-of-evidence"
+      }
+    ],
+    "selected": true
   }
 ]
