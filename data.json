@@ -33088,5 +33088,29 @@
       }
     ],
     "selected": true
+  },
+  {
+    "id": 1181,
+    "date": "2026-08-02",
+    "title": "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+    "coreInsight": "Codex 高阶玩法：让 Sol 在 `~/.codex/agents/` 下创建 `luna-worker.toml` 子代理，模型设 `gpt-5.6-luna`、reasoning effort 设 max，Sol 负责拆任务与审代码，具体实现自动委托给 Luna Max。",
+    "whyItMatters": "X：阿易 AI Notes (@AYi_AInotes) 发布 Codex 用 Sol 指挥 Luna Max 省额度翻倍产出，作为 技巧与观点 领域的最新进展，值得关注。",
+    "direction": "该动态反映了 技巧与观点 领域的持续演进趋势，预计在未来 3-6 个月内将有更多相关发展。",
+    "opportunities": [
+      "关注 X：阿易 AI Notes (@AYi_AInotes) 的后续产品迭代和生态建设",
+      "评估该进展对 技巧与观点 领域的实际影响和商业机会"
+    ],
+    "risks": [
+      "技术落地效果和用户接受度存在不确定性",
+      "竞争对手可能快速跟进，先发优势窗口有限"
+    ],
+    "signals": [
+      {
+        "title": "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://x.com/AYi_AInotes/status/2083867265179537565"
+      }
+    ],
+    "selected": true
   }
 ]
