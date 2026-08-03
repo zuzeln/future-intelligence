@@ -35371,5 +35371,139 @@
       "自动生成的 SmartArt/图表可能存在数据误读风险",
       "国内 AI 办公产品同质化严重，差异化窗口期短"
     ]
+  },
+  {
+    "id": 1280,
+    "date": "2026-08-03",
+    "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "url": "https://github.com/lyogavin/airllm",
+    "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
+    "category": "tip",
+    "coreInsight": "AirLLM 通过极致内存优化，将 70B 参数模型推理门槛从多卡高端 GPU 降至单块 4GB 消费级显卡，打破了「大模型=大显存」的固有认知。",
+    "whyItMatters": "极大降低了本地部署大模型的门槛，让个人开发者和中小企业也能在有限硬件上运行 SOTA 模型，推动 AI 民主化。",
+    "direction": "模型推理优化从「堆算力」转向「软件效率」，消费级硬件有望成为 AI 推理主力平台。",
+    "opportunities": [
+      "消费级硬件部署大模型市场扩大",
+      "边缘设备与IoT AI推理场景拓展",
+      "本地隐私AI应用需求增长",
+      "中小企业AI试错成本大幅降低"
+    ],
+    "risks": [
+      "推理速度极慢可能影响实用性",
+      "过度依赖单一优化方案存在生态脆弱性",
+      "精度压缩可能导致关键场景输出质量下降"
+    ],
+    "signals": [
+      "Hacker News 热门（buzzing.cc 中文翻译）"
+    ],
+    "selected": true
+  },
+  {
+    "id": 1281,
+    "date": "2026-08-03",
+    "title": "OpenRouter 推出 Ori Eval 简化评估流程",
+    "source": "X：OpenRouter (@OpenRouter)",
+    "url": "https://x.com/OpenRouter/status/2084301100078027143",
+    "summary": "推出 Ori Eval：编写首个评估的最简单方式。\n\n没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。\n\ncurl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
+    "category": "ai-products",
+    "coreInsight": "OpenRouter 推出 Ori Eval 自动化评估工具，通过扫描代码库自动生成并运行评测，帮助开发者在 500+ 模型中精准选出最适合自己项目的模型。",
+    "whyItMatters": "解决了模型选择的信息过载问题——开发者不再需要手动对比 benchmark 和价格，而是让 AI 基于实际任务数据做出最优选择。",
+    "direction": "AI 评测从通用 benchmark 转向任务特定自动化评测，「用你的数据说话」成为模型选型新范式。",
+    "opportunities": [
+      "自动化模型选型工具市场兴起",
+      "模型性能透明化需求推动评测行业发展",
+      "企业AI采购决策从经验驱动转向数据驱动",
+      "评测自动化可集成到CI/CD流水线"
+    ],
+    "risks": [
+      "评测结果高度依赖eval设计质量",
+      "可能引导用户过度依赖单一评分体系",
+      "评测覆盖度不足可能遗漏关键场景"
+    ],
+    "signals": [
+      "X：OpenRouter (@OpenRouter)"
+    ],
+    "selected": true
+  },
+  {
+    "id": 1282,
+    "date": "2026-08-03",
+    "title": "商汤发布 SenseNova U1.5-Lite-Preview 开源模型",
+    "source": "X：商汤 SenseTime (@SenseTime_AI)",
+    "url": "https://x.com/SenseTime_AI/status/2084288424236782073",
+    "summary": "商汤推出 SenseNova U1.5-Lite-Preview，一个基于 NEO-Unify 架构的轻量级原生统一多模态模型，仅 8B-MoT 参数即可达到商业闭源模型的生成与编辑质量。",
+    "category": "ai-models",
+    "coreInsight": "商汤推出仅 8B-MoT 参数的轻量级原生统一多模态模型，基于 NEO-Unify 架构，以极小参数量达到商业闭源模型的生成与编辑质量。",
+    "whyItMatters": "证明轻量级多模态模型可以不牺牲质量，大幅降低多模态 AI 的部署成本和延迟，对移动端和边缘设备尤为重要。",
+    "direction": "多模态模型向轻量化、高效化演进，8B 级参数有望成为移动端多模态 AI 的标准配置。",
+    "opportunities": [
+      "移动端多模态AI应用爆发",
+      "实时多模态交互场景商业化",
+      "轻量级模型开源生态建设",
+      "端侧AI芯片需求增长"
+    ],
+    "risks": [
+      "轻量化可能在极端复杂场景下质量不足",
+      "商汤开源策略与社区接受度存在不确定性",
+      "8B MoT实际推理效率需要进一步验证"
+    ],
+    "signals": [
+      "X：商汤 SenseTime (@SenseTime_AI)"
+    ],
+    "selected": true
+  },
+  {
+    "id": 1283,
+    "date": "2026-08-03",
+    "title": "Google Agent Skills 幕后：如何构建、测试与规模化",
+    "source": "Google AI：DEV 作者专属（RSS）",
+    "url": "https://dev.to/googleai/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills-1am5",
+    "summary": "Google Agent Skills 团队详解其开源技能库的构建与治理流程：项目始于 Google Cloud Next 2026 前的\"swarm\"冲刺，发布后 GitHub 星标超 15，000。为保证规模化下的质量，每个技能须通过标准化目录结构、CI/CD 流水线（含 linter、链接检查、AI 辅助清单）及提交时与每周的持续评估，并优先引用远程 MCP 工具。",
+    "category": "tip",
+    "coreInsight": "Google Agent Skills 团队详解其开源技能库的规模化治理体系，通过标准化目录结构、CI/CD 流水线和 AI 辅助评估，在 15000+ GitHub 星标下保证质量。",
+    "whyItMatters": "为行业提供了 Agent 技能标准化和质量保证的最佳实践参考，对于正在构建 Agent 生态的企业有重要借鉴价值。",
+    "direction": "Agent Skills 从个人创作走向工业化生产，标准化治理成为 Agent 生态规模化的关键基础设施。",
+    "opportunities": [
+      "Agent技能市场标准化工具需求",
+      "技能质量评估与认证服务",
+      "企业Agent技能治理方案市场",
+      "Agent技能CI/CD工具链"
+    ],
+    "risks": [
+      "过度标准化可能抑制创新灵活性",
+      "依赖Google生态存在锁定风险",
+      "AI辅助评估可能产生系统性偏见"
+    ],
+    "signals": [
+      "Google AI：DEV 作者专属（RSS）"
+    ],
+    "selected": true
+  },
+  {
+    "id": 1284,
+    "date": "2026-07-31",
+    "title": "OpenRouter 推出 Ori Eval：用你的数据证明哪款模型最适合你的项目",
+    "source": "OpenRouter：Announcements（RSS）",
+    "url": "https://openrouter.ai/blog/announcements/ori-eval",
+    "summary": "OpenRouter 发布 Ori Eval，一个能扫描代码库、自动编写 eval 文件并运行评测的智能体，帮助开发者在 500 多款模型中选出最适合自己项目的单一模型。",
+    "category": "ai-products",
+    "coreInsight": "OpenRouter 发布 Ori Eval 正式博客，详述其设计理念——一个能扫描代码库、自动编写 eval 文件并运行评测的智能体，实现数据驱动的模型选择。",
+    "whyItMatters": "将模型选型从主观经验判断升级为基于实际任务数据的客观决策，降低选错模型带来的成本和时间损失。",
+    "direction": "模型评测哲学从「看 benchmark 排名」到「用自己任务实测」，评测工具与开发流程深度融合。",
+    "opportunities": [
+      "数据驱动模型选型方法论推广",
+      "评测自动化与开发工具链集成",
+      "模型性能基准测试服务市场"
+    ],
+    "risks": [
+      "eval设计偏见可能延续到模型选择中",
+      "小团队缺乏构建高质量eval的专业能力",
+      "过度依赖自动化可能忽视定性评估维度"
+    ],
+    "signals": [
+      "OpenRouter：Announcements（RSS）"
+    ],
+    "selected": true
   }
 ]
