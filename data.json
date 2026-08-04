@@ -38548,5 +38548,357 @@
     ],
     "signals": [],
     "selected": true
+  },
+  {
+    "id": 1395,
+    "date": "2026-08-04",
+    "title": "从零开始，教你用Codex搓出属于你自己的第一个硬件",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684924&idx=1&sn=f9ecf13ac374f13dfa75f98f685a231d",
+    "source": "公众号：数字生命卡兹克",
+    "summary": "作者以零基础身份，全程通过与Codex对话，从需求讨论、电路搭建、代码烧录到3D打印组装，5天内做出一个能提醒久坐的猫爪硬件。文中还介绍了用Agent调试宏键盘、以及OpenAI与Work Louder联名发布的Codex Micro键盘（13个机械按键，售价230美元）等案例，强调\"干中学\"的AI开发方式。",
+    "category": "tip",
+    "coreInsight": "Codex CLI 的能力边界正在从纯软件向物理世界延伸，零基础用户通过自然语言驱动硬件开发成为可能，标志着 AI 辅助开发进入全栈时代。",
+    "whyItMatters": "硬件开发长期受限于专业知识壁垒，Codex 大幅降低了从电路到 3D 打印的入门门槛。",
+    "direction": "AI 辅助开发将从代码生成扩展到硬件原型，Codex 生态的软硬一体化趋势加速。",
+    "opportunities": [
+      "硬件教育市场迎来 AI 化转型机会",
+      "创客社区可构建硬件开发模板库",
+      "小型硬件创业团队可大幅降低原型开发成本",
+      "AI 硬件开发教程需求爆发"
+    ],
+    "risks": [
+      "AI 生成的电路设计可能存在安全隐患",
+      "硬件开发涉及物理安全，AI 辅助可能产生不可逆的实物损坏",
+      "过度依赖 AI 可能导致开发者丧失底层硬件理解能力"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1396,
+    "date": "2026-08-03",
+    "title": "Palantir 强劲季度后，CEO Alex Karp 称 AI 行业\"马克思主义\"",
+    "url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist",
+    "source": "TechCrunch：AI（RSS）",
+    "summary": "Palantir CEO Alex Karp 在季度股东信中警告，前沿 AI 实验室对企业过于不可信，并称其意图\"占有所谓合作伙伴的生产资料\"，带有\"马克思主义色彩\"。该公司第二季度营收 19 亿美元，同比增长 93%，利润 11 亿美元。Karp 主张 Palantir 提供模型无关的 AI 与分析软件，让企业掌控自身数据与 AI\"废气\"（提示词、编排、上下文）。",
+    "category": "tip",
+    "coreInsight": "Palantir CEO 将 AI 行业类比「马克思主义」，核心指控是前沿 AI 实验室试图占有企业客户的数据生产资料，揭示 AI 基础设施提供商与企业客户之间日益紧张的数据主权博弈。",
+    "whyItMatters": "营收同比增长 93% 的业绩证明企业 AI 市场正在爆发式增长，Karp 的言论代表了企业软件阵营对 AI 模型厂商的集体焦虑。",
+    "direction": "模型无关的 AI 中间层将成为企业级市场主流，数据主权的争夺从理念进入商业合同层面。",
+    "opportunities": [
+      "模型无关的 AI 平台迎来市场窗口期",
+      "企业数据治理与 AI 合规咨询需求增长",
+      "开源模型在企业私有化部署场景中更具竞争力",
+      "数据「废气」的价值被重新定价"
+    ],
+    "risks": [
+      "AI 模型厂商与企业客户的关系可能进一步恶化",
+      "模型绑定风险加剧",
+      "如果大模型厂商提供更优定制方案，平台中立策略可能失去吸引力"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1397,
+    "date": "2026-08-03",
+    "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
+    "source": "公众号：MiniMax（稀宇科技）",
+    "summary": "MiniMax 正式开源新一代通用视频模型 H3，可统一理解文本、图像、视频和音频，生成最高 2K 分辨率、最长 15 秒、带 32 kHz 原生立体声音频的视频。",
+    "category": "ai-models",
+    "coreInsight": "MiniMax H3 以通用全模态生成系统姿态开源，统一文本/图像/视频/音频理解与生成，支持 2K 分辨率视频与 32kHz 原生立体声，直接将开源视频生成拉到接近商业可用水平。",
+    "whyItMatters": "这是中国 AI 公司在视频生成领域最重磅的开源动作，将打破闭源垄断，加速视频生成应用的爆发。",
+    "direction": "全模态统一架构成为视频生成新范式，开源视频模型将催生大量垂直领域特化版本。",
+    "opportunities": [
+      "视频后期/包装工具创业者可直接基于 H3 构建产品",
+      "短视频和广告行业制作成本大幅下降",
+      "教育和培训领域可低成本生成教学视频",
+      "影视预演和概念片制作效率提升"
+    ],
+    "risks": [
+      "开源可能导致模型被滥用于深度伪造",
+      "2K/15 秒的视频质量在专业影视制作中仍有瓶颈",
+      "视频生成的高算力消耗仍是中小团队的负担",
+      "与闭源顶级模型的竞争中开源路线可能后劲不足"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1398,
+    "date": "2026-08-02",
+    "title": "实测MiniMax H3做后期和动效：视频届的审美王来了",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509055&idx=1&sn=28254c9e78532b336895b8c541905d49",
+    "source": "公众号：卡尔的AI沃茨",
+    "summary": "MiniMax H3视频模型实测覆盖广告TVC、短剧、创意片头、动态海报、UI动效和游戏实机六类场景，可生成5-15秒视频、原生双声道、直出2K，一次最多放9张图、3段视频和3段音频，提示语最高支持7000字符。",
+    "category": "tip",
+    "coreInsight": "实测表明 MiniMax H3 在广告 TVC、短剧、动态海报、UI 动效和游戏实机六类场景中均表现出色，提示语最高支持 7000 字符，「审美」能力被评价为视频领域的王者。",
+    "whyItMatters": "六场景实测数据证明 H3 在商用场景中已具备生产力，将加速品牌方和广告公司采纳 AI 视频工具。",
+    "direction": "AI 视频模型从「能生成」进化到「生成得好看」，审美能力成为差异化竞争点。",
+    "opportunities": [
+      "广告和营销行业可率先实现 AI 视频规模化生产",
+      "短剧赛道迎来低成本高产出的内容爆发期",
+      "UI/UX 设计师可利用 AI 快速生成动效原型",
+      "品牌方自建 AI 视频团队的可行性大幅提升"
+    ],
+    "risks": [
+      "对平面设计师和视频后期从业者的职业冲击",
+      "AI 视频泛滥可能导致内容同质化和审美疲劳",
+      "版权和肖像权问题在 AI 视频中更加复杂"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1399,
+    "date": "2026-07-31",
+    "title": "百度搭子一镜Skill：一句话生成数字人口播视频",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzA5NTQ5MzE5OQ%3D%3D&mid=2653159192&idx=1&sn=36f7f69db077393dab48eb6677b6b9c3",
+    "source": "公众号：百度智能云（文心）",
+    "summary": "百度搭子内置的一镜Skill支持仅凭一句话或一个主题，自动完成脚本生成、声音、数字人形象、口型驱动和视频渲染，生成可直接播放的数字人口播视频，全程无需拍摄、剪辑和露脸。该功能适用于旅游攻略、产品种草、知识科普、临时活动宣传、企业内部培训及个人IP起步等场景，大幅降低视频制作门槛。",
+    "category": "ai-products",
+    "coreInsight": "百度把数字人口播视频的完整制作链路压缩为「一句话」触发，全程无需拍摄、剪辑和露脸，数字人进入即用即走的工具化阶段。",
+    "whyItMatters": "中小商家和个人创作者最缺乏视频制作能力，一句话生成口播视频直接解决痛点，可能引爆短视频营销平民化浪潮。",
+    "direction": "数字人视频将从专业制作工具下沉为基础设施级能力，平台型公司将数字人内嵌到自身产品生态中。",
+    "opportunities": [
+      "本地生活商家可低成本批量生成探店视频",
+      "知识付费创作者可快速产出系列课程视频",
+      "电商平台商品详情页植入 AI 口播讲解",
+      "企业内部培训视频实现自动化生成"
+    ],
+    "risks": [
+      "数字人视频可能导致虚假营销和误导信息泛滥",
+      "平台需在内容审核上投入更多资源",
+      "过度使用数字人可能降低用户对视频内容的信任度",
+      "数字人形象权属和声音版权存在法律空白"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1400,
+    "date": "2026-07-31",
+    "title": "小红书 dots 团队发布 VibeLifeBench 与 VibeSearchBench：七个最强模型无一及格",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247495889&idx=1&sn=abb72082b7b1e1b12cc7dc6e4c812a50",
+    "source": "公众号：小红书技术（dots.llm）",
+    "summary": "小红书 dots 团队推出 VibeLifeBench 与 VibeSearchBench 两个生活场景评测基准，测试中七个当前最强模型无一在正确时间点解决护照有效期等关键问题，最高分仅 0.325（Opus 5）。",
+    "category": "paper",
+    "coreInsight": "小红书 dots 团队发布的两个生活场景评测基准暴露了关键真相：当前七个最强模型在护照有效期等真实生活问题上的最高分仅 0.325，无一及格。",
+    "whyItMatters": "这个 Benchmark 揭示了现有 AI Agent 在实际应用中存在巨大能力鸿沟，对押注 AI Agent 落地的创业者是重要风险信号。",
+    "direction": "AI 评测将从学术基准转向真实场景基准，生活场景 Agent 的能力缺口成为下一重点研究方向。",
+    "opportunities": [
+      "生活场景 AI 评测工具和服务市场空白，创业机会大",
+      "针对生活场景优化的 Agent 框架需求旺盛",
+      "具备真实生活场景数据积累的公司拥有先发优势",
+      "AI 个人助理赛道需重新审视技术可行性"
+    ],
+    "risks": [
+      "AI Agent 可能长期无法在真实生活场景中达到可用水平",
+      "过度依赖实验室基准可能导致产品落地失败",
+      "评测基准标准制定权可能被少数公司垄断"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1401,
+    "date": "2026-07-31",
+    "title": "DeepSeek V4 Flash 正式版发布：后训练重做，九项 Agent 测试全面超越 V4 Pro Preview",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684859&idx=1&sn=29658a67b2b3ef46aead73698d900250",
+    "source": "公众号：数字生命卡兹克",
+    "summary": "DeepSeek V4 Flash 正式版发布，模型结构和参数规模不变，仅重做后训练，Terminal Bench 2.1 从 61.8 涨至 82.7，DeepSWE 从 7.3 涨至 54.4。",
+    "category": "ai-models",
+    "coreInsight": "DeepSeek V4 Flash 正式版仅通过后训练重做就在九项 Agent 测试中全面超越 V4 Pro Preview，Terminal Bench 从 61.8 跳涨至 82.7，证明后训练策略的巨大潜力。",
+    "whyItMatters": "Flash 版以极低成本达到中上等智能水平，正在实现「智能平权」，对 AI 应用的规模化落地具有决定性意义。",
+    "direction": "模型竞争从追求能力上限转向能力/成本最优解，后训练成为比扩大参数更高效的提升路径。",
+    "opportunities": [
+      "Agent 自动化服务成本大幅下降",
+      "中小企业 AI 接入门槛实质性降低",
+      "后训练技术研发和咨询服务需求增长",
+      "AI 应用开发者可大规模进行低成本调用和实验"
+    ],
+    "risks": [
+      "与顶级模型在复杂架构设计和长时间自主执行上仍有巨大差距",
+      "过度依赖单一性价比模型可能导致关键业务稳定性不足",
+      "后训练技术门槛一旦被跨越，竞争壁垒可能迅速消失"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1402,
+    "date": "2026-07-31",
+    "title": "腾讯混元 Hyra 攻克加法组合学 50 年未解难题",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498145&idx=1&sn=6968b330e01b1f306db418dc19ae4843",
+    "source": "公众号：腾讯混元",
+    "summary": "腾讯混元上周推出的科研智能体 Hyra，基于本月开源的 Hy3 模型（总参数 295B、激活参数 21B），为加法组合学中悬置半个多世纪的开放问题给出完整答案，证明 2 是该问题指数的上确界。Hyra 先在有限搜索中将最好结果从约 1.14 提高到 1.21，经约 24 小时运行提出核心构造思路，并给出 Lean 4 形式化证明。论文预印本、显式构造和形式化证明均已公开。",
+    "category": "paper",
+    "coreInsight": "腾讯混元 Hyra 科研智能体基于 Hy3 模型攻克了加法组合学中悬置半个多世纪的开放问题，并给出 Lean 4 形式化证明，证明 AI 科研智能体已具备解决人类长期无法攻克难题的能力。",
+    "whyItMatters": "这是 AI 首次在纯数学领域解决一个 50 年以上的开放问题，标志着 AI 从辅助科研工具进化为独立的科研发现主体。",
+    "direction": "AI 科研智能体将加速基础科学研究的突破节奏，形式化证明与 AI 结合将改变学术论文的审稿和验证方式。",
+    "opportunities": [
+      "科研机构可部署类似 Hyra 的智能体加速研究",
+      "AI+形式化证明工具开发和应用需求爆发",
+      "学术期刊可能引入 AI 形式化证明作为审稿标准",
+      "AI 科研智能体可复用到药物发现、材料科学等领域"
+    ],
+    "risks": [
+      "AI 科研成果的归属权和署名问题亟待解决",
+      "数学家的职业价值和身份认同受到挑战",
+      "AI 在科研中的过度使用可能导致忽视直觉和创造力的培养"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1403,
+    "date": "2026-07-31",
+    "title": "MiniMax H3 发布并将开源，主打视觉包装与后期特效",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684857&idx=1&sn=03c84df8bc0389c4ceb8f50f6c0015e3",
+    "source": "公众号：数字生命卡兹克",
+    "summary": "MiniMax 发布 AI 视频模型 H3，并宣布开源。该模型主打视觉包装与后期特效，可生成动态 MV、动态海报、Vlog、电影片头、游戏 UI 等，语义遵循能力极强，在广告与动效领域表现优于 Seedance 2.0，但影视级张力镜头稍逊。H3 开源后预计将出现大量垂直领域特化版本。",
+    "category": "ai-models",
+    "coreInsight": "MiniMax H3 在广告与动效领域表现已超越 Seedance 2.0，开源策略下将出现大量垂直领域特化版本，视频后期行业正经历从人做后期到 AI 做后期的范式转移。",
+    "whyItMatters": "开源+垂直特化意味着 AI 视频将形成繁荣社区生态，每个细分领域都可能出现专门微调模型，闭源厂商护城河被快速侵蚀。",
+    "direction": "视频 AI 竞争重心从谁先生成转向谁生成得更好看和谁的生态更丰富，开源生态成为对抗闭源巨头的最有效武器。",
+    "opportunities": [
+      "视频后期工作室可基于 H3 微调打造自有风格模型",
+      "广告行业可实现千人千面的个性化视频营销",
+      "开源社区将涌现大量 H3 的 LoRA/ControlNet 插件",
+      "游戏行业可利用 H3 快速生成过场动画和 UI 动效"
+    ],
+    "risks": [
+      "开源模型可能被滥用于生成虚假新闻和深度伪造视频",
+      "视频后期从业者的职业前景受到严重冲击",
+      "开源模型的质量控制和安全性难以监管"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1404,
+    "date": "2026-07-30",
+    "title": "实测 ego lite：给 Codex 浏览器自动化加到 2.5 倍速",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247508934&idx=1&sn=d3082c762fb58884c933a370e10bc42d",
+    "source": "公众号：卡尔的AI沃茨",
+    "summary": "开源浏览器自动化项目 ego lite（5.9k star）实测：基于 Chromium 内核定制的独立浏览器，让人和 Agent 共享同一浏览器但各自独立 Space 工作，支持迁移 Chrome 登录态。",
+    "category": "tip",
+    "coreInsight": "ego lite 通过 Chromium 定制独立空间架构让人和 Agent 共享同一浏览器但互不干扰，5.9k star 的增长速度表明开发者社区对浏览器自动化工具的强烈需求。",
+    "whyItMatters": "浏览器自动化是 AI Agent 落地的关键基础设施，ego lite 的「共享浏览器+独立空间」方案优雅解决了登录态迁移和人与 Agent 协作的痛点。",
+    "direction": "浏览器将从前端展示工具进化为 Agent 的操作系统，Chromium 内核定制化浏览器成为 Agent 公司标配基础设施。",
+    "opportunities": [
+      "基于 ego lite 构建垂直行业浏览器 Agent 服务",
+      "登录态管理和多 Agent 协作方案有商业化空间",
+      "企业可基于 ego lite 构建内部 RPA 和自动化流程",
+      "浏览器自动化测试工具可集成 ego lite 降低维护成本"
+    ],
+    "risks": [
+      "共享浏览器可能带来数据隔离和隐私泄露风险",
+      "ego lite 维护依赖 Chromium 内核更新，技术债风险较高",
+      "大厂可能在浏览器层面直接内建 Agent 能力碾压开源方案"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1405,
+    "date": "2026-07-30",
+    "title": "WorkBuddy 深度打通腾讯文档，打造 Agent 时代的第三代办公协同",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684792&idx=1&sn=63a0fd8e458f915460b6d0ca06173c04",
+    "source": "公众号：数字生命卡兹克",
+    "summary": "WorkBuddy 新版本深度打通腾讯文档，支持在侧边栏直接编辑生成的文件，并将腾讯文档嵌入工作流，实现人与 AI、同事及各自 Agent 间的协同。用户可选用 DeepSeek V4 Pro、Kimi K3 等模型处理文档，并将文件上传至云端分享流转。作者认为，这种\"人、Agent 与共享状态\"的协作模式，标志着第三代办公产品的到来。",
+    "category": "ai-products",
+    "coreInsight": "WorkBuddy 将 AI Agent 深度嵌入文档协作流程，实现了人、AI、同事及各自 Agent 四方协同工作，定义了第三代办公产品的核心范式。",
+    "whyItMatters": "这标志着 AI 办公从「对话框里问 AI」进化到「AI 直接在文档里工作」，将重塑企业办公软件的市场格局。",
+    "direction": "Agent 时代的办公产品将围绕共享状态+多 Agent 协作构建，文档成为 Agent 的工作界面而非终点。",
+    "opportunities": [
+      "企业办公软件市场迎来 Agent 化改造的巨大机会",
+      "腾讯文档通过 WorkBuddy 获得差异化竞争优势",
+      "基于多 Agent 协作的垂直办公场景可快速产品化",
+      "办公培训行业需教授 Agent 协同工作流新技能"
+    ],
+    "risks": [
+      "传统 Office 厂商可能快速跟进 Agent 能力并利用市场优势碾压",
+      "多 Agent 协作的权限管理和安全审计复杂度高",
+      "企业内部数据和文档安全边界在 Agent 协作模式下变得模糊"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1406,
+    "date": "2026-07-29",
+    "title": "腾讯混元开源 AngelSpec：投机解码推理加速最高 2.4 倍",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498136&idx=1&sn=f77b7950ad68442c45ef739f0bcf8e1b",
+    "source": "公众号：腾讯混元",
+    "summary": "腾讯混元开源覆盖训练到部署的投机解码框架 AngelSpec，并放出 Hy3-A21B 的 MTP 与 DFly drafter 权重及训练代码。",
+    "category": "ai-products",
+    "coreInsight": "腾讯混元开源覆盖训练到部署的投机解码框架 AngelSpec，并放出 Hy3-A21B 的 MTP 与 DFly drafter 权重及训练代码，最高推理加速 2.4 倍。",
+    "whyItMatters": "推理加速是大模型商业化的命门，2.4 倍加速意味着同样硬件可服务 2.4 倍请求，直接降低约 60% 推理成本。",
+    "direction": "投机解码将成为大模型推理部署的标配技术，推理成本的持续下降将催生更多实时 AI 应用场景。",
+    "opportunities": [
+      "AI 应用开发商可通过 AngelSpec 大幅降低推理成本",
+      "更少硬件上跑更大模型成为可能",
+      "实时 AI 应用因推理加速而更加可行",
+      "投机解码技术的培训和咨询服务有市场需求"
+    ],
+    "risks": [
+      "投机解码效果高度依赖 drafter 与 target 模型的分布对齐",
+      "开源框架成熟可能导致推理加速门槛降低",
+      "模型更新迭代可能使已部署投机解码方案失效"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1407,
+    "date": "2026-07-29",
+    "title": "烧了一万块API后，我找到了同时适用于Fable5和GPT5.6的AI工作流",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247508880&idx=1&sn=968a2ff3d6013a96f2ebfb5ab1579e5c",
+    "source": "公众号：卡尔的AI沃茨",
+    "summary": "作者将Claude Code与Codex的协作工具搭子升级至2.0版，通过deep_reasoner、fast_worker、arbiter三种身份及跨项目模型混编，把每周500美元的API账单压缩至400美元。2.0新增本地配置UI、一键试跑、Goal哈希校验和带证据链的小票，并支持按host分命名空间独立配置两个Agent。",
+    "category": "ai-products",
+    "coreInsight": "作者通过 deep_reasoner/fast_worker/arbiter 三种 Agent 身份编排和跨项目模型混编，将 API 成本从每周 500 美元压缩至 400 美元，证明合理 Agent 架构设计可直接转化为 20% 成本节省。",
+    "whyItMatters": "随着 AI Agent 调用量爆发式增长，API 成本管理将成为 AI 工程核心竞争力，分角色分模型按需调度模式代表 Agent 架构最佳实践。",
+    "direction": "AI Agent 架构从单一模型驱动转向多模型混编，成本优化成为 Agent 框架核心竞争维度。",
+    "opportunities": [
+      "AI Agent 成本优化工具和服务有明确市场需求",
+      "多模型混编 Agent 框架可作为 SaaS 产品商业化",
+      "企业 AI 预算管理需要专门监控和优化工具",
+      "Agent 架构咨询和审计服务市场规模增长"
+    ],
+    "risks": [
+      "多模型混编增加系统复杂度和维护成本",
+      "模型厂商 API 定价策略变化可能导致优化方案失效",
+      "过度追求成本优化可能牺牲关键任务质量和可靠性"
+    ],
+    "signals": [],
+    "selected": true
+  },
+  {
+    "id": 1408,
+    "date": "2026-07-28",
+    "title": "豆包搜索开放服务，为Agent提供实时、权威、可信的搜索能力",
+    "url": "https://mp.weixin.qq.com/s?__biz=MzI0NzU1NzI5NQ%3D%3D&mid=2247543189&idx=1&sn=46d89ea5ee1306025dbe25a3316ac14f",
+    "source": "公众号：火山引擎",
+    "summary": "火山引擎正式上线豆包搜索服务，为企业和开发者构建AI Agent提供跨语言、多模态、多垂类的联网信息查询引擎。该服务支持API、Skill、MCP等多种接入形态，也可在Agent Plan中一键配置启用，并提供每月500次免费搜索额度。豆包搜索已在SimpleQA、FreshQA、BrowseComp-ZH等多项公开评测中表现优异，并服务国内9成TOP手机厂商的智能助手。",
+    "category": "ai-products",
+    "coreInsight": "豆包搜索为 AI Agent 提供跨语言、多模态、多垂类的联网搜索能力，支持 API/Skill/MCP 多种接入方式。搜索不再只是搜索引擎的事，而是 Agent 的基础设施。",
+    "whyItMatters": "AI Agent 对实时权威信息的需求催生「Agent 搜索」新品类，豆包搜索入局意味着大厂正式将搜索能力作为独立服务开放。",
+    "direction": "搜索服务从面向人类的前端产品转向面向 Agent 的 API 服务，Agent 搜索将像云计算一样成为基础设施。",
+    "opportunities": [
+      "AI Agent 开发者可直接集成豆包搜索获得联网能力",
+      "垂直领域 Agent 搜索服务有差异化机会",
+      "MCP 协议生态因豆包搜索加入而更加丰富",
+      "传统搜索引擎需重新思考 Agent 时代的商业模式"
+    ],
+    "risks": [
+      "Agent 搜索准确性仍取决于底层搜索引擎质量",
+      "搜索 API 定价可能成为 Agent 规模化部署成本瓶颈",
+      "多 Agent 同时调用搜索可能导致内容生态流量分配失衡"
+    ],
+    "signals": [],
+    "selected": true
   }
 ]
