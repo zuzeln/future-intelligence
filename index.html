@@ -726,7 +726,11 @@ body::after {
 
   function groupByDate(items){
     var g={};
-    items.forEach(function(i){ if(!g[i.date])g[i.date]=[]; g[i.date].push(i); });
+    items.forEach(function(i){
+      if(!i.date) return; // 跳过 date 为 null/undefined 的条目
+      if(!g[i.date])g[i.date]=[];
+      g[i.date].push(i);
+    });
     var sd=Object.keys(g).sort(function(a,b){return b.localeCompare(a);});
     return sd.map(function(d){return {date:d,items:g[d]};});
   }
@@ -744,7 +748,7 @@ body::after {
         return res.json();
       })
       .then(function(data){
-        ALL_ITEMS = data;
+        ALL_ITEMS = data.filter(function(i){ return i.date; });
         if(!ALL_ITEMS.length) throw new Error('数据为空');
         groups = groupByDate(ALL_ITEMS);
         activeItemId = groups[0].items[0].id;
@@ -777,9 +781,10 @@ body::after {
       })
       .then(function(data){
         if(!data || !data.length) return;
-        if(data.length > ALL_ITEMS.length){
-          var newCount = data.length - ALL_ITEMS.length;
-          ALL_ITEMS = data;
+        var valid = data.filter(function(i){ return i.date; });
+        if(valid.length > ALL_ITEMS.length){
+          var newCount = valid.length - ALL_ITEMS.length;
+          ALL_ITEMS = valid;
           groups = groupByDate(ALL_ITEMS);
           lastUpdateTime = new Date();
           renderSidebar();
@@ -815,7 +820,7 @@ body::after {
 
   function getFooterText(){
     if(!ALL_ITEMS.length) return '';
-    var dates=Array.from(new Set(ALL_ITEMS.map(function(i){return i.date;}))).sort();
+    var dates=Array.from(new Set(ALL_ITEMS.map(function(i){return i.date;}))).filter(Boolean).sort();
     var fd=parseInt(dates[0].substr(8,2));
     var fm=parseInt(dates[0].substr(5,2));
     var fy=parseInt(dates[0].substr(0,4));
