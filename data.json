@@ -39005,5 +39005,99 @@
     ],
     "signals": [],
     "selected": true
+  },
+  {
+    "id": 1409,
+    "date": "2026-08-04",
+    "title": "面壁智能开源 ForgeStencil：一周自动优化 100+ 工业与科学软件，全程零人工介入",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247498861&idx=1&sn=d2d16692dd7eb27f9d466803f25c2b78",
+    "source": "公众号：面壁智能（MiniCPM）",
+    "summary": "面壁智能联合 OpenBMB 开源全球首个支持 Stencil 自动研究、自动部署的 AI 优化系统 ForgeStencil，由 Kernel Agent 与 App Agent 闭环协作，实现从算子优化到应用集成的全自动流程。",
+    "category": "ai-products",
+    "coreInsight": "面壁智能联合 OpenBMB 开源全球首个 Stencil 自动研究、自动部署的 AI 优化系统，由 Kernel Agent 与 App Agent 闭环协作实现全自动流程——AI 驱动的工业软件优化从「手工调参」走向「零人工介入」。",
+    "whyItMatters": "Stencil 计算是科学计算和工业仿真的核心，覆盖流体力学、分子动力学、气候模拟等关键领域。ForgeStencil 实现一周自动优化 100+ 软件，意味着 AI 正在进入此前由 HPC 专家手动调优的深水区。",
+    "direction": "6-12 个月内，AI 自动优化将成为科学计算软件的标准工具链。Stencil 优化将从学术研究走向工业级部署。",
+    "opportunities": [
+      "面向科研机构的 AI 驱动科学计算优化服务",
+      "工业仿真软件的 AI 自动调优集成",
+      "HPC 领域的 AI 编译器与自动调优平台"
+    ],
+    "risks": [
+      "AI 自动优化的结果可能在某些边界条件下不可靠",
+      "工业软件厂商可能因依赖 AI 优化而忽视底层算法创新"
+    ],
+    "signals": [
+      {
+        "source": "公众号：面壁智能（MiniCPM）",
+        "time": "8/4",
+        "title": "面壁智能开源 ForgeStencil：一周自动优化 100+ 工业与科学软件",
+        "summary": "全球首个 Stencil 自动研究、自动部署的 AI 优化系统。",
+        "url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247498861&idx=1&sn=d2d16692dd7eb27f9d466803f25c2b78"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1410,
+    "date": "2026-08-03",
+    "title": "SwanTale：面向指令与零样本任务的统一多说话人语音与音频生成",
+    "url": "https://arxiv.org/abs/2608.02023",
+    "source": "HuggingFace Daily Papers（社区热门论文）",
+    "summary": "SwanTale 提出统一的多说话人语音与音频生成模型，同时支持零样本与指令任务。研究配套推出 SwanData-Caption 数据方案，通过清洗、合成覆盖与多级标注解决数据稀缺问题，并引入 SwanVAE、Unified MoE、GRPO 后训练等技术。实验显示，SwanTale 在多项零样本与指令指标上领先，并在两项任务的表达力评分中均取得最佳成绩。",
+    "category": "paper",
+    "coreInsight": "SwanTale 提出统一多说话人语音与音频生成模型，同时支持零样本与指令任务，结合 SwanVAE、Unified MoE、GRPO 后训练等技术——语音生成从「单任务单模型」走向「多任务统一架构」。",
+    "whyItMatters": "当前语音生成领域模型碎片化严重——不同任务需要不同模型。SwanTale 的统一架构首次让同一模型处理零样本语音克隆和指令式音频生成，且配套开源数据方案，大幅降低了语音 AI 研发门槛。",
+    "direction": "6-12 个月内，统一多任务语音模型将成为研究主流。MoE + GRPO 的组合可能成为语音生成的新范式。",
+    "opportunities": [
+      "基于统一语音模型的个性化 TTS 服务",
+      "面向内容创作的 AI 音频生成工具",
+      "语音数据标注与增广的产业化机会",
+      "低资源语言的语音 AI 应用"
+    ],
+    "risks": [
+      "统一模型可能在单任务精度上不如专用模型",
+      "语音克隆技术的滥用风险仍需监管关注"
+    ],
+    "signals": [
+      {
+        "source": "arXiv",
+        "time": "8/3",
+        "title": "SwanTale：统一多说话人语音与音频生成",
+        "summary": "支持零样本与指令任务的多说话人语音生成模型。",
+        "url": "https://arxiv.org/abs/2608.02023"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": 1411,
+    "date": "2026-08-03",
+    "title": "UEmbed：统一稀疏与稠密的多模态嵌入模型",
+    "url": "https://arxiv.org/abs/2608.02583",
+    "source": "HuggingFace Daily Papers（社区热门论文）",
+    "summary": "UEmbed 是一种仅解码器的多模态嵌入模型，可在单次因果前向传播中同时生成稀疏词级和稠密表示，通过可学习特殊 token 与词汇表分区突破单 token 信息瓶颈。",
+    "category": "ai-models",
+    "coreInsight": "UEmbed 是首个可在单次因果前向传播中同时生成稀疏词级和稠密表示的多模态嵌入模型——打破了传统嵌入模型「稀疏或稠密二选一」的范式，通过可学习特殊 token 与词汇表分区突破单 token 信息瓶颈。",
+    "whyItMatters": "嵌入模型是 RAG、搜索、推荐等 AI 应用的基石。当前稀疏和稠密嵌入各有利弊，UEmbed 的统一方案有望同时获得稀疏的可解释性和稠密的语义丰富度，且一步生成，推理效率更高。",
+    "direction": "6-12 个月内，统一稀疏-稠密嵌入将成为多模态检索的标准方案。仅解码器架构在嵌入领域的应用将进一步扩展。",
+    "opportunities": [
+      "基于统一嵌入的多模态 RAG 系统",
+      "企业级搜索与推荐系统的嵌入升级",
+      "面向边缘设备的轻量统一嵌入模型"
+    ],
+    "risks": [
+      "统一嵌入在实际部署中的精度与效率平衡尚需验证",
+      "仅解码器嵌入模型可能在特定场景下不如专用编码器方案"
+    ],
+    "signals": [
+      {
+        "source": "arXiv",
+        "time": "8/3",
+        "title": "UEmbed：统一稀疏与稠密的多模态嵌入模型",
+        "summary": "单次前向传播同时生成稀疏和稠密嵌入表示。",
+        "url": "https://arxiv.org/abs/2608.02583"
+      }
+    ],
+    "selected": true
   }
 ]
