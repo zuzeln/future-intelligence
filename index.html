@@ -313,49 +313,60 @@ body::after {
   font-size: 12px; color: var(--text-tertiary); letter-spacing: 0.5px;
   margin-top: 2px;
 }
-.theme-switch-wrap {
-  padding: 8px 20px 4px;
-  flex-shrink: 0;
+.theme-switch-bar {
   position: relative;
-  z-index: 3;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: space-between;
+  height: 34px;
+  padding: 3px;
+  margin: 8px 20px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  isolation: isolate;
+  flex-shrink: 0;
 }
-.theme-switch-label {
-  font-size: 12px;
-  color: var(--text-tertiary);
-  font-weight: 500;
+.theme-switch-bar.panel-theme {
+  margin: 8px 12px 12px;
 }
-.theme-toggle {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.05);
-  color: var(--text-primary);
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
+.theme-switch-thumb {
+  position: absolute;
+  top: 3px; bottom: 3px; left: 3px;
+  width: calc(33.3333% - 2px);
+  border-radius: 999px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  transition: transform 0.26s cubic-bezier(0.32, 0.72, 0, 1), background 0.2s, border-color 0.2s;
+  z-index: 0;
+}
+[data-theme="light"] .theme-switch-thumb {
+  background: rgba(37,99,235,0.10);
+  border-color: #2563EB;
+}
+.theme-switch-thumb[data-pos="dark"]  { transform: translateX(0);   }
+.theme-switch-thumb[data-pos="auto"]  { transform: translateX(100%);  }
+.theme-switch-thumb[data-pos="light"] { transform: translateX(200%);  }
+.theme-switch-opt {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
-  flex-shrink: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  transition: color 0.18s, transform 0.12s;
   padding: 0;
 }
-.theme-toggle:hover {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.18);
-}
-[data-theme="light"] .theme-toggle {
-  background: #F0F0F0;
-  border-color: #DDDDDD;
-  color: #333333;
-}
-[data-theme="light"] .theme-toggle:hover {
-  background: #E5E5E5;
-  border-color: #CCCCCC;
-}
+.theme-switch-opt:hover { color: var(--text-secondary); }
+.theme-switch-opt:active { transform: scale(0.94); }
+.theme-switch-opt-active { color: var(--accent); }
+.theme-switch-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sidebar.collapsed .theme-switch-bar { display: none; }
 /* 搜索框 */
 .search-wrap { padding: 8px 20px 12px; flex-shrink: 0; position: relative; z-index: 3; }
 .search-input {
@@ -902,11 +913,19 @@ body::after {
   <div class="search-wrap">
     <input type="text" class="search-input" id="searchInput" placeholder="搜索趋势..." aria-label="搜索趋势" oninput="onSearch(this.value)">
   </div>
-  <div class="theme-switch-wrap">
-    <span class="theme-switch-label">主题</span>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">☀️</button>
-  </div>
   <div class="sidebar-scroll" id="sidebarScroll" role="listbox" aria-label="趋势条目列表"></div>
+  <div class="theme-switch-bar" role="radiogroup" aria-label="主题模式">
+    <span class="theme-switch-thumb" id="themeThumb"></span>
+    <button type="button" role="radio" class="theme-switch-opt theme-switch-opt-active" data-mode="dark" onclick="setTheme('dark')" aria-label="深色" title="深色">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button type="button" role="radio" class="theme-switch-opt" data-mode="auto" onclick="setTheme('auto')" aria-label="跟随系统" title="跟随系统">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    </button>
+    <button type="button" role="radio" class="theme-switch-opt" data-mode="light" onclick="setTheme('light')" aria-label="浅色" title="浅色">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
 </aside>
 <main class="main" id="mainContent" role="main" aria-label="趋势详情">
   <div class="date-capsule-bar" id="dateCapsuleBar"></div>
@@ -927,11 +946,19 @@ body::after {
   <div class="panel-search-wrap">
     <input type="text" class="panel-search-input" id="panelSearchInput" placeholder="搜索趋势..." aria-label="搜索趋势" oninput="onPanelSearch(this.value)">
   </div>
-  <div class="theme-switch-wrap">
-    <span class="theme-switch-label">主题</span>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">☀️</button>
-  </div>
   <div class="panel-scroll" id="panelScroll" role="listbox" aria-label="趋势条目列表"></div>
+  <div class="theme-switch-bar panel-theme" role="radiogroup" aria-label="主题模式">
+    <span class="theme-switch-thumb" id="panelThemeThumb"></span>
+    <button type="button" role="radio" class="theme-switch-opt theme-switch-opt-active" data-mode="dark" onclick="setTheme('dark')" aria-label="深色" title="深色">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button type="button" role="radio" class="theme-switch-opt" data-mode="auto" onclick="setTheme('auto')" aria-label="跟随系统" title="跟随系统">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    </button>
+    <button type="button" role="radio" class="theme-switch-opt" data-mode="light" onclick="setTheme('light')" aria-label="浅色" title="浅色">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
 </div>
 
 <!-- 移动端蒙层 -->
@@ -992,47 +1019,53 @@ body::after {
   }
 
   // ===== 主题切换 =====
-  function toggleTheme(){
-    var html = document.documentElement;
-    var current = html.getAttribute('data-theme');
-    var next = current === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('fi-theme-preference', next);
-    updateThemeIcon(next);
+  function resolveTheme(mode){
+    if(mode === 'auto'){
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return mode;
   }
-  window.toggleTheme = toggleTheme;
 
-  function updateThemeIcon(theme){
-    var btns = document.querySelectorAll('.theme-toggle');
-    btns.forEach(function(btn){
-      btn.textContent = theme === 'light' ? '\u{1F319}' : '\u{2600}\u{FE0F}';
+  function setTheme(mode){
+    var html = document.documentElement;
+    var theme = resolveTheme(mode);
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('fi-theme-preference', mode);
+    syncThemeUI(mode);
+  }
+  window.setTheme = setTheme;
+
+  function syncThemeUI(mode){
+    var thumbs = document.querySelectorAll('.theme-switch-thumb');
+    thumbs.forEach(function(t){ t.setAttribute('data-pos', mode); });
+    var bars = document.querySelectorAll('.theme-switch-bar');
+    bars.forEach(function(bar){
+      var opts = bar.querySelectorAll('.theme-switch-opt');
+      opts.forEach(function(opt){
+        if(opt.getAttribute('data-mode') === mode){
+          opt.classList.add('theme-switch-opt-active');
+        } else {
+          opt.classList.remove('theme-switch-opt-active');
+        }
+      });
     });
   }
 
   function initTheme(){
     var html = document.documentElement;
-    var stored = localStorage.getItem('fi-theme-preference');
-    if(stored){
-      html.setAttribute('data-theme', stored);
-      updateThemeIcon(stored);
-      return;
-    }
-    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-      html.setAttribute('data-theme', 'dark');
-      updateThemeIcon('dark');
-    } else {
-      html.setAttribute('data-theme', 'light');
-      updateThemeIcon('light');
-    }
+    var mode = localStorage.getItem('fi-theme-preference') || 'dark';
+    var theme = resolveTheme(mode);
+    html.setAttribute('data-theme', theme);
+    syncThemeUI(mode);
   }
 
   initTheme();
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
-    if(localStorage.getItem('fi-theme-preference')) return;
+    var mode = localStorage.getItem('fi-theme-preference') || 'dark';
+    if(mode !== 'auto') return;
     var theme = e.matches ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', theme);
-    updateThemeIcon(theme);
   });
 
   // ===== 数据加载 =====
