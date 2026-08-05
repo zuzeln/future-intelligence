@@ -1091,6 +1091,7 @@ body::after {
     localStorage.setItem('fi-theme-preference', next);
     updateThemeIcon(next);
   }
+  window.toggleTheme = toggleTheme;
 
   function updateThemeIcon(theme){
     var btns = document.querySelectorAll('.theme-toggle');
